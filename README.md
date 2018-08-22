@@ -2,7 +2,7 @@
 
 ## Подготовка к работе 
 
-### Debine (*ubuntu) like дситрибутивы:
+### Debine (*ubuntu) like дистрибутивы:
 
 1.
 
