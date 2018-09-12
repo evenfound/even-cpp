@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <code-assistance-data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <code-model-enabled>true</code-model-enabled>
+    </code-assistance-data>
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>0</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/zipper/projects/even-boffin/include/Value.hxx</file>
+            <file>file:/home/zipper/projects/even-boffin/src/main.cpp</file>
+            <file>file:/home/zipper/projects/even-boffin/src/Value.cxx</file>
+            <file>file:/home/zipper/projects/even-boffin/qmloscilloscope.qrc</file>
+            <file>file:/home/zipper/projects/even-boffin/include/NodeNetwork.hxx</file>
+            <file>file:/home/zipper/projects/even-boffin/.qmake.stash</file>
+            <file>file:/home/zipper/projects/even-boffin/include/datasource.h</file>
+            <file>file:/home/zipper/projects/even-boffin/include/Node.hxx</file>
+            <file>file:/home/zipper/projects/even-boffin/qml/qmloscilloscope/main.qml</file>
+            <file>file:/home/zipper/projects/even-boffin/src/Logger.cxx</file>
+            <file>file:/home/zipper/projects/even-boffin/src/NodeNetwork.cxx</file>
+            <file>file:/home/zipper/Qt5.11.1/5.11.1/gcc_64/mkspecs/features/data/dummy.cpp</file>
+            <file>file:/home/zipper/projects/even-boffin/include/Network.hxx</file>
+            <file>file:/home/zipper/projects/even-boffin/include/Config.hxx</file>
+            <file>file:/home/zipper/projects/even-boffin/qmloscilloscope.pro</file>
+            <file>file:/home/zipper/projects/even-boffin/src/Network.cxx</file>
+            <file>file:/home/zipper/projects/even-boffin/src/Config.cxx</file>
+            <file>file:/home/zipper/projects/even-boffin/src/datasource.cpp</file>
+            <file>file:/home/zipper/projects/even-boffin/src/Node.cxx</file>
+            <file>file:/home/zipper/projects/even-boffin/src/Controller.cxx</file>
+            <file>file:/home/zipper/projects/even-boffin/include/Controller.hxx</file>
+            <file>file:/home/zipper/projects/even-boffin/qml/qmloscilloscope/NewButton.qml</file>
+            <file>file:/home/zipper/Qt5.11.1/5.11.1/gcc_64/include/QtCore/qhash.h</file>
+            <file>file:/home/zipper/Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qutils.h</file>
+            <file>file:/home/zipper/projects/even-boffin/include/Logger.hxx</file>
+            <file>file:/home/zipper/projects/even-boffin/include/Catch.h</file>
+            <file>file:/home/zipper/projects/even-boffin/src/Catch.cpp</file>
+        </group>
+    </open-files>
+</project-private>

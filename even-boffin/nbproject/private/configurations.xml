@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="build">
+        <df name=".moc">
+          <in>moc_Network.cpp</in>
+          <in>moc_Node.cpp</in>
+          <in>moc_Value.cpp</in>
+          <in>moc_datasource.cpp</in>
+          <in>moc_predefs.h</in>
+        </df>
+        <df name=".obj">
+        </df>
+        <df name=".rcc">
+          <in>qrc_qmloscilloscope.cpp</in>
+        </df>
+      </df>
+      <df name="dist">
+      </df>
+      <df name="doc">
+        <df name="images">
+        </df>
+        <df name="src">
+        </df>
+      </df>
+      <df name="include">
+        <in>Catch.h</in>
+        <in>Config.hxx</in>
+        <in>Controller.hxx</in>
+        <in>Logger.hxx</in>
+        <in>Network.hxx</in>
+        <in>Node.hxx</in>
+        <in>NodeNetwork.hxx</in>
+        <in>Value.hxx</in>
+        <in>datasource.h</in>
+      </df>
+      <df name="qml">
+        <df name="qmloscilloscope">
+        </df>
+      </df>
+      <df name="src">
+        <in>Catch.cpp</in>
+        <in>Config.cpp</in>
+        <in>Config.cxx</in>
+        <in>Controller.cxx</in>
+        <in>Logger.cxx</in>
+        <in>Network.cxx</in>
+        <in>Node.cxx</in>
+        <in>NodeNetwork.cxx</in>
+        <in>Value.cxx</in>
+        <in>datasource.cpp</in>
+        <in>main.cpp</in>
+      </df>
+      <in>qrc_qmloscilloscope.cpp</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
