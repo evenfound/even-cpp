@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Network.hxx
- * Author: zipper
+/**
+ * @file    Network.hxx
+ * @author  E. Pozdnyakov
  *
- * Created on August 27, 2018, 4:59 PM
+ * @date    Created on August 29, 2018, 7:49 PM
  */
 
-#ifndef NETWORK_HXX
-#define NETWORK_HXX
+#pragma once
 
 #include <initializer_list>
 #include <QObject>
@@ -25,11 +18,11 @@
 
 namespace even {
 
-    class Network : public QObject, private Config {
+class Network : public QObject, private Config {
         Q_OBJECT
     public:
         /**
-         * @brief Create object Network with size_ nodes 
+         * @brief Create object Network with size_ nodes
          * @param size_
          */
         Network(std::initializer_list<Value> config_);
@@ -44,7 +37,7 @@ namespace even {
         
     private:
 
-        /** @brief Network Nodes hash array. 
+        /** @brief Network Nodes hash array.
          *  @param key - Node Public Key
          *  @param Value - Node object
          */
@@ -52,7 +45,7 @@ namespace even {
         // QMap<QString, Controller<Node>* > _network;
         QHash<QString, Controller<Node>* > _network;
 
-    };
 };
-#endif /* NETWORK_HXX */
+};
+
 

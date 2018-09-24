@@ -1,22 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Loggerger.cxx
- * Author: zipper
+/**
+ * @file    Logger.cxx
+ * @author  E. Pozdnyakov
  *
- * Created on August 27, 2018, 7:22 PM
+ * @date    Created on August 24, 2018, 7:49 PM
  */
 
 #include <QFile>
 #include "Logger.hxx"
 
-namespace even {
+using namespace even;
 
-/** @brief Level verbosity of out line */
+///< @brief Level verbosity of out line
 QMap<Logger::Severity, int> Logger::logLevel = {
     {Debug, 20},
     {Warning, 20},
@@ -25,7 +19,6 @@ QMap<Logger::Severity, int> Logger::logLevel = {
 };
 
 //------------------------------------------------------------------------------
-
 Logger::Logger(Severity severity) :
     _severity(severity),
     _outMutex()
@@ -33,7 +26,6 @@ Logger::Logger(Severity severity) :
 }
 
 //------------------------------------------------------------------------------
-
 void Logger::consoleMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg) {
     QByteArray localMsg = msg.toLocal8Bit();
     //fprintf(stderr, "MESSAGE (%s:%u %s): %s\n", context.file, context.line, context.function, localMsg.constData());
@@ -42,7 +34,6 @@ void Logger::consoleMessageOutput(QtMsgType type, const QMessageLogContext &cont
 }
 
 //------------------------------------------------------------------------------
-
 Logger::Message::Message(Logger& log, int level_, Severity severity, const QString& prefix,
                          const char * file, int line) :
     _log(log),
@@ -56,7 +47,7 @@ Logger::Message::Message(Logger& log, int level_, Severity severity, const QStri
 }
 
 //------------------------------------------------------------------------------
-/** @brief Flush message destroy simualtaneosly  */
+///< @brief Flush message destroy simualtaneosly
 Logger::Message::~Message() {
     if (_severity > _log.getSeverity()) {
         return;
@@ -93,8 +84,7 @@ Logger::Message::~Message() {
 
 }
 
-}
 
-/** @brief Global  logger object */
+///< @brief Global  logger object
 even::Logger logger(even::Logger::Debug);
 

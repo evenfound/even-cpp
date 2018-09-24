@@ -1,19 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   NodeNetwork.hxx
- * Author: zipper
+/**
+ * @file    NodeNetwork.hxx
+ * @author  E. Pozdnyakov
  *
- * Created on August 24, 2018, 7:49 PM
+ * @date    Created on August 29, 2018, 7:49 PM
  */
 
-#ifndef NODENETWORK_HXX
-#define NODENETWORK_HXX
-
+#pragma once
 
 namespace even {
 
@@ -26,6 +18,4 @@ namespace even {
 
     };
 };
-
-#endif /* NODENETWORK_HXX */
 

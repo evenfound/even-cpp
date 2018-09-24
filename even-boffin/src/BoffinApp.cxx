@@ -1,6 +1,14 @@
+/**
+ * @file    BoffinApp.cxx
+ * @author  E. Pozdnyakov
+ *
+ * @date    Created on August 24, 2018, 7:49 PM
+ */
+
 #include "Logger.hxx"
 #include "BoffinApp.hxx"
 
+//------------------------------------------------------------------------------
 BoffinApp::BoffinApp(int argc, char *argv[]) :
     QGuiApplication(argc, argv),
     Application()
@@ -8,6 +16,7 @@ BoffinApp::BoffinApp(int argc, char *argv[]) :
     Application::main(argc, argv);
 }
 
+//------------------------------------------------------------------------------
 int BoffinApp::exec() {
     int retval = QGuiApplication::exec();
     if (isRunning())
@@ -15,6 +24,7 @@ int BoffinApp::exec() {
     return retval;
 }
 
+//------------------------------------------------------------------------------
 bool BoffinApp::handleSignal(int signal) {
     //std::cout << "Handling signal " << signal << std::endl;
     INFO(10) << QString("Handling signal %1").arg(signal);

@@ -1,38 +1,12 @@
-/****************************************************************************
- **
- ** Copyright (C) 2016 The Qt Company Ltd.
- ** Contact: https://www.qt.io/licensing/
- **
- ** This file is part of the Qt Data Visualization module of the Qt Toolkit.
- **
- ** $QT_BEGIN_LICENSE:GPL$
- ** Commercial License Usage
- ** Licensees holding valid commercial Qt licenses may use this file in
- ** accordance with the commercial license agreement provided with the
- ** Software or, alternatively, in accordance with the terms contained in
- ** a written agreement between you and The Qt Company. For licensing terms
- ** and conditions see https://www.qt.io/terms-conditions. For further
- ** information use the contact form at https://www.qt.io/contact-us.
- **
- ** GNU General Public License Usage
- ** Alternatively, this file may be used under the terms of the GNU
- ** General Public License version 3 or (at your option) any later version
- ** approved by the KDE Free Qt Foundation. The licenses are as published by
- ** the Free Software Foundation and appearing in the file LICENSE.GPL3
- ** included in the packaging of this file. Please review the following
- ** information to ensure the GNU General Public License requirements will
- ** be met: https://www.gnu.org/licenses/gpl-3.0.html.
- **
- ** $QT_END_LICENSE$
- **
- ****************************************************************************/
+/**
+ * @file    main.cpp
+ * @author  E. Pozdnyakov
+ *
+ * @date    Created on August 24, 2018, 7:49 PM
+ */
 
 #include "datasource.h"
-
-//! [2]
 #include <QtDataVisualization/qutils.h>
-//! [2]
-
 #include <QtGui/QGuiApplication>
 #include <QtCore/QDir>
 //#include <QtQml/QQmlContext>
@@ -49,14 +23,12 @@ using namespace even;
 //< TODO: resolve this trouble more detailed after reconstrain project
 //< under linux
 
-
 /** @brief Main function of application */
 int main(int argc, char *argv[]) {
 
     INFO(20) << "Start boffin application ...";
 
     try {
-
 
         //QGuiApplication app(argc, argv);
         BoffinApp app(argc, argv);
@@ -103,9 +75,7 @@ int main(int argc, char *argv[]) {
         viewer.show();
 */
         return app.exec();
-        //return app.main(argc, argv);
     } catch (std::exception& e) {
         CRITICAL(5) << "main: Application closed by error: " << e.what();
     }
-
 }

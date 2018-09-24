@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Controller.tcc
- * Author: zipper
+/**
+ * @file    Controller.hxx
+ * @author  E. Pozdnyakov
  *
- * Created on August 29, 2018, 11:59 AM
+ * @date    Created on August 29, 2018, 7:49 PM
  */
 
-#ifndef CONTROLLER_HXX
-#define CONTROLLER_HXX
+#pragma once
 
 #include <QObject>
 #include <QThread>
@@ -22,7 +15,7 @@
 namespace even {
     
     /** 
-     * @brief Base class for incapsulate QObject signls-slot
+     * @brief Base class for incapsulate QObject signals-slot
      * functionality for derived object equipped threaded work
      * environment 
      */
@@ -80,9 +73,4 @@ namespace even {
         T*   _t;
     };
 };
-
-
-
-
-#endif /* CONTROLLER_HXX */
 

@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @file    Network.cxx
+ * @author  E. Pozdnyakov
+ *
+ * @date    Created on August 24, 2018, 7:49 PM
  */
 
-/* 
- * File:   Network.cxx
- * Author: zipper
- *
- * Created on August 27, 2018, 4:59 PM
- */
 #include <QUuid>
 #include <QException>
 #include <QCoreApplication>
@@ -19,11 +14,11 @@
 #include "Controller.cxx"
 
 using namespace std;
-
-namespace even {
+using namespace even;
 
 template class Controller<Node>;
 
+//------------------------------------------------------------------------------
 Network::Network(initializer_list<Value> config_) :
     QObject(),
     Config() {
@@ -32,18 +27,19 @@ Network::Network(initializer_list<Value> config_) :
         setValue(v);
 }
 
+//------------------------------------------------------------------------------
 Network::Network(const Network& orig) :
     QObject(),
     Config() {
 }
 
+//------------------------------------------------------------------------------
 Network::~Network() {
     clear();
     INFO(15) << "Destroy Network object success..";
 }
 
 //------------------------------------------------------------------------------
-
 void Network::clear() {
     try {
         if (!_network.isEmpty()) {
@@ -67,8 +63,8 @@ void Network::clear() {
 }
 
 //------------------------------------------------------------------------------
-/** @brief Initialize data and create Network */
-
+///< @brief Initialize data and create Network
+///
 bool Network::create() {
 
     if (!getValue("network_size").toInt()) {
@@ -86,7 +82,5 @@ bool Network::create() {
                                                    }));
     }
     return true;
-}
-
 }
 

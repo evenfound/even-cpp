@@ -1,35 +1,36 @@
+/**
+ * @file    SignalHandler.cxx
+ * @author  E. Pozdnyakov
+ *
+ * @date    Created on August 27, 2018, 7:49 PM
+ */
+
+
 #include "SignalHandler.hxx"
 #include <assert.h>
 
 #ifndef _WIN32
-
-#include <signal.h>
-
+    #include <signal.h>
 #else
-
-#include <windows.h>
-#include <set>
-
+    #include <windows.h>
+    #include <set>
 #endif //!_WIN32
 
 // There can be only ONE SignalHandler per process
 SignalHandler* g_handler(NULL);
 
 #ifdef _WIN32
-
-BOOL WINAPI WIN32_handleFunc(DWORD);
-int WIN32_physicalToLogical(DWORD);
-DWORD WIN32_logicalToPhysical(int);
-std::set<int> g_registry;
-
+    BOOL WINAPI WIN32_handleFunc(DWORD);
+    int WIN32_physicalToLogical(DWORD);
+    DWORD WIN32_logicalToPhysical(int);
+    std::set<int> g_registry;
 #else //_WIN32
-
-void POSIX_handleFunc(int);
-int POSIX_physicalToLogical(int);
-int POSIX_logicalToPhysical(int);
-
+    void POSIX_handleFunc(int);
+    int POSIX_physicalToLogical(int);
+    int POSIX_logicalToPhysical(int);
 #endif //_WIN32
 
+//------------------------------------------------------------------------------
 SignalHandler::SignalHandler(int mask) : _mask(mask)
 {
     assert(g_handler == NULL);
@@ -58,6 +59,7 @@ SignalHandler::SignalHandler(int mask) : _mask(mask)
 
 }
 
+//------------------------------------------------------------------------------
 SignalHandler::~SignalHandler()
 {
 #ifdef _WIN32
@@ -74,8 +76,8 @@ SignalHandler::~SignalHandler()
 #endif //_WIN32
 }
 
-
 #ifdef _WIN32
+//------------------------------------------------------------------------------
 DWORD WIN32_logicalToPhysical(int signal)
 {
     switch (signal)
@@ -88,6 +90,7 @@ DWORD WIN32_logicalToPhysical(int signal)
     }
 }
 #else
+//------------------------------------------------------------------------------
 int POSIX_logicalToPhysical(int signal)
 {
     switch (signal)
@@ -106,6 +109,7 @@ int POSIX_logicalToPhysical(int signal)
 
 
 #ifdef _WIN32
+//------------------------------------------------------------------------------
 int WIN32_physicalToLogical(DWORD signal)
 {
     switch (signal)
@@ -118,6 +122,7 @@ int WIN32_physicalToLogical(DWORD signal)
     }
 }
 #else
+//------------------------------------------------------------------------------
 int POSIX_physicalToLogical(int signal)
 {
     switch (signal)
@@ -134,6 +139,7 @@ int POSIX_physicalToLogical(int signal)
 
 
 #ifdef _WIN32
+//------------------------------------------------------------------------------
 BOOL WINAPI WIN32_handleFunc(DWORD signal)
 {
     if (g_handler)
@@ -158,6 +164,7 @@ BOOL WINAPI WIN32_handleFunc(DWORD signal)
     }
 }
 #else
+//------------------------------------------------------------------------------
 void POSIX_handleFunc(int signal)
 {
     if (g_handler)

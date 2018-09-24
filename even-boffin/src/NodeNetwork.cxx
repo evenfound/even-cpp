@@ -1,28 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   NodeNetwork.cxx
- * Author: zipper
- * 
- * Created on August 24, 2018, 7:49 PM
+/**
+ * @file    NodeNetwork.cxx
+ * @author  E. Pozdnyakov
+ *
+ * @date    Created on August 24, 2018, 7:49 PM
  */
 
 #include "NodeNetwork.hxx"
 
-namespace even {
+using namespace even;
 
-    NodeNetwork::NodeNetwork() {
-    }
+//------------------------------------------------------------------------------
+NodeNetwork::NodeNetwork() {
+}
 
-    NodeNetwork::NodeNetwork(const NodeNetwork& orig) {
-    }
+//------------------------------------------------------------------------------
+NodeNetwork::NodeNetwork(const NodeNetwork& orig) {
+}
 
-    NodeNetwork::~NodeNetwork() {
-    }
+//------------------------------------------------------------------------------
+NodeNetwork::~NodeNetwork() {
+}
 
-};
 

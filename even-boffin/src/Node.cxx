@@ -1,25 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Node.cxx
- * Author: zipper
+/**
+ * @file    Node.cxx
+ * @author  E. Pozdnyakov
  *
- * Created on August 24, 2018, 7:53 PM
+ * @date    Created on August 24, 2018, 7:49 PM
  */
 
 #include "Logger.hxx"
 #include "Node.hxx"
 
-namespace even {
+using namespace even;
 
-/** @brief System node count in system created. */
+///< @brief System node count in system created.
 long Node::nodeCount = 0L;
 
-/** @brief Parametric constructor */
+//------------------------------------------------------------------------------
+///< @brief Parametric constructor
 Node::Node(std::initializer_list<Value> config_) :
     Config(),
     _left(0L),
@@ -44,6 +39,7 @@ Node::Node(std::initializer_list<Value> config_) :
     DEBUG(15) << QString("Node # %1 created.").arg(Node::nodeCount);
 }
 
+//------------------------------------------------------------------------------
 Node::~Node() {
     Node::nodeCount--;
     DEBUG(15) << QString("Destroy Node # %1 (left %2)")
@@ -51,9 +47,8 @@ Node::~Node() {
                  .arg(Node::nodeCount);
 }
 
+//------------------------------------------------------------------------------
 void Node::doWork(const QString &message_) {
 
 }
-
-};
 

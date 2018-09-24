@@ -46,7 +46,9 @@ HEADERS += include\datasource.h \
             include\Controller.hxx \
             include\Application.hxx \
             include\SignalHandler.hxx \
-            include\BoffinApp.hxx
+            include\BoffinApp.hxx \
+            ../include/core/Core.hxx \
+            ../include/core/Defines.hxx
 
 RESOURCES += even-boffin.qrc
 

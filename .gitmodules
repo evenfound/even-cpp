@@ -1,0 +1,3 @@
+[submodule "prerequisites/QtWebApp"]
+	path = prerequisites/QtWebApp
+	url = https://github.com/samiavasil/QtWebApp

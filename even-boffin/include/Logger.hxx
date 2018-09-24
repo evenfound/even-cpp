@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Loggerger.hxx
- * Author: zipper
+/**
+ * @file    Logger.hxx
+ * @author  E. Pozdnyakov
  *
- * Created on August 27, 2018, 7:22 PM
+ * @date    Created on August 27, 2018, 7:49 PM
  */
 
-#ifndef LOGGER_HXX
-#define LOGGER_HXX
+#pragma once
 
 #include <iostream>
 #include <qlogging.h>
@@ -28,75 +21,75 @@ namespace even {
 /** @brief Class Loggerger - manage out log message to directed output.*/
 
 class Logger {
-public:
-
-    /** @brief Type of outline message */
-    enum Severity {
-        Silent = 0,
-        Critical = 10,
-        Warning = 20,
-        Info = 30,
-        Debug = 40
-    };
-
-    /** @brief Message logger callback. */
-    static void consoleMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg);
-
-    /** @brief Level verbosity of out line. */
-    static QMap<Severity, int> logLevel;
-
-    /** @brief Inherit class for object Message type. */
-    class Message {
     public:
-        Message(Logger& log, int level_, Severity severity, const QString& prefix = QString(),
-                const char * file = 0, int line = 0);
 
-        ~Message();
+        /** @brief Type of outline message */
+        enum Severity {
+            Silent = 0,
+            Critical = 10,
+            Warning = 20,
+            Info = 30,
+            Debug = 40
+        };
+
+        /** @brief Message logger callback. */
+        static void consoleMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg);
+
+        /** @brief Level verbosity of out line. */
+        static QMap<Severity, int> logLevel;
+
+        /** @brief Inherit class for object Message type. */
+        class Message {
+            public:
+                Message(Logger& log, int level_, Severity severity, const QString& prefix = QString(),
+                        const char * file = 0, int line = 0);
+
+                ~Message();
+
+                /**
+                * @param val Value to append to message text internal string stream
+                * @return Reference to log message object
+                * @tparam T Value type
+                */
+                template <typename T> Message& operator<<(const T& val) {
+                    _content << val;
+                    return *this;
+                }
+
+            private:
+                Logger& _log;
+                int _level;
+                Severity _severity;
+                QString _prefix;
+                QString _file;          //< File name;
+                int _line;
+                const QDateTime _ts;    //< Current time stamp.
+                QStringList _content;   //< Content string list.
+        };
+
+        Logger(Severity severity);
 
         /**
-         * @param val Value to append to message text internal string stream
-         * @return Reference to log message object
-         * @tparam T Value type
-         */
-        template <typename T> Message& operator<<(const T& val) {
-            _content << val;
-            return *this;
+        * @brief getSeverity - Got the type log level
+        * @return - type Severity
+        */
+        inline Severity getSeverity() {
+            QMutexLocker locker(&_severityMutex);
+            return _severity;
+        }
+
+        /** @brief Set log type. */
+        inline void setSeverity(Severity newSeverety) {
+            QMutexLocker locker(&_severityMutex);
+            _severity = newSeverety;
         }
 
     private:
-        Logger& _log;
-        int _level;
+        /** @brief Type of message. */
         Severity _severity;
-        QString _prefix;
-        QString _file;          //< File name;
-        int _line;
-        const QDateTime _ts;    //< Current time stamp.
-        QStringList _content;   //< Content string list.
-    };
 
-    Logger(Severity severity);
-
-    /**
-     * @brief getSeverity - Got the type log level
-     * @return - type Severity
-     */
-    inline Severity getSeverity() {
-        QMutexLocker locker(&_severityMutex);
-        return _severity;
-    }
-
-    /** @brief Set log type. */
-    inline void setSeverity(Severity newSeverety) {
-        QMutexLocker locker(&_severityMutex);
-        _severity = newSeverety;
-    }
-
-private:
-    /** @brief Type of message. */
-    Severity _severity;
-
-    /** @brief Sinchronisation objects. */
-    QMutex _outMutex, _severityMutex;
+        /** @brief Sinchronisation objects. */
+        QMutex _outMutex, _severityMutex;
 
 };
 
@@ -113,5 +106,4 @@ extern even::Logger logger;
 //#define SILENT(l) LOG((l), ::even::Logger::Silent, "SILENT", __FILE__, __LINE__)
 
 
-#endif /* LOGGER_HXX */
 

@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Node.hxx
- * Author: zipper
+/**
+ * @file    Node.hxx
+ * @author  E. Pozdnyakov
  *
- * Created on August 24, 2018, 7:53 PM
+ * @date    Created on August 29, 2018, 7:49 PM
  */
 
-#ifndef NODE_HXX
-#define NODE_HXX
+#pragma once
 
 #include <initializer_list>
 #include <QObject>
@@ -21,7 +14,7 @@
 
 namespace even {
 
-    class Node : public QObject, public Config {
+class Node : public QObject, public Config {
         Q_OBJECT
     public:
         /** @brief System node count in system created. */
@@ -54,8 +47,6 @@ namespace even {
          * us in Network topology
          */
         Node *_left, *_right;
-    };
 };
-
-#endif /* NODE_HXX */
+};
 

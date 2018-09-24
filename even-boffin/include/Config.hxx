@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Config.tcc
- * Author: zipper
+/**
+ * @file    Config.hxx
+ * @author  E. Pozdnyakov
  *
- * Created on August 27, 2018, 7:06 PM
+ * @date    Created on August 27, 2018, 7:49 PM
  */
 
-#ifndef CONFIG_HXX
-#define CONFIG_HXX
+#pragma once
 
 #include <QHash>
 #include "Value.hxx"
@@ -56,6 +49,4 @@ namespace even {
 
     };
 };
-
-#endif /* CONFIG_HXX */
 
