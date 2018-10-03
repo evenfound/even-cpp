@@ -8,10 +8,10 @@ This sample developed for testing influence of original algorithm to rating valu
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version 
-1.0 
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+ * Quick summary
+ * Version 
+ 1.0 
+ * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
