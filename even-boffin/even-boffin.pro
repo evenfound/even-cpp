@@ -8,7 +8,7 @@ TEMPLATE = app
 
 TARGET = even-boffin
 
-INCLUDEPATH += ./include
+INCLUDEPATH += ./include ../include/core
 
 # QMAKE_CXXFLAGS += -std=c++11
 
@@ -17,6 +17,13 @@ INCLUDEPATH += ./include
 win32 {
     INCLUDEPATH += $$(BOOST_ROOT)
 }
+
+CONFIG(debug, debug|release) {
+    win32:      LIBS += -L$$PWD/../prerequisites/QtWebApp/build/debug/                              -lQtWebAppd1
+    mac:        LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_clang_64bit-Debug/               -lQtWebApp_debug
+    unix:!mac:  LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_GCC_64bit-Debug/                 -lQtWebAppd
+}
+
 
 unix {
     LIBS += -lboost_system -lboost_thread -lboost_date_time
@@ -28,27 +35,28 @@ SOURCES += src\main.cpp \
             src\NodeNetwork.cxx\
             src\Network.cxx\
             src\Value.cxx\
-            src\Logger.cxx\
-            src\Config.cxx\
+            src\BoffinApp.cxx \
+            src\Config.cxx \
             src\Controller.cxx \
-            src\Application.cxx \
-            src\SignalHandler.cxx \
-            src\BoffinApp.cxx
+            ../src/core/Application.cxx \
+            ../src/core/SignalHandler.cxx \
+            ../src/core/Logger.cxx
 
-HEADERS += include\datasource.h \
-            include\Node.hxx \
-            include\NodeNetwork.hxx\
-            include\Logger.hxx\
-            include\Network.hxx\
-            include\Value.hxx\
-            include\Config.hxx\
-            include\Controller.hxx \
-            include\Controller.hxx \
-            include\Application.hxx \
-            include\SignalHandler.hxx \
-            include\BoffinApp.hxx \
+
+HEADERS += include/datasource.h \
+            include/Node.hxx \
+            include/NodeNetwork.hxx\
+            include/Network.hxx\
+            include/Value.hxx\
+            include/Config.hxx \
+            include/Controller.hxx \
+            include/Controller.hxx \
+            include/BoffinApp.hxx \
             ../include/core/Core.hxx \
-            ../include/core/Defines.hxx
+            ../include/core/Defines.hxx \
+            ../include/core/Logger.hxx \
+            ../include/core/Application.hxx
+            ../include/core/SignalHandler.hxx \
 
 RESOURCES += even-boffin.qrc
 

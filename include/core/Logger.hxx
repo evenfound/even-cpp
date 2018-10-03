@@ -42,7 +42,7 @@ class Logger {
         class Message {
             public:
                 Message(Logger& log, int level_, Severity severity, const QString& prefix = QString(),
-                        const char * file = 0, int line = 0);
+                        const char * file = nullptr, int line = 0);
 
                 ~Message();
 
@@ -61,13 +61,13 @@ class Logger {
                 int _level;
                 Severity _severity;
                 QString _prefix;
-                QString _file;          //< File name;
+                QString _file;          ///< File name;
                 int _line;
-                const QDateTime _ts;    //< Current time stamp.
-                QStringList _content;   //< Content string list.
+                const QDateTime _ts;    ///< Current time stamp.
+                QStringList _content;   ///< Content string list.
         };
 
-        Logger(Severity severity);
+        explicit Logger(Severity severity);
 
         /**
         * @brief getSeverity - Got the type log level

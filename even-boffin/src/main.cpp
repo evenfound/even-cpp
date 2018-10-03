@@ -20,8 +20,8 @@
 
 using namespace even;
 
-//< TODO: resolve this trouble more detailed after reconstrain project
-//< under linux
+///< TODO: resolve this trouble more detailed after reconstrain project
+///< under linux
 
 /** @brief Main function of application */
 int main(int argc, char *argv[]) {

@@ -11,7 +11,7 @@ namespace even {
 
     class NodeNetwork {
     public:
-        NodeNetwork();
+        NodeNetwork() = default;
         explicit NodeNetwork(const NodeNetwork& orig);
         virtual ~NodeNetwork();
     private:

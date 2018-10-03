@@ -22,12 +22,12 @@ class Network : public QObject, private Config {
         Q_OBJECT
     public:
         /**
-         * @brief Create object Network with size_ nodes
-         * @param size_
+         * @brief Create object Network
+         * @param config_ - list of network parameters
          */
         Network(std::initializer_list<Value> config_);
         Network(const Network& orig);
-        virtual ~Network();
+        ~Network() final;
         
         /** @brief Initialize data and create Network */
         bool create();

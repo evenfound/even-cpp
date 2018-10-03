@@ -20,10 +20,19 @@ class Node : public QObject, public Config {
         /** @brief System node count in system created. */
         static long nodeCount;
 
-        /** @brief Parametric constructor */
+        /** @brief Create Node entity with config_ parameters list */
         Node(std::initializer_list<Value> config_);
 
-        virtual ~Node();
+        ~Node() override;
+
+        /** @brief Assign operator - nocopyable */
+        Node& operator=(const Node& node_) = delete;
+
+        /** @brief Copy constructor - nocopyable */
+        Node(const Node& orig) = delete;
+
+        /** @brief Default constructor deprecated */
+        Node() = delete;
 
     public slots:
         /** @brief Accept signal about start threading job. */
@@ -34,15 +43,6 @@ class Node : public QObject, public Config {
         void resultReady(const QString &);
 
     private:
-        /** @brief Assign operator - nocopyable */
-        Node& operator=(const Node& node_) = delete;
-
-        /** @brief Copy constructor - nocopyable */
-        Node(const Node& orig) = delete;
-
-        /** @brief Default constructor deprecated */
-        Node() = delete;
-
         /** @brief Links to Nodes, developing triangle with
          * us in Network topology
          */
