@@ -1,3 +1,8 @@
 .jumbotron p {
     font-size: 14px;
 }
+
+/** @brief Text owerflow in tables large text field */
+.table tbody tr td {
+    text-overflow: ellipsis;
+}

@@ -4,66 +4,36 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>EVEN Platform Boffin</title>
+        <title>EVEN Platform Boffin - Home</title>
         <script src="js/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/Node.js"></script>
-        <script src="js/Network.js"></script>
         <script src="js/boffin.js"></script>
         <link rel="stylesheet" href="css/boffin.css">
-        <style type="text/css">
-            body{
-                padding-top: 70px;
-            }
-        </style>
     </head>
     <body>
-        <!--        <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-                     Brand and toggle get grouped for better mobile display 
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="#">Tutorial Republic</a>
-                        </div>
-                         Collect the nav links, forms, and other content for toggling 
-                        <div class="collapse navbar-collapse" id="navbarCollapse">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="https://www.tutorialrepublic.com" target="_blank">Home</a></li>
-                                <li><a href="https://www.tutorialrepublic.com/about-us.php" target="_blank">About</a></li>
-                                <li><a href="https://www.tutorialrepublic.com/contact-us.php" target="_blank">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">EVEN boffin</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active" title="Нome"><a href="/">Home</a></li>
+                    <li><a href="/nodes.html" title="Load all nodes list">Nodes</a></li>
+                    <li><a href="/network.html" title="Load network topology">Network</a></li>
+                </ul>
+            </div>
+        </nav>        
         <div class="container">
             <div class="jumbotron">
                 <h2>Network Simulator</h2>
-                <p><a href="/network">Refresh</a> topology network.</p>
-                <p><a href="https://www.tutorialrepublic.com" target="_blank" class="btn btn-success btn-lg">Get started today</a></p>
+                <p><a href="/network" title="Refresh network configure data from boffin">Refresh</a> topology network.</p>
+                <p><a href="" class="btn btn-success btn-lg">Start simulation</a></p>
             </div>
-<!--            <div class="row">
-                <div class="col-xs-4">
-                    <h2>HTML</h2>
-                    <p>HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.</p>
-                    <p><a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-                </div>
-                <div class="col-xs-4">
-                    <h2>CSS</h2>
-                    <p>CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.</p>
-                    <p><a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-                </div>
-                <div class="col-xs-4">
-                    <h2>Bootstrap</h2>
-                    <p>Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can quickly create your own website.</p>
-                    <p><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-                </div>
-            </div>-->
+            <h3>Boffin application settings</h3>
+            <p>Parameters:</p>            
+            <div id="boffin-setup">
+            </div>
             <hr>
             <div class="row">
                 <div class="col-xs-12">
@@ -74,18 +44,4 @@
             </div>
         </div>
     </body>
-<!--    <script>
-        $(document).ready(function () {
-        console.log('Document loaded');
-        console.log('Size ' + $('.container').length);
-        if($('.container').length > 0){
-            if (document.createStyleSheet){
-                document.createStyleSheet('css/bootstrap-iso.css');
-            }
-            else {
-                $("head").append($("<link rel='stylesheet' href='css/bootstrap-iso.css' type='text/css' media='screen' />"));
-            }
-        }
-        });
-    </script>-->
 </html>                            

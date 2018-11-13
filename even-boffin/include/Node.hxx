@@ -7,10 +7,12 @@
 
 #pragma once
 
+#include "Config.hxx"
+#include "Wallet.hxx"
+
 #include <initializer_list>
 #include <QObject>
 #include <QThread>
-#include "Config.hxx"
 
 namespace even {
 
@@ -34,6 +36,9 @@ class Node : public QObject, public Config {
         /** @brief Default constructor deprecated */
         Node() = delete;
 
+        /** @brief Return Hash reference */
+        inline Hash &hash() { return _hash; }
+
     public slots:
         /** @brief Accept signal about start threading job. */
         void doWork(const QString &message_);
@@ -43,8 +48,10 @@ class Node : public QObject, public Config {
         void resultReady(const QString &);
 
     private:
-        Node *_left, *_right; ///< @brief Links to Nodes, developing triangle with
-                              ///< us in Network topology
+        Node *_left, *_right;   ///< @brief Links to Nodes, developing triangle with
+                                ///< us in Network topology
+        Wallet _wallet;         ///< Node Wallet object
+        Hash _hash;             ///< Node hash
 };
 };
 

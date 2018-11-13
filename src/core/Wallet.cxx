@@ -7,6 +7,11 @@
 
 #include "Wallet.hxx"
 
+#include <QDir>
+
 using namespace even;
 
 //------------------------------------------------------------------------------
+void Wallet::initialize(const QString& path_) {
+    _path = path_;
+}

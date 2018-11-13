@@ -17,7 +17,8 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QDirIterator>
-
+#include <QCryptographicHash>
+#include <QTextCodec>
 
 using namespace std;
 using namespace even;
@@ -104,7 +105,7 @@ bool Network::create() {
 
     QDirIterator dirIt(getValue(u8"path").toString()
                        , QDir::Dirs | QDir::NoSymLinks | QDir::NoDotAndDotDot
-                       , QDirIterator::Subdirectories);
+                       , QDirIterator::NoIteratorFlags);
     QMap<QString, QString> dirNames;
     auto countDirs = 0;
     while(dirIt.hasNext()){
@@ -120,20 +121,18 @@ bool Network::create() {
         clear();
         setValue(u8"network_size", countDirs);
         for(auto d = dirNames.begin(); d != dirNames.end(); ++d) {
-            // Public Key - is a GUID
-            _network.insert(d.key(), new Controller< Node >({
+            // Public Key - is a Keccak_256
+            _network.insert(d.key(), new Controller<Node>({
                       {d.key(), u8"hash", u8"Public key(test)"}
-                    , {d.value(), u8"path", u8"Path of nodes IPFS storage"}}));
+                    , {d.value(), u8"path", u8"Path of node IPFS storage"}}));
         }
         return true;
     } else {
         clear();
         for (int i = 0; i < getValue("network_size").toInt(); i++) {
-            QString hash = QUuid::createUuid().toString();
-            // Public Key - is a GUID
-            _network.insert(hash, new Controller< Node >({
-                      {hash, u8"id_rsa", u8"Public key(test)"}
-                    , {getValue(u8"path").toString() + "/" + hash, u8"path", u8"Path of nodes IPFS storage"}}));
+            Controller<Node> *node = new Controller<Node>({{getValue(u8"path").toString()
+                                                            , u8"path", u8"Path of node IPFS storage"}});
+            _network.insert((*node)->hash().serialize(), node);
         }
         return true;
     }

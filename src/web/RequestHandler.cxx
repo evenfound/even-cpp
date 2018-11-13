@@ -39,7 +39,7 @@ void RequestHandler::appendObject(QString name_, QObject* object_) {
 
 //------------------------------------------------------------------------------
 void RequestHandler::appendConfig(Config* config_) {
-    _configHash.insert(config_->getValue(u8"object").toString()
+    _configHash.insertMulti(config_->getValue(u8"object").toString()
                        , config_);
 }
 

@@ -7,13 +7,21 @@
 
 #pragma once
 
+#include "Transaction.hxx"
+
+#include <QVector>
+
 namespace even {
 
 /** @brief Entitity of message container */
 class Message {
     public:
         Message() = default;
+
     private:
+        /** @brief Transaction bundle */
+        QVector<Transaction> _transactions;
+
 };
 
 };

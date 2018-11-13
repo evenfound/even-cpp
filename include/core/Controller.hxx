@@ -60,14 +60,16 @@ namespace even {
 
         /** @brief Copy constructor */
         explicit Controller(const Controller<T> &orig);
-        virtual ~Controller();
+        virtual ~Controller() override;
 
-        void handleResults(const QString &);
+        void handleResults(const QString &) override;
         void operate(const QString &) override;
 
         Controller<T>& operator=(const Controller<T> &orig_);
+
         /** @brief Return pointer to _t */
         inline T* operator->() { return get(); }
+
         /** @brief Return pointer to _t */
         inline T* get() { return _t; }
 

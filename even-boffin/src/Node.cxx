@@ -18,10 +18,10 @@ long Node::nodeCount = 0L;
 
 //------------------------------------------------------------------------------
 ///< @brief Parametric constructor
-Node::Node(std::initializer_list<Value> config_) :
-    Config(config_),
-    _left(0L),
-    _right(0L)
+Node::Node(std::initializer_list<Value> config_)
+    : Config(config_)
+    , _left(0L)
+    , _right(0L)
 {
     Node::nodeCount++;
     addValue(u8"object",{"Node"}, u8"Object type");
@@ -36,14 +36,32 @@ Node::Node(std::initializer_list<Value> config_) :
     addValue(u8"d1", {0.0}, u8"--");
     addValue(u8"d2", {0.0}, u8"--");
 
+    addValue(u8"balance", {1.25}, u8"Balance of wallet accounts");
+
     for (auto &v : config_)
         addValue(v);
 
-    if(!QDir(getValue(u8"path").toString()).exists()) {
-        QDir().mkdir(getValue(u8"path").toString());
-        QDir().mkdir(getValue(u8"path").toString() + "/inbox");
-        QDir().mkdir(getValue(u8"path").toString() + "/outbox");
+    QString root = getValue(u8"path").toString();
+    if(!getValue(u8"hash").isValid()) {
+        addValue(u8"hash", _hash.serialize(), u8"Public key(test)");
+        root +=  "/" + _hash.serialize();
     }
+
+    if(!QDir(root).exists()) {
+        // Create root IPFS path
+        QDir().mkdir(root);
+        // Create inbox path
+        QDir().mkdir(root + "/inbox");
+        // Create outbox path
+        QDir().mkdir(root + "/outbox");
+        // Create Wallet path store
+        QDir().mkdir(root + "/wallet");
+    }
+
+    // Public Key - is a Keccak_256
+
+    // Init node Wallet
+    _wallet.initialize(getValue(u8"path").toString() + "/wallet");
 
     // Attach this to Http handle
     WebServer::instance()->appendObject("Node", this);
