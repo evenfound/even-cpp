@@ -1,4 +1,5 @@
-even-boffin/even-boffin.pro.user
-even-boffin/nbproject/
-even-boffin/build
-prerequisites/
+!.gitignore
+*/*.user
+*/nbproject/
+*/build
+*/*.*.user.*

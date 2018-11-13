@@ -10,7 +10,7 @@
 using namespace even;
 
 //------------------------------------------------------------------------------
-NodeNetwork::NodeNetwork(const NodeNetwork& orig) {
+NodeNetwork::NodeNetwork(const NodeNetwork&) {
 }
 
 //------------------------------------------------------------------------------

@@ -8,10 +8,14 @@
 #include "application.hxx"
 #include "Logger.hxx"
 
+//#include <QLoggingCategory>
+
 //------------------------------------------------------------------------------
 Application::Application() :
     SignalHandler(SignalHandler::SIG_INT), _myThread(NULL)
-{}
+{
+//    QLoggingCategory::defaultCategory()->setEnabled(QtDebugMsg, true);
+}
 
 //------------------------------------------------------------------------------
 bool Application::isRunning() {

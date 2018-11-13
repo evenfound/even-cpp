@@ -12,9 +12,9 @@ using namespace even;
 
 ///< @brief Level verbosity of out line
 QMap<Logger::Severity, int> Logger::logLevel = {
-    {Debug, 20},
+    {Debug, 15},
     {Warning, 20},
-    {Info, 20},
+    {Info, 15},
     {Critical, 10}
 };
 
@@ -26,7 +26,7 @@ Logger::Logger(Severity severity) :
 }
 
 //------------------------------------------------------------------------------
-void Logger::consoleMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg) {
+void Logger::consoleMessageOutput(QtMsgType, const QMessageLogContext&, const QString &msg) {
     QByteArray localMsg = msg.toLocal8Bit();
     //fprintf(stderr, "MESSAGE (%s:%u %s): %s\n", context.file, context.line, context.function, localMsg.constData());
     fprintf(stderr, "%s\n", localMsg.constData());
@@ -53,7 +53,7 @@ Logger::Message::~Message() {
         return;
     }
 
-    // If verbocity level more then predefined - breal log
+    // If verbocity level more then predefined - break log
     if(_level > Logger::logLevel[_severity])
         return;
 
@@ -74,13 +74,13 @@ Logger::Message::~Message() {
 
     QString message = outline.join("");
 
-    //< Log to console stdout
+    ///< Log to console stdout
     qInstallMessageHandler(Logger::consoleMessageOutput);
     qDebug("%s", message.toLocal8Bit().data());
 
-    //< Log to debugger window in QtCreator
+    ///< Log to debugger window in QtCreator
     qInstallMessageHandler(0);
-    //qDebug("%s", message.toLocal8Bit().data());
+//    qDebug("%s", message.toLocal8Bit().data());
 
 }
 

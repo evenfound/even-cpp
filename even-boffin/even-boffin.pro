@@ -1,71 +1,72 @@
-# CONFIG += console
-
-QT += datavisualization
-
-# qml quick
-
-TEMPLATE = app
-
 TARGET = even-boffin
+TEMPLATE = app
+QT += core network
+#CONFIG += console
 
-INCLUDEPATH += ./include ../include/core
+INCLUDEPATH += ./include \
+    $$PWD/../include/core \
+    $$PWD/../include/web \
+    $$PWD/../prerequisites/QtWebApp/QtWebApp \
+    $$PWD/../prerequisites/QtWebApp/QtWebApp/templateengine \
+    $$PWD/../prerequisites/QtWebApp/QtWebApp/qtwebsockets/src/websockets
 
-# QMAKE_CXXFLAGS += -std=c++11
 
-# The .cpp file which was generated for your project. Feel free to hack it.
+# Directory where the debug version of the shared library (*.dll or *.so) is stored, and base name of the file.
+CONFIG(debug, debug|release) {
+    win32:      LIBS += -L$$PWD/../bin/ -lqtwebappd1
+    mac:        LIBS += -L$$PWD/../bin/ -lqtwebappd_debug
+    unix:!mac:  LIBS += -L$$PWD/../bin/ -lqtwebappd
+}
 
 win32 {
-    INCLUDEPATH += $$(BOOST_ROOT)
-}
-
-CONFIG(debug, debug|release) {
-    win32:      LIBS += -L$$PWD/../prerequisites/QtWebApp/build/debug/                              -lQtWebAppd1
-    mac:        LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_clang_64bit-Debug/               -lQtWebApp_debug
-    unix:!mac:  LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_GCC_64bit-Debug/                 -lQtWebAppd
-}
-
-
-unix {
-    LIBS += -lboost_system -lboost_thread -lboost_date_time
+   DEFINES += QTWEBAPPLIB_IMPORT
 }
 
 SOURCES += src\main.cpp \
-            src\datasource.cpp \
             src\Node.cxx \
             src\NodeNetwork.cxx\
             src\Network.cxx\
-            src\Value.cxx\
             src\BoffinApp.cxx \
-            src\Config.cxx \
-            src\Controller.cxx \
-            ../src/core/Application.cxx \
-            ../src/core/SignalHandler.cxx \
-            ../src/core/Logger.cxx
+            $$PWD/../src/core/Value.cxx\
+            $$PWD/../src/core/Controller.cxx \
+            $$PWD/../src/core/Config.cxx \
+            $$PWD/../src/core/Application.cxx \
+            $$PWD/../src/core/SignalHandler.cxx \
+            $$PWD/../src/core/Logger.cxx \
+            $$PWD/../src/core/Message.cxx \
+            $$PWD/../src/core/FileConfig.cxx \
+            $$PWD/../src/web/RequestHandler.cxx \
+            $$PWD/../src/web/TemplateHolder.cxx \
+            $$PWD/../src/web/WebServer.cxx \
+            $$PWD/../src/core/Storage.cxx \
+            $$PWD/../src/core/Wallet.cxx \
+            $$PWD/../src/core/Transaction.cxx
 
-
-HEADERS += include/datasource.h \
-            include/Node.hxx \
+HEADERS += include/Node.hxx \
             include/NodeNetwork.hxx\
             include/Network.hxx\
-            include/Value.hxx\
-            include/Config.hxx \
-            include/Controller.hxx \
-            include/Controller.hxx \
             include/BoffinApp.hxx \
-            ../include/core/Core.hxx \
-            ../include/core/Defines.hxx \
-            ../include/core/Logger.hxx \
-            ../include/core/Application.hxx
-            ../include/core/SignalHandler.hxx \
+            $$PWD/../include/core/Value.hxx \
+            $$PWD/../include/core/Controller.hxx \
+            $$PWD/../include/core/Config.hxx \
+            $$PWD/../include/core/Core.hxx \
+            $$PWD/../include/core/Defines.hxx \
+            $$PWD/../include/core/Logger.hxx \
+            $$PWD/../include/core/Message.hxx \
+            $$PWD/../include/core/Application.hxx \
+            $$PWD/../include/core/FileConfig.hxx \
+            $$PWD/../include/core/CallOnce.hxx \
+            $$PWD/../include/core/Singleton.hxx \
+            $$PWD/../include/core/SignalHandler.hxx \
+            $$PWD/../include/web/RequestHandler.hxx \
+            $$PWD/../include/web/TemplateHolder.hxx \
+            $$PWD/../include/web/WebServer.hxx \
+            $$PWD/../include/core/Storage.hxx \
+            $$PWD/../include/core/Wallet.hxx \
+            $$PWD/../include/core/Transaction.hxx
 
-RESOURCES += even-boffin.qrc
 
-OTHER_FILES += doc/src/* \
-               doc/images/* \
-               qml/boffin/*
-
-
-#DESTDIR = dist
+DESTDIR = $$PWD/../bin
 OBJECTS_DIR = .obj
 MOC_DIR = .moc
 RCC_DIR = .rcc

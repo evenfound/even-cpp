@@ -1,52 +1,53 @@
-/****************************************************************************
-**
-** Copyright (C) 2016 The Qt Company Ltd.
-** Contact: https://www.qt.io/licensing/
-**
-** This file is part of the Qt Charts module of the Qt Toolkit.
-**
-** $QT_BEGIN_LICENSE:GPL$
-** Commercial License Usage
-** Licensees holding valid commercial Qt licenses may use this file in
-** accordance with the commercial license agreement provided with the
-** Software or, alternatively, in accordance with the terms contained in
-** a written agreement between you and The Qt Company. For licensing terms
-** and conditions see https://www.qt.io/terms-conditions. For further
-** information use the contact form at https://www.qt.io/contact-us.
-**
-** GNU General Public License Usage
-** Alternatively, this file may be used under the terms of the GNU
-** General Public License version 3 or (at your option) any later version
-** approved by the KDE Free Qt Foundation. The licenses are as published by
-** the Free Software Foundation and appearing in the file LICENSE.GPL3
-** included in the packaging of this file. Please review the following
-** information to ensure the GNU General Public License requirements will
-** be met: https://www.gnu.org/licenses/gpl-3.0.html.
-**
-** $QT_END_LICENSE$
-**
-****************************************************************************/
+/**
+ * @file    main.сpp
+ * @author  E. Pozdnyakov
+ *
+ * @brief   main file of project.
+ *
+ * @date    Created on October 2, 2018, 7:49 PM
+ */
 
-#include "Chart.h"
-#include <QtCharts/QChartView>
+#include "ChartRscore.h"
+#include "Controls.h"
+#include "ValueSlider.hxx"
+#include "Rscore.hxx"
+
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QMainWindow>
+#include <QHBoxLayout>
 
-QT_CHARTS_USE_NAMESPACE
+using namespace even;
 
+//------------------------------------------------------------------------------
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QMainWindow window;
-    Chart *chart = new Chart;
-    chart->setTitle("r-Score sample counter..");
-    chart->legend()->hide();
-    chart->setAnimationOptions(QChart::AllAnimations);
-    QChartView chartView(chart);
-    chartView.setRenderHint(QPainter::Antialiasing);
-    window.setCentralWidget(&chartView);
-    window.resize(400, 300);
+
+    Controls window;
+
+    Rscore rscore({
+                      {0.5f, "contribution", "Относительный вклад мощности", {0.0f, 1.0f, 10.0f}},
+                      {0.1f, "ping", "Относительная скорость работы сети", {0.5f, 1.0f, 20.0f}},
+                      {0.2f, "activity", "Активность", {0.2f, 1.0f, 20.0f}},
+                      {0.2f, "foundity", "Относительная капитализация", {0.01f, 1.0f, 20.0f}},
+                });
+
+    ChartRscore *chart = new ChartRscore(&rscore);
+
+    //chart->setTitle("r-Score sample counter..");
+    //chart->legend()->hide();
+    //chart->setAnimationOptions(QChart::AllAnimations);
+
+    //QGraphicsView chartView(chart);
+    //chartView.setRenderHint(QPainter::Antialiasing);
+
+    window.addControl(chart);
+    for(auto &c: rscore) {
+        window.addControl(new ValueSlider(&c));
+    }
+
+    window.resize(400, 600);
     window.show();
+
     return a.exec();
 }
 

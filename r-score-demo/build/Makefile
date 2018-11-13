@@ -258,9 +258,9 @@ Makefile: ..\r-score-demo.pro ..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\mkspecs
 		..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\mkspecs\features\lex.prf \
 		..\r-score-demo.pro \
 		..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\qtmaind.prl \
-		..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Charts.prl \
 		..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Widgets.prl \
 		..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Gui.prl \
+		..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Network.prl \
 		..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Core.prl
 	$(QMAKE) -o Makefile ..\r-score-demo.pro -spec C:/Qt/Qt5.11.1/5.11.1/msvc2017_64/mkspecs/win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
 ..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\mkspecs\features\spec_pre.prf:
@@ -446,9 +446,9 @@ Makefile: ..\r-score-demo.pro ..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\mkspecs
 ..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\mkspecs\features\lex.prf:
 ..\r-score-demo.pro:
 ..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\qtmaind.prl:
-..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Charts.prl:
 ..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Widgets.prl:
 ..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Gui.prl:
+..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Network.prl:
 ..\..\..\..\Qt\Qt5.11.1\5.11.1\msvc2017_64\lib\Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\r-score-demo.pro -spec C:/Qt/Qt5.11.1/5.11.1/msvc2017_64/mkspecs/win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"

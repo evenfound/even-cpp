@@ -5,18 +5,19 @@
  * @date    Created on August 24, 2018, 7:49 PM
  */
 
+#include "BoffinApp.hxx"
+#include "Logger.hxx"
+#include "WebServer.hxx"
+#include "Network.hxx"
+
 #include "datasource.h"
 #include <QtDataVisualization/qutils.h>
 #include <QtGui/QGuiApplication>
 #include <QtCore/QDir>
-//#include <QtQml/QQmlContext>
-//#include <QtQuick/QQuickView>
-//#include <QtQml/QQmlEngine>
 #include <QException>
+#include <QDebug>
 
-#include "BoffinApp.hxx"
-#include "Logger.hxx"
-#include "Network.hxx"
+//#include <QLoggingCategory>
 
 using namespace even;
 
@@ -25,6 +26,11 @@ using namespace even;
 
 /** @brief Main function of application */
 int main(int argc, char *argv[]) {
+      // custom handler start
+//    qInstallMessageHandler(&customLogHandler);
+
+//    QLoggingCategory::setFilterRules("*.debug=true");
+//    qDebug() << "Start application...";
 
     INFO(20) << "Start boffin application ...";
 
@@ -35,12 +41,7 @@ int main(int argc, char *argv[]) {
 
         // Сreate Network object
 
-        Network network({
-                            {50, "network_size"},  // Node network count, integer digit 0...1024
-                            {10, "proof_nodes"},    // Count of proofed nodes, percent
-                            {1, "tick"},            // Modeling timer tick, msec
-                        });
-
+        Network network({});
         network.create();
 
 /**

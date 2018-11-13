@@ -7,14 +7,14 @@
 
 #pragma once
 
+#include "Config.hxx"
+#include "Node.hxx"
+#include "Controller.hxx"
+
 #include <initializer_list>
 #include <QObject>
 #include <QHash>
 #include <QString>
-
-#include "Config.hxx"
-#include "Node.hxx"
-#include "Controller.hxx"
 
 namespace even {
 
@@ -26,7 +26,7 @@ class Network : public QObject, private Config {
          * @param config_ - list of network parameters
          */
         Network(std::initializer_list<Value> config_);
-        Network(const Network& orig);
+//        Network(const Network& orig);
         ~Network() final;
         
         /** @brief Initialize data and create Network */
@@ -35,16 +35,17 @@ class Network : public QObject, private Config {
         /** @brief Destroy all objects from Network. */
         void clear();
         
+        /** @brief Return value set in json array with children object packed */
+        QJsonObject encode() override;
+
     private:
 
-        /** @brief Network Nodes hash array.
-         *  @param key - Node Public Key
-         *  @param Value - Node object
+        /**
+         * @brief Network Nodes hash array
+         * @param key - Node Public Key
+         * @param Value - Node object
          */
-
-        // QMap<QString, Controller<Node>* > _network;
         QHash<QString, Controller<Node>* > _network;
-
 };
 };
 

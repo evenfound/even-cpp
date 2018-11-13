@@ -43,10 +43,8 @@ class Node : public QObject, public Config {
         void resultReady(const QString &);
 
     private:
-        /** @brief Links to Nodes, developing triangle with
-         * us in Network topology
-         */
-        Node *_left, *_right;
+        Node *_left, *_right; ///< @brief Links to Nodes, developing triangle with
+                              ///< us in Network topology
 };
 };
 
