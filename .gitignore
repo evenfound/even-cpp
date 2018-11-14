@@ -3,3 +3,7 @@
 */nbproject/
 */build
 */*.*.user.*
+/even-boffin/www/nbproject/private/
+/bin
+*/*/nbproject
+*.rar

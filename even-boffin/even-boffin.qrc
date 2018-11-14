@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>qml/boffin/main.qml</file>
-        <file>qml/boffin/NewButton.qml</file>
-    </qresource>
-</RCC>
