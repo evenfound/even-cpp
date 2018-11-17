@@ -7,9 +7,10 @@
 
 #pragma once
 
+#include "SignalHandler.hxx"
+
 #include <QThread>
 #include <QCoreApplication>
-#include "SignalHandler.hxx"
 #include <iostream>
 
 class Application : public SignalHandler
@@ -33,7 +34,9 @@ protected:
     int main(int argc, char *argv[]);
 
 private:
-    QThread* _myThread;
+    /** @brief Control thread. */
+    QThread* _myThread = nullptr;
+
 };
 
 

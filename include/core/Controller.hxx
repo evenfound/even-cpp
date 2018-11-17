@@ -40,7 +40,8 @@ namespace even {
         virtual void handleResults(const QString &) = 0;
 
     signals:
-        virtual void operate(const QString &) = 0;
+//        virtual void operate(const QString &) = 0;
+        virtual void operate(const QString &);
 
     private:
         QThread _workerThread; ///< @brief Worker thread for objects
@@ -63,7 +64,7 @@ namespace even {
         virtual ~Controller() override;
 
         void handleResults(const QString &) override;
-        void operate(const QString &) override;
+//        void operate(const QString &) override;
 
         Controller<T>& operator=(const Controller<T> &orig_);
 
@@ -74,7 +75,7 @@ namespace even {
         inline T* get() { return _t; }
 
     private:
-        T*   _t; ///<@brief Pointer to object memory.
+        T* _t; ///<@brief Pointer to object memory.
     };
 };
 

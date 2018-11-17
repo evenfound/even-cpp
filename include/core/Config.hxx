@@ -78,6 +78,9 @@ class Config {
         /** @brief Return value set in json array packed */
         virtual QJsonObject encode();
 
+        /** @brief Return values in json array packed by path_ set */
+        virtual bool serialize(QString path_, QJsonObject& other_) = 0;
+
     private:
         QHash<const QString, Value> _config;    ///< @brief Array of Value parameters array.
 };

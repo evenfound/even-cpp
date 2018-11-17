@@ -39,6 +39,9 @@ class Node : public QObject, public Config {
         /** @brief Return Hash reference */
         inline Hash &hash() { return _hash; }
 
+        /** @brief Return values in json array packed by path_ set */
+        bool serialize(QString path_, QJsonObject& other_) override;
+
     public slots:
         /** @brief Accept signal about start threading job. */
         void doWork(const QString &message_);

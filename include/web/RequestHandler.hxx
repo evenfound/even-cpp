@@ -40,10 +40,7 @@ class RequestHandler : public HttpRequestHandler {
         RequestHandler(QObject* parent = nullptr);
 
         /** @brief Add config array to reuqest handler */
-        void appendConfig(Config* config_);
-
-        /** @brief Add pointer to object with him text name */
-        void appendObject(QString name_, QObject* object_);
+        void appendConfig(Config* config_, QString serialPath_="");
 
         /**
          * @brief Destructor
@@ -62,8 +59,11 @@ class RequestHandler : public HttpRequestHandler {
         bool parse(QString command_, HttpResponse& response_);
 
     private:
-        QHash<QString, Config*> _configHash;    ///< @brief Hash array of Config pointers array.
-        QHash<QString, QObject*> _objectHash;   ///< @brief Hash array of base Object pointers array.
+        /** @brief Pack Json object to responce and sent it to client. */
+        void _encodeSerialize(const QJsonObject& other_, HttpResponse &response_);
+
+        /** @brief Hash array of Config pointers array. */
+        QHash<QString, Config*> _configHash;
 
 };
 

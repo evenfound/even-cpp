@@ -5,9 +5,9 @@
                 var sTable = `<table class="table table-striped"> 
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Balance</th>
-                            <th>Address</th>
+                            <th style='width: 5%;'>#</th>
+                            <th style='width: 10%;'>Balance</th>
+                            <th style='width: 85%;'>Address</th>
                         </tr>
                     </thead>
                     <tbody>`;
@@ -16,7 +16,7 @@
                     sTable += `<tr>
                             <td>` + (index + 1) + `</td>
                             <td>` + value.balance.value + `</td>
-                            <td><a href='/node/`+ index +`'>` + value.hash.value + `</a></td>
+                            <td><a href='/wallet.html?node=` + value.hash.value +`' title='Wallet of node'>` + value.hash.value + `</a></td>
                         </tr>`;
                 });
                 sTable += `</tbody>
@@ -27,14 +27,14 @@
         };
     $('body').ready(function () {
         var request = $.ajax({
-            url: "/boffin",
+            url: "/network",
             method: "POST",
             data: {id: 'menuId'},
             dataType: 'json'
         });
         request.done(function (msg) {
             //$("#log").html(msg);
-            showNodes(msg.boffin);
+            showNodes(msg.network);
         });
     });
 }(jQuery);

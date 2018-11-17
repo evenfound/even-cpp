@@ -11,9 +11,12 @@
 //------------------------------------------------------------------------------
 BoffinApp::BoffinApp(int argc, char *argv[]) :
     QGuiApplication(argc, argv),
-    Application()
+    Application(),
+    _timer(new QTimer(this))
 {
     Application::main(argc, argv);
+
+    connect(_timer, SIGNAL(timeout()), this, SLOT(processOneThing()));
 }
 
 //------------------------------------------------------------------------------
@@ -46,4 +49,23 @@ bool BoffinApp::handleSignal(int signal) {
     // Let the signal propagate as though we had not been there
     return false;
 }
+
+//------------------------------------------------------------------------------
+void BoffinApp::timerOn(int tick_) {
+    _timer->start(tick_);
+    INFO(15) << QString("Start timer %1").arg(tick_);
+}
+
+//------------------------------------------------------------------------------
+void BoffinApp::timerOff() {
+    _timer->stop();
+    INFO(15) << "Stop timer..";
+}
+
+//------------------------------------------------------------------------------
+void BoffinApp::processOneThing() {
+    INFO(20) << "Fire tick..";
+    emit shot(_timer);
+}
+
 

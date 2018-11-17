@@ -41,23 +41,23 @@ WebServer::~WebServer()
     INFO(10) << "WebServer singleton destroyed..";
 }
 
-//------------------------------------------------------------------------------
-void WebServer::appendObject(QString name_, QObject* object_)
-{
-    if(!WebServer::handler.isNull())
-        WebServer::handler->appendObject(name_, object_);
-    else
-        CRITICAL(1) << QString("Error adding object 0x%1 - '%2' to request handler...")
-                       .arg((quintptr)object_
-                            , QT_POINTER_SIZE * 2, 16, QChar('0'))
-                       .arg(name_);
-}
+////------------------------------------------------------------------------------
+//void WebServer::appendObject(QString name_, QObject* object_)
+//{
+//    if(!WebServer::handler.isNull())
+//        WebServer::handler->appendObject(name_, object_);
+//    else
+//        CRITICAL(1) << QString("Error adding object 0x%1 - '%2' to request handler...")
+//                       .arg((quintptr)object_
+//                            , QT_POINTER_SIZE * 2, 16, QChar('0'))
+//                       .arg(name_);
+//}
 
 //------------------------------------------------------------------------------
-void WebServer::appendConfig(Config* config_)
+void WebServer::appendConfig(Config* config_, QString serialPath_)
 {
     if(!WebServer::handler.isNull())
-        WebServer::handler->appendConfig(config_);
+        WebServer::handler->appendConfig(config_, serialPath_);
     else
         CRITICAL(1) << QString("Error adding config 0x%1 to request handler...")
                        .arg((quintptr)config_

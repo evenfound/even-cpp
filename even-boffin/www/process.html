@@ -4,23 +4,28 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>EVEN Platform Boffin - Home</title>
+        <title>EVEN Platform Boffin - Process</title>
         <script src="js/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" href="css/bootstrap/bootstrap.css" type="text/css">
         <script src="js/bootstrap/bootstrap.min.js"></script>
         <script src="js/Action.js"></script>
-        <script src="js/Boffin.js"></script>
+        <script src="js/Process.js"></script>
         <script src="js/Menu.js"></script>
         <link rel="stylesheet" href="css/boffin.css">
     </head>
     <body>
-        <script>menu("Home");</script>
+        <script>menu("Process");</script>
         <div class="container">
-            <div class="jumbotron">
-                <h3>Network Simulator</h3>
-                <p><a href="/network.html" title="Refresh network configure data from boffin">Refresh</a> topology network.</p>
-                <p><a id="toggle-model" href="#" class="btn btn-success btn-lg">Start</a></p>
-                <table id="jumbo-display" class="table">
+            <div id="nodes">   
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <h4>Simulation..</h4>
+                    </div>
+                    <div id="simulation-caption" class="col-6 text-right">
+                        <h4>running</h4>
+                    </div>
+                </div>
+                <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -50,10 +55,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <h4>Boffin application settings</h4>
-            <p>Parameters:</p>            
-            <div id="boffin-setup">
             </div>
         </div>
         <hr>

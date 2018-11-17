@@ -1,7 +1,7 @@
 + function ($) {
 var
         showNetworkInfo = function (boffin) {
-        console.log(boffin);
+//        console.log(boffin);
                 $(`<table class="table table-striped"> 
                     <thead>
                         <tr>
@@ -44,15 +44,15 @@ var
 
         };
         $('body').ready(function () {
-var request = $.ajax({
-url: "/boffin",
-        method: "POST",
-        data: {id: 'menuId'},
-        dataType: 'json'
+            var request = $.ajax({
+                url: "/network",
+                method: "POST",
+                data: {id: 'menuId'},
+                dataType: 'json'
+            });
+            request.done(function (msg) {
+            //$("#log").html(msg);
+            showNetworkInfo(msg.network);
+        });
 });
-        request.done(function (msg) {
-        //$("#log").html(msg);
-        showNetworkInfo(msg.boffin);
-        });
-        });
 }(jQuery);

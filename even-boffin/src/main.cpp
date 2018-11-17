@@ -41,7 +41,13 @@ int main(int argc, char *argv[]) {
 
         // Сreate Network object
 
-        Network network({});
+        Network network({{QString(u8"network"), u8"object", u8"Type object"}});
+
+        // Connect simulation timer to threaded Network object, that runnig processe self
+        network.connect(&network, SIGNAL(startTimer(int)), &app, SLOT(timerOn(int)));
+        network.connect(&network, SIGNAL(stopTimer()), &app, SLOT(timerOff()));
+        network.connect(&app, SIGNAL(shot(QTimer*)), &network, SLOT(processOneThing(QTimer*)));
+
         network.create();
 
 /**

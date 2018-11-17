@@ -13,7 +13,7 @@ INCLUDEPATH += ./include \
 
 # Directory where the debug version of the shared library (*.dll or *.so) is stored, and base name of the file.
 CONFIG(debug, debug|release) {
-    win32:      LIBS += -L$$PWD/../bin/ -lqtwebappd1
+    win32:      LIBS += -L$$PWD/../prerequisites/QtWebApp/build/debug/ -lqtwebappd1
     mac:        LIBS += -L$$PWD/../bin/ -lqtwebappd_debug
     unix:!mac:  LIBS += -L$$PWD/../bin/ -lqtwebappd
 }

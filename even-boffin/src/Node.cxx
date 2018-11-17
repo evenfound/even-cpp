@@ -23,8 +23,8 @@ Node::Node(std::initializer_list<Value> config_)
     , _left(0L)
     , _right(0L)
 {
+    INFO(15) << "create " << getValue(u8"object").toString();
     Node::nodeCount++;
-    addValue(u8"object",{"Node"}, u8"Object type");
     addValue(u8"#",{Node::nodeCount}, u8"Node index");
 
     // Position Node in Network topology.
@@ -63,8 +63,8 @@ Node::Node(std::initializer_list<Value> config_)
     // Init node Wallet
     _wallet.initialize(getValue(u8"path").toString() + "/wallet");
 
-    // Attach this to Http handle
-    WebServer::instance()->appendObject("Node", this);
+    // Attach this to Http handle as Wallet serialize
+    WebServer::instance()->appendConfig(this, u8"node/wallet/" + _hash.serialize());
 
     DEBUG(15) << QString("Node # %1 created.").arg(Node::nodeCount);
 }
@@ -79,6 +79,18 @@ Node::~Node() {
 
 //------------------------------------------------------------------------------
 void Node::doWork(const QString&) {
+    INFO(15) << QString("Fire simulation tick on 0x%1")
+                .arg((quintptr)this, QT_POINTER_SIZE * 2, 16, QChar('0'));;
+}
 
+//------------------------------------------------------------------------------
+bool Node::serialize(QString path_, QJsonObject& other_) {
+    if(path_ == "node/wallet") {
+        INFO(15) << "Have a path " << path_
+                 << " of serialize in " << QString::number(Node::nodeCount) << " node ..";
+        other_.insert("wallet", "Not initilized..");
+        return true;
+    }
+    return false;
 }
 

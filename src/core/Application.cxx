@@ -12,7 +12,7 @@
 
 //------------------------------------------------------------------------------
 Application::Application() :
-    SignalHandler(SignalHandler::SIG_INT), _myThread(NULL)
+    SignalHandler(SignalHandler::SIG_INT)
 {
 //    QLoggingCategory::defaultCategory()->setEnabled(QtDebugMsg, true);
 }
@@ -34,12 +34,9 @@ bool Application::wait() {
 }
 
 //------------------------------------------------------------------------------
-int Application::main(int argc, char *argv[])
+int Application::main(int, char*[])
 {
-    Q_UNUSED(argc);
-    Q_UNUSED(argv);
-
-    // Main program instructions here (e.g. start a thread)
+   // Main program instructions here (e.g. start a thread)
     _myThread = new QThread();
     _myThread->start();
     return 0;

@@ -21,8 +21,14 @@ class TemplateHolder : public TemplateCache {
     public:
         TemplateHolder(QSettings* settings_, QObject* parent_ = nullptr);
 
-        /** @brief Return teplate file path */
+        /** @brief Return teplate directory file path */
         const QString& filePath() const;
+
+        /** @brief Return caching enable flag */
+        inline const bool enable() const { return _enable; }
+private:
+        bool _enable = false;   ///< Caching enable flag
+
 };
 
 };

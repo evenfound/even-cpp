@@ -11,13 +11,14 @@
 
 #include <QJsonDocument>
 #include <QDebug>
+#include <QFile>
 
 using namespace even;
 
 /** Logger class */
 //extern FileLogger* logger;
 
-TemplateHolder*  RequestHandler::templateCache = 0;
+TemplateHolder*  RequestHandler::templateCache = nullptr;
 
 //------------------------------------------------------------------------------
 RequestHandler::RequestHandler(QObject* parent)
@@ -32,33 +33,50 @@ RequestHandler::~RequestHandler()
     INFO(15) << "RequestHandler: deleted";
 }
 
-//------------------------------------------------------------------------------
-void RequestHandler::appendObject(QString name_, QObject* object_) {
-    _objectHash.insert(name_, object_);
-}
+////------------------------------------------------------------------------------
+//void RequestHandler::appendObject(QString name_, QObject* object_) {
+//    _objectHash.insertMulti(name_, object_);
+//}
 
 //------------------------------------------------------------------------------
-void RequestHandler::appendConfig(Config* config_) {
-    _configHash.insertMulti(config_->getValue(u8"object").toString()
-                       , config_);
+void RequestHandler::appendConfig(Config* config_, QString serialPath_) {
+    _configHash.insertMulti((serialPath_.isEmpty())
+                            ? config_->getValue(u8"object").toString()
+                            : serialPath_
+                              , config_);
 }
 
 //------------------------------------------------------------------------------
 bool RequestHandler::parse(QString command_, HttpResponse& response_) {
-    INFO(15) << QString("Have %1 command...").arg(command_);
-    if(command_ == "boffin") {
-        QJsonObject json;
-        for(auto c: _configHash) {
-            json.insert(u8"boffin", c->encode());
+    INFO(20) << QString("Have %1 command...").arg(command_);
+    if(command_ == "network") {
+        auto config = _configHash.value("network");
+        if(config != nullptr) {
+            QJsonObject json;
+            json.insert(command_, config->encode());
+            _encodeSerialize(json, response_);
+            return true;
         }
-        QJsonDocument jsonDoc(json);
-        QByteArray jsonData = jsonDoc.toJson();
-        response_.setHeader("Content-Type","application/json");
-        response_.setHeader("Content-Size",QByteArray::number(jsonData.size()));
-        response_.write(jsonData, true);
-        return true;
+    } else if(command_.contains("node")
+              || command_.contains("process")) {
+        auto object = _configHash.value(command_);
+        if(object != nullptr) {
+            QJsonObject json;
+            if(object->serialize(command_, json)) {
+                _encodeSerialize(json, response_);
+                return true;
+            }
+        }
     }
     return false;
+}
+//------------------------------------------------------------------------------
+void RequestHandler::_encodeSerialize(const QJsonObject& other_, HttpResponse& response_) {
+    QJsonDocument jsonDoc(other_);
+    QByteArray jsonData = jsonDoc.toJson();
+    response_.setHeader("Content-Type","application/json");
+    response_.setHeader("Content-Size",QByteArray::number(jsonData.size()));
+    response_.write(jsonData, true);
 }
 
 //------------------------------------------------------------------------------
@@ -75,15 +93,21 @@ void RequestHandler::service(HttpRequest& request_, HttpResponse& response_)
     if(!file.length())
         file = "index.html";
 
-    INFO(15) << QString("File with path: %1").arg(file);
+    INFO(20) << QString("File with path: %1").arg(file);
 
     if(!parse(file, response_)) {
-        Template t = templateCache->getTemplate(qPrintable(file), language);
+        INFO(20) << "Load " << qPrintable(file)
+                 << " template, codec " << language.toStdString().c_str()
+                 << QString(", enable caching %1").arg(templateCache->enable());
+        QFile stream(qPrintable(templateCache->filePath() + "/" + file));
+        Template t = (templateCache->enable())
+                ? templateCache->getTemplate(qPrintable(file), language)
+                : Template(stream, QTextCodec::codecForName("UTF-8"));
         response_.setHeader("Content-Type", accept + "; charset=utf-8");
         response_.write(t.toUtf8(), true);
     }
 
-    INFO(15) << "RequestHandler: finished request...";
+    INFO(20) << "RequestHandler: finished request...";
 
     // Clear the log buffer
 //    if (logger)

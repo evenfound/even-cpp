@@ -15,9 +15,11 @@ using namespace even;
 TemplateHolder::TemplateHolder(QSettings* settings_
                                , QObject* parent_)
     :TemplateCache(settings_, parent_)
+    , _enable(settings_->value(u8"enable").toBool())
 {}
 
 //------------------------------------------------------------------------------
 const QString& TemplateHolder::filePath() const {
     return templatePath;
 }
+

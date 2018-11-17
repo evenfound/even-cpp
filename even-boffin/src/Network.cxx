@@ -28,12 +28,14 @@ template class Controller<Node>;
 //------------------------------------------------------------------------------
 Network::Network(initializer_list<Value> config_) :
     QObject(),
-    Config(config_) {
-    addValue(u8"object",{"Network"}, u8"Type object");
+    Config(config_)
+{
     for (const Value v : config_)
         addValue(v);
     // Attach this to Http handle
-    WebServer::instance()->appendObject("Network", this);
+    WebServer::instance()->appendConfig(this, "process/status");
+    WebServer::instance()->appendConfig(this, "process/start");
+    WebServer::instance()->appendConfig(this, "process/stop");
 }
 
 //------------------------------------------------------------------------------
@@ -44,6 +46,8 @@ Network::Network(initializer_list<Value> config_) :
 
 //------------------------------------------------------------------------------
 Network::~Network() {
+    // Break the timer
+    emit stopTimer();
     clear();
     INFO(15) << "Destroy Network object success..";
 }
@@ -122,16 +126,19 @@ bool Network::create() {
         setValue(u8"network_size", countDirs);
         for(auto d = dirNames.begin(); d != dirNames.end(); ++d) {
             // Public Key - is a Keccak_256
-            _network.insert(d.key(), new Controller<Node>({
-                      {d.key(), u8"hash", u8"Public key(test)"}
-                    , {d.value(), u8"path", u8"Path of node IPFS storage"}}));
+            Controller<Node> *node  = new Controller<Node>({
+                    {QString(u8"node"), u8"object", u8"Type object"}
+                    , {d.key(), u8"hash", u8"Public key(test)"}
+                    , {d.value(), u8"path", u8"Path of node IPFS storage"}});
+            _network.insert(d.key(), node);
         }
         return true;
     } else {
         clear();
         for (int i = 0; i < getValue("network_size").toInt(); i++) {
-            Controller<Node> *node = new Controller<Node>({{getValue(u8"path").toString()
-                                                            , u8"path", u8"Path of node IPFS storage"}});
+            Controller<Node> *node = new Controller<Node>({
+                    {QString(u8"node"), u8"object", u8"Type object"}
+                    , {getValue(u8"path").toString(), u8"path", u8"Path of node IPFS storage"}});
             _network.insert((*node)->hash().serialize(), node);
         }
         return true;
@@ -143,6 +150,14 @@ bool Network::create() {
 
     return false;
 }
+//------------------------------------------------------------------------------
+void Network::processOneThing(QTimer* timer_) {
+    _timer = timer_;
+    INFO(15) << "Receive tick from application..";
+    for(auto &n: _network) {
+        emit n->operate("Tick modeling fire..");
+    }
+}
 
 //------------------------------------------------------------------------------
 QJsonObject Network::encode() {
@@ -153,4 +168,41 @@ QJsonObject Network::encode() {
     }
     root.insert(u8"objects", children);
     return root;
+}
+
+//------------------------------------------------------------------------------
+bool Network::serialize(QString path_, QJsonObject& other_) {
+    if(path_ == "process/start" && run()) {
+        other_.insert("status", "Simulation started sacccess..");
+        return true;
+    } else if(path_ == "process/stop" && run(false)) {
+        other_.insert("status", "Simulation stopped sacccess..");
+        return true;
+    } else if(path_ == "process/status") {
+        if(_timer != nullptr && _timer->isActive())
+            other_.insert("status", "running");
+        else
+            other_.insert("status", "stopped");
+        return true;
+    }
+    return false;
+}
+
+//------------------------------------------------------------------------------
+bool Network::run(bool on_) {
+    int tick = getValue(u8"tick").toInt();
+    if(!tick)
+        return false;
+    if(on_) {
+        INFO(15) << QString("Emit start timer %1..")
+                    .arg(tick);
+        emit startTimer(tick);
+    } else {
+        INFO(15) << "Emit stop timer..";
+        emit stopTimer();
+    }
+    return true;
+//    for(auto &o: _network) {
+//        o->run(on_);
+//    }
 }

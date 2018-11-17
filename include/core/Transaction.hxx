@@ -39,6 +39,11 @@ class Transaction {
          */
         QString _address;
 
+        /** @brief The transaction object field is used to search transaction
+         * for srecific tag value
+         */
+        QString _tag;
+
         /** @brief Int value transferred in this transaction */
         int value = 0.0;
 
@@ -74,6 +79,9 @@ class Transaction {
          * one of the libraries such as ccurl).
          */
         QString nonce;
+
+        /** @brief Indicates that transaction pending or accepted */
+        bool _persistence;
 };
 
 };

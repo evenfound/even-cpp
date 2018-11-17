@@ -79,8 +79,7 @@ template<typename T> Controller<T>::~Controller() {
 }
 
 //------------------------------------------------------------------------------
-template <typename T> void Controller<T>::operate(const QString&) {
-
-}
+//template <typename T> void Controller<T>::operate(const QString&) {
+//}
 
 

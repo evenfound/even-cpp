@@ -26,7 +26,6 @@ class Network : public QObject, private Config {
          * @param config_ - list of network parameters
          */
         Network(std::initializer_list<Value> config_);
-//        Network(const Network& orig);
         ~Network() final;
         
         /** @brief Initialize data and create Network */
@@ -38,7 +37,25 @@ class Network : public QObject, private Config {
         /** @brief Return value set in json array with children object packed */
         QJsonObject encode() override;
 
-    private:
+        /** @brief Return values in json array packed by path_ set */
+        bool serialize(QString path_, QJsonObject& other_) override;
+
+        /** @brief Stop/Run simulation */
+        bool run(bool on_ = true);
+
+
+    public slots:
+        /** @brief Handle Timer shots. */
+        void processOneThing(QTimer* _timer);
+
+    signals:
+        /** @brief Emit timer launcher. */
+        void startTimer(int tick_);
+
+        /** @brief Emit timer breaker. */
+        void stopTimer();
+
+private:
 
         /**
          * @brief Network Nodes hash array
@@ -46,6 +63,10 @@ class Network : public QObject, private Config {
          * @param Value - Node object
          */
         QHash<QString, Controller<Node>* > _network;
+
+        /** @brief ATTENTION: pointer to QTimer, launched in another
+         * thread */
+        QTimer* _timer=nullptr;
 };
 };
 
