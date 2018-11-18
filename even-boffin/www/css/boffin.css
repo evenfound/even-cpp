@@ -42,18 +42,13 @@ footer p {
     position: absolute;
     display: block;
     width: 50%;
-    right: 20px;
+    right: 0px;
     top: 20px;
     bottom: 20px;
-    border: solid 1px #000;
+/*    border: solid 1px #000;*/
 }
 
-#jumbo-display {
-    float: right;
-    width: 50%;
-}
-
-@media (max-width: 576px) {
+@media (max-width: 767px) {
     #jumbo-display {
         clear: both;
         position: relative;
@@ -61,7 +56,6 @@ footer p {
         float: left;
         display: block;
         width: 100%;
-        right: 0px;
         bottom: 0px;
         margin: 0;
     }

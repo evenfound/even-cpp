@@ -8,6 +8,7 @@
 #include "Logger.hxx"
 #include "Node.hxx"
 #include "WebServer.hxx"
+#include "Network.hxx"
 
 #include <QDir>
 
@@ -23,7 +24,7 @@ Node::Node(std::initializer_list<Value> config_)
     , _left(0L)
     , _right(0L)
 {
-    INFO(15) << "create " << getValue(u8"object").toString();
+    INFO(20) << "create " << getValue(u8"object").toString();
     Node::nodeCount++;
     addValue(u8"#",{Node::nodeCount}, u8"Node index");
 
@@ -43,8 +44,11 @@ Node::Node(std::initializer_list<Value> config_)
 
     QString root = getValue(u8"path").toString();
     if(!getValue(u8"hash").isValid()) {
+        _hash.create();
         addValue(u8"hash", _hash.serialize(), u8"Public key(test)");
         root +=  "/" + _hash.serialize();
+    } else {
+        _hash.fromString(getValue(u8"hash").toString());
     }
 
     if(!QDir(root).exists()) {
@@ -61,7 +65,7 @@ Node::Node(std::initializer_list<Value> config_)
     // Public Key - is a Keccak_256
 
     // Init node Wallet
-    _wallet.initialize(getValue(u8"path").toString() + "/wallet");
+    _wallet.initialize(_hash, getValue(u8"path").toString());
 
     // Attach this to Http handle as Wallet serialize
     WebServer::instance()->appendConfig(this, u8"node/wallet/" + _hash.serialize());
@@ -79,8 +83,11 @@ Node::~Node() {
 
 //------------------------------------------------------------------------------
 void Node::doWork(const QString&) {
-    INFO(15) << QString("Fire simulation tick on 0x%1")
-                .arg((quintptr)this, QT_POINTER_SIZE * 2, 16, QChar('0'));;
+    INFO(20) << QString("Fire simulation tick on 0x%1")
+                .arg((quintptr)this, QT_POINTER_SIZE * 2, 16, QChar('0'));
+    if(!_wallet.send(Network::randomAddress(), 10))
+        CRITICAL(1) << _wallet.errors();
+
 }
 
 //------------------------------------------------------------------------------

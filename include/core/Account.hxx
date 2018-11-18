@@ -16,15 +16,19 @@ namespace even {
 /** @brief Entitity of account handler */
 class Account {
     public:
-        Account();
+        Account() = default;
         ~Account() = default;
 
-    private:
-        /** @brief  ByteArray unique hash of this transaction  */
-        QByteArray _byteHash;
+        Account(const Hash& parent_);
 
-        /** @brief  String unique hash of this transaction  */
+        /** @brief Got a hash refrence */
+        Hash &hash() { return _hash; }
+
+    private:
+        /** @brief  String unique hash of this account  */
         Hash _hash;
+        /** @brief Parent wallte hash */
+        Hash _parent;
 };
 
 };

@@ -14,9 +14,10 @@
 using namespace even;
 
 //------------------------------------------------------------------------------
-Account::Account()
+Account::Account(const Hash& parent_)
     : _hash()
+    , _parent(parent_)
 {
-    INFO(15) << QString("Create new account %1...").arg(_hash.serialize());
+    _hash.create();
+    INFO(20) << QString("Create new account %1...").arg(_hash.serialize());
 }
-

@@ -42,7 +42,8 @@ SOURCES += src\main.cpp \
             $$PWD/../src/core/Wallet.cxx \
             $$PWD/../src/core/Transaction.cxx \
             $$PWD/../src/core/Account.cxx \
-            $$PWD/../src/core/Hash.cxx
+            $$PWD/../src/core/Hash.cxx \
+            $$PWD/../src/core/TransactionTree.cxx
 
 HEADERS += include/Node.hxx \
             include/NodeNetwork.hxx\
@@ -67,7 +68,10 @@ HEADERS += include/Node.hxx \
             $$PWD/../include/core/Wallet.hxx \
             $$PWD/../include/core/Transaction.hxx \
             $$PWD/../include/core/Account.hxx \
-            $$PWD/../include/core/Hash.hxx
+            $$PWD/../include/core/Hash.hxx \
+            $$PWD/../include/core/TransactionTree.hxx \
+            $$PWD/../include/core/Random.hxx
+
 
 
 DESTDIR = $$PWD/../bin

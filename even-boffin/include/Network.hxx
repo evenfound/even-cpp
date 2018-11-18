@@ -10,6 +10,7 @@
 #include "Config.hxx"
 #include "Node.hxx"
 #include "Controller.hxx"
+#include "TransactionTree.hxx"
 
 #include <initializer_list>
 #include <QObject>
@@ -21,6 +22,13 @@ namespace even {
 class Network : public QObject, private Config {
         Q_OBJECT
     public:
+
+        /** @brief Go random address for simulate */
+        static QString randomAddress();
+
+        //< TODO: make network singletons
+        static Network* networkPtr;
+
         /**
          * @brief Create object Network
          * @param config_ - list of network parameters
@@ -43,6 +51,11 @@ class Network : public QObject, private Config {
         /** @brief Stop/Run simulation */
         bool run(bool on_ = true);
 
+        /** @brief Shared spce observer */
+        TransactionTree* lookupShared();
+
+        /** @brief Got a node random hash */
+        QString networkRandomAddress();
 
     public slots:
         /** @brief Handle Timer shots. */
@@ -67,6 +80,9 @@ private:
         /** @brief ATTENTION: pointer to QTimer, launched in another
          * thread */
         QTimer* _timer=nullptr;
+
+        /** @brief Tree of shared transactions */
+        TransactionTree _shared;
 };
 };
 

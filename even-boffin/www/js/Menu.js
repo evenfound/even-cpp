@@ -3,6 +3,7 @@ var menuItem = {
     'Home<span class="sr-only">(current)</span>': {href: "/", title: "Нome"},
     'Nodes': {href: "/nodes.html", title: "Load all nodes list"},
     'Process': {href: "/process.html", title: "Process of simulayion"},
+    'Ledger': {href: "/ledger.html", title: "Cloud IPFS transaction ledger"},
     'Network': {href: "/network.html", title: "Load network topology"},
 };
 

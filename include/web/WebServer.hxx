@@ -32,9 +32,6 @@ class WebServer : public HttpListener
         /** @brief Add config array to reuqest handler */
         void appendConfig(Config* config_, QString serialPath_="");
 
-//        /** @brief Add pointer to object with him text name */
-//        void appendObject(QString name_, QObject* object_);
-
     private:
         explicit WebServer(QObject* parent_ = nullptr);
 

@@ -8,6 +8,7 @@
 #pragma once
 
 #include "Account.hxx"
+#include "Hash.hxx"
 
 #include <initializer_list>
 #include <QString>
@@ -21,7 +22,7 @@ class Wallet {
         Wallet() = default;
 
         /** @brief Initialize accounts path */
-        void initialize(const QString& path_);
+        void initialize(const Hash& parent_, const QString& path_);
 
         /** @brief Create account */
         void createAccount();
@@ -32,10 +33,21 @@ class Wallet {
         /** @brief Save accounts to store */
         void saveAccounts();
 
+        /** @brief Do send value */
+        bool send(QString hash_, int value_);
+
+        /** @brief Got errors list */
+        inline const QStringList &errors() const { return _errors; }
+
+        /** @brief Got a account random hash */
+        QString accountRandomAddress();
+
     private:
         QString _seed;              ///< Seed for creatin HD wallet accounts
         QVector<Account> _accounts; ///< Array of accounts
-        QString _path;              ///< Path to Wallet accounts
+        QString _path="";           ///< Path to Wallet accounts
+        QStringList _errors;        ///< List of error while processing
+        Hash _parent;               ///< Hash parent node
 
 };
 

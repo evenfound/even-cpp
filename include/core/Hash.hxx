@@ -14,11 +14,27 @@ namespace even {
 /** @brief Entitity of hash handler */
 class Hash {
     public:
-        Hash();
+
+        /** @brief Hash binary byte length */
+        static uint hashByteLength;
+
+        Hash() = default;
         ~Hash() = default;
+
+        /** @brief genegate hash self. */
+        void create();
 
         /** @brief  Convert hash to readable */
         QString serialize();
+
+        /** @brief  Get binary hash */
+        inline QByteArray &binary() { return _byteHash; }
+
+        /** @brief Init from binary */
+        void fromBinary(const QByteArray& bytes_);
+
+        /** @brief Init from string */
+        void fromString(const QString& string_);
 
     private:
         /** @brief  ByteArray unique hash of this transaction  */

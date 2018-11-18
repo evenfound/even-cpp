@@ -9,6 +9,7 @@
 #include "Logger.hxx"
 #include "FileConfig.hxx"
 #include "WebServer.hxx"
+#include "Random.hxx"
 #include "../../src/core/Controller.cxx"
 
 #include <QUuid>
@@ -19,11 +20,14 @@
 #include <QDirIterator>
 #include <QCryptographicHash>
 #include <QTextCodec>
+#include <QRandomGenerator>
 
 using namespace std;
 using namespace even;
 
 template class Controller<Node>;
+
+Network* Network::networkPtr = nullptr;
 
 //------------------------------------------------------------------------------
 Network::Network(initializer_list<Value> config_) :
@@ -36,13 +40,10 @@ Network::Network(initializer_list<Value> config_) :
     WebServer::instance()->appendConfig(this, "process/status");
     WebServer::instance()->appendConfig(this, "process/start");
     WebServer::instance()->appendConfig(this, "process/stop");
-}
+    WebServer::instance()->appendConfig(this, "process/lookupshared");
 
-//------------------------------------------------------------------------------
-//Network::Network(const Network& orig) :
-//    QObject(),
-//    Config() {
-//}
+    Network::networkPtr = this;
+}
 
 //------------------------------------------------------------------------------
 Network::~Network() {
@@ -120,6 +121,9 @@ bool Network::create() {
                     .arg(dirIt.fileName());
     }
 
+    // Init transaction tree by lookup
+    _shared.update(getValue(u8"path").toString());
+
     // If some dirs in choosen path is present
     if(countDirs) {
         clear();
@@ -153,7 +157,7 @@ bool Network::create() {
 //------------------------------------------------------------------------------
 void Network::processOneThing(QTimer* timer_) {
     _timer = timer_;
-    INFO(15) << "Receive tick from application..";
+    INFO(20) << "Receive tick from application..";
     for(auto &n: _network) {
         emit n->operate("Tick modeling fire..");
     }
@@ -184,6 +188,9 @@ bool Network::serialize(QString path_, QJsonObject& other_) {
         else
             other_.insert("status", "stopped");
         return true;
+    } else if(path_ == "process/lookupshared") {
+        _shared.update(getValue(u8"path").toString());
+        return _shared.serialize("lookupshared", other_);
     }
     return false;
 }
@@ -202,7 +209,27 @@ bool Network::run(bool on_) {
         emit stopTimer();
     }
     return true;
-//    for(auto &o: _network) {
-//        o->run(on_);
-//    }
+}
+
+//------------------------------------------------------------------------------
+TransactionTree* Network::lookupShared() {
+    _shared.update(getValue(u8"path").toString());
+    return &_shared;
+}
+
+//------------------------------------------------------------------------------
+QString Network::randomAddress() {
+    return (networkPtr != nullptr)? networkPtr->networkRandomAddress(): "";
+}
+
+//------------------------------------------------------------------------------
+QString Network::networkRandomAddress() {
+    if(_network.count()) {
+        uint choice = Random::get(0, _network.count() - 1);
+        INFO(20) << QString("Got a random node index %1, hash %2 ..")
+                    .arg(choice)
+                    .arg((_network.begin() + choice).value()->get()->getValue(u8"hash").toString());
+        return (_network.begin() + choice).value()->get()->wallet().accountRandomAddress();
+    }
+    return  {};
 }

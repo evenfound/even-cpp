@@ -4,8 +4,10 @@
 */build
 */*.*.user.*
 /even-boffin/www/nbproject/private/
+/even-boffin/ipfs/
 /bin
 */*/nbproject
 *.rar
 /prerequisites/QtWebApp/QtWebApp/*.pro*
 *backup
+
