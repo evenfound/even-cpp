@@ -42,6 +42,9 @@ Network::Network(initializer_list<Value> config_) :
     WebServer::instance()->appendConfig(this, "process/stop");
     WebServer::instance()->appendConfig(this, "process/lookupshared");
 
+    // Create exposition - init serialize to Web Server needed
+    Exposition::instance();
+
     Network::networkPtr = this;
 }
 
@@ -87,13 +90,21 @@ bool Network::create() {
     addValue(u8"network_size"
              , network->value("network_size", 25)
              , u8"Node count");
-    addValue(u8"proof_nodes"
-             , network->value("proof_nodes", 10)
+    addValue(u8"master_nodes"
+             , network->value("master_nodes", 10)
              , u8"Percent of master nodes");
     addValue(u8"tick"
              , network->value("tick", 1)
              , u8"Modeling timer tick (usec.)");
-
+    addValue(u8"master_cons"
+             , network->value("master_cons", 22)
+             , u8"Master node consensus (perc.)");
+    addValue(u8"consensus"
+             , network->value("consensus", 70)
+             , u8"Base consensus (perc.)");
+    addValue(u8"r_distribution"
+             , network->value("r_distribution", 58)
+             , u8"Rating distribution (perc.)");
 
     QSettings* nodes = new QSettings(configFile, QSettings::IniFormat, QCoreApplication::instance());
     nodes->beginGroup("nodes");
@@ -158,6 +169,7 @@ bool Network::create() {
 void Network::processOneThing(QTimer* timer_) {
     _timer = timer_;
     INFO(20) << "Receive tick from application..";
+    Exposition::instance()->setValue(u8"operated", 0);
     for(auto &n: _network) {
         emit n->operate("Tick modeling fire..");
     }
@@ -233,3 +245,16 @@ QString Network::networkRandomAddress() {
     }
     return  {};
 }
+//------------------------------------------------------------------------------
+QStringList Network::ratedNodeAddresses(Node*) {
+    QStringList result;
+    if((networkPtr == nullptr))
+        return {};
+    INFO(20) << QString("Count of Network is %1").arg(networkPtr->count());
+    for(auto n = networkPtr->begin(); n != networkPtr->end(); ++n) {
+        result << (*n)->get()->getValue("hash").toString();
+        INFO(20) << "Node address --> " << (*n)->get()->getValue("hash").toString();
+    }
+    return result;
+}
+

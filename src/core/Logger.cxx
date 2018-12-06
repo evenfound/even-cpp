@@ -79,7 +79,7 @@ Logger::Message::~Message() {
     qDebug("%s", message.toLocal8Bit().data());
 
     ///< Log to debugger window in QtCreator
-    qInstallMessageHandler(0);
+//    qInstallMessageHandler(0);
 //    qDebug("%s", message.toLocal8Bit().data());
 
 }

@@ -1,0 +1,170 @@
+diff --git a/Demo2/Demo2.pro b/Demo2/Demo2.pro
+index 1647876..2264a04 100644
+--- a/Demo2/Demo2.pro
++++ b/Demo2/Demo2.pro
+@@ -25,7 +25,7 @@ win32 {
+ }
+ 
+ # Directories, where the *.h files are stored
+-INCLUDEPATH += $$PWD/../QtWebApp
++INCLUDEPATH += $$PWD/../QtWebApp/qtwebsockets/src/websockets $$PWD/../QtWebApp
+ 
+ # Directory where the release version of the shared library (*.dll or *.so) is stored, and base name of the file.
+ CONFIG(release, debug|release) {
+@@ -36,9 +36,9 @@ CONFIG(release, debug|release) {
+ 
+ # Directory where the debug version of the shared library (*.dll or *.so) is stored, and base name of the file.
+ CONFIG(debug, debug|release) {
+-    win32:      LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_MinGW_32bit-Debug/debug/      -lQtWebAppd1
+-    mac:        LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_clang_64bit-Debug/            -lQtWebApp_debug
+-    unix:!mac:  LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_GCC_64bit-Debug/              -lQtWebAppd
++    win32:      LIBS += -L$$PWD/../build/debug/                                                     -lQtWebAppd1
++    mac:        LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_clang_64bit-Debug/               -lQtWebApp_debug
++    unix:!mac:  LIBS += -L$$PWD/../build-QtWebApp-Desktop_Qt_5_7_0_GCC_64bit-Debug/                 -lQtWebAppd
+ }
+ 
+ win32 {
+diff --git a/QtWebApp/QtWebApp.pro b/QtWebApp/QtWebApp.pro
+index 145cd16..e0e5093 100644
+--- a/QtWebApp/QtWebApp.pro
++++ b/QtWebApp/QtWebApp.pro
+@@ -1,6 +1,5 @@
+ # Build this project to generate a shared library (*.dll or *.so).
+-
+-TARGET = QtWebApp
++TARGET = qtwebapp
+ TEMPLATE = lib
+ QT -= gui
+ VERSION = 1.7.1
+@@ -12,8 +11,10 @@ mac {
+    QMAKE_LFLAGS_SONAME  = -Wl,-install_name,/usr/local/lib/
+ }
+ 
++DEFINES += QT_NO_DEBUG_OUTPUT QT_NO_WARNING_OUTPUT
++
+ win32 {
+-   DEFINES += QTWEBAPPLIB_EXPORT
++   DEFINES += QTWEBAPPLIB_EXPORT QT_BUILD_WEBSOCKETS_LIB
+ }
+ 
+ # Windows and Unix get the suffix "d" to indicate a debug version of the library.
+@@ -25,13 +26,16 @@ CONFIG(debug, debug|release) {
+ }
+ 
+ DISTFILES += doc/* mainpage.dox Doxyfile
+-OTHER_FILES += ../readme.txt
+-
+-
++OTHER_FILES +=
+ 
+ include(qtservice/qtservice.pri)
+ include(logging/logging.pri)
+ include(httpserver/httpserver.pri)
+ include(templateengine/templateengine.pri)
+ 
++DESTDIR = $$PWD/../../../bin
++OBJECTS_DIR = .obj
++MOC_DIR = .moc
++RCC_DIR = .rcc
++UI_DIR = .ui
+ 
+diff --git a/QtWebApp/httpserver/httprequesthandler.h b/QtWebApp/httpserver/httprequesthandler.h
+index 8e1bebc..aa7c775 100644
+--- a/QtWebApp/httpserver/httprequesthandler.h
++++ b/QtWebApp/httpserver/httprequesthandler.h
+@@ -9,7 +9,7 @@
+ #include "httpglobal.h"
+ #include "httprequest.h"
+ #include "httpresponse.h"
+-#include"qwebsocket.h"
++#include "qwebsocket.h"
+ namespace stefanfrings {
+ 
+ /**
+diff --git a/QtWebApp/templateengine/templateloader.cpp b/QtWebApp/templateengine/templateloader.cpp
+index 4c8b232..6ec8710 100644
+--- a/QtWebApp/templateengine/templateloader.cpp
++++ b/QtWebApp/templateengine/templateloader.cpp
+@@ -26,11 +26,13 @@ TemplateLoader::TemplateLoader(QSettings* settings, QObject* parent)
+         QFileInfo configFile(settings->fileName());
+         templatePath=QFileInfo(configFile.absolutePath(),templatePath).absoluteFilePath();
+     }
+-    fileNameSuffix=settings->value("suffix",".tpl").toString();
+-    QString encoding=settings->value("encoding").toString();
++    fileNameSuffixes = settings->value("suffix",".tpl").toString().split("|");
++    // Original suffix use
++    fileNameSuffixes.append(" ");
++    QString encoding = settings->value("encoding").toString();
+     if (encoding.isEmpty())
+     {
+-        textCodec=QTextCodec::codecForLocale();
++        textCodec = QTextCodec::codecForLocale();
+     }
+     else
+     {
+@@ -44,22 +46,26 @@ TemplateLoader::~TemplateLoader()
+ 
+ QString TemplateLoader::tryFile(QString localizedName)
+ {
+-    QString fileName=templatePath+"/"+localizedName+fileNameSuffix;
+-    qDebug("TemplateCache: trying file %s",qPrintable(fileName));
+-    QFile file(fileName);
+-    if (file.exists()) {
+-        file.open(QIODevice::ReadOnly);
+-        QString document=textCodec->toUnicode(file.readAll());
+-        file.close();
+-        if (file.error())
+-        {
+-            qCritical("TemplateLoader: cannot load file %s, %s",qPrintable(fileName),qPrintable(file.errorString()));
+-            return "";
+-        }
+-        else
+-        {
+-            return document;
++    foreach(auto &suffix, fileNameSuffixes) {
++        //QString fileName = templatePath+"/" + localizedName + suffix;
++        QString fileName = templatePath+"/" + localizedName;
++        qDebug("TemplateCache: trying file %s", qPrintable(fileName));
++        QFile file(fileName.trimmed());
++        if (file.exists()) {
++            file.open(QIODevice::ReadOnly);
++            QString document=textCodec->toUnicode(file.readAll());
++            file.close();
++            if (file.error())
++            {
++                qCritical("TemplateLoader: cannot load file %s, %s",qPrintable(fileName),qPrintable(file.errorString()));
++                return "";
++            }
++            else
++            {
++                return document;
++            }
+         }
++        qDebug("TemplateCache: file %s not exist",qPrintable(fileName));
+     }
+     return "";
+ }
+@@ -102,7 +108,7 @@ Template TemplateLoader::getTemplate(QString templateName, QString locales)
+     }
+ 
+     // Search for default file
+-    QString document=tryFile(templateName);
++    QString document = tryFile(templateName);
+     if (!document.isEmpty())
+     {
+         return Template(document,templateName);
+diff --git a/QtWebApp/templateengine/templateloader.h b/QtWebApp/templateengine/templateloader.h
+index 182aa6b..9a4d260 100644
+--- a/QtWebApp/templateengine/templateloader.h
++++ b/QtWebApp/templateengine/templateloader.h
+@@ -75,8 +75,8 @@ protected:
+     /** Directory where the templates are searched */
+     QString templatePath;
+ 
+-    /** Suffix to the filenames */
+-    QString fileNameSuffix;
++    /** Suffixes to the filenames */
++    QStringList fileNameSuffixes;
+ 
+     /** Codec for decoding the files */
+     QTextCodec* textCodec;

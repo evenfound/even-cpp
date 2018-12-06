@@ -8,6 +8,7 @@
 #pragma once
 
 #include "Account.hxx"
+#include "Message.hxx"
 #include "Hash.hxx"
 
 #include <initializer_list>
@@ -34,7 +35,16 @@ class Wallet {
         void saveAccounts();
 
         /** @brief Do send value */
-        bool send(QString hash_, int value_);
+        bool send(QString account_, int value_);
+
+        /** @brief Do send message to node address from raited list. */
+        bool send(QString hash_, const Message& message_);
+
+        /** @brier Create message with transactions to account. */
+        Message createMessage(QString account_, int value_);
+
+        /** @brief Count current balance */
+
 
         /** @brief Got errors list */
         inline const QStringList &errors() const { return _errors; }

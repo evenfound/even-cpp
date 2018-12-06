@@ -5,12 +5,12 @@
  * @date    Created on November 1, 2018, 07:15 PM
  */
 
-#include <QDir>
-
 #include "FileConfig.hxx"
 #include "WebServer.hxx"
 #include "Logger.hxx"
 #include "Singleton.hxx"
+
+#include <QDir>
 
 using namespace even;
 
@@ -63,8 +63,24 @@ WebServer* WebServer::instance()
                                             , QSettings::IniFormat
                                             , QCoreApplication::instance());
         settings->beginGroup("templates");
-        RequestHandler::templateCache = new TemplateHolder(settings
-                , QCoreApplication::instance());
+        RequestHandler::templateCache = TemplateHolderPtr(new TemplateHolder(settings
+                , QCoreApplication::instance()));
+        // Configure session store
+        QSettings* sessionSettings = new QSettings(FileConfig::instance()->searchConfigFile(WebServer::appName)
+                                                   , QSettings::IniFormat
+                                                   , QCoreApplication::instance());
+        sessionSettings->beginGroup("sessions");
+        RequestHandler::sessionStore = HttpSessionStorePtr(new HttpSessionStore(sessionSettings
+                                                            , QCoreApplication::instance()));
+
+        // Configure static file controller
+        QSettings* fileSettings=new QSettings(FileConfig::instance()->searchConfigFile(WebServer::appName)
+                                              , QSettings::IniFormat
+                                              , QCoreApplication::instance());
+        fileSettings->beginGroup("docroot");
+        RequestHandler::staticFileController=StaticFileControllerPtr(new StaticFileController(fileSettings
+                                                                      , QCoreApplication::instance()));
+
         // Second - create Http parser handler --
         WebServer::handler = RequestHandlerPtr(new RequestHandler(QCoreApplication::instance()));
     }

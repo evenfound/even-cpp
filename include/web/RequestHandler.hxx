@@ -10,6 +10,8 @@
 #include "Config.hxx"
 #include "TemplateHolder.hxx"
 #include "httpserver/httprequesthandler.h"
+#include "httpserver/httpsessionstore.h"
+#include "httpserver/staticfilecontroller.h"
 #include "templateengine/templatecache.h"
 
 #include <QSharedPointer>
@@ -19,20 +21,31 @@ namespace even {
 using namespace stefanfrings;
 
 /**
- * @brief Entity for request handler receives incoming HTTP requests and generates responses.
+ * @brief Entity for request handler receives
+ * incoming HTTP requests and generates responses.
  */
 
 class Config;
 class TemplateHolder;
 
+using TemplateHolderPtr=QSharedPointer<TemplateHolder>;
+using HttpSessionStorePtr=QSharedPointer<HttpSessionStore>;
+using StaticFileControllerPtr=QSharedPointer<StaticFileController>;
+
 class RequestHandler : public HttpRequestHandler {
         Q_OBJECT
         Q_DISABLE_COPY(RequestHandler)
     public:
+        /** @brief Storage for session cookies */
+        static HttpSessionStorePtr sessionStore;
+
+        /** @brief Controller for static files */
+        static StaticFileControllerPtr staticFileController;
+
         /**
-         * @brief Teamplate file buffer
+         * @brief Template file buffer
          */
-        static TemplateHolder* templateCache;
+        static TemplateHolderPtr templateCache;
         /**
          * @brief Constructor.
          * @param parent Parent object
@@ -66,5 +79,6 @@ class RequestHandler : public HttpRequestHandler {
         QHash<QString, Config*> _configHash;
 
 };
+
 
 };

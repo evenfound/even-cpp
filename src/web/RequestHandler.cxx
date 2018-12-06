@@ -8,6 +8,8 @@
 //#include <logging/filelogger.h>
 #include "Logger.hxx"
 #include "RequestHandler.hxx"
+#include "TemplateController.hxx"
+#include "SessionController.hxx"
 
 #include <QJsonDocument>
 #include <QDebug>
@@ -18,7 +20,9 @@ using namespace even;
 /** Logger class */
 //extern FileLogger* logger;
 
-TemplateHolder*  RequestHandler::templateCache = nullptr;
+TemplateHolderPtr RequestHandler::templateCache = nullptr;
+HttpSessionStorePtr RequestHandler::sessionStore = nullptr;
+StaticFileControllerPtr RequestHandler::staticFileController = nullptr;
 
 //------------------------------------------------------------------------------
 RequestHandler::RequestHandler(QObject* parent)
@@ -44,6 +48,12 @@ void RequestHandler::appendConfig(Config* config_, QString serialPath_) {
                             ? config_->getValue(u8"object").toString()
                             : serialPath_
                               , config_);
+// DEBUG out
+//    for(auto e = _configHash.begin(); e != _configHash.end(); ++e)
+//        INFO(15) << QString("Object %1 with %2 key")
+//                    .arg((quintptr)e.value()
+//                         , QT_POINTER_SIZE * 2, 16, QChar('0'))
+//                    .arg(e.key());
 }
 
 //------------------------------------------------------------------------------
@@ -82,30 +92,73 @@ void RequestHandler::_encodeSerialize(const QJsonObject& other_, HttpResponse& r
 //------------------------------------------------------------------------------
 void RequestHandler::service(HttpRequest& request_, HttpResponse& response_)
 {
-    QByteArray language = request_.getHeader("Accept-Language");
-    QByteArray accept = request_.getHeader("Accept");
     QByteArray path = request_.getPath();
+    INFO(20) << QString("RequestHandler: path=%1").arg(path.data());
 
-    QString file = path.data();
+    // For the following pathes, each request gets its
+    // own new instance of the related controller.
 
-    if(file[0] == "/")
-        file.remove(0, 1);
-    if(!file.length())
-        file = "index.html";
-
-    INFO(20) << QString("File with path: %1").arg(file);
-
-    if(!parse(file, response_)) {
-        INFO(20) << "Load " << qPrintable(file)
-                 << " template, codec " << language.toStdString().c_str()
-                 << QString(", enable caching %1").arg(templateCache->enable());
-        QFile stream(qPrintable(templateCache->filePath() + "/" + file));
-        Template t = (templateCache->enable())
-                ? templateCache->getTemplate(qPrintable(file), language)
-                : Template(stream, QTextCodec::codecForName("UTF-8"));
-        response_.setHeader("Content-Type", accept + "; charset=utf-8");
-        response_.write(t.toUtf8(), true);
+    if(!parse(path.remove(0, 1), response_)) {
+        if (path.startsWith("/template"))
+            TemplateController(templateCache.get()).service(request_, response_);
+        else if (path.startsWith("/session"))
+            SessionController(sessionStore.get()).service(request_, response_);
+        else
+            staticFileController->service(request_, response_);
     }
+
+//    if (path.startsWith("/dump"))
+//    {
+//        DumpController().service(request, response);
+//    }
+
+//    else if (path.startsWith("/template"))
+//    {
+//        TemplateController().service(request, response);
+//    }
+
+//    else if (path.startsWith("/form"))
+//    {
+//        FormController().service(request, response);
+//    }
+
+//    else if (path.startsWith("/file"))
+//    {
+//        FileUploadController().service(request, response);
+//    }
+
+//    else if (path.startsWith("/session"))
+//    {
+//        SessionController().service(request, response);
+//    }
+
+    // All other pathes are mapped to the static file controller.
+    // In this case, a single instance is used for multiple requests.
+//    else
+//    QByteArray language = request_.getHeader("Accept-Language");
+//    QByteArray accept = request_.getHeader("Accept");
+//    QByteArray path = request_.getPath();
+
+//    QString file = path.data();
+
+//    if(file[0] == "/")
+//        file.remove(0, 1);
+//    if(!file.length())
+//        file = "index.html";
+
+//    INFO(20) << QString("File with path: %1").arg(file);
+
+//    if(!parse(file, response_)) {
+//        INFO(20) << "Load " << qPrintable(file)
+//                 << " template, codec " << language.toStdString().c_str()
+//                 << QString(", enable caching %1").arg(templateCache->enable());
+//        QFile stream(qPrintable(templateCache->filePath() + "/" + file));
+//        Template t = (templateCache->enable())
+//                ? templateCache->getTemplate(qPrintable(file), language)
+//                : Template(stream, QTextCodec::codecForName("UTF-8"));
+//        response_.setHeader("Content-Type", accept + "; charset=utf-8");
+//        response_.write(t.toUtf8(), true);
+//    }
 
     INFO(20) << "RequestHandler: finished request...";
 

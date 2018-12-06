@@ -11,6 +11,7 @@
 #include "Network.hxx"
 
 #include <QDir>
+#include <QElapsedTimer>
 
 using namespace even;
 
@@ -85,9 +86,25 @@ Node::~Node() {
 void Node::doWork(const QString&) {
     INFO(20) << QString("Fire simulation tick on 0x%1")
                 .arg((quintptr)this, QT_POINTER_SIZE * 2, 16, QChar('0'));
-    if(!_wallet.send(Network::randomAddress(), 10))
+
+    QElapsedTimer timer;
+    timer.start();
+
+    //1. Get a rated list of accessible nodes entire network environment.
+    QStringList addresses = Network::ratedNodeAddresses(this);
+    //2. Send a message from wallet in to nodes inbox with
+    //new transaction
+    if(!_wallet.send(Network::randomAddress(), 1))
         CRITICAL(1) << _wallet.errors();
 
+    // Got a last operated node index
+    auto counter = Exposition::instance()->getValue(u8"operated").toInt();
+    // Increment index
+    Exposition::instance()->setValue(u8"operated", ++counter);
+    // Caclulate and save everage operation time after current node operates transactions - in seconds.
+    auto oldValue = Exposition::instance()->getValue(u8"transact-per-sec").toDouble();
+    Exposition::instance()->setValue(u8"transact-per-sec"
+                                     , (oldValue + timer.elapsed())/counter/1000.0);
 }
 
 //------------------------------------------------------------------------------

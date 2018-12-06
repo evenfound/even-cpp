@@ -62,11 +62,20 @@ class Transaction : public Config {
         /** @brief Pack data to binary body for flush */
         void _packBody();
 
+        /** @brief Unpack QByteArray value */
+        void _unpackHash(QDataStream &stream_, Hash &value_);
+
+        /** @brief Unpack QString value */
+        void _unpackString(QDataStream &stream_, QString &value_, uint size_);
+
+        /** @brief Unpack UInt value */
+        void _unpackUInt(QDataStream &stream_, uint &value_);
+
+        /** @brief Unpack Int value */
+        void _unpackInt(QDataStream &stream_, int &value_);
+
         /** @brief Unpack data from binary body from read */
         void _unpackBody();
-
-        /** @brief Load hash from body */
-        void _bodyReadHash();
 
         /** @brief  String unique hash of this transaction  */
         Hash _hash;
@@ -96,13 +105,13 @@ class Transaction : public Config {
 
         /** @brief Int timestamp of the transaction. It is important
          * to know that timestamps are not enforced.*/
-        uint _timestamp = 0;
+        uint _timestamp = 1010;
 
         /** @brief Int the index of this transaction in the message. */
-        int _currentIndex = 0;
+        int _currentIndex = -1;
 
         /** @brief Int the total number of transactions in this message */
-        int _lastIndex = 0;
+        int _lastIndex = -1;
 
         /** @brief String message hash, which is used for grouping
          * transactions of the message together. With the message hash you
@@ -125,7 +134,7 @@ class Transaction : public Config {
          * of Work (either in IRI via the attachToTangle API call, or with
          * one of the libraries such as ccurl).
          */
-        QString _nonce;
+        QString _nonce = "BOFFIN-TEST";
 
         /** @brief Indicates that transaction pending or accepted */
         bool _persistence;

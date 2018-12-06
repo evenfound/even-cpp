@@ -13,6 +13,7 @@
 #include <QFile>
 #include <QDataStream>
 #include <QJsonObject>
+#include <QBuffer>
 
 using namespace even;
 
@@ -40,7 +41,6 @@ bool Transaction::ipfsLoad(QString fileName_) {
         return false;
     }
     _body = file.readAll();
-    _bodyReadHash();
     _unpackBody();
     return true;
 }
@@ -51,60 +51,84 @@ void Transaction::addAddress(QString address_) {
 }
 
 //------------------------------------------------------------------------------
-void Transaction::_bodyReadHash() {
-    QDataStream stream(&_body, QIODevice::ReadOnly);
-    QByteArray buffer(Hash::hashByteLength, Qt::Uninitialized);
-    stream.readRawData(buffer.data(), Hash::hashByteLength);
-    _hash.fromBinary(buffer);
+void Transaction::_unpackHash(QDataStream& stream_, Hash& value_) {
+    QVector<char> buffer(Hash::hashByteLength);
+    stream_.readRawData(buffer.data(), Hash::hashByteLength);
+    value_.fromBinary(QByteArray(buffer.data(), Hash::hashByteLength));
+//    char* buffer = new char[Hash::hashByteLength];
+//    stream_.readRawData(buffer, Hash::hashByteLength);
+//    value_.fromBinary(QByteArray(buffer, Hash::hashByteLength));
+//    delete[] buffer;
+}
+
+//------------------------------------------------------------------------------
+void Transaction::_unpackString(QDataStream &stream_, QString &value_, uint size_) {
+    char* buffer = new char[size_];
+    stream_.readRawData(buffer, size_);
+    value_ = QString(QByteArray(buffer, size_));
+    delete[] buffer;
+}
+
+//------------------------------------------------------------------------------
+void Transaction::_unpackUInt(QDataStream &stream_, uint &value_) {
+    stream_.readRawData((char*)&value_, sizeof(value_));
+}
+
+//------------------------------------------------------------------------------
+void Transaction::_unpackInt(QDataStream &stream_, int &value_) {
+    stream_.readRawData((char*)&value_, sizeof(value_));
 }
 
 //------------------------------------------------------------------------------
 void Transaction::_unpackBody() {
     QDataStream stream(&_body, QIODevice::ReadOnly);
-    QByteArray buffer;
-    stream.skipRawData(32);
-    buffer.resize(1024);
-    stream.readRawData(buffer.data(), 1024);
-    _signatureMessageFragment = QString(buffer);
-    _address.binary().resize(32);
-    stream.readRawData(_address.binary().data(), 32);
-    buffer.resize(24);
-    stream.writeRawData(buffer.data(), 24);
-    _tag = QString(buffer);
-    stream.readRawData((char*)&_value, sizeof(_value));
-    stream.readRawData((char*)&_timestamp, sizeof(_timestamp));
-    stream.readRawData((char*)&_currentIndex, sizeof(_currentIndex));
-    stream.readRawData((char*)&_lastIndex, sizeof(_lastIndex));
-    _messageHash.binary().resize(32);
-    stream.readRawData(_messageHash.binary().data(), 32);
-    _trunkHash.binary().resize(32);
-    stream.readRawData(_trunkHash.binary().data(), 32);
-    _branchHash.binary().resize(32);
-    stream.readRawData(_branchHash.binary().data(), 32);
-    buffer.resize(24);
-    stream.writeRawData(buffer.data(), 24);
-    _nonce = QString(buffer);
+    _unpackHash(stream, _hash);
+    _unpackString(stream, _signatureMessageFragment, 1024);
+    _unpackHash(stream, _address);
+    _unpackString(stream, _tag, 24);
+    _unpackInt(stream, _value);
+    _unpackUInt(stream, _timestamp);
+    _unpackInt(stream, _currentIndex);
+    _unpackInt(stream, _lastIndex);
+    _unpackHash(stream, _messageHash);
+    _unpackHash(stream, _trunkHash);
+    _unpackHash(stream, _branchHash);
+    _unpackString(stream, _nonce, 24);
 }
 
 //------------------------------------------------------------------------------
 void Transaction::_packBody() {
     _body.fill('0');
     QDataStream stream(&_body, QIODevice::WriteOnly);
-    stream.writeRawData(_hash.binary().data(), 32);
+    stream.writeRawData(_hash.binary().data()
+                        , Hash::hashByteLength);
     _signatureMessageFragment.resize(1024);
-    _signatureMessageFragment.fill('0');
+    char letters[] = {'a', 'b', 'c', 'd', 'e'};
+    int number = 0;
+    for(int i = 0; i < 1024; ++i) {
+        _signatureMessageFragment[i] = letters[number];
+        number = (number == 4)? 0: number + 1;
+    }
     stream.writeRawData(_signatureMessageFragment.toLatin1().data(), 1024);
-    stream.writeRawData(_address.binary().data(), 32);
-    stream.writeRawData(_tag.toLower().toLatin1().data(), 24);
+    stream.writeRawData(_address.binary().data()
+                        , Hash::hashByteLength);
+    number = 0;
+    for(int i = 0; i < 24; ++i) {
+        _tag[i] = letters[number];
+        number = (number == 4)? 0: number + 1;
+    }
+    stream.writeRawData(_tag.toLatin1().data(), 24);
     stream.writeRawData((char*)&_value, sizeof(_value));
     stream.writeRawData((char*)&_timestamp, sizeof(_timestamp));
     stream.writeRawData((char*)&_currentIndex, sizeof(_currentIndex));
     stream.writeRawData((char*)&_lastIndex, sizeof(_lastIndex));
-    stream.writeRawData(_messageHash.binary().data(), 32);
-    stream.writeRawData(_trunkHash.binary().data(), 32);
-    stream.writeRawData(_branchHash.binary().data(), 32);
+    stream.writeRawData(_messageHash.binary().data()
+                        , Hash::hashByteLength);
+    stream.writeRawData(_trunkHash.binary().data()
+                        , Hash::hashByteLength);
+    stream.writeRawData(_branchHash.binary().data()
+                        , Hash::hashByteLength);
     stream.writeRawData(_nonce.toLower().toLatin1().data(), 24);
-//    INFO(15) << "Pack Body: " << QString(_body.toHex()).toUpper() << ", address " << _address.serialize();
 }
 
 //------------------------------------------------------------------------------
@@ -116,7 +140,7 @@ bool Transaction::ipfsFlush(QString filePath_) {
     }
     _packBody();
     QDataStream stream(&file);
-    stream.writeRawData(_body.data(), 1248);
+    stream.writeRawData(_body.data(), _body.size());
     return true;
 }
 

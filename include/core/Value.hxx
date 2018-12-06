@@ -27,10 +27,12 @@ class Value : public QObject {
         /**
          * @brief Entitu for create control of range value set
          */
-        struct Range {
-                qreal min;    ///< @brief Minimum value set
-                qreal max;    ///< @brief Maximum value set
-                qreal step;   ///< @brief Step of change value
+        struct Property {
+                qreal min=0.0;      ///< @brief Minimum value set
+                qreal max=1000.0;   ///< @brief Maximum value set
+                qreal step=100.0;   ///< @brief Step of change value
+                int prec=2;         ///< @brief Floatinp point precision
+                bool bShow=true;    ///< @brief Flag of show
         };
 
         /**
@@ -38,10 +40,11 @@ class Value : public QObject {
          * @param value_    - same value
          * @param name_     - short name
          * @param intro_    - introduction for display
-         * @param range_    - set range interval and step of change
+         * @param property_ - set range interval and step of change
          */
-        Value(int value_, const QString &name_, const QString &intro_,
-              Value::Range range_ = {0.0, 1000.0, 100.0} );
+        Value(int value_, const QString &name_
+              , const QString &intro_
+              , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true} );
 
         /**
          * @brief Construct text Value
@@ -49,29 +52,33 @@ class Value : public QObject {
          * @param name_     - short name
          * @param intro_    - introduction for display
          */
-        Value(QString text_, const QString &name_, const QString &intro_);
+        Value(QString text_
+              , const QString &name_
+              , const QString &intro_);
 
         /**
          * @brief Construct float Value
          * @param double_   - same value
          * @param name_     - short name
          * @param intro_    - introduction for display
-         * @param range_    - set range interval and step of change
+         * @param property_ - set range interval and step of change
          */
-        Value(float double_, const QString &name_, const QString &intro_,
-              Value::Range range_ = {0.0, 1000.0, 100.0});
+        Value(float double_
+              , const QString &name_
+              , const QString &intro_
+              , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
 
         /**
          * @brief Construct QVariant Value
          * @param value_    - same value
          * @param name_     - short name
          * @param intro_    - introduction for display
-         * @param range_    - set range interval and step of change
+         * @param property_ - set range interval and step of change
          */
-        Value(const QVariant value_,
-              const QString &name_= u8"unnamed",
-              const QString &intro_ = u8"unknown usage",
-              Value::Range range_ = { 0, 1000, 100});
+        Value(const QVariant value_
+              , const QString &name_= u8"unnamed"
+                , const QString &intro_ = u8"unknown usage"
+                , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
 
         Value(const Value& orig);
 
@@ -117,8 +124,8 @@ class Value : public QObject {
          * @brief Got value range of change
          * @return Range value
          */
-        inline const Range &range() const {
-            return _range;
+        inline const Property &range() const {
+            return _property;
         }
 
         /** @brief Return value set in json array packed */
@@ -140,8 +147,8 @@ class Value : public QObject {
                 QString _intro;     ///< @brief Value introduction.
         };
 
-        _Value  _object;                        ///< @brief Object of private _Value struct
-        Range   _range = {0.0, 1000.0, 100.0};  ///< @brief Range interval and step of change
+        _Value _object;                                     ///< @brief Object of private _Value struct
+        Property _property = {0.0, 1000.0, 100.0, 2, true}; ///< @brief Range interval and step of change
 
 };
 

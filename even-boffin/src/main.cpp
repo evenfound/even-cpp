@@ -17,20 +17,14 @@
 #include <QException>
 #include <QDebug>
 
-//#include <QLoggingCategory>
+#include <QLoggingCategory>
 
 using namespace even;
 
-///< TODO: resolve this trouble more detailed after reconstrain project
-///< under linux
-
 /** @brief Main function of application */
 int main(int argc, char *argv[]) {
-      // custom handler start
-//    qInstallMessageHandler(&customLogHandler);
 
 //    QLoggingCategory::setFilterRules("*.debug=true");
-//    qDebug() << "Start application...";
 
     INFO(20) << "Start boffin application ...";
 

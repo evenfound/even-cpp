@@ -77,13 +77,13 @@ TransactionTree::~TransactionTree() {
 //------------------------------------------------------------------------------
 bool TransactionTree::serialize(QString path_, QJsonObject& other_) {
     QJsonObject branch;
-    for(auto a = _tree.begin(); a != _tree.end(); ++a) {
-        QJsonObject leaf;
-        for(auto n = a.value().begin(); n != a.value().end(); ++n) {
-            n.value()->serialize(n.key(), leaf);
-        }
-        branch.insert(a.key(), leaf);
-    }
+//    for(auto a = _tree.begin(); a != _tree.end(); ++a) {
+//        QJsonObject leaf;
+//        for(auto n = a.value().begin(); n != a.value().end(); ++n) {
+//            n.value()->serialize(n.key(), leaf);
+//        }
+//        branch.insert(a.key(), leaf);
+//    }
     other_.insert(u8"shared", branch);
     return true;
 }

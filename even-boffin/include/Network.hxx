@@ -11,6 +11,7 @@
 #include "Node.hxx"
 #include "Controller.hxx"
 #include "TransactionTree.hxx"
+#include "Exposition.hxx"
 
 #include <initializer_list>
 #include <QObject>
@@ -23,8 +24,23 @@ class Network : public QObject, private Config {
         Q_OBJECT
     public:
 
+        /** @brief Helper iterator.*/
+        using iterator = QHash<QString, Controller<Node>*>::iterator;
+
+        /** @brief Iterator on first element. */
+        inline iterator begin() { return _network.begin(); }
+
+        /** @brief Iterator on end of array. */
+        inline iterator end() { return _network.end(); }
+
+        /** @brief Count of Node network Array */
+        inline int count() { return _network.count(); }
+
         /** @brief Go random address for simulate */
         static QString randomAddress();
+
+        /** @brief Get a rated list nodes for some node. */
+        static QStringList ratedNodeAddresses(Node *node_);
 
         //< TODO: make network singletons
         static Network* networkPtr;
@@ -51,7 +67,7 @@ class Network : public QObject, private Config {
         /** @brief Stop/Run simulation */
         bool run(bool on_ = true);
 
-        /** @brief Shared spce observer */
+        /** @brief Shared space observer */
         TransactionTree* lookupShared();
 
         /** @brief Got a node random hash */
@@ -75,7 +91,7 @@ private:
          * @param key - Node Public Key
          * @param Value - Node object
          */
-        QHash<QString, Controller<Node>* > _network;
+        QHash<QString, Controller<Node>*> _network;
 
         /** @brief ATTENTION: pointer to QTimer, launched in another
          * thread */

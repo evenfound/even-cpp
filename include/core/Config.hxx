@@ -43,8 +43,12 @@ class Config {
          * @param value_ - value object
          * @param intro_ - introduction of value
          * @return none
+         * @param range_    - set range interval and step of change
          */
-        void addValue(const QString &name_, const QVariant &value_, const QString& intro_ = "unknown usage");
+        void addValue(const QString &name_
+                      , const QVariant &value_
+                      , const QString& intro_ = "unknown usage"
+                , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
 
         /**
          * @brief Update config value by name.

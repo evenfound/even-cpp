@@ -29,7 +29,7 @@ class WebServer : public HttpListener
         /** @brief Take a singleton object pointer */
         static WebServer* instance();
 
-        /** @brief Add config array to reuqest handler */
+        /** @brief Add config array to request handler */
         void appendConfig(Config* config_, QString serialPath_="");
 
     private:

@@ -31,8 +31,11 @@ Config::iterator Config::end() {
 }
 
 //------------------------------------------------------------------------------
-void Config::addValue(const QString &name_, const QVariant &value_, const QString& intro_) {
-    _config.insert(name_, Value(value_, name_, intro_));
+void Config::addValue(const QString &name_
+                      , const QVariant &value_
+                      , const QString& intro_
+                      , Value::Property property_) {
+    _config.insert(name_, Value(value_, name_, intro_, property_));
 }
 
 //------------------------------------------------------------------------------

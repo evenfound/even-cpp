@@ -5,67 +5,94 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>EVEN Platform Boffin - Ledger</title>
-        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" href="css/bootstrap/bootstrap.css" type="text/css">
         <script src="js/bootstrap/bootstrap.min.js"></script>
-        <script src="js/Ledger.js"></script>
-        <script src="js/Menu.js"></script>
+        <script src="js/assets/Ledger.js"></script>
+        <script src="js/assets/Menu.js"></script>
         <link rel="stylesheet" href="css/boffin.css">
     </head>
     <body>
-        <script>menu("Process");</script>
-        <div class="container">
-            <div id="nodes">   
-                <div class="row">
-                    <div class="col-6 text-left">
-                        <h4>Shared..</h4>
+        <script>menu("Ledger");</script>
+        <div id="wrap">
+            <div id="main" class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-10">
+                        <form class="card card-sm">
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <i class="fas fa-search h4 text-body"></i>
+                                </div>
+                                <!--end of col-->
+                                <div class="col">
+                                    <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
+                                </div>
+                                <!--end of col-->
+                                <div class="col-auto">
+                                    <button class="btn btn-sm btn-success" type="submit">Search</button>
+                                </div>
+                                <!--end of col-->
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-6 text-right">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-end pagination-sm">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <!--end of col-->
                 </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <br>
+                <hr>
+                <br>
+                <div id="nodes">   
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h4>Shared</h4>
+                            <p>Last 10 transactions..</p> 
+                        </div>
+                        <div class="col-6 text-right">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-end pagination-sm">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <hr>

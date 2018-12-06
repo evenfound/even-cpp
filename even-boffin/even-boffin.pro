@@ -43,7 +43,11 @@ SOURCES += src\main.cpp \
             $$PWD/../src/core/Transaction.cxx \
             $$PWD/../src/core/Account.cxx \
             $$PWD/../src/core/Hash.cxx \
-            $$PWD/../src/core/TransactionTree.cxx
+            $$PWD/../src/core/TransactionTree.cxx \
+            $$PWD/../src/web/TemplateController.cxx \
+            $$PWD/../src/web/SessionController.cxx \
+            $$PWD/../src/core/Exposition.cxx
+
 
 HEADERS += include/Node.hxx \
             include/NodeNetwork.hxx\
@@ -70,7 +74,10 @@ HEADERS += include/Node.hxx \
             $$PWD/../include/core/Account.hxx \
             $$PWD/../include/core/Hash.hxx \
             $$PWD/../include/core/TransactionTree.hxx \
-            $$PWD/../include/core/Random.hxx
+            $$PWD/../include/core/Random.hxx \
+            $$PWD/../include/web/TemplateController.hxx \
+            $$PWD/../include/web/SessionController.hxx \
+            $$PWD/../include/core/Exposition.hxx
 
 
 

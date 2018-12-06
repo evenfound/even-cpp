@@ -26,6 +26,42 @@ function abortTimer(tid) {
             },        
             aquireStatus = function () {
                 console.log("Got status..");
+                var num = Math.random() * (100000 - 1001000) + 1000000;
+                $('#transact-per-sec').html(num.toFixed(2));
+                var exposition = $.ajax({
+                    url: "/process/exposition",
+                    method: "POST",
+                    data: {id: 'menuId'},
+                    dataType: 'json',
+                    sync: false,
+                    error: function(jqXHR_, status_, errorThrown_) {}
+                });
+                exposition.done(function(msg) {
+                    console.log(msg['process/exposition']);
+                    var counter = 1;
+                    var result = `<thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Parameter</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                    </thead>
+                    <tbody>`;
+                    $.each(msg['process/exposition'], $.proxy(function (i, val) {
+                        console.log($.type(val.value));
+                        if (val.intro != 'Type object') {
+                            result += `<tr>
+                            <th scope="row">` + counter + `</th>
+                            <td>` + val.intro + `</td>
+                            <td>` + val.value.toFixed(4) + `</td>
+                        </tr>`;
+                            ++counter;
+                        }
+                    }, this));
+                    result += `</tbody>`;
+                    $('#jumbo-display').html(result);
+                });
                 var request = $.ajax({
                     url: "/process/status",
                     method: "POST",
