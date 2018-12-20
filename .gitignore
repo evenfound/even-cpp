@@ -16,5 +16,6 @@ qmake.txt
 /prerequisites/c-multihash
 /prerequisites/c-protobuf
 /prerequisites/lmbd
+/r-score-demo/build/
 
 
