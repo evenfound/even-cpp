@@ -17,7 +17,7 @@ Packages are available for
 
 Packaging for your favorite distribution would be a welcome contribution!
 
-## Compiling the even-boffin from source
+## Compiling the r-score-demo from source
 
 ### On Linux:
 
@@ -52,7 +52,7 @@ The executable can be found in the ./bin folder.
 
 ### On Windows:
 
-The even-boffin on Windows is 64 bits only; 32-bit Windows builds are not officially supported anymore.
+The r-score-demo on Windows is 64 bits only; 32-bit Windows builds are not officially supported anymore.
 
 1. Install [MSYS2](https://www.msys2.org/), follow the instructions on that page on how to update system and packages to the latest versions
 
