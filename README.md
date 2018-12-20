@@ -51,22 +51,23 @@ Packaging for your favorite distribution would be a welcome contribution!
 
   - For Debian distributions (Ubuntu)
 
-	`sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libzmq3-dev libsodium-dev libhidapi-dev`
+    `sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libzmq3-dev libsodium-dev libhidapi-dev`
 
 2. Install Qt:
 
-  *Note*: Qt 5.7 is the minimum version required to build. This makes **some** distributions (mostly based on debian, like Ubuntu 16.x or Linux Mint 18.x) obsolete. You can still build the GUI if you install an [official Qt release](https://wiki.qt.io/Install_Qt_5_on_Ubuntu), but this is not officially supported.
+  *Note*: Qt 5.10 is the minimum version required to build. This makes **some** distributions (mostly based on debian, like Ubuntu 16.x or Linux Mint 18.x) obsolete. You can still build the GUI if you install an [official Qt release](https://wiki.qt.io/Install_Qt_5_on_Ubuntu), but this is not officially supported.
 
   - For Ubuntu 17.10+
 
-    `sudo apt install qtbase5-dev qt5-default qtdeclarative5-dev qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-xmllistmodel qml-module-qt-labs-settings qml-module-qt-labs-folderlistmodel qttools5-dev-tools qml-module-qtquick-templates2`
+    `sudo apt install qtbase5-dev qtbase5-private-dev qt5-default qtdeclarative5-dev qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-xmllistmodel qml-module-qt-labs-settings qml-module-qt-labs-folderlistmodel qttools5-dev-tools libqt5websockets5-dev qml-module-qtquick-templates2`
 
-3. Clone repository and submodules
+3. Clone repository and submodules to root of home directory
 
-    `git clone https://github.com/evenfound/even-network.git
-     git submodule init
-     git submodule update
-    `
+    ```
+    git clone https://github.com/evenfound/even-network.git
+    git submodule init
+    git submodule update
+    ```
 
 4. Install cmake
 
@@ -111,10 +112,13 @@ The EVEN Platform on Windows is 64 bits only; 32-bit Windows builds are not offi
     pacman -S git
     ```
 
-6. Clone repository
+6. Clone repository and submodules to root of home directory
 
     ```
     git clone https://github.com/evenfound/even-network.git
+    git submodule init
+    git submodule update
+
     ```
 
 7. Build
