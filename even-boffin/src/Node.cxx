@@ -16,7 +16,7 @@
 using namespace even;
 
 ///< @brief System node count in system created.
-long Node::nodeCount = 0L;
+int Node::nodeCount = 0;
 
 //------------------------------------------------------------------------------
 ///< @brief Parametric constructor

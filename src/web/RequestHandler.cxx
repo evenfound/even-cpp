@@ -59,23 +59,31 @@ void RequestHandler::appendConfig(Config* config_, QString serialPath_) {
 //------------------------------------------------------------------------------
 bool RequestHandler::parse(QString command_, HttpResponse& response_) {
     INFO(20) << QString("Have %1 command...").arg(command_);
-    if(command_ == "network") {
-        auto config = _configHash.value("network");
-        if(config != nullptr) {
-            QJsonObject json;
-            json.insert(command_, config->encode());
+//    if(command_ == "network") {
+//        auto config = _configHash.value("network");
+//        if(config != nullptr) {
+//            QJsonObject json;
+//            json.insert(command_, config->encode());
+//            _encodeSerialize(json, response_);
+//            return true;
+//        }
+//    } else if(command_.contains("node")
+//              || command_.contains("process")) {
+//        auto object = _configHash.value(command_);
+//        if(object != nullptr) {
+//            QJsonObject json;
+//            if(object->serialize(command_, json)) {
+//                _encodeSerialize(json, response_);
+//                return true;
+//            }
+//        }
+//    }
+    auto object = _configHash.value(command_);
+    if(object != nullptr) {
+        QJsonObject json;
+        if(object->serialize(command_, json)) {
             _encodeSerialize(json, response_);
             return true;
-        }
-    } else if(command_.contains("node")
-              || command_.contains("process")) {
-        auto object = _configHash.value(command_);
-        if(object != nullptr) {
-            QJsonObject json;
-            if(object->serialize(command_, json)) {
-                _encodeSerialize(json, response_);
-                return true;
-            }
         }
     }
     return false;
@@ -100,9 +108,9 @@ void RequestHandler::service(HttpRequest& request_, HttpResponse& response_)
 
     if(!parse(path.remove(0, 1), response_)) {
         if (path.startsWith("/template"))
-            TemplateController(templateCache.get()).service(request_, response_);
+            TemplateController(templateCache.data()).service(request_, response_);
         else if (path.startsWith("/session"))
-            SessionController(sessionStore.get()).service(request_, response_);
+            SessionController(sessionStore.data()).service(request_, response_);
         else
             staticFileController->service(request_, response_);
     }

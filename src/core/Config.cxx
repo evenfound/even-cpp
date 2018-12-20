@@ -17,7 +17,7 @@ using namespace stefanfrings;
 Config::Config(std::initializer_list<Value> config_) {
     for (auto &v : config_)
         addValue(v);
-    WebServer::instance()->appendConfig(this);
+//    WebServer::instance()->appendConfig(this);
 }
 
 //------------------------------------------------------------------------------

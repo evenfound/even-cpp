@@ -11,7 +11,7 @@
 #include "Network.hxx"
 
 //#include "datasource.h"
-#include <QtDataVisualization/qutils.h>
+//#include <QtDataVisualization/qutils.h>
 #include <QtGui/QGuiApplication>
 #include <QtCore/QDir>
 #include <QException>
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 
         // Сreate Network object
 
-        Network network({{QString(u8"network"), u8"object", u8"Type object"}});
+        Network network;
 
         // Connect simulation timer to threaded Network object, that runnig processe self
         network.connect(&network, SIGNAL(startTimer(int)), &app, SLOT(timerOn(int)));
@@ -79,4 +79,5 @@ int main(int argc, char *argv[]) {
     } catch (std::exception& e) {
         CRITICAL(5) << "main: Application closed by error: " << e.what();
     }
+    return 0;
 }

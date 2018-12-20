@@ -24,7 +24,7 @@ QString WebServer::appName = "";
 //------------------------------------------------------------------------------
 WebServer::WebServer(QObject* parent_)
     :HttpListener(FileConfig::instance()->group(WebServer::appName, "listener")
-                  , WebServer::handler.get()
+                  , WebServer::handler.data()
                   , parent_)
 {
 }

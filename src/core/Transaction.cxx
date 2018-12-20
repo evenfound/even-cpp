@@ -14,6 +14,7 @@
 #include <QDataStream>
 #include <QJsonObject>
 #include <QBuffer>
+#include <QIODevice>
 
 using namespace even;
 
@@ -36,7 +37,7 @@ Transaction::~Transaction() {
 //------------------------------------------------------------------------------
 bool Transaction::ipfsLoad(QString fileName_) {
     QFile file(fileName_);
-    if(!file.open(QIODevice::ReadOnly)) {
+    if(!file.open(QIODevice::OpenModeFlag::ReadOnly)) {
         _errors << "Error opening file transaction " << fileName_;
         return false;
     }
@@ -134,7 +135,7 @@ void Transaction::_packBody() {
 //------------------------------------------------------------------------------
 bool Transaction::ipfsFlush(QString filePath_) {
     QFile file(filePath_ + "/" + _hash.serialize());
-    if(!file.open(QIODevice::WriteOnly|QIODevice::NewOnly)) {
+    if(!file.open(QIODevice::OpenModeFlag::WriteOnly)) {
         _errors << "Error create file transaction " << filePath_ + "/" + _hash.serialize();
         return false;
     }

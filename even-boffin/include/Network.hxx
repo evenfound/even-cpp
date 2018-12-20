@@ -49,7 +49,7 @@ class Network : public QObject, private Config {
          * @brief Create object Network
          * @param config_ - list of network parameters
          */
-        Network(std::initializer_list<Value> config_);
+        explicit Network();
         ~Network() final;
         
         /** @brief Initialize data and create Network */

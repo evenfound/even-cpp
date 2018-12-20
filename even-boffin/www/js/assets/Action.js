@@ -51,12 +51,15 @@ function abortTimer(tid) {
                     $.each(msg['process/exposition'], $.proxy(function (i, val) {
                         console.log($.type(val.value));
                         if (val.intro != 'Type object') {
-                            result += `<tr>
-                            <th scope="row">` + counter + `</th>
-                            <td>` + val.intro + `</td>
-                            <td>` + val.value.toFixed(4) + `</td>
-                        </tr>`;
-                            ++counter;
+                            if (val.visible) {
+                                var precision = (val.value < 0.01)? 2: val.precision;
+                                result += `<tr>
+                                    <th scope="row">` + counter + `</th>
+                                    <td>` + val.intro + `</td>
+                                    <td>` + val.value.toFixed(precision) + `</td>
+                                    </tr>`;
+                                ++counter;
+                            }
                         }
                     }, this));
                     result += `</tbody>`;

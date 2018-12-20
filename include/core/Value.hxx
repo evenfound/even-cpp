@@ -32,7 +32,7 @@ class Value : public QObject {
                 qreal max=1000.0;   ///< @brief Maximum value set
                 qreal step=100.0;   ///< @brief Step of change value
                 int prec=2;         ///< @brief Floatinp point precision
-                bool bShow=true;    ///< @brief Flag of show
+                bool visible=true;  ///< @brief Flag of show
         };
 
         /**
@@ -124,7 +124,7 @@ class Value : public QObject {
          * @brief Got value range of change
          * @return Range value
          */
-        inline const Property &range() const {
+        inline const Property &property() const {
             return _property;
         }
 

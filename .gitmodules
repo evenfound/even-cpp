@@ -10,3 +10,18 @@
 [submodule "prerequisites/botan"]
 	path = prerequisites/botan
 	url = https://github.com/randombit/botan.git
+[submodule "prerequisites/lmbd"]
+	path = prerequisites/lmbd
+	url = https://github.com/jmjatlanta/lmdb.git
+[submodule "prerequisites/c-protobuf"]
+	path = prerequisites/c-protobuf
+	url = https://github.com/Agorise/c-protobuf.git
+[submodule "prerequisites/c-multihash"]
+	path = prerequisites/c-multihash
+	url = https://github.com/Agorise/c-multihash.git
+[submodule "prerequisites/c-multiaddr"]
+	path = prerequisites/c-multiaddr
+	url = https://github.com/Agorise/c-multiaddr.git
+[submodule "prerequisites/c-libp2p"]
+	path = prerequisites/c-libp2p
+	url = https://github.com/Agorise/c-libp2p.git

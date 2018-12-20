@@ -14,40 +14,43 @@
 #include <iostream>
 #include <QTimer>
 
+namespace even {
+
 class BoffinApp :
         public QGuiApplication,
         private Application
 {
-    Q_OBJECT
-public:
-    BoffinApp(int argc, char *argv[]);
+        Q_OBJECT
+    public:
+        BoffinApp(int argc, char *argv[]);
 
-    /** @brief QGuiApplication exec routines.*/
-    int exec();
+        /** @brief QGuiApplication exec routines.*/
+        int exec();
 
-public slots:
-    /** @brief Receive tick number of timer shots
+    public slots:
+        /** @brief Receive tick number of timer shots
      * and run timer. */
-    void timerOn(int tick_);
+        void timerOn(int tick_);
 
-    /** @brief Stop timer. */
-    void timerOff();
+        /** @brief Stop timer. */
+        void timerOff();
 
-    /** @brief Handle Timer shots. */
-    void processOneThing();
+        /** @brief Handle Timer shots. */
+        void processOneThing();
 
-signals:
-    /** @brief Emit timer shots. */
-    void shot(QTimer* _timer);
+    signals:
+        /** @brief Emit timer shots. */
+        void shot(QTimer* _timer);
 
-protected:
-    virtual bool handleSignal(int signal);
+    protected:
+        virtual bool handleSignal(int signal);
 
-private:
-    /** @brief Simulation timer - sent all nodes
+    private:
+        /** @brief Simulation timer - sent all nodes
      * start tick signal for step iterate
      */
-    QTimer* _timer = nullptr;
+        QTimer* _timer = nullptr;
 
-};
+}; // class BoffinApp : public QGuiApplication,private Application
 
+} // namespace even {

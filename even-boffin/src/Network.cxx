@@ -30,17 +30,16 @@ template class Controller<Node>;
 Network* Network::networkPtr = nullptr;
 
 //------------------------------------------------------------------------------
-Network::Network(initializer_list<Value> config_) :
+Network::Network() :
     QObject(),
-    Config(config_)
+    Config({{QString(u8"network"), u8"object", u8"Type object"}})
 {
-    for (const Value v : config_)
-        addValue(v);
     // Attach this to Http handle
     WebServer::instance()->appendConfig(this, "process/status");
     WebServer::instance()->appendConfig(this, "process/start");
     WebServer::instance()->appendConfig(this, "process/stop");
     WebServer::instance()->appendConfig(this, "process/lookupshared");
+    WebServer::instance()->appendConfig(this, "network");
 
     // Create exposition - init serialize to Web Server needed
     Exposition::instance();
@@ -203,6 +202,9 @@ bool Network::serialize(QString path_, QJsonObject& other_) {
     } else if(path_ == "process/lookupshared") {
         _shared.update(getValue(u8"path").toString());
         return _shared.serialize("lookupshared", other_);
+    } else if(path_ == "network") {
+        other_.insert(path_, encode());
+        return true;
     }
     return false;
 }

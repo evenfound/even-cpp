@@ -19,7 +19,7 @@ void Wallet::initialize(const Hash &parent_, const QString& path_) {
     _parent = parent_;
     _path = path_ +  "/" + _parent.serialize();
     _accounts.clear();
-    _accounts.append({_parent});
+    _accounts.append(Account(_parent));
 }
 
 //------------------------------------------------------------------------------

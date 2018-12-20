@@ -10,6 +10,8 @@
 
 //#include <QLoggingCategory>
 
+using namespace even;
+
 //------------------------------------------------------------------------------
 Application::Application() :
     SignalHandler(SignalHandler::SIG_INT)
@@ -34,7 +36,7 @@ bool Application::wait() {
 }
 
 //------------------------------------------------------------------------------
-int Application::main(int, char*[])
+int Application::_main(int, char*[])
 {
    // Main program instructions here (e.g. start a thread)
     _myThread = new QThread();

@@ -8,13 +8,15 @@
 #include "Logger.hxx"
 #include "BoffinApp.hxx"
 
+using namespace even;
+
 //------------------------------------------------------------------------------
 BoffinApp::BoffinApp(int argc, char *argv[]) :
     QGuiApplication(argc, argv),
     Application(),
     _timer(new QTimer(this))
 {
-    Application::main(argc, argv);
+    Application::_main(argc, argv);
 
     connect(_timer, SIGNAL(timeout()), this, SLOT(processOneThing()));
 }

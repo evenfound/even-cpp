@@ -13,30 +13,33 @@
 #include <QCoreApplication>
 #include <iostream>
 
+namespace even {
+
 class Application : public SignalHandler
 {
-public:
-    Application();
-    virtual ~Application();
+    public:
+        Application();
+        virtual ~Application();
 
-    /** @brief Return status of main thread. */
-    bool isRunning();
+        /** @brief Return status of main thread. */
+        bool isRunning();
 
-    /** @brief Terminate main thread. */
-    void terminate();
+        /** @brief Terminate main thread. */
+        void terminate();
 
-    /** @brief Wait for terminate app thread.
+        /** @brief Wait for terminate app thread.
      * @return True if waiting success.
      */
-    bool wait();
+        bool wait();
 
-protected:
-    int main(int argc, char *argv[]);
+    protected:
+        int _main(int argc, char *argv[]);
 
-private:
-    /** @brief Control thread. */
-    QThread* _myThread = nullptr;
+    private:
+        /** @brief Control thread. */
+        QThread* _myThread=nullptr;
 
-};
+}; // class Application : public SignalHandler
 
+} // namespace even {
 

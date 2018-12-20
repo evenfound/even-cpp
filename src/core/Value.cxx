@@ -55,7 +55,9 @@ Value::Value(const QVariant value_, const QString &name_,
             << ", intro: '" << _object._intro << "'"
             << ", min: "    << QString("%1").arg(_property.min)
             << ", max: "    << QString("%1").arg(_property.max)
-            << ", step: "   << QString("%1").arg(_property.step);
+            << ", step: "   << QString("%1").arg(_property.step)
+            << ", prec: "   << QString("%1").arg(_property.prec)
+            << ", visible: "   << QString("%1").arg(_property.visible);
 }
 
 //------------------------------------------------------------------------------
@@ -75,7 +77,11 @@ Value::Value() :
 //------------------------------------------------------------------------------
 Value& Value::operator=(const Value& value_) {
     _object = {value_.get(), value_.name(), value_.intro()};
-    _property = {value_.range().min, value_.range().max, value_.range().step };
+    _property = {value_.property().min
+                 , value_.property().max
+                 , value_.property().step
+                 , value_.property().prec
+                 , value_.property().visible};
     return *this;
 }
 
@@ -93,5 +99,8 @@ QJsonObject Value::encode() {
     QJsonObject root;
     root.insert(u8"value", _object._value.toJsonValue());
     root.insert(u8"intro", _object._intro);
+    root.insert(u8"intro", _object._intro);
+    root.insert(u8"precision", _property.prec);
+    root.insert(u8"visible", _property.visible);
     return root;
 }

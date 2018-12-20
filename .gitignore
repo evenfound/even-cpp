@@ -8,6 +8,13 @@
 /bin
 */*/nbproject
 *.rar
-/prerequisites/QtWebApp/QtWebApp/*.pro*
 *backup
+.qmake.stash
+qmake.txt
+/prerequisites/c-libp2p
+/prerequisites/c-multiaddr
+/prerequisites/c-multihash
+/prerequisites/c-protobuf
+/prerequisites/lmbd
+
 

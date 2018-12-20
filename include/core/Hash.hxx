@@ -18,7 +18,7 @@ class Hash {
         /** @brief Hash binary byte length */
         static uint hashByteLength;
 
-        Hash() = default;
+        Hash();
         ~Hash() = default;
 
         /** @brief genegate hash self. */
@@ -41,7 +41,7 @@ class Hash {
         QByteArray _byteHash;
 
         /** @brief  String unique hash of this transaction  */
-        QString _hash = "";
+        QString _hash="";
 };
 
 };

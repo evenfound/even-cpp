@@ -20,7 +20,7 @@ class Node : public QObject, public Config {
         Q_OBJECT
     public:
         /** @brief System node count in system created. */
-        static long nodeCount;
+        static int nodeCount;
 
         /** @brief Create Node entity with config_ parameters list */
         Node(std::initializer_list<Value> config_);
