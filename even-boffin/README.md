@@ -45,7 +45,12 @@ Packaging for your favorite distribution would be a welcome contribution!
 
     `git clone https://github.com/evenfound/even-network.git`
 
-4. Build
+4. Install cmake
+
+    `sudo apt-get install cmake`
+
+5. Build
+
 
     ```
     cd even-network/even-boffin

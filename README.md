@@ -61,11 +61,18 @@ Packaging for your favorite distribution would be a welcome contribution!
 
     `sudo apt install qtbase5-dev qt5-default qtdeclarative5-dev qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-xmllistmodel qml-module-qt-labs-settings qml-module-qt-labs-folderlistmodel qttools5-dev-tools qml-module-qtquick-templates2`
 
-3. Clone repository
+3. Clone repository and submodules
 
-    `git clone https://github.com/evenfound/even-network.git`
+    `git clone https://github.com/evenfound/even-network.git
+     git submodule init
+     git submodule update
+    `
 
-4. Build
+4. Install cmake
+
+    `sudo apt-get install cmake`
+
+5. Build
 
     ```
     cd even-network
