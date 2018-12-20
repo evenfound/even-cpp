@@ -19,7 +19,7 @@ class FileConfig : public QObject
 
     public:
 
-        ~FileConfig() final;
+        virtual ~FileConfig();
 
         /** @brief Take a singleton object pointer */
         static FileConfig* instance();

@@ -25,7 +25,8 @@ class TemplateHolder : public TemplateCache {
         const QString& filePath() const;
 
         /** @brief Return caching enable flag */
-        inline const bool enable() const { return _enable; }
+        inline bool enable() const { return _enable; }
+
 private:
         bool _enable = false;   ///< Caching enable flag
 

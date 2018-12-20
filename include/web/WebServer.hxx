@@ -24,7 +24,7 @@ typedef QSharedPointer<RequestHandler> RequestHandlerPtr;
 class WebServer : public HttpListener
 {
     public:
-        ~WebServer() final;
+        virtual ~WebServer();
 
         /** @brief Take a singleton object pointer */
         static WebServer* instance();

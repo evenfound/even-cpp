@@ -5,7 +5,7 @@
  * @date    Created on August 24, 2018, 7:49 PM
  */
 
-#include "application.hxx"
+#include "Application.hxx"
 #include "Logger.hxx"
 
 //#include <QLoggingCategory>

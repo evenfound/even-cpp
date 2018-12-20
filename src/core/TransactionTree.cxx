@@ -75,7 +75,7 @@ TransactionTree::~TransactionTree() {
 }
 
 //------------------------------------------------------------------------------
-bool TransactionTree::serialize(QString path_, QJsonObject& other_) {
+bool TransactionTree::serialize(QString, QJsonObject& other_) {
     QJsonObject branch;
 //    for(auto a = _tree.begin(); a != _tree.end(); ++a) {
 //        QJsonObject leaf;

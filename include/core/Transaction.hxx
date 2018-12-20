@@ -35,7 +35,7 @@ namespace even {
 class Transaction : public Config {
     public:
         Transaction();
-        ~Transaction();
+        virtual ~Transaction();
 
         /** @brief Check transaction file name and internal hash value */
         bool checkHash_wFileName(QString fileName_);

@@ -17,7 +17,7 @@ namespace even {
 class Exposition : public Config {
     public:
         explicit Exposition();
-        ~Exposition();
+        virtual ~Exposition();
 
         /** @brief Take a singleton object pointer */
         static Exposition* instance();
