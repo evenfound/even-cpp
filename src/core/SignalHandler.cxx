@@ -18,7 +18,7 @@
 
 // There can be only ONE SignalHandler per process
 SignalHandler* g_handler(nullptr);
-Ы
+
 #ifdef _WIN32
     BOOL WINAPI WIN32_handleFunc(DWORD);
     int WIN32_physicalToLogical(DWORD);
@@ -33,11 +33,7 @@ SignalHandler* g_handler(nullptr);
 //------------------------------------------------------------------------------
 SignalHandler::SignalHandler(int mask) : _mask(mask)
 {
-<<<<<<< Updated upstream
-    assert(g_handler == NULL);
-=======
     assert(g_handler==nullptr);
->>>>>>> Stashed changes
     g_handler = this;
 
 #ifdef _WIN32
