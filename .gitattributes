@@ -1,5 +1,5 @@
-*.cxx linguist-language=C++
-*.hxx linguist-language=C++
+*.cxx linguist-language=cpp
+*.hxx linguist-language=cpp
 
 #sources
 *.c text diff=cpp
