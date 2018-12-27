@@ -1,9 +1,0 @@
-digraph "QWebSocket::maskGenerator"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node41 [label="QWebSocket::maskGenerator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node41 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node42 [label="QWebSocket::setMaskGenerator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_web_socket.html#a3f0e24c3101e75a42264aa527936573e"];
-}

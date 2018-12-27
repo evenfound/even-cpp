@@ -1,9 +1,0 @@
-digraph "Botan::CurveGFp::get_b"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node8 [label="Botan::CurveGFp::get_b",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node9 [label="Botan::CurveGFp::operator==",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_curve_g_fp.html#adf896804903ce76835069b5d51aeb161"];
-}

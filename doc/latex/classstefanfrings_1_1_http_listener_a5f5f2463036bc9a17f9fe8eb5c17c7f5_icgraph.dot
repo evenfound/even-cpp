@@ -1,9 +1,0 @@
-digraph "stefanfrings::HttpListener::close"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node7 [label="stefanfrings::HttpListener\l::close",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node8 [label="stefanfrings::HttpListener\l::~HttpListener",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_listener.html#abf6e9c9d9715a94d922a1d437e02ee6e"];
-}

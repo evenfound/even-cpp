@@ -1,9 +1,0 @@
-digraph "QWebSocket::close"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node10 [label="QWebSocket::close",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
-  Node11 [label="QWebSocket::closeCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_web_socket.html#ac0392e28fa81d5452868813d5e907d71",tooltip="Returns the code indicating why the socket was closed. "];
-}
