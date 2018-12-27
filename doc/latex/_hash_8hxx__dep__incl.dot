@@ -1,0 +1,48 @@
+digraph "include/core/Hash.hxx"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="include/core/Hash.hxx",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="include/core/Account.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_account_8hxx.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="include/core/Wallet.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wallet_8hxx.html"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="even-boffin/include\l/Node.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_node_8hxx.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="even-boffin/include\l/Network.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_network_8hxx.html"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="even-boffin/build/debug\l/moc_Network.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$moc___network_8cpp_source.html"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="even-boffin/src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$even-boffin_2src_2main_8cpp_source.html"];
+  Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="even-boffin/src/Network.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_network_8cxx.html"];
+  Node6 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="even-boffin/src/Node.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_node_8cxx.html"];
+  Node5 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="even-boffin/build/debug\l/moc_Node.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$moc___node_8cpp_source.html"];
+  Node5 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="src/core/Wallet.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wallet_8cxx.html"];
+  Node3 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="src/core/Account.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_account_8cxx.html"];
+  Node2 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="include/core/Transaction.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_transaction_8hxx.html"];
+  Node14 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="include/core/Message.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_message_8hxx.html"];
+  Node15 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="src/core/Message.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_message_8cxx.html"];
+  Node14 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="include/core/Transaction\lTree.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_transaction_tree_8hxx.html"];
+  Node17 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="src/core/TransactionTree.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_transaction_tree_8cxx.html"];
+  Node14 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="src/core/Transaction.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_transaction_8cxx.html"];
+  Node14 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="src/core/Hash.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_hash_8cxx.html"];
+}

@@ -1,0 +1,76 @@
+\hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Remote\+Process\+Private Class Reference}
+\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private}\index{Q\+Ssh\+::\+Internal\+::\+Ssh\+Remote\+Process\+Private@{Q\+Ssh\+::\+Internal\+::\+Ssh\+Remote\+Process\+Private}}
+
+
+Inheritance diagram for Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Remote\+Process\+Private\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Remote\+Process\+Private\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_ab757b69b722223f0956e5221ff8607de}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_ab757b69b722223f0956e5221ff8607de}} 
+enum {\bfseries Process\+State} \{ \newline
+{\bfseries Not\+Yet\+Started}, 
+{\bfseries Exec\+Requested}, 
+{\bfseries Start\+Failed}, 
+{\bfseries Running}, 
+\newline
+{\bfseries Exited}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_aa28c6abaaf90915a2c488b11d244aee1}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_aa28c6abaaf90915a2c488b11d244aee1}} 
+void {\bfseries started} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a6201690a26bf3cad0e61247736fe4d5e}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a6201690a26bf3cad0e61247736fe4d5e}} 
+void {\bfseries ready\+Read} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a45c82bb07078fef2007ea66d37b00e88}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a45c82bb07078fef2007ea66d37b00e88}} 
+void {\bfseries ready\+Read\+Standard\+Output} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a320242622df05ff3b59b3bc8e34c8782}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a320242622df05ff3b59b3bc8e34c8782}} 
+void {\bfseries ready\+Read\+Standard\+Error} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_aaf5a77d2cb23989c5ee39ee293f14f34}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_aaf5a77d2cb23989c5ee39ee293f14f34}} 
+void {\bfseries closed} (int exit\+Status)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a8d35eb93a947f7a2aea43129445183d0}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a8d35eb93a947f7a2aea43129445183d0}} 
+virtual void {\bfseries handle\+Channel\+Success} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_ad989abf07f39e3cd9344e8d09ad01bdd}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_ad989abf07f39e3cd9344e8d09ad01bdd}} 
+virtual void {\bfseries handle\+Channel\+Failure} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a83b05328ea1b67a7d1595727282ff45e}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a83b05328ea1b67a7d1595727282ff45e}} 
+virtual void {\bfseries close\+Hook} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a8a64769d799b615353ce3a1fad0e9e67}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a8a64769d799b615353ce3a1fad0e9e67}} 
+Q\+Byte\+Array \& {\bfseries data} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a9f228fd916394eabd4cdfa2c5aefb87a}\label{class_q_ssh_1_1_internal_1_1_ssh_remote_process_private_a9f228fd916394eabd4cdfa2c5aefb87a}} 
+class {\bfseries Q\+Ssh\+::\+Ssh\+Remote\+Process}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 48 of file sshremoteprocess\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sshremoteprocess\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sshremoteprocess.\+cpp\end{DoxyCompactItemize}

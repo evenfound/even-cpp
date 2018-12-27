@@ -1,0 +1,16 @@
+digraph "prerequisites/c-ipfs/repo" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_710942753667abff5e940805c2388c41 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="c-ipfs" fontname="Helvetica", fontsize="10", URL="dir_710942753667abff5e940805c2388c41.html"]
+  subgraph clusterdir_6a13db8f4bea91a2c4293b20528b1d60 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6a13db8f4bea91a2c4293b20528b1d60.html"];
+    dir_6a13db8f4bea91a2c4293b20528b1d60 [shape=plaintext label="repo"];
+    dir_651c5a8caaad483fe259b34c37a88a7c [shape=box label="config" color="black" fillcolor="white" style="filled" URL="dir_651c5a8caaad483fe259b34c37a88a7c.html"];
+    dir_81b45f46fd69922079c35ec0b50319c6 [shape=box label="fsrepo" color="black" fillcolor="white" style="filled" URL="dir_81b45f46fd69922079c35ec0b50319c6.html"];
+  }
+  }
+  dir_8be01a3804ca0ad9f3bc9f8a64e2041f [shape=box label="lmbd" fillcolor="white" style="filled" color="red" URL="dir_8be01a3804ca0ad9f3bc9f8a64e2041f.html"];
+  dir_81b45f46fd69922079c35ec0b50319c6->dir_8be01a3804ca0ad9f3bc9f8a64e2041f [headlabel="2", labeldistance=1.5 headhref="dir_000357_000350.html"];
+}

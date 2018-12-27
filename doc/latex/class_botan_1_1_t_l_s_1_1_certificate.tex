@@ -1,0 +1,71 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_certificate}{}\section{Botan\+:\+:T\+LS\+:\+:Certificate Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_certificate}\index{Botan\+::\+T\+L\+S\+::\+Certificate@{Botan\+::\+T\+L\+S\+::\+Certificate}}
+
+
+{\ttfamily \#include $<$tls\+\_\+messages.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Certificate\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:T\+LS\+:\+:Certificate\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_certificate_a38a8ef8264fb2a06a4343971beab4a8f}\label{class_botan_1_1_t_l_s_1_1_certificate_a38a8ef8264fb2a06a4343971beab4a8f}} 
+Handshake\+\_\+\+Type {\bfseries type} () const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_certificate_ab326625098b883d10050fa4cb4d8fd7a}\label{class_botan_1_1_t_l_s_1_1_certificate_ab326625098b883d10050fa4cb4d8fd7a}} 
+const std\+::vector$<$ X509\+\_\+\+Certificate $>$ \& {\bfseries cert\+\_\+chain} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_certificate_ab21ceccfc2c6764d281157d5b1a43047}\label{class_botan_1_1_t_l_s_1_1_certificate_ab21ceccfc2c6764d281157d5b1a43047}} 
+size\+\_\+t {\bfseries count} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_certificate_a2a9116b2a75bb4bc85e285a740e98419}\label{class_botan_1_1_t_l_s_1_1_certificate_a2a9116b2a75bb4bc85e285a740e98419}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_certificate_a115ec120b433f9572103ecf40833b32c}{Certificate}} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \&io, \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___hash}{Handshake\+\_\+\+Hash}} \&hash, const std\+::vector$<$ X509\+\_\+\+Certificate $>$ \&certs)
+\item 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_certificate_a2000a5fbaabfa453f0fe94daea1af96b}{Certificate}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buf, const Policy \&policy)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_certificate}{Certificate}} Message 
+
+Definition at line 362 of file tls\+\_\+messages.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_certificate_a115ec120b433f9572103ecf40833b32c}\label{class_botan_1_1_t_l_s_1_1_certificate_a115ec120b433f9572103ecf40833b32c}} 
+\index{Botan\+::\+T\+L\+S\+::\+Certificate@{Botan\+::\+T\+L\+S\+::\+Certificate}!Certificate@{Certificate}}
+\index{Certificate@{Certificate}!Botan\+::\+T\+L\+S\+::\+Certificate@{Botan\+::\+T\+L\+S\+::\+Certificate}}
+\subsubsection{\texorpdfstring{Certificate()}{Certificate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Botan\+::\+T\+L\+S\+::\+Certificate\+::\+Certificate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \&}]{io,  }\item[{\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___hash}{Handshake\+\_\+\+Hash}} \&}]{hash,  }\item[{const std\+::vector$<$ X509\+\_\+\+Certificate $>$ \&}]{cert\+\_\+list }\end{DoxyParamCaption})}
+
+Create a new \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_certificate}{Certificate}} message 
+
+Definition at line 23 of file msg\+\_\+certificate.\+cpp.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_certificate_a2000a5fbaabfa453f0fe94daea1af96b}\label{class_botan_1_1_t_l_s_1_1_certificate_a2000a5fbaabfa453f0fe94daea1af96b}} 
+\index{Botan\+::\+T\+L\+S\+::\+Certificate@{Botan\+::\+T\+L\+S\+::\+Certificate}!Certificate@{Certificate}}
+\index{Certificate@{Certificate}!Botan\+::\+T\+L\+S\+::\+Certificate@{Botan\+::\+T\+L\+S\+::\+Certificate}}
+\subsubsection{\texorpdfstring{Certificate()}{Certificate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Botan\+::\+T\+L\+S\+::\+Certificate\+::\+Certificate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buf,  }\item[{const Policy \&}]{policy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Deserialize a \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_certificate}{Certificate}} message 
+
+Definition at line 34 of file msg\+\_\+certificate.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+messages.\+h\item 
+prerequisites/botan/src/lib/tls/msg\+\_\+certificate.\+cpp\end{DoxyCompactItemize}

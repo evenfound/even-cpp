@@ -1,0 +1,122 @@
+\hypertarget{group__readers}{}\section{Reader Lock Table}
+\label{group__readers}\index{Reader Lock Table@{Reader Lock Table}}
+Collaboration diagram for Reader Lock Table\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_m_d_b__rxbody}{M\+D\+B\+\_\+rxbody}}
+\item 
+struct \mbox{\hyperlink{struct_m_d_b__reader}{M\+D\+B\+\_\+reader}}
+\item 
+struct \mbox{\hyperlink{struct_m_d_b__txbody}{M\+D\+B\+\_\+txbody}}
+\item 
+struct \mbox{\hyperlink{struct_m_d_b__txninfo}{M\+D\+B\+\_\+txninfo}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__readers_gadff1f7b4d4626610a8d616e0c6dbbea4}{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+A\+D\+E\+RS}}~126
+\item 
+\#define \mbox{\hyperlink{group__readers_gaa62717a1fae2c57f94f2a9b8ae08ec49}{C\+A\+C\+H\+E\+L\+I\+NE}}~64
+\item 
+\#define \mbox{\hyperlink{group__readers_gabb6423d38a9132eedb4f2e2be72b8aeb}{M\+D\+B\+\_\+\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__rxbody}{M\+D\+B\+\_\+rxbody}} \mbox{\hyperlink{group__readers_ga441ab38871fdc5337aa8d65774c0836d}{M\+D\+B\+\_\+rxbody}}
+\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__reader}{M\+D\+B\+\_\+reader}} \mbox{\hyperlink{group__readers_gad3ac1f5bf85920df3818e91fe9031493}{M\+D\+B\+\_\+reader}}
+\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__txbody}{M\+D\+B\+\_\+txbody}} \mbox{\hyperlink{group__readers_ga190cd27d9867f4ec4f26c33ff63cac59}{M\+D\+B\+\_\+txbody}}
+\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__txninfo}{M\+D\+B\+\_\+txninfo}} \mbox{\hyperlink{group__readers_ga32aadb60ce01bc428cc35a76ed6ed3d6}{M\+D\+B\+\_\+txninfo}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Readers don\textquotesingle{}t acquire any locks for their data access. Instead, they simply record their transaction ID in the reader table. The reader mutex is needed just to find an empty slot in the reader table. The slot\textquotesingle{}s address is saved in thread-\/specific data so that subsequent read transactions started by the same thread need no further locking to proceed.
+
+If \mbox{\hyperlink{group__mdb__env_ga5dca84a576d14b4bfe2deddc2dc622d3}{M\+D\+B\+\_\+\+N\+O\+T\+LS}} is set, the slot address is not saved in thread-\/specific data.
+
+No reader table is used if the database is on a read-\/only filesystem, or if \mbox{\hyperlink{group__mdb__env_ga9b0450b1a87cb9f22e033550e49e5037}{M\+D\+B\+\_\+\+N\+O\+L\+O\+CK}} is set.
+
+Since the database uses multi-\/version concurrency control, readers don\textquotesingle{}t actually need any locking. This table is used to keep track of which readers are using data from which old transactions, so that we\textquotesingle{}ll know when a particular old transaction is no longer in use. Old transactions that have discarded any data pages can then have those pages reclaimed for use by a later write transaction.
+
+The lock table is constructed such that reader slots are aligned with the processor\textquotesingle{}s cache line size. Any slot is only ever used by one thread. This alignment guarantees that there will be no contention or cache thrashing as threads update their own slot info, and also eliminates any need for locking when accessing a slot.
+
+A writer thread will scan every slot in the table to determine the oldest outstanding reader transaction. Any freed pages older than this will be reclaimed by the writer. The writer doesn\textquotesingle{}t use any locks when scanning this table. This means that there\textquotesingle{}s no guarantee that the writer will see the most up-\/to-\/date reader info, but that\textquotesingle{}s not required for correct operation -\/ all we need is to know the upper bound on the oldest reader, we don\textquotesingle{}t care at all about the newest reader. So the only consequence of reading stale information here is that old pages might hang around a while longer before being reclaimed. That\textquotesingle{}s actually good anyway, because the longer we delay reclaiming old pages, the more likely it is that a string of contiguous pages can be found after coalescing old pages from many old transactions together. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__readers_gaa62717a1fae2c57f94f2a9b8ae08ec49}\label{group__readers_gaa62717a1fae2c57f94f2a9b8ae08ec49}} 
+\index{Reader Lock Table@{Reader Lock Table}!C\+A\+C\+H\+E\+L\+I\+NE@{C\+A\+C\+H\+E\+L\+I\+NE}}
+\index{C\+A\+C\+H\+E\+L\+I\+NE@{C\+A\+C\+H\+E\+L\+I\+NE}!Reader Lock Table@{Reader Lock Table}}
+\subsubsection{\texorpdfstring{C\+A\+C\+H\+E\+L\+I\+NE}{CACHELINE}}
+{\footnotesize\ttfamily \#define C\+A\+C\+H\+E\+L\+I\+NE~64}
+
+The size of a C\+PU cache line in bytes. We want our lock structures aligned to this size to avoid false cache line sharing in the lock table. This value works for most C\+P\+Us. For Itanium this should be 128. 
+
+Definition at line 751 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__readers_gadff1f7b4d4626610a8d616e0c6dbbea4}\label{group__readers_gadff1f7b4d4626610a8d616e0c6dbbea4}} 
+\index{Reader Lock Table@{Reader Lock Table}!D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+A\+D\+E\+RS@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+A\+D\+E\+RS}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+A\+D\+E\+RS@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+A\+D\+E\+RS}!Reader Lock Table@{Reader Lock Table}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+A\+D\+E\+RS}{DEFAULT\_READERS}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+A\+D\+E\+RS~126}
+
+Number of slots in the reader table. This value was chosen somewhat arbitrarily. 126 readers plus a couple mutexes fit exactly into 8\+KB on my development machine. Applications should set the table size using \mbox{\hyperlink{group__internal_gaf73a6bb424d2f46c8fda202189b23b9e}{mdb\+\_\+env\+\_\+set\+\_\+maxreaders()}}. 
+
+Definition at line 743 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__readers_gabb6423d38a9132eedb4f2e2be72b8aeb}\label{group__readers_gabb6423d38a9132eedb4f2e2be72b8aeb}} 
+\index{Reader Lock Table@{Reader Lock Table}!M\+D\+B\+\_\+\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT@{M\+D\+B\+\_\+\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT}}
+\index{M\+D\+B\+\_\+\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT@{M\+D\+B\+\_\+\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT}!Reader Lock Table@{Reader Lock Table}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT}{MDB\_LOCK\_FORMAT}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((uint32\_t) \(\backslash\)
+     ((\mbox{\hyperlink{group__internal_ga1d56e55199f31cd585300a2b73c22d82}{MDB\_LOCK\_VERSION}}) \(\backslash\)
+      \textcolor{comment}{/* Flags which describe functionality */} \(\backslash\)
+      + (SYSV\_SEM\_FLAG << 18) \(\backslash\)
+      + (((\mbox{\hyperlink{group__compat_ga074373701b95aeaf38530ad7f9970030}{MDB\_PIDLOCK}}) != 0) << 16)))
+\end{DoxyCode}
+Lockfile format signature\+: version, features and field layout 
+
+Definition at line 866 of file mdb.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__readers_gad3ac1f5bf85920df3818e91fe9031493}\label{group__readers_gad3ac1f5bf85920df3818e91fe9031493}} 
+\index{Reader Lock Table@{Reader Lock Table}!M\+D\+B\+\_\+reader@{M\+D\+B\+\_\+reader}}
+\index{M\+D\+B\+\_\+reader@{M\+D\+B\+\_\+reader}!Reader Lock Table@{Reader Lock Table}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+reader}{MDB\_reader}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_m_d_b__reader}{M\+D\+B\+\_\+reader}}  \mbox{\hyperlink{struct_m_d_b__reader}{M\+D\+B\+\_\+reader}}}
+
+The actual reader record, with cacheline padding. \mbox{\Hypertarget{group__readers_ga441ab38871fdc5337aa8d65774c0836d}\label{group__readers_ga441ab38871fdc5337aa8d65774c0836d}} 
+\index{Reader Lock Table@{Reader Lock Table}!M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}}
+\index{M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}!Reader Lock Table@{Reader Lock Table}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+rxbody}{MDB\_rxbody}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_m_d_b__rxbody}{M\+D\+B\+\_\+rxbody}}  \mbox{\hyperlink{struct_m_d_b__rxbody}{M\+D\+B\+\_\+rxbody}}}
+
+The information we store in a single slot of the reader table. In addition to a transaction ID, we also record the process and thread ID that owns a slot, so that we can detect stale information, e.\+g. threads or processes that went away without cleaning up. \begin{DoxyNote}{Note}
+We currently don\textquotesingle{}t check for stale records. We simply re-\/init the table when we know that we\textquotesingle{}re the only process opening the lock file. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__readers_ga190cd27d9867f4ec4f26c33ff63cac59}\label{group__readers_ga190cd27d9867f4ec4f26c33ff63cac59}} 
+\index{Reader Lock Table@{Reader Lock Table}!M\+D\+B\+\_\+txbody@{M\+D\+B\+\_\+txbody}}
+\index{M\+D\+B\+\_\+txbody@{M\+D\+B\+\_\+txbody}!Reader Lock Table@{Reader Lock Table}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+txbody}{MDB\_txbody}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_m_d_b__txbody}{M\+D\+B\+\_\+txbody}}  \mbox{\hyperlink{struct_m_d_b__txbody}{M\+D\+B\+\_\+txbody}}}
+
+The header for the reader table. The table resides in a memory-\/mapped file. (This is a different file than is used for the main database.)
+
+For P\+O\+S\+IX the actual mutexes reside in the shared memory of this mapped file. On Windows, mutexes are named objects allocated by the kernel; we store the mutex names in this mapped file so that other processes can grab them. This same approach is also used on Mac\+O\+S\+X/\+Darwin (using named semaphores) since Mac\+O\+SX doesn\textquotesingle{}t support process-\/shared P\+O\+S\+IX mutexes. For these cases where a named object is used, the object name is derived from a 64 bit F\+NV hash of the environment pathname. As such, naming collisions are extremely unlikely. If a collision occurs, the results are unpredictable. \mbox{\Hypertarget{group__readers_ga32aadb60ce01bc428cc35a76ed6ed3d6}\label{group__readers_ga32aadb60ce01bc428cc35a76ed6ed3d6}} 
+\index{Reader Lock Table@{Reader Lock Table}!M\+D\+B\+\_\+txninfo@{M\+D\+B\+\_\+txninfo}}
+\index{M\+D\+B\+\_\+txninfo@{M\+D\+B\+\_\+txninfo}!Reader Lock Table@{Reader Lock Table}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+txninfo}{MDB\_txninfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_m_d_b__txninfo}{M\+D\+B\+\_\+txninfo}}  \mbox{\hyperlink{struct_m_d_b__txninfo}{M\+D\+B\+\_\+txninfo}}}
+
+The actual reader table definition. 

@@ -1,0 +1,11 @@
+digraph "Botan::store_be"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node320 [label="Botan::store_be",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node320 -> Node321 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node321 [label="Botan::store_be",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a26f4a43173adf5f333b598149c3eef1e"];
+  Node321 -> Node322 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node322 [label="Botan::get_byte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#ad10dc938a651323dddbfe3c1e985774b"];
+}

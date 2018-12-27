@@ -1,0 +1,506 @@
+\hypertarget{dhm_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/dhm.h File Reference}
+\label{dhm_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/dhm.\+h@{prerequisites/c-\/libp2p/include/mbedtls/dhm.\+h}}
+
+
+Diffie-\/\+Hellman-\/\+Merkle key exchange.  
+
+
+{\ttfamily \#include \char`\"{}bignum.\+h\char`\"{}}\newline
+Include dependency graph for dhm.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em D\+HM context structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dhm_8h_aed8709aee853dc12b0ed69980dd05ac9}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}~-\/0x3080
+\item 
+\#define \mbox{\hyperlink{dhm_8h_aeda9c1e986e7602a7aecd7aab670c765}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x3100
+\item 
+\#define \mbox{\hyperlink{dhm_8h_a14e2cef69f706b669ff97924d9f0c393}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x3180
+\item 
+\#define \mbox{\hyperlink{dhm_8h_a8e6f0e88a0c1865c8d4cbe576ee7a5fb}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x3200
+\item 
+\#define \mbox{\hyperlink{dhm_8h_a4f6a753b182c2967f4c461d35cd00af3}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x3280
+\item 
+\#define \mbox{\hyperlink{dhm_8h_a24f4983888eefb427e2bd10a5fa4e608}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+C\+A\+L\+C\+\_\+\+S\+E\+C\+R\+E\+T\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x3300
+\item 
+\#define \mbox{\hyperlink{dhm_8h_acfa4b3662afd1101c37e07e36b535da3}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}}~-\/0x3380
+\item 
+\#define \mbox{\hyperlink{dhm_8h_ab41c35f09ac9121671a51d057d06d726}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x3400
+\item 
+\#define \mbox{\hyperlink{dhm_8h_a9398d77c460671c8fa2a79be8cbf459e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}~-\/0x3480
+\item 
+\#define \mbox{\hyperlink{dhm_8h_a8625d753bfb49304c83ec1a459446cd5}{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}}
+\item 
+\mbox{\Hypertarget{dhm_8h_a836eb6b044e65d54a0ca008e9a8e9d39}\label{dhm_8h_a836eb6b044e65d54a0ca008e9a8e9d39}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+G}~\char`\"{}02\char`\"{}
+\item 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+3072\+\_\+P}
+\item 
+\mbox{\Hypertarget{dhm_8h_a5dd1005eb562a5ce4375e6ec5098d7f2}\label{dhm_8h_a5dd1005eb562a5ce4375e6ec5098d7f2}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+3072\+\_\+G}~\char`\"{}02\char`\"{}
+\item 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+4096\+\_\+P}
+\item 
+\mbox{\Hypertarget{dhm_8h_a03e41372b3b01fc62472e53c839c3cfd}\label{dhm_8h_a03e41372b3b01fc62472e53c839c3cfd}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+4096\+\_\+G}~\char`\"{}02\char`\"{}
+\item 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}
+\item 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dhm_8h_abf5ead59678b6ca8892b3c052452f5ac}{mbedtls\+\_\+dhm\+\_\+init}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Initialize D\+HM context. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{dhm_8h_a5348c82e9f13a7583aa9f17b5e841343}{mbedtls\+\_\+dhm\+\_\+read\+\_\+params}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$ctx, unsigned char $\ast$$\ast$p, const unsigned char $\ast$end)
+\begin{DoxyCompactList}\small\item\em Parse the Server\+Key\+Exchange parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{dhm_8h_ad674b35720bf6c3f3ba66355cab5e449}{mbedtls\+\_\+dhm\+\_\+make\+\_\+params}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$ctx, int x\+\_\+size, unsigned char $\ast$output, size\+\_\+t $\ast$olen, int($\ast$f\+\_\+rng)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+rng)
+\begin{DoxyCompactList}\small\item\em Setup and write the Server\+Key\+Exchange parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{dhm_8h_a1fe799e776fd0f27eb4080248e547f3d}{mbedtls\+\_\+dhm\+\_\+read\+\_\+public}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$ctx, const unsigned char $\ast$input, size\+\_\+t ilen)
+\begin{DoxyCompactList}\small\item\em Import the peer\textquotesingle{}s public value G$^\wedge$Y. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{dhm_8h_af49bee438130355e24540f7565e7465f}{mbedtls\+\_\+dhm\+\_\+make\+\_\+public}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$ctx, int x\+\_\+size, unsigned char $\ast$output, size\+\_\+t olen, int($\ast$f\+\_\+rng)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+rng)
+\begin{DoxyCompactList}\small\item\em Create own private value X and export G$^\wedge$X. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{dhm_8h_ac3985de01420d018ed91daec9e7d7969}{mbedtls\+\_\+dhm\+\_\+calc\+\_\+secret}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$ctx, unsigned char $\ast$output, size\+\_\+t output\+\_\+size, size\+\_\+t $\ast$olen, int($\ast$f\+\_\+rng)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+rng)
+\begin{DoxyCompactList}\small\item\em Derive and export the shared secret (G$^\wedge$Y)$^\wedge$X mod P. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dhm_8h_a092d039d88063538f67aaf9cf45d1d30}{mbedtls\+\_\+dhm\+\_\+free}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Free and clear the components of a D\+HM key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gae1bf556398cac1761aa2041908e9f619}{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhm}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$dhm, const unsigned char $\ast$dhmin, size\+\_\+t dhminlen)
+\begin{DoxyCompactList}\small\item\em Parse D\+HM parameters in P\+EM or D\+ER format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gae2f53ca5e795b7e8674f092777a5a828}{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhmfile}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$dhm, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load and parse D\+HM parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{dhm_8h_a72a0942c0e297ed573b31dac50751795}{mbedtls\+\_\+dhm\+\_\+self\+\_\+test}} (int verbose)
+\begin{DoxyCompactList}\small\item\em Checkup routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Diffie-\/\+Hellman-\/\+Merkle key exchange. 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dhm_8h_a8625d753bfb49304c83ec1a459446cd5}\label{dhm_8h_a8625d753bfb49304c83ec1a459446cd5}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}{MBEDTLS\_DHM\_RFC3526\_MODP\_2048\_P}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"FFFFFFFFFFFFFFFFC90FDAA22168C234C4C6628B80DC1CD1"} \(\backslash\)
+    \textcolor{stringliteral}{"29024E088A67CC74020BBEA63B139B22514A08798E3404DD"} \(\backslash\)
+    \textcolor{stringliteral}{"EF9519B3CD3A431B302B0A6DF25F14374FE1356D6D51C245"} \(\backslash\)
+    \textcolor{stringliteral}{"E485B576625E7EC6F44C42E9A637ED6B0BFF5CB6F406B7ED"} \(\backslash\)
+    \textcolor{stringliteral}{"EE386BFB5A899FA5AE9F24117C4B1FE649286651ECE45B3D"} \(\backslash\)
+    \textcolor{stringliteral}{"C2007CB8A163BF0598DA48361C55D39A69163FA8FD24CF5F"} \(\backslash\)
+    \textcolor{stringliteral}{"83655D23DCA3AD961C62F356208552BB9ED529077096966D"} \(\backslash\)
+    \textcolor{stringliteral}{"670C354E4ABC9804F1746C08CA18217C32905E462E36CE3B"} \(\backslash\)
+    \textcolor{stringliteral}{"E39E772C180E86039B2783A2EC07A28FB5C55DF06F4C52C9"} \(\backslash\)
+    \textcolor{stringliteral}{"DE2BCBF6955817183995497CEA956AE515D2261898FA0510"} \(\backslash\)
+    \textcolor{stringliteral}{"15728E5A8AACAA68FFFFFFFFFFFFFFFF"}
+\end{DoxyCode}
+R\+FC 3526 defines a number of standardized Diffie-\/\+Hellman groups for I\+KE. R\+FC 5114 defines a number of standardized Diffie-\/\+Hellman groups that can be used.
+
+Some are included here for convenience.
+
+Included are\+: R\+FC 3526 3. 2048-\/bit M\+O\+DP Group R\+FC 3526 4. 3072-\/bit M\+O\+DP Group R\+FC 3526 5. 4096-\/bit M\+O\+DP Group R\+FC 5114 2.\+2. 2048-\/bit M\+O\+DP Group with 224-\/bit Prime Order Subgroup 
+
+Definition at line 55 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_a23f4ceeaad9f78331a9449fd2b77b8e7}\label{dhm_8h_a23f4ceeaad9f78331a9449fd2b77b8e7}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+3072\+\_\+P@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+3072\+\_\+P}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+3072\+\_\+P@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+3072\+\_\+P}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+3072\+\_\+P}{MBEDTLS\_DHM\_RFC3526\_MODP\_3072\_P}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+3072\+\_\+P}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"FFFFFFFFFFFFFFFFC90FDAA22168C234C4C6628B80DC1CD1"} \(\backslash\)
+    \textcolor{stringliteral}{"29024E088A67CC74020BBEA63B139B22514A08798E3404DD"} \(\backslash\)
+    \textcolor{stringliteral}{"EF9519B3CD3A431B302B0A6DF25F14374FE1356D6D51C245"} \(\backslash\)
+    \textcolor{stringliteral}{"E485B576625E7EC6F44C42E9A637ED6B0BFF5CB6F406B7ED"} \(\backslash\)
+    \textcolor{stringliteral}{"EE386BFB5A899FA5AE9F24117C4B1FE649286651ECE45B3D"} \(\backslash\)
+    \textcolor{stringliteral}{"C2007CB8A163BF0598DA48361C55D39A69163FA8FD24CF5F"} \(\backslash\)
+    \textcolor{stringliteral}{"83655D23DCA3AD961C62F356208552BB9ED529077096966D"} \(\backslash\)
+    \textcolor{stringliteral}{"670C354E4ABC9804F1746C08CA18217C32905E462E36CE3B"} \(\backslash\)
+    \textcolor{stringliteral}{"E39E772C180E86039B2783A2EC07A28FB5C55DF06F4C52C9"} \(\backslash\)
+    \textcolor{stringliteral}{"DE2BCBF6955817183995497CEA956AE515D2261898FA0510"} \(\backslash\)
+    \textcolor{stringliteral}{"15728E5A8AAAC42DAD33170D04507A33A85521ABDF1CBA64"} \(\backslash\)
+    \textcolor{stringliteral}{"ECFB850458DBEF0A8AEA71575D060C7DB3970F85A6E1E4C7"} \(\backslash\)
+    \textcolor{stringliteral}{"ABF5AE8CDB0933D71E8C94E04A25619DCEE3D2261AD2EE6B"} \(\backslash\)
+    \textcolor{stringliteral}{"F12FFA06D98A0864D87602733EC86A64521F2B18177B200C"} \(\backslash\)
+    \textcolor{stringliteral}{"BBE117577A615D6C770988C0BAD946E208E24FA074E5AB31"} \(\backslash\)
+    \textcolor{stringliteral}{"43DB5BFCE0FD108E4B82D120A93AD2CAFFFFFFFFFFFFFFFF"}
+\end{DoxyCode}
+
+
+Definition at line 70 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_a5b591481dd8671423649c4f1c22a6c14}\label{dhm_8h_a5b591481dd8671423649c4f1c22a6c14}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+4096\+\_\+P@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+4096\+\_\+P}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+4096\+\_\+P@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+4096\+\_\+P}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+4096\+\_\+P}{MBEDTLS\_DHM\_RFC3526\_MODP\_4096\_P}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C3526\+\_\+\+M\+O\+D\+P\+\_\+4096\+\_\+P}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"FFFFFFFFFFFFFFFFC90FDAA22168C234C4C6628B80DC1CD1"} \(\backslash\)
+    \textcolor{stringliteral}{"29024E088A67CC74020BBEA63B139B22514A08798E3404DD"} \(\backslash\)
+    \textcolor{stringliteral}{"EF9519B3CD3A431B302B0A6DF25F14374FE1356D6D51C245"} \(\backslash\)
+    \textcolor{stringliteral}{"E485B576625E7EC6F44C42E9A637ED6B0BFF5CB6F406B7ED"} \(\backslash\)
+    \textcolor{stringliteral}{"EE386BFB5A899FA5AE9F24117C4B1FE649286651ECE45B3D"} \(\backslash\)
+    \textcolor{stringliteral}{"C2007CB8A163BF0598DA48361C55D39A69163FA8FD24CF5F"} \(\backslash\)
+    \textcolor{stringliteral}{"83655D23DCA3AD961C62F356208552BB9ED529077096966D"} \(\backslash\)
+    \textcolor{stringliteral}{"670C354E4ABC9804F1746C08CA18217C32905E462E36CE3B"} \(\backslash\)
+    \textcolor{stringliteral}{"E39E772C180E86039B2783A2EC07A28FB5C55DF06F4C52C9"} \(\backslash\)
+    \textcolor{stringliteral}{"DE2BCBF6955817183995497CEA956AE515D2261898FA0510"} \(\backslash\)
+    \textcolor{stringliteral}{"15728E5A8AAAC42DAD33170D04507A33A85521ABDF1CBA64"} \(\backslash\)
+    \textcolor{stringliteral}{"ECFB850458DBEF0A8AEA71575D060C7DB3970F85A6E1E4C7"} \(\backslash\)
+    \textcolor{stringliteral}{"ABF5AE8CDB0933D71E8C94E04A25619DCEE3D2261AD2EE6B"} \(\backslash\)
+    \textcolor{stringliteral}{"F12FFA06D98A0864D87602733EC86A64521F2B18177B200C"} \(\backslash\)
+    \textcolor{stringliteral}{"BBE117577A615D6C770988C0BAD946E208E24FA074E5AB31"} \(\backslash\)
+    \textcolor{stringliteral}{"43DB5BFCE0FD108E4B82D120A92108011A723C12A787E6D7"} \(\backslash\)
+    \textcolor{stringliteral}{"88719A10BDBA5B2699C327186AF4E23C1A946834B6150BDA"} \(\backslash\)
+    \textcolor{stringliteral}{"2583E9CA2AD44CE8DBBBC2DB04DE8EF92E8EFC141FBECAA6"} \(\backslash\)
+    \textcolor{stringliteral}{"287C59474E6BC05D99B2964FA090C3A2233BA186515BE7ED"} \(\backslash\)
+    \textcolor{stringliteral}{"1F612970CEE2D7AFB81BDD762170481CD0069127D5B05AA9"} \(\backslash\)
+    \textcolor{stringliteral}{"93B4EA988D8FDDC186FFB7DC90A6C08F4DF435C934063199"} \(\backslash\)
+    \textcolor{stringliteral}{"FFFFFFFFFFFFFFFF"}
+\end{DoxyCode}
+
+
+Definition at line 90 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_a200fd0dfffd4d57a0f16181fa655c4db}\label{dhm_8h_a200fd0dfffd4d57a0f16181fa655c4db}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+G@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+G}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+G@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+G}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+G}{MBEDTLS\_DHM\_RFC5114\_MODP\_2048\_G}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+G}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"AC4032EF4F2D9AE39DF30B5C8FFDAC506CDEBE7B89998CAF"}\(\backslash\)
+    \textcolor{stringliteral}{"74866A08CFE4FFE3A6824A4E10B9A6F0DD921F01A70C4AFA"}\(\backslash\)
+    \textcolor{stringliteral}{"AB739D7700C29F52C57DB17C620A8652BE5E9001A8D66AD7"}\(\backslash\)
+    \textcolor{stringliteral}{"C17669101999024AF4D027275AC1348BB8A762D0521BC98A"}\(\backslash\)
+    \textcolor{stringliteral}{"E247150422EA1ED409939D54DA7460CDB5F6C6B250717CBE"}\(\backslash\)
+    \textcolor{stringliteral}{"F180EB34118E98D119529A45D6F834566E3025E316A330EF"}\(\backslash\)
+    \textcolor{stringliteral}{"BB77A86F0C1AB15B051AE3D428C8F8ACB70A8137150B8EEB"}\(\backslash\)
+    \textcolor{stringliteral}{"10E183EDD19963DDD9E263E4770589EF6AA21E7F5F2FF381"}\(\backslash\)
+    \textcolor{stringliteral}{"B539CCE3409D13CD566AFBB48D6C019181E1BCFE94B30269"}\(\backslash\)
+    \textcolor{stringliteral}{"EDFE72FE9B6AA4BD7B5A0F1C71CFFF4C19C418E1F6EC0179"}\(\backslash\)
+    \textcolor{stringliteral}{"81BC087F2A7065B384B890D3191F2BFA"}
+\end{DoxyCode}
+
+
+Definition at line 129 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_ab9b3d09b17d7633e939abb5dac8d7ebf}\label{dhm_8h_ab9b3d09b17d7633e939abb5dac8d7ebf}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P@{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}{MBEDTLS\_DHM\_RFC5114\_MODP\_2048\_P}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+H\+M\+\_\+\+R\+F\+C5114\+\_\+\+M\+O\+D\+P\+\_\+2048\+\_\+P}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"AD107E1E9123A9D0D660FAA79559C51FA20D64E5683B9FD1"} \(\backslash\)
+    \textcolor{stringliteral}{"B54B1597B61D0A75E6FA141DF95A56DBAF9A3C407BA1DF15"} \(\backslash\)
+    \textcolor{stringliteral}{"EB3D688A309C180E1DE6B85A1274A0A66D3F8152AD6AC212"} \(\backslash\)
+    \textcolor{stringliteral}{"9037C9EDEFDA4DF8D91E8FEF55B7394B7AD5B7D0B6C12207"} \(\backslash\)
+    \textcolor{stringliteral}{"C9F98D11ED34DBF6C6BA0B2C8BBC27BE6A00E0A0B9C49708"} \(\backslash\)
+    \textcolor{stringliteral}{"B3BF8A317091883681286130BC8985DB1602E714415D9330"} \(\backslash\)
+    \textcolor{stringliteral}{"278273C7DE31EFDC7310F7121FD5A07415987D9ADC0A486D"} \(\backslash\)
+    \textcolor{stringliteral}{"CDF93ACC44328387315D75E198C641A480CD86A1B9E587E8"} \(\backslash\)
+    \textcolor{stringliteral}{"BE60E69CC928B2B9C52172E413042E9B23F10B0E16E79763"} \(\backslash\)
+    \textcolor{stringliteral}{"C9B53DCF4BA80A29E3FB73C16B8E75B97EF363E2FFA31F71"} \(\backslash\)
+    \textcolor{stringliteral}{"CF9DE5384E71B81C0AC4DFFE0C10E64F"}
+\end{DoxyCode}
+
+
+Definition at line 116 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_ab41c35f09ac9121671a51d057d06d726}\label{dhm_8h_ab41c35f09ac9121671a51d057d06d726}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_DHM\_ALLOC\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED~-\/0x3400}
+
+Allocation of memory failed. 
+
+Definition at line 38 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_aed8709aee853dc12b0ed69980dd05ac9}\label{dhm_8h_aed8709aee853dc12b0ed69980dd05ac9}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}{MBEDTLS\_ERR\_DHM\_BAD\_INPUT\_DATA}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA~-\/0x3080}
+
+Bad input parameters to function. 
+
+Definition at line 31 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_a24f4983888eefb427e2bd10a5fa4e608}\label{dhm_8h_a24f4983888eefb427e2bd10a5fa4e608}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+C\+A\+L\+C\+\_\+\+S\+E\+C\+R\+E\+T\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+C\+A\+L\+C\+\_\+\+S\+E\+C\+R\+E\+T\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+C\+A\+L\+C\+\_\+\+S\+E\+C\+R\+E\+T\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+C\+A\+L\+C\+\_\+\+S\+E\+C\+R\+E\+T\+\_\+\+F\+A\+I\+L\+ED}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+C\+A\+L\+C\+\_\+\+S\+E\+C\+R\+E\+T\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_DHM\_CALC\_SECRET\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+C\+A\+L\+C\+\_\+\+S\+E\+C\+R\+E\+T\+\_\+\+F\+A\+I\+L\+ED~-\/0x3300}
+
+Calculation of the D\+HM secret failed. 
+
+Definition at line 36 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_a9398d77c460671c8fa2a79be8cbf459e}\label{dhm_8h_a9398d77c460671c8fa2a79be8cbf459e}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}{MBEDTLS\_ERR\_DHM\_FILE\_IO\_ERROR}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR~-\/0x3480}
+
+Read/write of file failed. 
+
+Definition at line 39 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_acfa4b3662afd1101c37e07e36b535da3}\label{dhm_8h_acfa4b3662afd1101c37e07e36b535da3}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}{MBEDTLS\_ERR\_DHM\_INVALID\_FORMAT}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT~-\/0x3380}
+
+The A\+S\+N.\+1 data is not formatted correctly. 
+
+Definition at line 37 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_a14e2cef69f706b669ff97924d9f0c393}\label{dhm_8h_a14e2cef69f706b669ff97924d9f0c393}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_DHM\_MAKE\_PARAMS\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED~-\/0x3180}
+
+Making of the D\+HM parameters failed. 
+
+Definition at line 33 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_a4f6a753b182c2967f4c461d35cd00af3}\label{dhm_8h_a4f6a753b182c2967f4c461d35cd00af3}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_DHM\_MAKE\_PUBLIC\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+M\+A\+K\+E\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED~-\/0x3280}
+
+Making of the public value failed. 
+
+Definition at line 35 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_aeda9c1e986e7602a7aecd7aab670c765}\label{dhm_8h_aeda9c1e986e7602a7aecd7aab670c765}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_DHM\_READ\_PARAMS\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+F\+A\+I\+L\+ED~-\/0x3100}
+
+Reading of the D\+HM parameters failed. 
+
+Definition at line 32 of file dhm.\+h.
+
+\mbox{\Hypertarget{dhm_8h_a8e6f0e88a0c1865c8d4cbe576ee7a5fb}\label{dhm_8h_a8e6f0e88a0c1865c8d4cbe576ee7a5fb}} 
+\index{dhm.\+h@{dhm.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_DHM\_READ\_PUBLIC\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+R\+E\+A\+D\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+F\+A\+I\+L\+ED~-\/0x3200}
+
+Reading of the public values failed. 
+
+Definition at line 34 of file dhm.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dhm_8h_ac3985de01420d018ed91daec9e7d7969}\label{dhm_8h_ac3985de01420d018ed91daec9e7d7969}} 
+\index{dhm.\+h@{dhm.\+h}!mbedtls\+\_\+dhm\+\_\+calc\+\_\+secret@{mbedtls\+\_\+dhm\+\_\+calc\+\_\+secret}}
+\index{mbedtls\+\_\+dhm\+\_\+calc\+\_\+secret@{mbedtls\+\_\+dhm\+\_\+calc\+\_\+secret}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+calc\+\_\+secret()}{mbedtls\_dhm\_calc\_secret()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+dhm\+\_\+calc\+\_\+secret (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{ctx,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t}]{output\+\_\+size,  }\item[{size\+\_\+t $\ast$}]{olen,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+rng,  }\item[{void $\ast$}]{p\+\_\+rng }\end{DoxyParamCaption})}
+
+
+
+Derive and export the shared secret (G$^\wedge$Y)$^\wedge$X mod P. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & D\+HM context \\
+\hline
+{\em output} & destination buffer \\
+\hline
+{\em output\+\_\+size} & size of the destination buffer \\
+\hline
+{\em olen} & on exit, holds the actual number of bytes written \\
+\hline
+{\em f\+\_\+rng} & R\+NG function, for blinding purposes \\
+\hline
+{\em p\+\_\+rng} & R\+NG parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or an M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+X\+XX error code
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If non-\/\+N\+U\+LL, f\+\_\+rng is used to blind the input as countermeasure against timing attacks. Blinding is automatically used if and only if our secret value X is re-\/used and costs nothing otherwise, so it is recommended to always pass a non-\/\+N\+U\+LL f\+\_\+rng argument. 
+\end{DoxyNote}
+\mbox{\Hypertarget{dhm_8h_a092d039d88063538f67aaf9cf45d1d30}\label{dhm_8h_a092d039d88063538f67aaf9cf45d1d30}} 
+\index{dhm.\+h@{dhm.\+h}!mbedtls\+\_\+dhm\+\_\+free@{mbedtls\+\_\+dhm\+\_\+free}}
+\index{mbedtls\+\_\+dhm\+\_\+free@{mbedtls\+\_\+dhm\+\_\+free}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+free()}{mbedtls\_dhm\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+dhm\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Free and clear the components of a D\+HM key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & D\+HM context to free and clear \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dhm_8h_abf5ead59678b6ca8892b3c052452f5ac}\label{dhm_8h_abf5ead59678b6ca8892b3c052452f5ac}} 
+\index{dhm.\+h@{dhm.\+h}!mbedtls\+\_\+dhm\+\_\+init@{mbedtls\+\_\+dhm\+\_\+init}}
+\index{mbedtls\+\_\+dhm\+\_\+init@{mbedtls\+\_\+dhm\+\_\+init}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+init()}{mbedtls\_dhm\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+dhm\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Initialize D\+HM context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & D\+HM context to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dhm_8h_ad674b35720bf6c3f3ba66355cab5e449}\label{dhm_8h_ad674b35720bf6c3f3ba66355cab5e449}} 
+\index{dhm.\+h@{dhm.\+h}!mbedtls\+\_\+dhm\+\_\+make\+\_\+params@{mbedtls\+\_\+dhm\+\_\+make\+\_\+params}}
+\index{mbedtls\+\_\+dhm\+\_\+make\+\_\+params@{mbedtls\+\_\+dhm\+\_\+make\+\_\+params}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+make\+\_\+params()}{mbedtls\_dhm\_make\_params()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+dhm\+\_\+make\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{ctx,  }\item[{int}]{x\+\_\+size,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t $\ast$}]{olen,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+rng,  }\item[{void $\ast$}]{p\+\_\+rng }\end{DoxyParamCaption})}
+
+
+
+Setup and write the Server\+Key\+Exchange parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & D\+HM context \\
+\hline
+{\em x\+\_\+size} & private value size in bytes \\
+\hline
+{\em output} & destination buffer \\
+\hline
+{\em olen} & number of chars written \\
+\hline
+{\em f\+\_\+rng} & R\+NG function \\
+\hline
+{\em p\+\_\+rng} & R\+NG parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function assumes that ctx-\/$>$P and ctx-\/$>$G have already been properly set (for example using mbedtls\+\_\+mpi\+\_\+read\+\_\+string or mbedtls\+\_\+mpi\+\_\+read\+\_\+binary).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+0 if successful, or an M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+X\+XX error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dhm_8h_af49bee438130355e24540f7565e7465f}\label{dhm_8h_af49bee438130355e24540f7565e7465f}} 
+\index{dhm.\+h@{dhm.\+h}!mbedtls\+\_\+dhm\+\_\+make\+\_\+public@{mbedtls\+\_\+dhm\+\_\+make\+\_\+public}}
+\index{mbedtls\+\_\+dhm\+\_\+make\+\_\+public@{mbedtls\+\_\+dhm\+\_\+make\+\_\+public}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+make\+\_\+public()}{mbedtls\_dhm\_make\_public()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+dhm\+\_\+make\+\_\+public (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{ctx,  }\item[{int}]{x\+\_\+size,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t}]{olen,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+rng,  }\item[{void $\ast$}]{p\+\_\+rng }\end{DoxyParamCaption})}
+
+
+
+Create own private value X and export G$^\wedge$X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & D\+HM context \\
+\hline
+{\em x\+\_\+size} & private value size in bytes \\
+\hline
+{\em output} & destination buffer \\
+\hline
+{\em olen} & must be at least equal to the size of P, ctx-\/$>$len \\
+\hline
+{\em f\+\_\+rng} & R\+NG function \\
+\hline
+{\em p\+\_\+rng} & R\+NG parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or an M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+X\+XX error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dhm_8h_a5348c82e9f13a7583aa9f17b5e841343}\label{dhm_8h_a5348c82e9f13a7583aa9f17b5e841343}} 
+\index{dhm.\+h@{dhm.\+h}!mbedtls\+\_\+dhm\+\_\+read\+\_\+params@{mbedtls\+\_\+dhm\+\_\+read\+\_\+params}}
+\index{mbedtls\+\_\+dhm\+\_\+read\+\_\+params@{mbedtls\+\_\+dhm\+\_\+read\+\_\+params}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+read\+\_\+params()}{mbedtls\_dhm\_read\_params()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+dhm\+\_\+read\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{ctx,  }\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{const unsigned char $\ast$}]{end }\end{DoxyParamCaption})}
+
+
+
+Parse the Server\+Key\+Exchange parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & D\+HM context \\
+\hline
+{\em p} & \&(start of input buffer) \\
+\hline
+{\em end} & end of buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or an M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+X\+XX error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dhm_8h_a1fe799e776fd0f27eb4080248e547f3d}\label{dhm_8h_a1fe799e776fd0f27eb4080248e547f3d}} 
+\index{dhm.\+h@{dhm.\+h}!mbedtls\+\_\+dhm\+\_\+read\+\_\+public@{mbedtls\+\_\+dhm\+\_\+read\+\_\+public}}
+\index{mbedtls\+\_\+dhm\+\_\+read\+\_\+public@{mbedtls\+\_\+dhm\+\_\+read\+\_\+public}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+read\+\_\+public()}{mbedtls\_dhm\_read\_public()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+dhm\+\_\+read\+\_\+public (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{input,  }\item[{size\+\_\+t}]{ilen }\end{DoxyParamCaption})}
+
+
+
+Import the peer\textquotesingle{}s public value G$^\wedge$Y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & D\+HM context \\
+\hline
+{\em input} & input buffer \\
+\hline
+{\em ilen} & size of buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or an M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+D\+H\+M\+\_\+\+X\+XX error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dhm_8h_a72a0942c0e297ed573b31dac50751795}\label{dhm_8h_a72a0942c0e297ed573b31dac50751795}} 
+\index{dhm.\+h@{dhm.\+h}!mbedtls\+\_\+dhm\+\_\+self\+\_\+test@{mbedtls\+\_\+dhm\+\_\+self\+\_\+test}}
+\index{mbedtls\+\_\+dhm\+\_\+self\+\_\+test@{mbedtls\+\_\+dhm\+\_\+self\+\_\+test}!dhm.\+h@{dhm.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+self\+\_\+test()}{mbedtls\_dhm\_self\_test()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+dhm\+\_\+self\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{verbose }\end{DoxyParamCaption})}
+
+
+
+Checkup routine. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, or 1 if the test failed 
+\end{DoxyReturn}

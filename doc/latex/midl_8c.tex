@@ -1,0 +1,58 @@
+\hypertarget{midl_8c}{}\section{prerequisites/lmbd/libraries/liblmdb/midl.c File Reference}
+\label{midl_8c}\index{prerequisites/lmbd/libraries/liblmdb/midl.\+c@{prerequisites/lmbd/libraries/liblmdb/midl.\+c}}
+
+
+ldap bdb back-\/end ID List functions  
+
+
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}midl.\+h\char`\"{}}\newline
+Include dependency graph for midl.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries C\+MP}(x,  y)~( (x) $<$ (y) ? -\/1 \+: (x) $>$ (y) )
+\item 
+\#define {\bfseries S\+M\+A\+LL}~8
+\item 
+\#define {\bfseries M\+I\+D\+L\+\_\+\+S\+W\+AP}(a,  b)~\{ itmp=(a); (a)=(b); (b)=itmp; \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{group__idls_ga9133d7b3849e2508c7bc690db039444d}{mdb\+\_\+midl\+\_\+search}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} ids, \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} id)
+\item 
+\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} \mbox{\hyperlink{group__idls_gab239e78f44ae65ce84c1a63c99f14b19}{mdb\+\_\+midl\+\_\+alloc}} (int num)
+\item 
+void \mbox{\hyperlink{group__idls_ga16e7b3139783126c1e39b5d7f7fb625d}{mdb\+\_\+midl\+\_\+free}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} ids)
+\item 
+void \mbox{\hyperlink{group__idls_ga862ec13c8ff2aa805203a3c8c342153a}{mdb\+\_\+midl\+\_\+shrink}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp)
+\item 
+int \mbox{\hyperlink{group__idls_ga27374e3827d673a748c843fffce1a48f}{mdb\+\_\+midl\+\_\+need}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp, unsigned num)
+\item 
+int \mbox{\hyperlink{group__idls_gaf1dc78a5648a20152672b6236f1879e9}{mdb\+\_\+midl\+\_\+append}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp, \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} id)
+\item 
+int \mbox{\hyperlink{group__idls_ga21493a9f98c90f59d81c7197866ec076}{mdb\+\_\+midl\+\_\+append\+\_\+list}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp, \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} app)
+\item 
+int \mbox{\hyperlink{group__idls_gaccadab9afb9667e28c4e750a1d0696f8}{mdb\+\_\+midl\+\_\+append\+\_\+range}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp, \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} id, unsigned n)
+\item 
+void \mbox{\hyperlink{group__idls_ga35e6813874447861b772f4089ce9fa70}{mdb\+\_\+midl\+\_\+xmerge}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} idl, \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} merge)
+\item 
+void \mbox{\hyperlink{group__idls_gac3fe60f3087a5fdba4908f53a62d16d5}{mdb\+\_\+midl\+\_\+sort}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} ids)
+\item 
+unsigned \mbox{\hyperlink{group__idls_ga4fbf5726f08ac891bbea111b712ab424}{mdb\+\_\+mid2l\+\_\+search}} (\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} ids, \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} id)
+\item 
+int \mbox{\hyperlink{group__idls_ga7cf657facd99bec0e29ea05bda96e4a5}{mdb\+\_\+mid2l\+\_\+insert}} (\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} ids, \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}} $\ast$id)
+\item 
+int \mbox{\hyperlink{group__idls_ga54b5ab87ee3746dc4926d25d3887dfab}{mdb\+\_\+mid2l\+\_\+append}} (\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} ids, \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}} $\ast$id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+ldap bdb back-\/end ID List functions 
+

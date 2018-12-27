@@ -1,0 +1,63 @@
+\hypertarget{class_q_web_socket_handshake_request}{}\section{Q\+Web\+Socket\+Handshake\+Request Class Reference}
+\label{class_q_web_socket_handshake_request}\index{Q\+Web\+Socket\+Handshake\+Request@{Q\+Web\+Socket\+Handshake\+Request}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_acbc45c70fa01565e857b1fea27b40be2}\label{class_q_web_socket_handshake_request_acbc45c70fa01565e857b1fea27b40be2}} 
+\mbox{\hyperlink{class_q_web_socket_handshake_request_acbc45c70fa01565e857b1fea27b40be2}{Q\+Web\+Socket\+Handshake\+Request}} (int port, bool is\+Secure)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{class_q_web_socket_handshake_request}{Q\+Web\+Socket\+Handshake\+Request}} given {\itshape port} and {\itshape is\+Secure}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a97cfcbf814d0bcbf6a32cbe6e9c81fe9}\label{class_q_web_socket_handshake_request_a97cfcbf814d0bcbf6a32cbe6e9c81fe9}} 
+void \mbox{\hyperlink{class_q_web_socket_handshake_request_a97cfcbf814d0bcbf6a32cbe6e9c81fe9}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a1ab86c4a82e2a2c8da56a37b50a15714}\label{class_q_web_socket_handshake_request_a1ab86c4a82e2a2c8da56a37b50a15714}} 
+int {\bfseries port} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a0c78dfc698888d107d327060e0411136}\label{class_q_web_socket_handshake_request_a0c78dfc698888d107d327060e0411136}} 
+bool {\bfseries is\+Secure} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a8e48f0467ab74bd876b8721d3f763d6f}\label{class_q_web_socket_handshake_request_a8e48f0467ab74bd876b8721d3f763d6f}} 
+bool {\bfseries is\+Valid} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a8a2275391b8aca8e7edc41e3375c4918}\label{class_q_web_socket_handshake_request_a8a2275391b8aca8e7edc41e3375c4918}} 
+Q\+Map$<$ Q\+String, Q\+String $>$ {\bfseries headers} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_abdddc5bea96a5d02387c5fbec3f296c4}\label{class_q_web_socket_handshake_request_abdddc5bea96a5d02387c5fbec3f296c4}} 
+Q\+List$<$ \mbox{\hyperlink{namespace_q_web_socket_protocol_ad53f2684577effe0a517eadb48714df3}{Q\+Web\+Socket\+Protocol\+::\+Version}} $>$ {\bfseries versions} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a013aa576aaccf33f5c9e63962f1a8b5d}\label{class_q_web_socket_handshake_request_a013aa576aaccf33f5c9e63962f1a8b5d}} 
+Q\+String {\bfseries key} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_aae993396a8225200fe71af8d9899e5fd}\label{class_q_web_socket_handshake_request_aae993396a8225200fe71af8d9899e5fd}} 
+Q\+String {\bfseries origin} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_af012d07a491c8481469b2ea004617fe2}\label{class_q_web_socket_handshake_request_af012d07a491c8481469b2ea004617fe2}} 
+Q\+List$<$ Q\+String $>$ {\bfseries protocols} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_af0d87f6e0a5ad0deedfb426c10fb0c4d}\label{class_q_web_socket_handshake_request_af0d87f6e0a5ad0deedfb426c10fb0c4d}} 
+Q\+List$<$ Q\+String $>$ {\bfseries extensions} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_ace75f988bb103d9690b9e15fef9b665f}\label{class_q_web_socket_handshake_request_ace75f988bb103d9690b9e15fef9b665f}} 
+Q\+Url {\bfseries request\+Url} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a1f4bc44e5390000a9037d40cdb99358b}\label{class_q_web_socket_handshake_request_a1f4bc44e5390000a9037d40cdb99358b}} 
+Q\+String {\bfseries resource\+Name} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a22117a1f085bf012cd67c5589b6d2b39}\label{class_q_web_socket_handshake_request_a22117a1f085bf012cd67c5589b6d2b39}} 
+Q\+String {\bfseries host} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_handshake_request_a80ae598579208facddc8cf44d7e55371}\label{class_q_web_socket_handshake_request_a80ae598579208facddc8cf44d7e55371}} 
+void {\bfseries read\+Handshake} (Q\+Text\+Stream \&text\+Stream, int max\+Header\+Line\+Length, int max\+Headers)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 64 of file qwebsockethandshakerequest\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qwebsockethandshakerequest\+\_\+p.\+h\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qwebsockethandshakerequest.\+cpp\end{DoxyCompactItemize}

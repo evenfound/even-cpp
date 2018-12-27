@@ -1,0 +1,483 @@
+\hypertarget{class_botan_1_1_x_m_s_s___address}{}\section{Botan\+:\+:X\+M\+S\+S\+\_\+\+Address Class Reference}
+\label{class_botan_1_1_x_m_s_s___address}\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+
+
+{\ttfamily \#include $<$xmss\+\_\+address.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}{Type}} \+: uint8\+\_\+t \{ {\bfseries None} = 255, 
+{\bfseries O\+T\+S\+\_\+\+Hash\+\_\+\+Address} = 0, 
+{\bfseries L\+Tree\+\_\+\+Address} = 1, 
+{\bfseries Hash\+\_\+\+Tree\+\_\+\+Address} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}{Key\+\_\+\+Mask}} \+: uint8\+\_\+t \{ {\bfseries Key\+\_\+\+Mode} = 0, 
+{\bfseries Mask\+\_\+\+Mode} = 1, 
+{\bfseries Mask\+\_\+\+M\+S\+B\+\_\+\+Mode} = 1, 
+{\bfseries Mask\+\_\+\+L\+S\+B\+\_\+\+Mode} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_ac71959711edb3f719e371942247f2c74}{get\+\_\+layer\+\_\+addr}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_aca1e7f785ce8f328bd108c9cd63bde11}{set\+\_\+layer\+\_\+addr}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_ac6ffefc09f01cd25f9acb76f6fcd4071}{get\+\_\+tree\+\_\+addr}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_af0c3a079be599e10d72e14223f8ea16d}{set\+\_\+tree\+\_\+addr}} ()
+\item 
+\mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}{Type}} \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a278cf3ba854261fd2c73fbc996fb89b1}{get\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a57148e8e415efce53531406607526236}{set\+\_\+type}} (\mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}{Type}} type)
+\item 
+\mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}{Key\+\_\+\+Mask}} \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_af74b11e3ced49d405e2c84ca51191d61}{get\+\_\+key\+\_\+mask\+\_\+mode}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a12a0bcf65685053363b944be811f57db}{set\+\_\+key\+\_\+mask\+\_\+mode}} (\mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}{Key\+\_\+\+Mask}} value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a51d64c847fb1ba38a29c24da4b590c83}{get\+\_\+ots\+\_\+address}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a2219e289707137fda458eec819933be9}{set\+\_\+ots\+\_\+address}} (uint32\+\_\+t value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a67c3f3349ae7545bccf57f6e37f81849}{get\+\_\+ltree\+\_\+address}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_af410fcbcc750a12e8650307d51003bc2}{set\+\_\+ltree\+\_\+address}} (uint32\+\_\+t value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_adbab35e6d0dc8a0ff3e5c95ffa73cbee}{get\+\_\+chain\+\_\+address}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a766e70130914b681020366d80c625fce}{set\+\_\+chain\+\_\+address}} (uint32\+\_\+t value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a7e619c5b15ba74f596eb3d5b6035a0f1}{get\+\_\+tree\+\_\+height}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a9bf7df26a0cfc5fee8bb44e22927f61c}{set\+\_\+tree\+\_\+height}} (uint32\+\_\+t value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_af6ac58ed613b3b523628ccfcde73f7c2}{get\+\_\+hash\+\_\+address}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a0a5d46d9a17f3a39808356d079b592fa}{set\+\_\+hash\+\_\+address}} (uint32\+\_\+t value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a40990bf9e24b0f2967d18ed6af4197a9}{get\+\_\+tree\+\_\+index}} () const
+\item 
+void \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a9e084bac434f5bca79368d145c4ac991}{set\+\_\+tree\+\_\+index}} (uint32\+\_\+t value)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a6f22da8d3fde8b130555e33154386bba}\label{class_botan_1_1_x_m_s_s___address_a6f22da8d3fde8b130555e33154386bba}} 
+const secure\+\_\+vector$<$ uint8\+\_\+t $>$ \& {\bfseries bytes} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a3810c637960602319bb78422e8d8f490}\label{class_botan_1_1_x_m_s_s___address_a3810c637960602319bb78422e8d8f490}} 
+secure\+\_\+vector$<$ uint8\+\_\+t $>$ \& {\bfseries bytes} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a295db70b7603a66df6ebf20667dc9a9f}{size}} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_ad381cc81c47920eef6390dfbf506f93a}\label{class_botan_1_1_x_m_s_s___address_ad381cc81c47920eef6390dfbf506f93a}} 
+{\bfseries X\+M\+S\+S\+\_\+\+Address} (\mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}{Type}} type)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_ac7a8dd49523446b990c44ad33dbbb47e}\label{class_botan_1_1_x_m_s_s___address_ac7a8dd49523446b990c44ad33dbbb47e}} 
+{\bfseries X\+M\+S\+S\+\_\+\+Address} (const secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&data)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a07ce87c9817ac5a4fcb7073ddc5172e7}\label{class_botan_1_1_x_m_s_s___address_a07ce87c9817ac5a4fcb7073ddc5172e7}} 
+{\bfseries X\+M\+S\+S\+\_\+\+Address} (secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&\&data)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a19bf13b793e3da15e9aa07fa00594a00}\label{class_botan_1_1_x_m_s_s___address_a19bf13b793e3da15e9aa07fa00594a00}} 
+secure\+\_\+vector$<$ uint8\+\_\+t $>$ {\bfseries m\+\_\+data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic X\+M\+SS Address type holding 256 Bits of data. Properties of all three address formats L-\/\+Tree-\/\+Address, Hash-\/\+Tree-\/\+Address, O\+T\+S-\/\+Hash-\/\+Address can be called depending on the type currently assigned to the X\+M\+SS address using \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a57148e8e415efce53531406607526236}{set\+\_\+type()}}. 
+
+Definition at line 21 of file xmss\+\_\+address.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}\label{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!Key\+\_\+\+Mask@{Key\+\_\+\+Mask}}
+\index{Key\+\_\+\+Mask@{Key\+\_\+\+Mask}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{Key\+\_\+\+Mask}{Key\_Mask}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}{Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::\+Key\+\_\+\+Mask}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+The available modes for an X\+M\+SS Address\+:
+\begin{DoxyItemize}
+\item Key\+\_\+\+Mode\+: Used to generate the key.
+\item Mask\+\_\+\+Mode\+: Sets the n-\/byte bitmask (O\+T\+S-\/\+Hash-\/\+Address)
+\item Mask\+\_\+\+M\+S\+B\+\_\+\+Mode\+: Used to generate the b most significant bytes of the 2n-\/byte bitmask (L\+Tree Address and Hash Tree Address).
+\item Mask\+\_\+\+L\+S\+B\+\_\+\+Mode\+: Used to generated the b least significant bytes of the 2n-\/byte bitmask. (L\+Tree Address and Hash Tree Address). 
+\end{DoxyItemize}
+
+Definition at line 45 of file xmss\+\_\+address.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}\label{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!Type@{Type}}
+\index{Type@{Type}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}{Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::\+Type}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+Distinct types an \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address}{X\+M\+S\+S\+\_\+\+Address}} can represent. The available types are specified in \mbox{[}1\mbox{]} -\/ 2.\+5 Hash Function Address Scheme. 
+
+Definition at line 28 of file xmss\+\_\+address.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_adbab35e6d0dc8a0ff3e5c95ffa73cbee}\label{class_botan_1_1_x_m_s_s___address_adbab35e6d0dc8a0ff3e5c95ffa73cbee}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+chain\+\_\+address@{get\+\_\+chain\+\_\+address}}
+\index{get\+\_\+chain\+\_\+address@{get\+\_\+chain\+\_\+address}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+chain\+\_\+address()}{get\_chain\_address()}}
+{\footnotesize\ttfamily uint32\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+chain\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve the chain address. A call to this method is only valid, if the address type is set to Type\+::\+O\+T\+S\+\_\+\+Hash\+\_\+\+Address.
+
+\begin{DoxyReturn}{Returns}
+chain address. 
+\end{DoxyReturn}
+
+
+Definition at line 208 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_af6ac58ed613b3b523628ccfcde73f7c2}\label{class_botan_1_1_x_m_s_s___address_af6ac58ed613b3b523628ccfcde73f7c2}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+hash\+\_\+address@{get\+\_\+hash\+\_\+address}}
+\index{get\+\_\+hash\+\_\+address@{get\+\_\+hash\+\_\+address}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+hash\+\_\+address()}{get\_hash\_address()}}
+{\footnotesize\ttfamily uint32\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+hash\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves the address of the hash function call within the chain. A call to this method is only valid, if the address type is set to Type\+::\+O\+T\+S\+\_\+\+Hash\+\_\+\+Address.
+
+\begin{DoxyReturn}{Returns}
+address of the hash function call within chain. 
+\end{DoxyReturn}
+
+
+Definition at line 267 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_af74b11e3ced49d405e2c84ca51191d61}\label{class_botan_1_1_x_m_s_s___address_af74b11e3ced49d405e2c84ca51191d61}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+key\+\_\+mask\+\_\+mode@{get\+\_\+key\+\_\+mask\+\_\+mode}}
+\index{get\+\_\+key\+\_\+mask\+\_\+mode@{get\+\_\+key\+\_\+mask\+\_\+mode}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+key\+\_\+mask\+\_\+mode()}{get\_key\_mask\_mode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}{Key\+\_\+\+Mask}} Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+key\+\_\+mask\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves the mode the address os currently set to. (See \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}{X\+M\+S\+S\+\_\+\+Address\+::\+Key\+\_\+\+Mask}} for details.)
+
+\begin{DoxyReturn}{Returns}
+currently active mode 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file xmss\+\_\+address.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_ac71959711edb3f719e371942247f2c74}\label{class_botan_1_1_x_m_s_s___address_ac71959711edb3f719e371942247f2c74}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+layer\+\_\+addr@{get\+\_\+layer\+\_\+addr}}
+\index{get\+\_\+layer\+\_\+addr@{get\+\_\+layer\+\_\+addr}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+layer\+\_\+addr()}{get\_layer\_addr()}}
+{\footnotesize\ttfamily uint8\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+layer\+\_\+addr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Layer Address for X\+M\+SS is constantly zero and can not be changed this property is only of relevance to X\+M\+S\+S\+\_\+\+MT.
+
+\begin{DoxyReturn}{Returns}
+Layer address, which is constant 0 for X\+M\+SS. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file xmss\+\_\+address.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a67c3f3349ae7545bccf57f6e37f81849}\label{class_botan_1_1_x_m_s_s___address_a67c3f3349ae7545bccf57f6e37f81849}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+ltree\+\_\+address@{get\+\_\+ltree\+\_\+address}}
+\index{get\+\_\+ltree\+\_\+address@{get\+\_\+ltree\+\_\+address}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+ltree\+\_\+address()}{get\_ltree\_address()}}
+{\footnotesize\ttfamily uint32\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+ltree\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves the index of the leaf computed with this L\+Tree. A call to this method is only valid, if the address type is set to Type\+::\+L\+Tree\+\_\+\+Address.
+
+\begin{DoxyReturn}{Returns}
+index of the leaf. 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a51d64c847fb1ba38a29c24da4b590c83}\label{class_botan_1_1_x_m_s_s___address_a51d64c847fb1ba38a29c24da4b590c83}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+ots\+\_\+address@{get\+\_\+ots\+\_\+address}}
+\index{get\+\_\+ots\+\_\+address@{get\+\_\+ots\+\_\+address}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+ots\+\_\+address()}{get\_ots\_address()}}
+{\footnotesize\ttfamily uint32\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+ots\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve the index of the O\+TS key pair within the tree. A call to this method is only valid, if the address type is set to Type\+::\+O\+T\+S\+\_\+\+Hash\+\_\+\+Address.
+
+\begin{DoxyReturn}{Returns}
+index of O\+TS key pair. 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_ac6ffefc09f01cd25f9acb76f6fcd4071}\label{class_botan_1_1_x_m_s_s___address_ac6ffefc09f01cd25f9acb76f6fcd4071}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+tree\+\_\+addr@{get\+\_\+tree\+\_\+addr}}
+\index{get\+\_\+tree\+\_\+addr@{get\+\_\+tree\+\_\+addr}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+tree\+\_\+addr()}{get\_tree\_addr()}}
+{\footnotesize\ttfamily uint64\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+tree\+\_\+addr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Tree Address for X\+M\+SS is constantly zero and can not be changed this property is only of relevance to X\+M\+S\+S\+\_\+\+MT.
+
+\begin{DoxyReturn}{Returns}
+Tree address, which is constant 0 for X\+M\+SS. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file xmss\+\_\+address.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a7e619c5b15ba74f596eb3d5b6035a0f1}\label{class_botan_1_1_x_m_s_s___address_a7e619c5b15ba74f596eb3d5b6035a0f1}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+tree\+\_\+height@{get\+\_\+tree\+\_\+height}}
+\index{get\+\_\+tree\+\_\+height@{get\+\_\+tree\+\_\+height}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+tree\+\_\+height()}{get\_tree\_height()}}
+{\footnotesize\ttfamily uint32\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+tree\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves the height of the tree node to be computed within the tree. A call to this method is only valid, if the address type is set to Type\+::\+L\+Tree\+\_\+\+Address or Type\+::\+Hash\+\_\+\+Tree\+\_\+\+Address.
+
+\begin{DoxyReturn}{Returns}
+height of the tree node. 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a40990bf9e24b0f2967d18ed6af4197a9}\label{class_botan_1_1_x_m_s_s___address_a40990bf9e24b0f2967d18ed6af4197a9}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+tree\+\_\+index@{get\+\_\+tree\+\_\+index}}
+\index{get\+\_\+tree\+\_\+index@{get\+\_\+tree\+\_\+index}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+tree\+\_\+index()}{get\_tree\_index()}}
+{\footnotesize\ttfamily uint32\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+tree\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves the index of the tree node at current tree height in the tree. A call to this method is only valid, if the address type is set to Type\+::\+L\+Tree\+\_\+\+Address or Type\+::\+Hash\+\_\+\+Tree\+\_\+\+Address.
+
+\begin{DoxyReturn}{Returns}
+index of the tree node at current height. 
+\end{DoxyReturn}
+
+
+Definition at line 297 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a278cf3ba854261fd2c73fbc996fb89b1}\label{class_botan_1_1_x_m_s_s___address_a278cf3ba854261fd2c73fbc996fb89b1}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!get\+\_\+type@{get\+\_\+type}}
+\index{get\+\_\+type@{get\+\_\+type}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{get\+\_\+type()}{get\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}{Type}} Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+retrieves the logical type currently assigned to the X\+M\+SS Address instance.
+
+\begin{DoxyReturn}{Returns}
+Type of the address (O\+T\+S\+\_\+\+Hash\+\_\+\+Address, L\+Tree\+\_\+\+Address or Hash\+\_\+\+Tree\+\_\+\+Address) 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file xmss\+\_\+address.\+h.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a766e70130914b681020366d80c625fce}\label{class_botan_1_1_x_m_s_s___address_a766e70130914b681020366d80c625fce}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+chain\+\_\+address@{set\+\_\+chain\+\_\+address}}
+\index{set\+\_\+chain\+\_\+address@{set\+\_\+chain\+\_\+address}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+chain\+\_\+address()}{set\_chain\_address()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+chain\+\_\+address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the chain address. A call to this method is only valid, if the address type is set to Type\+::\+O\+T\+S\+\_\+\+Hash\+\_\+\+Address. 
+
+Definition at line 220 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a0a5d46d9a17f3a39808356d079b592fa}\label{class_botan_1_1_x_m_s_s___address_a0a5d46d9a17f3a39808356d079b592fa}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+hash\+\_\+address@{set\+\_\+hash\+\_\+address}}
+\index{set\+\_\+hash\+\_\+address@{set\+\_\+hash\+\_\+address}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+hash\+\_\+address()}{set\_hash\_address()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+hash\+\_\+address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the address of the hash function call within the chain. A call to this method is only valid, if the address type is set to Type\+::\+O\+T\+S\+\_\+\+Hash\+\_\+\+Address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & address of the hash function call within chain. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 282 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a12a0bcf65685053363b944be811f57db}\label{class_botan_1_1_x_m_s_s___address_a12a0bcf65685053363b944be811f57db}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+key\+\_\+mask\+\_\+mode@{set\+\_\+key\+\_\+mask\+\_\+mode}}
+\index{set\+\_\+key\+\_\+mask\+\_\+mode@{set\+\_\+key\+\_\+mask\+\_\+mode}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+key\+\_\+mask\+\_\+mode()}{set\_key\_mask\_mode()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+key\+\_\+mask\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}{Key\+\_\+\+Mask}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes the mode the address currently used address mode. (\mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a85146c0c3e049f62c413194049f501e3}{X\+M\+S\+S\+\_\+\+Address\+::\+Key\+\_\+\+Mask}} for details.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Target mode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 134 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_aca1e7f785ce8f328bd108c9cd63bde11}\label{class_botan_1_1_x_m_s_s___address_aca1e7f785ce8f328bd108c9cd63bde11}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+layer\+\_\+addr@{set\+\_\+layer\+\_\+addr}}
+\index{set\+\_\+layer\+\_\+addr@{set\+\_\+layer\+\_\+addr}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+layer\+\_\+addr()}{set\_layer\_addr()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+layer\+\_\+addr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Layer Address for X\+M\+SS is constantly zero and can not be changed this property is only of relevance to X\+M\+S\+S\+\_\+\+MT. Calling this method for X\+M\+SS will result in an error. 
+
+Definition at line 66 of file xmss\+\_\+address.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_af410fcbcc750a12e8650307d51003bc2}\label{class_botan_1_1_x_m_s_s___address_af410fcbcc750a12e8650307d51003bc2}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+ltree\+\_\+address@{set\+\_\+ltree\+\_\+address}}
+\index{set\+\_\+ltree\+\_\+address@{set\+\_\+ltree\+\_\+address}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+ltree\+\_\+address()}{set\_ltree\_address()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+ltree\+\_\+address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the index of the leaf computed with this L\+Tree. A call to this method is only valid, if the address type is set to Type\+::\+L\+Tree\+\_\+\+Address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & index of the leaf. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 194 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a2219e289707137fda458eec819933be9}\label{class_botan_1_1_x_m_s_s___address_a2219e289707137fda458eec819933be9}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+ots\+\_\+address@{set\+\_\+ots\+\_\+address}}
+\index{set\+\_\+ots\+\_\+address@{set\+\_\+ots\+\_\+address}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+ots\+\_\+address()}{set\_ots\_address()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+ots\+\_\+address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the index of the O\+TS key pair within the tree. A call to this method is only valid, if the address type is set to Type\+::\+O\+T\+S\+\_\+\+Hash\+\_\+\+Address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & index of O\+TS key pair. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 164 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_af0c3a079be599e10d72e14223f8ea16d}\label{class_botan_1_1_x_m_s_s___address_af0c3a079be599e10d72e14223f8ea16d}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+tree\+\_\+addr@{set\+\_\+tree\+\_\+addr}}
+\index{set\+\_\+tree\+\_\+addr@{set\+\_\+tree\+\_\+addr}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+tree\+\_\+addr()}{set\_tree\_addr()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+tree\+\_\+addr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Tree Address for X\+M\+SS is constantly zero and can not be changed this property is only of relevance to X\+M\+S\+S\+\_\+\+MT. Calling this method for X\+M\+SS will result in an error. 
+
+Definition at line 84 of file xmss\+\_\+address.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a9bf7df26a0cfc5fee8bb44e22927f61c}\label{class_botan_1_1_x_m_s_s___address_a9bf7df26a0cfc5fee8bb44e22927f61c}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+tree\+\_\+height@{set\+\_\+tree\+\_\+height}}
+\index{set\+\_\+tree\+\_\+height@{set\+\_\+tree\+\_\+height}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+tree\+\_\+height()}{set\_tree\_height()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+tree\+\_\+height (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the height of the tree node to be computed within the tree. A call to this method is only valid, if the address type is set to Type\+::\+L\+Tree\+\_\+\+Address or Type\+::\+Hash\+\_\+\+Tree\+\_\+\+Address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & height of the tree node. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 251 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a9e084bac434f5bca79368d145c4ac991}\label{class_botan_1_1_x_m_s_s___address_a9e084bac434f5bca79368d145c4ac991}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+tree\+\_\+index@{set\+\_\+tree\+\_\+index}}
+\index{set\+\_\+tree\+\_\+index@{set\+\_\+tree\+\_\+index}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+tree\+\_\+index()}{set\_tree\_index()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+tree\+\_\+index (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the index of the tree node at current tree height in the tree. A call to this method is only valid, if the address type is set to Type\+::\+L\+Tree\+\_\+\+Address or Type\+::\+Hash\+\_\+\+Tree\+\_\+\+Address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & index of the tree node at current height. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 313 of file xmss\+\_\+address.\+h.
+
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a57148e8e415efce53531406607526236}\label{class_botan_1_1_x_m_s_s___address_a57148e8e415efce53531406607526236}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!set\+\_\+type@{set\+\_\+type}}
+\index{set\+\_\+type@{set\+\_\+type}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{set\+\_\+type()}{set\_type()}}
+{\footnotesize\ttfamily void Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::set\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_botan_1_1_x_m_s_s___address_a0101e45c5608cf312b497bf6d855000e}{Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes the logical type currently assigned to the X\+M\+SS Address instance. Please note that changing the type will automatically reset the 128 L\+S\+Bs of the Address to zero. This affects the key\+\_\+mask\+\_\+mode property as well as all properties identified by X\+M\+S\+S\+\_\+\+Address\+::\+Property.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type that shall be assigned to the address (O\+T\+S\+\_\+\+Hash\+\_\+\+Address, L\+Tree\+\_\+\+Address or Hash\+\_\+\+Tree\+\_\+\+Address) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file xmss\+\_\+address.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___address_a295db70b7603a66df6ebf20667dc9a9f}\label{class_botan_1_1_x_m_s_s___address_a295db70b7603a66df6ebf20667dc9a9f}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}!size@{size}}
+\index{size@{size}!Botan\+::\+X\+M\+S\+S\+\_\+\+Address@{Botan\+::\+X\+M\+S\+S\+\_\+\+Address}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+Address\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the size of an \mbox{\hyperlink{class_botan_1_1_x_m_s_s___address}{X\+M\+S\+S\+\_\+\+Address}} 
+\end{DoxyReturn}
+
+
+Definition at line 335 of file xmss\+\_\+address.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/pubkey/xmss/xmss\+\_\+address.\+h\end{DoxyCompactItemize}

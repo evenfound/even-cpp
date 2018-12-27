@@ -1,0 +1,69 @@
+\hypertarget{structmbedtls__ssl__ticket__key}{}\section{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key Struct Reference}
+\label{structmbedtls__ssl__ticket__key}\index{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key@{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key}}
+
+
+Information for session ticket protection.  
+
+
+
+
+{\ttfamily \#include $<$ssl\+\_\+ticket.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__ssl__ticket__key_a5c80ec11a07ab4e19e775f7586a11d21}{name}} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structmbedtls__ssl__ticket__key_ada9d97d06d4c215e4810880427ca50ad}{generation\+\_\+time}}
+\item 
+\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} \mbox{\hyperlink{structmbedtls__ssl__ticket__key_ad347a5aa480ee9df7f32c16d1bd56aae}{ctx}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Information for session ticket protection. 
+
+Definition at line 46 of file ssl\+\_\+ticket.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__ssl__ticket__key_ad347a5aa480ee9df7f32c16d1bd56aae}\label{structmbedtls__ssl__ticket__key_ad347a5aa480ee9df7f32c16d1bd56aae}} 
+\index{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key@{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key}!ctx@{ctx}}
+\index{ctx@{ctx}!mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key@{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key}}
+\subsubsection{\texorpdfstring{ctx}{ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key\+::ctx}
+
+context for auth enc/decryption 
+
+Definition at line 50 of file ssl\+\_\+ticket.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__ticket__key_ada9d97d06d4c215e4810880427ca50ad}\label{structmbedtls__ssl__ticket__key_ada9d97d06d4c215e4810880427ca50ad}} 
+\index{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key@{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key}!generation\+\_\+time@{generation\+\_\+time}}
+\index{generation\+\_\+time@{generation\+\_\+time}!mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key@{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key}}
+\subsubsection{\texorpdfstring{generation\+\_\+time}{generation\_time}}
+{\footnotesize\ttfamily uint32\+\_\+t mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key\+::generation\+\_\+time}
+
+key generation timestamp (seconds) 
+
+Definition at line 49 of file ssl\+\_\+ticket.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__ticket__key_a5c80ec11a07ab4e19e775f7586a11d21}\label{structmbedtls__ssl__ticket__key_a5c80ec11a07ab4e19e775f7586a11d21}} 
+\index{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key@{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key}!name@{name}}
+\index{name@{name}!mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key@{mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+ssl\+\_\+ticket\+\_\+key\+::name\mbox{[}4\mbox{]}}
+
+random key identifier 
+
+Definition at line 48 of file ssl\+\_\+ticket.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/\mbox{\hyperlink{ssl__ticket_8h}{ssl\+\_\+ticket.\+h}}\end{DoxyCompactItemize}

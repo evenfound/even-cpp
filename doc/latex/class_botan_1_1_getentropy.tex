@@ -1,0 +1,48 @@
+\hypertarget{class_botan_1_1_getentropy}{}\section{Botan\+:\+:Getentropy Class Reference}
+\label{class_botan_1_1_getentropy}\index{Botan\+::\+Getentropy@{Botan\+::\+Getentropy}}
+
+
+{\ttfamily \#include $<$getentropy.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:Getentropy\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:Getentropy\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_getentropy_a7b69089b1126999eaec7e9730c2f9d77}\label{class_botan_1_1_getentropy_a7b69089b1126999eaec7e9730c2f9d77}} 
+std\+::string {\bfseries name} () const override
+\item 
+size\+\_\+t \mbox{\hyperlink{class_botan_1_1_getentropy_a71a5f10a7fc73f76adc80204eac86365}{poll}} (Random\+Number\+Generator \&rng) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Entropy source using the getentropy(2) system call first introduced in Open\+B\+SD 5.\+6 and added to Solaris 11.\+3. 
+
+Definition at line 19 of file getentropy.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_getentropy_a71a5f10a7fc73f76adc80204eac86365}\label{class_botan_1_1_getentropy_a71a5f10a7fc73f76adc80204eac86365}} 
+\index{Botan\+::\+Getentropy@{Botan\+::\+Getentropy}!poll@{poll}}
+\index{poll@{poll}!Botan\+::\+Getentropy@{Botan\+::\+Getentropy}}
+\subsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily size\+\_\+t Botan\+::\+Getentropy\+::poll (\begin{DoxyParamCaption}\item[{Random\+Number\+Generator \&}]{rng }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Gather 256 bytes entropy from getentropy(2). Note that maximum buffer size is limited to 256 bytes. On Open\+B\+SD this does neither block nor fail. 
+
+Definition at line 23 of file getentropy.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/entropy/getentropy/getentropy.\+h\item 
+prerequisites/botan/src/lib/entropy/getentropy/getentropy.\+cpp\end{DoxyCompactItemize}

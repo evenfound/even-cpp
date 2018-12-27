@@ -1,0 +1,411 @@
+\hypertarget{group__idls}{}\section{ID List Management}
+\label{group__idls}\index{I\+D List Management@{I\+D List Management}}
+Collaboration diagram for ID List Management\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__idls_gafb073915b50e7112cfed534aff6524cf}\label{group__idls_gafb073915b50e7112cfed534aff6524cf}} 
+\#define {\bfseries C\+MP}(x,  y)~( (x) $<$ (y) ? -\/1 \+: (x) $>$ (y) )
+\item 
+\mbox{\Hypertarget{group__idls_ga09c78d2f8feb311dd9fc969a0bf84979}\label{group__idls_ga09c78d2f8feb311dd9fc969a0bf84979}} 
+\#define {\bfseries S\+M\+A\+LL}~8
+\item 
+\mbox{\Hypertarget{group__idls_ga3ba85d6201d0518626404096ed0c08a9}\label{group__idls_ga3ba85d6201d0518626404096ed0c08a9}} 
+\#define {\bfseries M\+I\+D\+L\+\_\+\+S\+W\+AP}(a,  b)~\{ itmp=(a); (a)=(b); (b)=itmp; \}
+\item 
+\mbox{\Hypertarget{group__idls_ga5913db46baa9f4c150fd306ed60c5df2}\label{group__idls_ga5913db46baa9f4c150fd306ed60c5df2}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+L\+O\+GN}~16	/$\ast$ D\+B\+\_\+\+S\+I\+ZE is 2$^\wedge$16, U\+M\+\_\+\+S\+I\+ZE is 2$^\wedge$17 $\ast$/
+\item 
+\mbox{\Hypertarget{group__idls_gaa45bf227dabe81a33a3d010ec5837d53}\label{group__idls_gaa45bf227dabe81a33a3d010ec5837d53}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+D\+B\+\_\+\+S\+I\+ZE}~(1$<$$<$M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+L\+O\+GN)
+\item 
+\mbox{\Hypertarget{group__idls_gaeba3deef11f846a3d92e00dc2e09403d}\label{group__idls_gaeba3deef11f846a3d92e00dc2e09403d}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+U\+M\+\_\+\+S\+I\+ZE}~(1$<$$<$(M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+L\+O\+GN+1))
+\item 
+\mbox{\Hypertarget{group__idls_ga4b58903bea2b843d866f5c8fd1a9aaf7}\label{group__idls_ga4b58903bea2b843d866f5c8fd1a9aaf7}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+D\+B\+\_\+\+M\+AX}~(M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+D\+B\+\_\+\+S\+I\+ZE-\/1)
+\item 
+\mbox{\Hypertarget{group__idls_ga329af3b2c499bf05f3f1f96f24645ab5}\label{group__idls_ga329af3b2c499bf05f3f1f96f24645ab5}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+U\+M\+\_\+\+M\+AX}~(M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+U\+M\+\_\+\+S\+I\+ZE-\/1)
+\item 
+\mbox{\Hypertarget{group__idls_ga27cf9b6582a14b526efacb0103479af2}\label{group__idls_ga27cf9b6582a14b526efacb0103479af2}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+S\+I\+Z\+E\+OF}(ids)~(((ids)\mbox{[}0\mbox{]}+1) $\ast$ sizeof(\mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}}))
+\item 
+\mbox{\Hypertarget{group__idls_ga08dc6b24beb65b6539b096451ab6265e}\label{group__idls_ga08dc6b24beb65b6539b096451ab6265e}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+I\+S\+\_\+\+Z\+E\+RO}(ids)~( (ids)\mbox{[}0\mbox{]} == 0 )
+\item 
+\mbox{\Hypertarget{group__idls_ga4f2703b101329a054b96b1e7c81b7655}\label{group__idls_ga4f2703b101329a054b96b1e7c81b7655}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+C\+PY}(dst,  src)~(memcpy( dst, src, M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+S\+I\+Z\+E\+OF( src ) ))
+\item 
+\mbox{\Hypertarget{group__idls_gacb321970daa0ed047684ebea71be70ac}\label{group__idls_gacb321970daa0ed047684ebea71be70ac}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+F\+I\+R\+ST}(ids)~( (ids)\mbox{[}1\mbox{]} )
+\item 
+\mbox{\Hypertarget{group__idls_ga1a88b649c8c88811b531dd0e4f336a06}\label{group__idls_ga1a88b649c8c88811b531dd0e4f336a06}} 
+\#define {\bfseries M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+L\+A\+ST}(ids)~( (ids)\mbox{[}(ids)\mbox{[}0\mbox{]}\mbox{]} )
+\item 
+\#define \mbox{\hyperlink{group__idls_ga4dad2db495180fe6ba5a39fdbf493703}{M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+A\+L\+L\+O\+C\+L\+EN}}(ids)~( (ids)\mbox{[}-\/1\mbox{]} )
+\item 
+\#define \mbox{\hyperlink{group__idls_gaf1e1ecbabeea10bcf19bd7ab616dcbc1}{mdb\+\_\+midl\+\_\+xappend}}(idl,  id)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}}
+\item 
+typedef \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} $\ast$ \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}}
+\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}} \mbox{\hyperlink{group__idls_gaf7a69e9dd73fcefb2ed10058331ddac2}{M\+D\+B\+\_\+\+I\+D2}}
+\item 
+typedef \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}} $\ast$ \mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{group__idls_ga9133d7b3849e2508c7bc690db039444d}{mdb\+\_\+midl\+\_\+search}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} ids, \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} id)
+\item 
+\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} \mbox{\hyperlink{group__idls_gab239e78f44ae65ce84c1a63c99f14b19}{mdb\+\_\+midl\+\_\+alloc}} (int num)
+\item 
+void \mbox{\hyperlink{group__idls_ga16e7b3139783126c1e39b5d7f7fb625d}{mdb\+\_\+midl\+\_\+free}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} ids)
+\item 
+void \mbox{\hyperlink{group__idls_ga862ec13c8ff2aa805203a3c8c342153a}{mdb\+\_\+midl\+\_\+shrink}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp)
+\item 
+int \mbox{\hyperlink{group__idls_ga27374e3827d673a748c843fffce1a48f}{mdb\+\_\+midl\+\_\+need}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp, unsigned num)
+\item 
+int \mbox{\hyperlink{group__idls_gaf1dc78a5648a20152672b6236f1879e9}{mdb\+\_\+midl\+\_\+append}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp, \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} id)
+\item 
+int \mbox{\hyperlink{group__idls_ga21493a9f98c90f59d81c7197866ec076}{mdb\+\_\+midl\+\_\+append\+\_\+list}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp, \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} app)
+\item 
+int \mbox{\hyperlink{group__idls_gaccadab9afb9667e28c4e750a1d0696f8}{mdb\+\_\+midl\+\_\+append\+\_\+range}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$idp, \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} id, unsigned n)
+\item 
+void \mbox{\hyperlink{group__idls_ga35e6813874447861b772f4089ce9fa70}{mdb\+\_\+midl\+\_\+xmerge}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} idl, \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} merge)
+\item 
+void \mbox{\hyperlink{group__idls_gac3fe60f3087a5fdba4908f53a62d16d5}{mdb\+\_\+midl\+\_\+sort}} (\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} ids)
+\item 
+unsigned \mbox{\hyperlink{group__idls_ga4fbf5726f08ac891bbea111b712ab424}{mdb\+\_\+mid2l\+\_\+search}} (\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} ids, \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}} id)
+\item 
+int \mbox{\hyperlink{group__idls_ga7cf657facd99bec0e29ea05bda96e4a5}{mdb\+\_\+mid2l\+\_\+insert}} (\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} ids, \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}} $\ast$id)
+\item 
+int \mbox{\hyperlink{group__idls_ga54b5ab87ee3746dc4926d25d3887dfab}{mdb\+\_\+mid2l\+\_\+append}} (\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} ids, \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}} $\ast$id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__idls_ga4dad2db495180fe6ba5a39fdbf493703}\label{group__idls_ga4dad2db495180fe6ba5a39fdbf493703}} 
+\index{I\+D List Management@{I\+D List Management}!M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+A\+L\+L\+O\+C\+L\+EN@{M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+A\+L\+L\+O\+C\+L\+EN}}
+\index{M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+A\+L\+L\+O\+C\+L\+EN@{M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+A\+L\+L\+O\+C\+L\+EN}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+A\+L\+L\+O\+C\+L\+EN}{MDB\_IDL\_ALLOCLEN}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+A\+L\+L\+O\+C\+L\+EN(\begin{DoxyParamCaption}\item[{}]{ids }\end{DoxyParamCaption})~( (ids)\mbox{[}-\/1\mbox{]} )}
+
+Current max length of an \mbox{\hyperlink{group__idls_gab239e78f44ae65ce84c1a63c99f14b19}{mdb\+\_\+midl\+\_\+alloc()}}ed I\+DL 
+
+Definition at line 76 of file midl.\+h.
+
+\mbox{\Hypertarget{group__idls_gaf1e1ecbabeea10bcf19bd7ab616dcbc1}\label{group__idls_gaf1e1ecbabeea10bcf19bd7ab616dcbc1}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+xappend@{mdb\+\_\+midl\+\_\+xappend}}
+\index{mdb\+\_\+midl\+\_\+xappend@{mdb\+\_\+midl\+\_\+xappend}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+xappend}{mdb\_midl\_xappend}}
+{\footnotesize\ttfamily \#define mdb\+\_\+midl\+\_\+xappend(\begin{DoxyParamCaption}\item[{}]{idl,  }\item[{}]{id }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        MDB\_ID *xidl = (idl), xlen = ++(xidl[0]); \(\backslash\)
+        xidl[xlen] = (id); \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Append ID to I\+DL. The I\+DL must be big enough. 
+
+Definition at line 79 of file midl.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__idls_ga792192229a977c49f083846b5635f92d}\label{group__idls_ga792192229a977c49f083846b5635f92d}} 
+\index{I\+D List Management@{I\+D List Management}!M\+D\+B\+\_\+\+ID@{M\+D\+B\+\_\+\+ID}}
+\index{M\+D\+B\+\_\+\+ID@{M\+D\+B\+\_\+\+ID}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+ID}{MDB\_ID}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}}}
+
+A generic unsigned ID number. These were entry\+I\+Ds in back-\/bdb. Preferably it should have the same size as a pointer. 
+
+Definition at line 45 of file midl.\+h.
+
+\mbox{\Hypertarget{group__idls_gaf7a69e9dd73fcefb2ed10058331ddac2}\label{group__idls_gaf7a69e9dd73fcefb2ed10058331ddac2}} 
+\index{I\+D List Management@{I\+D List Management}!M\+D\+B\+\_\+\+I\+D2@{M\+D\+B\+\_\+\+I\+D2}}
+\index{M\+D\+B\+\_\+\+I\+D2@{M\+D\+B\+\_\+\+I\+D2}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+I\+D2}{MDB\_ID2}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}}  \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}}}
+
+An I\+D2 is an I\+D/pointer pair. \mbox{\Hypertarget{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}\label{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}} 
+\index{I\+D List Management@{I\+D List Management}!M\+D\+B\+\_\+\+I\+D2L@{M\+D\+B\+\_\+\+I\+D2L}}
+\index{M\+D\+B\+\_\+\+I\+D2L@{M\+D\+B\+\_\+\+I\+D2L}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+I\+D2L}{MDB\_ID2L}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}}$\ast$ \mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}}}
+
+An I\+D2L is an I\+D2 List, a sorted array of I\+D2s. The first element\textquotesingle{}s {\bfseries mid} member is a count of how many actual elements are in the array. The {\bfseries mptr} member of the first element is unused. The array is sorted in ascending order by {\bfseries mid}. 
+
+Definition at line 160 of file midl.\+h.
+
+\mbox{\Hypertarget{group__idls_ga238cc39c422225e05cb3897e641ca9e5}\label{group__idls_ga238cc39c422225e05cb3897e641ca9e5}} 
+\index{I\+D List Management@{I\+D List Management}!M\+D\+B\+\_\+\+I\+DL@{M\+D\+B\+\_\+\+I\+DL}}
+\index{M\+D\+B\+\_\+\+I\+DL@{M\+D\+B\+\_\+\+I\+DL}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+I\+DL}{MDB\_IDL}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}}$\ast$ \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}}}
+
+An I\+DL is an ID List, a sorted array of I\+Ds. The first element of the array is a counter for how many actual I\+Ds are in the list. In the original back-\/bdb code, I\+D\+Ls are sorted in ascending order. For libmdb I\+D\+Ls are sorted in descending order. 
+
+Definition at line 53 of file midl.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__idls_ga54b5ab87ee3746dc4926d25d3887dfab}\label{group__idls_ga54b5ab87ee3746dc4926d25d3887dfab}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+mid2l\+\_\+append@{mdb\+\_\+mid2l\+\_\+append}}
+\index{mdb\+\_\+mid2l\+\_\+append@{mdb\+\_\+mid2l\+\_\+append}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+mid2l\+\_\+append()}{mdb\_mid2l\_append()}}
+{\footnotesize\ttfamily int mdb\+\_\+mid2l\+\_\+append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}}}]{ids,  }\item[{\mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}} $\ast$}]{id }\end{DoxyParamCaption})}
+
+Append an I\+D2 into a I\+D2L. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ids} & The I\+D2L to append into. \\
+\hline
+\mbox{\tt in}  & {\em id} & The I\+D2 to append. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/2 if the I\+D2L is too big. 
+\end{DoxyReturn}
+
+
+Definition at line 346 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_ga7cf657facd99bec0e29ea05bda96e4a5}\label{group__idls_ga7cf657facd99bec0e29ea05bda96e4a5}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+mid2l\+\_\+insert@{mdb\+\_\+mid2l\+\_\+insert}}
+\index{mdb\+\_\+mid2l\+\_\+insert@{mdb\+\_\+mid2l\+\_\+insert}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+mid2l\+\_\+insert()}{mdb\_mid2l\_insert()}}
+{\footnotesize\ttfamily int mdb\+\_\+mid2l\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}}}]{ids,  }\item[{\mbox{\hyperlink{struct_m_d_b___i_d2}{M\+D\+B\+\_\+\+I\+D2}} $\ast$}]{id }\end{DoxyParamCaption})}
+
+Insert an I\+D2 into a I\+D2L. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ids} & The I\+D2L to insert into. \\
+\hline
+\mbox{\tt in}  & {\em id} & The I\+D2 to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 if the ID was already present in the I\+D2L. 
+\end{DoxyReturn}
+
+
+Definition at line 315 of file midl.\+c.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__idls_ga4fbf5726f08ac891bbea111b712ab424}\label{group__idls_ga4fbf5726f08ac891bbea111b712ab424}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+mid2l\+\_\+search@{mdb\+\_\+mid2l\+\_\+search}}
+\index{mdb\+\_\+mid2l\+\_\+search@{mdb\+\_\+mid2l\+\_\+search}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+mid2l\+\_\+search()}{mdb\_mid2l\_search()}}
+{\footnotesize\ttfamily unsigned mdb\+\_\+mid2l\+\_\+search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}}}]{ids,  }\item[{\mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}}}]{id }\end{DoxyParamCaption})}
+
+Search for an ID in an I\+D2L. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ids} & The I\+D2L to search. \\
+\hline
+\mbox{\tt in}  & {\em id} & The ID to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the first I\+D2 whose {\bfseries mid} member is greater than or equal to {\bfseries id}. 
+\end{DoxyReturn}
+
+
+Definition at line 280 of file midl.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{group__idls_gab239e78f44ae65ce84c1a63c99f14b19}\label{group__idls_gab239e78f44ae65ce84c1a63c99f14b19}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+alloc@{mdb\+\_\+midl\+\_\+alloc}}
+\index{mdb\+\_\+midl\+\_\+alloc@{mdb\+\_\+midl\+\_\+alloc}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+alloc()}{mdb\_midl\_alloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} mdb\+\_\+midl\+\_\+alloc (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+Allocate an I\+DL. Allocates memory for an I\+DL of the given size. \begin{DoxyReturn}{Returns}
+I\+DL on success, N\+U\+LL on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_gaf1dc78a5648a20152672b6236f1879e9}\label{group__idls_gaf1dc78a5648a20152672b6236f1879e9}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+append@{mdb\+\_\+midl\+\_\+append}}
+\index{mdb\+\_\+midl\+\_\+append@{mdb\+\_\+midl\+\_\+append}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+append()}{mdb\_midl\_append()}}
+{\footnotesize\ttfamily int mdb\+\_\+midl\+\_\+append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$}]{idp,  }\item[{\mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}}}]{id }\end{DoxyParamCaption})}
+
+Append an ID onto an I\+DL. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em idp} & Address of the I\+DL to append to. \\
+\hline
+\mbox{\tt in}  & {\em id} & The ID to append. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, E\+N\+O\+M\+EM if the I\+DL is too large. 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_ga21493a9f98c90f59d81c7197866ec076}\label{group__idls_ga21493a9f98c90f59d81c7197866ec076}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+append\+\_\+list@{mdb\+\_\+midl\+\_\+append\+\_\+list}}
+\index{mdb\+\_\+midl\+\_\+append\+\_\+list@{mdb\+\_\+midl\+\_\+append\+\_\+list}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+append\+\_\+list()}{mdb\_midl\_append\_list()}}
+{\footnotesize\ttfamily int mdb\+\_\+midl\+\_\+append\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$}]{idp,  }\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}}}]{app }\end{DoxyParamCaption})}
+
+Append an I\+DL onto an I\+DL. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em idp} & Address of the I\+DL to append to. \\
+\hline
+\mbox{\tt in}  & {\em app} & The I\+DL to append. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, E\+N\+O\+M\+EM if the I\+DL is too large. 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_gaccadab9afb9667e28c4e750a1d0696f8}\label{group__idls_gaccadab9afb9667e28c4e750a1d0696f8}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+append\+\_\+range@{mdb\+\_\+midl\+\_\+append\+\_\+range}}
+\index{mdb\+\_\+midl\+\_\+append\+\_\+range@{mdb\+\_\+midl\+\_\+append\+\_\+range}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+append\+\_\+range()}{mdb\_midl\_append\_range()}}
+{\footnotesize\ttfamily int mdb\+\_\+midl\+\_\+append\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$}]{idp,  }\item[{\mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}}}]{id,  }\item[{unsigned}]{n }\end{DoxyParamCaption})}
+
+Append an ID range onto an I\+DL. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em idp} & Address of the I\+DL to append to. \\
+\hline
+\mbox{\tt in}  & {\em id} & The lowest ID to append. \\
+\hline
+\mbox{\tt in}  & {\em n} & Number of I\+Ds to append. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, E\+N\+O\+M\+EM if the I\+DL is too large. 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_ga16e7b3139783126c1e39b5d7f7fb625d}\label{group__idls_ga16e7b3139783126c1e39b5d7f7fb625d}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+free@{mdb\+\_\+midl\+\_\+free}}
+\index{mdb\+\_\+midl\+\_\+free@{mdb\+\_\+midl\+\_\+free}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+free()}{mdb\_midl\_free()}}
+{\footnotesize\ttfamily void mdb\+\_\+midl\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}}}]{ids }\end{DoxyParamCaption})}
+
+Free an I\+DL. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ids} & The I\+DL to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_ga27374e3827d673a748c843fffce1a48f}\label{group__idls_ga27374e3827d673a748c843fffce1a48f}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+need@{mdb\+\_\+midl\+\_\+need}}
+\index{mdb\+\_\+midl\+\_\+need@{mdb\+\_\+midl\+\_\+need}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+need()}{mdb\_midl\_need()}}
+{\footnotesize\ttfamily int mdb\+\_\+midl\+\_\+need (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$}]{idp,  }\item[{unsigned}]{num }\end{DoxyParamCaption})}
+
+Make room for num additional elements in an I\+DL. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em idp} & Address of the I\+DL. \\
+\hline
+\mbox{\tt in}  & {\em num} & Number of elements to make room for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, E\+N\+O\+M\+EM on failure. 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_ga9133d7b3849e2508c7bc690db039444d}\label{group__idls_ga9133d7b3849e2508c7bc690db039444d}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+search@{mdb\+\_\+midl\+\_\+search}}
+\index{mdb\+\_\+midl\+\_\+search@{mdb\+\_\+midl\+\_\+search}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+search()}{mdb\_midl\_search()}}
+{\footnotesize\ttfamily unsigned mdb\+\_\+midl\+\_\+search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}}}]{ids,  }\item[{\mbox{\hyperlink{group__idls_ga792192229a977c49f083846b5635f92d}{M\+D\+B\+\_\+\+ID}}}]{id }\end{DoxyParamCaption})}
+
+Search for an ID in an I\+DL. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ids} & The I\+DL to search. \\
+\hline
+\mbox{\tt in}  & {\em id} & The ID to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the first ID greater than or equal to {\bfseries id}. 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_ga862ec13c8ff2aa805203a3c8c342153a}\label{group__idls_ga862ec13c8ff2aa805203a3c8c342153a}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+shrink@{mdb\+\_\+midl\+\_\+shrink}}
+\index{mdb\+\_\+midl\+\_\+shrink@{mdb\+\_\+midl\+\_\+shrink}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+shrink()}{mdb\_midl\_shrink()}}
+{\footnotesize\ttfamily void mdb\+\_\+midl\+\_\+shrink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} $\ast$}]{idp }\end{DoxyParamCaption})}
+
+Shrink an I\+DL. Return the I\+DL to the default size if it has grown larger. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em idp} & Address of the I\+DL to shrink. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_gac3fe60f3087a5fdba4908f53a62d16d5}\label{group__idls_gac3fe60f3087a5fdba4908f53a62d16d5}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+sort@{mdb\+\_\+midl\+\_\+sort}}
+\index{mdb\+\_\+midl\+\_\+sort@{mdb\+\_\+midl\+\_\+sort}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+sort()}{mdb\_midl\_sort()}}
+{\footnotesize\ttfamily void mdb\+\_\+midl\+\_\+sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}}}]{ids }\end{DoxyParamCaption})}
+
+Sort an I\+DL. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ids} & The I\+DL to sort. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 220 of file midl.\+c.
+
+\mbox{\Hypertarget{group__idls_ga35e6813874447861b772f4089ce9fa70}\label{group__idls_ga35e6813874447861b772f4089ce9fa70}} 
+\index{I\+D List Management@{I\+D List Management}!mdb\+\_\+midl\+\_\+xmerge@{mdb\+\_\+midl\+\_\+xmerge}}
+\index{mdb\+\_\+midl\+\_\+xmerge@{mdb\+\_\+midl\+\_\+xmerge}!I\+D List Management@{I\+D List Management}}
+\subsubsection{\texorpdfstring{mdb\+\_\+midl\+\_\+xmerge()}{mdb\_midl\_xmerge()}}
+{\footnotesize\ttfamily void mdb\+\_\+midl\+\_\+xmerge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}}}]{idl,  }\item[{\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}}}]{merge }\end{DoxyParamCaption})}
+
+Merge an I\+DL onto an I\+DL. The destination I\+DL must be big enough. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em idl} & The I\+DL to merge into. \\
+\hline
+\mbox{\tt in}  & {\em merge} & The I\+DL to merge. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 200 of file midl.\+c.
+

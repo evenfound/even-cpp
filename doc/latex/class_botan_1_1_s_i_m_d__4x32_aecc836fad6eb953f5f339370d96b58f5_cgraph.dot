@@ -1,0 +1,11 @@
+digraph "Botan::SIMD_4x32::rotr"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node54 [label="Botan::SIMD_4x32::rotr",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node54 -> Node55 [color="midnightblue",fontsize="10",style="solid"];
+  Node55 [label="Botan::SIMD_4x32::rotl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_s_i_m_d__4x32.html#a2915571b60c9ce7250029593df2fcb44"];
+  Node55 -> Node56 [color="midnightblue",fontsize="10",style="solid"];
+  Node56 [label="Botan::SIMD_4x32::SIMD_4x32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_s_i_m_d__4x32.html#a9f098b406c1627b5f7c96c92e694c3bb"];
+}

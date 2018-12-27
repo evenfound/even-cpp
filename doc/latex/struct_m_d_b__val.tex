@@ -1,0 +1,61 @@
+\hypertarget{struct_m_d_b__val}{}\section{M\+D\+B\+\_\+val Struct Reference}
+\label{struct_m_d_b__val}\index{M\+D\+B\+\_\+val@{M\+D\+B\+\_\+val}}
+
+
+Generic structure used for passing keys and data in and out of the database.  
+
+
+
+
+{\ttfamily \#include $<$lmdb.\+h$>$}
+
+
+
+Collaboration diagram for M\+D\+B\+\_\+val\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct_m_d_b__val_a9e788910dc056d0cff8915672084dabe}{mv\+\_\+size}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_m_d_b__val_a98af99191878ec0a2179482f4e831b91}{mv\+\_\+data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic structure used for passing keys and data in and out of the database. 
+
+Values returned from the database are valid only until a subsequent update operation, or the end of the transaction. Do not modify or free them, they commonly point into the database itself.
+
+Key sizes must be between 1 and \mbox{\hyperlink{group__mdb_gaaf0be004f33828bf2fb09d77eb3cef94}{mdb\+\_\+env\+\_\+get\+\_\+maxkeysize()}} inclusive. The same applies to data sizes in databases with the \mbox{\hyperlink{group__mdb__dbi__open_gae0626566c2562e9007f5c8c9535bab1a}{M\+D\+B\+\_\+\+D\+U\+P\+S\+O\+RT}} flag. Other data items can in theory be from 0 to 0xffffffff bytes long. 
+
+Definition at line 285 of file lmdb.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_d_b__val_a98af99191878ec0a2179482f4e831b91}\label{struct_m_d_b__val_a98af99191878ec0a2179482f4e831b91}} 
+\index{M\+D\+B\+\_\+val@{M\+D\+B\+\_\+val}!mv\+\_\+data@{mv\+\_\+data}}
+\index{mv\+\_\+data@{mv\+\_\+data}!M\+D\+B\+\_\+val@{M\+D\+B\+\_\+val}}
+\subsubsection{\texorpdfstring{mv\+\_\+data}{mv\_data}}
+{\footnotesize\ttfamily void$\ast$ M\+D\+B\+\_\+val\+::mv\+\_\+data}
+
+address of the data item 
+
+Definition at line 287 of file lmdb.\+h.
+
+\mbox{\Hypertarget{struct_m_d_b__val_a9e788910dc056d0cff8915672084dabe}\label{struct_m_d_b__val_a9e788910dc056d0cff8915672084dabe}} 
+\index{M\+D\+B\+\_\+val@{M\+D\+B\+\_\+val}!mv\+\_\+size@{mv\+\_\+size}}
+\index{mv\+\_\+size@{mv\+\_\+size}!M\+D\+B\+\_\+val@{M\+D\+B\+\_\+val}}
+\subsubsection{\texorpdfstring{mv\+\_\+size}{mv\_size}}
+{\footnotesize\ttfamily size\+\_\+t M\+D\+B\+\_\+val\+::mv\+\_\+size}
+
+size of the data item 
+
+Definition at line 286 of file lmdb.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{lmdb_8h}{lmdb.\+h}}\end{DoxyCompactItemize}

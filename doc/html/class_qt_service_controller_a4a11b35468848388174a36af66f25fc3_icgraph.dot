@@ -1,0 +1,13 @@
+digraph "QtServiceController::isRunning"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node16 [label="QtServiceController\l::isRunning",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="QtServiceBase::exec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_base.html#afae2e589de71c1ae3ae8db3dc9ab9c64"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$prerequisites_2_qt_web_app_2_demo3_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node16 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="QtServiceController\l::start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a70f274d3f4f5a5fea60b8fd7331b31fb"];
+}

@@ -1,0 +1,916 @@
+\hypertarget{class_q_web_socket}{}\section{Q\+Web\+Socket Class Reference}
+\label{class_q_web_socket}\index{Q\+Web\+Socket@{Q\+Web\+Socket}}
+
+
+Implements a T\+CP socket that talks the Web\+Socket protocol.  
+
+
+
+
+Inheritance diagram for Q\+Web\+Socket\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Web\+Socket\+:
+% FIG 1
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_web_socket_ae1c9af16e7f53666ccd423864b8e2c35}{close}} (\mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}} \mbox{\hyperlink{class_q_web_socket_ac0392e28fa81d5452868813d5e907d71}{close\+Code}}=Q\+Web\+Socket\+Protocol\+::\+Close\+Code\+Normal, const Q\+String \&reason=Q\+String())
+\begin{DoxyCompactList}\small\item\em Gracefully closes the socket with the given {\itshape close\+Code} and {\itshape reason}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_web_socket_ac0351c89316b6914a58bc2f5c8ed9e6b}{open}} (const Q\+Url \&url)
+\begin{DoxyCompactList}\small\item\em Opens a Web\+Socket connection using the given {\itshape url}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_web_socket_a7f321a0eb76101df28f9f3ebefa0ee3d}{open}} (const Q\+Network\+Request \&\mbox{\hyperlink{class_q_web_socket_a17b0d131ad2e4a0140f5faf23d30335c}{request}})
+\begin{DoxyCompactList}\small\item\em Opens a Web\+Socket connection using the given {\itshape request}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_web_socket_add33f933cd9ceffdc03d6b3c6e948d89}{ping}} (const Q\+Byte\+Array \&payload=Q\+Byte\+Array())
+\begin{DoxyCompactList}\small\item\em Pings the server to indicate that the connection is still alive. Additional {\itshape payload} can be sent along the ping message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_web_socket_aed580d710b6613a6218a78f4c07fb856}{ignore\+Ssl\+Errors}} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a74faf7acf77a4b74cf2c5caa74b1d77a}{about\+To\+Close}} ()
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a176c51371ba6d3b13fec0f7f287b6102}{connected}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when a connection is successfully established. A connection is successfully established when the socket is connected and the handshake was successful. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_web_socket_aaba1f43d105bea22b4021a68f924169b}{disconnected}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the socket is disconnected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_web_socket_aba46b4ae0292aee9632297a56122902a}{state\+Changed}} (Q\+Abstract\+Socket\+::\+Socket\+State \mbox{\hyperlink{class_q_web_socket_abf40a05dfbb85a86355c73f7c2f2c492}{state}})
+\item 
+void \mbox{\hyperlink{class_q_web_socket_acd5c2e589b072ef513b67c29fd69976c}{proxy\+Authentication\+Required}} (const Q\+Network\+Proxy \&\mbox{\hyperlink{class_q_web_socket_a6451f984f2eb43cbc5fcd6f0dd4421d9}{proxy}}, Q\+Authenticator $\ast$p\+Authenticator)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a17d4ab6c6fe8017626fb079cee6518a6}{read\+Channel\+Finished}} ()
+\item 
+void \mbox{\hyperlink{class_q_web_socket_af0feabc8f7979f054b15d903a54882a6}{text\+Frame\+Received}} (const Q\+String \&frame, bool is\+Last\+Frame)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a43bf9793d8edec549ea45d503e9be366}{binary\+Frame\+Received}} (const Q\+Byte\+Array \&frame, bool is\+Last\+Frame)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_ad0f93d1bf2b5e973dbc3acc4378505e4}{text\+Message\+Received}} (const Q\+String \&message)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_aaefdf77b949880d571e64a30b01f75e7}{binary\+Message\+Received}} (const Q\+Byte\+Array \&message)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a2c8b42c52eef7982f50dd1131b3133f6}{error}} (Q\+Abstract\+Socket\+::\+Socket\+Error error)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a8de4b00bd909961bfc5179d2859c4d65}{pong}} (quint64 elapsed\+Time, const Q\+Byte\+Array \&payload)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_ad4be1036cba153baa4a7a7c2bfa3fe91}{bytes\+Written}} (qint64 bytes)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors}} (const Q\+List$<$ Q\+Ssl\+Error $>$ \&errors)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_ab12bc04c9c86d4b76238d8f3a25dcfa1}{pre\+Shared\+Key\+Authentication\+Required}} (Q\+Ssl\+Pre\+Shared\+Key\+Authenticator $\ast$authenticator)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_web_socket_a1dd87330154f6f06e63b3904ccb3aabe}{Q\+Web\+Socket}} (const Q\+String \&\mbox{\hyperlink{class_q_web_socket_af03bb3ce5ec1bcab0882e29fd3e62961}{origin}}=Q\+String(), \mbox{\hyperlink{namespace_q_web_socket_protocol_ad53f2684577effe0a517eadb48714df3}{Q\+Web\+Socket\+Protocol\+::\+Version}} \mbox{\hyperlink{class_q_web_socket_a691b38b043dfa8295242b39e04d2c0e7}{version}}=Q\+Web\+Socket\+Protocol\+::\+Version\+Latest, Q\+Object $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR)
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} with the given {\itshape origin}, the {\itshape version} of the protocol to use and {\itshape parent}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_web_socket_a7c8fadd9fbc92bb1a1d8ecac45a3e526}\label{class_q_web_socket_a7c8fadd9fbc92bb1a1d8ecac45a3e526}} 
+virtual \mbox{\hyperlink{class_q_web_socket_a7c8fadd9fbc92bb1a1d8ecac45a3e526}{$\sim$\+Q\+Web\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}}. Closes the socket if it is still open, and releases any used resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_web_socket_a37f91d8d8c8df94bbcdd97c03e28c3f7}\label{class_q_web_socket_a37f91d8d8c8df94bbcdd97c03e28c3f7}} 
+void \mbox{\hyperlink{class_q_web_socket_a37f91d8d8c8df94bbcdd97c03e28c3f7}{abort}} ()
+\begin{DoxyCompactList}\small\item\em Aborts the current socket and resets the socket. Unlike \mbox{\hyperlink{class_q_web_socket_ae1c9af16e7f53666ccd423864b8e2c35}{close()}}, this function immediately closes the socket, discarding any pending data in the write buffer. \end{DoxyCompactList}\item 
+Q\+Abstract\+Socket\+::\+Socket\+Error \mbox{\hyperlink{class_q_web_socket_a98e9ba3091c73531678a55982f954dae}{error}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_web_socket_aed6ec5ee08cb1d5b3ca4d562cf1cb1b8}{error\+String}} () const
+\item 
+bool \mbox{\hyperlink{class_q_web_socket_a3d175f62f7db36e2e4ade46b1523efa1}{flush}} ()
+\item 
+bool \mbox{\hyperlink{class_q_web_socket_ad5d5224aa46a4e4429d17b0c4f6854c2}{is\+Valid}} () const
+\item 
+Q\+Host\+Address \mbox{\hyperlink{class_q_web_socket_aba293f65947a7690afe4e142cc77aa54}{local\+Address}} () const
+\item 
+quint16 \mbox{\hyperlink{class_q_web_socket_af5c606f929fe8860b5f3e2f581fd4e02}{local\+Port}} () const
+\item 
+Q\+Abstract\+Socket\+::\+Pause\+Modes \mbox{\hyperlink{class_q_web_socket_a15778b8a5f6ffb83c61b5e9b1701eb28}{pause\+Mode}} () const
+\item 
+Q\+Host\+Address \mbox{\hyperlink{class_q_web_socket_a7788b65ef72c825dc9ffcb314c20ef4d}{peer\+Address}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_web_socket_a9de6e280d531c748d22898775b7f87f3}{peer\+Name}} () const
+\item 
+quint16 \mbox{\hyperlink{class_q_web_socket_ab8587d64043f65c8da7944541fab584c}{peer\+Port}} () const
+\item 
+Q\+Network\+Proxy \mbox{\hyperlink{class_q_web_socket_a6451f984f2eb43cbc5fcd6f0dd4421d9}{proxy}} () const
+\item 
+void \mbox{\hyperlink{class_q_web_socket_ab567ac6d43bb2f0526a1a5d0e2872034}{set\+Proxy}} (const Q\+Network\+Proxy \&network\+Proxy)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a3f0e24c3101e75a42264aa527936573e}{set\+Mask\+Generator}} (const \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} $\ast$\mbox{\hyperlink{class_q_web_socket_a20ba00f459a7e448bd611a24500d94c6}{mask\+Generator}})
+\item 
+const \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} $\ast$ \mbox{\hyperlink{class_q_web_socket_a20ba00f459a7e448bd611a24500d94c6}{mask\+Generator}} () const
+\item 
+qint64 \mbox{\hyperlink{class_q_web_socket_a3755970eca2be3d792ceb9c8e560ae32}{read\+Buffer\+Size}} () const
+\item 
+void \mbox{\hyperlink{class_q_web_socket_adc6582dd40792bb2c8309a4890236510}{set\+Read\+Buffer\+Size}} (qint64 size)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_af21dbd52b116cc5dae811548000001ee}{resume}} ()
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a7d6650c827cace4ccb27988894872bcc}{set\+Pause\+Mode}} (Q\+Abstract\+Socket\+::\+Pause\+Modes \mbox{\hyperlink{class_q_web_socket_a15778b8a5f6ffb83c61b5e9b1701eb28}{pause\+Mode}})
+\item 
+\mbox{\Hypertarget{class_q_web_socket_abf40a05dfbb85a86355c73f7c2f2c492}\label{class_q_web_socket_abf40a05dfbb85a86355c73f7c2f2c492}} 
+Q\+Abstract\+Socket\+::\+Socket\+State \mbox{\hyperlink{class_q_web_socket_abf40a05dfbb85a86355c73f7c2f2c492}{state}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current state of the socket. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_web_socket_a691b38b043dfa8295242b39e04d2c0e7}\label{class_q_web_socket_a691b38b043dfa8295242b39e04d2c0e7}} 
+\mbox{\hyperlink{namespace_q_web_socket_protocol_ad53f2684577effe0a517eadb48714df3}{Q\+Web\+Socket\+Protocol\+::\+Version}} \mbox{\hyperlink{class_q_web_socket_a691b38b043dfa8295242b39e04d2c0e7}{version}} () const
+\begin{DoxyCompactList}\small\item\em Returns the version the socket is currently using. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_web_socket_a93f3bd6750efba819a8ca6eeca0270a9}\label{class_q_web_socket_a93f3bd6750efba819a8ca6eeca0270a9}} 
+Q\+String \mbox{\hyperlink{class_q_web_socket_a93f3bd6750efba819a8ca6eeca0270a9}{resource\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the resource currently accessed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_web_socket_a7a5aa3a3efad1d7663d81e1979aaa63f}\label{class_q_web_socket_a7a5aa3a3efad1d7663d81e1979aaa63f}} 
+Q\+Url \mbox{\hyperlink{class_q_web_socket_a7a5aa3a3efad1d7663d81e1979aaa63f}{request\+Url}} () const
+\begin{DoxyCompactList}\small\item\em Returns the url the socket is connected to or will connect to. \end{DoxyCompactList}\item 
+Q\+Network\+Request \mbox{\hyperlink{class_q_web_socket_a17b0d131ad2e4a0140f5faf23d30335c}{request}} () const
+\begin{DoxyCompactList}\small\item\em Returns the request that was or will be used to open this socket. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_web_socket_af03bb3ce5ec1bcab0882e29fd3e62961}\label{class_q_web_socket_af03bb3ce5ec1bcab0882e29fd3e62961}} 
+Q\+String \mbox{\hyperlink{class_q_web_socket_af03bb3ce5ec1bcab0882e29fd3e62961}{origin}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current origin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}} \mbox{\hyperlink{class_q_web_socket_ac0392e28fa81d5452868813d5e907d71}{close\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Returns the code indicating why the socket was closed. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_q_web_socket_a64964f85bc0736ee350975ca6e47c3fe}{close\+Reason}} () const
+\begin{DoxyCompactList}\small\item\em Returns the reason why the socket was closed. \end{DoxyCompactList}\item 
+qint64 \mbox{\hyperlink{class_q_web_socket_aa3bdc1e29c50c1e0d88c0977eb298a17}{send\+Text\+Message}} (const Q\+String \&message)
+\begin{DoxyCompactList}\small\item\em Sends the given {\itshape message} over the socket as a text message and returns the number of bytes actually sent. \end{DoxyCompactList}\item 
+qint64 \mbox{\hyperlink{class_q_web_socket_aa56992d89ffba061ec6dc7c3e4a010f6}{send\+Binary\+Message}} (const Q\+Byte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Sends the given {\itshape data} over the socket as a binary message and returns the number of bytes actually sent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_web_socket_ae3c765afbdc0e0afad03b8ad8c958fab}{ignore\+Ssl\+Errors}} (const Q\+List$<$ Q\+Ssl\+Error $>$ \&errors)
+\item 
+void \mbox{\hyperlink{class_q_web_socket_a2b47402d89258caa95e46452b698cc3a}{set\+Ssl\+Configuration}} (const Q\+Ssl\+Configuration \&\mbox{\hyperlink{class_q_web_socket_a002b89e651c50e9b73ec23d07f4f7eba}{ssl\+Configuration}})
+\item 
+Q\+Ssl\+Configuration \mbox{\hyperlink{class_q_web_socket_a002b89e651c50e9b73ec23d07f4f7eba}{ssl\+Configuration}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_web_socket_adb12d7272bd4b12f96de1b85a2c64ee5}\label{class_q_web_socket_adb12d7272bd4b12f96de1b85a2c64ee5}} 
+static \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} $\ast$ {\bfseries upgrade\+From} (Q\+Tcp\+Socket $\ast$tcp\+Socket, const Q\+String \&server\+Name, bool is\+Secure, Q\+Object $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR) Q\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+E\+S\+U\+LT
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a T\+CP socket that talks the Web\+Socket protocol. 
+
+Qt\+Web\+Sockets \begin{DoxySince}{Since}
+5.\+3 Web\+Sockets is a web technology providing full-\/duplex communications channels over a single T\+CP connection. The Web\+Socket protocol was standardized by the I\+E\+TF as  \{R\+FC 6455\} in 2011. \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} can both be used in a client application and server application.
+\end{DoxySince}
+This class was modeled after Q\+Abstract\+Socket.
+
+\mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} currently does not support  \{Web\+Socket Extensions\} and  \{Web\+Socket Subprotocols\}.
+
+\mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} only supports version 13 of the Web\+Socket protocol, as outlined in  \{R\+FC 6455\}.
+
+\begin{DoxyNote}{Note}
+Some proxies do not understand certain H\+T\+TP headers used during a Web\+Socket handshake. In that case, non-\/secure Web\+Socket connections fail. The best way to mitigate against this problem is to use Web\+Socket over a secure connection.
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+To generate masks, this implementation of Web\+Sockets uses the cryptographically insecure qrand() function. For more information about the importance of good masking, see  \{\char`\"{}\+Talking to Yourself for Fun and Profit\char`\"{} by Lin-\/\+Shung Huang et al\}. The best measure against attacks mentioned in the document above, is to use \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} over a secure connection ({\itshape wss\+://}). In general, always be careful to not have 3rd party script access to a \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} in your application.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+Q\+Abstract\+Socket, Q\+Tcp\+Socket
+
+\{\mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} client example\} 
+\end{DoxySeeAlso}
+
+
+Definition at line 64 of file qwebsocket.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_web_socket_a1dd87330154f6f06e63b3904ccb3aabe}\label{class_q_web_socket_a1dd87330154f6f06e63b3904ccb3aabe}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{Q\+Web\+Socket()}{QWebSocket()}}
+{\footnotesize\ttfamily Q\+Web\+Socket\+::\+Q\+Web\+Socket (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{origin = {\ttfamily QString()},  }\item[{\mbox{\hyperlink{namespace_q_web_socket_protocol_ad53f2684577effe0a517eadb48714df3}{Q\+Web\+Socket\+Protocol\+::\+Version}}}]{version = {\ttfamily QWebSocketProtocol\+:\+:VersionLatest},  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates a new \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} with the given {\itshape origin}, the {\itshape version} of the protocol to use and {\itshape parent}. 
+
+The {\itshape origin} of the client is as specified in  \{R\+FC 6454\}. (The {\itshape origin} is not required for non-\/web browser clients (see  \{R\+FC 6455\})). The {\itshape origin} may not contain new line characters, otherwise the connection will be aborted immediately during the handshake phase. \begin{DoxyNote}{Note}
+Currently only V13 ( \{R\+FC 6455\}) is supported 
+\end{DoxyNote}
+
+
+Definition at line 301 of file qwebsocket.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_web_socket_a74faf7acf77a4b74cf2c5caa74b1d77a}\label{class_q_web_socket_a74faf7acf77a4b74cf2c5caa74b1d77a}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!about\+To\+Close@{about\+To\+Close}}
+\index{about\+To\+Close@{about\+To\+Close}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{about\+To\+Close}{aboutToClose}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::about\+To\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted when the socket is about to close. Connect this signal if you have operations that need to be performed before the socket closes (e.\+g., if you have data in a separate buffer that needs to be written to the device).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ae1c9af16e7f53666ccd423864b8e2c35}{close()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 392 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a43bf9793d8edec549ea45d503e9be366}\label{class_q_web_socket_a43bf9793d8edec549ea45d503e9be366}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!binary\+Frame\+Received@{binary\+Frame\+Received}}
+\index{binary\+Frame\+Received@{binary\+Frame\+Received}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{binary\+Frame\+Received}{binaryFrameReceived}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::binary\+Frame\+Received (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{frame,  }\item[{bool}]{is\+Last\+Frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted whenever a binary frame is received. The {\itshape frame} contains the data and {\itshape is\+Last\+Frame} indicates whether this is the last frame of the complete message.
+
+This signal can be used to process large messages frame by frame, instead of waiting for the complete message to arrive.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_af0feabc8f7979f054b15d903a54882a6}{text\+Frame\+Received()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 437 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_aaefdf77b949880d571e64a30b01f75e7}\label{class_q_web_socket_aaefdf77b949880d571e64a30b01f75e7}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!binary\+Message\+Received@{binary\+Message\+Received}}
+\index{binary\+Message\+Received@{binary\+Message\+Received}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{binary\+Message\+Received}{binaryMessageReceived}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::binary\+Message\+Received (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted whenever a binary message is received. The {\itshape message} contains the received bytes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ad0f93d1bf2b5e973dbc3acc4378505e4}{text\+Message\+Received()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 451 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_ad4be1036cba153baa4a7a7c2bfa3fe91}\label{class_q_web_socket_ad4be1036cba153baa4a7a7c2bfa3fe91}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!bytes\+Written@{bytes\+Written}}
+\index{bytes\+Written@{bytes\+Written}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{bytes\+Written}{bytesWritten}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::bytes\+Written (\begin{DoxyParamCaption}\item[{qint64}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted every time a payload of data has been written to the socket. The {\itshape bytes} argument is set to the number of bytes that were written in this payload.
+
+\begin{DoxyNote}{Note}
+This signal has the same meaning both for secure and non-\/secure Web\+Sockets. As opposed to Q\+Ssl\+Socket, \mbox{\hyperlink{class_q_web_socket_ad4be1036cba153baa4a7a7c2bfa3fe91}{bytes\+Written()}} is only emitted when encrypted data is effectively written (see Q\+Ssl\+Socket\+::encrypted\+Bytes\+Written()). 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ae1c9af16e7f53666ccd423864b8e2c35}{close()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 472 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_ae1c9af16e7f53666ccd423864b8e2c35}\label{class_q_web_socket_ae1c9af16e7f53666ccd423864b8e2c35}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!close@{close}}
+\index{close@{close}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{close}{close}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}}}]{close\+Code = {\ttfamily QWebSocketProtocol\+:\+:CloseCodeNormal},  }\item[{const Q\+String \&}]{reason = {\ttfamily QString()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Gracefully closes the socket with the given {\itshape close\+Code} and {\itshape reason}. 
+
+Any data in the write buffer is flushed before the socket is closed. The {\itshape close\+Code} is a \mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}} indicating the reason to close, and {\itshape reason} describes the reason of the closure more in detail 
+
+Definition at line 459 of file qwebsocket.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_q_web_socket_ac0392e28fa81d5452868813d5e907d71}\label{class_q_web_socket_ac0392e28fa81d5452868813d5e907d71}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!close\+Code@{close\+Code}}
+\index{close\+Code@{close\+Code}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{close\+Code()}{closeCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}} Q\+Web\+Socket\+::close\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the code indicating why the socket was closed. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}}, \mbox{\hyperlink{class_q_web_socket_a64964f85bc0736ee350975ca6e47c3fe}{close\+Reason()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 638 of file qwebsocket.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_q_web_socket_a64964f85bc0736ee350975ca6e47c3fe}\label{class_q_web_socket_a64964f85bc0736ee350975ca6e47c3fe}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!close\+Reason@{close\+Reason}}
+\index{close\+Reason@{close\+Reason}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{close\+Reason()}{closeReason()}}
+{\footnotesize\ttfamily Q\+String Q\+Web\+Socket\+::close\+Reason (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the reason why the socket was closed. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ac0392e28fa81d5452868813d5e907d71}{close\+Code()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 648 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a176c51371ba6d3b13fec0f7f287b6102}\label{class_q_web_socket_a176c51371ba6d3b13fec0f7f287b6102}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!connected@{connected}}
+\index{connected@{connected}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when a connection is successfully established. A connection is successfully established when the socket is connected and the handshake was successful. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ac0351c89316b6914a58bc2f5c8ed9e6b}{open()}}, \mbox{\hyperlink{class_q_web_socket_aaba1f43d105bea22b4021a68f924169b}{disconnected()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 398 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_aaba1f43d105bea22b4021a68f924169b}\label{class_q_web_socket_aaba1f43d105bea22b4021a68f924169b}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!disconnected@{disconnected}}
+\index{disconnected@{disconnected}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{disconnected}{disconnected}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::disconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when the socket is disconnected. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ae1c9af16e7f53666ccd423864b8e2c35}{close()}}, \mbox{\hyperlink{class_q_web_socket_a176c51371ba6d3b13fec0f7f287b6102}{connected()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 404 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a98e9ba3091c73531678a55982f954dae}\label{class_q_web_socket_a98e9ba3091c73531678a55982f954dae}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!error@{error}}
+\index{error@{error}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Q\+Abstract\+Socket\+::\+Socket\+Error Q\+Web\+Socket\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the type of error that last occurred \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_aed6ec5ee08cb1d5b3ca4d562cf1cb1b8}{error\+String()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 383 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a2c8b42c52eef7982f50dd1131b3133f6}\label{class_q_web_socket_a2c8b42c52eef7982f50dd1131b3133f6}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!error@{error}}
+\index{error@{error}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{error}{error}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::error (\begin{DoxyParamCaption}\item[{Q\+Abstract\+Socket\+::\+Socket\+Error}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted after an error occurred. The {\itshape error} parameter describes the type of error that occurred.
+
+Q\+Abstract\+Socket\+::\+Socket\+Error is not a registered metatype, so for queued connections, you will have to register it with Q\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+T\+A\+T\+Y\+P\+E() and q\+Register\+Meta\+Type().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a98e9ba3091c73531678a55982f954dae}{error()}}, \mbox{\hyperlink{class_q_web_socket_aed6ec5ee08cb1d5b3ca4d562cf1cb1b8}{error\+String()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 458 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_aed6ec5ee08cb1d5b3ca4d562cf1cb1b8}\label{class_q_web_socket_aed6ec5ee08cb1d5b3ca4d562cf1cb1b8}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!error\+String@{error\+String}}
+\index{error\+String@{error\+String}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{error\+String()}{errorString()}}
+{\footnotesize\ttfamily Q\+String Q\+Web\+Socket\+::error\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a human-\/readable description of the last error that occurred
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a98e9ba3091c73531678a55982f954dae}{error()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 406 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a3d175f62f7db36e2e4ade46b1523efa1}\label{class_q_web_socket_a3d175f62f7db36e2e4ade46b1523efa1}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!flush@{flush}}
+\index{flush@{flush}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily bool Q\+Web\+Socket\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function writes as much as possible from the internal write buffer to the underlying network socket, without blocking. If any data was written, this function returns true; otherwise false is returned. Call this function if you need \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} to start sending buffered data immediately. The number of bytes successfully written depends on the operating system. In most cases, you do not need to call this function, because \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} will start sending data automatically once control goes back to the event loop. 
+
+Definition at line 422 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_ae3c765afbdc0e0afad03b8ad8c958fab}\label{class_q_web_socket_ae3c765afbdc0e0afad03b8ad8c958fab}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!ignore\+Ssl\+Errors@{ignore\+Ssl\+Errors}}
+\index{ignore\+Ssl\+Errors@{ignore\+Ssl\+Errors}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{ignore\+Ssl\+Errors()}{ignoreSslErrors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::ignore\+Ssl\+Errors (\begin{DoxyParamCaption}\item[{const Q\+List$<$ Q\+Ssl\+Error $>$ \&}]{errors }\end{DoxyParamCaption})}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
+
+This method tells \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} to ignore the errors given in {\itshape errors}.
+
+Note that you can set the expected certificate in the S\+SL error\+: If, for instance, you want to connect to a server that uses a self-\/signed certificate, consider the following snippet\+:
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ Multiple calls to this function will replace the list of errors that were passed in previous calls. You can clear the list of errors you want to ignore by calling this function with an empty list.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 552 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_aed580d710b6613a6218a78f4c07fb856}\label{class_q_web_socket_aed580d710b6613a6218a78f4c07fb856}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!ignore\+Ssl\+Errors@{ignore\+Ssl\+Errors}}
+\index{ignore\+Ssl\+Errors@{ignore\+Ssl\+Errors}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{ignore\+Ssl\+Errors}{ignoreSslErrors}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::ignore\+Ssl\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+This slot tells \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} to ignore errors during \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}}\textquotesingle{}s handshake phase and continue connecting. If you want to continue with the connection even if errors occur during the handshake phase, then you must call this slot, either from a slot connected to \mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors()}}, or before the handshake phase. If you don\textquotesingle{}t call this slot, either in response to errors or before the handshake, the connection will be dropped after the \mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors()}} signal has been emitted.
+
+\begin{DoxyWarning}{Warning}
+Be sure to always let the user inspect the errors reported by the \mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors()}} signal, and only call this method upon confirmation from the user that proceeding is ok. If there are unexpected errors, the connection should be aborted. Calling this method without inspecting the actual errors will most likely pose a security risk for your application. Use it with great care!
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors()}}, Q\+Ssl\+Socket\+::ignore\+Ssl\+Errors(), Q\+Network\+Reply\+::ignore\+Ssl\+Errors() 
+\end{DoxySeeAlso}
+
+
+Definition at line 528 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_ad5d5224aa46a4e4429d17b0c4f6854c2}\label{class_q_web_socket_ad5d5224aa46a4e4429d17b0c4f6854c2}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{is\+Valid()}{isValid()}}
+{\footnotesize\ttfamily bool Q\+Web\+Socket\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns {\ttfamily true} if the socket is ready for reading and writing; otherwise returns {\ttfamily false}. 
+
+Definition at line 821 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_aba293f65947a7690afe4e142cc77aa54}\label{class_q_web_socket_aba293f65947a7690afe4e142cc77aa54}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!local\+Address@{local\+Address}}
+\index{local\+Address@{local\+Address}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{local\+Address()}{localAddress()}}
+{\footnotesize\ttfamily Q\+Host\+Address Q\+Web\+Socket\+::local\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the local address 
+
+Definition at line 666 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_af5c606f929fe8860b5f3e2f581fd4e02}\label{class_q_web_socket_af5c606f929fe8860b5f3e2f581fd4e02}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!local\+Port@{local\+Port}}
+\index{local\+Port@{local\+Port}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{local\+Port()}{localPort()}}
+{\footnotesize\ttfamily quint16 Q\+Web\+Socket\+::local\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the local port 
+
+Definition at line 675 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a20ba00f459a7e448bd611a24500d94c6}\label{class_q_web_socket_a20ba00f459a7e448bd611a24500d94c6}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!mask\+Generator@{mask\+Generator}}
+\index{mask\+Generator@{mask\+Generator}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{mask\+Generator()}{maskGenerator()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} $\ast$ Q\+Web\+Socket\+::mask\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the mask generator that is currently used by this \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}}. 
+
+Definition at line 751 of file qwebsocket.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_q_web_socket_ac0351c89316b6914a58bc2f5c8ed9e6b}\label{class_q_web_socket_ac0351c89316b6914a58bc2f5c8ed9e6b}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!open@{open}}
+\index{open@{open}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{open}{open}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::open (\begin{DoxyParamCaption}\item[{const Q\+Url \&}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Opens a Web\+Socket connection using the given {\itshape url}. 
+
+If the url contains newline characters (\textbackslash{}r\textbackslash{}n), then the error signal will be emitted with Q\+Abstract\+Socket\+::\+Connection\+Refused\+Error as error type. 
+
+Definition at line 471 of file qwebsocket.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_q_web_socket_a7f321a0eb76101df28f9f3ebefa0ee3d}\label{class_q_web_socket_a7f321a0eb76101df28f9f3ebefa0ee3d}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!open@{open}}
+\index{open@{open}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{open}{open}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::open (\begin{DoxyParamCaption}\item[{const Q\+Network\+Request \&}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Opens a Web\+Socket connection using the given {\itshape request}. 
+
+\begin{DoxySince}{Since}
+5.\+6
+\end{DoxySince}
+The {\itshape request} url will be used to open the Web\+Socket connection. Headers present in the request will be sent to the server in the upgrade request, together with the ones needed for the websocket handshake. 
+
+Definition at line 486 of file qwebsocket.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_q_web_socket_a15778b8a5f6ffb83c61b5e9b1701eb28}\label{class_q_web_socket_a15778b8a5f6ffb83c61b5e9b1701eb28}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!pause\+Mode@{pause\+Mode}}
+\index{pause\+Mode@{pause\+Mode}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{pause\+Mode()}{pauseMode()}}
+{\footnotesize\ttfamily Q\+Abstract\+Socket\+::\+Pause\+Modes Q\+Web\+Socket\+::pause\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the pause mode of this socket 
+
+Definition at line 684 of file qwebsocket.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_q_web_socket_a7788b65ef72c825dc9ffcb314c20ef4d}\label{class_q_web_socket_a7788b65ef72c825dc9ffcb314c20ef4d}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!peer\+Address@{peer\+Address}}
+\index{peer\+Address@{peer\+Address}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{peer\+Address()}{peerAddress()}}
+{\footnotesize\ttfamily Q\+Host\+Address Q\+Web\+Socket\+::peer\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the peer address 
+
+Definition at line 693 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a9de6e280d531c748d22898775b7f87f3}\label{class_q_web_socket_a9de6e280d531c748d22898775b7f87f3}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!peer\+Name@{peer\+Name}}
+\index{peer\+Name@{peer\+Name}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{peer\+Name()}{peerName()}}
+{\footnotesize\ttfamily Q\+String Q\+Web\+Socket\+::peer\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the peer\+Name 
+
+Definition at line 702 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_ab8587d64043f65c8da7944541fab584c}\label{class_q_web_socket_ab8587d64043f65c8da7944541fab584c}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!peer\+Port@{peer\+Port}}
+\index{peer\+Port@{peer\+Port}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{peer\+Port()}{peerPort()}}
+{\footnotesize\ttfamily quint16 Q\+Web\+Socket\+::peer\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the peerport 
+
+Definition at line 711 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_add33f933cd9ceffdc03d6b3c6e948d89}\label{class_q_web_socket_add33f933cd9ceffdc03d6b3c6e948d89}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!ping@{ping}}
+\index{ping@{ping}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{ping}{ping}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::ping (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{payload = {\ttfamily QByteArray()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Pings the server to indicate that the connection is still alive. Additional {\itshape payload} can be sent along the ping message. 
+
+The size of the {\itshape payload} cannot be bigger than 125. If it is larger, the {\itshape payload} is clipped to 125 bytes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a8de4b00bd909961bfc5179d2859c4d65}{pong()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 501 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a8de4b00bd909961bfc5179d2859c4d65}\label{class_q_web_socket_a8de4b00bd909961bfc5179d2859c4d65}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!pong@{pong}}
+\index{pong@{pong}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{pong}{pong}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::pong (\begin{DoxyParamCaption}\item[{quint64}]{elapsed\+Time,  }\item[{const Q\+Byte\+Array \&}]{payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Emitted when a pong message is received in reply to a previous ping. {\itshape elapsed\+Time} contains the roundtrip time in milliseconds and {\itshape payload} contains an optional payload that was sent with the ping.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_add33f933cd9ceffdc03d6b3c6e948d89}{ping()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 465 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_ab12bc04c9c86d4b76238d8f3a25dcfa1}\label{class_q_web_socket_ab12bc04c9c86d4b76238d8f3a25dcfa1}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!pre\+Shared\+Key\+Authentication\+Required@{pre\+Shared\+Key\+Authentication\+Required}}
+\index{pre\+Shared\+Key\+Authentication\+Required@{pre\+Shared\+Key\+Authentication\+Required}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{pre\+Shared\+Key\+Authentication\+Required}{preSharedKeyAuthenticationRequired}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::pre\+Shared\+Key\+Authentication\+Required (\begin{DoxyParamCaption}\item[{Q\+Ssl\+Pre\+Shared\+Key\+Authenticator $\ast$}]{authenticator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\begin{DoxySince}{Since}
+5.\+8
+\end{DoxySince}
+This signal is emitted if the S\+S\+L/\+T\+LS handshake negotiates a P\+SK ciphersuite, and therefore a P\+SK authentication is then required.
+
+When using P\+SK, the client must send to the server a valid identity and a valid pre shared key, in order for the S\+SL handshake to continue. Applications can provide this information in a slot connected to this signal, by filling in the passed {\itshape authenticator} object according to their needs.
+
+\begin{DoxyNote}{Note}
+Ignoring this signal, or failing to provide the required credentials, will cause the handshake to fail, and therefore the connection to be aborted.
+
+The {\itshape authenticator} object is owned by the websocket and must not be deleted by the application.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+Q\+Ssl\+Pre\+Shared\+Key\+Authenticator 
+
+Q\+Ssl\+Socket\+::pre\+Shared\+Key\+Authentication\+Required() 
+\end{DoxySeeAlso}
+
+
+Definition at line 486 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a6451f984f2eb43cbc5fcd6f0dd4421d9}\label{class_q_web_socket_a6451f984f2eb43cbc5fcd6f0dd4421d9}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!proxy@{proxy}}
+\index{proxy@{proxy}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{proxy()}{proxy()}}
+{\footnotesize\ttfamily Q\+Network\+Proxy Q\+Web\+Socket\+::proxy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the currently configured proxy 
+
+Definition at line 721 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_acd5c2e589b072ef513b67c29fd69976c}\label{class_q_web_socket_acd5c2e589b072ef513b67c29fd69976c}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!proxy\+Authentication\+Required@{proxy\+Authentication\+Required}}
+\index{proxy\+Authentication\+Required@{proxy\+Authentication\+Required}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{proxy\+Authentication\+Required}{proxyAuthenticationRequired}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::proxy\+Authentication\+Required (\begin{DoxyParamCaption}\item[{const Q\+Network\+Proxy \&}]{proxy,  }\item[{Q\+Authenticator $\ast$}]{authenticator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal can be emitted when a {\itshape proxy} that requires authentication is used. The {\itshape authenticator} object can then be filled in with the required details to allow authentication and continue the connection.
+
+\begin{DoxyNote}{Note}
+It is not possible to use a Queued\+Connection to connect to this signal, as the connection will fail if the authenticator has not been filled in with new information when the signal returns.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+Q\+Authenticator, Q\+Network\+Proxy 
+\end{DoxySeeAlso}
+
+
+Definition at line 417 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a3755970eca2be3d792ceb9c8e560ae32}\label{class_q_web_socket_a3755970eca2be3d792ceb9c8e560ae32}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!read\+Buffer\+Size@{read\+Buffer\+Size}}
+\index{read\+Buffer\+Size@{read\+Buffer\+Size}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{read\+Buffer\+Size()}{readBufferSize()}}
+{\footnotesize\ttfamily qint64 Q\+Web\+Socket\+::read\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the size in bytes of the readbuffer that is used by the socket. 
+
+Definition at line 760 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a17d4ab6c6fe8017626fb079cee6518a6}\label{class_q_web_socket_a17d4ab6c6fe8017626fb079cee6518a6}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!read\+Channel\+Finished@{read\+Channel\+Finished}}
+\index{read\+Channel\+Finished@{read\+Channel\+Finished}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{read\+Channel\+Finished}{readChannelFinished}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::read\+Channel\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted when the input (reading) stream is closed in this device. It is emitted as soon as the closing is detected.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_ae1c9af16e7f53666ccd423864b8e2c35}{close()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 424 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a17b0d131ad2e4a0140f5faf23d30335c}\label{class_q_web_socket_a17b0d131ad2e4a0140f5faf23d30335c}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!request@{request}}
+\index{request@{request}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily Q\+Network\+Request Q\+Web\+Socket\+::request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the request that was or will be used to open this socket. 
+
+\begin{DoxySince}{Since}
+5.\+6 
+\end{DoxySince}
+
+
+Definition at line 619 of file qwebsocket.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_q_web_socket_af21dbd52b116cc5dae811548000001ee}\label{class_q_web_socket_af21dbd52b116cc5dae811548000001ee}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!resume@{resume}}
+\index{resume@{resume}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Continues data transfer on the socket. This method should only be used after the socket has been set to pause upon notifications and a notification has been received. The only notification currently supported is \mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors()}}. Calling this method if the socket is not paused results in undefined behavior.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a15778b8a5f6ffb83c61b5e9b1701eb28}{pause\+Mode()}}, \mbox{\hyperlink{class_q_web_socket_a7d6650c827cace4ccb27988894872bcc}{set\+Pause\+Mode()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 774 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_aa56992d89ffba061ec6dc7c3e4a010f6}\label{class_q_web_socket_aa56992d89ffba061ec6dc7c3e4a010f6}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!send\+Binary\+Message@{send\+Binary\+Message}}
+\index{send\+Binary\+Message@{send\+Binary\+Message}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{send\+Binary\+Message()}{sendBinaryMessage()}}
+{\footnotesize\ttfamily qint64 Q\+Web\+Socket\+::send\+Binary\+Message (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Sends the given {\itshape data} over the socket as a binary message and returns the number of bytes actually sent. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_aa3bdc1e29c50c1e0d88c0977eb298a17}{send\+Text\+Message()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 446 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_aa3bdc1e29c50c1e0d88c0977eb298a17}\label{class_q_web_socket_aa3bdc1e29c50c1e0d88c0977eb298a17}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!send\+Text\+Message@{send\+Text\+Message}}
+\index{send\+Text\+Message@{send\+Text\+Message}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{send\+Text\+Message()}{sendTextMessage()}}
+{\footnotesize\ttfamily qint64 Q\+Web\+Socket\+::send\+Text\+Message (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Sends the given {\itshape message} over the socket as a text message and returns the number of bytes actually sent. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_aa56992d89ffba061ec6dc7c3e4a010f6}{send\+Binary\+Message()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 434 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a3f0e24c3101e75a42264aa527936573e}\label{class_q_web_socket_a3f0e24c3101e75a42264aa527936573e}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!set\+Mask\+Generator@{set\+Mask\+Generator}}
+\index{set\+Mask\+Generator@{set\+Mask\+Generator}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{set\+Mask\+Generator()}{setMaskGenerator()}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::set\+Mask\+Generator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} $\ast$}]{mask\+Generator }\end{DoxyParamCaption})}
+
+Sets the generator to use for creating masks to {\itshape mask\+Generator}. The default \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} generator can be reset by supplying a {\itshape Q\+\_\+\+N\+U\+L\+L\+P\+TR}. The mask generator can be changed at any time, even while the connection is open. 
+
+Definition at line 742 of file qwebsocket.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{class_q_web_socket_a7d6650c827cace4ccb27988894872bcc}\label{class_q_web_socket_a7d6650c827cace4ccb27988894872bcc}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!set\+Pause\+Mode@{set\+Pause\+Mode}}
+\index{set\+Pause\+Mode@{set\+Pause\+Mode}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{set\+Pause\+Mode()}{setPauseMode()}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::set\+Pause\+Mode (\begin{DoxyParamCaption}\item[{Q\+Abstract\+Socket\+::\+Pause\+Modes}]{pause\+Mode }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_controls}{Controls}} whether to pause upon receiving a notification. The {\itshape pause\+Mode} parameter specifies the conditions in which the socket should be paused.
+
+The only notification currently supported is \mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors()}}. If set to Pause\+On\+Ssl\+Errors, data transfer on the socket will be paused and needs to be enabled explicitly again by calling \mbox{\hyperlink{class_q_web_socket_af21dbd52b116cc5dae811548000001ee}{resume()}}. By default, this option is set to Pause\+Never. This option must be called before connecting to the server, otherwise it will result in undefined behavior.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a15778b8a5f6ffb83c61b5e9b1701eb28}{pause\+Mode()}}, \mbox{\hyperlink{class_q_web_socket_af21dbd52b116cc5dae811548000001ee}{resume()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 792 of file qwebsocket.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{class_q_web_socket_ab567ac6d43bb2f0526a1a5d0e2872034}\label{class_q_web_socket_ab567ac6d43bb2f0526a1a5d0e2872034}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!set\+Proxy@{set\+Proxy}}
+\index{set\+Proxy@{set\+Proxy}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{set\+Proxy()}{setProxy()}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::set\+Proxy (\begin{DoxyParamCaption}\item[{const Q\+Network\+Proxy \&}]{network\+Proxy }\end{DoxyParamCaption})}
+
+Sets the proxy to {\itshape network\+Proxy} 
+
+Definition at line 730 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_adc6582dd40792bb2c8309a4890236510}\label{class_q_web_socket_adc6582dd40792bb2c8309a4890236510}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!set\+Read\+Buffer\+Size@{set\+Read\+Buffer\+Size}}
+\index{set\+Read\+Buffer\+Size@{set\+Read\+Buffer\+Size}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{set\+Read\+Buffer\+Size()}{setReadBufferSize()}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::set\+Read\+Buffer\+Size (\begin{DoxyParamCaption}\item[{qint64}]{size }\end{DoxyParamCaption})}
+
+Sets the size of \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}}\textquotesingle{}s internal read buffer to be {\itshape size} bytes.
+
+If the buffer size is limited to a certain size, \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} won\textquotesingle{}t buffer more than this size of data. Exceptionally, a buffer size of 0 means that the read buffer is unlimited and all incoming data is buffered. This is the default. This option is useful if you only read the data at certain points in time (for example, in a real-\/time streaming application) or if you want to protect your socket against receiving too much data, which may eventually cause your application to run out of memory.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a3755970eca2be3d792ceb9c8e560ae32}{read\+Buffer\+Size()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 811 of file qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_a2b47402d89258caa95e46452b698cc3a}\label{class_q_web_socket_a2b47402d89258caa95e46452b698cc3a}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!set\+Ssl\+Configuration@{set\+Ssl\+Configuration}}
+\index{set\+Ssl\+Configuration@{set\+Ssl\+Configuration}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{set\+Ssl\+Configuration()}{setSslConfiguration()}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::set\+Ssl\+Configuration (\begin{DoxyParamCaption}\item[{const Q\+Ssl\+Configuration \&}]{ssl\+Configuration }\end{DoxyParamCaption})}
+
+Sets the socket\textquotesingle{}s S\+SL configuration to be the contents of {\itshape ssl\+Configuration}.
+
+This function sets the local certificate, the ciphers, the private key and the CA certificates to those stored in {\itshape ssl\+Configuration}. It is not possible to set the S\+S\+L-\/state related fields. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a002b89e651c50e9b73ec23d07f4f7eba}{ssl\+Configuration()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 566 of file qwebsocket.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{class_q_web_socket_a002b89e651c50e9b73ec23d07f4f7eba}\label{class_q_web_socket_a002b89e651c50e9b73ec23d07f4f7eba}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!ssl\+Configuration@{ssl\+Configuration}}
+\index{ssl\+Configuration@{ssl\+Configuration}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{ssl\+Configuration()}{sslConfiguration()}}
+{\footnotesize\ttfamily Q\+Ssl\+Configuration Q\+Web\+Socket\+::ssl\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the socket\textquotesingle{}s S\+SL configuration state. The default S\+SL configuration of a socket is to use the default ciphers, default CA certificates, no local private key or certificate. The S\+SL configuration also contains fields that can change with time without notice.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a2b47402d89258caa95e46452b698cc3a}{set\+Ssl\+Configuration()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 580 of file qwebsocket.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}\label{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!ssl\+Errors@{ssl\+Errors}}
+\index{ssl\+Errors@{ssl\+Errors}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{ssl\+Errors}{sslErrors}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::ssl\+Errors (\begin{DoxyParamCaption}\item[{const Q\+List$<$ Q\+Ssl\+Error $>$ \&}]{errors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} emits this signal after the S\+SL handshake to indicate that one or more errors have occurred while establishing the identity of the peer. The errors are usually an indication that \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} is unable to securely identify the peer. Unless any action is taken, the connection will be dropped after this signal has been emitted. If you want to continue connecting despite the errors that have occurred, you must call \mbox{\hyperlink{class_q_web_socket_aed580d710b6613a6218a78f4c07fb856}{Q\+Web\+Socket\+::ignore\+Ssl\+Errors()}} from inside a slot connected to this signal. If you need to access the error list at a later point, you can call \mbox{\hyperlink{class_q_web_socket_ae0d3eebd5b595e4e869d2ad6cef45ed7}{ssl\+Errors()}} (without arguments).
+
+{\itshape errors} contains one or more errors that prevent \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} from verifying the identity of the peer.
+
+\begin{DoxyNote}{Note}
+You cannot use Qt\+::\+Queued\+Connection when connecting to this signal, or calling \mbox{\hyperlink{class_q_web_socket_aed580d710b6613a6218a78f4c07fb856}{Q\+Web\+Socket\+::ignore\+Ssl\+Errors()}} will have no effect. 
+\end{DoxyNote}
+
+
+Definition at line 479 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_aba46b4ae0292aee9632297a56122902a}\label{class_q_web_socket_aba46b4ae0292aee9632297a56122902a}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!state\+Changed@{state\+Changed}}
+\index{state\+Changed@{state\+Changed}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{state\+Changed}{stateChanged}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::state\+Changed (\begin{DoxyParamCaption}\item[{Q\+Abstract\+Socket\+::\+Socket\+State}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted whenever \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}}\textquotesingle{}s state changes. The {\itshape state} parameter is the new state.
+
+\begin{DoxyNote}{Note}
+Q\+Abstract\+Socket\+::\+Connected\+State is emitted after the handshake with the server has succeeded.
+\end{DoxyNote}
+Q\+Abstract\+Socket\+::\+Socket\+State is not a registered metatype, so for queued connections, you will have to register it with Q\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+M\+E\+T\+A\+T\+Y\+P\+E() and q\+Register\+Meta\+Type().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_abf40a05dfbb85a86355c73f7c2f2c492}{state()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 410 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_af0feabc8f7979f054b15d903a54882a6}\label{class_q_web_socket_af0feabc8f7979f054b15d903a54882a6}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!text\+Frame\+Received@{text\+Frame\+Received}}
+\index{text\+Frame\+Received@{text\+Frame\+Received}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{text\+Frame\+Received}{textFrameReceived}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::text\+Frame\+Received (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{frame,  }\item[{bool}]{is\+Last\+Frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted whenever a text frame is received. The {\itshape frame} contains the data and {\itshape is\+Last\+Frame} indicates whether this is the last frame of the complete message.
+
+This signal can be used to process large messages frame by frame, instead of waiting for the complete message to arrive.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_a43bf9793d8edec549ea45d503e9be366}{binary\+Frame\+Received()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 430 of file moc\+\_\+qwebsocket.\+cpp.
+
+\mbox{\Hypertarget{class_q_web_socket_ad0f93d1bf2b5e973dbc3acc4378505e4}\label{class_q_web_socket_ad0f93d1bf2b5e973dbc3acc4378505e4}} 
+\index{Q\+Web\+Socket@{Q\+Web\+Socket}!text\+Message\+Received@{text\+Message\+Received}}
+\index{text\+Message\+Received@{text\+Message\+Received}!Q\+Web\+Socket@{Q\+Web\+Socket}}
+\subsubsection{\texorpdfstring{text\+Message\+Received}{textMessageReceived}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+::text\+Message\+Received (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted whenever a text message is received. The {\itshape message} contains the received text.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_aaefdf77b949880d571e64a30b01f75e7}{binary\+Message\+Received()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 444 of file moc\+\_\+qwebsocket.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qwebsocket.\+h\item 
+prerequisites/build/debug/moc\+\_\+qwebsocket.\+cpp\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qwebsocket.\+cpp\end{DoxyCompactItemize}

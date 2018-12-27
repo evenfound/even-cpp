@@ -1,0 +1,15 @@
+digraph "Botan::xor_buf"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node377 [label="Botan::xor_buf",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node377 -> Node378 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node378 [label="Botan::XMSS_WOTS_PublicKey\l::chain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___public_key.html#ac94af1061b3136b52bacfc200710b809"];
+  Node378 -> Node379 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node379 [label="Botan::XMSS_WOTS_Private\lKey::generate_public_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___private_key.html#a0d0695d108fd991536679070d88e4ea1"];
+  Node378 -> Node380 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node380 [label="Botan::XMSS_WOTS_Private\lKey::sign",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___private_key.html#a035d5d63b7042ebf1709e9c898956e96"];
+  Node378 -> Node381 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node381 [label="Botan::XMSS_WOTS_PublicKey\l::chain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___public_key.html#a769ef5fc521f106287e49c67797d3fc1"];
+}

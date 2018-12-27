@@ -1,0 +1,180 @@
+\hypertarget{platform_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/platform.h File Reference}
+\label{platform_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/platform.\+h@{prerequisites/c-\/libp2p/include/mbedtls/platform.\+h}}
+
+
+mbed T\+LS Platform abstraction layer  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mbedtls/platform\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for platform.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{platform_8h_a4f80030b2d10f956f8ac00b57eebfbe8}\label{platform_8h_a4f80030b2d10f956f8ac00b57eebfbe8}} 
+\#define {\bfseries mbedtls\+\_\+free}~free
+\item 
+\mbox{\Hypertarget{platform_8h_aa7fa389b6ec8a6c33f594f8c3f5c76ef}\label{platform_8h_aa7fa389b6ec8a6c33f594f8c3f5c76ef}} 
+\#define {\bfseries mbedtls\+\_\+calloc}~calloc
+\item 
+\mbox{\Hypertarget{platform_8h_a6d045f0c3699e1eac7f723054dc8b3e4}\label{platform_8h_a6d045f0c3699e1eac7f723054dc8b3e4}} 
+\#define {\bfseries mbedtls\+\_\+fprintf}~fprintf
+\item 
+\mbox{\Hypertarget{platform_8h_af846397815d6b78aadc6ce9bb6bc9238}\label{platform_8h_af846397815d6b78aadc6ce9bb6bc9238}} 
+\#define {\bfseries mbedtls\+\_\+printf}~printf
+\item 
+\mbox{\Hypertarget{platform_8h_a57d4faa7aee8300f544af63b9f6eed63}\label{platform_8h_a57d4faa7aee8300f544af63b9f6eed63}} 
+\#define {\bfseries mbedtls\+\_\+snprintf}~snprintf
+\item 
+\mbox{\Hypertarget{platform_8h_ac30e03304a664d7b69a23fb0ac79a426}\label{platform_8h_ac30e03304a664d7b69a23fb0ac79a426}} 
+\#define {\bfseries mbedtls\+\_\+exit}~exit
+\item 
+\mbox{\Hypertarget{platform_8h_ae0beaef88e29bfd432cb2543ac79f109}\label{platform_8h_ae0beaef88e29bfd432cb2543ac79f109}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS}~\mbox{\hyperlink{platform_8h_ad9a994f168868af54652a992937df5d0}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS}}
+\item 
+\mbox{\Hypertarget{platform_8h_a416732ec24ebb55fb12969e849ba27c0}\label{platform_8h_a416732ec24ebb55fb12969e849ba27c0}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}~\mbox{\hyperlink{platform_8h_a04892f78f480255957e858fd6f82053a}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}}
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ S\+E\+C\+T\+I\+ON\+: Module settings}\par
+{\em The configuration options you can set for this module are in this section. Either change them in config.\+h or define them on the compiler command line. }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{platform_8h_ac128e71af8e5de1edc7a6d43f4633de9}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF}}~snprintf
+\item 
+\#define \mbox{\hyperlink{platform_8h_a7f558b4383b398ef4c9901fe8952c603}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+P\+R\+I\+N\+TF}}~printf
+\item 
+\#define \mbox{\hyperlink{platform_8h_acfb169577d838484539f5b17be8ab034}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+P\+R\+I\+N\+TF}}~fprintf
+\item 
+\#define \mbox{\hyperlink{platform_8h_a9e7b93e4a92624d51bc7cbdc04723a05}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+C\+A\+L\+L\+OC}}~calloc
+\item 
+\#define \mbox{\hyperlink{platform_8h_a2abc88498566e351dc97660f5aecf46c}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+R\+EE}}~free
+\item 
+\#define \mbox{\hyperlink{platform_8h_a38913959323b25e00cdaf606647ef398}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+IT}}~exit
+\item 
+\#define \mbox{\hyperlink{platform_8h_a617cd0d84bb5dd4d1fc44d4975873b6c}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+T\+I\+ME}}~time
+\item 
+\#define \mbox{\hyperlink{platform_8h_ad9a994f168868af54652a992937df5d0}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS}}~E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS
+\item 
+\#define \mbox{\hyperlink{platform_8h_a04892f78f480255957e858fd6f82053a}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}}~E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE
+\item 
+\mbox{\Hypertarget{platform_8h_aa48a4c49a3bf3d0d41b7142270d752d4}\label{platform_8h_aa48a4c49a3bf3d0d41b7142270d752d4}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+N\+V\+\_\+\+S\+E\+E\+D\+\_\+\+R\+E\+AD}~mbedtls\+\_\+platform\+\_\+std\+\_\+nv\+\_\+seed\+\_\+read
+\item 
+\mbox{\Hypertarget{platform_8h_a53ddd1e4f60566c81a83d45026a643c8}\label{platform_8h_a53ddd1e4f60566c81a83d45026a643c8}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+N\+V\+\_\+\+S\+E\+E\+D\+\_\+\+W\+R\+I\+TE}~mbedtls\+\_\+platform\+\_\+std\+\_\+nv\+\_\+seed\+\_\+write
+\item 
+\mbox{\Hypertarget{platform_8h_a0edd4a9b0e9ba51ea85c74780101b7cd}\label{platform_8h_a0edd4a9b0e9ba51ea85c74780101b7cd}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+N\+V\+\_\+\+S\+E\+E\+D\+\_\+\+F\+I\+LE}~\char`\"{}seedfile\char`\"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+mbed T\+LS Platform abstraction layer 
+
+Copyright (C) 2006-\/2016, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{platform_8h_a9e7b93e4a92624d51bc7cbdc04723a05}\label{platform_8h_a9e7b93e4a92624d51bc7cbdc04723a05}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+C\+A\+L\+L\+OC@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+C\+A\+L\+L\+OC}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+C\+A\+L\+L\+OC@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+C\+A\+L\+L\+OC}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+C\+A\+L\+L\+OC}{MBEDTLS\_PLATFORM\_STD\_CALLOC}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+C\+A\+L\+L\+OC~calloc}
+
+Default allocator to use 
+
+Definition at line 66 of file platform.\+h.
+
+\mbox{\Hypertarget{platform_8h_a38913959323b25e00cdaf606647ef398}\label{platform_8h_a38913959323b25e00cdaf606647ef398}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+IT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+IT}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+IT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+IT}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+IT}{MBEDTLS\_PLATFORM\_STD\_EXIT}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+IT~exit}
+
+Default exit to use 
+
+Definition at line 72 of file platform.\+h.
+
+\mbox{\Hypertarget{platform_8h_a04892f78f480255957e858fd6f82053a}\label{platform_8h_a04892f78f480255957e858fd6f82053a}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}{MBEDTLS\_PLATFORM\_STD\_EXIT\_FAILURE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE~E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}
+
+Default exit value to use 
+
+Definition at line 81 of file platform.\+h.
+
+\mbox{\Hypertarget{platform_8h_ad9a994f168868af54652a992937df5d0}\label{platform_8h_ad9a994f168868af54652a992937df5d0}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS}{MBEDTLS\_PLATFORM\_STD\_EXIT\_SUCCESS}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS~E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS}
+
+Default exit value to use 
+
+Definition at line 78 of file platform.\+h.
+
+\mbox{\Hypertarget{platform_8h_acfb169577d838484539f5b17be8ab034}\label{platform_8h_acfb169577d838484539f5b17be8ab034}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+P\+R\+I\+N\+TF@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+P\+R\+I\+N\+TF}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+P\+R\+I\+N\+TF@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+P\+R\+I\+N\+TF}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+P\+R\+I\+N\+TF}{MBEDTLS\_PLATFORM\_STD\_FPRINTF}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+P\+R\+I\+N\+TF~fprintf}
+
+Default fprintf to use 
+
+Definition at line 63 of file platform.\+h.
+
+\mbox{\Hypertarget{platform_8h_a2abc88498566e351dc97660f5aecf46c}\label{platform_8h_a2abc88498566e351dc97660f5aecf46c}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+R\+EE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+R\+EE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+R\+EE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+R\+EE}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+R\+EE}{MBEDTLS\_PLATFORM\_STD\_FREE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+F\+R\+EE~free}
+
+Default free to use 
+
+Definition at line 69 of file platform.\+h.
+
+\mbox{\Hypertarget{platform_8h_a7f558b4383b398ef4c9901fe8952c603}\label{platform_8h_a7f558b4383b398ef4c9901fe8952c603}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+P\+R\+I\+N\+TF@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+P\+R\+I\+N\+TF}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+P\+R\+I\+N\+TF@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+P\+R\+I\+N\+TF}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+P\+R\+I\+N\+TF}{MBEDTLS\_PLATFORM\_STD\_PRINTF}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+P\+R\+I\+N\+TF~printf}
+
+Default printf to use 
+
+Definition at line 60 of file platform.\+h.
+
+\mbox{\Hypertarget{platform_8h_ac128e71af8e5de1edc7a6d43f4633de9}\label{platform_8h_ac128e71af8e5de1edc7a6d43f4633de9}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF}{MBEDTLS\_PLATFORM\_STD\_SNPRINTF}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF~snprintf}
+
+Default snprintf to use 
+
+Definition at line 56 of file platform.\+h.
+
+\mbox{\Hypertarget{platform_8h_a617cd0d84bb5dd4d1fc44d4975873b6c}\label{platform_8h_a617cd0d84bb5dd4d1fc44d4975873b6c}} 
+\index{platform.\+h@{platform.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+T\+I\+ME@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+T\+I\+ME}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+T\+I\+ME@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+T\+I\+ME}!platform.\+h@{platform.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+T\+I\+ME}{MBEDTLS\_PLATFORM\_STD\_TIME}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+S\+T\+D\+\_\+\+T\+I\+ME~time}
+
+Default time to use 
+
+Definition at line 75 of file platform.\+h.
+

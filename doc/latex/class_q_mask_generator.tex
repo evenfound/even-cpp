@@ -1,0 +1,90 @@
+\hypertarget{class_q_mask_generator}{}\section{Q\+Mask\+Generator Class Reference}
+\label{class_q_mask_generator}\index{Q\+Mask\+Generator@{Q\+Mask\+Generator}}
+
+
+The \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} class provides an abstract base for custom 32-\/bit mask generators.  
+
+
+
+
+Inheritance diagram for Q\+Mask\+Generator\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Mask\+Generator\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_mask_generator_a80242dc4dc33b2b74613dd621c9d6cc3}{Q\+Mask\+Generator}} (Q\+Object $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR)
+\item 
+virtual \mbox{\hyperlink{class_q_mask_generator_a18c15adfaebe0673c1a78f0259035b35}{$\sim$\+Q\+Mask\+Generator}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_q_mask_generator_a4e311595fc7cd457bd5c50293cdb7916}{seed}} ()=0
+\item 
+virtual quint32 \mbox{\hyperlink{class_q_mask_generator_aff3309c2b67cfd4ae6e0cba615e9d4dd}{next\+Mask}} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} class provides an abstract base for custom 32-\/bit mask generators. 
+
+Qt\+Web\+Sockets \begin{DoxySince}{Since}
+5.\+3
+\end{DoxySince}
+The Web\+Sockets specification as outlined in  \{R\+FC 6455\} requires that all communication from client to server be masked. This is to prevent malicious scripts from attacking badly behaving proxies. For more information about the importance of good masking, see  \{\char`\"{}\+Talking to Yourself for Fun and Profit\char`\"{} by Lin-\/\+Shung Huang et al\}. By default \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} uses the cryptographically insecure qrand() function. The best measure against attacks mentioned in the document above, is to use \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} over a secure connection ({\itshape wss\+://}). In general, always be careful to not have 3rd party script access to a \mbox{\hyperlink{class_q_web_socket}{Q\+Web\+Socket}} in your application. 
+
+Definition at line 48 of file qmaskgenerator.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_mask_generator_a80242dc4dc33b2b74613dd621c9d6cc3}\label{class_q_mask_generator_a80242dc4dc33b2b74613dd621c9d6cc3}} 
+\index{Q\+Mask\+Generator@{Q\+Mask\+Generator}!Q\+Mask\+Generator@{Q\+Mask\+Generator}}
+\index{Q\+Mask\+Generator@{Q\+Mask\+Generator}!Q\+Mask\+Generator@{Q\+Mask\+Generator}}
+\subsubsection{\texorpdfstring{Q\+Mask\+Generator()}{QMaskGenerator()}}
+{\footnotesize\ttfamily Q\+T\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE Q\+Mask\+Generator\+::\+Q\+Mask\+Generator (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a new \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} object with the given optional Q\+Object {\itshape parent}. 
+
+Definition at line 83 of file qmaskgenerator.\+cpp.
+
+\mbox{\Hypertarget{class_q_mask_generator_a18c15adfaebe0673c1a78f0259035b35}\label{class_q_mask_generator_a18c15adfaebe0673c1a78f0259035b35}} 
+\index{Q\+Mask\+Generator@{Q\+Mask\+Generator}!````~Q\+Mask\+Generator@{$\sim$\+Q\+Mask\+Generator}}
+\index{````~Q\+Mask\+Generator@{$\sim$\+Q\+Mask\+Generator}!Q\+Mask\+Generator@{Q\+Mask\+Generator}}
+\subsubsection{\texorpdfstring{$\sim$\+Q\+Mask\+Generator()}{~QMaskGenerator()}}
+{\footnotesize\ttfamily Q\+Mask\+Generator\+::$\sim$\+Q\+Mask\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destroys the \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} object. 
+
+Definition at line 91 of file qmaskgenerator.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_mask_generator_aff3309c2b67cfd4ae6e0cba615e9d4dd}\label{class_q_mask_generator_aff3309c2b67cfd4ae6e0cba615e9d4dd}} 
+\index{Q\+Mask\+Generator@{Q\+Mask\+Generator}!next\+Mask@{next\+Mask}}
+\index{next\+Mask@{next\+Mask}!Q\+Mask\+Generator@{Q\+Mask\+Generator}}
+\subsubsection{\texorpdfstring{next\+Mask()}{nextMask()}}
+{\footnotesize\ttfamily quint32 Q\+Mask\+Generator\+::next\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns a new random 32-\/bit mask. The randomness depends on the R\+NG used to created the mask. 
+
+Implemented in \mbox{\hyperlink{class_q_default_mask_generator_a1dde10b93e9e5c484cf15cfced080226}{Q\+Default\+Mask\+Generator}}.
+
+\mbox{\Hypertarget{class_q_mask_generator_a4e311595fc7cd457bd5c50293cdb7916}\label{class_q_mask_generator_a4e311595fc7cd457bd5c50293cdb7916}} 
+\index{Q\+Mask\+Generator@{Q\+Mask\+Generator}!seed@{seed}}
+\index{seed@{seed}!Q\+Mask\+Generator@{Q\+Mask\+Generator}}
+\subsubsection{\texorpdfstring{seed()}{seed()}}
+{\footnotesize\ttfamily bool Q\+Mask\+Generator\+::seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Initializes the \mbox{\hyperlink{class_q_mask_generator}{Q\+Mask\+Generator}} by seeding the randomizer. When \mbox{\hyperlink{class_q_mask_generator_a4e311595fc7cd457bd5c50293cdb7916}{seed()}} is not called, it depends on the specific implementation of a subclass if a default seed is used or no seed is used at all. Returns {\itshape true} if seeding succeeds, otherwise false. 
+
+Implemented in \mbox{\hyperlink{class_q_default_mask_generator_a0ee0187ffa93deb9e30d96f4c560a48d}{Q\+Default\+Mask\+Generator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qmaskgenerator.\+h\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qmaskgenerator.\+cpp\end{DoxyCompactItemize}

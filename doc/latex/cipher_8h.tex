@@ -1,0 +1,847 @@
+\hypertarget{cipher_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/cipher.h File Reference}
+\label{cipher_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/cipher.\+h@{prerequisites/c-\/libp2p/include/mbedtls/cipher.\+h}}
+
+
+Generic cipher wrapper.  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for cipher.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cipher_8h_aedd176bb71b4e03034f0d629a1c8be40}\label{cipher_8h_aedd176bb71b4e03034f0d629a1c8be40}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+E\+AD}
+\item 
+\mbox{\Hypertarget{cipher_8h_a8858b88a22fbd142804f2ab411f8c24c}\label{cipher_8h_a8858b88a22fbd142804f2ab411f8c24c}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+D\+D\+I\+NG}
+\item 
+\mbox{\Hypertarget{cipher_8h_adcd10ede34f16d1c597dd76ef6abf9de}\label{cipher_8h_adcd10ede34f16d1c597dd76ef6abf9de}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+R\+E\+AM}
+\item 
+\#define \mbox{\hyperlink{cipher_8h_a5093ef5a2ca66691e189c4224098355e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}}~-\/0x6080
+\item 
+\#define \mbox{\hyperlink{cipher_8h_a6ce4034c4ecd0cd1592232ed8a93d648}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}~-\/0x6100
+\item 
+\#define \mbox{\hyperlink{cipher_8h_abd30fe33f8b6cf8106e7ea29d3f795cd}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x6180
+\item 
+\#define \mbox{\hyperlink{cipher_8h_a06295349279dcbda6b1317924d5bb810}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG}}~-\/0x6200
+\item 
+\#define \mbox{\hyperlink{cipher_8h_ac7da041aba839f2ba606eb30f7547b8b}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED}}~-\/0x6280
+\item 
+\#define \mbox{\hyperlink{cipher_8h_a67ec20c7b124cb258978a41d5c363def}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+U\+T\+H\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x6300
+\item 
+\#define \mbox{\hyperlink{cipher_8h_aee9e36063fbb6890aeb9918db7fa020e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+N\+T\+E\+XT}}~-\/0x6380
+\item 
+\#define \mbox{\hyperlink{cipher_8h_a2a6dc5188d4a1e9bc43d9ea7c8505c6c}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+I\+V\+\_\+\+L\+EN}}~0x01
+\item 
+\#define \mbox{\hyperlink{cipher_8h_a882893bcfc917982037621f6e97968a6}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+L\+EN}}~0x02
+\item 
+\#define \mbox{\hyperlink{cipher_8h_aec294721b811aa0f7dcc940029fd8aab}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH}}~16
+\item 
+\#define \mbox{\hyperlink{cipher_8h_ab8f30dc90403204515f868c3b6196ffd}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH}}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__cipher__base__t}{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}} \mbox{\hyperlink{cipher_8h_aa8cada37dceeb13446c7c31459b31a07}{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__cmac__context__t}{mbedtls\+\_\+cmac\+\_\+context\+\_\+t}} \mbox{\hyperlink{cipher_8h_aadfdebf0a70882e059172aa1c7235c45}{mbedtls\+\_\+cmac\+\_\+context\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cipher_8h_af5b069ffd0b2ad31225e42ee4ee29b1b}\label{cipher_8h_af5b069ffd0b2ad31225e42ee4ee29b1b}} 
+enum {\bfseries mbedtls\+\_\+cipher\+\_\+id\+\_\+t} \{ \newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+\+N\+U\+LL}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+\+A\+ES}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+\+D\+ES}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+3\+D\+ES}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+\+C\+A\+M\+E\+L\+L\+IA}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+\+B\+L\+O\+W\+F\+I\+SH}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+\+A\+R\+C4}
+ \}
+\item 
+\mbox{\Hypertarget{cipher_8h_a00c5885f1ea7279c5a7d8e12e596569d}\label{cipher_8h_a00c5885f1ea7279c5a7d8e12e596569d}} 
+enum {\bfseries mbedtls\+\_\+cipher\+\_\+type\+\_\+t} \{ \newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+N\+U\+LL}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+128\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+192\+\_\+\+E\+CB}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+256\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+128\+\_\+\+C\+BC}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+192\+\_\+\+C\+BC}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+256\+\_\+\+C\+BC}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+128\+\_\+\+C\+F\+B128}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+192\+\_\+\+C\+F\+B128}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+256\+\_\+\+C\+F\+B128}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+128\+\_\+\+C\+TR}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+192\+\_\+\+C\+TR}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+256\+\_\+\+C\+TR}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+128\+\_\+\+G\+CM}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+192\+\_\+\+G\+CM}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+256\+\_\+\+G\+CM}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+128\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+192\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+256\+\_\+\+E\+CB}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+128\+\_\+\+C\+BC}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+192\+\_\+\+C\+BC}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+256\+\_\+\+C\+BC}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+128\+\_\+\+C\+F\+B128}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+192\+\_\+\+C\+F\+B128}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+256\+\_\+\+C\+F\+B128}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+128\+\_\+\+C\+TR}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+192\+\_\+\+C\+TR}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+256\+\_\+\+C\+TR}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+128\+\_\+\+G\+CM}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+192\+\_\+\+G\+CM}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+256\+\_\+\+G\+CM}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+D\+E\+S\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+D\+E\+S\+\_\+\+C\+BC}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E\+\_\+\+C\+BC}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E3\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E3\+\_\+\+C\+BC}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+L\+O\+W\+F\+I\+S\+H\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+L\+O\+W\+F\+I\+S\+H\+\_\+\+C\+BC}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+L\+O\+W\+F\+I\+S\+H\+\_\+\+C\+F\+B64}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+L\+O\+W\+F\+I\+S\+H\+\_\+\+C\+TR}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+R\+C4\+\_\+128}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+128\+\_\+\+C\+CM}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+192\+\_\+\+C\+CM}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+256\+\_\+\+C\+CM}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+128\+\_\+\+C\+CM}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+192\+\_\+\+C\+CM}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+C\+A\+M\+E\+L\+L\+I\+A\+\_\+256\+\_\+\+C\+CM}
+ \}
+\item 
+\mbox{\Hypertarget{cipher_8h_adf5f7524a682fa63093dd0fa608fb2f8}\label{cipher_8h_adf5f7524a682fa63093dd0fa608fb2f8}} 
+enum {\bfseries mbedtls\+\_\+cipher\+\_\+mode\+\_\+t} \{ \newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+E\+CB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+C\+BC}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+C\+FB}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+O\+FB}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+C\+TR}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+G\+CM}, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+R\+E\+AM}, 
+\newline
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+C\+CM}
+ \}
+\item 
+enum \mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837}{mbedtls\+\_\+cipher\+\_\+padding\+\_\+t}} \{ \newline
+\mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a787071478fb192f36d4a085e010b28f9}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+P\+K\+C\+S7}} = 0, 
+\mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a502732ab53a21eb0bf84e5a8e93609a7}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+O\+N\+E\+\_\+\+A\+N\+D\+\_\+\+Z\+E\+R\+OS}}, 
+\mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a93944bd7edfd0c6b6f362eb6eef1b4fc}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+O\+S\+\_\+\+A\+N\+D\+\_\+\+L\+EN}}, 
+\mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a339efb60a69e4b033a106c61cd8691e4}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+OS}}, 
+\newline
+\mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837aace08abe82f9f79e57387133ceb07394}{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+N\+O\+NE}}
+ \}
+\item 
+\mbox{\Hypertarget{cipher_8h_aaa5f820a58011f938ba3389555ba5b3f}\label{cipher_8h_aaa5f820a58011f938ba3389555ba5b3f}} 
+enum {\bfseries mbedtls\+\_\+operation\+\_\+t} \{ {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+N\+O\+NE} = -\/1, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+E\+C\+R\+Y\+PT} = 0, 
+{\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+C\+R\+Y\+PT}
+ \}
+\item 
+enum \{ \mbox{\hyperlink{cipher_8h_a61dadd085c1777f559549e05962b2c9ea27a227b285707a038e87cee36a8d1a65}{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{cipher_8h_a61dadd085c1777f559549e05962b2c9ea0786b4375829efe98db9d73c5b12eda1}{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+ES}} = 64, 
+\mbox{\hyperlink{cipher_8h_a61dadd085c1777f559549e05962b2c9eade90f9d4c430f18b705faac59b2ed0b9}{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+DE}} = 128, 
+\mbox{\hyperlink{cipher_8h_a61dadd085c1777f559549e05962b2c9eae5eb36c0a8ae45bec5b0070292be6c17}{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E3}} = 192
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const int $\ast$ \mbox{\hyperlink{cipher_8h_a763ea39a9ccfc20f914fd3391d12a7fc}{mbedtls\+\_\+cipher\+\_\+list}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the list of ciphers supported by the generic cipher module. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}} $\ast$ \mbox{\hyperlink{cipher_8h_a9b2e7d49ca82abe8c96b65645364e24b}{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+string}} (const char $\ast$cipher\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Returns the cipher information structure associated with the given cipher name. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}} $\ast$ \mbox{\hyperlink{cipher_8h_a8bc2809cbd7c2357f41be8cf76eeed92}{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+type}} (const mbedtls\+\_\+cipher\+\_\+type\+\_\+t cipher\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Returns the cipher information structure associated with the given cipher type. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}} $\ast$ \mbox{\hyperlink{cipher_8h_a9752d8056c43948c08d2e1f2009a53aa}{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+values}} (const mbedtls\+\_\+cipher\+\_\+id\+\_\+t cipher\+\_\+id, int key\+\_\+bitlen, const mbedtls\+\_\+cipher\+\_\+mode\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Returns the cipher information structure associated with the given cipher id, key size and mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cipher_8h_a80354364e91cdb4d4e6ab7ecec65fe07}\label{cipher_8h_a80354364e91cdb4d4e6ab7ecec65fe07}} 
+void \mbox{\hyperlink{cipher_8h_a80354364e91cdb4d4e6ab7ecec65fe07}{mbedtls\+\_\+cipher\+\_\+init}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Initialize a cipher\+\_\+context (as N\+O\+NE) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cipher_8h_a903c4146b471207690988584b83854a9}\label{cipher_8h_a903c4146b471207690988584b83854a9}} 
+void \mbox{\hyperlink{cipher_8h_a903c4146b471207690988584b83854a9}{mbedtls\+\_\+cipher\+\_\+free}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Free and clear the cipher-\/specific context of ctx. Freeing ctx itself remains the responsibility of the caller. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a009056b59d69abba5843ce78cd9aae1c}{mbedtls\+\_\+cipher\+\_\+setup}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}} $\ast$cipher\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Initialises and fills the cipher context structure with the appropriate values. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a027be8bf469069be17d82c4899b3df5f}{mbedtls\+\_\+cipher\+\_\+setkey}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const unsigned char $\ast$key, int key\+\_\+bitlen, const mbedtls\+\_\+operation\+\_\+t operation)
+\begin{DoxyCompactList}\small\item\em Set the key to use with the given context. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_afad97d1964a7a98d82488fecd052130f}{mbedtls\+\_\+cipher\+\_\+set\+\_\+padding\+\_\+mode}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, \mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837}{mbedtls\+\_\+cipher\+\_\+padding\+\_\+t}} mode)
+\begin{DoxyCompactList}\small\item\em Set padding mode, for cipher modes that use padding. (Default\+: P\+K\+C\+S7 padding.) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a570ef5913117fbb2592f75d0d834b51c}{mbedtls\+\_\+cipher\+\_\+set\+\_\+iv}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const unsigned char $\ast$iv, size\+\_\+t iv\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Set the initialization vector (IV) or nonce. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a22b60318022c1947d9893721bc911335}{mbedtls\+\_\+cipher\+\_\+reset}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Finish preparation of the given context. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a86bc4ed42ff087c33bb00fe31b049ae7}{mbedtls\+\_\+cipher\+\_\+update\+\_\+ad}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const unsigned char $\ast$ad, size\+\_\+t ad\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Add additional data (for A\+E\+AD ciphers). Currently only supported with G\+CM. Must be called exactly once, after \mbox{\hyperlink{cipher_8h_a22b60318022c1947d9893721bc911335}{mbedtls\+\_\+cipher\+\_\+reset()}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a959598dfef9d7f2add8861e0c518f303}{mbedtls\+\_\+cipher\+\_\+update}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const unsigned char $\ast$input, size\+\_\+t ilen, unsigned char $\ast$output, size\+\_\+t $\ast$olen)
+\begin{DoxyCompactList}\small\item\em Generic cipher update function. Encrypts/decrypts using the given cipher context. Writes as many block size\textquotesingle{}d blocks of data as possible to output. Any data that cannot be written immediately will either be added to the next block, or flushed when cipher\+\_\+final is called. Exception\+: for M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+E\+CB, expects single block in size (e.\+g. 16 bytes for A\+ES) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a6678691c02cb3f1322b2179987bfffb2}{mbedtls\+\_\+cipher\+\_\+finish}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, unsigned char $\ast$output, size\+\_\+t $\ast$olen)
+\begin{DoxyCompactList}\small\item\em Generic cipher finalisation function. If data still needs to be flushed from an incomplete block, data contained within it will be padded with the size of the last block, and written to the output buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a8916ddd18e94002913b80a6b04b83693}{mbedtls\+\_\+cipher\+\_\+write\+\_\+tag}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, unsigned char $\ast$tag, size\+\_\+t tag\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Write tag for A\+E\+AD ciphers. Currently only supported with G\+CM. Must be called after \mbox{\hyperlink{cipher_8h_a6678691c02cb3f1322b2179987bfffb2}{mbedtls\+\_\+cipher\+\_\+finish()}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_ad3388eaa42a44db6a0b0339dd49f15ba}{mbedtls\+\_\+cipher\+\_\+check\+\_\+tag}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const unsigned char $\ast$tag, size\+\_\+t tag\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Check tag for A\+E\+AD ciphers. Currently only supported with G\+CM. Must be called after \mbox{\hyperlink{cipher_8h_a6678691c02cb3f1322b2179987bfffb2}{mbedtls\+\_\+cipher\+\_\+finish()}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a1c249f6ee1a0d2c906927c7790c41dc5}{mbedtls\+\_\+cipher\+\_\+crypt}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const unsigned char $\ast$iv, size\+\_\+t iv\+\_\+len, const unsigned char $\ast$input, size\+\_\+t ilen, unsigned char $\ast$output, size\+\_\+t $\ast$olen)
+\begin{DoxyCompactList}\small\item\em Generic all-\/in-\/one encryption/decryption (for all ciphers except A\+E\+AD constructs). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a65b2df023770ee3123a3f2cdb10497a0}{mbedtls\+\_\+cipher\+\_\+auth\+\_\+encrypt}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const unsigned char $\ast$iv, size\+\_\+t iv\+\_\+len, const unsigned char $\ast$ad, size\+\_\+t ad\+\_\+len, const unsigned char $\ast$input, size\+\_\+t ilen, unsigned char $\ast$output, size\+\_\+t $\ast$olen, unsigned char $\ast$tag, size\+\_\+t tag\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Generic autenticated encryption (A\+E\+AD ciphers). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cipher_8h_a715666cc823dc180277890b00f8a7f5e}{mbedtls\+\_\+cipher\+\_\+auth\+\_\+decrypt}} (\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$ctx, const unsigned char $\ast$iv, size\+\_\+t iv\+\_\+len, const unsigned char $\ast$ad, size\+\_\+t ad\+\_\+len, const unsigned char $\ast$input, size\+\_\+t ilen, unsigned char $\ast$output, size\+\_\+t $\ast$olen, const unsigned char $\ast$tag, size\+\_\+t tag\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Generic autenticated decryption (A\+E\+AD ciphers). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic cipher wrapper. 
+
+\begin{DoxyAuthor}{Author}
+Adriaan de Jong \href{mailto:dejong@fox-it.com}{\tt dejong@fox-\/it.\+com}
+\end{DoxyAuthor}
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cipher_8h_a2a6dc5188d4a1e9bc43d9ea7c8505c6c}\label{cipher_8h_a2a6dc5188d4a1e9bc43d9ea7c8505c6c}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+I\+V\+\_\+\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+I\+V\+\_\+\+L\+EN}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+I\+V\+\_\+\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+I\+V\+\_\+\+L\+EN}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+I\+V\+\_\+\+L\+EN}{MBEDTLS\_CIPHER\_VARIABLE\_IV\_LEN}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+I\+V\+\_\+\+L\+EN~0x01}
+
+Cipher accepts I\+Vs of variable length 
+
+Definition at line 62 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_a882893bcfc917982037621f6e97968a6}\label{cipher_8h_a882893bcfc917982037621f6e97968a6}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+L\+EN}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+L\+EN}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+L\+EN}{MBEDTLS\_CIPHER\_VARIABLE\_KEY\_LEN}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+V\+A\+R\+I\+A\+B\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+L\+EN~0x02}
+
+Cipher accepts keys of variable length 
+
+Definition at line 63 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_abd30fe33f8b6cf8106e7ea29d3f795cd}\label{cipher_8h_abd30fe33f8b6cf8106e7ea29d3f795cd}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_CIPHER\_ALLOC\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED~-\/0x6180}
+
+Failed to allocate memory. 
+
+Definition at line 56 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_a67ec20c7b124cb258978a41d5c363def}\label{cipher_8h_a67ec20c7b124cb258978a41d5c363def}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+U\+T\+H\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+U\+T\+H\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+U\+T\+H\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+U\+T\+H\+\_\+\+F\+A\+I\+L\+ED}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+U\+T\+H\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_CIPHER\_AUTH\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+U\+T\+H\+\_\+\+F\+A\+I\+L\+ED~-\/0x6300}
+
+Authentication failed (for A\+E\+AD modes). 
+
+Definition at line 59 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_a6ce4034c4ecd0cd1592232ed8a93d648}\label{cipher_8h_a6ce4034c4ecd0cd1592232ed8a93d648}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}{MBEDTLS\_ERR\_CIPHER\_BAD\_INPUT\_DATA}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA~-\/0x6100}
+
+Bad input parameters to function. 
+
+Definition at line 55 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_a5093ef5a2ca66691e189c4224098355e}\label{cipher_8h_a5093ef5a2ca66691e189c4224098355e}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}{MBEDTLS\_ERR\_CIPHER\_FEATURE\_UNAVAILABLE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE~-\/0x6080}
+
+The selected feature is not available. 
+
+Definition at line 54 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_ac7da041aba839f2ba606eb30f7547b8b}\label{cipher_8h_ac7da041aba839f2ba606eb30f7547b8b}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED}{MBEDTLS\_ERR\_CIPHER\_FULL\_BLOCK\_EXPECTED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED~-\/0x6280}
+
+Decryption of block requires a full block. 
+
+Definition at line 58 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_aee9e36063fbb6890aeb9918db7fa020e}\label{cipher_8h_aee9e36063fbb6890aeb9918db7fa020e}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+N\+T\+E\+XT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+N\+T\+E\+XT}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+N\+T\+E\+XT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+N\+T\+E\+XT}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+N\+T\+E\+XT}{MBEDTLS\_ERR\_CIPHER\_INVALID\_CONTEXT}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+N\+T\+E\+XT~-\/0x6380}
+
+The context is invalid, eg because it was free()ed. 
+
+Definition at line 60 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_a06295349279dcbda6b1317924d5bb810}\label{cipher_8h_a06295349279dcbda6b1317924d5bb810}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG}{MBEDTLS\_ERR\_CIPHER\_INVALID\_PADDING}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG~-\/0x6200}
+
+Input data contains invalid padding and is rejected. 
+
+Definition at line 57 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_ab8f30dc90403204515f868c3b6196ffd}\label{cipher_8h_ab8f30dc90403204515f868c3b6196ffd}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH}{MBEDTLS\_MAX\_BLOCK\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH~16}
+
+Maximum block size of any cipher, in bytes 
+
+Definition at line 172 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_aec294721b811aa0f7dcc940029fd8aab}\label{cipher_8h_aec294721b811aa0f7dcc940029fd8aab}} 
+\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH}{MBEDTLS\_MAX\_IV\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+A\+X\+\_\+\+I\+V\+\_\+\+L\+E\+N\+G\+TH~16}
+
+Maximum length of any IV, in bytes 
+
+Definition at line 170 of file cipher.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{cipher_8h_aa8cada37dceeb13446c7c31459b31a07}\label{cipher_8h_aa8cada37dceeb13446c7c31459b31a07}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+base\+\_\+t@{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}}
+\index{mbedtls\+\_\+cipher\+\_\+base\+\_\+t@{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}{mbedtls\_cipher\_base\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__cipher__base__t}{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}} \mbox{\hyperlink{structmbedtls__cipher__base__t}{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}}}
+
+Base cipher information (opaque struct). 
+
+Definition at line 177 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_aadfdebf0a70882e059172aa1c7235c45}\label{cipher_8h_aadfdebf0a70882e059172aa1c7235c45}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cmac\+\_\+context\+\_\+t@{mbedtls\+\_\+cmac\+\_\+context\+\_\+t}}
+\index{mbedtls\+\_\+cmac\+\_\+context\+\_\+t@{mbedtls\+\_\+cmac\+\_\+context\+\_\+t}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cmac\+\_\+context\+\_\+t}{mbedtls\_cmac\_context\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__cmac__context__t}{mbedtls\+\_\+cmac\+\_\+context\+\_\+t}} \mbox{\hyperlink{structmbedtls__cmac__context__t}{mbedtls\+\_\+cmac\+\_\+context\+\_\+t}}}
+
+C\+M\+AC context (opaque struct). 
+
+Definition at line 182 of file cipher.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{cipher_8h_a61dadd085c1777f559549e05962b2c9e}\label{cipher_8h_a61dadd085c1777f559549e05962b2c9e}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+N\+O\+NE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+N\+O\+NE}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+N\+O\+NE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{cipher_8h_a61dadd085c1777f559549e05962b2c9ea27a227b285707a038e87cee36a8d1a65}\label{cipher_8h_a61dadd085c1777f559549e05962b2c9ea27a227b285707a038e87cee36a8d1a65}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+N\+O\+NE&Undefined key length \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+ES@{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+ES}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+ES@{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+ES}}}\mbox{\Hypertarget{cipher_8h_a61dadd085c1777f559549e05962b2c9ea0786b4375829efe98db9d73c5b12eda1}\label{cipher_8h_a61dadd085c1777f559549e05962b2c9ea0786b4375829efe98db9d73c5b12eda1}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+ES&Key length, in bits (including parity), for D\+ES keys \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+DE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+DE}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+DE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+DE}}}\mbox{\Hypertarget{cipher_8h_a61dadd085c1777f559549e05962b2c9eade90f9d4c430f18b705faac59b2ed0b9}\label{cipher_8h_a61dadd085c1777f559549e05962b2c9eade90f9d4c430f18b705faac59b2ed0b9}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+DE&Key length, in bits (including parity), for D\+ES in two key E\+DE \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E3@{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E3}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E3@{M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E3}}}\mbox{\Hypertarget{cipher_8h_a61dadd085c1777f559549e05962b2c9eae5eb36c0a8ae45bec5b0070292be6c17}\label{cipher_8h_a61dadd085c1777f559549e05962b2c9eae5eb36c0a8ae45bec5b0070292be6c17}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+S\+\_\+\+E\+D\+E3&Key length, in bits (including parity), for D\+ES in three-\/key E\+DE \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 158 of file cipher.\+h.
+
+\mbox{\Hypertarget{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837}\label{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+padding\+\_\+t@{mbedtls\+\_\+cipher\+\_\+padding\+\_\+t}}
+\index{mbedtls\+\_\+cipher\+\_\+padding\+\_\+t@{mbedtls\+\_\+cipher\+\_\+padding\+\_\+t}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+padding\+\_\+t}{mbedtls\_cipher\_padding\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837}{mbedtls\+\_\+cipher\+\_\+padding\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+P\+K\+C\+S7@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+P\+K\+C\+S7}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+P\+K\+C\+S7@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+P\+K\+C\+S7}}}\mbox{\Hypertarget{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a787071478fb192f36d4a085e010b28f9}\label{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a787071478fb192f36d4a085e010b28f9}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+P\+K\+C\+S7&P\+K\+C\+S7 padding (default) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+O\+N\+E\+\_\+\+A\+N\+D\+\_\+\+Z\+E\+R\+OS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+O\+N\+E\+\_\+\+A\+N\+D\+\_\+\+Z\+E\+R\+OS}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+O\+N\+E\+\_\+\+A\+N\+D\+\_\+\+Z\+E\+R\+OS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+O\+N\+E\+\_\+\+A\+N\+D\+\_\+\+Z\+E\+R\+OS}}}\mbox{\Hypertarget{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a502732ab53a21eb0bf84e5a8e93609a7}\label{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a502732ab53a21eb0bf84e5a8e93609a7}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+O\+N\+E\+\_\+\+A\+N\+D\+\_\+\+Z\+E\+R\+OS&I\+S\+O/\+I\+EC 7816-\/4 padding \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+O\+S\+\_\+\+A\+N\+D\+\_\+\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+O\+S\+\_\+\+A\+N\+D\+\_\+\+L\+EN}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+O\+S\+\_\+\+A\+N\+D\+\_\+\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+O\+S\+\_\+\+A\+N\+D\+\_\+\+L\+EN}}}\mbox{\Hypertarget{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a93944bd7edfd0c6b6f362eb6eef1b4fc}\label{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a93944bd7edfd0c6b6f362eb6eef1b4fc}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+O\+S\+\_\+\+A\+N\+D\+\_\+\+L\+EN&A\+N\+SI X.\+923 padding \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+OS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+OS}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+OS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+OS}}}\mbox{\Hypertarget{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a339efb60a69e4b033a106c61cd8691e4}\label{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837a339efb60a69e4b033a106c61cd8691e4}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+Z\+E\+R\+OS&zero padding (not reversible!) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+N\+O\+NE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+N\+O\+NE}!cipher.\+h@{cipher.\+h}}\index{cipher.\+h@{cipher.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+N\+O\+NE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837aace08abe82f9f79e57387133ceb07394}\label{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837aace08abe82f9f79e57387133ceb07394}} 
+M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+A\+D\+D\+I\+N\+G\+\_\+\+N\+O\+NE&never pad (full blocks only) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 144 of file cipher.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cipher_8h_a715666cc823dc180277890b00f8a7f5e}\label{cipher_8h_a715666cc823dc180277890b00f8a7f5e}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+auth\+\_\+decrypt@{mbedtls\+\_\+cipher\+\_\+auth\+\_\+decrypt}}
+\index{mbedtls\+\_\+cipher\+\_\+auth\+\_\+decrypt@{mbedtls\+\_\+cipher\+\_\+auth\+\_\+decrypt}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+auth\+\_\+decrypt()}{mbedtls\_cipher\_auth\_decrypt()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+auth\+\_\+decrypt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{iv,  }\item[{size\+\_\+t}]{iv\+\_\+len,  }\item[{const unsigned char $\ast$}]{ad,  }\item[{size\+\_\+t}]{ad\+\_\+len,  }\item[{const unsigned char $\ast$}]{input,  }\item[{size\+\_\+t}]{ilen,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t $\ast$}]{olen,  }\item[{const unsigned char $\ast$}]{tag,  }\item[{size\+\_\+t}]{tag\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Generic autenticated decryption (A\+E\+AD ciphers). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context \\
+\hline
+{\em iv} & IV to use (or N\+O\+N\+C\+E\+\_\+\+C\+O\+U\+N\+T\+ER for C\+T\+R-\/mode ciphers) \\
+\hline
+{\em iv\+\_\+len} & IV length for ciphers with variable-\/size IV; discarded by ciphers with fixed-\/size IV. \\
+\hline
+{\em ad} & Additional data to be authenticated. \\
+\hline
+{\em ad\+\_\+len} & Length of ad. \\
+\hline
+{\em input} & buffer holding the input data \\
+\hline
+{\em ilen} & length of the input data \\
+\hline
+{\em output} & buffer for the output data. Should be able to hold at least ilen. \\
+\hline
+{\em olen} & length of the output data, will be filled with the actual number of bytes written. \\
+\hline
+{\em tag} & buffer holding the authentication tag \\
+\hline
+{\em tag\+\_\+len} & length of the authentication tag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+U\+T\+H\+\_\+\+F\+A\+I\+L\+ED if data isn\textquotesingle{}t authentic, or a cipher specific error code.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the data is not authentic, then the output buffer is zeroed out to prevent the unauthentic plaintext to be used by mistake, making this interface safer. 
+\end{DoxyNote}
+\mbox{\Hypertarget{cipher_8h_a65b2df023770ee3123a3f2cdb10497a0}\label{cipher_8h_a65b2df023770ee3123a3f2cdb10497a0}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+auth\+\_\+encrypt@{mbedtls\+\_\+cipher\+\_\+auth\+\_\+encrypt}}
+\index{mbedtls\+\_\+cipher\+\_\+auth\+\_\+encrypt@{mbedtls\+\_\+cipher\+\_\+auth\+\_\+encrypt}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+auth\+\_\+encrypt()}{mbedtls\_cipher\_auth\_encrypt()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+auth\+\_\+encrypt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{iv,  }\item[{size\+\_\+t}]{iv\+\_\+len,  }\item[{const unsigned char $\ast$}]{ad,  }\item[{size\+\_\+t}]{ad\+\_\+len,  }\item[{const unsigned char $\ast$}]{input,  }\item[{size\+\_\+t}]{ilen,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t $\ast$}]{olen,  }\item[{unsigned char $\ast$}]{tag,  }\item[{size\+\_\+t}]{tag\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Generic autenticated encryption (A\+E\+AD ciphers). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context \\
+\hline
+{\em iv} & IV to use (or N\+O\+N\+C\+E\+\_\+\+C\+O\+U\+N\+T\+ER for C\+T\+R-\/mode ciphers) \\
+\hline
+{\em iv\+\_\+len} & IV length for ciphers with variable-\/size IV; discarded by ciphers with fixed-\/size IV. \\
+\hline
+{\em ad} & Additional data to authenticate. \\
+\hline
+{\em ad\+\_\+len} & Length of ad. \\
+\hline
+{\em input} & buffer holding the input data \\
+\hline
+{\em ilen} & length of the input data \\
+\hline
+{\em output} & buffer for the output data. Should be able to hold at least ilen. \\
+\hline
+{\em olen} & length of the output data, will be filled with the actual number of bytes written. \\
+\hline
+{\em tag} & buffer for the authentication tag \\
+\hline
+{\em tag\+\_\+len} & desired tag length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA, or a cipher specific error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_ad3388eaa42a44db6a0b0339dd49f15ba}\label{cipher_8h_ad3388eaa42a44db6a0b0339dd49f15ba}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+check\+\_\+tag@{mbedtls\+\_\+cipher\+\_\+check\+\_\+tag}}
+\index{mbedtls\+\_\+cipher\+\_\+check\+\_\+tag@{mbedtls\+\_\+cipher\+\_\+check\+\_\+tag}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+check\+\_\+tag()}{mbedtls\_cipher\_check\_tag()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+check\+\_\+tag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{tag,  }\item[{size\+\_\+t}]{tag\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Check tag for A\+E\+AD ciphers. Currently only supported with G\+CM. Must be called after \mbox{\hyperlink{cipher_8h_a6678691c02cb3f1322b2179987bfffb2}{mbedtls\+\_\+cipher\+\_\+finish()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Generic cipher context \\
+\hline
+{\em tag} & Buffer holding the tag \\
+\hline
+{\em tag\+\_\+len} & Length of the tag to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, or a specific error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a1c249f6ee1a0d2c906927c7790c41dc5}\label{cipher_8h_a1c249f6ee1a0d2c906927c7790c41dc5}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+crypt@{mbedtls\+\_\+cipher\+\_\+crypt}}
+\index{mbedtls\+\_\+cipher\+\_\+crypt@{mbedtls\+\_\+cipher\+\_\+crypt}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+crypt()}{mbedtls\_cipher\_crypt()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+crypt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{iv,  }\item[{size\+\_\+t}]{iv\+\_\+len,  }\item[{const unsigned char $\ast$}]{input,  }\item[{size\+\_\+t}]{ilen,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t $\ast$}]{olen }\end{DoxyParamCaption})}
+
+
+
+Generic all-\/in-\/one encryption/decryption (for all ciphers except A\+E\+AD constructs). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context \\
+\hline
+{\em iv} & IV to use (or N\+O\+N\+C\+E\+\_\+\+C\+O\+U\+N\+T\+ER for C\+T\+R-\/mode ciphers) \\
+\hline
+{\em iv\+\_\+len} & IV length for ciphers with variable-\/size IV; discarded by ciphers with fixed-\/size IV. \\
+\hline
+{\em input} & buffer holding the input data \\
+\hline
+{\em ilen} & length of the input data \\
+\hline
+{\em output} & buffer for the output data. Should be able to hold at least ilen + block\+\_\+size. Cannot be the same buffer as input! \\
+\hline
+{\em olen} & length of the output data, will be filled with the actual number of bytes written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Some ciphers don\textquotesingle{}t use I\+Vs nor N\+O\+N\+CE. For these ciphers, use iv = N\+U\+LL and iv\+\_\+len = 0.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+0 on success, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED if decryption expected a full block but was not provided one, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG on invalid padding while decrypting, or a cipher specific error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a6678691c02cb3f1322b2179987bfffb2}\label{cipher_8h_a6678691c02cb3f1322b2179987bfffb2}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+finish@{mbedtls\+\_\+cipher\+\_\+finish}}
+\index{mbedtls\+\_\+cipher\+\_\+finish@{mbedtls\+\_\+cipher\+\_\+finish}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+finish()}{mbedtls\_cipher\_finish()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t $\ast$}]{olen }\end{DoxyParamCaption})}
+
+
+
+Generic cipher finalisation function. If data still needs to be flushed from an incomplete block, data contained within it will be padded with the size of the last block, and written to the output buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Generic cipher context \\
+\hline
+{\em output} & buffer to write data to. Needs block\+\_\+size available. \\
+\hline
+{\em olen} & length of the data written to the output buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if parameter verification fails, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+U\+L\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+X\+P\+E\+C\+T\+ED if decryption expected a full block but was not provided one, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+D\+D\+I\+NG on invalid padding while decrypting or a cipher specific error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a9b2e7d49ca82abe8c96b65645364e24b}\label{cipher_8h_a9b2e7d49ca82abe8c96b65645364e24b}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+string@{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+string}}
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+string@{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+string}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+string()}{mbedtls\_cipher\_info\_from\_string()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}$\ast$ mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cipher\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Returns the cipher information structure associated with the given cipher name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cipher\+\_\+name} & Name of the cipher to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cipher information structure associated with the given cipher\+\_\+name, or N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a8bc2809cbd7c2357f41be8cf76eeed92}\label{cipher_8h_a8bc2809cbd7c2357f41be8cf76eeed92}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+type@{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+type}}
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+type@{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+type}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+type()}{mbedtls\_cipher\_info\_from\_type()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}$\ast$ mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+type (\begin{DoxyParamCaption}\item[{const mbedtls\+\_\+cipher\+\_\+type\+\_\+t}]{cipher\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Returns the cipher information structure associated with the given cipher type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cipher\+\_\+type} & Type of the cipher to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cipher information structure associated with the given cipher\+\_\+type, or N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a9752d8056c43948c08d2e1f2009a53aa}\label{cipher_8h_a9752d8056c43948c08d2e1f2009a53aa}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+values@{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+values}}
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+values@{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+values}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+values()}{mbedtls\_cipher\_info\_from\_values()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}$\ast$ mbedtls\+\_\+cipher\+\_\+info\+\_\+from\+\_\+values (\begin{DoxyParamCaption}\item[{const mbedtls\+\_\+cipher\+\_\+id\+\_\+t}]{cipher\+\_\+id,  }\item[{int}]{key\+\_\+bitlen,  }\item[{const mbedtls\+\_\+cipher\+\_\+mode\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Returns the cipher information structure associated with the given cipher id, key size and mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cipher\+\_\+id} & Id of the cipher to search for (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+I\+D\+\_\+\+A\+ES) \\
+\hline
+{\em key\+\_\+bitlen} & Length of the key in bits \\
+\hline
+{\em mode} & Cipher mode (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+C\+BC)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cipher information structure associated with the given cipher\+\_\+type, or N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a763ea39a9ccfc20f914fd3391d12a7fc}\label{cipher_8h_a763ea39a9ccfc20f914fd3391d12a7fc}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+list@{mbedtls\+\_\+cipher\+\_\+list}}
+\index{mbedtls\+\_\+cipher\+\_\+list@{mbedtls\+\_\+cipher\+\_\+list}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+list()}{mbedtls\_cipher\_list()}}
+{\footnotesize\ttfamily const int$\ast$ mbedtls\+\_\+cipher\+\_\+list (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the list of ciphers supported by the generic cipher module. 
+
+\begin{DoxyReturn}{Returns}
+a statically allocated array of ciphers, the last entry is 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a22b60318022c1947d9893721bc911335}\label{cipher_8h_a22b60318022c1947d9893721bc911335}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+reset@{mbedtls\+\_\+cipher\+\_\+reset}}
+\index{mbedtls\+\_\+cipher\+\_\+reset@{mbedtls\+\_\+cipher\+\_\+reset}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+reset()}{mbedtls\_cipher\_reset()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Finish preparation of the given context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if parameter verification fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a570ef5913117fbb2592f75d0d834b51c}\label{cipher_8h_a570ef5913117fbb2592f75d0d834b51c}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+set\+\_\+iv@{mbedtls\+\_\+cipher\+\_\+set\+\_\+iv}}
+\index{mbedtls\+\_\+cipher\+\_\+set\+\_\+iv@{mbedtls\+\_\+cipher\+\_\+set\+\_\+iv}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+set\+\_\+iv()}{mbedtls\_cipher\_set\_iv()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+set\+\_\+iv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{iv,  }\item[{size\+\_\+t}]{iv\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Set the initialization vector (IV) or nonce. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context \\
+\hline
+{\em iv} & IV to use (or N\+O\+N\+C\+E\+\_\+\+C\+O\+U\+N\+T\+ER for C\+T\+R-\/mode ciphers) \\
+\hline
+{\em iv\+\_\+len} & IV length for ciphers with variable-\/size IV; discarded by ciphers with fixed-\/size IV.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Some ciphers don\textquotesingle{}t use I\+Vs nor N\+O\+N\+CE. For these ciphers, this function has no effect. 
+\end{DoxyNote}
+\mbox{\Hypertarget{cipher_8h_afad97d1964a7a98d82488fecd052130f}\label{cipher_8h_afad97d1964a7a98d82488fecd052130f}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+set\+\_\+padding\+\_\+mode@{mbedtls\+\_\+cipher\+\_\+set\+\_\+padding\+\_\+mode}}
+\index{mbedtls\+\_\+cipher\+\_\+set\+\_\+padding\+\_\+mode@{mbedtls\+\_\+cipher\+\_\+set\+\_\+padding\+\_\+mode}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+set\+\_\+padding\+\_\+mode()}{mbedtls\_cipher\_set\_padding\_mode()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+set\+\_\+padding\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{\mbox{\hyperlink{cipher_8h_a5b57bc07ab7c430e9b4f29f3a5729837}{mbedtls\+\_\+cipher\+\_\+padding\+\_\+t}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set padding mode, for cipher modes that use padding. (Default\+: P\+K\+C\+S7 padding.) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context \\
+\hline
+{\em mode} & padding mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE if selected padding mode is not supported, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if the cipher mode does not support padding. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a027be8bf469069be17d82c4899b3df5f}\label{cipher_8h_a027be8bf469069be17d82c4899b3df5f}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+setkey@{mbedtls\+\_\+cipher\+\_\+setkey}}
+\index{mbedtls\+\_\+cipher\+\_\+setkey@{mbedtls\+\_\+cipher\+\_\+setkey}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+setkey()}{mbedtls\_cipher\_setkey()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+setkey (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{key,  }\item[{int}]{key\+\_\+bitlen,  }\item[{const mbedtls\+\_\+operation\+\_\+t}]{operation }\end{DoxyParamCaption})}
+
+
+
+Set the key to use with the given context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context. May not be N\+U\+LL. Must have been initialised using cipher\+\_\+context\+\_\+from\+\_\+type or cipher\+\_\+context\+\_\+from\+\_\+string. \\
+\hline
+{\em key} & The key to use. \\
+\hline
+{\em key\+\_\+bitlen} & key length to use, in bits. \\
+\hline
+{\em operation} & Operation that the key will be used for, either M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+C\+R\+Y\+PT or M\+B\+E\+D\+T\+L\+S\+\_\+\+D\+E\+C\+R\+Y\+PT.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if parameter verification fails or a cipher specific error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a009056b59d69abba5843ce78cd9aae1c}\label{cipher_8h_a009056b59d69abba5843ce78cd9aae1c}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+setup@{mbedtls\+\_\+cipher\+\_\+setup}}
+\index{mbedtls\+\_\+cipher\+\_\+setup@{mbedtls\+\_\+cipher\+\_\+setup}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+setup()}{mbedtls\_cipher\_setup()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const \mbox{\hyperlink{structmbedtls__cipher__info__t}{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}} $\ast$}]{cipher\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Initialises and fills the cipher context structure with the appropriate values. 
+
+\begin{DoxyNote}{Note}
+Currently also clears structure. In future versions you will be required to call \mbox{\hyperlink{cipher_8h_a80354364e91cdb4d4e6ab7ecec65fe07}{mbedtls\+\_\+cipher\+\_\+init()}} on the structure first.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & context to initialise. May not be N\+U\+LL. \\
+\hline
+{\em cipher\+\_\+info} & cipher to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA on parameter failure, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if allocation of the cipher-\/specific context failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a959598dfef9d7f2add8861e0c518f303}\label{cipher_8h_a959598dfef9d7f2add8861e0c518f303}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+update@{mbedtls\+\_\+cipher\+\_\+update}}
+\index{mbedtls\+\_\+cipher\+\_\+update@{mbedtls\+\_\+cipher\+\_\+update}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+update()}{mbedtls\_cipher\_update()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{input,  }\item[{size\+\_\+t}]{ilen,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t $\ast$}]{olen }\end{DoxyParamCaption})}
+
+
+
+Generic cipher update function. Encrypts/decrypts using the given cipher context. Writes as many block size\textquotesingle{}d blocks of data as possible to output. Any data that cannot be written immediately will either be added to the next block, or flushed when cipher\+\_\+final is called. Exception\+: for M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+E\+CB, expects single block in size (e.\+g. 16 bytes for A\+ES) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context \\
+\hline
+{\em input} & buffer holding the input data \\
+\hline
+{\em ilen} & length of the input data \\
+\hline
+{\em output} & buffer for the output data. Should be able to hold at least ilen + block\+\_\+size. Cannot be the same buffer as input! \\
+\hline
+{\em olen} & length of the output data, will be filled with the actual number of bytes written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if parameter verification fails, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE on an unsupported mode for a cipher or a cipher specific error code.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the underlying cipher is G\+CM, all calls to this function, except the last one before \mbox{\hyperlink{cipher_8h_a6678691c02cb3f1322b2179987bfffb2}{mbedtls\+\_\+cipher\+\_\+finish()}}, must have ilen a multiple of the block size. 
+\end{DoxyNote}
+\mbox{\Hypertarget{cipher_8h_a86bc4ed42ff087c33bb00fe31b049ae7}\label{cipher_8h_a86bc4ed42ff087c33bb00fe31b049ae7}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+update\+\_\+ad@{mbedtls\+\_\+cipher\+\_\+update\+\_\+ad}}
+\index{mbedtls\+\_\+cipher\+\_\+update\+\_\+ad@{mbedtls\+\_\+cipher\+\_\+update\+\_\+ad}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+update\+\_\+ad()}{mbedtls\_cipher\_update\_ad()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+update\+\_\+ad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{ad,  }\item[{size\+\_\+t}]{ad\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Add additional data (for A\+E\+AD ciphers). Currently only supported with G\+CM. Must be called exactly once, after \mbox{\hyperlink{cipher_8h_a22b60318022c1947d9893721bc911335}{mbedtls\+\_\+cipher\+\_\+reset()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & generic cipher context \\
+\hline
+{\em ad} & Additional data to use. \\
+\hline
+{\em ad\+\_\+len} & Length of ad.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, or a specific error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cipher_8h_a8916ddd18e94002913b80a6b04b83693}\label{cipher_8h_a8916ddd18e94002913b80a6b04b83693}} 
+\index{cipher.\+h@{cipher.\+h}!mbedtls\+\_\+cipher\+\_\+write\+\_\+tag@{mbedtls\+\_\+cipher\+\_\+write\+\_\+tag}}
+\index{mbedtls\+\_\+cipher\+\_\+write\+\_\+tag@{mbedtls\+\_\+cipher\+\_\+write\+\_\+tag}!cipher.\+h@{cipher.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+cipher\+\_\+write\+\_\+tag()}{mbedtls\_cipher\_write\_tag()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+write\+\_\+tag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__cipher__context__t}{mbedtls\+\_\+cipher\+\_\+context\+\_\+t}} $\ast$}]{ctx,  }\item[{unsigned char $\ast$}]{tag,  }\item[{size\+\_\+t}]{tag\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Write tag for A\+E\+AD ciphers. Currently only supported with G\+CM. Must be called after \mbox{\hyperlink{cipher_8h_a6678691c02cb3f1322b2179987bfffb2}{mbedtls\+\_\+cipher\+\_\+finish()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Generic cipher context \\
+\hline
+{\em tag} & buffer to write the tag \\
+\hline
+{\em tag\+\_\+len} & Length of the tag to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, or a specific error code. 
+\end{DoxyReturn}

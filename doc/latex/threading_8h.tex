@@ -1,0 +1,66 @@
+\hypertarget{threading_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/threading.h File Reference}
+\label{threading_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/threading.\+h@{prerequisites/c-\/libp2p/include/mbedtls/threading.\+h}}
+
+
+Threading abstraction layer.  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for threading.\+h\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{threading_8h_ad3cbda6bbb5ce837b33ada893d7d5613}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}}~-\/0x001A
+\item 
+\#define \mbox{\hyperlink{threading_8h_a76cd79a1ed3fd583ed3a4428d6a1e967}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}~-\/0x001C
+\item 
+\#define \mbox{\hyperlink{threading_8h_a51005c51b928706511d3c2ea3390c07f}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+M\+U\+T\+E\+X\+\_\+\+E\+R\+R\+OR}}~-\/0x001E
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Threading abstraction layer. 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{threading_8h_a76cd79a1ed3fd583ed3a4428d6a1e967}\label{threading_8h_a76cd79a1ed3fd583ed3a4428d6a1e967}} 
+\index{threading.\+h@{threading.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}!threading.\+h@{threading.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}{MBEDTLS\_ERR\_THREADING\_BAD\_INPUT\_DATA}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA~-\/0x001C}
+
+Bad input parameters to function. 
+
+Definition at line 39 of file threading.\+h.
+
+\mbox{\Hypertarget{threading_8h_ad3cbda6bbb5ce837b33ada893d7d5613}\label{threading_8h_ad3cbda6bbb5ce837b33ada893d7d5613}} 
+\index{threading.\+h@{threading.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}!threading.\+h@{threading.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}{MBEDTLS\_ERR\_THREADING\_FEATURE\_UNAVAILABLE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE~-\/0x001A}
+
+The selected feature is not available. 
+
+Definition at line 38 of file threading.\+h.
+
+\mbox{\Hypertarget{threading_8h_a51005c51b928706511d3c2ea3390c07f}\label{threading_8h_a51005c51b928706511d3c2ea3390c07f}} 
+\index{threading.\+h@{threading.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+M\+U\+T\+E\+X\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+M\+U\+T\+E\+X\+\_\+\+E\+R\+R\+OR}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+M\+U\+T\+E\+X\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+M\+U\+T\+E\+X\+\_\+\+E\+R\+R\+OR}!threading.\+h@{threading.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+M\+U\+T\+E\+X\+\_\+\+E\+R\+R\+OR}{MBEDTLS\_ERR\_THREADING\_MUTEX\_ERROR}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+\+M\+U\+T\+E\+X\+\_\+\+E\+R\+R\+OR~-\/0x001E}
+
+Locking / unlocking / free failed with error code. 
+
+Definition at line 40 of file threading.\+h.
+

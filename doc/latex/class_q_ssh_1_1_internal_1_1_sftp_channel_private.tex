@@ -1,0 +1,73 @@
+\hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Sftp\+Channel\+Private Class Reference}
+\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private}\index{Q\+Ssh\+::\+Internal\+::\+Sftp\+Channel\+Private@{Q\+Ssh\+::\+Internal\+::\+Sftp\+Channel\+Private}}
+
+
+Inheritance diagram for Q\+Ssh\+:\+:Internal\+:\+:Sftp\+Channel\+Private\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Ssh\+:\+:Internal\+:\+:Sftp\+Channel\+Private\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a5b36817e75ad4894a01ac59b659eda37}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a5b36817e75ad4894a01ac59b659eda37}} 
+enum {\bfseries Sftp\+State} \{ {\bfseries Inactive}, 
+{\bfseries Subsystem\+Requested}, 
+{\bfseries Init\+Sent}, 
+{\bfseries Initialized}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a74d0c2df0639130638856fb40e2da77d}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a74d0c2df0639130638856fb40e2da77d}} 
+void {\bfseries initialized} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a054d9aff94ecfbefbc26c12272d7aed8}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a054d9aff94ecfbefbc26c12272d7aed8}} 
+void {\bfseries initialization\+Failed} (const Q\+String \&reason)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a5c3a43ac68c3691178a1f985ca5a1a24}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a5c3a43ac68c3691178a1f985ca5a1a24}} 
+void {\bfseries closed} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_ac4b5a73fd61ebf88d2ef11da3773de71}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_ac4b5a73fd61ebf88d2ef11da3773de71}} 
+void {\bfseries finished} (Q\+Ssh\+::\+Sftp\+Job\+Id \mbox{\hyperlink{structjob}{job}}, const Q\+String \&error=Q\+String())
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a5b41b5a3c692eb1ebf40750088b74ff0}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a5b41b5a3c692eb1ebf40750088b74ff0}} 
+void {\bfseries data\+Available} (Q\+Ssh\+::\+Sftp\+Job\+Id \mbox{\hyperlink{structjob}{job}}, const Q\+String \&data)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_ad76c7720d12df7a33f78f542ffd5e865}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_ad76c7720d12df7a33f78f542ffd5e865}} 
+void {\bfseries file\+Info\+Available} (Q\+Ssh\+::\+Sftp\+Job\+Id \mbox{\hyperlink{structjob}{job}}, const Q\+List$<$ \mbox{\hyperlink{class_q_ssh_1_1_sftp_file_info}{Q\+Ssh\+::\+Sftp\+File\+Info}} $>$ \&file\+Info\+List)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a4409424132f41b19eb2542e95cd9f3fd}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a4409424132f41b19eb2542e95cd9f3fd}} 
+virtual void {\bfseries handle\+Channel\+Success} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_ac8d0715b2950ba59c3a81d42f5664a8e}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_ac8d0715b2950ba59c3a81d42f5664a8e}} 
+virtual void {\bfseries handle\+Channel\+Failure} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a2147c7af0fb87b3aec52000912a92ff3}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_a2147c7af0fb87b3aec52000912a92ff3}} 
+virtual void {\bfseries close\+Hook} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_sftp_channel_private_aa763485a9e37c26a73d220e5010e63fe}\label{class_q_ssh_1_1_internal_1_1_sftp_channel_private_aa763485a9e37c26a73d220e5010e63fe}} 
+class {\bfseries Q\+Ssh\+::\+Sftp\+Channel}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 47 of file sftpchannel\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sftpchannel\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sftpchannel.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,192 @@
+\hypertarget{class_botan_1_1_montgomery___int}{}\section{Botan\+:\+:Montgomery\+\_\+\+Int Class Reference}
+\label{class_botan_1_1_montgomery___int}\index{Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}}
+
+
+{\ttfamily \#include $<$monty.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int_a129cc27370aacbb8cc3f56c75239efce}{Montgomery\+\_\+\+Int}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_botan_1_1_montgomery___params}{Montgomery\+\_\+\+Params}} $>$ params)
+\item 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int_acc0e9d1c3a33343a1f70f1850a12160f}{Montgomery\+\_\+\+Int}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_botan_1_1_montgomery___params}{Montgomery\+\_\+\+Params}} $>$ params, const Big\+Int \&v, bool redc\+\_\+needed=true)
+\item 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int_a40f15c2012a27cc98c720de74200117d}{Montgomery\+\_\+\+Int}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_botan_1_1_montgomery___params}{Montgomery\+\_\+\+Params}} $>$ params, const uint8\+\_\+t bits\mbox{[}$\,$\mbox{]}, size\+\_\+t len, bool redc\+\_\+needed=true)
+\item 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int_a5b3ce373167c2c897ffa6264327eec61}{Montgomery\+\_\+\+Int}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_botan_1_1_montgomery___params}{Montgomery\+\_\+\+Params}} $>$ params, const word words\mbox{[}$\,$\mbox{]}, size\+\_\+t len, bool redc\+\_\+needed=true)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a1a8d9c17a5a4a1155423f204fe9a39c2}\label{class_botan_1_1_montgomery___int_a1a8d9c17a5a4a1155423f204fe9a39c2}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_ab3274a085a383b8392c94b474d1a1b6b}\label{class_botan_1_1_montgomery___int_ab3274a085a383b8392c94b474d1a1b6b}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_afca0ea19b95daf8a19736a4b4c2c58c3}\label{class_botan_1_1_montgomery___int_afca0ea19b95daf8a19736a4b4c2c58c3}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries serialize} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a002611dc606e5d53039cfa226caf2943}\label{class_botan_1_1_montgomery___int_a002611dc606e5d53039cfa226caf2943}} 
+size\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a200e8ecefbef821238f9d63de1ad9855}\label{class_botan_1_1_montgomery___int_a200e8ecefbef821238f9d63de1ad9855}} 
+bool {\bfseries is\+\_\+one} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_aba7ec7ab30218104ab17bc974f7c937a}\label{class_botan_1_1_montgomery___int_aba7ec7ab30218104ab17bc974f7c937a}} 
+bool {\bfseries is\+\_\+zero} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_adb46d0efcf60137e59fafb14e8ce5b6e}\label{class_botan_1_1_montgomery___int_adb46d0efcf60137e59fafb14e8ce5b6e}} 
+void {\bfseries fix\+\_\+size} ()
+\item 
+Big\+Int \mbox{\hyperlink{class_botan_1_1_montgomery___int_abc91331bc32dc00db87e8343f9839709}{value}} () const
+\item 
+const Big\+Int \& \mbox{\hyperlink{class_botan_1_1_montgomery___int_aad869bdd9eb0dd780774f430169d9af1}{repr}} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_ab59516fcf6e6d4b2dc029163ab726a8d}\label{class_botan_1_1_montgomery___int_ab59516fcf6e6d4b2dc029163ab726a8d}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} {\bfseries operator+} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_aa135402ce9758b98c7296c986dcbe7e2}\label{class_botan_1_1_montgomery___int_aa135402ce9758b98c7296c986dcbe7e2}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} {\bfseries operator-\/} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a37fe70943374e7945bb02677d4d6c4c9}\label{class_botan_1_1_montgomery___int_a37fe70943374e7945bb02677d4d6c4c9}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries operator+=} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a4508b0c722c080f3695ee3956c19ebe8}\label{class_botan_1_1_montgomery___int_a4508b0c722c080f3695ee3956c19ebe8}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries operator-\/=} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a772e1acf4bd278ac8c2090d1bf379283}\label{class_botan_1_1_montgomery___int_a772e1acf4bd278ac8c2090d1bf379283}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a032c01d5f7dac98b81a714668feda921}\label{class_botan_1_1_montgomery___int_a032c01d5f7dac98b81a714668feda921}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries operator$\ast$=} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a3747b27aac7135b3d689c6a7fb93cca4}\label{class_botan_1_1_montgomery___int_a3747b27aac7135b3d689c6a7fb93cca4}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries operator$\ast$=} (const secure\+\_\+vector$<$ word $>$ \&other)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a28fc489284579cd00072e962298bc177}\label{class_botan_1_1_montgomery___int_a28fc489284579cd00072e962298bc177}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries add} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other, secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a9f7882321bd8b3249b7a1d5f61124e9f}\label{class_botan_1_1_montgomery___int_a9f7882321bd8b3249b7a1d5f61124e9f}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries sub} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other, secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_af6d0103096d488d5b9a9bb02d6dc7c39}\label{class_botan_1_1_montgomery___int_af6d0103096d488d5b9a9bb02d6dc7c39}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} {\bfseries mul} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_af8071f3f36f552cc2cded161e26cd354}\label{class_botan_1_1_montgomery___int_af8071f3f36f552cc2cded161e26cd354}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries mul\+\_\+by} (const \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \&other, secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a41e398fb40309a24fa00f01de0bbcf31}\label{class_botan_1_1_montgomery___int_a41e398fb40309a24fa00f01de0bbcf31}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries mul\+\_\+by} (const secure\+\_\+vector$<$ word $>$ \&other, secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a4dacf7853057df8db087d5eb096a7cc4}\label{class_botan_1_1_montgomery___int_a4dacf7853057df8db087d5eb096a7cc4}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} {\bfseries square} (secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_adeff8ccd15a6c9af59a0e19f65a6959d}\label{class_botan_1_1_montgomery___int_adeff8ccd15a6c9af59a0e19f65a6959d}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries square\+\_\+this} (secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_ac2a879516ae2be8f2a4f7d4692903424}\label{class_botan_1_1_montgomery___int_ac2a879516ae2be8f2a4f7d4692903424}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries square\+\_\+this\+\_\+n\+\_\+times} (secure\+\_\+vector$<$ word $>$ \&ws, size\+\_\+t n)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_ae65f3e4ec57b3d80d9e8885cb825ab92}\label{class_botan_1_1_montgomery___int_ae65f3e4ec57b3d80d9e8885cb825ab92}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} {\bfseries multiplicative\+\_\+inverse} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a6b2ef62e6caa40b808c29a761575e631}\label{class_botan_1_1_montgomery___int_a6b2ef62e6caa40b808c29a761575e631}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} {\bfseries additive\+\_\+inverse} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a99d94471337664d5b745c41b5b6ab17c}\label{class_botan_1_1_montgomery___int_a99d94471337664d5b745c41b5b6ab17c}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries mul\+\_\+by\+\_\+2} (secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a7a73d6ef76eca643f91e9ab4c99fe371}\label{class_botan_1_1_montgomery___int_a7a73d6ef76eca643f91e9ab4c99fe371}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries mul\+\_\+by\+\_\+3} (secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_acadd6e7cebdcb65a14103504b16e83ce}\label{class_botan_1_1_montgomery___int_acadd6e7cebdcb65a14103504b16e83ce}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries mul\+\_\+by\+\_\+4} (secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a835c59e9288cbdf096c55ab75223ec9b}\label{class_botan_1_1_montgomery___int_a835c59e9288cbdf096c55ab75223ec9b}} 
+\mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} \& {\bfseries mul\+\_\+by\+\_\+8} (secure\+\_\+vector$<$ word $>$ \&ws)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a88483a5fe1f2b2617efae821d7682c5c}\label{class_botan_1_1_montgomery___int_a88483a5fe1f2b2617efae821d7682c5c}} 
+void {\bfseries const\+\_\+time\+\_\+poison} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_ac49ee67b58c3eb80d5f7b5ded43b54a1}\label{class_botan_1_1_montgomery___int_ac49ee67b58c3eb80d5f7b5ded43b54a1}} 
+void {\bfseries const\+\_\+time\+\_\+unpoison} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Montgomery representation of an integer 
+
+Definition at line 21 of file monty.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a129cc27370aacbb8cc3f56c75239efce}\label{class_botan_1_1_montgomery___int_a129cc27370aacbb8cc3f56c75239efce}} 
+\index{Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}!Montgomery\+\_\+\+Int@{Montgomery\+\_\+\+Int}}
+\index{Montgomery\+\_\+\+Int@{Montgomery\+\_\+\+Int}!Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}}
+\subsubsection{\texorpdfstring{Montgomery\+\_\+\+Int()}{Montgomery\_Int()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Botan\+::\+Montgomery\+\_\+\+Int\+::\+Montgomery\+\_\+\+Int (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_botan_1_1_montgomery___params}{Montgomery\+\_\+\+Params}} $>$}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a zero-\/initialized \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} 
+
+Definition at line 27 of file monty.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_acc0e9d1c3a33343a1f70f1850a12160f}\label{class_botan_1_1_montgomery___int_acc0e9d1c3a33343a1f70f1850a12160f}} 
+\index{Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}!Montgomery\+\_\+\+Int@{Montgomery\+\_\+\+Int}}
+\index{Montgomery\+\_\+\+Int@{Montgomery\+\_\+\+Int}!Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}}
+\subsubsection{\texorpdfstring{Montgomery\+\_\+\+Int()}{Montgomery\_Int()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Botan\+::\+Montgomery\+\_\+\+Int\+::\+Montgomery\+\_\+\+Int (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_botan_1_1_montgomery___params}{Montgomery\+\_\+\+Params}} $>$}]{params,  }\item[{const Big\+Int \&}]{v,  }\item[{bool}]{redc\+\_\+needed = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} 
+
+Definition at line 222 of file monty.\+cpp.
+
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a40f15c2012a27cc98c720de74200117d}\label{class_botan_1_1_montgomery___int_a40f15c2012a27cc98c720de74200117d}} 
+\index{Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}!Montgomery\+\_\+\+Int@{Montgomery\+\_\+\+Int}}
+\index{Montgomery\+\_\+\+Int@{Montgomery\+\_\+\+Int}!Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}}
+\subsubsection{\texorpdfstring{Montgomery\+\_\+\+Int()}{Montgomery\_Int()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Botan\+::\+Montgomery\+\_\+\+Int\+::\+Montgomery\+\_\+\+Int (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_botan_1_1_montgomery___params}{Montgomery\+\_\+\+Params}} $>$}]{params,  }\item[{const uint8\+\_\+t}]{bits\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{len,  }\item[{bool}]{redc\+\_\+needed = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} 
+
+Definition at line 238 of file monty.\+cpp.
+
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_a5b3ce373167c2c897ffa6264327eec61}\label{class_botan_1_1_montgomery___int_a5b3ce373167c2c897ffa6264327eec61}} 
+\index{Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}!Montgomery\+\_\+\+Int@{Montgomery\+\_\+\+Int}}
+\index{Montgomery\+\_\+\+Int@{Montgomery\+\_\+\+Int}!Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}}
+\subsubsection{\texorpdfstring{Montgomery\+\_\+\+Int()}{Montgomery\_Int()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Botan\+::\+Montgomery\+\_\+\+Int\+::\+Montgomery\+\_\+\+Int (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_botan_1_1_montgomery___params}{Montgomery\+\_\+\+Params}} $>$}]{params,  }\item[{const word}]{words\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{len,  }\item[{bool}]{redc\+\_\+needed = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{class_botan_1_1_montgomery___int}{Montgomery\+\_\+\+Int}} 
+
+Definition at line 251 of file monty.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_aad869bdd9eb0dd780774f430169d9af1}\label{class_botan_1_1_montgomery___int_aad869bdd9eb0dd780774f430169d9af1}} 
+\index{Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}!repr@{repr}}
+\index{repr@{repr}!Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}}
+\subsubsection{\texorpdfstring{repr()}{repr()}}
+{\footnotesize\ttfamily const Big\+Int\& Botan\+::\+Montgomery\+\_\+\+Int\+::repr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the Montgomery representation 
+
+Definition at line 69 of file monty.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_montgomery___int_abc91331bc32dc00db87e8343f9839709}\label{class_botan_1_1_montgomery___int_abc91331bc32dc00db87e8343f9839709}} 
+\index{Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}!value@{value}}
+\index{value@{value}!Botan\+::\+Montgomery\+\_\+\+Int@{Botan\+::\+Montgomery\+\_\+\+Int}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily Big\+Int Botan\+::\+Montgomery\+\_\+\+Int\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Return the value to normal mod-\/p space 
+
+Definition at line 307 of file monty.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/math/numbertheory/monty.\+h\item 
+prerequisites/botan/src/lib/math/numbertheory/monty.\+cpp\end{DoxyCompactItemize}

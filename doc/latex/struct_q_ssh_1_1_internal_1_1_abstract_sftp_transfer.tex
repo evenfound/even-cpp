@@ -1,0 +1,62 @@
+\hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Abstract\+Sftp\+Transfer Struct Reference}
+\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer}\index{Q\+Ssh\+::\+Internal\+::\+Abstract\+Sftp\+Transfer@{Q\+Ssh\+::\+Internal\+::\+Abstract\+Sftp\+Transfer}}
+
+
+Inheritance diagram for Q\+Ssh\+:\+:Internal\+:\+:Abstract\+Sftp\+Transfer\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Ssh\+:\+:Internal\+:\+:Abstract\+Sftp\+Transfer\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ab264a692934a9b5e389aa5cd165f9fa2}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ab264a692934a9b5e389aa5cd165f9fa2}} 
+typedef Q\+Shared\+Pointer$<$ \mbox{\hyperlink{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer}{Abstract\+Sftp\+Transfer}} $>$ {\bfseries Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ad23758868bb7112897a8eceb3fcddedd}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ad23758868bb7112897a8eceb3fcddedd}} 
+{\bfseries Abstract\+Sftp\+Transfer} (Sftp\+Job\+Id job\+Id, const Q\+String \&remote\+Path, const Q\+Shared\+Pointer$<$ Q\+I\+O\+Device $>$ \&local\+File)
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_a31e22afdd97d261491f80434b6b8ffea}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_a31e22afdd97d261491f80434b6b8ffea}} 
+void {\bfseries calculate\+In\+Flight\+Count} (quint32 chunk\+Size)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ae15ebf6cd3b2df09027b77f408ab6cb5}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ae15ebf6cd3b2df09027b77f408ab6cb5}} 
+const Q\+Shared\+Pointer$<$ Q\+I\+O\+Device $>$ {\bfseries local\+File}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_a3e4c1e681208e4d3d453fd74f74c61d1}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_a3e4c1e681208e4d3d453fd74f74c61d1}} 
+quint64 {\bfseries file\+Size}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_a4904955a52d99d9c405ad3d835292c00}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_a4904955a52d99d9c405ad3d835292c00}} 
+quint64 {\bfseries offset}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ac087f235589b4d2552752c737fe37ad3}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ac087f235589b4d2552752c737fe37ad3}} 
+int {\bfseries in\+Flight\+Count}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_a79179fd6ead1c45dcb3f3b646190ff51}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_a79179fd6ead1c45dcb3f3b646190ff51}} 
+bool {\bfseries stat\+Requested}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ae9eaa231ee6aba11420020f070372da2}\label{struct_q_ssh_1_1_internal_1_1_abstract_sftp_transfer_ae9eaa231ee6aba11420020f070372da2}} 
+static const int {\bfseries Max\+In\+Flight\+Count} = 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 182 of file sftpoperation\+\_\+p.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sftpoperation\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sftpoperation.\+cpp\end{DoxyCompactItemize}

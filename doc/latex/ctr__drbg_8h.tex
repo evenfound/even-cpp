@@ -1,0 +1,506 @@
+\hypertarget{ctr__drbg_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/ctr\+\_\+drbg.h File Reference}
+\label{ctr__drbg_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/ctr\+\_\+drbg.\+h@{prerequisites/c-\/libp2p/include/mbedtls/ctr\+\_\+drbg.\+h}}
+
+
+C\+T\+R\+\_\+\+D\+R\+BG based on A\+E\+S-\/256 (N\+I\+ST SP 800-\/90)  
+
+
+{\ttfamily \#include \char`\"{}aes.\+h\char`\"{}}\newline
+Include dependency graph for ctr\+\_\+drbg.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em C\+T\+R\+\_\+\+D\+R\+BG context structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_a15d1931ea5d133062cd93a3374a5bcf0}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x0034
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_aea1a5c82ce0f69dfdda2d3131bd1b5e1}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG}}~-\/0x0036
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_a7367c2feaa7ee9f4f182ff1cb03a864e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG}}~-\/0x0038
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_ab5f1b73efeca5de8e75c273d47b8274e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}~-\/0x003A
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_a73f77e540752ebec67e2477f776ed8a9}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}}~16
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_af81b83e7d7d9709f0b61c6ee34ee848e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE}}~32
+\item 
+\mbox{\Hypertarget{ctr__drbg_8h_a7f8b48d6ce94003298bbbae9fb514e8a}\label{ctr__drbg_8h_a7f8b48d6ce94003298bbbae9fb514e8a}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+B\+I\+TS}~( \mbox{\hyperlink{ctr__drbg_8h_af81b83e7d7d9709f0b61c6ee34ee848e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE}} $\ast$ 8 )
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_a8e6ac8e75c3becda32d9bc7b8ac2c23a}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+S\+E\+E\+D\+L\+EN}}~( \mbox{\hyperlink{ctr__drbg_8h_af81b83e7d7d9709f0b61c6ee34ee848e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE}} + \mbox{\hyperlink{ctr__drbg_8h_a73f77e540752ebec67e2477f776ed8a9}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}} )
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_a9651ed4c66749bb7f232b93681593834}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+O\+FF}}~0
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_ae534608231e768e8cf4010e1aa74dba8}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+ON}}~1
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ S\+E\+C\+T\+I\+ON\+: Module settings}\par
+{\em The configuration options you can set for this module are in this section. Either change them in config.\+h or define them on the compiler command line. }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_ac71c76b50eb79055e11f86d0d796b979}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN}}~48
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_af48f34760ba188dfc8e851c66e891c19}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}~10000
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_a9eeb62804173b22977cca5a7565bbe78}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+UT}}~256
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_a5b787e6157d91055d7c07d40f519cf52}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+ST}}~1024
+\item 
+\#define \mbox{\hyperlink{ctr__drbg_8h_a1b944a1ceb01e5749008fbf27a6706e4}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT}}~384
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ctr__drbg_8h_a70dbec5e03601bf437ec488f2645743b}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+init}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em C\+T\+R\+\_\+\+D\+R\+BG context initialization Makes the context ready for \mbox{\hyperlink{ctr__drbg_8h_ad93d675f998550b4478c1fe6f4f34ebc}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed()}} or \mbox{\hyperlink{ctr__drbg_8h_a1ea42b9eb6f6b33c82359f4c0a57ca43}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free()}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ctr__drbg_8h_ad93d675f998550b4478c1fe6f4f34ebc}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx, int($\ast$f\+\_\+entropy)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+entropy, const unsigned char $\ast$custom, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em C\+T\+R\+\_\+\+D\+R\+BG initial seeding Seed and setup entropy source for future reseeds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ctr__drbg_8h_a1ea42b9eb6f6b33c82359f4c0a57ca43}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Clear C\+T\+R\+\_\+\+C\+R\+BG context data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ctr__drbg_8h_ae9871c5ba6b2fa5189423ef7cbe2078b}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+prediction\+\_\+resistance}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx, int resistance)
+\begin{DoxyCompactList}\small\item\em Enable / disable prediction resistance (Default\+: Off) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ctr__drbg_8h_af33ced4a1fc79c6abbc1cb2b17f14549}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+entropy\+\_\+len}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Set the amount of entropy grabbed on each (re)seed (Default\+: M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ctr__drbg_8h_aefd5f442f96682f0cef0152866e4e46e}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+reseed\+\_\+interval}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx, int interval)
+\begin{DoxyCompactList}\small\item\em Set the reseed interval (Default\+: M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ctr__drbg_8h_a495e3c86df7fc166454d0e85262e40a6}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+reseed}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx, const unsigned char $\ast$additional, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em C\+T\+R\+\_\+\+D\+R\+BG reseeding (extracts data from entropy source) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ctr__drbg_8h_a79d4bdb84d0c13f4bb28d5c3c6de4011}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx, const unsigned char $\ast$additional, size\+\_\+t add\+\_\+len)
+\begin{DoxyCompactList}\small\item\em C\+T\+R\+\_\+\+D\+R\+BG update state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ctr__drbg_8h_a18161010cbcf33f6930fa8fdc035e74d}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random\+\_\+with\+\_\+add}} (void $\ast$p\+\_\+rng, unsigned char $\ast$output, size\+\_\+t output\+\_\+len, const unsigned char $\ast$additional, size\+\_\+t add\+\_\+len)
+\begin{DoxyCompactList}\small\item\em C\+T\+R\+\_\+\+D\+R\+BG generate random with additional update input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ctr__drbg_8h_af6e4dd295ae790a33128562dd01c79ab}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random}} (void $\ast$p\+\_\+rng, unsigned char $\ast$output, size\+\_\+t output\+\_\+len)
+\begin{DoxyCompactList}\small\item\em C\+T\+R\+\_\+\+D\+R\+BG generate random. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ctr__drbg_8h_af8411dc8a4d9b2a7a5b4adf2ff3d9586}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+write\+\_\+seed\+\_\+file}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Write a seed file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ctr__drbg_8h_a2dd8fb85c308475ca743aa634d4b0b96}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update\+\_\+seed\+\_\+file}} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$ctx, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Read and update a seed file. Seed is added to this instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ctr__drbg_8h_a6f4c2d5ae50d4f122a6a1468480a9c3e}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+self\+\_\+test}} (int verbose)
+\begin{DoxyCompactList}\small\item\em Checkup routine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ctr__drbg_8h_a83d6faba281bf4b6275bbfffb3efb3de}\label{ctr__drbg_8h_a83d6faba281bf4b6275bbfffb3efb3de}} 
+int {\bfseries mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed\+\_\+entropy\+\_\+len} (\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$, int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$, const unsigned char $\ast$, size\+\_\+t, size\+\_\+t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+T\+R\+\_\+\+D\+R\+BG based on A\+E\+S-\/256 (N\+I\+ST SP 800-\/90) 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ctr__drbg_8h_a73f77e540752ebec67e2477f776ed8a9}\label{ctr__drbg_8h_a73f77e540752ebec67e2477f776ed8a9}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}{MBEDTLS\_CTR\_DRBG\_BLOCKSIZE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE~16}
+
+\mbox{\hyperlink{struct_block}{Block}} size used by the cipher 
+
+Definition at line 37 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_ac71c76b50eb79055e11f86d0d796b979}\label{ctr__drbg_8h_ac71c76b50eb79055e11f86d0d796b979}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN}{MBEDTLS\_CTR\_DRBG\_ENTROPY\_LEN}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN~48}
+
+Amount of entropy used per seed by default (48 with S\+H\+A-\/512, 32 with S\+H\+A-\/256) 
+
+Definition at line 53 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_af81b83e7d7d9709f0b61c6ee34ee848e}\label{ctr__drbg_8h_af81b83e7d7d9709f0b61c6ee34ee848e}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE}{MBEDTLS\_CTR\_DRBG\_KEYSIZE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE~32}
+
+Key size used by the cipher 
+
+Definition at line 38 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_a9eeb62804173b22977cca5a7565bbe78}\label{ctr__drbg_8h_a9eeb62804173b22977cca5a7565bbe78}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+UT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+UT}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+UT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+UT}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+UT}{MBEDTLS\_CTR\_DRBG\_MAX\_INPUT}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+UT~256}
+
+Maximum number of additional input bytes 
+
+Definition at line 64 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_a5b787e6157d91055d7c07d40f519cf52}\label{ctr__drbg_8h_a5b787e6157d91055d7c07d40f519cf52}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+ST@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+ST}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+ST@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+ST}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+ST}{MBEDTLS\_CTR\_DRBG\_MAX\_REQUEST}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+ST~1024}
+
+Maximum number of requested bytes per call 
+
+Definition at line 68 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_a1b944a1ceb01e5749008fbf27a6706e4}\label{ctr__drbg_8h_a1b944a1ceb01e5749008fbf27a6706e4}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT}{MBEDTLS\_CTR\_DRBG\_MAX\_SEED\_INPUT}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT~384}
+
+Maximum size of (re)seed buffer 
+
+Definition at line 72 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_a9651ed4c66749bb7f232b93681593834}\label{ctr__drbg_8h_a9651ed4c66749bb7f232b93681593834}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+O\+FF@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+O\+FF}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+O\+FF@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+O\+FF}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+O\+FF}{MBEDTLS\_CTR\_DRBG\_PR\_OFF}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+O\+FF~0}
+
+No prediction resistance 
+
+Definition at line 77 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_ae534608231e768e8cf4010e1aa74dba8}\label{ctr__drbg_8h_ae534608231e768e8cf4010e1aa74dba8}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+ON@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+ON}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+ON@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+ON}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+ON}{MBEDTLS\_CTR\_DRBG\_PR\_ON}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+ON~1}
+
+Prediction resistance enabled 
+
+Definition at line 78 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_af48f34760ba188dfc8e851c66e891c19}\label{ctr__drbg_8h_af48f34760ba188dfc8e851c66e891c19}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{MBEDTLS\_CTR\_DRBG\_RESEED\_INTERVAL}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL~10000}
+
+Interval before reseed is performed by default 
+
+Definition at line 60 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_a8e6ac8e75c3becda32d9bc7b8ac2c23a}\label{ctr__drbg_8h_a8e6ac8e75c3becda32d9bc7b8ac2c23a}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+S\+E\+E\+D\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+S\+E\+E\+D\+L\+EN}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+S\+E\+E\+D\+L\+EN@{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+S\+E\+E\+D\+L\+EN}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+S\+E\+E\+D\+L\+EN}{MBEDTLS\_CTR\_DRBG\_SEEDLEN}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+S\+E\+E\+D\+L\+EN~( \mbox{\hyperlink{ctr__drbg_8h_af81b83e7d7d9709f0b61c6ee34ee848e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+K\+E\+Y\+S\+I\+ZE}} + \mbox{\hyperlink{ctr__drbg_8h_a73f77e540752ebec67e2477f776ed8a9}{M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}} )}
+
+The seed length (counter + A\+ES key) 
+
+Definition at line 40 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_a15d1931ea5d133062cd93a3374a5bcf0}\label{ctr__drbg_8h_a15d1931ea5d133062cd93a3374a5bcf0}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_CTR\_DRBG\_ENTROPY\_SOURCE\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED~-\/0x0034}
+
+The entropy source failed. 
+
+Definition at line 32 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_ab5f1b73efeca5de8e75c273d47b8274e}\label{ctr__drbg_8h_ab5f1b73efeca5de8e75c273d47b8274e}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}{MBEDTLS\_ERR\_CTR\_DRBG\_FILE\_IO\_ERROR}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR~-\/0x003A}
+
+Read/write error in file. 
+
+Definition at line 35 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_a7367c2feaa7ee9f4f182ff1cb03a864e}\label{ctr__drbg_8h_a7367c2feaa7ee9f4f182ff1cb03a864e}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG}{MBEDTLS\_ERR\_CTR\_DRBG\_INPUT\_TOO\_BIG}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG~-\/0x0038}
+
+Input too large (Entropy + additional). 
+
+Definition at line 34 of file ctr\+\_\+drbg.\+h.
+
+\mbox{\Hypertarget{ctr__drbg_8h_aea1a5c82ce0f69dfdda2d3131bd1b5e1}\label{ctr__drbg_8h_aea1a5c82ce0f69dfdda2d3131bd1b5e1}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG}{MBEDTLS\_ERR\_CTR\_DRBG\_REQUEST\_TOO\_BIG}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG~-\/0x0036}
+
+Too many random requested in single call. 
+
+Definition at line 33 of file ctr\+\_\+drbg.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ctr__drbg_8h_a1ea42b9eb6f6b33c82359f4c0a57ca43}\label{ctr__drbg_8h_a1ea42b9eb6f6b33c82359f4c0a57ca43}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free()}{mbedtls\_ctr\_drbg\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Clear C\+T\+R\+\_\+\+C\+R\+BG context data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context to clear \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ctr__drbg_8h_a70dbec5e03601bf437ec488f2645743b}\label{ctr__drbg_8h_a70dbec5e03601bf437ec488f2645743b}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+init@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+init}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+init@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+init}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+init()}{mbedtls\_ctr\_drbg\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+ctr\+\_\+drbg\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+C\+T\+R\+\_\+\+D\+R\+BG context initialization Makes the context ready for \mbox{\hyperlink{ctr__drbg_8h_ad93d675f998550b4478c1fe6f4f34ebc}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed()}} or \mbox{\hyperlink{ctr__drbg_8h_a1ea42b9eb6f6b33c82359f4c0a57ca43}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+free()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ctr__drbg_8h_af6e4dd295ae790a33128562dd01c79ab}\label{ctr__drbg_8h_af6e4dd295ae790a33128562dd01c79ab}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random()}{mbedtls\_ctr\_drbg\_random()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+\_\+rng,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t}]{output\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+C\+T\+R\+\_\+\+D\+R\+BG generate random. 
+
+Note\+: Automatically reseeds if reseed\+\_\+counter is reached.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+rng} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em output} & Buffer to fill \\
+\hline
+{\em output\+\_\+len} & Length of the buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ctr__drbg_8h_a18161010cbcf33f6930fa8fdc035e74d}\label{ctr__drbg_8h_a18161010cbcf33f6930fa8fdc035e74d}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random\+\_\+with\+\_\+add@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random\+\_\+with\+\_\+add}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random\+\_\+with\+\_\+add@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random\+\_\+with\+\_\+add}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random\+\_\+with\+\_\+add()}{mbedtls\_ctr\_drbg\_random\_with\_add()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ctr\+\_\+drbg\+\_\+random\+\_\+with\+\_\+add (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+\_\+rng,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t}]{output\+\_\+len,  }\item[{const unsigned char $\ast$}]{additional,  }\item[{size\+\_\+t}]{add\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+C\+T\+R\+\_\+\+D\+R\+BG generate random with additional update input. 
+
+Note\+: Automatically reseeds if reseed\+\_\+counter is reached.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+rng} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em output} & Buffer to fill \\
+\hline
+{\em output\+\_\+len} & Length of the buffer \\
+\hline
+{\em additional} & Additional data to update with (Can be N\+U\+LL) \\
+\hline
+{\em add\+\_\+len} & Length of additional data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ctr__drbg_8h_a495e3c86df7fc166454d0e85262e40a6}\label{ctr__drbg_8h_a495e3c86df7fc166454d0e85262e40a6}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+reseed@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+reseed}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+reseed@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+reseed}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+reseed()}{mbedtls\_ctr\_drbg\_reseed()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ctr\+\_\+drbg\+\_\+reseed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{additional,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+C\+T\+R\+\_\+\+D\+R\+BG reseeding (extracts data from entropy source) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em additional} & Additional data to add to state (Can be N\+U\+LL) \\
+\hline
+{\em len} & Length of additional data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ctr__drbg_8h_ad93d675f998550b4478c1fe6f4f34ebc}\label{ctr__drbg_8h_ad93d675f998550b4478c1fe6f4f34ebc}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed()}{mbedtls\_ctr\_drbg\_seed()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ctr\+\_\+drbg\+\_\+seed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+entropy,  }\item[{void $\ast$}]{p\+\_\+entropy,  }\item[{const unsigned char $\ast$}]{custom,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+C\+T\+R\+\_\+\+D\+R\+BG initial seeding Seed and setup entropy source for future reseeds. 
+
+Note\+: Personalization data can be provided in addition to the more generic entropy source to make this instantiation as unique as possible.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context to be seeded \\
+\hline
+{\em f\+\_\+entropy} & Entropy callback (p\+\_\+entropy, buffer to fill, buffer length) \\
+\hline
+{\em p\+\_\+entropy} & Entropy context \\
+\hline
+{\em custom} & Personalization data (Device specific identifiers) (Can be N\+U\+LL) \\
+\hline
+{\em len} & Length of personalization data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ctr__drbg_8h_a6f4c2d5ae50d4f122a6a1468480a9c3e}\label{ctr__drbg_8h_a6f4c2d5ae50d4f122a6a1468480a9c3e}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+self\+\_\+test@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+self\+\_\+test}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+self\+\_\+test@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+self\+\_\+test}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+self\+\_\+test()}{mbedtls\_ctr\_drbg\_self\_test()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ctr\+\_\+drbg\+\_\+self\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{verbose }\end{DoxyParamCaption})}
+
+
+
+Checkup routine. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, or 1 if the test failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ctr__drbg_8h_af33ced4a1fc79c6abbc1cb2b17f14549}\label{ctr__drbg_8h_af33ced4a1fc79c6abbc1cb2b17f14549}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+entropy\+\_\+len@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+entropy\+\_\+len}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+entropy\+\_\+len@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+entropy\+\_\+len}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+entropy\+\_\+len()}{mbedtls\_ctr\_drbg\_set\_entropy\_len()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+entropy\+\_\+len (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Set the amount of entropy grabbed on each (re)seed (Default\+: M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+EN) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em len} & Amount of entropy to grab \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ctr__drbg_8h_ae9871c5ba6b2fa5189423ef7cbe2078b}\label{ctr__drbg_8h_ae9871c5ba6b2fa5189423ef7cbe2078b}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+prediction\+\_\+resistance@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+prediction\+\_\+resistance}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+prediction\+\_\+resistance@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+prediction\+\_\+resistance}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+prediction\+\_\+resistance()}{mbedtls\_ctr\_drbg\_set\_prediction\_resistance()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+prediction\+\_\+resistance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx,  }\item[{int}]{resistance }\end{DoxyParamCaption})}
+
+
+
+Enable / disable prediction resistance (Default\+: Off) 
+
+Note\+: If enabled, entropy is used for ctx-\/$>$entropy\+\_\+len before each call! Only use this if you have ample supply of good entropy!
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em resistance} & M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+ON or M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+P\+R\+\_\+\+O\+FF \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ctr__drbg_8h_aefd5f442f96682f0cef0152866e4e46e}\label{ctr__drbg_8h_aefd5f442f96682f0cef0152866e4e46e}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+reseed\+\_\+interval@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+reseed\+\_\+interval}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+reseed\+\_\+interval@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+reseed\+\_\+interval}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+reseed\+\_\+interval()}{mbedtls\_ctr\_drbg\_set\_reseed\_interval()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+ctr\+\_\+drbg\+\_\+set\+\_\+reseed\+\_\+interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx,  }\item[{int}]{interval }\end{DoxyParamCaption})}
+
+
+
+Set the reseed interval (Default\+: M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+R\+E\+S\+E\+E\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em interval} & Reseed interval \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ctr__drbg_8h_a79d4bdb84d0c13f4bb28d5c3c6de4011}\label{ctr__drbg_8h_a79d4bdb84d0c13f4bb28d5c3c6de4011}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update()}{mbedtls\_ctr\_drbg\_update()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{additional,  }\item[{size\+\_\+t}]{add\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+C\+T\+R\+\_\+\+D\+R\+BG update state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em additional} & Additional data to update state with \\
+\hline
+{\em add\+\_\+len} & Length of additional data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If add\+\_\+len is greater than M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT, only the first M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+I\+N\+P\+UT bytes are used, the remaining ones are silently discarded. 
+\end{DoxyNote}
+\mbox{\Hypertarget{ctr__drbg_8h_a2dd8fb85c308475ca743aa634d4b0b96}\label{ctr__drbg_8h_a2dd8fb85c308475ca743aa634d4b0b96}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update\+\_\+seed\+\_\+file@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update\+\_\+seed\+\_\+file}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update\+\_\+seed\+\_\+file@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update\+\_\+seed\+\_\+file}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update\+\_\+seed\+\_\+file()}{mbedtls\_ctr\_drbg\_update\_seed\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ctr\+\_\+drbg\+\_\+update\+\_\+seed\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Read and update a seed file. Seed is added to this instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em path} & Name of the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR on file error, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+O\+O\+\_\+\+B\+IG 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ctr__drbg_8h_af8411dc8a4d9b2a7a5b4adf2ff3d9586}\label{ctr__drbg_8h_af8411dc8a4d9b2a7a5b4adf2ff3d9586}} 
+\index{ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}!mbedtls\+\_\+ctr\+\_\+drbg\+\_\+write\+\_\+seed\+\_\+file@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+write\+\_\+seed\+\_\+file}}
+\index{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+write\+\_\+seed\+\_\+file@{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+write\+\_\+seed\+\_\+file}!ctr\+\_\+drbg.\+h@{ctr\+\_\+drbg.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+write\+\_\+seed\+\_\+file()}{mbedtls\_ctr\_drbg\_write\_seed\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ctr\+\_\+drbg\+\_\+write\+\_\+seed\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__ctr__drbg__context}{mbedtls\+\_\+ctr\+\_\+drbg\+\_\+context}} $\ast$}]{ctx,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Write a seed file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+T\+R\+\_\+\+D\+R\+BG context \\
+\hline
+{\em path} & Name of the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR on file error, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+C\+T\+R\+\_\+\+D\+R\+B\+G\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}

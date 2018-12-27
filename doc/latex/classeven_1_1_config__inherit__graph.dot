@@ -1,0 +1,19 @@
+digraph "even::Config"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="even::Config",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="even::Exposition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_exposition.html",tooltip="Entitity of exposition data handler. "];
+  Node0 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid"];
+  Node2 [label="even::Network",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_network.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="even::Node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_node.html"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="even::Rscore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_rscore.html"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="even::Transaction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_transaction.html",tooltip="Transaction structure in bytes member size. All: 1248 bytes 32 - hash 1024 - signatureMessageFragment..."];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="even::TransactionTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_transaction_tree.html",tooltip="Entitity of transaction tree. "];
+}

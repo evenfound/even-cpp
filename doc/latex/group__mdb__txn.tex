@@ -1,0 +1,145 @@
+\hypertarget{group__mdb__txn}{}\section{Transaction Flags}
+\label{group__mdb__txn}\index{Transaction Flags@{Transaction Flags}}
+Collaboration diagram for Transaction Flags\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_gad9afcb51edcbf5ad5d69c2005e944d46}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+E\+G\+I\+N\+\_\+\+F\+L\+A\+GS}}~(\mbox{\hyperlink{group__mdb__env_ga5021c4e96ffe9f383f5b8ab2af8e4b16}{M\+D\+B\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}}$\vert$\mbox{\hyperlink{group__mdb__env_ga5791dd1adb09123f82dd1f331209e12e}{M\+D\+B\+\_\+\+N\+O\+S\+Y\+NC}}$\vert$\mbox{\hyperlink{group__mdb__env_gac4c41c0ae044127b2fc80420c323cac6}{M\+D\+B\+\_\+\+R\+D\+O\+N\+LY}})
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_gab0c610d1bdce4b05b0e8ce2310589ea3}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}}~\mbox{\hyperlink{group__mdb__env_ga5021c4e96ffe9f383f5b8ab2af8e4b16}{M\+D\+B\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}}
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_ga499024e46a7eae7f41b359c9166a8505}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+S\+Y\+NC}}~\mbox{\hyperlink{group__mdb__env_ga5791dd1adb09123f82dd1f331209e12e}{M\+D\+B\+\_\+\+N\+O\+S\+Y\+NC}}
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_ga8b592ca7b3e70786c23510f9f56a0ae2}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY}}~\mbox{\hyperlink{group__mdb__env_gac4c41c0ae044127b2fc80420c323cac6}{M\+D\+B\+\_\+\+R\+D\+O\+N\+LY}}
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_ga03da701716875fe8b56118a63a4106ab}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}~\mbox{\hyperlink{group__mdb__env_ga7b81e9fd5f8fae38786d67e1a8387fa7}{M\+D\+B\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_gabef55eae8d32bc3d6fafff8495bfc4a0}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_gadf70c805448c5b852647f5fdf7233a7d}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_gad73fa9622bdf80a7b4ebf8c739eb2c03}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+D\+I\+R\+TY}}~0x04
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_ga886a44ffd1ee13b786f4c3cc8b60e18a}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+S\+P\+I\+L\+LS}}~0x08
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_gae22c21354cea3cf2bddba79348c8f5b8}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD}}~0x10
+\item 
+\#define \mbox{\hyperlink{group__mdb__txn_gadd3e56a5a13680cccfd83a1fef4cf1bc}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+ED}}~(\mbox{\hyperlink{group__mdb__txn_gabef55eae8d32bc3d6fafff8495bfc4a0}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED}}$\vert$\mbox{\hyperlink{group__mdb__txn_gadf70c805448c5b852647f5fdf7233a7d}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR}}$\vert$\mbox{\hyperlink{group__mdb__txn_gae22c21354cea3cf2bddba79348c8f5b8}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__mdb__txn_gad9afcb51edcbf5ad5d69c2005e944d46}\label{group__mdb__txn_gad9afcb51edcbf5ad5d69c2005e944d46}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+E\+G\+I\+N\+\_\+\+F\+L\+A\+GS@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+E\+G\+I\+N\+\_\+\+F\+L\+A\+GS}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+E\+G\+I\+N\+\_\+\+F\+L\+A\+GS@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+E\+G\+I\+N\+\_\+\+F\+L\+A\+GS}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+E\+G\+I\+N\+\_\+\+F\+L\+A\+GS}{MDB\_TXN\_BEGIN\_FLAGS}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+E\+G\+I\+N\+\_\+\+F\+L\+A\+GS~(\mbox{\hyperlink{group__mdb__env_ga5021c4e96ffe9f383f5b8ab2af8e4b16}{M\+D\+B\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}}$\vert$\mbox{\hyperlink{group__mdb__env_ga5791dd1adb09123f82dd1f331209e12e}{M\+D\+B\+\_\+\+N\+O\+S\+Y\+NC}}$\vert$\mbox{\hyperlink{group__mdb__env_gac4c41c0ae044127b2fc80420c323cac6}{M\+D\+B\+\_\+\+R\+D\+O\+N\+LY}})}
+
+\mbox{\hyperlink{group__internal_gaec09fc4062fc4d99882f7f7256570bdb}{mdb\+\_\+txn\+\_\+begin()}} flags 
+
+Definition at line 1250 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_gadd3e56a5a13680cccfd83a1fef4cf1bc}\label{group__mdb__txn_gadd3e56a5a13680cccfd83a1fef4cf1bc}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+ED@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+ED}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+ED@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+ED}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+ED}{MDB\_TXN\_BLOCKED}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+ED~(\mbox{\hyperlink{group__mdb__txn_gabef55eae8d32bc3d6fafff8495bfc4a0}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED}}$\vert$\mbox{\hyperlink{group__mdb__txn_gadf70c805448c5b852647f5fdf7233a7d}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR}}$\vert$\mbox{\hyperlink{group__mdb__txn_gae22c21354cea3cf2bddba79348c8f5b8}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD}})}
+
+most operations on the txn are currently illegal 
+
+Definition at line 1262 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_gad73fa9622bdf80a7b4ebf8c739eb2c03}\label{group__mdb__txn_gad73fa9622bdf80a7b4ebf8c739eb2c03}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+D\+I\+R\+TY@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+D\+I\+R\+TY}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+D\+I\+R\+TY@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+D\+I\+R\+TY}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+D\+I\+R\+TY}{MDB\_TXN\_DIRTY}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+D\+I\+R\+TY~0x04}
+
+must write, even if dirty list is empty 
+
+Definition at line 1258 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_gadf70c805448c5b852647f5fdf7233a7d}\label{group__mdb__txn_gadf70c805448c5b852647f5fdf7233a7d}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR}{MDB\_TXN\_ERROR}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+E\+R\+R\+OR~0x02}
+
+txn is unusable after an error 
+
+Definition at line 1257 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_gabef55eae8d32bc3d6fafff8495bfc4a0}\label{group__mdb__txn_gabef55eae8d32bc3d6fafff8495bfc4a0}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED}{MDB\_TXN\_FINISHED}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+I\+N\+I\+S\+H\+ED~0x01}
+
+txn is finished or never began 
+
+Definition at line 1256 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_gae22c21354cea3cf2bddba79348c8f5b8}\label{group__mdb__txn_gae22c21354cea3cf2bddba79348c8f5b8}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD}{MDB\_TXN\_HAS\_CHILD}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD~0x10}
+
+txn has an \mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}}.mt\+\_\+child 
+
+Definition at line 1260 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_gab0c610d1bdce4b05b0e8ce2310589ea3}\label{group__mdb__txn_gab0c610d1bdce4b05b0e8ce2310589ea3}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}{MDB\_TXN\_NOMETASYNC}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC~\mbox{\hyperlink{group__mdb__env_ga5021c4e96ffe9f383f5b8ab2af8e4b16}{M\+D\+B\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}}}
+
+don\textquotesingle{}t sync meta for this txn on commit 
+
+Definition at line 1251 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_ga499024e46a7eae7f41b359c9166a8505}\label{group__mdb__txn_ga499024e46a7eae7f41b359c9166a8505}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+S\+Y\+NC@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+S\+Y\+NC}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+S\+Y\+NC@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+S\+Y\+NC}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+S\+Y\+NC}{MDB\_TXN\_NOSYNC}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+N\+O\+S\+Y\+NC~\mbox{\hyperlink{group__mdb__env_ga5791dd1adb09123f82dd1f331209e12e}{M\+D\+B\+\_\+\+N\+O\+S\+Y\+NC}}}
+
+don\textquotesingle{}t sync this txn on commit 
+
+Definition at line 1252 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_ga8b592ca7b3e70786c23510f9f56a0ae2}\label{group__mdb__txn_ga8b592ca7b3e70786c23510f9f56a0ae2}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY}{MDB\_TXN\_RDONLY}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY~\mbox{\hyperlink{group__mdb__env_gac4c41c0ae044127b2fc80420c323cac6}{M\+D\+B\+\_\+\+R\+D\+O\+N\+LY}}}
+
+read-\/only transaction 
+
+Definition at line 1253 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_ga886a44ffd1ee13b786f4c3cc8b60e18a}\label{group__mdb__txn_ga886a44ffd1ee13b786f4c3cc8b60e18a}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+S\+P\+I\+L\+LS@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+S\+P\+I\+L\+LS}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+S\+P\+I\+L\+LS@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+S\+P\+I\+L\+LS}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+S\+P\+I\+L\+LS}{MDB\_TXN\_SPILLS}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+S\+P\+I\+L\+LS~0x08}
+
+txn or a parent has spilled pages 
+
+Definition at line 1259 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__txn_ga03da701716875fe8b56118a63a4106ab}\label{group__mdb__txn_ga03da701716875fe8b56118a63a4106ab}} 
+\index{Transaction Flags@{Transaction Flags}!M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}
+\index{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP@{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP}!Transaction Flags@{Transaction Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP}{MDB\_TXN\_WRITEMAP}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP~\mbox{\hyperlink{group__mdb__env_ga7b81e9fd5f8fae38786d67e1a8387fa7}{M\+D\+B\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}}
+
+copy of \mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} flag in writers 
+
+Definition at line 1255 of file mdb.\+c.
+

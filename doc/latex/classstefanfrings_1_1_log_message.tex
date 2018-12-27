@@ -1,0 +1,114 @@
+\hypertarget{classstefanfrings_1_1_log_message}{}\section{stefanfrings\+:\+:Log\+Message Class Reference}
+\label{classstefanfrings_1_1_log_message}\index{stefanfrings\+::\+Log\+Message@{stefanfrings\+::\+Log\+Message}}
+
+
+{\ttfamily \#include $<$logmessage.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_log_message_a91ef335fb19eee7f7d26ee86cc3d4f86}{Log\+Message}} (const Qt\+Msg\+Type type, const Q\+String \&message, Q\+Hash$<$ Q\+String, Q\+String $>$ $\ast$log\+Vars, const Q\+String \&file, const Q\+String \&function, const int line)
+\item 
+Q\+String \mbox{\hyperlink{classstefanfrings_1_1_log_message_a0afc95ed8eb8b5cc611b5b9436f65053}{to\+String}} (const Q\+String \&msg\+Format, const Q\+String \&timestamp\+Format) const
+\item 
+Qt\+Msg\+Type \mbox{\hyperlink{classstefanfrings_1_1_log_message_a6e0563caa0e118de2b9664b08ee6c856}{get\+Type}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a single log message together with some data that are used to decorate the log message.
+
+The following variables may be used in the message and in msg\+Format\+:
+
+
+\begin{DoxyItemize}
+\item \{timestamp\} Date and time of creation
+\item \{type\+Nr\} Type of the message in numeric format (0-\/3)
+\item \{type\} Type of the message in string format (D\+E\+B\+UG, W\+A\+R\+N\+I\+NG, C\+R\+I\+T\+I\+C\+AL, F\+A\+T\+AL)
+\item \{thread\} ID number of the thread
+\item \{msg\} Message text
+\item \{xxx\} For any user-\/defined logger variable
+\end{DoxyItemize}
+
+Plus some new variables since QT 5.\+0, only filled when compiled in debug mode\+:
+
+
+\begin{DoxyItemize}
+\item \{file\} Filename where the message was generated
+\item \{function\} Function where the message was generated
+\item \{line\} Line number where the message was generated 
+\end{DoxyItemize}
+
+Definition at line 36 of file logmessage.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_log_message_a91ef335fb19eee7f7d26ee86cc3d4f86}\label{classstefanfrings_1_1_log_message_a91ef335fb19eee7f7d26ee86cc3d4f86}} 
+\index{stefanfrings\+::\+Log\+Message@{stefanfrings\+::\+Log\+Message}!Log\+Message@{Log\+Message}}
+\index{Log\+Message@{Log\+Message}!stefanfrings\+::\+Log\+Message@{stefanfrings\+::\+Log\+Message}}
+\subsubsection{\texorpdfstring{Log\+Message()}{LogMessage()}}
+{\footnotesize\ttfamily Log\+Message\+::\+Log\+Message (\begin{DoxyParamCaption}\item[{const Qt\+Msg\+Type}]{type,  }\item[{const Q\+String \&}]{message,  }\item[{Q\+Hash$<$ Q\+String, Q\+String $>$ $\ast$}]{log\+Vars,  }\item[{const Q\+String \&}]{file,  }\item[{const Q\+String \&}]{function,  }\item[{const int}]{line }\end{DoxyParamCaption})}
+
+Constructor. All parameters are copied, so that later changes to them do not affect this object. 
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of the message \\
+\hline
+{\em message} & Message text \\
+\hline
+{\em log\+Vars} & \mbox{\hyperlink{classstefanfrings_1_1_logger}{Logger}} variables, 0 is allowed \\
+\hline
+{\em file} & Name of the source file where the message was generated \\
+\hline
+{\em function} & Name of the function where the message was generated \\
+\hline
+{\em line} & Line Number of the source file, where the message was generated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file logmessage.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_log_message_a6e0563caa0e118de2b9664b08ee6c856}\label{classstefanfrings_1_1_log_message_a6e0563caa0e118de2b9664b08ee6c856}} 
+\index{stefanfrings\+::\+Log\+Message@{stefanfrings\+::\+Log\+Message}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!stefanfrings\+::\+Log\+Message@{stefanfrings\+::\+Log\+Message}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily Qt\+Msg\+Type Log\+Message\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the message type. 
+
+Definition at line 87 of file logmessage.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classstefanfrings_1_1_log_message_a0afc95ed8eb8b5cc611b5b9436f65053}\label{classstefanfrings_1_1_log_message_a0afc95ed8eb8b5cc611b5b9436f65053}} 
+\index{stefanfrings\+::\+Log\+Message@{stefanfrings\+::\+Log\+Message}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!stefanfrings\+::\+Log\+Message@{stefanfrings\+::\+Log\+Message}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily Q\+String Log\+Message\+::to\+String (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{msg\+Format,  }\item[{const Q\+String \&}]{timestamp\+Format }\end{DoxyParamCaption}) const}
+
+Returns the log message as decorated string. 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Format} & Format of the decoration. May contain variables and static text, e.\+g. \char`\"{}\{timestamp\} \{type\} thread=\{thread\}\+: \{msg\}\char`\"{}. \\
+\hline
+{\em timestamp\+Format} & Format of timestamp, e.\+g. \char`\"{}dd.\+M\+M.\+yyyy hh\+:mm\+:ss.\+zzz\char`\"{}, see Q\+Date\+Time\+::to\+String(). \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Q\+Datetime for a description of the timestamp format pattern 
+\end{DoxySeeAlso}
+
+
+Definition at line 29 of file logmessage.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/logging/\mbox{\hyperlink{logmessage_8h}{logmessage.\+h}}\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/logging/\mbox{\hyperlink{logmessage_8cpp}{logmessage.\+cpp}}\end{DoxyCompactItemize}

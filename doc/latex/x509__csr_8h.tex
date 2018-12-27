@@ -1,0 +1,284 @@
+\hypertarget{x509__csr_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/x509\+\_\+csr.h File Reference}
+\label{x509__csr_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/x509\+\_\+csr.\+h@{prerequisites/c-\/libp2p/include/mbedtls/x509\+\_\+csr.\+h}}
+
+
+X.\+509 certificate signing request parsing and writing.  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}x509.\+h\char`\"{}}\newline
+Include dependency graph for x509\+\_\+csr.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{x509__csr_8h_a7892bce1ba95bfe909929f9b9c1362e8}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+init}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Initialize a C\+SR context. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{x509__csr_8h_a954eae166b125cea2115b7db8c896e90}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+subject\+\_\+name}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx, const char $\ast$subject\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set the subject name for a C\+SR Subject names should contain a comma-\/separated list of O\+ID types and values\+: e.\+g. \char`\"{}\+C=\+U\+K,\+O=\+A\+R\+M,\+C\+N=mbed T\+L\+S Server 1\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{x509__csr_8h_ac4f0b724b1c7006d178e2d71c964f54c}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx, \mbox{\hyperlink{structmbedtls__pk__context}{mbedtls\+\_\+pk\+\_\+context}} $\ast$key)
+\begin{DoxyCompactList}\small\item\em Set the key for a C\+SR (public key will be included, private key used to sign the C\+SR when writing it) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{x509__csr_8h_a2be90e1d59d29b2309670700a8c0420f}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+md\+\_\+alg}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx, mbedtls\+\_\+md\+\_\+type\+\_\+t md\+\_\+alg)
+\begin{DoxyCompactList}\small\item\em Set the MD algorithm to use for the signature (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+D\+\_\+\+S\+H\+A1) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{x509__csr_8h_ac5ed085a0dee293f6c152ecd597473be}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key\+\_\+usage}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx, unsigned char key\+\_\+usage)
+\begin{DoxyCompactList}\small\item\em Set the Key Usage Extension flags (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+K\+U\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE $\vert$ M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+K\+U\+\_\+\+K\+E\+Y\+\_\+\+C\+E\+R\+T\+\_\+\+S\+I\+GN) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{x509__csr_8h_a22571c0a8439dcacaa9762eca4d73a6e}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+ns\+\_\+cert\+\_\+type}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx, unsigned char ns\+\_\+cert\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Set the Netscape Cert Type flags (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+S\+L\+\_\+\+C\+L\+I\+E\+NT $\vert$ M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+M\+A\+IL) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{x509__csr_8h_a04e3c44ffeca58318250b7b1e6c416d1}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+extension}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx, const char $\ast$oid, size\+\_\+t oid\+\_\+len, const unsigned char $\ast$val, size\+\_\+t val\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Generic function to add to or replace an extension in the C\+SR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{x509__csr_8h_a223d765f33318e804739f9cf81eddef6}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+free}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Free the contents of a C\+SR context. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{x509__csr_8h_ade066bfe50987c491ff51ce4f347fcb4}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+der}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx, unsigned char $\ast$buf, size\+\_\+t size, int($\ast$f\+\_\+rng)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+rng)
+\begin{DoxyCompactList}\small\item\em Write a C\+SR (Certificate Signing \mbox{\hyperlink{struct_request}{Request}}) to a D\+ER structure Note\+: data is written at the end of the buffer! Use the return value to determine where you should start using the buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{x509__csr_8h_a5851f2aeb7d9a4676c16d2a837cad0cc}{mbedtls\+\_\+x509write\+\_\+csr\+\_\+pem}} (\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$ctx, unsigned char $\ast$buf, size\+\_\+t size, int($\ast$f\+\_\+rng)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+rng)
+\begin{DoxyCompactList}\small\item\em Write a C\+SR (Certificate Signing \mbox{\hyperlink{struct_request}{Request}}) to a P\+EM string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Structures and functions for X.509 Certificate Signing Requests (C\+SR)}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} \mbox{\hyperlink{group__x509__module_gae481b23df67001bdac96ef9c2ab3ef7c}{mbedtls\+\_\+x509\+\_\+csr}}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} \mbox{\hyperlink{group__x509__module_ga7b0b4f8c5cfd541ee20c53907edb636d}{mbedtls\+\_\+x509write\+\_\+csr}}
+\item 
+int \mbox{\hyperlink{group__x509__module_ga4c58fa3804ea9feb1acf745221f17208}{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR) in D\+ER format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga53012fb8859f4835ccfb0a5e359b3176}{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR), D\+ER or P\+EM format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gaf49db7323eee45d9649600de18d715f8}{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+file}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gaeec330c8cb351adc2870f4f088f36fdc}{mbedtls\+\_\+x509\+\_\+csr\+\_\+info}} (char $\ast$buf, size\+\_\+t size, const char $\ast$prefix, const \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr)
+\begin{DoxyCompactList}\small\item\em Returns an informational string about the C\+SR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__x509__module_ga984db025f6953ea61be7dfca2d928f37}{mbedtls\+\_\+x509\+\_\+csr\+\_\+init}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr)
+\begin{DoxyCompactList}\small\item\em Initialize a C\+SR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__x509__module_gac2139becff64aa7294ecad4f40767a84}{mbedtls\+\_\+x509\+\_\+csr\+\_\+free}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr)
+\begin{DoxyCompactList}\small\item\em Unallocate all C\+SR data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+X.\+509 certificate signing request parsing and writing. 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{x509__csr_8h_ade066bfe50987c491ff51ce4f347fcb4}\label{x509__csr_8h_ade066bfe50987c491ff51ce4f347fcb4}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+der@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+der}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+der@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+der}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+der()}{mbedtls\_x509write\_csr\_der()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509write\+\_\+csr\+\_\+der (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx,  }\item[{unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+rng,  }\item[{void $\ast$}]{p\+\_\+rng }\end{DoxyParamCaption})}
+
+
+
+Write a C\+SR (Certificate Signing \mbox{\hyperlink{struct_request}{Request}}) to a D\+ER structure Note\+: data is written at the end of the buffer! Use the return value to determine where you should start using the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR to write away \\
+\hline
+{\em buf} & buffer to write to \\
+\hline
+{\em size} & size of the buffer \\
+\hline
+{\em f\+\_\+rng} & R\+NG function (for signature, see note) \\
+\hline
+{\em p\+\_\+rng} & R\+NG parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+length of data written if successful, or a specific error code
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+f\+\_\+rng may be N\+U\+LL if R\+SA is used for signature and the signature is made offline (otherwise f\+\_\+rng is desirable for countermeasures against timing attacks). E\+C\+D\+SA signatures always require a non-\/\+N\+U\+LL f\+\_\+rng. 
+\end{DoxyNote}
+\mbox{\Hypertarget{x509__csr_8h_a223d765f33318e804739f9cf81eddef6}\label{x509__csr_8h_a223d765f33318e804739f9cf81eddef6}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+free@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+free}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+free@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+free}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+free()}{mbedtls\_x509write\_csr\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509write\+\_\+csr\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Free the contents of a C\+SR context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR context to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{x509__csr_8h_a7892bce1ba95bfe909929f9b9c1362e8}\label{x509__csr_8h_a7892bce1ba95bfe909929f9b9c1362e8}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+init@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+init}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+init@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+init}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+init()}{mbedtls\_x509write\_csr\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509write\+\_\+csr\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Initialize a C\+SR context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR context to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{x509__csr_8h_a5851f2aeb7d9a4676c16d2a837cad0cc}\label{x509__csr_8h_a5851f2aeb7d9a4676c16d2a837cad0cc}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+pem@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+pem}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+pem@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+pem}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+pem()}{mbedtls\_x509write\_csr\_pem()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509write\+\_\+csr\+\_\+pem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx,  }\item[{unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+rng,  }\item[{void $\ast$}]{p\+\_\+rng }\end{DoxyParamCaption})}
+
+
+
+Write a C\+SR (Certificate Signing \mbox{\hyperlink{struct_request}{Request}}) to a P\+EM string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR to write away \\
+\hline
+{\em buf} & buffer to write to \\
+\hline
+{\em size} & size of the buffer \\
+\hline
+{\em f\+\_\+rng} & R\+NG function (for signature, see note) \\
+\hline
+{\em p\+\_\+rng} & R\+NG parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific error code
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+f\+\_\+rng may be N\+U\+LL if R\+SA is used for signature and the signature is made offline (otherwise f\+\_\+rng is desirable for countermeasures against timing attacks). E\+C\+D\+SA signatures always require a non-\/\+N\+U\+LL f\+\_\+rng. 
+\end{DoxyNote}
+\mbox{\Hypertarget{x509__csr_8h_a04e3c44ffeca58318250b7b1e6c416d1}\label{x509__csr_8h_a04e3c44ffeca58318250b7b1e6c416d1}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+extension@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+extension}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+extension@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+extension}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+extension()}{mbedtls\_x509write\_csr\_set\_extension()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+extension (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx,  }\item[{const char $\ast$}]{oid,  }\item[{size\+\_\+t}]{oid\+\_\+len,  }\item[{const unsigned char $\ast$}]{val,  }\item[{size\+\_\+t}]{val\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Generic function to add to or replace an extension in the C\+SR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR context to use \\
+\hline
+{\em oid} & O\+ID of the extension \\
+\hline
+{\em oid\+\_\+len} & length of the O\+ID \\
+\hline
+{\em val} & value of the extension O\+C\+T\+ET S\+T\+R\+I\+NG \\
+\hline
+{\em val\+\_\+len} & length of the value data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{x509__csr_8h_ac4f0b724b1c7006d178e2d71c964f54c}\label{x509__csr_8h_ac4f0b724b1c7006d178e2d71c964f54c}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key()}{mbedtls\_x509write\_csr\_set\_key()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx,  }\item[{\mbox{\hyperlink{structmbedtls__pk__context}{mbedtls\+\_\+pk\+\_\+context}} $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Set the key for a C\+SR (public key will be included, private key used to sign the C\+SR when writing it) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR context to use \\
+\hline
+{\em key} & Asymetric key to include \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{x509__csr_8h_ac5ed085a0dee293f6c152ecd597473be}\label{x509__csr_8h_ac5ed085a0dee293f6c152ecd597473be}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key\+\_\+usage@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key\+\_\+usage}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key\+\_\+usage@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key\+\_\+usage}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key\+\_\+usage()}{mbedtls\_x509write\_csr\_set\_key\_usage()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+key\+\_\+usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx,  }\item[{unsigned char}]{key\+\_\+usage }\end{DoxyParamCaption})}
+
+
+
+Set the Key Usage Extension flags (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+K\+U\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE $\vert$ M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+K\+U\+\_\+\+K\+E\+Y\+\_\+\+C\+E\+R\+T\+\_\+\+S\+I\+GN) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR context to use \\
+\hline
+{\em key\+\_\+usage} & key usage flags to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{x509__csr_8h_a2be90e1d59d29b2309670700a8c0420f}\label{x509__csr_8h_a2be90e1d59d29b2309670700a8c0420f}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+md\+\_\+alg@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+md\+\_\+alg}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+md\+\_\+alg@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+md\+\_\+alg}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+md\+\_\+alg()}{mbedtls\_x509write\_csr\_set\_md\_alg()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+md\+\_\+alg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx,  }\item[{mbedtls\+\_\+md\+\_\+type\+\_\+t}]{md\+\_\+alg }\end{DoxyParamCaption})}
+
+
+
+Set the MD algorithm to use for the signature (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+D\+\_\+\+S\+H\+A1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR context to use \\
+\hline
+{\em md\+\_\+alg} & MD algorithm to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{x509__csr_8h_a22571c0a8439dcacaa9762eca4d73a6e}\label{x509__csr_8h_a22571c0a8439dcacaa9762eca4d73a6e}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+ns\+\_\+cert\+\_\+type@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+ns\+\_\+cert\+\_\+type}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+ns\+\_\+cert\+\_\+type@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+ns\+\_\+cert\+\_\+type}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+ns\+\_\+cert\+\_\+type()}{mbedtls\_x509write\_csr\_set\_ns\_cert\_type()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+ns\+\_\+cert\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx,  }\item[{unsigned char}]{ns\+\_\+cert\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Set the Netscape Cert Type flags (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+S\+L\+\_\+\+C\+L\+I\+E\+NT $\vert$ M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+M\+A\+IL) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR context to use \\
+\hline
+{\em ns\+\_\+cert\+\_\+type} & Netscape Cert Type flags to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{x509__csr_8h_a954eae166b125cea2115b7db8c896e90}\label{x509__csr_8h_a954eae166b125cea2115b7db8c896e90}} 
+\index{x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}!mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+subject\+\_\+name@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+subject\+\_\+name}}
+\index{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+subject\+\_\+name@{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+subject\+\_\+name}!x509\+\_\+csr.\+h@{x509\+\_\+csr.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+subject\+\_\+name()}{mbedtls\_x509write\_csr\_set\_subject\_name()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509write\+\_\+csr\+\_\+set\+\_\+subject\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} $\ast$}]{ctx,  }\item[{const char $\ast$}]{subject\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Set the subject name for a C\+SR Subject names should contain a comma-\/separated list of O\+ID types and values\+: e.\+g. \char`\"{}\+C=\+U\+K,\+O=\+A\+R\+M,\+C\+N=mbed T\+L\+S Server 1\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & C\+SR context to use \\
+\hline
+{\em subject\+\_\+name} & subject name to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if subject name was parsed successfully, or a specific error code 
+\end{DoxyReturn}

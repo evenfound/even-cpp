@@ -1,0 +1,124 @@
+\hypertarget{structmbedtls__cipher__info__t}{}\section{mbedtls\+\_\+cipher\+\_\+info\+\_\+t Struct Reference}
+\label{structmbedtls__cipher__info__t}\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+
+
+{\ttfamily \#include $<$cipher.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+mbedtls\+\_\+cipher\+\_\+type\+\_\+t \mbox{\hyperlink{structmbedtls__cipher__info__t_a399f289efa81ca0da63bc80686b5fe82}{type}}
+\item 
+mbedtls\+\_\+cipher\+\_\+mode\+\_\+t \mbox{\hyperlink{structmbedtls__cipher__info__t_a6603375900f4834ae6c91e305aef34f6}{mode}}
+\item 
+unsigned int \mbox{\hyperlink{structmbedtls__cipher__info__t_a21ac3fc6bf536ce16f1754301e7fe3c9}{key\+\_\+bitlen}}
+\item 
+const char $\ast$ \mbox{\hyperlink{structmbedtls__cipher__info__t_a7e79a9fb2bd143cc08d59b89b86c9ed7}{name}}
+\item 
+unsigned int \mbox{\hyperlink{structmbedtls__cipher__info__t_a3416bc1e18e1694da17bc922f152b20d}{iv\+\_\+size}}
+\item 
+int \mbox{\hyperlink{structmbedtls__cipher__info__t_af0aa5e7fedfd8a85434ec43691d890d8}{flags}}
+\item 
+unsigned int \mbox{\hyperlink{structmbedtls__cipher__info__t_a7be9560c375110a1d829407e74ab698f}{block\+\_\+size}}
+\item 
+const \mbox{\hyperlink{structmbedtls__cipher__base__t}{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}} $\ast$ \mbox{\hyperlink{structmbedtls__cipher__info__t_ab49e136926e04b02806503deb8844f2d}{base}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cipher information. Allows cipher functions to be called in a generic way. 
+
+Definition at line 187 of file cipher.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__cipher__info__t_ab49e136926e04b02806503deb8844f2d}\label{structmbedtls__cipher__info__t_ab49e136926e04b02806503deb8844f2d}} 
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}!base@{base}}
+\index{base@{base}!mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__cipher__base__t}{mbedtls\+\_\+cipher\+\_\+base\+\_\+t}}$\ast$ mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+::base}
+
+Base cipher information and functions 
+
+Definition at line 212 of file cipher.\+h.
+
+\mbox{\Hypertarget{structmbedtls__cipher__info__t_a7be9560c375110a1d829407e74ab698f}\label{structmbedtls__cipher__info__t_a7be9560c375110a1d829407e74ab698f}} 
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}!block\+\_\+size@{block\+\_\+size}}
+\index{block\+\_\+size@{block\+\_\+size}!mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{block\+\_\+size}{block\_size}}
+{\footnotesize\ttfamily unsigned int mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+::block\+\_\+size}
+
+block size, in bytes 
+
+Definition at line 209 of file cipher.\+h.
+
+\mbox{\Hypertarget{structmbedtls__cipher__info__t_af0aa5e7fedfd8a85434ec43691d890d8}\label{structmbedtls__cipher__info__t_af0aa5e7fedfd8a85434ec43691d890d8}} 
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}!flags@{flags}}
+\index{flags@{flags}!mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily int mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+::flags}
+
+Flags for variable IV size, variable key size, etc. 
+
+Definition at line 206 of file cipher.\+h.
+
+\mbox{\Hypertarget{structmbedtls__cipher__info__t_a3416bc1e18e1694da17bc922f152b20d}\label{structmbedtls__cipher__info__t_a3416bc1e18e1694da17bc922f152b20d}} 
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}!iv\+\_\+size@{iv\+\_\+size}}
+\index{iv\+\_\+size@{iv\+\_\+size}!mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{iv\+\_\+size}{iv\_size}}
+{\footnotesize\ttfamily unsigned int mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+::iv\+\_\+size}
+
+I\+V/\+N\+O\+N\+CE size, in bytes. For cipher that accept many sizes\+: recommended size 
+
+Definition at line 203 of file cipher.\+h.
+
+\mbox{\Hypertarget{structmbedtls__cipher__info__t_a21ac3fc6bf536ce16f1754301e7fe3c9}\label{structmbedtls__cipher__info__t_a21ac3fc6bf536ce16f1754301e7fe3c9}} 
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}!key\+\_\+bitlen@{key\+\_\+bitlen}}
+\index{key\+\_\+bitlen@{key\+\_\+bitlen}!mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{key\+\_\+bitlen}{key\_bitlen}}
+{\footnotesize\ttfamily unsigned int mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+::key\+\_\+bitlen}
+
+Cipher key length, in bits (default length for variable sized ciphers) (Includes parity bits for ciphers like D\+ES) 
+
+Definition at line 196 of file cipher.\+h.
+
+\mbox{\Hypertarget{structmbedtls__cipher__info__t_a6603375900f4834ae6c91e305aef34f6}\label{structmbedtls__cipher__info__t_a6603375900f4834ae6c91e305aef34f6}} 
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}!mode@{mode}}
+\index{mode@{mode}!mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily mbedtls\+\_\+cipher\+\_\+mode\+\_\+t mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+::mode}
+
+Cipher mode (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+C\+BC) 
+
+Definition at line 192 of file cipher.\+h.
+
+\mbox{\Hypertarget{structmbedtls__cipher__info__t_a7e79a9fb2bd143cc08d59b89b86c9ed7}\label{structmbedtls__cipher__info__t_a7e79a9fb2bd143cc08d59b89b86c9ed7}} 
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}!name@{name}}
+\index{name@{name}!mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily const char$\ast$ mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+::name}
+
+Name of the cipher 
+
+Definition at line 199 of file cipher.\+h.
+
+\mbox{\Hypertarget{structmbedtls__cipher__info__t_a399f289efa81ca0da63bc80686b5fe82}\label{structmbedtls__cipher__info__t_a399f289efa81ca0da63bc80686b5fe82}} 
+\index{mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}!type@{type}}
+\index{type@{type}!mbedtls\+\_\+cipher\+\_\+info\+\_\+t@{mbedtls\+\_\+cipher\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily mbedtls\+\_\+cipher\+\_\+type\+\_\+t mbedtls\+\_\+cipher\+\_\+info\+\_\+t\+::type}
+
+Full cipher identifier (e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+C\+I\+P\+H\+E\+R\+\_\+\+A\+E\+S\+\_\+256\+\_\+\+C\+BC) 
+
+Definition at line 189 of file cipher.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/\mbox{\hyperlink{cipher_8h}{cipher.\+h}}\end{DoxyCompactItemize}

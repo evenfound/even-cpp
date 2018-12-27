@@ -1,0 +1,10 @@
+digraph "Botan::X509_Certificate_Data"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Botan::X509_Certificate_Data",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_issuer_ds\nm_subject_ds" ];
+  Node2 [label="Botan::Data_Store",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_data___store.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_version\nm_path_len_constraint" ];
+  Node3 [label="size_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

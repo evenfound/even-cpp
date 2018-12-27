@@ -1,0 +1,105 @@
+\hypertarget{struct_m_d_b__stat}{}\section{M\+D\+B\+\_\+stat Struct Reference}
+\label{struct_m_d_b__stat}\index{M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}}
+
+
+Statistics for a database in the environment.  
+
+
+
+
+{\ttfamily \#include $<$lmdb.\+h$>$}
+
+
+
+Collaboration diagram for M\+D\+B\+\_\+stat\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{struct_m_d_b__stat_a770440a4f2dec8592ae8f86c80895516}{ms\+\_\+psize}}
+\item 
+unsigned int \mbox{\hyperlink{struct_m_d_b__stat_ab4e70f35499a7e7c71429b04ac62de68}{ms\+\_\+depth}}
+\item 
+\mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__stat_a7aa982a4930af52421cd698852f39cd8}{ms\+\_\+branch\+\_\+pages}}
+\item 
+\mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__stat_abbcde1ee2a6131f5c815c41dd75f8ce8}{ms\+\_\+leaf\+\_\+pages}}
+\item 
+\mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__stat_afa3924f9dc1241ba89c117b4c0d189ca}{ms\+\_\+overflow\+\_\+pages}}
+\item 
+\mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__stat_a28bb7e00d1098ccfd44a10eca4aa8403}{ms\+\_\+entries}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Statistics for a database in the environment. 
+
+Definition at line 487 of file lmdb.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_d_b__stat_a7aa982a4930af52421cd698852f39cd8}\label{struct_m_d_b__stat_a7aa982a4930af52421cd698852f39cd8}} 
+\index{M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}!ms\+\_\+branch\+\_\+pages@{ms\+\_\+branch\+\_\+pages}}
+\index{ms\+\_\+branch\+\_\+pages@{ms\+\_\+branch\+\_\+pages}!M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}}
+\subsubsection{\texorpdfstring{ms\+\_\+branch\+\_\+pages}{ms\_branch\_pages}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} M\+D\+B\+\_\+stat\+::ms\+\_\+branch\+\_\+pages}
+
+Number of internal (non-\/leaf) pages 
+
+Definition at line 491 of file lmdb.\+h.
+
+\mbox{\Hypertarget{struct_m_d_b__stat_ab4e70f35499a7e7c71429b04ac62de68}\label{struct_m_d_b__stat_ab4e70f35499a7e7c71429b04ac62de68}} 
+\index{M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}!ms\+\_\+depth@{ms\+\_\+depth}}
+\index{ms\+\_\+depth@{ms\+\_\+depth}!M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}}
+\subsubsection{\texorpdfstring{ms\+\_\+depth}{ms\_depth}}
+{\footnotesize\ttfamily unsigned int M\+D\+B\+\_\+stat\+::ms\+\_\+depth}
+
+Depth (height) of the B-\/tree 
+
+Definition at line 490 of file lmdb.\+h.
+
+\mbox{\Hypertarget{struct_m_d_b__stat_a28bb7e00d1098ccfd44a10eca4aa8403}\label{struct_m_d_b__stat_a28bb7e00d1098ccfd44a10eca4aa8403}} 
+\index{M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}!ms\+\_\+entries@{ms\+\_\+entries}}
+\index{ms\+\_\+entries@{ms\+\_\+entries}!M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}}
+\subsubsection{\texorpdfstring{ms\+\_\+entries}{ms\_entries}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} M\+D\+B\+\_\+stat\+::ms\+\_\+entries}
+
+Number of data items 
+
+Definition at line 494 of file lmdb.\+h.
+
+\mbox{\Hypertarget{struct_m_d_b__stat_abbcde1ee2a6131f5c815c41dd75f8ce8}\label{struct_m_d_b__stat_abbcde1ee2a6131f5c815c41dd75f8ce8}} 
+\index{M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}!ms\+\_\+leaf\+\_\+pages@{ms\+\_\+leaf\+\_\+pages}}
+\index{ms\+\_\+leaf\+\_\+pages@{ms\+\_\+leaf\+\_\+pages}!M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}}
+\subsubsection{\texorpdfstring{ms\+\_\+leaf\+\_\+pages}{ms\_leaf\_pages}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} M\+D\+B\+\_\+stat\+::ms\+\_\+leaf\+\_\+pages}
+
+Number of leaf pages 
+
+Definition at line 492 of file lmdb.\+h.
+
+\mbox{\Hypertarget{struct_m_d_b__stat_afa3924f9dc1241ba89c117b4c0d189ca}\label{struct_m_d_b__stat_afa3924f9dc1241ba89c117b4c0d189ca}} 
+\index{M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}!ms\+\_\+overflow\+\_\+pages@{ms\+\_\+overflow\+\_\+pages}}
+\index{ms\+\_\+overflow\+\_\+pages@{ms\+\_\+overflow\+\_\+pages}!M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}}
+\subsubsection{\texorpdfstring{ms\+\_\+overflow\+\_\+pages}{ms\_overflow\_pages}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} M\+D\+B\+\_\+stat\+::ms\+\_\+overflow\+\_\+pages}
+
+Number of overflow pages 
+
+Definition at line 493 of file lmdb.\+h.
+
+\mbox{\Hypertarget{struct_m_d_b__stat_a770440a4f2dec8592ae8f86c80895516}\label{struct_m_d_b__stat_a770440a4f2dec8592ae8f86c80895516}} 
+\index{M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}!ms\+\_\+psize@{ms\+\_\+psize}}
+\index{ms\+\_\+psize@{ms\+\_\+psize}!M\+D\+B\+\_\+stat@{M\+D\+B\+\_\+stat}}
+\subsubsection{\texorpdfstring{ms\+\_\+psize}{ms\_psize}}
+{\footnotesize\ttfamily unsigned int M\+D\+B\+\_\+stat\+::ms\+\_\+psize}
+
+Size of a database page. This is currently the same for all databases. 
+
+Definition at line 488 of file lmdb.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{lmdb_8h}{lmdb.\+h}}\end{DoxyCompactItemize}

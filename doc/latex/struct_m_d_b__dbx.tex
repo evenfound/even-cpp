@@ -1,0 +1,84 @@
+\hypertarget{struct_m_d_b__dbx}{}\section{M\+D\+B\+\_\+dbx Struct Reference}
+\label{struct_m_d_b__dbx}\index{M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}}
+
+
+Collaboration diagram for M\+D\+B\+\_\+dbx\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} \mbox{\hyperlink{struct_m_d_b__dbx_afcb04fa7b107cf82bd68a4ad8e8ff17b}{md\+\_\+name}}
+\item 
+\mbox{\hyperlink{group__mdb_gac1ea382293d1da331ab88ca59052847d}{M\+D\+B\+\_\+cmp\+\_\+func}} $\ast$ \mbox{\hyperlink{struct_m_d_b__dbx_a1fd5cb703a4d606423c30c01d705cd53}{md\+\_\+cmp}}
+\item 
+\mbox{\hyperlink{group__mdb_gac1ea382293d1da331ab88ca59052847d}{M\+D\+B\+\_\+cmp\+\_\+func}} $\ast$ \mbox{\hyperlink{struct_m_d_b__dbx_a79e8f44261045d7390fe69620e31e917}{md\+\_\+dcmp}}
+\item 
+\mbox{\hyperlink{group__mdb_ga311e8b7d73c5e7c03b625a894c5014cb}{M\+D\+B\+\_\+rel\+\_\+func}} $\ast$ \mbox{\hyperlink{struct_m_d_b__dbx_a5a507a8a31ca1cec34393e4966765572}{md\+\_\+rel}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_m_d_b__dbx_a284dafb1b3df0d8b701d9cb72875fb95}{md\+\_\+relctx}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Auxiliary DB info. The information here is mostly static/read-\/only. There is only a single copy of this record in the environment. 
+
+Definition at line 1161 of file mdb.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_d_b__dbx_a1fd5cb703a4d606423c30c01d705cd53}\label{struct_m_d_b__dbx_a1fd5cb703a4d606423c30c01d705cd53}} 
+\index{M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}!md\+\_\+cmp@{md\+\_\+cmp}}
+\index{md\+\_\+cmp@{md\+\_\+cmp}!M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}}
+\subsubsection{\texorpdfstring{md\+\_\+cmp}{md\_cmp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mdb_gac1ea382293d1da331ab88ca59052847d}{M\+D\+B\+\_\+cmp\+\_\+func}}$\ast$ M\+D\+B\+\_\+dbx\+::md\+\_\+cmp}
+
+function for comparing keys 
+
+Definition at line 1163 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__dbx_a79e8f44261045d7390fe69620e31e917}\label{struct_m_d_b__dbx_a79e8f44261045d7390fe69620e31e917}} 
+\index{M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}!md\+\_\+dcmp@{md\+\_\+dcmp}}
+\index{md\+\_\+dcmp@{md\+\_\+dcmp}!M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}}
+\subsubsection{\texorpdfstring{md\+\_\+dcmp}{md\_dcmp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mdb_gac1ea382293d1da331ab88ca59052847d}{M\+D\+B\+\_\+cmp\+\_\+func}}$\ast$ M\+D\+B\+\_\+dbx\+::md\+\_\+dcmp}
+
+function for comparing data items 
+
+Definition at line 1164 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__dbx_afcb04fa7b107cf82bd68a4ad8e8ff17b}\label{struct_m_d_b__dbx_afcb04fa7b107cf82bd68a4ad8e8ff17b}} 
+\index{M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}!md\+\_\+name@{md\+\_\+name}}
+\index{md\+\_\+name@{md\+\_\+name}!M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}}
+\subsubsection{\texorpdfstring{md\+\_\+name}{md\_name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} M\+D\+B\+\_\+dbx\+::md\+\_\+name}
+
+name of the database 
+
+Definition at line 1162 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__dbx_a5a507a8a31ca1cec34393e4966765572}\label{struct_m_d_b__dbx_a5a507a8a31ca1cec34393e4966765572}} 
+\index{M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}!md\+\_\+rel@{md\+\_\+rel}}
+\index{md\+\_\+rel@{md\+\_\+rel}!M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}}
+\subsubsection{\texorpdfstring{md\+\_\+rel}{md\_rel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mdb_ga311e8b7d73c5e7c03b625a894c5014cb}{M\+D\+B\+\_\+rel\+\_\+func}}$\ast$ M\+D\+B\+\_\+dbx\+::md\+\_\+rel}
+
+user relocate function 
+
+Definition at line 1165 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__dbx_a284dafb1b3df0d8b701d9cb72875fb95}\label{struct_m_d_b__dbx_a284dafb1b3df0d8b701d9cb72875fb95}} 
+\index{M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}!md\+\_\+relctx@{md\+\_\+relctx}}
+\index{md\+\_\+relctx@{md\+\_\+relctx}!M\+D\+B\+\_\+dbx@{M\+D\+B\+\_\+dbx}}
+\subsubsection{\texorpdfstring{md\+\_\+relctx}{md\_relctx}}
+{\footnotesize\ttfamily void$\ast$ M\+D\+B\+\_\+dbx\+::md\+\_\+relctx}
+
+user-\/provided context for md\+\_\+rel 
+
+Definition at line 1166 of file mdb.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

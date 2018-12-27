@@ -1,0 +1,40 @@
+\hypertarget{class_fuzzer___t_l_s___client___callbacks}{}\section{Fuzzer\+\_\+\+T\+L\+S\+\_\+\+Client\+\_\+\+Callbacks Class Reference}
+\label{class_fuzzer___t_l_s___client___callbacks}\index{Fuzzer\+\_\+\+T\+L\+S\+\_\+\+Client\+\_\+\+Callbacks@{Fuzzer\+\_\+\+T\+L\+S\+\_\+\+Client\+\_\+\+Callbacks}}
+
+
+Inheritance diagram for Fuzzer\+\_\+\+T\+L\+S\+\_\+\+Client\+\_\+\+Callbacks\+:
+% FIG 0
+
+
+Collaboration diagram for Fuzzer\+\_\+\+T\+L\+S\+\_\+\+Client\+\_\+\+Callbacks\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fuzzer___t_l_s___client___callbacks_a848c28289620073f278287a5e1e58e9d}\label{class_fuzzer___t_l_s___client___callbacks_a848c28289620073f278287a5e1e58e9d}} 
+void {\bfseries tls\+\_\+emit\+\_\+data} (const uint8\+\_\+t\mbox{[}$\,$\mbox{]}, size\+\_\+t) override
+\item 
+\mbox{\Hypertarget{class_fuzzer___t_l_s___client___callbacks_aaaa0475ef39e5e421a2172325fadc3fc}\label{class_fuzzer___t_l_s___client___callbacks_aaaa0475ef39e5e421a2172325fadc3fc}} 
+void {\bfseries tls\+\_\+record\+\_\+received} (uint64\+\_\+t, const uint8\+\_\+t\mbox{[}$\,$\mbox{]}, size\+\_\+t) override
+\item 
+\mbox{\Hypertarget{class_fuzzer___t_l_s___client___callbacks_aba8adde204eaf93f916af40149ef630f}\label{class_fuzzer___t_l_s___client___callbacks_aba8adde204eaf93f916af40149ef630f}} 
+void {\bfseries tls\+\_\+alert} (Botan\+::\+T\+L\+S\+::\+Alert) override
+\item 
+\mbox{\Hypertarget{class_fuzzer___t_l_s___client___callbacks_a15e5581101d5eeca3633928edc40bb03}\label{class_fuzzer___t_l_s___client___callbacks_a15e5581101d5eeca3633928edc40bb03}} 
+bool {\bfseries tls\+\_\+session\+\_\+established} (const Botan\+::\+T\+L\+S\+::\+Session \&) override
+\item 
+\mbox{\Hypertarget{class_fuzzer___t_l_s___client___callbacks_a3979b809782d35e416414a926435df41}\label{class_fuzzer___t_l_s___client___callbacks_a3979b809782d35e416414a926435df41}} 
+void {\bfseries tls\+\_\+verify\+\_\+cert\+\_\+chain} (const std\+::vector$<$ Botan\+::\+X509\+\_\+\+Certificate $>$ \&cert\+\_\+chain, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const Botan\+::\+O\+C\+S\+P\+::\+Response $>$$>$ \&ocsp\+\_\+responses, const std\+::vector$<$ Botan\+::\+Certificate\+\_\+\+Store $\ast$$>$ \&trusted\+\_\+roots, Botan\+::\+Usage\+\_\+\+Type usage, const std\+::string \&hostname, const Botan\+::\+T\+L\+S\+::\+Policy \&policy) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file tls\+\_\+client.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/fuzzer/tls\+\_\+client.\+cpp\end{DoxyCompactItemize}

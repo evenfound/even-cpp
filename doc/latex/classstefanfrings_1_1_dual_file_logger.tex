@@ -1,0 +1,122 @@
+\hypertarget{classstefanfrings_1_1_dual_file_logger}{}\section{stefanfrings\+:\+:Dual\+File\+Logger Class Reference}
+\label{classstefanfrings_1_1_dual_file_logger}\index{stefanfrings\+::\+Dual\+File\+Logger@{stefanfrings\+::\+Dual\+File\+Logger}}
+
+
+{\ttfamily \#include $<$dualfilelogger.\+h$>$}
+
+
+
+Inheritance diagram for stefanfrings\+:\+:Dual\+File\+Logger\+:
+% FIG 0
+
+
+Collaboration diagram for stefanfrings\+:\+:Dual\+File\+Logger\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_dual_file_logger_ab66f473deccb0ae46a899c799e92441d}{Dual\+File\+Logger}} (Q\+Settings $\ast$first\+Settings, Q\+Settings $\ast$second\+Settings, const int refresh\+Interval=10000, Q\+Object $\ast$parent=0)
+\item 
+virtual void \mbox{\hyperlink{classstefanfrings_1_1_dual_file_logger_a6db25d5c835b7221f0a6b7b4a035d4aa}{log}} (const Qt\+Msg\+Type type, const Q\+String \&message, const Q\+String \&file=\char`\"{}\char`\"{}, const Q\+String \&function=\char`\"{}\char`\"{}, const int line=0)
+\item 
+virtual void \mbox{\hyperlink{classstefanfrings_1_1_dual_file_logger_a4af0d2c35121b1f40dbd08b053a53ddf}{clear}} (const bool buffer=true, const bool variables=true)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Logs messages into two log files simultaneously. May be used to create two logfiles with different configuration settings. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classstefanfrings_1_1_file_logger}{File\+Logger}} for a description of the two underlying loggers. 
+\end{DoxySeeAlso}
+
+
+Definition at line 24 of file dualfilelogger.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_dual_file_logger_ab66f473deccb0ae46a899c799e92441d}\label{classstefanfrings_1_1_dual_file_logger_ab66f473deccb0ae46a899c799e92441d}} 
+\index{stefanfrings\+::\+Dual\+File\+Logger@{stefanfrings\+::\+Dual\+File\+Logger}!Dual\+File\+Logger@{Dual\+File\+Logger}}
+\index{Dual\+File\+Logger@{Dual\+File\+Logger}!stefanfrings\+::\+Dual\+File\+Logger@{stefanfrings\+::\+Dual\+File\+Logger}}
+\subsubsection{\texorpdfstring{Dual\+File\+Logger()}{DualFileLogger()}}
+{\footnotesize\ttfamily Dual\+File\+Logger\+::\+Dual\+File\+Logger (\begin{DoxyParamCaption}\item[{Q\+Settings $\ast$}]{first\+Settings,  }\item[{Q\+Settings $\ast$}]{second\+Settings,  }\item[{const int}]{refresh\+Interval = {\ttfamily 10000},  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em first\+Settings} & Configuration settings for the first log file, usually stored in an I\+NI file. Must not be 0. Settings are read from the current group, so the caller must have called settings-\/$>$begin\+Group(). Because the group must not change during runtime, it is recommended to provide a separate Q\+Settings instance to the logger that is not used by other parts of the program. \\
+\hline
+{\em second\+Settings} & Same as first\+Settings, but for the second log file. \\
+\hline
+{\em refresh\+Interval} & Interval of checking for changed config settings in msec, or 0=disabled \\
+\hline
+{\em parent} & Parent object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file dualfilelogger.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_dual_file_logger_a4af0d2c35121b1f40dbd08b053a53ddf}\label{classstefanfrings_1_1_dual_file_logger_a4af0d2c35121b1f40dbd08b053a53ddf}} 
+\index{stefanfrings\+::\+Dual\+File\+Logger@{stefanfrings\+::\+Dual\+File\+Logger}!clear@{clear}}
+\index{clear@{clear}!stefanfrings\+::\+Dual\+File\+Logger@{stefanfrings\+::\+Dual\+File\+Logger}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Dual\+File\+Logger\+::clear (\begin{DoxyParamCaption}\item[{const bool}]{buffer = {\ttfamily true},  }\item[{const bool}]{variables = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Clear the thread-\/local data of the current thread. This method is thread safe. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Whether to clear the backtrace buffer \\
+\hline
+{\em variables} & Whether to clear the log variables \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classstefanfrings_1_1_logger_a4dc933a2f38098fc539f7e17fc39da41}{stefanfrings\+::\+Logger}}.
+
+
+
+Definition at line 23 of file dualfilelogger.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classstefanfrings_1_1_dual_file_logger_a6db25d5c835b7221f0a6b7b4a035d4aa}\label{classstefanfrings_1_1_dual_file_logger_a6db25d5c835b7221f0a6b7b4a035d4aa}} 
+\index{stefanfrings\+::\+Dual\+File\+Logger@{stefanfrings\+::\+Dual\+File\+Logger}!log@{log}}
+\index{log@{log}!stefanfrings\+::\+Dual\+File\+Logger@{stefanfrings\+::\+Dual\+File\+Logger}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Dual\+File\+Logger\+::log (\begin{DoxyParamCaption}\item[{const Qt\+Msg\+Type}]{type,  }\item[{const Q\+String \&}]{message,  }\item[{const Q\+String \&}]{file = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const Q\+String \&}]{function = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const int}]{line = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Decorate and log the message, if type$>$=min\+Level. This method is thread safe. 
+\begin{DoxyParams}{Parameters}
+{\em type} & Message type (level) \\
+\hline
+{\em message} & Message text \\
+\hline
+{\em file} & Name of the source file where the message was generated (usually filled with the macro {\bfseries F\+I\+LE}) \\
+\hline
+{\em function} & Name of the function where the message was generated (usually filled with the macro {\bfseries L\+I\+NE}) \\
+\hline
+{\em line} & Line Number of the source file, where the message was generated (usually filles with the macro {\bfseries func} or {\bfseries F\+U\+N\+C\+T\+I\+ON}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classstefanfrings_1_1_log_message}{Log\+Message}} for a description of the message decoration. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classstefanfrings_1_1_logger_af731fc45cf731695d5f971472032190d}{stefanfrings\+::\+Logger}}.
+
+
+
+Definition at line 17 of file dualfilelogger.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/logging/\mbox{\hyperlink{dualfilelogger_8h}{dualfilelogger.\+h}}\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/logging/\mbox{\hyperlink{dualfilelogger_8cpp}{dualfilelogger.\+cpp}}\end{DoxyCompactItemize}

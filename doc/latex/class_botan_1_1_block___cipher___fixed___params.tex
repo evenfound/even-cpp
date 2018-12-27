@@ -1,0 +1,51 @@
+\hypertarget{class_botan_1_1_block___cipher___fixed___params}{}\section{Botan\+:\+:Block\+\_\+\+Cipher\+\_\+\+Fixed\+\_\+\+Params$<$ BS, K\+M\+IN, K\+M\+AX, K\+M\+OD, Base\+Class $>$ Class Template Reference}
+\label{class_botan_1_1_block___cipher___fixed___params}\index{Botan\+::\+Block\+\_\+\+Cipher\+\_\+\+Fixed\+\_\+\+Params$<$ B\+S, K\+M\+I\+N, K\+M\+A\+X, K\+M\+O\+D, Base\+Class $>$@{Botan\+::\+Block\+\_\+\+Cipher\+\_\+\+Fixed\+\_\+\+Params$<$ B\+S, K\+M\+I\+N, K\+M\+A\+X, K\+M\+O\+D, Base\+Class $>$}}
+
+
+{\ttfamily \#include $<$block\+\_\+cipher.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:Block\+\_\+\+Cipher\+\_\+\+Fixed\+\_\+\+Params$<$ BS, K\+M\+IN, K\+M\+AX, K\+M\+OD, Base\+Class $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:Block\+\_\+\+Cipher\+\_\+\+Fixed\+\_\+\+Params$<$ BS, K\+M\+IN, K\+M\+AX, K\+M\+OD, Base\+Class $>$\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_block___cipher___fixed___params_acf09ca1f26b5301907fadb78fb398912}\label{class_botan_1_1_block___cipher___fixed___params_acf09ca1f26b5301907fadb78fb398912}} 
+enum \{ {\bfseries B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE} = BS
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_block___cipher___fixed___params_aa9c361c59f811145a1606c46cf379676}\label{class_botan_1_1_block___cipher___fixed___params_aa9c361c59f811145a1606c46cf379676}} 
+size\+\_\+t {\bfseries block\+\_\+size} () const final override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_block___cipher___fixed___params_a5d9a4c02ac74524e9d5de015d245b65c}\label{class_botan_1_1_block___cipher___fixed___params_a5d9a4c02ac74524e9d5de015d245b65c}} 
+void {\bfseries encrypt\+\_\+n\+\_\+xex} (uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, const uint8\+\_\+t mask\mbox{[}$\,$\mbox{]}, size\+\_\+t blocks) const final override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_block___cipher___fixed___params_afc72841501e733feef50c6bcedb4d0a6}\label{class_botan_1_1_block___cipher___fixed___params_afc72841501e733feef50c6bcedb4d0a6}} 
+void {\bfseries decrypt\+\_\+n\+\_\+xex} (uint8\+\_\+t data\mbox{[}$\,$\mbox{]}, const uint8\+\_\+t mask\mbox{[}$\,$\mbox{]}, size\+\_\+t blocks) const final override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_block___cipher___fixed___params_a38b9617389d66c27198fb6c247da453a}\label{class_botan_1_1_block___cipher___fixed___params_a38b9617389d66c27198fb6c247da453a}} 
+Key\+\_\+\+Length\+\_\+\+Specification {\bfseries key\+\_\+spec} () const final override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t BS, size\+\_\+t K\+M\+IN, size\+\_\+t K\+M\+AX = 0, size\+\_\+t K\+M\+OD = 1, typename Base\+Class = Block\+Cipher$>$\newline
+class Botan\+::\+Block\+\_\+\+Cipher\+\_\+\+Fixed\+\_\+\+Params$<$ B\+S, K\+M\+I\+N, K\+M\+A\+X, K\+M\+O\+D, Base\+Class $>$}
+
+This class represents a block cipher object. Tweakable block ciphers allow setting a tweak which is a non-\/keyed value which affects the encryption/decryption operation. Represents a block cipher with a single fixed block size 
+
+Definition at line 220 of file block\+\_\+cipher.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/block/block\+\_\+cipher.\+h\end{DoxyCompactItemize}

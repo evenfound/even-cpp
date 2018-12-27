@@ -1,0 +1,46 @@
+digraph "prerequisites/c-libp2p/include/mbedtls/pk.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node12 [label="prerequisites/c-libp2p\l/include/mbedtls/pk.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="prerequisites/c-libp2p\l/crypto/encoding/x509.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$crypto_2encoding_2x509_8c_source.html"];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="prerequisites/c-libp2p\l/crypto/rsa.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$crypto_2rsa_8c_source.html"];
+  Node12 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_ciphersuites.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__ciphersuites_8h.html",tooltip="SSL Ciphersuites for mbed TLS. "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl_8h.html",tooltip="SSL/TLS functions. "];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="prerequisites/c-libp2p\l/include/mbedtls/debug.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$debug_8h.html",tooltip="Functions for controlling and providing debug output from the library. "];
+  Node16 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="prerequisites/c-libp2p\l/include/mbedtls/net_sockets.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$net__sockets_8h.html",tooltip="Network communication functions. "];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="prerequisites/c-libp2p\l/include/mbedtls/net.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c-libp2p_2include_2mbedtls_2net_8h_source.html"];
+  Node16 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_cache.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__cache_8h.html",tooltip="SSL session cache implementation. "];
+  Node16 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_cookie.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__cookie_8h.html",tooltip="DTLS cookie callbacks implementation. "];
+  Node16 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_internal.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__internal_8h_source.html"];
+  Node16 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_ticket.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__ticket_8h.html",tooltip="Internal functions shared by the SSL modules. "];
+  Node12 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="prerequisites/c-libp2p\l/include/mbedtls/x509.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mbedtls_2x509_8h_source.html"];
+  Node24 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="prerequisites/c-libp2p\l/include/mbedtls/x509_crt.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$x509__crt_8h.html",tooltip="X.509 certificate parsing and writing. "];
+  Node25 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="prerequisites/c-libp2p\l/include/mbedtls/x509_crl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c-libp2p_2include_2mbedtls_2x509__crl_8h_source.html"];
+  Node26 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="prerequisites/c-libp2p\l/include/mbedtls/oid.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$oid_8h.html",tooltip="Object Identifier (OID) database. "];
+  Node27 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="prerequisites/c-libp2p\l/include/mbedtls/x509_csr.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$x509__csr_8h.html",tooltip="X.509 certificate signing request parsing and writing. "];
+  Node12 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="prerequisites/c-libp2p\l/include/mbedtls/pk_internal.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pk__internal_8h_source.html"];
+}

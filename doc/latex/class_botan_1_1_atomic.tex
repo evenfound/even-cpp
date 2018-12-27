@@ -1,0 +1,42 @@
+\hypertarget{class_botan_1_1_atomic}{}\section{Botan\+:\+:Atomic$<$ T $>$ Class Template Reference}
+\label{class_botan_1_1_atomic}\index{Botan\+::\+Atomic$<$ T $>$@{Botan\+::\+Atomic$<$ T $>$}}
+
+
+{\ttfamily \#include $<$atomic.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_atomic_aff0c0127720365839815fcbf96c36893}\label{class_botan_1_1_atomic_aff0c0127720365839815fcbf96c36893}} 
+{\bfseries Atomic} (const \mbox{\hyperlink{class_botan_1_1_atomic}{Atomic}} \&data)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_atomic_ab0dd01bcbc20804ca1b3607e7495c2a2}\label{class_botan_1_1_atomic_ab0dd01bcbc20804ca1b3607e7495c2a2}} 
+{\bfseries Atomic} (const std\+::atomic$<$ T $>$ \&data)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_atomic_a162ef567d1d8aa2a32956290d8a572e2}\label{class_botan_1_1_atomic_a162ef567d1d8aa2a32956290d8a572e2}} 
+\mbox{\hyperlink{class_botan_1_1_atomic}{Atomic}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_botan_1_1_atomic}{Atomic}} \&a)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_atomic_ab161a076ffec827889fcbd8f23c29a1c}\label{class_botan_1_1_atomic_ab161a076ffec827889fcbd8f23c29a1c}} 
+\mbox{\hyperlink{class_botan_1_1_atomic}{Atomic}} \& {\bfseries operator=} (const std\+::atomic$<$ T $>$ \&a)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_atomic_ae11b6b3622de4e46946d1b46620dae29}\label{class_botan_1_1_atomic_ae11b6b3622de4e46946d1b46620dae29}} 
+{\bfseries operator std\+::atomic$<$ T $>$ \&} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_atomic_aad990a5bf5e43a29bc3120c7a6a3bbc6}\label{class_botan_1_1_atomic_aad990a5bf5e43a29bc3120c7a6a3bbc6}} 
+{\bfseries operator T} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Botan\+::\+Atomic$<$ T $>$}
+
+Simple helper class to expand std\+::atomic with copy constructor and copy assignment operator, i.\+e. for use as element in a container like std\+::vector. The construction of instances of this wrapper is N\+OT atomic and needs to be properly guarded. 
+
+Definition at line 23 of file atomic.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/pubkey/xmss/atomic.\+h\end{DoxyCompactItemize}

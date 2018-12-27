@@ -1,0 +1,408 @@
+\hypertarget{asn1write_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/asn1write.h File Reference}
+\label{asn1write_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/asn1write.\+h@{prerequisites/c-\/libp2p/include/mbedtls/asn1write.\+h}}
+
+
+A\+S\+N.\+1 buffer writing functionality.  
+
+
+{\ttfamily \#include \char`\"{}asn1.\+h\char`\"{}}\newline
+Include dependency graph for asn1write.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+C\+H\+K\+\_\+\+A\+DD}(g,  f)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{asn1write_8h_a7fe6f4cdba05081bff484a7b286108df}{mbedtls\+\_\+asn1\+\_\+write\+\_\+len}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Write a length field in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_a2247b80bd02e2981dc26ce62ffbb1859}{mbedtls\+\_\+asn1\+\_\+write\+\_\+tag}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, unsigned char tag)
+\begin{DoxyCompactList}\small\item\em Write a A\+S\+N.\+1 tag in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_a1ecd132a57faf95c61423dc9cdc30143}{mbedtls\+\_\+asn1\+\_\+write\+\_\+raw\+\_\+buffer}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, const unsigned char $\ast$buf, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Write raw buffer data Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_ac2639a2da5918931152dd1ee1a93e7c9}{mbedtls\+\_\+asn1\+\_\+write\+\_\+mpi}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X)
+\begin{DoxyCompactList}\small\item\em Write a big number (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+I\+N\+T\+E\+G\+ER) in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_adc9614b64c7bb92e1d159898b23acd90}{mbedtls\+\_\+asn1\+\_\+write\+\_\+null}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start)
+\begin{DoxyCompactList}\small\item\em Write a N\+U\+LL tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+N\+U\+LL) with zero data in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_ab437fb4183494e4c9cf4b6e15ca236d6}{mbedtls\+\_\+asn1\+\_\+write\+\_\+oid}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, const char $\ast$oid, size\+\_\+t oid\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Write an O\+ID tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+O\+ID) and data in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_a87b24d328654c5e8d17ffe3b0192ecb8}{mbedtls\+\_\+asn1\+\_\+write\+\_\+algorithm\+\_\+identifier}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, const char $\ast$oid, size\+\_\+t oid\+\_\+len, size\+\_\+t par\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Write an Algorithm\+Identifier sequence in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_adfc6b0a6111a9fe9b586c2a931e3e205}{mbedtls\+\_\+asn1\+\_\+write\+\_\+bool}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, int boolean)
+\begin{DoxyCompactList}\small\item\em Write a boolean tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+B\+O\+O\+L\+E\+AN) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_a6c5e6e927a74d85aea15866fb50e63c8}{mbedtls\+\_\+asn1\+\_\+write\+\_\+int}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, int val)
+\begin{DoxyCompactList}\small\item\em Write an int tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+I\+N\+T\+E\+G\+ER) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_a400af5e542195c14533baf2f377d31d1}{mbedtls\+\_\+asn1\+\_\+write\+\_\+printable\+\_\+string}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, const char $\ast$text, size\+\_\+t text\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Write a printable string tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+P\+R\+I\+N\+T\+A\+B\+L\+E\+\_\+\+S\+T\+R\+I\+NG) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_af3bfd68158c26618239a733986b11528}{mbedtls\+\_\+asn1\+\_\+write\+\_\+ia5\+\_\+string}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, const char $\ast$text, size\+\_\+t text\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Write an I\+A5 string tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+I\+A5\+\_\+\+S\+T\+R\+I\+NG) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_a3198221d6169d22d72e6a166043f40c5}{mbedtls\+\_\+asn1\+\_\+write\+\_\+bitstring}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, const unsigned char $\ast$buf, size\+\_\+t bits)
+\begin{DoxyCompactList}\small\item\em Write a bitstring tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+B\+I\+T\+\_\+\+S\+T\+R\+I\+NG) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{asn1write_8h_a56e71582d7ccef976c09c49f9370e81b}{mbedtls\+\_\+asn1\+\_\+write\+\_\+octet\+\_\+string}} (unsigned char $\ast$$\ast$p, unsigned char $\ast$start, const unsigned char $\ast$buf, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Write an octet string tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+O\+C\+T\+E\+T\+\_\+\+S\+T\+R\+I\+NG) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmbedtls__asn1__named__data}{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}} $\ast$ \mbox{\hyperlink{asn1write_8h_a0ad16ddefc9aa0948e84dcdd1e29ebf6}{mbedtls\+\_\+asn1\+\_\+store\+\_\+named\+\_\+data}} (\mbox{\hyperlink{structmbedtls__asn1__named__data}{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}} $\ast$$\ast$list, const char $\ast$oid, size\+\_\+t oid\+\_\+len, const unsigned char $\ast$val, size\+\_\+t val\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Create or find a specific named\+\_\+data entry for writing in a sequence or list based on the O\+ID. If not already in there, a new entry is added to the head of the list. Warning\+: Destructive behaviour for the val data! \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+S\+N.\+1 buffer writing functionality. 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{asn1write_8h_a4dab14bef6cf1fed0404be2d77a6ebb9}\label{asn1write_8h_a4dab14bef6cf1fed0404be2d77a6ebb9}} 
+\index{asn1write.\+h@{asn1write.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+C\+H\+K\+\_\+\+A\+DD@{M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+C\+H\+K\+\_\+\+A\+DD}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+C\+H\+K\+\_\+\+A\+DD@{M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+C\+H\+K\+\_\+\+A\+DD}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+C\+H\+K\+\_\+\+A\+DD}{MBEDTLS\_ASN1\_CHK\_ADD}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+C\+H\+K\+\_\+\+A\+DD(\begin{DoxyParamCaption}\item[{}]{g,  }\item[{}]{f }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{if}( ( ret = f ) < 0 ) \textcolor{keywordflow}{return}( ret ); else   \(\backslash\)
+                                g += ret; \} \textcolor{keywordflow}{while}( 0 )
+\end{DoxyCode}
+
+
+Definition at line 28 of file asn1write.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{asn1write_8h_a0ad16ddefc9aa0948e84dcdd1e29ebf6}\label{asn1write_8h_a0ad16ddefc9aa0948e84dcdd1e29ebf6}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+store\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+store\+\_\+named\+\_\+data}}
+\index{mbedtls\+\_\+asn1\+\_\+store\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+store\+\_\+named\+\_\+data}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+store\+\_\+named\+\_\+data()}{mbedtls\_asn1\_store\_named\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__asn1__named__data}{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}}$\ast$ mbedtls\+\_\+asn1\+\_\+store\+\_\+named\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__asn1__named__data}{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}} $\ast$$\ast$}]{list,  }\item[{const char $\ast$}]{oid,  }\item[{size\+\_\+t}]{oid\+\_\+len,  }\item[{const unsigned char $\ast$}]{val,  }\item[{size\+\_\+t}]{val\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Create or find a specific named\+\_\+data entry for writing in a sequence or list based on the O\+ID. If not already in there, a new entry is added to the head of the list. Warning\+: Destructive behaviour for the val data! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Pointer to the location of the head of the list to seek through (will be updated in case of a new entry) \\
+\hline
+{\em oid} & The O\+ID to look for \\
+\hline
+{\em oid\+\_\+len} & Size of the O\+ID \\
+\hline
+{\em val} & Data to store (can be N\+U\+LL if you want to fill it by hand) \\
+\hline
+{\em val\+\_\+len} & Minimum length of the data buffer needed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if if there was a memory allocation error, or a pointer to the new / existing entry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_a87b24d328654c5e8d17ffe3b0192ecb8}\label{asn1write_8h_a87b24d328654c5e8d17ffe3b0192ecb8}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+algorithm\+\_\+identifier@{mbedtls\+\_\+asn1\+\_\+write\+\_\+algorithm\+\_\+identifier}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+algorithm\+\_\+identifier@{mbedtls\+\_\+asn1\+\_\+write\+\_\+algorithm\+\_\+identifier}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+algorithm\+\_\+identifier()}{mbedtls\_asn1\_write\_algorithm\_identifier()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+algorithm\+\_\+identifier (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{const char $\ast$}]{oid,  }\item[{size\+\_\+t}]{oid\+\_\+len,  }\item[{size\+\_\+t}]{par\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Write an Algorithm\+Identifier sequence in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em oid} & the O\+ID of the algorithm \\
+\hline
+{\em oid\+\_\+len} & length of the O\+ID \\
+\hline
+{\em par\+\_\+len} & length of parameters, which must be already written. If 0, N\+U\+LL parameters are added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_a3198221d6169d22d72e6a166043f40c5}\label{asn1write_8h_a3198221d6169d22d72e6a166043f40c5}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+bitstring@{mbedtls\+\_\+asn1\+\_\+write\+\_\+bitstring}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+bitstring@{mbedtls\+\_\+asn1\+\_\+write\+\_\+bitstring}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+bitstring()}{mbedtls\_asn1\_write\_bitstring()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+bitstring (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{bits }\end{DoxyParamCaption})}
+
+
+
+Write a bitstring tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+B\+I\+T\+\_\+\+S\+T\+R\+I\+NG) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em buf} & the bitstring \\
+\hline
+{\em bits} & the total number of bits in the bitstring\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_adfc6b0a6111a9fe9b586c2a931e3e205}\label{asn1write_8h_adfc6b0a6111a9fe9b586c2a931e3e205}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+bool@{mbedtls\+\_\+asn1\+\_\+write\+\_\+bool}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+bool@{mbedtls\+\_\+asn1\+\_\+write\+\_\+bool}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+bool()}{mbedtls\_asn1\_write\_bool()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+bool (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{int}]{boolean }\end{DoxyParamCaption})}
+
+
+
+Write a boolean tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+B\+O\+O\+L\+E\+AN) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em boolean} & 0 or 1\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_af3bfd68158c26618239a733986b11528}\label{asn1write_8h_af3bfd68158c26618239a733986b11528}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+ia5\+\_\+string@{mbedtls\+\_\+asn1\+\_\+write\+\_\+ia5\+\_\+string}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+ia5\+\_\+string@{mbedtls\+\_\+asn1\+\_\+write\+\_\+ia5\+\_\+string}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+ia5\+\_\+string()}{mbedtls\_asn1\_write\_ia5\_string()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+ia5\+\_\+string (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{const char $\ast$}]{text,  }\item[{size\+\_\+t}]{text\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Write an I\+A5 string tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+I\+A5\+\_\+\+S\+T\+R\+I\+NG) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em text} & the text to write \\
+\hline
+{\em text\+\_\+len} & length of the text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_a6c5e6e927a74d85aea15866fb50e63c8}\label{asn1write_8h_a6c5e6e927a74d85aea15866fb50e63c8}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+int@{mbedtls\+\_\+asn1\+\_\+write\+\_\+int}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+int@{mbedtls\+\_\+asn1\+\_\+write\+\_\+int}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+int()}{mbedtls\_asn1\_write\_int()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+int (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+
+
+Write an int tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+I\+N\+T\+E\+G\+ER) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em val} & the integer value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_a7fe6f4cdba05081bff484a7b286108df}\label{asn1write_8h_a7fe6f4cdba05081bff484a7b286108df}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+len@{mbedtls\+\_\+asn1\+\_\+write\+\_\+len}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+len@{mbedtls\+\_\+asn1\+\_\+write\+\_\+len}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+len()}{mbedtls\_asn1\_write\_len()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+len (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Write a length field in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em len} & the length to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_ac2639a2da5918931152dd1ee1a93e7c9}\label{asn1write_8h_ac2639a2da5918931152dd1ee1a93e7c9}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+mpi@{mbedtls\+\_\+asn1\+\_\+write\+\_\+mpi}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+mpi@{mbedtls\+\_\+asn1\+\_\+write\+\_\+mpi}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+mpi()}{mbedtls\_asn1\_write\_mpi()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+mpi (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X }\end{DoxyParamCaption})}
+
+
+
+Write a big number (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+I\+N\+T\+E\+G\+ER) in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em X} & the M\+PI to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_adc9614b64c7bb92e1d159898b23acd90}\label{asn1write_8h_adc9614b64c7bb92e1d159898b23acd90}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+null@{mbedtls\+\_\+asn1\+\_\+write\+\_\+null}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+null@{mbedtls\+\_\+asn1\+\_\+write\+\_\+null}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+null()}{mbedtls\_asn1\_write\_null()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+null (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start }\end{DoxyParamCaption})}
+
+
+
+Write a N\+U\+LL tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+N\+U\+LL) with zero data in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_a56e71582d7ccef976c09c49f9370e81b}\label{asn1write_8h_a56e71582d7ccef976c09c49f9370e81b}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+octet\+\_\+string@{mbedtls\+\_\+asn1\+\_\+write\+\_\+octet\+\_\+string}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+octet\+\_\+string@{mbedtls\+\_\+asn1\+\_\+write\+\_\+octet\+\_\+string}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+octet\+\_\+string()}{mbedtls\_asn1\_write\_octet\_string()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+octet\+\_\+string (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Write an octet string tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+O\+C\+T\+E\+T\+\_\+\+S\+T\+R\+I\+NG) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em buf} & data buffer to write \\
+\hline
+{\em size} & length of the data buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_ab437fb4183494e4c9cf4b6e15ca236d6}\label{asn1write_8h_ab437fb4183494e4c9cf4b6e15ca236d6}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+oid@{mbedtls\+\_\+asn1\+\_\+write\+\_\+oid}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+oid@{mbedtls\+\_\+asn1\+\_\+write\+\_\+oid}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+oid()}{mbedtls\_asn1\_write\_oid()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+oid (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{const char $\ast$}]{oid,  }\item[{size\+\_\+t}]{oid\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Write an O\+ID tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+O\+ID) and data in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em oid} & the O\+ID to write \\
+\hline
+{\em oid\+\_\+len} & length of the O\+ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_a400af5e542195c14533baf2f377d31d1}\label{asn1write_8h_a400af5e542195c14533baf2f377d31d1}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+printable\+\_\+string@{mbedtls\+\_\+asn1\+\_\+write\+\_\+printable\+\_\+string}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+printable\+\_\+string@{mbedtls\+\_\+asn1\+\_\+write\+\_\+printable\+\_\+string}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+printable\+\_\+string()}{mbedtls\_asn1\_write\_printable\_string()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+printable\+\_\+string (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{const char $\ast$}]{text,  }\item[{size\+\_\+t}]{text\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Write a printable string tag (M\+B\+E\+D\+T\+L\+S\+\_\+\+A\+S\+N1\+\_\+\+P\+R\+I\+N\+T\+A\+B\+L\+E\+\_\+\+S\+T\+R\+I\+NG) and value in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em text} & the text to write \\
+\hline
+{\em text\+\_\+len} & length of the text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_a1ecd132a57faf95c61423dc9cdc30143}\label{asn1write_8h_a1ecd132a57faf95c61423dc9cdc30143}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+raw\+\_\+buffer@{mbedtls\+\_\+asn1\+\_\+write\+\_\+raw\+\_\+buffer}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+raw\+\_\+buffer@{mbedtls\+\_\+asn1\+\_\+write\+\_\+raw\+\_\+buffer}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+raw\+\_\+buffer()}{mbedtls\_asn1\_write\_raw\_buffer()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+raw\+\_\+buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Write raw buffer data Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em buf} & data buffer to write \\
+\hline
+{\em size} & length of the data buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{asn1write_8h_a2247b80bd02e2981dc26ce62ffbb1859}\label{asn1write_8h_a2247b80bd02e2981dc26ce62ffbb1859}} 
+\index{asn1write.\+h@{asn1write.\+h}!mbedtls\+\_\+asn1\+\_\+write\+\_\+tag@{mbedtls\+\_\+asn1\+\_\+write\+\_\+tag}}
+\index{mbedtls\+\_\+asn1\+\_\+write\+\_\+tag@{mbedtls\+\_\+asn1\+\_\+write\+\_\+tag}!asn1write.\+h@{asn1write.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+asn1\+\_\+write\+\_\+tag()}{mbedtls\_asn1\_write\_tag()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+asn1\+\_\+write\+\_\+tag (\begin{DoxyParamCaption}\item[{unsigned char $\ast$$\ast$}]{p,  }\item[{unsigned char $\ast$}]{start,  }\item[{unsigned char}]{tag }\end{DoxyParamCaption})}
+
+
+
+Write a A\+S\+N.\+1 tag in A\+S\+N.\+1 format Note\+: function works backwards in data buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to current position pointer \\
+\hline
+{\em start} & start of the buffer (for bounds-\/checking) \\
+\hline
+{\em tag} & the tag to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length written or a negative error code 
+\end{DoxyReturn}

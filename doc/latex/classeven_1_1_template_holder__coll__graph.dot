@@ -1,0 +1,12 @@
+digraph "even::TemplateHolder"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node4 [label="even::TemplateHolder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="stefanfrings::TemplateCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_template_cache.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="stefanfrings::TemplateLoader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_template_loader.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="QObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

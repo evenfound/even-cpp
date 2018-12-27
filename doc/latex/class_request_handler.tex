@@ -1,0 +1,122 @@
+\hypertarget{class_request_handler}{}\section{Request\+Handler Class Reference}
+\label{class_request_handler}\index{Request\+Handler@{Request\+Handler}}
+
+
+{\ttfamily \#include $<$requesthandler.\+h$>$}
+
+
+
+Inheritance diagram for Request\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for Request\+Handler\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_request_handler_a01277e86309630826aa760f6d3eb3788}{Request\+Handler}} (Q\+Object $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_request_handler_a33488d8c2fa1f2c15193c9918960171a}{$\sim$\+Request\+Handler}} ()
+\item 
+void \mbox{\hyperlink{class_request_handler_a46dbcda155cd987e45d55b2941dbfd71}{service}} (\mbox{\hyperlink{classstefanfrings_1_1_http_request}{Http\+Request}} \&request, \mbox{\hyperlink{classstefanfrings_1_1_http_response}{Http\+Response}} \&response)
+\item 
+\mbox{\hyperlink{class_request_handler_a01277e86309630826aa760f6d3eb3788}{Request\+Handler}} (Q\+Object $\ast$parent=0)
+\item 
+void \mbox{\hyperlink{class_request_handler_a46dbcda155cd987e45d55b2941dbfd71}{service}} (\mbox{\hyperlink{classstefanfrings_1_1_http_request}{Http\+Request}} \&request, \mbox{\hyperlink{classstefanfrings_1_1_http_response}{Http\+Response}} \&response)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The request handler receives incoming H\+T\+TP requests and generates responses. 
+
+Definition at line 17 of file requesthandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_request_handler_a01277e86309630826aa760f6d3eb3788}\label{class_request_handler_a01277e86309630826aa760f6d3eb3788}} 
+\index{Request\+Handler@{Request\+Handler}!Request\+Handler@{Request\+Handler}}
+\index{Request\+Handler@{Request\+Handler}!Request\+Handler@{Request\+Handler}}
+\subsubsection{\texorpdfstring{Request\+Handler()}{RequestHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Request\+Handler\+::\+Request\+Handler (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file requesthandler.\+cpp.
+
+\mbox{\Hypertarget{class_request_handler_a33488d8c2fa1f2c15193c9918960171a}\label{class_request_handler_a33488d8c2fa1f2c15193c9918960171a}} 
+\index{Request\+Handler@{Request\+Handler}!````~Request\+Handler@{$\sim$\+Request\+Handler}}
+\index{````~Request\+Handler@{$\sim$\+Request\+Handler}!Request\+Handler@{Request\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Request\+Handler()}{~RequestHandler()}}
+{\footnotesize\ttfamily Request\+Handler\+::$\sim$\+Request\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 21 of file requesthandler.\+cpp.
+
+\mbox{\Hypertarget{class_request_handler_a01277e86309630826aa760f6d3eb3788}\label{class_request_handler_a01277e86309630826aa760f6d3eb3788}} 
+\index{Request\+Handler@{Request\+Handler}!Request\+Handler@{Request\+Handler}}
+\index{Request\+Handler@{Request\+Handler}!Request\+Handler@{Request\+Handler}}
+\subsubsection{\texorpdfstring{Request\+Handler()}{RequestHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Request\+Handler\+::\+Request\+Handler (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_request_handler_a46dbcda155cd987e45d55b2941dbfd71}\label{class_request_handler_a46dbcda155cd987e45d55b2941dbfd71}} 
+\index{Request\+Handler@{Request\+Handler}!service@{service}}
+\index{service@{service}!Request\+Handler@{Request\+Handler}}
+\subsubsection{\texorpdfstring{service()}{service()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Request\+Handler\+::service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstefanfrings_1_1_http_request}{Http\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classstefanfrings_1_1_http_response}{Http\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Process an incoming H\+T\+TP request. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The received H\+T\+TP request \\
+\hline
+{\em response} & Must be used to return the response \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classstefanfrings_1_1_http_request_handler_a0a7210907152c46b8b5a47feb64cf6bd}{stefanfrings\+::\+Http\+Request\+Handler}}.
+
+\mbox{\Hypertarget{class_request_handler_a46dbcda155cd987e45d55b2941dbfd71}\label{class_request_handler_a46dbcda155cd987e45d55b2941dbfd71}} 
+\index{Request\+Handler@{Request\+Handler}!service@{service}}
+\index{service@{service}!Request\+Handler@{Request\+Handler}}
+\subsubsection{\texorpdfstring{service()}{service()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Request\+Handler\+::service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstefanfrings_1_1_http_request}{Http\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classstefanfrings_1_1_http_response}{Http\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Process an incoming H\+T\+TP request. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The received H\+T\+TP request \\
+\hline
+{\em response} & Must be used to return the response \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classstefanfrings_1_1_http_request_handler_a0a7210907152c46b8b5a47feb64cf6bd}{stefanfrings\+::\+Http\+Request\+Handler}}.
+
+
+
+Definition at line 27 of file requesthandler.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Demo2/src/\mbox{\hyperlink{_demo2_2src_2requesthandler_8h}{requesthandler.\+h}}\item 
+prerequisites/\+Qt\+Web\+App/\+Demo2/src/\mbox{\hyperlink{_demo2_2src_2requesthandler_8cpp}{requesthandler.\+cpp}}\end{DoxyCompactItemize}

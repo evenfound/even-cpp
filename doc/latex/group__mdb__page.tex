@@ -1,0 +1,121 @@
+\hypertarget{group__mdb__page}{}\section{Page Flags}
+\label{group__mdb__page}\index{Page Flags@{Page Flags}}
+Collaboration diagram for Page Flags\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_gad6639bfcad26dbcbf7970dfa28f1a930}{P\+\_\+\+B\+R\+A\+N\+CH}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_gac85fb59a9a2eda0d33e58b23a7ca019a}{P\+\_\+\+L\+E\+AF}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_ga15141fe5d59efdf035bf8862250c25d7}{P\+\_\+\+O\+V\+E\+R\+F\+L\+OW}}~0x04
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_ga3d5d5c4af2527d4d9230d414230580ac}{P\+\_\+\+M\+E\+TA}}~0x08
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_ga80db76242076099b1bbaba0ddec794fb}{P\+\_\+\+D\+I\+R\+TY}}~0x10
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_ga9c80486a549b2efbd5561cdd4df238c4}{P\+\_\+\+L\+E\+A\+F2}}~0x20
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_ga77cc6dc98fda40c81fb2f75068fb5551}{P\+\_\+\+S\+U\+BP}}~0x40
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_ga73ff31a5404097c8220ef956a0ddbb80}{P\+\_\+\+L\+O\+O\+SE}}~0x4000
+\item 
+\#define \mbox{\hyperlink{group__mdb__page_ga1d56f6cd16428f86d1f558668ade8487}{P\+\_\+\+K\+E\+EP}}~0x8000
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Flags for the page headers. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__mdb__page_gad6639bfcad26dbcbf7970dfa28f1a930}\label{group__mdb__page_gad6639bfcad26dbcbf7970dfa28f1a930}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+B\+R\+A\+N\+CH@{P\+\_\+\+B\+R\+A\+N\+CH}}
+\index{P\+\_\+\+B\+R\+A\+N\+CH@{P\+\_\+\+B\+R\+A\+N\+CH}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+B\+R\+A\+N\+CH}{P\_BRANCH}}
+{\footnotesize\ttfamily \#define P\+\_\+\+B\+R\+A\+N\+CH~0x01}
+
+branch page 
+
+Definition at line 905 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__page_ga80db76242076099b1bbaba0ddec794fb}\label{group__mdb__page_ga80db76242076099b1bbaba0ddec794fb}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+D\+I\+R\+TY@{P\+\_\+\+D\+I\+R\+TY}}
+\index{P\+\_\+\+D\+I\+R\+TY@{P\+\_\+\+D\+I\+R\+TY}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+D\+I\+R\+TY}{P\_DIRTY}}
+{\footnotesize\ttfamily \#define P\+\_\+\+D\+I\+R\+TY~0x10}
+
+dirty page, also set for \mbox{\hyperlink{group__mdb__page_ga77cc6dc98fda40c81fb2f75068fb5551}{P\+\_\+\+S\+U\+BP}} pages 
+
+Definition at line 909 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__page_ga1d56f6cd16428f86d1f558668ade8487}\label{group__mdb__page_ga1d56f6cd16428f86d1f558668ade8487}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+K\+E\+EP@{P\+\_\+\+K\+E\+EP}}
+\index{P\+\_\+\+K\+E\+EP@{P\+\_\+\+K\+E\+EP}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+K\+E\+EP}{P\_KEEP}}
+{\footnotesize\ttfamily \#define P\+\_\+\+K\+E\+EP~0x8000}
+
+leave this page alone during spill 
+
+Definition at line 913 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__page_gac85fb59a9a2eda0d33e58b23a7ca019a}\label{group__mdb__page_gac85fb59a9a2eda0d33e58b23a7ca019a}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+L\+E\+AF@{P\+\_\+\+L\+E\+AF}}
+\index{P\+\_\+\+L\+E\+AF@{P\+\_\+\+L\+E\+AF}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+L\+E\+AF}{P\_LEAF}}
+{\footnotesize\ttfamily \#define P\+\_\+\+L\+E\+AF~0x02}
+
+leaf page 
+
+Definition at line 906 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__page_ga9c80486a549b2efbd5561cdd4df238c4}\label{group__mdb__page_ga9c80486a549b2efbd5561cdd4df238c4}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+L\+E\+A\+F2@{P\+\_\+\+L\+E\+A\+F2}}
+\index{P\+\_\+\+L\+E\+A\+F2@{P\+\_\+\+L\+E\+A\+F2}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+L\+E\+A\+F2}{P\_LEAF2}}
+{\footnotesize\ttfamily \#define P\+\_\+\+L\+E\+A\+F2~0x20}
+
+for \mbox{\hyperlink{group__mdb__dbi__open_ga5acc26f80668d1ebc31265d178c69338}{M\+D\+B\+\_\+\+D\+U\+P\+F\+I\+X\+ED}} records 
+
+Definition at line 910 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__page_ga73ff31a5404097c8220ef956a0ddbb80}\label{group__mdb__page_ga73ff31a5404097c8220ef956a0ddbb80}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+L\+O\+O\+SE@{P\+\_\+\+L\+O\+O\+SE}}
+\index{P\+\_\+\+L\+O\+O\+SE@{P\+\_\+\+L\+O\+O\+SE}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+L\+O\+O\+SE}{P\_LOOSE}}
+{\footnotesize\ttfamily \#define P\+\_\+\+L\+O\+O\+SE~0x4000}
+
+page was dirtied then freed, can be reused 
+
+Definition at line 912 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__page_ga3d5d5c4af2527d4d9230d414230580ac}\label{group__mdb__page_ga3d5d5c4af2527d4d9230d414230580ac}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+M\+E\+TA@{P\+\_\+\+M\+E\+TA}}
+\index{P\+\_\+\+M\+E\+TA@{P\+\_\+\+M\+E\+TA}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+M\+E\+TA}{P\_META}}
+{\footnotesize\ttfamily \#define P\+\_\+\+M\+E\+TA~0x08}
+
+meta page 
+
+Definition at line 908 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__page_ga15141fe5d59efdf035bf8862250c25d7}\label{group__mdb__page_ga15141fe5d59efdf035bf8862250c25d7}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{P\+\_\+\+O\+V\+E\+R\+F\+L\+OW}}
+\index{P\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{P\+\_\+\+O\+V\+E\+R\+F\+L\+OW}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+O\+V\+E\+R\+F\+L\+OW}{P\_OVERFLOW}}
+{\footnotesize\ttfamily \#define P\+\_\+\+O\+V\+E\+R\+F\+L\+OW~0x04}
+
+overflow page 
+
+Definition at line 907 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__page_ga77cc6dc98fda40c81fb2f75068fb5551}\label{group__mdb__page_ga77cc6dc98fda40c81fb2f75068fb5551}} 
+\index{Page Flags@{Page Flags}!P\+\_\+\+S\+U\+BP@{P\+\_\+\+S\+U\+BP}}
+\index{P\+\_\+\+S\+U\+BP@{P\+\_\+\+S\+U\+BP}!Page Flags@{Page Flags}}
+\subsubsection{\texorpdfstring{P\+\_\+\+S\+U\+BP}{P\_SUBP}}
+{\footnotesize\ttfamily \#define P\+\_\+\+S\+U\+BP~0x40}
+
+for \mbox{\hyperlink{group__mdb__dbi__open_gae0626566c2562e9007f5c8c9535bab1a}{M\+D\+B\+\_\+\+D\+U\+P\+S\+O\+RT}} sub-\/pages 
+
+Definition at line 911 of file mdb.\+c.
+

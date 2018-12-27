@@ -1,0 +1,11 @@
+digraph "Startup::Startup"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Startup::Startup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="QtServiceBase::setService\lDescription",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_base.html#a09d7547436c65a900f18c58b2a650286"];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="QtServiceBase::setStartupType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_base.html#a6beddd54c973c3a7d81075b2f3f80df2"];
+}

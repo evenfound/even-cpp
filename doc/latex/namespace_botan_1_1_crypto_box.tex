@@ -1,0 +1,114 @@
+\hypertarget{namespace_botan_1_1_crypto_box}{}\section{Botan\+:\+:Crypto\+Box Namespace Reference}
+\label{namespace_botan_1_1_crypto_box}\index{Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_crypto_box_a2a0c293e5e28bbb15ab9d0ce5a02094d}\label{namespace_botan_1_1_crypto_box_a2a0c293e5e28bbb15ab9d0ce5a02094d}} 
+std\+::string {\bfseries encrypt} (const uint8\+\_\+t input\mbox{[}$\,$\mbox{]}, size\+\_\+t input\+\_\+len, const std\+::string \&passphrase, Random\+Number\+Generator \&rng)
+\item 
+secure\+\_\+vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{namespace_botan_1_1_crypto_box_ad9bd6d365d764d3c5d3b11faa12bafd9}{decrypt\+\_\+bin}} (const uint8\+\_\+t input\mbox{[}$\,$\mbox{]}, size\+\_\+t input\+\_\+len, const std\+::string \&passphrase)
+\item 
+secure\+\_\+vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{namespace_botan_1_1_crypto_box_a8858a6a48a5c3f6798b3e820db2ed274}{decrypt\+\_\+bin}} (const std\+::string \&input, const std\+::string \&passphrase)
+\item 
+std\+::string \mbox{\hyperlink{namespace_botan_1_1_crypto_box_a14578f49188fcb22c26b00cf6fecfecd}{decrypt}} (const uint8\+\_\+t input\mbox{[}$\,$\mbox{]}, size\+\_\+t input\+\_\+len, const std\+::string \&passphrase)
+\item 
+std\+::string \mbox{\hyperlink{namespace_botan_1_1_crypto_box_aaa596df95c0bed67d30840dbc0ca2142}{decrypt}} (const std\+::string \&input, const std\+::string \&passphrase)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This namespace holds various high-\/level crypto functions 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_botan_1_1_crypto_box_a14578f49188fcb22c26b00cf6fecfecd}\label{namespace_botan_1_1_crypto_box_a14578f49188fcb22c26b00cf6fecfecd}} 
+\index{Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}}
+\subsubsection{\texorpdfstring{decrypt()}{decrypt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string Botan\+::\+Crypto\+Box\+::decrypt (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{input\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{input\+\_\+len,  }\item[{const std\+::string \&}]{passphrase }\end{DoxyParamCaption})}
+
+Decrypt a message encrypted with Crypto\+Box\+::encrypt 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input data \\
+\hline
+{\em input\+\_\+len} & the length of input in bytes \\
+\hline
+{\em passphrase} & the passphrase used to encrypt the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 162 of file cryptobox.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{namespace_botan_1_1_crypto_box_aaa596df95c0bed67d30840dbc0ca2142}\label{namespace_botan_1_1_crypto_box_aaa596df95c0bed67d30840dbc0ca2142}} 
+\index{Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}}
+\subsubsection{\texorpdfstring{decrypt()}{decrypt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string Botan\+::\+Crypto\+Box\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input,  }\item[{const std\+::string \&}]{passphrase }\end{DoxyParamCaption})}
+
+Decrypt a message encrypted with Crypto\+Box\+::encrypt 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input data \\
+\hline
+{\em passphrase} & the passphrase used to encrypt the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 171 of file cryptobox.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{namespace_botan_1_1_crypto_box_ad9bd6d365d764d3c5d3b11faa12bafd9}\label{namespace_botan_1_1_crypto_box_ad9bd6d365d764d3c5d3b11faa12bafd9}} 
+\index{Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}!decrypt\+\_\+bin@{decrypt\+\_\+bin}}
+\index{decrypt\+\_\+bin@{decrypt\+\_\+bin}!Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}}
+\subsubsection{\texorpdfstring{decrypt\+\_\+bin()}{decrypt\_bin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily secure\+\_\+vector$<$uint8\+\_\+t$>$ Botan\+::\+Crypto\+Box\+::decrypt\+\_\+bin (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{input\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{input\+\_\+len,  }\item[{const std\+::string \&}]{passphrase }\end{DoxyParamCaption})}
+
+Encrypt a message using a passphrase 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input data \\
+\hline
+{\em input\+\_\+len} & the length of input in bytes \\
+\hline
+{\em passphrase} & the passphrase used to encrypt the message \\
+\hline
+{\em rng} & a ref to a random number generator, such as Auto\+Seeded\+\_\+\+R\+NG Decrypt a message encrypted with Crypto\+Box\+::encrypt \\
+\hline
+{\em input} & the input data \\
+\hline
+{\em input\+\_\+len} & the length of input in bytes \\
+\hline
+{\em passphrase} & the passphrase used to encrypt the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file cryptobox.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{namespace_botan_1_1_crypto_box_a8858a6a48a5c3f6798b3e820db2ed274}\label{namespace_botan_1_1_crypto_box_a8858a6a48a5c3f6798b3e820db2ed274}} 
+\index{Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}!decrypt\+\_\+bin@{decrypt\+\_\+bin}}
+\index{decrypt\+\_\+bin@{decrypt\+\_\+bin}!Botan\+::\+Crypto\+Box@{Botan\+::\+Crypto\+Box}}
+\subsubsection{\texorpdfstring{decrypt\+\_\+bin()}{decrypt\_bin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily secure\+\_\+vector$<$ uint8\+\_\+t $>$ Botan\+::\+Crypto\+Box\+::decrypt\+\_\+bin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input,  }\item[{const std\+::string \&}]{passphrase }\end{DoxyParamCaption})}
+
+Decrypt a message encrypted with Crypto\+Box\+::encrypt 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input data \\
+\hline
+{\em passphrase} & the passphrase used to encrypt the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 154 of file cryptobox.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 5

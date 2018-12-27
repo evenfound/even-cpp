@@ -1,0 +1,214 @@
+Q\+Nano\+Painter is an Open\+GL accelerated C++ vector drawing library for Qt, offering optimal performance, productivity and rendering quality all-\/in-\/one. Q\+Nano\+Painter A\+PI is a mixture of Q\+Painter and H\+T\+M\+L5 canvas A\+P\+Is. In other words, it\textquotesingle{}s very close to H\+T\+M\+L5 canvas but transformed to object oriented C++ with separate classes.
+
+Q\+Nano\+Painter can be used together with Qt5 U\+Is in different ways\+:
+
+
+\begin{DoxyItemize}
+\item Use Q\+Nano\+Quick\+Item and Q\+Nano\+Quick\+Item\+Painter when implementing custom C++ Qt \href{http://doc.qt.io/qt-5/qquickitem.html}{\tt Q\+Quick\+Items}. This is comparable to \href{http://doc.qt.io/qt-5/qquickpainteditem.html}{\tt Q\+Quick\+Painted\+Item}, but instead of Q\+Painter offers own Q\+Nano\+Painter A\+PI for drawing.
+\item Use Q\+Nano\+Widget when implementing custom Q\+Widget. This is based on \href{http://doc.qt.io/qt-5/qopenglwidget.html}{\tt Q\+Open\+G\+L\+Widget}.
+\item Use Q\+Nano\+Window when implementing single-\/view UI, optimal for embedded usage. This is based on \href{http://doc.qt.io/qt-5/qopenglwindow.html}{\tt Q\+Open\+G\+L\+Window}.
+\end{DoxyItemize}
+
+Q\+Nano\+Painter uses excellent \href{https://github.com/memononen/nanovg}{\tt Nano\+VG} as its rendering backend.
+
+\subsection*{Screenshots}
+
+ 
+
+\subsection*{Features}
+
+Here is a non exhaustive list of Q\+Nano\+Painter features\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries Vector drawing}\+: Path-\/based drawing of rectangles, circles, lines etc. filled and/or stroked. Brush can be color, gradient or image pattern. Different cap and join options for stoked lines.
+\item {\bfseries Images}\+: Transformed images or rectangular areas of images. Mipmapping for smoother rendering of scaled images.
+\item {\bfseries Text}\+: Contains set of default fonts and supports loading custom truetype fonts. Text aligning and wrapping. Letter-\/spacing and blur for shadow/glow effect.
+\item {\bfseries Antialiasing}\+: Adjustable antialiasing amount for vector drawing.
+\item {\bfseries Pixel aligning}\+: Drawing and texts can be either freely positioned (smooth animations) or aligned to pixels (sharp rendering).
+\item {\bfseries Extra}\+: Supports high-\/\+D\+PI retina resolutions, global alpha, transforms, painter states etc.
+\end{DoxyItemize}
+
+\subsection*{Usage}
+
+Taking Q\+Nano\+Painter into use in your Qt application is simple\+:
+
+
+\begin{DoxyItemize}
+\item Copy \textquotesingle{}libqnanopainter\textquotesingle{} directory into your project. Sources are included directly instead of building separate static/dynamic library which makes usage simple and allows easier customization of Q\+Nano\+Painter itself.
+\item In your project .pro file, include Q\+Nano\+Painter with something like\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+include(src/libqnanopainter/include.pri)
+\end{DoxyCode}
+ \subsubsection*{For custom Q\+Quick\+Item}
+
+
+\begin{DoxyItemize}
+\item Implement your Q\+Nano\+Quick\+Item and Q\+Nano\+Quick\+Item\+Painter based classes (see more about these below or from available examples).
+\item Export your item into Q\+ML in main.\+cpp with something like\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+qmlRegisterType<MyQNanoItem>("MyQNanoItem", 1, 0, "MyQNanoItem");
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Use your item in Q\+ML\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+import QtQuick 2.4
+import MyQNanoItem 1.0
+
+Item \{
+    ...
+    MyQNanoItem \{
+        anchors.fill: parent
+    \}
+\}
+\end{DoxyCode}
+
+
+To create own Q\+Nano\+Painter item you should implement 2 classes\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries Q\+Nano\+Quick\+Item}\+: This will be the visual Q\+Quick\+Item providing A\+PI towards Q\+ML side. Your painter will be created and attached to item in {\itshape create\+Item\+Painter()} method.
+\item {\bfseries Q\+Nano\+Quick\+Item\+Painter}\+: This will handle the drawing using Q\+Nano\+Painter A\+PI in the {\itshape paint()} method. Data with the item will be transferred in {\itshape synchronize()} method.
+\end{DoxyItemize}
+
+The main reason for two classes is that these will run in separate threads for optimal performance. And because of this, all communication between these two need to happen in {\itshape synchronize()} method.
+
+Here is a complete Hello\+World example item\+:
+
+
+\begin{DoxyCode}
+\{C++:\}
+#include "qnanoquickitem.h"
+#include "qnanoquickitempainter.h"
+
+// HelloItemPainter contains the painting code
+class HelloItemPainter : public QNanoQuickItemPainter
+\{
+    Q\_OBJECT
+
+public:
+    HelloItemPainter()
+    \{
+    \}
+
+    void paint(QNanoPainter *p)
+    \{
+        // Paint the background circle
+        p->beginPath();
+        p->circle(width()*0.5, height()*0.5, width()*0.46);
+        QNanoRadialGradient gradient1(width()*0.5, height()*0.4, width()*0.6, width()*0.2);
+        gradient1.setStartColor("#808080");
+        gradient1.setEndColor("#404040");
+        p->setFillStyle(gradient1);
+        p->fill();
+        p->setStrokeStyle("#202020");
+        p->setLineWidth(width()*0.02);
+        p->stroke();
+        // Hello text
+        p->setTextAlign(QNanoPainter::ALIGN\_CENTER);
+        p->setTextBaseline(QNanoPainter::BASELINE\_MIDDLE);
+        QNanoFont font1(QNanoFont::DEFAULT\_FONT\_BOLD\_ITALIC);
+        font1.setPixelSize(width()*0.08);
+        p->setFont(font1);
+        p->setFillStyle("#B0D040");
+        p->fillText("HELLO", width()*0.5, height()*0.4);
+        // QNanoPainter text
+        QNanoFont font2(QNanoFont::DEFAULT\_FONT\_THIN);
+        font2.setPixelSize(width()*0.18);
+        p->setFont(font2);
+        p->fillText("QNanoPainter", width()*0.5, height()*0.5);
+    \}
+\};
+
+// HelloItem provides the API towards QML
+class HelloItem : public QNanoQuickItem
+\{
+    Q\_OBJECT
+
+public:
+    HelloItem(QQuickItem *parent = 0)
+        :  QNanoQuickItem(parent)
+    \{
+    \}
+
+    // Reimplement
+    QNanoQuickItemPainter *createItemPainter() const
+    \{
+        // Create painter for this item
+        return new HelloItemPainter();
+    \}
+\};
+\end{DoxyCode}
+
+
+\subsubsection*{For custom Q\+Widget or Q\+Window}
+
+Implement your own Q\+Nano\+Widget or Q\+Nano\+Window subclass depending on your needs. A\+P\+Is of these are very similar, basically you just override {\itshape paint()} method like this\+:
+
+
+\begin{DoxyCode}
+\{C++:\}
+#include "qnanowindow.h"
+#include "qnanopainter.h"
+
+class HelloWindow : public QNanoWindow
+\{
+public:
+    HelloWindow()
+    \{
+        setFillColor("#ffffff");
+    \}
+
+    void paint(QNanoPainter *p)
+    \{
+        // Paint using QNanoPainter here
+        ...
+    \}
+\};
+\end{DoxyCode}
+
+
+\subsection*{A\+PI Reference}
+
+Sources contain A\+PI documentation written with \href{http://doc.qt.io/qt-5/qdoc-index.html}{\tt Q\+Doc}. To generate the documentation\+:
+
+
+\begin{DoxyCode}
+> cd doc
+> [Qt bin path]/qdoc qnanopainter.qdocconf 
+\end{DoxyCode}
+ Documentation is work-\/in-\/progress, patches welcome =)
+
+\subsection*{License}
+
+The library is licensed under \href{LICENSE.txt}{\tt zlib license}.
+
+\subsection*{Links}
+
+
+\begin{DoxyItemize}
+\item Uses \href{http://www.qt.io}{\tt Qt framework}.
+\item Uses \href{http://github.com/memononen/nanovg}{\tt Nano\+VG} library as rendering backend.
+\item Uses Google Fonts \href{http://www.google.com/fonts/specimen/Roboto}{\tt Roboto} (and \href{http://www.google.com/fonts/specimen/Pacifico}{\tt Pacifico} in gallery example).
+\item Blog posts\+:
+\begin{DoxyItemize}
+\item \href{http://kgronholm.blogspot.fi/2015/10/introducing-qnanopainter.html}{\tt Introducing Q\+Nano\+Painter}
+\item \href{http://kgronholm.blogspot.fi/2017/03/qnanopainter-with-qt-58-and.html}{\tt Q\+Nano\+Painter with Qt 5.\+8 (and Q\+S\+G\+Render\+Node)}
+\item \href{http://kgronholm.blogspot.fi/2017/10/fitgraph-ng-ui-prototype.html}{\tt Fit\+Graph NG UI prototype}
+\item \href{http://kgronholm.blogspot.fi/2017/12/qt-510-rendering-benchmarks.html}{\tt Qt 5.\+10 Rendering Benchmarks}
+\item \href{http://kgronholm.blogspot.fi/2018/01/qt-510-windows-rendering-benchmarks.html}{\tt Qt 5.\+10 Windows Rendering Benchmarks} 
+\end{DoxyItemize}
+\end{DoxyItemize}

@@ -1,0 +1,15 @@
+digraph "Botan::make_uint16"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node215 [label="Botan::make_uint16",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node215 -> Node216 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node216 [label="Botan::TLS::Certificate\l_Req::Certificate_Req",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_t_l_s_1_1_certificate___req.html#ad633ad08f5ccf7273534c3d952e32b8a"];
+  Node215 -> Node217 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node217 [label="Botan::load_be\< uint16_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#ab6bab280ff3476b4539a9c2946c690f1"];
+  Node217 -> Node218 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node218 [label="Botan::ucs2_to_utf8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a2d7ee67f502279fc24a01b42c5451c3c"];
+  Node215 -> Node219 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node219 [label="Botan::load_le\< uint16_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#aeb5c38bea458b6183ef69afd5ec0cc42"];
+}

@@ -1,0 +1,131 @@
+\hypertarget{class_q_ssl_server}{}\section{Q\+Ssl\+Server Class Reference}
+\label{class_q_ssl_server}\index{Q\+Ssl\+Server@{Q\+Ssl\+Server}}
+
+
+Implements a secure T\+CP server over S\+SL.  
+
+
+
+
+Inheritance diagram for Q\+Ssl\+Server\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Ssl\+Server\+:
+% FIG 1
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssl_server_acc1a161e49a4dac2500ab7d1fadfc9ac}\label{class_q_ssl_server_acc1a161e49a4dac2500ab7d1fadfc9ac}} 
+void {\bfseries ssl\+Errors} (const Q\+List$<$ Q\+Ssl\+Error $>$ \&errors)
+\item 
+\mbox{\Hypertarget{class_q_ssl_server_a210eae513be0727718892ff57d77a57a}\label{class_q_ssl_server_a210eae513be0727718892ff57d77a57a}} 
+void {\bfseries peer\+Verify\+Error} (const Q\+Ssl\+Error \&error)
+\item 
+\mbox{\Hypertarget{class_q_ssl_server_a87dfd641ad9bfe155a7fd39db20d1ecf}\label{class_q_ssl_server_a87dfd641ad9bfe155a7fd39db20d1ecf}} 
+void {\bfseries new\+Encrypted\+Connection} ()
+\item 
+\mbox{\Hypertarget{class_q_ssl_server_a43d8f9aa40b813d6b05229e04e226bac}\label{class_q_ssl_server_a43d8f9aa40b813d6b05229e04e226bac}} 
+void {\bfseries pre\+Shared\+Key\+Authentication\+Required} (Q\+Ssl\+Pre\+Shared\+Key\+Authenticator $\ast$authenticator)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_ssl_server_a3f1609dc89e11e26000cc70f4ced44c1}{Q\+Ssl\+Server}} (Q\+Object $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR)
+\item 
+virtual \mbox{\hyperlink{class_q_ssl_server_ac57a583b5ff075ec126dac94530077e5}{$\sim$\+Q\+Ssl\+Server}} ()
+\item 
+void \mbox{\hyperlink{class_q_ssl_server_a1bc65d4f411dbbd9256f703f2f21f288}{set\+Ssl\+Configuration}} (const Q\+Ssl\+Configuration \&\mbox{\hyperlink{class_q_ssl_server_a5929244a54a15d3b39c4ff1bfc721f52}{ssl\+Configuration}})
+\item 
+Q\+Ssl\+Configuration \mbox{\hyperlink{class_q_ssl_server_a5929244a54a15d3b39c4ff1bfc721f52}{ssl\+Configuration}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_q_ssl_server_a8423ce204b5757e476469257e8a472b6}{incoming\+Connection}} (qintptr socket)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a secure T\+CP server over S\+SL. 
+
+Qt\+Web\+Sockets 
+
+Definition at line 62 of file qsslserver\+\_\+p.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_ssl_server_a3f1609dc89e11e26000cc70f4ced44c1}\label{class_q_ssl_server_a3f1609dc89e11e26000cc70f4ced44c1}} 
+\index{Q\+Ssl\+Server@{Q\+Ssl\+Server}!Q\+Ssl\+Server@{Q\+Ssl\+Server}}
+\index{Q\+Ssl\+Server@{Q\+Ssl\+Server}!Q\+Ssl\+Server@{Q\+Ssl\+Server}}
+\subsubsection{\texorpdfstring{Q\+Ssl\+Server()}{QSslServer()}}
+{\footnotesize\ttfamily Q\+T\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE Q\+Ssl\+Server\+::\+Q\+Ssl\+Server (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs a new \mbox{\hyperlink{class_q_ssl_server}{Q\+Ssl\+Server}} with the given {\itshape parent}. 
+
+Definition at line 62 of file qsslserver.\+cpp.
+
+\mbox{\Hypertarget{class_q_ssl_server_ac57a583b5ff075ec126dac94530077e5}\label{class_q_ssl_server_ac57a583b5ff075ec126dac94530077e5}} 
+\index{Q\+Ssl\+Server@{Q\+Ssl\+Server}!````~Q\+Ssl\+Server@{$\sim$\+Q\+Ssl\+Server}}
+\index{````~Q\+Ssl\+Server@{$\sim$\+Q\+Ssl\+Server}!Q\+Ssl\+Server@{Q\+Ssl\+Server}}
+\subsubsection{\texorpdfstring{$\sim$\+Q\+Ssl\+Server()}{~QSslServer()}}
+{\footnotesize\ttfamily Q\+Ssl\+Server\+::$\sim$\+Q\+Ssl\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destroys the \mbox{\hyperlink{class_q_ssl_server}{Q\+Ssl\+Server}}.
+
+All open connections are closed. 
+
+Definition at line 75 of file qsslserver.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_ssl_server_a8423ce204b5757e476469257e8a472b6}\label{class_q_ssl_server_a8423ce204b5757e476469257e8a472b6}} 
+\index{Q\+Ssl\+Server@{Q\+Ssl\+Server}!incoming\+Connection@{incoming\+Connection}}
+\index{incoming\+Connection@{incoming\+Connection}!Q\+Ssl\+Server@{Q\+Ssl\+Server}}
+\subsubsection{\texorpdfstring{incoming\+Connection()}{incomingConnection()}}
+{\footnotesize\ttfamily void Q\+Ssl\+Server\+::incoming\+Connection (\begin{DoxyParamCaption}\item[{qintptr}]{socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Called when a new connection is established.
+
+Converts {\itshape socket} to a Q\+Ssl\+Socket. 
+
+Definition at line 108 of file qsslserver.\+cpp.
+
+\mbox{\Hypertarget{class_q_ssl_server_a1bc65d4f411dbbd9256f703f2f21f288}\label{class_q_ssl_server_a1bc65d4f411dbbd9256f703f2f21f288}} 
+\index{Q\+Ssl\+Server@{Q\+Ssl\+Server}!set\+Ssl\+Configuration@{set\+Ssl\+Configuration}}
+\index{set\+Ssl\+Configuration@{set\+Ssl\+Configuration}!Q\+Ssl\+Server@{Q\+Ssl\+Server}}
+\subsubsection{\texorpdfstring{set\+Ssl\+Configuration()}{setSslConfiguration()}}
+{\footnotesize\ttfamily void Q\+Ssl\+Server\+::set\+Ssl\+Configuration (\begin{DoxyParamCaption}\item[{const Q\+Ssl\+Configuration \&}]{ssl\+Configuration }\end{DoxyParamCaption})}
+
+Sets the {\itshape ssl\+Configuration} to use.
+
+\begin{DoxySeeAlso}{See also}
+Q\+Ssl\+Socket\+::set\+Ssl\+Configuration() 
+\end{DoxySeeAlso}
+
+
+Definition at line 86 of file qsslserver.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_q_ssl_server_a5929244a54a15d3b39c4ff1bfc721f52}\label{class_q_ssl_server_a5929244a54a15d3b39c4ff1bfc721f52}} 
+\index{Q\+Ssl\+Server@{Q\+Ssl\+Server}!ssl\+Configuration@{ssl\+Configuration}}
+\index{ssl\+Configuration@{ssl\+Configuration}!Q\+Ssl\+Server@{Q\+Ssl\+Server}}
+\subsubsection{\texorpdfstring{ssl\+Configuration()}{sslConfiguration()}}
+{\footnotesize\ttfamily Q\+Ssl\+Configuration Q\+Ssl\+Server\+::ssl\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current ssl configuration. 
+
+Definition at line 96 of file qsslserver.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qsslserver\+\_\+p.\+h\item 
+prerequisites/build/debug/moc\+\_\+qsslserver\+\_\+p.\+cpp\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qsslserver.\+cpp\end{DoxyCompactItemize}

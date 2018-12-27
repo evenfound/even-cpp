@@ -1,0 +1,72 @@
+\hypertarget{structmbedtls__ssl__flight__item}{}\section{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item Struct Reference}
+\label{structmbedtls__ssl__flight__item}\index{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}}
+
+
+Collaboration diagram for mbedtls\+\_\+ssl\+\_\+flight\+\_\+item\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{structmbedtls__ssl__flight__item_aad7b11522ddc6f7ea383231b9e3cedf1}{p}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structmbedtls__ssl__flight__item_a2a707163f2b8728b666071f1d7b120f9}{len}}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__ssl__flight__item_acdfcb3e1d7848e7f09d9c00defa90e4b}{type}}
+\item 
+\mbox{\hyperlink{structmbedtls__ssl__flight__item}{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}} $\ast$ \mbox{\hyperlink{structmbedtls__ssl__flight__item_a10b26523d65d985a745e517312ca4ca1}{next}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 323 of file ssl\+\_\+internal.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__ssl__flight__item_a2a707163f2b8728b666071f1d7b120f9}\label{structmbedtls__ssl__flight__item_a2a707163f2b8728b666071f1d7b120f9}} 
+\index{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}!len@{len}}
+\index{len@{len}!mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}}
+\subsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily size\+\_\+t mbedtls\+\_\+ssl\+\_\+flight\+\_\+item\+::len}
+
+length of p 
+
+Definition at line 326 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__flight__item_a10b26523d65d985a745e517312ca4ca1}\label{structmbedtls__ssl__flight__item_a10b26523d65d985a745e517312ca4ca1}} 
+\index{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}!next@{next}}
+\index{next@{next}!mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ssl__flight__item}{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}}$\ast$ mbedtls\+\_\+ssl\+\_\+flight\+\_\+item\+::next}
+
+next handshake message(s) 
+
+Definition at line 328 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__flight__item_aad7b11522ddc6f7ea383231b9e3cedf1}\label{structmbedtls__ssl__flight__item_aad7b11522ddc6f7ea383231b9e3cedf1}} 
+\index{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}!p@{p}}
+\index{p@{p}!mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}}
+\subsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily unsigned char$\ast$ mbedtls\+\_\+ssl\+\_\+flight\+\_\+item\+::p}
+
+message, including handshake headers 
+
+Definition at line 325 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__flight__item_acdfcb3e1d7848e7f09d9c00defa90e4b}\label{structmbedtls__ssl__flight__item_acdfcb3e1d7848e7f09d9c00defa90e4b}} 
+\index{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}!type@{type}}
+\index{type@{type}!mbedtls\+\_\+ssl\+\_\+flight\+\_\+item@{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+ssl\+\_\+flight\+\_\+item\+::type}
+
+type of the message\+: handshake or C\+CS 
+
+Definition at line 327 of file ssl\+\_\+internal.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/ssl\+\_\+internal.\+h\end{DoxyCompactItemize}

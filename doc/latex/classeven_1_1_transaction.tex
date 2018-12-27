@@ -1,0 +1,59 @@
+\hypertarget{classeven_1_1_transaction}{}\section{even\+:\+:Transaction Class Reference}
+\label{classeven_1_1_transaction}\index{even\+::\+Transaction@{even\+::\+Transaction}}
+
+
+\mbox{\hyperlink{classeven_1_1_transaction}{Transaction}} structure in bytes member size. All\+: 1248 bytes 32 -\/ hash 1024 -\/ signature\+Message\+Fragment 32 -\/ address 24 -\/ tag 4 -\/ value 4 -\/ timestamp 4 -\/ current\+Index 4 -\/ last\+Index 32 -\/ message\+Hash 32 -\/ trunk\+Hash 32 -\/ branch\+Hash 24 -\/ nonce.  
+
+
+
+
+{\ttfamily \#include $<$Transaction.\+hxx$>$}
+
+
+
+Inheritance diagram for even\+:\+:Transaction\+:
+% FIG 0
+
+
+Collaboration diagram for even\+:\+:Transaction\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeven_1_1_transaction_abd14294c8685514091435d73930ca200}\label{classeven_1_1_transaction_abd14294c8685514091435d73930ca200}} 
+bool \mbox{\hyperlink{classeven_1_1_transaction_abd14294c8685514091435d73930ca200}{check\+Hash\+\_\+w\+File\+Name}} (Q\+String file\+Name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check transaction file name and internal hash value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_transaction_a21bbda5aa04dbbc38847061384667a7e}\label{classeven_1_1_transaction_a21bbda5aa04dbbc38847061384667a7e}} 
+bool \mbox{\hyperlink{classeven_1_1_transaction_a21bbda5aa04dbbc38847061384667a7e}{ipfs\+Load}} (Q\+String file\+Name\+\_\+)
+\begin{DoxyCompactList}\small\item\em Load transaction and and read data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_transaction_a30d1d15267672db15ff5c6df783039c5}\label{classeven_1_1_transaction_a30d1d15267672db15ff5c6df783039c5}} 
+bool \mbox{\hyperlink{classeven_1_1_transaction_a30d1d15267672db15ff5c6df783039c5}{ipfs\+Flush}} (Q\+String file\+Path\+\_\+)
+\begin{DoxyCompactList}\small\item\em Flush transaction to ipfs shared. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_transaction_a36b81dd08f2d791845d0d099bbafaf3f}\label{classeven_1_1_transaction_a36b81dd08f2d791845d0d099bbafaf3f}} 
+void \mbox{\hyperlink{classeven_1_1_transaction_a36b81dd08f2d791845d0d099bbafaf3f}{add\+Address}} (Q\+String address\+\_\+)
+\begin{DoxyCompactList}\small\item\em Add address to transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_transaction_a50b19d32d3f4348598175df6ecbef771}\label{classeven_1_1_transaction_a50b19d32d3f4348598175df6ecbef771}} 
+void \mbox{\hyperlink{classeven_1_1_transaction_a50b19d32d3f4348598175df6ecbef771}{set\+Value}} (int value\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set value to transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_transaction_ad2b1579b9a031a4774a331c370ce2862}\label{classeven_1_1_transaction_ad2b1579b9a031a4774a331c370ce2862}} 
+const Q\+String\+List \mbox{\hyperlink{classeven_1_1_transaction_ad2b1579b9a031a4774a331c370ce2862}{errors}} () const
+\begin{DoxyCompactList}\small\item\em Got a some error strings if pressent its. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_transaction_a5b491ee3b550f20da6f7751fea75f3ec}\label{classeven_1_1_transaction_a5b491ee3b550f20da6f7751fea75f3ec}} 
+bool \mbox{\hyperlink{classeven_1_1_transaction_a5b491ee3b550f20da6f7751fea75f3ec}{serialize}} (Q\+String path\+\_\+, Q\+Json\+Object \&other\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Return values in json array packed by path\+\_\+ set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classeven_1_1_transaction}{Transaction}} structure in bytes member size. All\+: 1248 bytes 32 -\/ hash 1024 -\/ signature\+Message\+Fragment 32 -\/ address 24 -\/ tag 4 -\/ value 4 -\/ timestamp 4 -\/ current\+Index 4 -\/ last\+Index 32 -\/ message\+Hash 32 -\/ trunk\+Hash 32 -\/ branch\+Hash 24 -\/ nonce. 
+
+Entitity of storage handler 
+
+Definition at line 35 of file Transaction.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_transaction_8hxx}{Transaction.\+hxx}}\item 
+src/core/\mbox{\hyperlink{_transaction_8cxx}{Transaction.\+cxx}}\end{DoxyCompactItemize}

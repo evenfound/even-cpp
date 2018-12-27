@@ -1,0 +1,77 @@
+\hypertarget{struct_libp2p_protocol_handler}{}\section{Libp2p\+Protocol\+Handler Struct Reference}
+\label{struct_libp2p_protocol_handler}\index{Libp2p\+Protocol\+Handler@{Libp2p\+Protocol\+Handler}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_libp2p_protocol_handler_a95a6ff6efff9baf5c09bbd00f895f9e2}{context}}
+\item 
+int($\ast$ \mbox{\hyperlink{struct_libp2p_protocol_handler_abb819af38fb6c4ae6ab11ab8e58c6467}{Can\+Handle}} )(const struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}} $\ast$msg)
+\item 
+\mbox{\Hypertarget{struct_libp2p_protocol_handler_a2303e36bf158ec8c6cd0d787f1944bb0}\label{struct_libp2p_protocol_handler_a2303e36bf158ec8c6cd0d787f1944bb0}} 
+int($\ast$ {\bfseries Handle\+Message} )(const struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}} $\ast$msg, struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$stream, void $\ast$protocol\+\_\+context)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_libp2p_protocol_handler_a99321f59de18af32c0332bd8b37afd83}{Shutdown}} )(void $\ast$protocol\+\_\+context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file protocol.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_libp2p_protocol_handler_abb819af38fb6c4ae6ab11ab8e58c6467}\label{struct_libp2p_protocol_handler_abb819af38fb6c4ae6ab11ab8e58c6467}} 
+\index{Libp2p\+Protocol\+Handler@{Libp2p\+Protocol\+Handler}!Can\+Handle@{Can\+Handle}}
+\index{Can\+Handle@{Can\+Handle}!Libp2p\+Protocol\+Handler@{Libp2p\+Protocol\+Handler}}
+\subsubsection{\texorpdfstring{Can\+Handle}{CanHandle}}
+{\footnotesize\ttfamily int($\ast$ Libp2p\+Protocol\+Handler\+::\+Can\+Handle) (const struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}} $\ast$msg)}
+
+Determines if this protocol can handle the incoming message 
+\begin{DoxyParams}{Parameters}
+{\em incoming} & the incoming data \\
+\hline
+{\em incoming\+\_\+size} & the size of the incoming data buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) if it can handle this message, false(0) if not 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file protocol.\+h.
+
+\mbox{\Hypertarget{struct_libp2p_protocol_handler_a95a6ff6efff9baf5c09bbd00f895f9e2}\label{struct_libp2p_protocol_handler_a95a6ff6efff9baf5c09bbd00f895f9e2}} 
+\index{Libp2p\+Protocol\+Handler@{Libp2p\+Protocol\+Handler}!context@{context}}
+\index{context@{context}!Libp2p\+Protocol\+Handler@{Libp2p\+Protocol\+Handler}}
+\subsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily void$\ast$ Libp2p\+Protocol\+Handler\+::context}
+
+A protocol dependent context (often an \mbox{\hyperlink{struct_ipfs_node}{Ipfs\+Node}} pointer, but libp2p doesn\textquotesingle{}t know about that) 
+
+Definition at line 13 of file protocol.\+h.
+
+\mbox{\Hypertarget{struct_libp2p_protocol_handler_a99321f59de18af32c0332bd8b37afd83}\label{struct_libp2p_protocol_handler_a99321f59de18af32c0332bd8b37afd83}} 
+\index{Libp2p\+Protocol\+Handler@{Libp2p\+Protocol\+Handler}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Libp2p\+Protocol\+Handler@{Libp2p\+Protocol\+Handler}}
+\subsubsection{\texorpdfstring{Shutdown}{Shutdown}}
+{\footnotesize\ttfamily int($\ast$ Libp2p\+Protocol\+Handler\+::\+Shutdown) (void $\ast$protocol\+\_\+context)}
+
+Shutting down. Clean up any memory allocations 
+\begin{DoxyParams}{Parameters}
+{\em protocol\+\_\+context} & the context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file protocol.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/libp2p/net/protocol.\+h\end{DoxyCompactItemize}

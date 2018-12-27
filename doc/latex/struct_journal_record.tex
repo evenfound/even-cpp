@@ -1,0 +1,40 @@
+\hypertarget{struct_journal_record}{}\section{Journal\+Record Struct Reference}
+\label{struct_journal_record}\index{Journal\+Record@{Journal\+Record}}
+
+
+{\ttfamily \#include $<$journalstore.\+h$>$}
+
+
+
+Collaboration diagram for Journal\+Record\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_journal_record_a52a6e62933d3f0df76db5e5d67f9a506}\label{struct_journal_record_a52a6e62933d3f0df76db5e5d67f9a506}} 
+unsigned long long {\bfseries timestamp}
+\item 
+\mbox{\Hypertarget{struct_journal_record_a9bc233e70822471ee833c14bbc789732}\label{struct_journal_record_a9bc233e70822471ee833c14bbc789732}} 
+int {\bfseries pin}
+\item 
+\mbox{\Hypertarget{struct_journal_record_ac8dc878827331c0ee3f7a9176e2b5f77}\label{struct_journal_record_ac8dc878827331c0ee3f7a9176e2b5f77}} 
+int {\bfseries pending}
+\item 
+\mbox{\Hypertarget{struct_journal_record_aaa0c97b11bf2dc0d8d6652bf88a591b0}\label{struct_journal_record_aaa0c97b11bf2dc0d8d6652bf88a591b0}} 
+uint8\+\_\+t $\ast$ {\bfseries hash}
+\item 
+\mbox{\Hypertarget{struct_journal_record_a8309a57ddf050786ee3bd88789ab46a8}\label{struct_journal_record_a8309a57ddf050786ee3bd88789ab46a8}} 
+size\+\_\+t {\bfseries hash\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Piggyback on the datastore to access the journal entries 
+
+Definition at line 13 of file journalstore.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/ipfs/include/ipfs/repo/fsrepo/journalstore.\+h\end{DoxyCompactItemize}

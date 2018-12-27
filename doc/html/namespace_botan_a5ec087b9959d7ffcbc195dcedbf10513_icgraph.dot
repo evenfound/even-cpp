@@ -1,0 +1,25 @@
+digraph "Botan::bswap_4"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node68 [label="Botan::bswap_4",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node68 -> Node69 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="Botan::load_le",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a42d83d9e349598b56af765a1acb441bc"];
+  Node68 -> Node70 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 [label="Botan::load_be",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a0b13c515a5a6599c5074fd9471192b69"];
+  Node68 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node71 [label="Botan::SIMD_4x32::load_le",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_s_i_m_d__4x32.html#af66d289408de2822e808bc06f06db35f"];
+  Node71 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="Botan::SIMD_4x32::load_be",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_s_i_m_d__4x32.html#a9d47a7d56f29498c1cf8d2b7ff2ad28a"];
+  Node68 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node68 -> Node73 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="Botan::SIMD_4x32::bswap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_s_i_m_d__4x32.html#a7efd5ff4f90609b6c7c5ad88d6814f77"];
+  Node73 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 -> Node74 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node74 [label="Botan::SIMD_4x32::store_le",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_s_i_m_d__4x32.html#a3bfb23404c6906d0bdb61f3c462edc2a"];
+  Node74 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node75 [label="Botan::SIMD_4x32::store_be",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_s_i_m_d__4x32.html#ac421365de5827557c16aa89097e15504"];
+  Node75 -> Node74 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

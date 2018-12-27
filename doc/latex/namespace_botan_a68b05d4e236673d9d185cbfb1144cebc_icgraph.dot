@@ -1,0 +1,9 @@
+digraph "Botan::get_sig_paddings"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node134 [label="Botan::get_sig_paddings",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node134 -> Node135 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node135 [label="Botan::sig_algo_and\l_pad_ok",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#ae2167ee9b593409c1ca300b1fbec0691"];
+}

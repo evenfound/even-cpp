@@ -1,0 +1,19 @@
+digraph "configure.InfoObject"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="configure.InfoObject",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="object",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="configure.ArchInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classconfigure_1_1_arch_info.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="configure.CompilerInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classconfigure_1_1_compiler_info.html"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="configure.ModuleInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classconfigure_1_1_module_info.html"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="configure.ModulePolicyInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classconfigure_1_1_module_policy_info.html"];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="configure.OsInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classconfigure_1_1_os_info.html"];
+}

@@ -1,0 +1,138 @@
+\hypertarget{struct_session_context}{}\section{Session\+Context Struct Reference}
+\label{struct_session_context}\index{Session\+Context@{Session\+Context}}
+
+
+Collaboration diagram for Session\+Context\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_session_context_a923d6209f5a7789fa257855d9fce60e7}\label{struct_session_context_a923d6209f5a7789fa257855d9fce60e7}} 
+char $\ast$ {\bfseries host}
+\item 
+\mbox{\Hypertarget{struct_session_context_aac45aed1f77a0052845308fa42111b40}\label{struct_session_context_aac45aed1f77a0052845308fa42111b40}} 
+int {\bfseries port}
+\item 
+\mbox{\Hypertarget{struct_session_context_abe39e033aeaad3bf3464bed5666ccc51}\label{struct_session_context_abe39e033aeaad3bf3464bed5666ccc51}} 
+enum I\+P\+Traffic\+Type {\bfseries traffic\+\_\+type}
+\item 
+\mbox{\Hypertarget{struct_session_context_a24587bb824e17ca408198587ecdf5d9a}\label{struct_session_context_a24587bb824e17ca408198587ecdf5d9a}} 
+pthread\+\_\+mutex\+\_\+t {\bfseries stream\+\_\+mutex}
+\item 
+struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$ \mbox{\hyperlink{struct_session_context_ae1f020b11255c67e07b4a082c19d5830}{insecure\+\_\+stream}}
+\item 
+\mbox{\Hypertarget{struct_session_context_a4e4938ff0cdc42a56cbf73c764de9993}\label{struct_session_context_a4e4938ff0cdc42a56cbf73c764de9993}} 
+struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$ {\bfseries secure\+\_\+stream}
+\item 
+\mbox{\Hypertarget{struct_session_context_adbbaf5a9ee36a2bfe886c2ffc32ba317}\label{struct_session_context_adbbaf5a9ee36a2bfe886c2ffc32ba317}} 
+struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$ {\bfseries default\+\_\+stream}
+\item 
+\mbox{\Hypertarget{struct_session_context_ac0e856ead357b06f6540aa771b2260a6}\label{struct_session_context_ac0e856ead357b06f6540aa771b2260a6}} 
+struct \mbox{\hyperlink{struct_datastore}{Datastore}} $\ast$ {\bfseries datastore}
+\item 
+\mbox{\Hypertarget{struct_session_context_ae959c2ef5175341664b6966768aad47c}\label{struct_session_context_ae959c2ef5175341664b6966768aad47c}} 
+struct \mbox{\hyperlink{struct_filestore}{Filestore}} $\ast$ {\bfseries filestore}
+\item 
+\mbox{\Hypertarget{struct_session_context_a22e563ed2e2a89786fee5e9d191b0877}\label{struct_session_context_a22e563ed2e2a89786fee5e9d191b0877}} 
+char $\ast$ {\bfseries chosen\+\_\+curve}
+\item 
+\mbox{\Hypertarget{struct_session_context_ae65bcef5b31bac643ef53e2563a2f983}\label{struct_session_context_ae65bcef5b31bac643ef53e2563a2f983}} 
+char $\ast$ {\bfseries chosen\+\_\+cipher}
+\item 
+\mbox{\Hypertarget{struct_session_context_ad7f2300d2f8573e1e1dc17e1598fc4a4}\label{struct_session_context_ad7f2300d2f8573e1e1dc17e1598fc4a4}} 
+char $\ast$ {\bfseries chosen\+\_\+hash}
+\item 
+\mbox{\Hypertarget{struct_session_context_a497fa22199af4f47a1651ea85b1a817f}\label{struct_session_context_a497fa22199af4f47a1651ea85b1a817f}} 
+unsigned char $\ast$ {\bfseries shared\+\_\+key}
+\item 
+\mbox{\Hypertarget{struct_session_context_a5aeb0e982e0a34784b25270d544e1576}\label{struct_session_context_a5aeb0e982e0a34784b25270d544e1576}} 
+size\+\_\+t {\bfseries shared\+\_\+key\+\_\+size}
+\item 
+\mbox{\Hypertarget{struct_session_context_a273c155ce5bded148566b936f59ba734}\label{struct_session_context_a273c155ce5bded148566b936f59ba734}} 
+size\+\_\+t {\bfseries aes\+\_\+encode\+\_\+nonce\+\_\+offset}
+\item 
+\mbox{\Hypertarget{struct_session_context_ae1230d7634b9ab9a2ebe9218ad34b5da}\label{struct_session_context_ae1230d7634b9ab9a2ebe9218ad34b5da}} 
+unsigned char {\bfseries aes\+\_\+encode\+\_\+stream\+\_\+block} \mbox{[}16\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_session_context_af16f4a36d6cae6c5ec9aff913dd16e7f}\label{struct_session_context_af16f4a36d6cae6c5ec9aff913dd16e7f}} 
+size\+\_\+t {\bfseries aes\+\_\+decode\+\_\+nonce\+\_\+offset}
+\item 
+\mbox{\Hypertarget{struct_session_context_a38669384403f527d386d067ba6147bbe}\label{struct_session_context_a38669384403f527d386d067ba6147bbe}} 
+unsigned char {\bfseries aes\+\_\+decode\+\_\+stream\+\_\+block} \mbox{[}16\mbox{]}
+\item 
+int($\ast$ \mbox{\hyperlink{struct_session_context_a09e3b1d462b6f6991588822e6b207700}{mac\+\_\+function}} )(const unsigned char $\ast$, size\+\_\+t, unsigned char $\ast$)
+\item 
+\mbox{\Hypertarget{struct_session_context_a809edb26c85696b72de067861c6c6357}\label{struct_session_context_a809edb26c85696b72de067861c6c6357}} 
+unsigned char {\bfseries local\+\_\+nonce} \mbox{[}16\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_session_context_a62f93a31f20e3c7c0b42a77be7672d09}\label{struct_session_context_a62f93a31f20e3c7c0b42a77be7672d09}} 
+struct \mbox{\hyperlink{struct_ephemeral_private_key}{Ephemeral\+Private\+Key}} $\ast$ {\bfseries ephemeral\+\_\+private\+\_\+key}
+\item 
+\mbox{\Hypertarget{struct_session_context_a42acab7f1e12d017259d5d52611ef021}\label{struct_session_context_a42acab7f1e12d017259d5d52611ef021}} 
+struct \mbox{\hyperlink{struct_stretched_key}{Stretched\+Key}} $\ast$ {\bfseries local\+\_\+stretched\+\_\+key}
+\item 
+\mbox{\Hypertarget{struct_session_context_a343b856ec2d2e082bd485dd13e1f0a99}\label{struct_session_context_a343b856ec2d2e082bd485dd13e1f0a99}} 
+unsigned char {\bfseries remote\+\_\+nonce} \mbox{[}16\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_session_context_a06019b40c8578bedf6667a684399966b}\label{struct_session_context_a06019b40c8578bedf6667a684399966b}} 
+struct \mbox{\hyperlink{struct_public_key}{Public\+Key}} {\bfseries remote\+\_\+key}
+\item 
+\mbox{\Hypertarget{struct_session_context_a219cd6d6afa653a923e0215788b01d1d}\label{struct_session_context_a219cd6d6afa653a923e0215788b01d1d}} 
+char $\ast$ {\bfseries remote\+\_\+peer\+\_\+id}
+\item 
+\mbox{\Hypertarget{struct_session_context_a832186aa96e74b76fea291ff3b8bae81}\label{struct_session_context_a832186aa96e74b76fea291ff3b8bae81}} 
+struct \mbox{\hyperlink{struct_stretched_key}{Stretched\+Key}} $\ast$ {\bfseries remote\+\_\+stretched\+\_\+key}
+\item 
+\mbox{\Hypertarget{struct_session_context_ae6c4f3320749245aad67ff311ab7ca83}\label{struct_session_context_ae6c4f3320749245aad67ff311ab7ca83}} 
+unsigned char $\ast$ {\bfseries remote\+\_\+ephemeral\+\_\+public\+\_\+key}
+\item 
+\mbox{\Hypertarget{struct_session_context_a6cd18642a869c775a712651d81fe5a3b}\label{struct_session_context_a6cd18642a869c775a712651d81fe5a3b}} 
+size\+\_\+t {\bfseries remote\+\_\+ephemeral\+\_\+public\+\_\+key\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 16 of file session.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_session_context_ae1f020b11255c67e07b4a082c19d5830}\label{struct_session_context_ae1f020b11255c67e07b4a082c19d5830}} 
+\index{Session\+Context@{Session\+Context}!insecure\+\_\+stream@{insecure\+\_\+stream}}
+\index{insecure\+\_\+stream@{insecure\+\_\+stream}!Session\+Context@{Session\+Context}}
+\subsubsection{\texorpdfstring{insecure\+\_\+stream}{insecure\_stream}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_stream}{Stream}}$\ast$ Session\+Context\+::insecure\+\_\+stream}
+
+Note\+: default\+\_\+stream should be used in most cases. Often, insecure\+\_\+stream and secure\+\_\+stream will be the same. This should be re-\/thought, probably better named, and simplified. Perhaps 1 stream and indicators regarding which protocols have been negotiated (i.\+e. multistream over secio)? 
+
+Definition at line 28 of file session.\+h.
+
+\mbox{\Hypertarget{struct_session_context_a09e3b1d462b6f6991588822e6b207700}\label{struct_session_context_a09e3b1d462b6f6991588822e6b207700}} 
+\index{Session\+Context@{Session\+Context}!mac\+\_\+function@{mac\+\_\+function}}
+\index{mac\+\_\+function@{mac\+\_\+function}!Session\+Context@{Session\+Context}}
+\subsubsection{\texorpdfstring{mac\+\_\+function}{mac\_function}}
+{\footnotesize\ttfamily int($\ast$ Session\+Context\+::mac\+\_\+function) (const unsigned char $\ast$, size\+\_\+t, unsigned char $\ast$)}
+
+The mac function to use 
+\begin{DoxyParams}{Parameters}
+{\em 1} & the incoming data bytes \\
+\hline
+{\em 2} & the size of the incoming array \\
+\hline
+{\em 3} & the results. Must be allocated to correct size (or larger) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, false(0) otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file session.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/libp2p/conn/session.\+h\end{DoxyCompactItemize}

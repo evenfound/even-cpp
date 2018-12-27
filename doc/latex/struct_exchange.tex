@@ -1,0 +1,182 @@
+\hypertarget{struct_exchange}{}\section{Exchange Struct Reference}
+\label{struct_exchange}\index{Exchange@{Exchange}}
+
+
+{\ttfamily \#include $<$exchange.\+h$>$}
+
+
+
+Collaboration diagram for Exchange\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int($\ast$ \mbox{\hyperlink{struct_exchange_af19779992ce0133da548d7ed9e5c5a56}{Get\+Block}} )(struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$exchange, struct \mbox{\hyperlink{struct_cid}{Cid}} $\ast$cid, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$$\ast$block)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_exchange_afbcf1a1a4aa0d3044ee3e4f50b397340}{Get\+Block\+Async}} )(struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$exchange, struct \mbox{\hyperlink{struct_cid}{Cid}} $\ast$cid, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$$\ast$block)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_exchange_a64f3a75ea2dc9770e084ffd6dd181df8}{Get\+Blocks}} )(struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$exchange, struct \mbox{\hyperlink{struct_libp2p_vector}{Libp2p\+Vector}} $\ast$Cids, struct \mbox{\hyperlink{struct_libp2p_vector}{Libp2p\+Vector}} $\ast$$\ast$blocks)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_exchange_a4b8d64028bd091688fbb902ee1f970ca}{Has\+Block}} )(struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$exchange, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$block)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_exchange_aa11261b2f863752b0ef803bcfe2fb5fa}{Is\+Online}} )(struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_exchange_afe4482140e4e4b35bfe3a7caa905b7c0}{Close}} )(struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$)
+\item 
+void $\ast$ \mbox{\hyperlink{struct_exchange_a1215da5586811e5d8593f8e5a8361954}{exchange\+Context}}
+\item 
+\mbox{\Hypertarget{struct_exchange_af40875c7fa4b5588508ba2efc8fbe037}\label{struct_exchange_af40875c7fa4b5588508ba2efc8fbe037}} 
+unsigned char $\ast$ {\bfseries epubkey}
+\item 
+\mbox{\Hypertarget{struct_exchange_a945da34c937e4354616c6dbcf09a7f12}\label{struct_exchange_a945da34c937e4354616c6dbcf09a7f12}} 
+size\+\_\+t {\bfseries epubkey\+\_\+size}
+\item 
+\mbox{\Hypertarget{struct_exchange_aae452930a22bc548917113214ef79f00}\label{struct_exchange_aae452930a22bc548917113214ef79f00}} 
+unsigned char $\ast$ {\bfseries signature}
+\item 
+\mbox{\Hypertarget{struct_exchange_ad005246ad023f96a087abe966eb852e4}\label{struct_exchange_ad005246ad023f96a087abe966eb852e4}} 
+size\+\_\+t {\bfseries signature\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the definition of an \char`\"{}\+Exchange\char`\"{}
+
+Anything that implements the \mbox{\hyperlink{struct_exchange}{Exchange}} interface can be used as an I\+P\+FS block exchange protocol. These are methods that the local I\+P\+FS daemon (or client) call to communicate with the local repository or network 
+
+Definition at line 17 of file exchange.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_exchange_afe4482140e4e4b35bfe3a7caa905b7c0}\label{struct_exchange_afe4482140e4e4b35bfe3a7caa905b7c0}} 
+\index{Exchange@{Exchange}!Close@{Close}}
+\index{Close@{Close}!Exchange@{Exchange}}
+\subsubsection{\texorpdfstring{Close}{Close}}
+{\footnotesize\ttfamily int($\ast$ Exchange\+::\+Close) (struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$)}
+
+Close up the exchange, and go offline \begin{DoxyReturn}{Returns}
+true(1); 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file exchange.\+h.
+
+\mbox{\Hypertarget{struct_exchange_a1215da5586811e5d8593f8e5a8361954}\label{struct_exchange_a1215da5586811e5d8593f8e5a8361954}} 
+\index{Exchange@{Exchange}!exchange\+Context@{exchange\+Context}}
+\index{exchange\+Context@{exchange\+Context}!Exchange@{Exchange}}
+\subsubsection{\texorpdfstring{exchange\+Context}{exchangeContext}}
+{\footnotesize\ttfamily void$\ast$ Exchange\+::exchange\+Context}
+
+Used by each implementation to maintain state (will be cast-\/ed to an implementation-\/specific structure) 
+
+Definition at line 76 of file exchange.\+h.
+
+\mbox{\Hypertarget{struct_exchange_af19779992ce0133da548d7ed9e5c5a56}\label{struct_exchange_af19779992ce0133da548d7ed9e5c5a56}} 
+\index{Exchange@{Exchange}!Get\+Block@{Get\+Block}}
+\index{Get\+Block@{Get\+Block}!Exchange@{Exchange}}
+\subsubsection{\texorpdfstring{Get\+Block}{GetBlock}}
+{\footnotesize\ttfamily int($\ast$ Exchange\+::\+Get\+Block) (struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$exchange, struct \mbox{\hyperlink{struct_cid}{Cid}} $\ast$cid, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$$\ast$block)}
+
+Retrieve a block from peers within the deadline enforced by the context
+
+N\+O\+TE\+: Shouldn\textquotesingle{}t the block parameter be a callback (function pointer)? Otherwise, this function is going to block. Is that what we want?
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & the context \\
+\hline
+{\em cid} & the hash of the block to retrieve \\
+\hline
+{\em block} & a pointer to the block (allocated by this method if return is true) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, false(0) otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file exchange.\+h.
+
+\mbox{\Hypertarget{struct_exchange_afbcf1a1a4aa0d3044ee3e4f50b397340}\label{struct_exchange_afbcf1a1a4aa0d3044ee3e4f50b397340}} 
+\index{Exchange@{Exchange}!Get\+Block\+Async@{Get\+Block\+Async}}
+\index{Get\+Block\+Async@{Get\+Block\+Async}!Exchange@{Exchange}}
+\subsubsection{\texorpdfstring{Get\+Block\+Async}{GetBlockAsync}}
+{\footnotesize\ttfamily int($\ast$ Exchange\+::\+Get\+Block\+Async) (struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$exchange, struct \mbox{\hyperlink{struct_cid}{Cid}} $\ast$cid, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$$\ast$block)}
+
+Retrieve a block from peers asynchronously
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & the context \\
+\hline
+{\em cid} & the hash of the block to retrieve \\
+\hline
+{\em queue\+\_\+entry} & the queue entry to watch \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, false(0) otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file exchange.\+h.
+
+\mbox{\Hypertarget{struct_exchange_a64f3a75ea2dc9770e084ffd6dd181df8}\label{struct_exchange_a64f3a75ea2dc9770e084ffd6dd181df8}} 
+\index{Exchange@{Exchange}!Get\+Blocks@{Get\+Blocks}}
+\index{Get\+Blocks@{Get\+Blocks}!Exchange@{Exchange}}
+\subsubsection{\texorpdfstring{Get\+Blocks}{GetBlocks}}
+{\footnotesize\ttfamily int($\ast$ Exchange\+::\+Get\+Blocks) (struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$exchange, struct \mbox{\hyperlink{struct_libp2p_vector}{Libp2p\+Vector}} $\ast$Cids, struct \mbox{\hyperlink{struct_libp2p_vector}{Libp2p\+Vector}} $\ast$$\ast$blocks)}
+
+Retrieve several blocks 
+\begin{DoxyParams}{Parameters}
+{\em context} & the context \\
+\hline
+{\em Cids} & a vector of hashes for the blocks to be retrieved \\
+\hline
+{\em blocks} & a pointer to a vector of retrieved blocks (will be N\+U\+LL on error) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, otherwise false(0) 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file exchange.\+h.
+
+\mbox{\Hypertarget{struct_exchange_a4b8d64028bd091688fbb902ee1f970ca}\label{struct_exchange_a4b8d64028bd091688fbb902ee1f970ca}} 
+\index{Exchange@{Exchange}!Has\+Block@{Has\+Block}}
+\index{Has\+Block@{Has\+Block}!Exchange@{Exchange}}
+\subsubsection{\texorpdfstring{Has\+Block}{HasBlock}}
+{\footnotesize\ttfamily int($\ast$ Exchange\+::\+Has\+Block) (struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$exchange, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$block)}
+
+Announces the existance of a block to this bitswap service. The service will potentially notify its peers. N\+O\+TE\+: This is mainly designed to announce blocks added by non-\/bitswap methods (i.\+e. the local user) 
+\begin{DoxyParams}{Parameters}
+{\em block} & the block being announced \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, false(0) if not 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file exchange.\+h.
+
+\mbox{\Hypertarget{struct_exchange_aa11261b2f863752b0ef803bcfe2fb5fa}\label{struct_exchange_aa11261b2f863752b0ef803bcfe2fb5fa}} 
+\index{Exchange@{Exchange}!Is\+Online@{Is\+Online}}
+\index{Is\+Online@{Is\+Online}!Exchange@{Exchange}}
+\subsubsection{\texorpdfstring{Is\+Online}{IsOnline}}
+{\footnotesize\ttfamily int($\ast$ Exchange\+::\+Is\+Online) (struct \mbox{\hyperlink{struct_exchange}{Exchange}} $\ast$)}
+
+Determine if we\textquotesingle{}re online \begin{DoxyReturn}{Returns}
+true(1) if we\textquotesingle{}re online 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file exchange.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/ipfs/include/ipfs/exchange/exchange.\+h\end{DoxyCompactItemize}

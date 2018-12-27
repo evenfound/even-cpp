@@ -1,0 +1,164 @@
+\hypertarget{classstefanfrings_1_1_http_listener}{}\section{stefanfrings\+:\+:Http\+Listener Class Reference}
+\label{classstefanfrings_1_1_http_listener}\index{stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}}
+
+
+{\ttfamily \#include $<$httplistener.\+h$>$}
+
+
+
+Inheritance diagram for stefanfrings\+:\+:Http\+Listener\+:
+% FIG 0
+
+
+Collaboration diagram for stefanfrings\+:\+:Http\+Listener\+:
+% FIG 1
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classstefanfrings_1_1_http_listener_a60065df255188a04088d3a7c0b3def44}{handle\+Connection}} (\mbox{\hyperlink{httpconnectionhandler_8h_a9884f8c3364a6510f6118c5336fd0458}{t\+Socket\+Descriptor}} socket\+Descriptor)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_http_listener_a5ef569cd134e6bd457db70bc1fc01ef2}{Http\+Listener}} (Q\+Settings $\ast$settings, \mbox{\hyperlink{classstefanfrings_1_1_http_request_handler}{Http\+Request\+Handler}} $\ast$request\+Handler, Q\+Object $\ast$parent=N\+U\+LL)
+\item 
+virtual \mbox{\hyperlink{classstefanfrings_1_1_http_listener_abf6e9c9d9715a94d922a1d437e02ee6e}{$\sim$\+Http\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classstefanfrings_1_1_http_listener_a39cf1136caf6ba96554ef0a48fbff052}{listen}} ()
+\item 
+void \mbox{\hyperlink{classstefanfrings_1_1_http_listener_a5f5f2463036bc9a17f9fe8eb5c17c7f5}{close}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classstefanfrings_1_1_http_listener_a72530470ad6a62487b7b0d3d5c79d7b9}{incoming\+Connection}} (\mbox{\hyperlink{httpconnectionhandler_8h_a9884f8c3364a6510f6118c5336fd0458}{t\+Socket\+Descriptor}} socket\+Descriptor)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Listens for incoming T\+CP connections and and passes all incoming H\+T\+TP requests to your implementation of \mbox{\hyperlink{classstefanfrings_1_1_http_request_handler}{Http\+Request\+Handler}}, which processes the request and generates the response (usually a H\+T\+ML document). 
+
+Example for the required settings in the config file\+: {\ttfamily 
+\begin{DoxyPre}
+;host=192.168.0.100
+port=8080
+minThreads=1
+maxThreads=10
+cleanupInterval=1000
+readTimeout=60000
+;sslKeyFile=ssl/my.key
+;sslCertFile=ssl/my.cert
+maxRequestSize=16000
+maxMultiPartSize=1000000
+\end{DoxyPre}
+} The optional host parameter binds the listener to one network interface. The listener handles all network interfaces if no host is configured. The port number specifies the incoming T\+CP port that this listener listens to. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classstefanfrings_1_1_http_connection_handler_pool}{Http\+Connection\+Handler\+Pool}} for description of config settings min\+Threads, max\+Threads, cleanup\+Interval and ssl settings 
+
+\mbox{\hyperlink{classstefanfrings_1_1_http_connection_handler}{Http\+Connection\+Handler}} for description of the read\+Timeout 
+
+\mbox{\hyperlink{classstefanfrings_1_1_http_request}{Http\+Request}} for description of config settings max\+Request\+Size and max\+Multi\+Part\+Size 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file httplistener.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_http_listener_a5ef569cd134e6bd457db70bc1fc01ef2}\label{classstefanfrings_1_1_http_listener_a5ef569cd134e6bd457db70bc1fc01ef2}} 
+\index{stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}!Http\+Listener@{Http\+Listener}}
+\index{Http\+Listener@{Http\+Listener}!stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}}
+\subsubsection{\texorpdfstring{Http\+Listener()}{HttpListener()}}
+{\footnotesize\ttfamily Http\+Listener\+::\+Http\+Listener (\begin{DoxyParamCaption}\item[{Q\+Settings $\ast$}]{settings,  }\item[{\mbox{\hyperlink{classstefanfrings_1_1_http_request_handler}{Http\+Request\+Handler}} $\ast$}]{request\+Handler,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Constructor. Creates a connection pool and starts listening on the configured host and port. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Configuration settings for the H\+T\+TP server. Must not be 0. \\
+\hline
+{\em request\+Handler} & Processes each received H\+T\+TP request, usually by dispatching to controller classes. \\
+\hline
+{\em parent} & Parent object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Ensure to close or delete the listener before deleting the request handler. 
+\end{DoxyWarning}
+
+
+Definition at line 13 of file httplistener.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classstefanfrings_1_1_http_listener_abf6e9c9d9715a94d922a1d437e02ee6e}\label{classstefanfrings_1_1_http_listener_abf6e9c9d9715a94d922a1d437e02ee6e}} 
+\index{stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}!````~Http\+Listener@{$\sim$\+Http\+Listener}}
+\index{````~Http\+Listener@{$\sim$\+Http\+Listener}!stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}}
+\subsubsection{\texorpdfstring{$\sim$\+Http\+Listener()}{~HttpListener()}}
+{\footnotesize\ttfamily Http\+Listener\+::$\sim$\+Http\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 28 of file httplistener.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_http_listener_a5f5f2463036bc9a17f9fe8eb5c17c7f5}\label{classstefanfrings_1_1_http_listener_a5f5f2463036bc9a17f9fe8eb5c17c7f5}} 
+\index{stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}!close@{close}}
+\index{close@{close}!stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Http\+Listener\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the listener, waits until all pending requests are processed, then closes the connection pool. 
+
+Definition at line 54 of file httplistener.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classstefanfrings_1_1_http_listener_a60065df255188a04088d3a7c0b3def44}\label{classstefanfrings_1_1_http_listener_a60065df255188a04088d3a7c0b3def44}} 
+\index{stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}!handle\+Connection@{handle\+Connection}}
+\index{handle\+Connection@{handle\+Connection}!stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}}
+\subsubsection{\texorpdfstring{handle\+Connection}{handleConnection}}
+{\footnotesize\ttfamily void stefanfrings\+::\+Http\+Listener\+::handle\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{httpconnectionhandler_8h_a9884f8c3364a6510f6118c5336fd0458}{t\+Socket\+Descriptor}}}]{socket\+Descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Sent to the connection handler to process a new incoming connection. 
+\begin{DoxyParams}{Parameters}
+{\em socket\+Descriptor} & references the accepted connection. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file moc\+\_\+httplistener.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_listener_a72530470ad6a62487b7b0d3d5c79d7b9}\label{classstefanfrings_1_1_http_listener_a72530470ad6a62487b7b0d3d5c79d7b9}} 
+\index{stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}!incoming\+Connection@{incoming\+Connection}}
+\index{incoming\+Connection@{incoming\+Connection}!stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}}
+\subsubsection{\texorpdfstring{incoming\+Connection()}{incomingConnection()}}
+{\footnotesize\ttfamily void Http\+Listener\+::incoming\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{httpconnectionhandler_8h_a9884f8c3364a6510f6118c5336fd0458}{t\+Socket\+Descriptor}}}]{socket\+Descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Serves new incoming connection requests 
+
+Definition at line 63 of file httplistener.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classstefanfrings_1_1_http_listener_a39cf1136caf6ba96554ef0a48fbff052}\label{classstefanfrings_1_1_http_listener_a39cf1136caf6ba96554ef0a48fbff052}} 
+\index{stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}!listen@{listen}}
+\index{listen@{listen}!stefanfrings\+::\+Http\+Listener@{stefanfrings\+::\+Http\+Listener}}
+\subsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily void Http\+Listener\+::listen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Restart listeing after \mbox{\hyperlink{classstefanfrings_1_1_http_listener_a5f5f2463036bc9a17f9fe8eb5c17c7f5}{close()}}. 
+
+Definition at line 35 of file httplistener.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/httpserver/\mbox{\hyperlink{httplistener_8h}{httplistener.\+h}}\item 
+prerequisites/build/debug/moc\+\_\+httplistener.\+cpp\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/httpserver/\mbox{\hyperlink{httplistener_8cpp}{httplistener.\+cpp}}\end{DoxyCompactItemize}

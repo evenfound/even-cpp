@@ -1,0 +1,103 @@
+\hypertarget{classeven_1_1_node}{}\section{even\+:\+:Node Class Reference}
+\label{classeven_1_1_node}\index{even\+::\+Node@{even\+::\+Node}}
+
+
+Inheritance diagram for even\+:\+:Node\+:
+% FIG 0
+
+
+Collaboration diagram for even\+:\+:Node\+:
+% FIG 1
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeven_1_1_node_a461550f1dec776a9743c3c097bae0dd1}\label{classeven_1_1_node_a461550f1dec776a9743c3c097bae0dd1}} 
+void \mbox{\hyperlink{classeven_1_1_node_a461550f1dec776a9743c3c097bae0dd1}{do\+Work}} (const Q\+String \&message\+\_\+)
+\begin{DoxyCompactList}\small\item\em Accept signal about start threading job. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeven_1_1_node_a73bcdef34de6f761ae8149891766ec77}\label{classeven_1_1_node_a73bcdef34de6f761ae8149891766ec77}} 
+void \mbox{\hyperlink{classeven_1_1_node_a73bcdef34de6f761ae8149891766ec77}{result\+Ready}} (const Q\+String \&)
+\begin{DoxyCompactList}\small\item\em Signal acceptors about that threading job is finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classeven_1_1_node_aca2546b6c444b3d774339e7b1fa17b8a}{Node}} (std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classeven_1_1_value}{Value}} $>$ config\+\_\+)
+\begin{DoxyCompactList}\small\item\em Create \mbox{\hyperlink{classeven_1_1_node}{Node}} entity with config\+\_\+ parameters list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_node_a47d0ebea758de17c2b60b1dd7aa59dcf}\label{classeven_1_1_node_a47d0ebea758de17c2b60b1dd7aa59dcf}} 
+\mbox{\hyperlink{classeven_1_1_node}{Node}} \& \mbox{\hyperlink{classeven_1_1_node_a47d0ebea758de17c2b60b1dd7aa59dcf}{operator=}} (const \mbox{\hyperlink{classeven_1_1_node}{Node}} \&node\+\_\+)=delete
+\begin{DoxyCompactList}\small\item\em Assign operator -\/ nocopyable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_node_a0498fbaf6031da93105da367e6cfb004}\label{classeven_1_1_node_a0498fbaf6031da93105da367e6cfb004}} 
+\mbox{\hyperlink{classeven_1_1_node_a0498fbaf6031da93105da367e6cfb004}{Node}} (const \mbox{\hyperlink{classeven_1_1_node}{Node}} \&orig)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor -\/ nocopyable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_node_acacf932f144d7d18a8bba95a606efa1f}\label{classeven_1_1_node_acacf932f144d7d18a8bba95a606efa1f}} 
+\mbox{\hyperlink{classeven_1_1_node_acacf932f144d7d18a8bba95a606efa1f}{Node}} ()=delete
+\begin{DoxyCompactList}\small\item\em Default constructor deprecated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_node_a11e348eb39d7086f674886236a01d882}\label{classeven_1_1_node_a11e348eb39d7086f674886236a01d882}} 
+\mbox{\hyperlink{classeven_1_1_hash}{Hash}} \& \mbox{\hyperlink{classeven_1_1_node_a11e348eb39d7086f674886236a01d882}{hash}} ()
+\begin{DoxyCompactList}\small\item\em Return \mbox{\hyperlink{classeven_1_1_hash}{Hash}} reference. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_node_a574cef1c009ab0ad661e7a7d7d4377cf}\label{classeven_1_1_node_a574cef1c009ab0ad661e7a7d7d4377cf}} 
+bool \mbox{\hyperlink{classeven_1_1_node_a574cef1c009ab0ad661e7a7d7d4377cf}{serialize}} (Q\+String path\+\_\+, Q\+Json\+Object \&other\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Return values in json array packed by path\+\_\+ set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_node_a270700dad3a700245d36659f630affec}\label{classeven_1_1_node_a270700dad3a700245d36659f630affec}} 
+\mbox{\hyperlink{classeven_1_1_wallet}{Wallet}} \& \mbox{\hyperlink{classeven_1_1_node_a270700dad3a700245d36659f630affec}{wallet}} ()
+\begin{DoxyCompactList}\small\item\em Got a node wallet reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classeven_1_1_node_a5497ed023382d8e370ad72d758587927}{node\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em System node count in system created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 19 of file Node.\+hxx.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classeven_1_1_node_aca2546b6c444b3d774339e7b1fa17b8a}\label{classeven_1_1_node_aca2546b6c444b3d774339e7b1fa17b8a}} 
+\index{even\+::\+Node@{even\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!even\+::\+Node@{even\+::\+Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classeven_1_1_value}{Value}} $>$}]{config\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Create \mbox{\hyperlink{classeven_1_1_node}{Node}} entity with config\+\_\+ parameters list. 
+
+$<$
+
+Parametric constructor 
+
+Definition at line 23 of file Node.\+cxx.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classeven_1_1_node_a5497ed023382d8e370ad72d758587927}\label{classeven_1_1_node_a5497ed023382d8e370ad72d758587927}} 
+\index{even\+::\+Node@{even\+::\+Node}!node\+Count@{node\+Count}}
+\index{node\+Count@{node\+Count}!even\+::\+Node@{even\+::\+Node}}
+\subsubsection{\texorpdfstring{node\+Count}{nodeCount}}
+{\footnotesize\ttfamily int Node\+::node\+Count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+System node count in system created. 
+
+$<$
+
+System node count in system created. 
+
+Definition at line 23 of file Node.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+even-\/boffin/include/\mbox{\hyperlink{_node_8hxx}{Node.\+hxx}}\item 
+even-\/boffin/build/debug/moc\+\_\+\+Node.\+cpp\item 
+even-\/boffin/src/\mbox{\hyperlink{_node_8cxx}{Node.\+cxx}}\end{DoxyCompactItemize}

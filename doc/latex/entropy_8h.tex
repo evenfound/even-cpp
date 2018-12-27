@@ -1,0 +1,415 @@
+\hypertarget{entropy_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/entropy.h File Reference}
+\label{entropy_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/entropy.\+h@{prerequisites/c-\/libp2p/include/mbedtls/entropy.\+h}}
+
+
+Entropy accumulator implementation.  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sha512.\+h\char`\"{}}\newline
+Include dependency graph for entropy.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__entropy__source__state}{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Entropy source state. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em Entropy context structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{entropy_8h_a77e56d52d29721c24f22a9ec01391ecb}\label{entropy_8h_a77e56d52d29721c24f22a9ec01391ecb}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+H\+A512\+\_\+\+A\+C\+C\+U\+M\+U\+L\+A\+T\+OR}
+\item 
+\#define \mbox{\hyperlink{entropy_8h_af4cd68e9098b27fed32e7d4a48a4048b}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x003C
+\item 
+\#define \mbox{\hyperlink{entropy_8h_a12a0600bd163efc21469e406a4e194ce}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}}~-\/0x003E
+\item 
+\#define \mbox{\hyperlink{entropy_8h_ab9f0a333fbef6d5ebe4fda846249f5c6}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+O\+U\+R\+C\+E\+S\+\_\+\+D\+E\+F\+I\+N\+ED}}~-\/0x0040
+\item 
+\#define \mbox{\hyperlink{entropy_8h_a8116299707c4a7fbf19cac3f30ce1e7a}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+S\+O\+U\+R\+CE}}~-\/0x003D
+\item 
+\#define \mbox{\hyperlink{entropy_8h_a356b20cef049a2de3e99909321894463}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}~-\/0x003F
+\item 
+\#define \mbox{\hyperlink{entropy_8h_acc0fdb8c34a1ae04a81b4b21cb383941}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}~64
+\item 
+\#define \mbox{\hyperlink{entropy_8h_afff6ba3d7fc6df1fedd007d3a9a4136b}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE}}~1024
+\item 
+\mbox{\Hypertarget{entropy_8h_a841232804d6de404b072c57a374502c8}\label{entropy_8h_a841232804d6de404b072c57a374502c8}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+M\+A\+N\+U\+AL}~\mbox{\hyperlink{entropy_8h_a819aa4f3046aa257738f0dafe481ca1f}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}}
+\item 
+\#define \mbox{\hyperlink{entropy_8h_acf3946666d3aa196a7a4ba7705740580}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+R\+O\+NG}}~1
+\item 
+\#define \mbox{\hyperlink{entropy_8h_a3aaeef22d87036afb296bfdb4d7d4c4c}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+W\+E\+AK}}~0
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ S\+E\+C\+T\+I\+ON\+: Module settings}\par
+{\em The configuration options you can set for this module are in this section. Either change them in config.\+h or define them on the compiler command line. }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{entropy_8h_a819aa4f3046aa257738f0dafe481ca1f}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}}~20
+\item 
+\#define \mbox{\hyperlink{entropy_8h_a21637aa9a738da4fce13931a8442dc28}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+G\+A\+T\+H\+ER}}~128
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \mbox{\hyperlink{entropy_8h_a2168f0720e2e869e440fd7fa35c941bd}{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr}}) (void $\ast$data, unsigned char $\ast$output, size\+\_\+t len, size\+\_\+t $\ast$olen)
+\begin{DoxyCompactList}\small\item\em Entropy poll callback pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{entropy_8h_aa901e027093c6fe65dee5760db78aced}{mbedtls\+\_\+entropy\+\_\+init}} (\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Initialize the context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entropy_8h_a06778439f8a0e2daa2d3b444e06ad8dd}{mbedtls\+\_\+entropy\+\_\+free}} (\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Free the data in the context. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{entropy_8h_ad1bf424d076142e9aeec9e68207f5aaa}{mbedtls\+\_\+entropy\+\_\+add\+\_\+source}} (\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$ctx, \mbox{\hyperlink{entropy_8h_a2168f0720e2e869e440fd7fa35c941bd}{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr}} f\+\_\+source, void $\ast$p\+\_\+source, size\+\_\+t threshold, int strong)
+\begin{DoxyCompactList}\small\item\em Adds an entropy source to poll (Thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is enabled) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{entropy_8h_ac49de4b842e7d56cfcd1088286a09b7d}{mbedtls\+\_\+entropy\+\_\+gather}} (\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Trigger an extra gather poll for the accumulator (Thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is enabled) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{entropy_8h_a81765f6cdf4e5111bcb9f4324f3234cb}{mbedtls\+\_\+entropy\+\_\+func}} (void $\ast$data, unsigned char $\ast$output, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Retrieve entropy from the accumulator (Maximum length\+: M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE) (Thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is enabled) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{entropy_8h_aa79492f288cc3202ea455564be855d64}{mbedtls\+\_\+entropy\+\_\+update\+\_\+manual}} (\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$ctx, const unsigned char $\ast$data, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Add data to the accumulator manually (Thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is enabled) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{entropy_8h_abffb5c2d08b9cc94788910d463ce3181}{mbedtls\+\_\+entropy\+\_\+write\+\_\+seed\+\_\+file}} (\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$ctx, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Write a seed file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{entropy_8h_a3d72b19c00eb0cabb319d3d81599a57a}{mbedtls\+\_\+entropy\+\_\+update\+\_\+seed\+\_\+file}} (\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$ctx, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Read and update a seed file. Seed is added to this instance. No more than M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE bytes are read from the seed file. The rest is ignored. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{entropy_8h_ad31b29e855ba719ba5282e2da4f5c338}{mbedtls\+\_\+entropy\+\_\+self\+\_\+test}} (int verbose)
+\begin{DoxyCompactList}\small\item\em Checkup routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Entropy accumulator implementation. 
+
+Copyright (C) 2006-\/2016, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{entropy_8h_acc0fdb8c34a1ae04a81b4b21cb383941}\label{entropy_8h_acc0fdb8c34a1ae04a81b4b21cb383941}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}{MBEDTLS\_ENTROPY\_BLOCK\_SIZE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE~64}
+
+\mbox{\hyperlink{struct_block}{Block}} size of entropy accumulator (S\+H\+A-\/512) 
+
+Definition at line 77 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_a21637aa9a738da4fce13931a8442dc28}\label{entropy_8h_a21637aa9a738da4fce13931a8442dc28}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+G\+A\+T\+H\+ER@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+G\+A\+T\+H\+ER}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+G\+A\+T\+H\+ER@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+G\+A\+T\+H\+ER}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+G\+A\+T\+H\+ER}{MBEDTLS\_ENTROPY\_MAX\_GATHER}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+G\+A\+T\+H\+ER~128}
+
+Maximum amount requested from entropy sources 
+
+Definition at line 71 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_afff6ba3d7fc6df1fedd007d3a9a4136b}\label{entropy_8h_afff6ba3d7fc6df1fedd007d3a9a4136b}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE}{MBEDTLS\_ENTROPY\_MAX\_SEED\_SIZE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE~1024}
+
+Maximum size of seed we read from seed file 
+
+Definition at line 82 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_a819aa4f3046aa257738f0dafe481ca1f}\label{entropy_8h_a819aa4f3046aa257738f0dafe481ca1f}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}{MBEDTLS\_ENTROPY\_MAX\_SOURCES}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES~20}
+
+Maximum number of sources supported 
+
+Definition at line 67 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_acf3946666d3aa196a7a4ba7705740580}\label{entropy_8h_acf3946666d3aa196a7a4ba7705740580}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+R\+O\+NG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+R\+O\+NG}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+R\+O\+NG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+R\+O\+NG}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+R\+O\+NG}{MBEDTLS\_ENTROPY\_SOURCE\_STRONG}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+R\+O\+NG~1}
+
+Entropy source is strong 
+
+Definition at line 85 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_a3aaeef22d87036afb296bfdb4d7d4c4c}\label{entropy_8h_a3aaeef22d87036afb296bfdb4d7d4c4c}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+W\+E\+AK@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+W\+E\+AK}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+W\+E\+AK@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+W\+E\+AK}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+W\+E\+AK}{MBEDTLS\_ENTROPY\_SOURCE\_WEAK}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+W\+E\+AK~0}
+
+Entropy source is weak 
+
+Definition at line 86 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_a356b20cef049a2de3e99909321894463}\label{entropy_8h_a356b20cef049a2de3e99909321894463}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}{MBEDTLS\_ERR\_ENTROPY\_FILE\_IO\_ERROR}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR~-\/0x003F}
+
+Read/write error in file. 
+
+Definition at line 56 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_a12a0600bd163efc21469e406a4e194ce}\label{entropy_8h_a12a0600bd163efc21469e406a4e194ce}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES}{MBEDTLS\_ERR\_ENTROPY\_MAX\_SOURCES}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES~-\/0x003E}
+
+No more sources can be added. 
+
+Definition at line 53 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_ab9f0a333fbef6d5ebe4fda846249f5c6}\label{entropy_8h_ab9f0a333fbef6d5ebe4fda846249f5c6}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+O\+U\+R\+C\+E\+S\+\_\+\+D\+E\+F\+I\+N\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+O\+U\+R\+C\+E\+S\+\_\+\+D\+E\+F\+I\+N\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+O\+U\+R\+C\+E\+S\+\_\+\+D\+E\+F\+I\+N\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+O\+U\+R\+C\+E\+S\+\_\+\+D\+E\+F\+I\+N\+ED}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+O\+U\+R\+C\+E\+S\+\_\+\+D\+E\+F\+I\+N\+ED}{MBEDTLS\_ERR\_ENTROPY\_NO\_SOURCES\_DEFINED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+O\+U\+R\+C\+E\+S\+\_\+\+D\+E\+F\+I\+N\+ED~-\/0x0040}
+
+No sources have been added to poll. 
+
+Definition at line 54 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_a8116299707c4a7fbf19cac3f30ce1e7a}\label{entropy_8h_a8116299707c4a7fbf19cac3f30ce1e7a}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+S\+O\+U\+R\+CE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+S\+O\+U\+R\+CE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+S\+O\+U\+R\+CE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+S\+O\+U\+R\+CE}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+S\+O\+U\+R\+CE}{MBEDTLS\_ERR\_ENTROPY\_NO\_STRONG\_SOURCE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+N\+O\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+S\+O\+U\+R\+CE~-\/0x003D}
+
+No strong sources have been added to poll. 
+
+Definition at line 55 of file entropy.\+h.
+
+\mbox{\Hypertarget{entropy_8h_af4cd68e9098b27fed32e7d4a48a4048b}\label{entropy_8h_af4cd68e9098b27fed32e7d4a48a4048b}} 
+\index{entropy.\+h@{entropy.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_ENTROPY\_SOURCE\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED~-\/0x003C}
+
+Critical entropy source failure. 
+
+Definition at line 52 of file entropy.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{entropy_8h_a2168f0720e2e869e440fd7fa35c941bd}\label{entropy_8h_a2168f0720e2e869e440fd7fa35c941bd}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr@{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr}}
+\index{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr@{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr}{mbedtls\_entropy\_f\_source\_ptr}}
+{\footnotesize\ttfamily typedef int($\ast$ mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr) (void $\ast$data, unsigned char $\ast$output, size\+\_\+t len, size\+\_\+t $\ast$olen)}
+
+
+
+Entropy poll callback pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Callback-\/specific data pointer \\
+\hline
+{\em output} & Data to fill \\
+\hline
+{\em len} & Maximum size to provide \\
+\hline
+{\em olen} & The actual amount of bytes put into the buffer (Can be 0)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no critical failures occurred, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file entropy.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{entropy_8h_ad1bf424d076142e9aeec9e68207f5aaa}\label{entropy_8h_ad1bf424d076142e9aeec9e68207f5aaa}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+add\+\_\+source@{mbedtls\+\_\+entropy\+\_\+add\+\_\+source}}
+\index{mbedtls\+\_\+entropy\+\_\+add\+\_\+source@{mbedtls\+\_\+entropy\+\_\+add\+\_\+source}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+add\+\_\+source()}{mbedtls\_entropy\_add\_source()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+entropy\+\_\+add\+\_\+source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$}]{ctx,  }\item[{\mbox{\hyperlink{entropy_8h_a2168f0720e2e869e440fd7fa35c941bd}{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr}}}]{f\+\_\+source,  }\item[{void $\ast$}]{p\+\_\+source,  }\item[{size\+\_\+t}]{threshold,  }\item[{int}]{strong }\end{DoxyParamCaption})}
+
+
+
+Adds an entropy source to poll (Thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is enabled) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Entropy context \\
+\hline
+{\em f\+\_\+source} & Entropy function \\
+\hline
+{\em p\+\_\+source} & Function data \\
+\hline
+{\em threshold} & Minimum required from source before entropy is released ( with \mbox{\hyperlink{entropy_8h_a81765f6cdf4e5111bcb9f4324f3234cb}{mbedtls\+\_\+entropy\+\_\+func()}} ) (in bytes) \\
+\hline
+{\em strong} & M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+S\+T\+R\+O\+NG or M\+B\+E\+D\+T\+S\+L\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+W\+E\+AK. At least one strong source needs to be added. Weaker sources (such as the cycle counter) can be used as a complement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+O\+U\+R\+C\+ES 
+\end{DoxyReturn}
+\mbox{\Hypertarget{entropy_8h_a06778439f8a0e2daa2d3b444e06ad8dd}\label{entropy_8h_a06778439f8a0e2daa2d3b444e06ad8dd}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+free@{mbedtls\+\_\+entropy\+\_\+free}}
+\index{mbedtls\+\_\+entropy\+\_\+free@{mbedtls\+\_\+entropy\+\_\+free}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+free()}{mbedtls\_entropy\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+entropy\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Free the data in the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Entropy context to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{entropy_8h_a81765f6cdf4e5111bcb9f4324f3234cb}\label{entropy_8h_a81765f6cdf4e5111bcb9f4324f3234cb}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+func@{mbedtls\+\_\+entropy\+\_\+func}}
+\index{mbedtls\+\_\+entropy\+\_\+func@{mbedtls\+\_\+entropy\+\_\+func}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+func()}{mbedtls\_entropy\_func()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+entropy\+\_\+func (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Retrieve entropy from the accumulator (Maximum length\+: M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE) (Thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is enabled) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Entropy context \\
+\hline
+{\em output} & Buffer to fill \\
+\hline
+{\em len} & Number of bytes desired, must be at most M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{entropy_8h_ac49de4b842e7d56cfcd1088286a09b7d}\label{entropy_8h_ac49de4b842e7d56cfcd1088286a09b7d}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+gather@{mbedtls\+\_\+entropy\+\_\+gather}}
+\index{mbedtls\+\_\+entropy\+\_\+gather@{mbedtls\+\_\+entropy\+\_\+gather}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+gather()}{mbedtls\_entropy\_gather()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+entropy\+\_\+gather (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Trigger an extra gather poll for the accumulator (Thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is enabled) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Entropy context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{entropy_8h_aa901e027093c6fe65dee5760db78aced}\label{entropy_8h_aa901e027093c6fe65dee5760db78aced}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+init@{mbedtls\+\_\+entropy\+\_\+init}}
+\index{mbedtls\+\_\+entropy\+\_\+init@{mbedtls\+\_\+entropy\+\_\+init}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+init()}{mbedtls\_entropy\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+entropy\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Initialize the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Entropy context to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{entropy_8h_ad31b29e855ba719ba5282e2da4f5c338}\label{entropy_8h_ad31b29e855ba719ba5282e2da4f5c338}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+self\+\_\+test@{mbedtls\+\_\+entropy\+\_\+self\+\_\+test}}
+\index{mbedtls\+\_\+entropy\+\_\+self\+\_\+test@{mbedtls\+\_\+entropy\+\_\+self\+\_\+test}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+self\+\_\+test()}{mbedtls\_entropy\_self\_test()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+entropy\+\_\+self\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{verbose }\end{DoxyParamCaption})}
+
+
+
+Checkup routine. 
+
+This module self-\/test also calls the entropy self-\/test, mbedtls\+\_\+entropy\+\_\+source\+\_\+self\+\_\+test();
+
+\begin{DoxyReturn}{Returns}
+0 if successful, or 1 if a test failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{entropy_8h_aa79492f288cc3202ea455564be855d64}\label{entropy_8h_aa79492f288cc3202ea455564be855d64}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+update\+\_\+manual@{mbedtls\+\_\+entropy\+\_\+update\+\_\+manual}}
+\index{mbedtls\+\_\+entropy\+\_\+update\+\_\+manual@{mbedtls\+\_\+entropy\+\_\+update\+\_\+manual}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+update\+\_\+manual()}{mbedtls\_entropy\_update\_manual()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+entropy\+\_\+update\+\_\+manual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$}]{ctx,  }\item[{const unsigned char $\ast$}]{data,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Add data to the accumulator manually (Thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is enabled) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Entropy context \\
+\hline
+{\em data} & Data to add \\
+\hline
+{\em len} & Length of data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{entropy_8h_a3d72b19c00eb0cabb319d3d81599a57a}\label{entropy_8h_a3d72b19c00eb0cabb319d3d81599a57a}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+update\+\_\+seed\+\_\+file@{mbedtls\+\_\+entropy\+\_\+update\+\_\+seed\+\_\+file}}
+\index{mbedtls\+\_\+entropy\+\_\+update\+\_\+seed\+\_\+file@{mbedtls\+\_\+entropy\+\_\+update\+\_\+seed\+\_\+file}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+update\+\_\+seed\+\_\+file()}{mbedtls\_entropy\_update\_seed\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+entropy\+\_\+update\+\_\+seed\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$}]{ctx,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Read and update a seed file. Seed is added to this instance. No more than M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+M\+A\+X\+\_\+\+S\+E\+E\+D\+\_\+\+S\+I\+ZE bytes are read from the seed file. The rest is ignored. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Entropy context \\
+\hline
+{\em path} & Name of the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR on file error, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{entropy_8h_abffb5c2d08b9cc94788910d463ce3181}\label{entropy_8h_abffb5c2d08b9cc94788910d463ce3181}} 
+\index{entropy.\+h@{entropy.\+h}!mbedtls\+\_\+entropy\+\_\+write\+\_\+seed\+\_\+file@{mbedtls\+\_\+entropy\+\_\+write\+\_\+seed\+\_\+file}}
+\index{mbedtls\+\_\+entropy\+\_\+write\+\_\+seed\+\_\+file@{mbedtls\+\_\+entropy\+\_\+write\+\_\+seed\+\_\+file}!entropy.\+h@{entropy.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+entropy\+\_\+write\+\_\+seed\+\_\+file()}{mbedtls\_entropy\_write\_seed\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+entropy\+\_\+write\+\_\+seed\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__entropy__context}{mbedtls\+\_\+entropy\+\_\+context}} $\ast$}]{ctx,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Write a seed file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & Entropy context \\
+\hline
+{\em path} & Name of the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR on file error, or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}

@@ -1,0 +1,91 @@
+\hypertarget{class_startup}{}\section{Startup Class Reference}
+\label{class_startup}\index{Startup@{Startup}}
+
+
+{\ttfamily \#include $<$startup.\+h$>$}
+
+
+
+Inheritance diagram for Startup\+:
+% FIG 0
+
+
+Collaboration diagram for Startup\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_startup_a03052d5e10da95f47d0f005d615ef89f}{Startup}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_startup_abdcf9eed41611ee15a59ed00dc2fc2d8}{start}} ()
+\item 
+void \mbox{\hyperlink{class_startup_a7c9c2aff06377779ce1f801836bd11b3}{stop}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Helper class to install and run the application as a windows service. 
+
+Definition at line 19 of file startup.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_startup_a03052d5e10da95f47d0f005d615ef89f}\label{class_startup_a03052d5e10da95f47d0f005d615ef89f}} 
+\index{Startup@{Startup}!Startup@{Startup}}
+\index{Startup@{Startup}!Startup@{Startup}}
+\subsubsection{\texorpdfstring{Startup()}{Startup()}}
+{\footnotesize\ttfamily Startup\+::\+Startup (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Constructor 
+
+Definition at line 101 of file startup.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_startup_abdcf9eed41611ee15a59ed00dc2fc2d8}\label{class_startup_abdcf9eed41611ee15a59ed00dc2fc2d8}} 
+\index{Startup@{Startup}!start@{start}}
+\index{start@{start}!Startup@{Startup}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Startup\+::start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Start the service 
+
+Implements \mbox{\hyperlink{class_qt_service_base_adbc0cd621b41bd3a6a1f62fda432e9e4}{Qt\+Service\+Base}}.
+
+
+
+Definition at line 66 of file startup.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_startup_a7c9c2aff06377779ce1f801836bd11b3}\label{class_startup_a7c9c2aff06377779ce1f801836bd11b3}} 
+\index{Startup@{Startup}!stop@{stop}}
+\index{stop@{stop}!Startup@{Startup}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Startup\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Stop the service gracefully. \begin{DoxyWarning}{Warning}
+This method is not called when the program terminates abnormally, e.\+g. after a fatal error, or when killed from outside. 
+\end{DoxyWarning}
+
+
+Reimplemented from \mbox{\hyperlink{class_qt_service_base_a8d52c1b8fd06b50bdc0a0c6f9936a68e}{Qt\+Service\+Base}}.
+
+
+
+Definition at line 91 of file startup.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Demo3/src/\mbox{\hyperlink{startup_8h}{startup.\+h}}\item 
+prerequisites/\+Qt\+Web\+App/\+Demo3/src/\mbox{\hyperlink{startup_8cpp}{startup.\+cpp}}\end{DoxyCompactItemize}

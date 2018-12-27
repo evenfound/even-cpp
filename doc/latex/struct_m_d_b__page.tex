@@ -1,0 +1,141 @@
+\hypertarget{struct_m_d_b__page}{}\section{M\+D\+B\+\_\+page Struct Reference}
+\label{struct_m_d_b__page}\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+
+
+Collaboration diagram for M\+D\+B\+\_\+page\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_m_d_b__page_aac25e0f00e9260cd4e74433264aa0f97}\label{struct_m_d_b__page_aac25e0f00e9260cd4e74433264aa0f97}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\_t}} \mbox{\hyperlink{struct_m_d_b__page_a6843bdabaf55bcabe210d81df5cd80fb}{p\_pgno}}\\
+\>struct \mbox{\hyperlink{struct_m_d_b__page}{MDB\_page}} $\ast$ \mbox{\hyperlink{struct_m_d_b__page_a8e6bf1e38b724bd6087da61bd3d35858}{p\_next}}\\
+\} {\bfseries mp\_p}\\
+
+\end{tabbing}\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_m_d_b__page_a02eb008ff64ead97bfacccf6f154f7fe}{mp\+\_\+pad}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_m_d_b__page_a851621a8c9f179faf4bdb82eb3b65e1e}{mp\+\_\+flags}}
+\item 
+\mbox{\Hypertarget{struct_m_d_b__page_ab5a44567ab8f0629acf1b44840f6e7fb}\label{struct_m_d_b__page_ab5a44567ab8f0629acf1b44840f6e7fb}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\mbox{\hyperlink{group__internal_ga730e17f748208d77496ebd895c8375dc}{indx\_t}} \mbox{\hyperlink{struct_m_d_b__page_aae5a99c09df21f2cc03bea30ded4cf77}{pb\_lower}}\\
+\>\>\mbox{\hyperlink{group__internal_ga730e17f748208d77496ebd895c8375dc}{indx\_t}} \mbox{\hyperlink{struct_m_d_b__page_a1fd74cc370377addbb519ae429718b33}{pb\_upper}}\\
+\>\} {\bfseries pb}\\
+\>uint32\_t \mbox{\hyperlink{struct_m_d_b__page_a85165930b6c7036e9b570fc86a5f4ace}{pb\_pages}}\\
+\} {\bfseries mp\_pb}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{group__internal_ga730e17f748208d77496ebd895c8375dc}{indx\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__page_ae0e2d177c6a934322ef3736875d70caf}{mp\+\_\+ptrs}} \mbox{[}1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common header for all page types. The page type depends on \mbox{\hyperlink{struct_m_d_b__page_a851621a8c9f179faf4bdb82eb3b65e1e}{mp\+\_\+flags}}.
+
+\mbox{\hyperlink{group__mdb__page_gad6639bfcad26dbcbf7970dfa28f1a930}{P\+\_\+\+B\+R\+A\+N\+CH}} and \mbox{\hyperlink{group__mdb__page_gac85fb59a9a2eda0d33e58b23a7ca019a}{P\+\_\+\+L\+E\+AF}} pages have unsorted \textquotesingle{}\mbox{\hyperlink{struct_m_d_b__node}{M\+D\+B\+\_\+node}}\textquotesingle{}s at the end, with sorted \mbox{\hyperlink{struct_m_d_b__page_ae0e2d177c6a934322ef3736875d70caf}{mp\+\_\+ptrs}}\mbox{[}\mbox{]} entries referring to them. Exception\+: \mbox{\hyperlink{group__mdb__page_ga9c80486a549b2efbd5561cdd4df238c4}{P\+\_\+\+L\+E\+A\+F2}} pages omit mp\+\_\+ptrs and pack sorted \mbox{\hyperlink{group__mdb__dbi__open_ga5acc26f80668d1ebc31265d178c69338}{M\+D\+B\+\_\+\+D\+U\+P\+F\+I\+X\+ED}} values after the page header.
+
+\mbox{\hyperlink{group__mdb__page_ga15141fe5d59efdf035bf8862250c25d7}{P\+\_\+\+O\+V\+E\+R\+F\+L\+OW}} records occupy one or more contiguous pages where only the first has a page header. They hold the real data of \mbox{\hyperlink{group__mdb__node_gafbd60c1d77d9343d044d0792754e42f0}{F\+\_\+\+B\+I\+G\+D\+A\+TA}} nodes.
+
+\mbox{\hyperlink{group__mdb__page_ga77cc6dc98fda40c81fb2f75068fb5551}{P\+\_\+\+S\+U\+BP}} sub-\/pages are small leaf \char`\"{}pages\char`\"{} with duplicate data. A node with flag \mbox{\hyperlink{group__mdb__node_ga6e93fc5b62c03a0b85d0755b7d19bee5}{F\+\_\+\+D\+U\+P\+D\+A\+TA}} but not \mbox{\hyperlink{group__mdb__node_ga5323896692f7418870f72d7a5f1b2bab}{F\+\_\+\+S\+U\+B\+D\+A\+TA}} contains a sub-\/page. (Duplicate data can also go in sub-\/databases, which use normal pages.)
+
+\mbox{\hyperlink{group__mdb__page_ga3d5d5c4af2527d4d9230d414230580ac}{P\+\_\+\+M\+E\+TA}} pages contain \mbox{\hyperlink{struct_m_d_b__meta}{M\+D\+B\+\_\+meta}}, the start point of an L\+M\+DB snapshot.
+
+Each non-\/metapage up to \mbox{\hyperlink{struct_m_d_b__meta}{M\+D\+B\+\_\+meta}}.mm\+\_\+last\+\_\+pg is reachable exactly once in the snapshot\+: Either used by a database or listed in a free\+DB record. 
+
+Definition at line 892 of file mdb.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_d_b__page_a851621a8c9f179faf4bdb82eb3b65e1e}\label{struct_m_d_b__page_a851621a8c9f179faf4bdb82eb3b65e1e}} 
+\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}!mp\+\_\+flags@{mp\+\_\+flags}}
+\index{mp\+\_\+flags@{mp\+\_\+flags}!M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+\subsubsection{\texorpdfstring{mp\+\_\+flags}{mp\_flags}}
+{\footnotesize\ttfamily uint16\+\_\+t M\+D\+B\+\_\+page\+::mp\+\_\+flags}
+
+\mbox{\hyperlink{group__mdb__page}{Page Flags}} 
+
+Definition at line 915 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__page_a02eb008ff64ead97bfacccf6f154f7fe}\label{struct_m_d_b__page_a02eb008ff64ead97bfacccf6f154f7fe}} 
+\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}!mp\+\_\+pad@{mp\+\_\+pad}}
+\index{mp\+\_\+pad@{mp\+\_\+pad}!M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+\subsubsection{\texorpdfstring{mp\+\_\+pad}{mp\_pad}}
+{\footnotesize\ttfamily uint16\+\_\+t M\+D\+B\+\_\+page\+::mp\+\_\+pad}
+
+key size if this is a L\+E\+A\+F2 page 
+
+Definition at line 899 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__page_ae0e2d177c6a934322ef3736875d70caf}\label{struct_m_d_b__page_ae0e2d177c6a934322ef3736875d70caf}} 
+\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}!mp\+\_\+ptrs@{mp\+\_\+ptrs}}
+\index{mp\+\_\+ptrs@{mp\+\_\+ptrs}!M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+\subsubsection{\texorpdfstring{mp\+\_\+ptrs}{mp\_ptrs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_ga730e17f748208d77496ebd895c8375dc}{indx\+\_\+t}} M\+D\+B\+\_\+page\+::mp\+\_\+ptrs\mbox{[}1\mbox{]}}
+
+dynamic size 
+
+Definition at line 926 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__page_a8e6bf1e38b724bd6087da61bd3d35858}\label{struct_m_d_b__page_a8e6bf1e38b724bd6087da61bd3d35858}} 
+\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}!p\+\_\+next@{p\+\_\+next}}
+\index{p\+\_\+next@{p\+\_\+next}!M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+\subsubsection{\texorpdfstring{p\+\_\+next}{p\_next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_m_d_b__page}{M\+D\+B\+\_\+page}}$\ast$ M\+D\+B\+\_\+page\+::p\+\_\+next}
+
+for in-\/memory list of freed pages 
+
+Definition at line 897 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__page_a6843bdabaf55bcabe210d81df5cd80fb}\label{struct_m_d_b__page_a6843bdabaf55bcabe210d81df5cd80fb}} 
+\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}!p\+\_\+pgno@{p\+\_\+pgno}}
+\index{p\+\_\+pgno@{p\+\_\+pgno}!M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+\subsubsection{\texorpdfstring{p\+\_\+pgno}{p\_pgno}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\+\_\+t}} M\+D\+B\+\_\+page\+::p\+\_\+pgno}
+
+page number 
+
+Definition at line 896 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__page_aae5a99c09df21f2cc03bea30ded4cf77}\label{struct_m_d_b__page_aae5a99c09df21f2cc03bea30ded4cf77}} 
+\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}!pb\+\_\+lower@{pb\+\_\+lower}}
+\index{pb\+\_\+lower@{pb\+\_\+lower}!M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+\subsubsection{\texorpdfstring{pb\+\_\+lower}{pb\_lower}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_ga730e17f748208d77496ebd895c8375dc}{indx\+\_\+t}} M\+D\+B\+\_\+page\+::pb\+\_\+lower}
+
+lower bound of free space 
+
+Definition at line 921 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__page_a85165930b6c7036e9b570fc86a5f4ace}\label{struct_m_d_b__page_a85165930b6c7036e9b570fc86a5f4ace}} 
+\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}!pb\+\_\+pages@{pb\+\_\+pages}}
+\index{pb\+\_\+pages@{pb\+\_\+pages}!M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+\subsubsection{\texorpdfstring{pb\+\_\+pages}{pb\_pages}}
+{\footnotesize\ttfamily uint32\+\_\+t M\+D\+B\+\_\+page\+::pb\+\_\+pages}
+
+number of overflow pages 
+
+Definition at line 924 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__page_a1fd74cc370377addbb519ae429718b33}\label{struct_m_d_b__page_a1fd74cc370377addbb519ae429718b33}} 
+\index{M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}!pb\+\_\+upper@{pb\+\_\+upper}}
+\index{pb\+\_\+upper@{pb\+\_\+upper}!M\+D\+B\+\_\+page@{M\+D\+B\+\_\+page}}
+\subsubsection{\texorpdfstring{pb\+\_\+upper}{pb\_upper}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_ga730e17f748208d77496ebd895c8375dc}{indx\+\_\+t}} M\+D\+B\+\_\+page\+::pb\+\_\+upper}
+
+upper bound of free space 
+
+Definition at line 922 of file mdb.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

@@ -1,0 +1,221 @@
+\hypertarget{group__compat}{}\section{Compatibility Macros}
+\label{group__compat}\index{Compatibility Macros@{Compatibility Macros}}
+Collaboration diagram for Compatibility Macros\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__compat_ga103b045068a1d21bf2347a7342f8f486}{M\+D\+B\+\_\+\+D\+E\+V\+EL}}~0
+\item 
+\#define \mbox{\hyperlink{group__compat_ga506f7f49894aad220a0b158acd6eb276}{mdb\+\_\+func\+\_\+}}~\char`\"{}$<$mdb\+\_\+unknown$>$\char`\"{}
+\item 
+\mbox{\Hypertarget{group__compat_gab05625b0afb362c41d373c5b0f5cd251}\label{group__compat_gab05625b0afb362c41d373c5b0f5cd251}} 
+\#define {\bfseries M\+D\+B\+\_\+\+N\+O\+\_\+\+R\+O\+OT}~(\mbox{\hyperlink{group__errors_ga4577d36100db836719f5c304a1fb5cc6}{M\+D\+B\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+C\+O\+DE}} + 10)
+\item 
+\#define \mbox{\hyperlink{group__compat_ga762689bed126eec67a19609b8e73908e}{M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+ST}}~1
+\item 
+\mbox{\Hypertarget{group__compat_ga4c4cf564e25b1a938d2928c8a2cf3474}\label{group__compat_ga4c4cf564e25b1a938d2928c8a2cf3474}} 
+\#define {\bfseries T\+H\+R\+E\+A\+D\+\_\+\+R\+ET}~void $\ast$
+\item 
+\mbox{\Hypertarget{group__compat_ga3ebb773d805887884ff9de2bf911d264}\label{group__compat_ga3ebb773d805887884ff9de2bf911d264}} 
+\#define {\bfseries T\+H\+R\+E\+A\+D\+\_\+\+C\+R\+E\+A\+TE}(thr,  start,  arg)~pthread\+\_\+create(\&thr,N\+U\+LL,start,arg)
+\item 
+\mbox{\Hypertarget{group__compat_ga6e8d1bca0edf5ef333c0f8b8a8e945c8}\label{group__compat_ga6e8d1bca0edf5ef333c0f8b8a8e945c8}} 
+\#define {\bfseries T\+H\+R\+E\+A\+D\+\_\+\+F\+I\+N\+I\+SH}(thr)~pthread\+\_\+join(thr,N\+U\+LL)
+\item 
+\#define \mbox{\hyperlink{group__compat_ga074373701b95aeaf38530ad7f9970030}{M\+D\+B\+\_\+\+P\+I\+D\+L\+O\+CK}}~1
+\item 
+\#define \mbox{\hyperlink{group__compat_gac26452435f8ed1bce951b254b436d8d0}{L\+O\+C\+K\+\_\+\+M\+U\+T\+E\+X0}}(mutex)~pthread\+\_\+mutex\+\_\+lock(mutex)
+\item 
+\#define \mbox{\hyperlink{group__compat_ga67b430e471d24d8f4f2b35e2357c306b}{U\+N\+L\+O\+C\+K\+\_\+\+M\+U\+T\+EX}}(mutex)~pthread\+\_\+mutex\+\_\+unlock(mutex)
+\item 
+\#define \mbox{\hyperlink{group__compat_gaa7c1835176dba083697c5555571a8710}{mdb\+\_\+mutex\+\_\+consistent}}(mutex)~pthread\+\_\+mutex\+\_\+consistent(mutex)
+\item 
+\#define \mbox{\hyperlink{group__compat_ga18c1f579aab87bee11e1f4b3b9611fe0}{Err\+Code}}()~errno
+\item 
+\#define \mbox{\hyperlink{group__compat_gab521aa5010fb1afb801a899a55569e03}{H\+A\+N\+D\+LE}}~int
+\item 
+\#define \mbox{\hyperlink{group__compat_ga5fdc7facea201bfce4ad308105f88d0c}{I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+V\+A\+L\+UE}}~(-\/1)
+\item 
+\#define \mbox{\hyperlink{group__compat_ga948570910e2e84a556977f585cbfa2bf}{G\+E\+T\+\_\+\+P\+A\+G\+E\+S\+I\+ZE}}(x)~((x) = sysconf(\+\_\+\+S\+C\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE))
+\item 
+\#define \mbox{\hyperlink{group__compat_ga51591cf51bdd6c1f6015532422e7770e}{Z}}~\mbox{\hyperlink{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}}
+\item 
+\#define \mbox{\hyperlink{group__compat_ga5737f4364e61e615415bf5b4f01bf14d}{Yu}}~\mbox{\hyperlink{lmdb_8h_a11fe126f6ef1f04b1e2ea23c5a433865}{M\+D\+B\+\_\+\+P\+R\+Iy}}(u)
+\item 
+\#define \mbox{\hyperlink{group__compat_ga0d54d6c0d53bc97f2ee94dd254b9c127}{Yd}}~\mbox{\hyperlink{lmdb_8h_a11fe126f6ef1f04b1e2ea23c5a433865}{M\+D\+B\+\_\+\+P\+R\+Iy}}(d)
+\item 
+\mbox{\Hypertarget{group__compat_gae6dd47a3744869e26d562134abc0e4c4}\label{group__compat_gae6dd47a3744869e26d562134abc0e4c4}} 
+\#define {\bfseries M\+N\+A\+M\+E\+\_\+\+L\+EN}~(sizeof(pthread\+\_\+mutex\+\_\+t))
+\item 
+\mbox{\Hypertarget{group__compat_gadec7b2eaf27d00385bbbb9160b7224be}\label{group__compat_gadec7b2eaf27d00385bbbb9160b7224be}} 
+\#define {\bfseries S\+Y\+S\+V\+\_\+\+S\+E\+M\+\_\+\+F\+L\+AG}~0
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+typedef pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{group__compat_ga9b7b61d0ad68b601d11d93e5c1193391}{mdb\+\_\+mutex\+\_\+t}}\mbox{[}1\mbox{]}
+\item 
+\mbox{\Hypertarget{group__compat_gafdea3c7cb34852138e447676e398f718}\label{group__compat_gafdea3c7cb34852138e447676e398f718}} 
+typedef pthread\+\_\+mutex\+\_\+t $\ast$ {\bfseries mdb\+\_\+mutexref\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A bunch of macros to minimize the amount of platform-\/specific ifdefs needed throughout the rest of the code. When the features this library needs are similar enough to P\+O\+S\+IX to be hidden in a one-\/or-\/two line replacement, this macro approach is used. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__compat_ga18c1f579aab87bee11e1f4b3b9611fe0}\label{group__compat_ga18c1f579aab87bee11e1f4b3b9611fe0}} 
+\index{Compatibility Macros@{Compatibility Macros}!Err\+Code@{Err\+Code}}
+\index{Err\+Code@{Err\+Code}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{Err\+Code}{ErrCode}}
+{\footnotesize\ttfamily \#define Err\+Code(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~errno}
+
+Get the error code for the last failed system function. 
+
+Definition at line 441 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga948570910e2e84a556977f585cbfa2bf}\label{group__compat_ga948570910e2e84a556977f585cbfa2bf}} 
+\index{Compatibility Macros@{Compatibility Macros}!G\+E\+T\+\_\+\+P\+A\+G\+E\+S\+I\+ZE@{G\+E\+T\+\_\+\+P\+A\+G\+E\+S\+I\+ZE}}
+\index{G\+E\+T\+\_\+\+P\+A\+G\+E\+S\+I\+ZE@{G\+E\+T\+\_\+\+P\+A\+G\+E\+S\+I\+ZE}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{G\+E\+T\+\_\+\+P\+A\+G\+E\+S\+I\+ZE}{GET\_PAGESIZE}}
+{\footnotesize\ttfamily \#define G\+E\+T\+\_\+\+P\+A\+G\+E\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x) = sysconf(\+\_\+\+S\+C\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE))}
+
+Get the size of a memory page for the system. This is the basic size that the platform\textquotesingle{}s memory manager uses, and is fundamental to the use of memory-\/mapped files. 
+
+Definition at line 459 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_gab521aa5010fb1afb801a899a55569e03}\label{group__compat_gab521aa5010fb1afb801a899a55569e03}} 
+\index{Compatibility Macros@{Compatibility Macros}!H\+A\+N\+D\+LE@{H\+A\+N\+D\+LE}}
+\index{H\+A\+N\+D\+LE@{H\+A\+N\+D\+LE}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{H\+A\+N\+D\+LE}{HANDLE}}
+{\footnotesize\ttfamily \#define H\+A\+N\+D\+LE~int}
+
+An abstraction for a file handle. On P\+O\+S\+IX systems file handles are small integers. On Windows they\textquotesingle{}re opaque pointers. 
+
+Definition at line 447 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga5fdc7facea201bfce4ad308105f88d0c}\label{group__compat_ga5fdc7facea201bfce4ad308105f88d0c}} 
+\index{Compatibility Macros@{Compatibility Macros}!I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+V\+A\+L\+UE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+V\+A\+L\+UE}}
+\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+V\+A\+L\+UE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+V\+A\+L\+UE}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+V\+A\+L\+UE}{INVALID\_HANDLE\_VALUE}}
+{\footnotesize\ttfamily \#define I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+V\+A\+L\+UE~(-\/1)}
+
+A value for an invalid file handle. Mainly used to initialize file variables and signify that they are unused. 
+
+Definition at line 453 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_gac26452435f8ed1bce951b254b436d8d0}\label{group__compat_gac26452435f8ed1bce951b254b436d8d0}} 
+\index{Compatibility Macros@{Compatibility Macros}!L\+O\+C\+K\+\_\+\+M\+U\+T\+E\+X0@{L\+O\+C\+K\+\_\+\+M\+U\+T\+E\+X0}}
+\index{L\+O\+C\+K\+\_\+\+M\+U\+T\+E\+X0@{L\+O\+C\+K\+\_\+\+M\+U\+T\+E\+X0}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{L\+O\+C\+K\+\_\+\+M\+U\+T\+E\+X0}{LOCK\_MUTEX0}}
+{\footnotesize\ttfamily \#define L\+O\+C\+K\+\_\+\+M\+U\+T\+E\+X0(\begin{DoxyParamCaption}\item[{}]{mutex }\end{DoxyParamCaption})~pthread\+\_\+mutex\+\_\+lock(mutex)}
+
+Lock the reader or writer mutex. Returns 0 or a code to give mdb\+\_\+mutex\+\_\+failed(), as in L\+O\+C\+K\+\_\+\+M\+U\+T\+E\+X(). 
+
+Definition at line 430 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga103b045068a1d21bf2347a7342f8f486}\label{group__compat_ga103b045068a1d21bf2347a7342f8f486}} 
+\index{Compatibility Macros@{Compatibility Macros}!M\+D\+B\+\_\+\+D\+E\+V\+EL@{M\+D\+B\+\_\+\+D\+E\+V\+EL}}
+\index{M\+D\+B\+\_\+\+D\+E\+V\+EL@{M\+D\+B\+\_\+\+D\+E\+V\+EL}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+D\+E\+V\+EL}{MDB\_DEVEL}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+D\+E\+V\+EL~0}
+
+Features under development 
+
+Definition at line 265 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga506f7f49894aad220a0b158acd6eb276}\label{group__compat_ga506f7f49894aad220a0b158acd6eb276}} 
+\index{Compatibility Macros@{Compatibility Macros}!mdb\+\_\+func\+\_\+@{mdb\+\_\+func\+\_\+}}
+\index{mdb\+\_\+func\+\_\+@{mdb\+\_\+func\+\_\+}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{mdb\+\_\+func\+\_\+}{mdb\_func\_}}
+{\footnotesize\ttfamily \#define mdb\+\_\+func\+\_\+~\char`\"{}$<$mdb\+\_\+unknown$>$\char`\"{}}
+
+Wrapper around {\bfseries func}, which is a C99 feature 
+
+Definition at line 275 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_gaa7c1835176dba083697c5555571a8710}\label{group__compat_gaa7c1835176dba083697c5555571a8710}} 
+\index{Compatibility Macros@{Compatibility Macros}!mdb\+\_\+mutex\+\_\+consistent@{mdb\+\_\+mutex\+\_\+consistent}}
+\index{mdb\+\_\+mutex\+\_\+consistent@{mdb\+\_\+mutex\+\_\+consistent}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{mdb\+\_\+mutex\+\_\+consistent}{mdb\_mutex\_consistent}}
+{\footnotesize\ttfamily \#define mdb\+\_\+mutex\+\_\+consistent(\begin{DoxyParamCaption}\item[{}]{mutex }\end{DoxyParamCaption})~pthread\+\_\+mutex\+\_\+consistent(mutex)}
+
+Mark mutex-\/protected data as repaired, after death of previous owner. 
+
+Definition at line 436 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga074373701b95aeaf38530ad7f9970030}\label{group__compat_ga074373701b95aeaf38530ad7f9970030}} 
+\index{Compatibility Macros@{Compatibility Macros}!M\+D\+B\+\_\+\+P\+I\+D\+L\+O\+CK@{M\+D\+B\+\_\+\+P\+I\+D\+L\+O\+CK}}
+\index{M\+D\+B\+\_\+\+P\+I\+D\+L\+O\+CK@{M\+D\+B\+\_\+\+P\+I\+D\+L\+O\+CK}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+P\+I\+D\+L\+O\+CK}{MDB\_PIDLOCK}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+P\+I\+D\+L\+O\+CK~1}
+
+For M\+D\+B\+\_\+\+L\+O\+C\+K\+\_\+\+F\+O\+R\+M\+AT\+: True if readers take a pid lock in the lockfile 
+
+Definition at line 367 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga762689bed126eec67a19609b8e73908e}\label{group__compat_ga762689bed126eec67a19609b8e73908e}} 
+\index{Compatibility Macros@{Compatibility Macros}!M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+ST@{M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+ST}}
+\index{M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+ST@{M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+ST}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+ST}{MDB\_USE\_ROBUST}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+ST~1}
+
+Some platforms define the E\+O\+W\+N\+E\+R\+D\+E\+AD error code even though they don\textquotesingle{}t support Robust Mutexes. Compile with -\/\+D\+M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+ST=0, or use some other mechanism like -\/\+D\+M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+V\+\_\+\+S\+EM instead of -\/\+D\+M\+D\+B\+\_\+\+U\+S\+E\+\_\+\+P\+O\+S\+I\+X\+\_\+\+M\+U\+T\+EX. (SysV semaphores are also Robust, but some systems don\textquotesingle{}t support them either.) 
+
+Definition at line 305 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga67b430e471d24d8f4f2b35e2357c306b}\label{group__compat_ga67b430e471d24d8f4f2b35e2357c306b}} 
+\index{Compatibility Macros@{Compatibility Macros}!U\+N\+L\+O\+C\+K\+\_\+\+M\+U\+T\+EX@{U\+N\+L\+O\+C\+K\+\_\+\+M\+U\+T\+EX}}
+\index{U\+N\+L\+O\+C\+K\+\_\+\+M\+U\+T\+EX@{U\+N\+L\+O\+C\+K\+\_\+\+M\+U\+T\+EX}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{U\+N\+L\+O\+C\+K\+\_\+\+M\+U\+T\+EX}{UNLOCK\_MUTEX}}
+{\footnotesize\ttfamily \#define U\+N\+L\+O\+C\+K\+\_\+\+M\+U\+T\+EX(\begin{DoxyParamCaption}\item[{}]{mutex }\end{DoxyParamCaption})~pthread\+\_\+mutex\+\_\+unlock(mutex)}
+
+Unlock the reader or writer mutex. 
+
+Definition at line 433 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga0d54d6c0d53bc97f2ee94dd254b9c127}\label{group__compat_ga0d54d6c0d53bc97f2ee94dd254b9c127}} 
+\index{Compatibility Macros@{Compatibility Macros}!Yd@{Yd}}
+\index{Yd@{Yd}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{Yd}{Yd}}
+{\footnotesize\ttfamily \#define Yd~\mbox{\hyperlink{lmdb_8h_a11fe126f6ef1f04b1e2ea23c5a433865}{M\+D\+B\+\_\+\+P\+R\+Iy}}(d)}
+
+printf format for \char`\"{}signed \#mdb\+\_\+size\+\_\+t\char`\"{} 
+
+Definition at line 464 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga5737f4364e61e615415bf5b4f01bf14d}\label{group__compat_ga5737f4364e61e615415bf5b4f01bf14d}} 
+\index{Compatibility Macros@{Compatibility Macros}!Yu@{Yu}}
+\index{Yu@{Yu}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{Yu}{Yu}}
+{\footnotesize\ttfamily \#define Yu~\mbox{\hyperlink{lmdb_8h_a11fe126f6ef1f04b1e2ea23c5a433865}{M\+D\+B\+\_\+\+P\+R\+Iy}}(u)}
+
+printf format for \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} 
+
+Definition at line 463 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__compat_ga51591cf51bdd6c1f6015532422e7770e}\label{group__compat_ga51591cf51bdd6c1f6015532422e7770e}} 
+\index{Compatibility Macros@{Compatibility Macros}!Z@{Z}}
+\index{Z@{Z}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{Z}{Z}}
+{\footnotesize\ttfamily \#define Z~\mbox{\hyperlink{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}}}
+
+printf/scanf format modifier for size\+\_\+t 
+
+Definition at line 462 of file mdb.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__compat_ga9b7b61d0ad68b601d11d93e5c1193391}\label{group__compat_ga9b7b61d0ad68b601d11d93e5c1193391}} 
+\index{Compatibility Macros@{Compatibility Macros}!mdb\+\_\+mutex\+\_\+t@{mdb\+\_\+mutex\+\_\+t}}
+\index{mdb\+\_\+mutex\+\_\+t@{mdb\+\_\+mutex\+\_\+t}!Compatibility Macros@{Compatibility Macros}}
+\subsubsection{\texorpdfstring{mdb\+\_\+mutex\+\_\+t}{mdb\_mutex\_t}}
+{\footnotesize\ttfamily typedef pthread\+\_\+mutex\+\_\+t mdb\+\_\+mutex\+\_\+t\mbox{[}1\mbox{]}}
+
+Shared mutex/semaphore as it is stored (mdb\+\_\+mutex\+\_\+t), and as local variables keep it (mdb\+\_\+mutexref\+\_\+t).
+
+An mdb\+\_\+mutex\+\_\+t can be assigned to an mdb\+\_\+mutexref\+\_\+t. They can be the same, or an array\mbox{[}size 1\mbox{]} and a pointer. 
+
+Definition at line 425 of file mdb.\+c.
+

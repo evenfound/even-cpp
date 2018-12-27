@@ -1,0 +1,153 @@
+\hypertarget{class_botan___c_l_i_1_1_command}{}\section{Botan\+\_\+\+C\+LI\+:\+:Command Class Reference}
+\label{class_botan___c_l_i_1_1_command}\index{Botan\+\_\+\+C\+L\+I\+::\+Command@{Botan\+\_\+\+C\+L\+I\+::\+Command}}
+
+
+Inheritance diagram for Botan\+\_\+\+C\+LI\+:\+:Command\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_botan___c_l_i_1_1_command_1_1_registration}{Registration}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_botan___c_l_i_1_1_command_add9ddc955a88a37b3b7e278c44341b0d}{Command}} (const std\+::string \&cmd\+\_\+spec)
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a67b7587959b00c690517f312b49d8c8a}\label{class_botan___c_l_i_1_1_command_a67b7587959b00c690517f312b49d8c8a}} 
+int {\bfseries run} (const std\+::vector$<$ std\+::string $>$ \&params)
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a4f9aa9683a165ff144c3e6d7a2cdab09}\label{class_botan___c_l_i_1_1_command_a4f9aa9683a165ff144c3e6d7a2cdab09}} 
+virtual std\+::string {\bfseries group} () const =0
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_ac6982ff30a7d26152b2d3527b38ffe9b}\label{class_botan___c_l_i_1_1_command_ac6982ff30a7d26152b2d3527b38ffe9b}} 
+virtual std\+::string {\bfseries description} () const =0
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a16620a8027f6677153928ab925a1e27b}\label{class_botan___c_l_i_1_1_command_a16620a8027f6677153928ab925a1e27b}} 
+virtual std\+::string {\bfseries help\+\_\+text} () const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_aad7da7e22c35a4801c57a9b550d33318}\label{class_botan___c_l_i_1_1_command_aad7da7e22c35a4801c57a9b550d33318}} 
+const std\+::string \& {\bfseries cmd\+\_\+spec} () const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a411a8003fab3ff1bc1278ddddfd88e43}\label{class_botan___c_l_i_1_1_command_a411a8003fab3ff1bc1278ddddfd88e43}} 
+std\+::string {\bfseries cmd\+\_\+name} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_botan___c_l_i_1_1_command}{Command}} $>$ \mbox{\hyperlink{class_botan___c_l_i_1_1_command_a2bf2603ec9998286f53f751c1d6ab9e1}{get\+\_\+cmd}} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_ab285f5ca7d3bb98fc9cef2fc6d4f863a}\label{class_botan___c_l_i_1_1_command_ab285f5ca7d3bb98fc9cef2fc6d4f863a}} 
+static std\+::vector$<$ std\+::string $>$ {\bfseries registered\+\_\+cmds} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_af35d6a21936f2f9f45d30107652d9bc1}\label{class_botan___c_l_i_1_1_command_af35d6a21936f2f9f45d30107652d9bc1}} 
+virtual void {\bfseries go} ()=0
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_ab190ad86bd77c14f5ae3756483c58013}\label{class_botan___c_l_i_1_1_command_ab190ad86bd77c14f5ae3756483c58013}} 
+void {\bfseries set\+\_\+return\+\_\+code} (int rc)
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a08e2c724e96deffa395e784bd1811066}\label{class_botan___c_l_i_1_1_command_a08e2c724e96deffa395e784bd1811066}} 
+std\+::ostream \& {\bfseries output} ()
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a6f43237c8c5ea6b21eef77a6ec69f03b}\label{class_botan___c_l_i_1_1_command_a6f43237c8c5ea6b21eef77a6ec69f03b}} 
+std\+::ostream \& {\bfseries error\+\_\+output} ()
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_aca63fd64d22515c2fca6570767df480c}\label{class_botan___c_l_i_1_1_command_aca63fd64d22515c2fca6570767df480c}} 
+bool {\bfseries verbose} () const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a8d8dee73eae5d9771c1a84d2b9b85416}\label{class_botan___c_l_i_1_1_command_a8d8dee73eae5d9771c1a84d2b9b85416}} 
+std\+::string {\bfseries get\+\_\+passphrase} (const std\+::string \&prompt)
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a18ed66e0696c758221830dc40978c677}\label{class_botan___c_l_i_1_1_command_a18ed66e0696c758221830dc40978c677}} 
+bool {\bfseries flag\+\_\+set} (const std\+::string \&flag\+\_\+name) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_aa50df10864db23655ba5faf61bb3fc82}\label{class_botan___c_l_i_1_1_command_aa50df10864db23655ba5faf61bb3fc82}} 
+std\+::string {\bfseries get\+\_\+arg} (const std\+::string \&opt\+\_\+name) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a2786b1d6d97d588cf9b25851178bea00}\label{class_botan___c_l_i_1_1_command_a2786b1d6d97d588cf9b25851178bea00}} 
+std\+::string {\bfseries get\+\_\+arg\+\_\+or} (const std\+::string \&opt\+\_\+name, const std\+::string \&otherwise) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a6af697175665c4db36af7c800d64fcb2}\label{class_botan___c_l_i_1_1_command_a6af697175665c4db36af7c800d64fcb2}} 
+size\+\_\+t {\bfseries get\+\_\+arg\+\_\+sz} (const std\+::string \&opt\+\_\+name) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_afec5b97c621641401beb305574ee2bd2}\label{class_botan___c_l_i_1_1_command_afec5b97c621641401beb305574ee2bd2}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries get\+\_\+arg\+\_\+list} (const std\+::string \&what) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a94922783505005e8904b17b4b3bab44a}\label{class_botan___c_l_i_1_1_command_a94922783505005e8904b17b4b3bab44a}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries slurp\+\_\+file} (const std\+::string \&input\+\_\+file, size\+\_\+t buf\+\_\+size=0) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a1bba068b042ceea13e03023ab4828ec3}\label{class_botan___c_l_i_1_1_command_a1bba068b042ceea13e03023ab4828ec3}} 
+std\+::string {\bfseries slurp\+\_\+file\+\_\+as\+\_\+str} (const std\+::string \&input\+\_\+file, size\+\_\+t buf\+\_\+size=0) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a0e37a0744ff40a35b5a1d5d440c14186}\label{class_botan___c_l_i_1_1_command_a0e37a0744ff40a35b5a1d5d440c14186}} 
+void {\bfseries read\+\_\+file} (const std\+::string \&input\+\_\+file, std\+::function$<$ void(uint8\+\_\+t\mbox{[}$\,$\mbox{]}, size\+\_\+t)$>$ consumer\+\_\+fn, size\+\_\+t buf\+\_\+size=0) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a09819c0162b6f96924c26d1327b1e9f4}\label{class_botan___c_l_i_1_1_command_a09819c0162b6f96924c26d1327b1e9f4}} 
+void {\bfseries do\+\_\+read\+\_\+file} (std\+::istream \&in, std\+::function$<$ void(uint8\+\_\+t\mbox{[}$\,$\mbox{]}, size\+\_\+t)$>$ consumer\+\_\+fn, size\+\_\+t buf\+\_\+size=0) const
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a66a476267cce49499a900a808f4d9796}\label{class_botan___c_l_i_1_1_command_a66a476267cce49499a900a808f4d9796}} 
+{\footnotesize template$<$typename Alloc $>$ }\\void {\bfseries write\+\_\+output} (const std\+::vector$<$ uint8\+\_\+t, Alloc $>$ \&vec)
+\item 
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a798c2ee2d83866dcf378130a2e37f232}\label{class_botan___c_l_i_1_1_command_a798c2ee2d83866dcf378130a2e37f232}} 
+Botan\+::\+Random\+Number\+Generator \& {\bfseries rng} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file cli.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_add9ddc955a88a37b3b7e278c44341b0d}\label{class_botan___c_l_i_1_1_command_add9ddc955a88a37b3b7e278c44341b0d}} 
+\index{Botan\+\_\+\+C\+L\+I\+::\+Command@{Botan\+\_\+\+C\+L\+I\+::\+Command}!Command@{Command}}
+\index{Command@{Command}!Botan\+\_\+\+C\+L\+I\+::\+Command@{Botan\+\_\+\+C\+L\+I\+::\+Command}}
+\subsubsection{\texorpdfstring{Command()}{Command()}}
+{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cmd\+\_\+spec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+The spec string specifies the format of the command line, eg for a somewhat complicated command\+: cmd\+\_\+name --flag --option1= --option2=opt2val input1 input2 $\ast$rest
+
+By default this is the value returned by help\+\_\+text()
+
+The first value is always the command name. Options may appear in any order. Named arguments are taken from the command line in the order they appear in the spec.
+
+--flag can optionally be specified, and takes no value. Check for it in go() with flag\+\_\+set()
+
+--option1 is an option whose default value (if the option does not appear on the command line) is the empty string.
+
+--option2 is an option whose default value is opt2val Read the values in go() using get\+\_\+arg or get\+\_\+arg\+\_\+sz.
+
+The values input1 and input2 specify named arguments which must be provided. They are also access via get\+\_\+arg/get\+\_\+arg\+\_\+sz Because options and arguments for a single command share the same namespace you can\textquotesingle{}t have a spec like\+: cmd --input input but you hopefully didn\textquotesingle{}t want to do that anyway.
+
+The leading \textquotesingle{}$\ast$\textquotesingle{} on \textquotesingle{}$\ast$rest\textquotesingle{} specifies that all remaining arguments should be packaged in a list which is available as get\+\_\+arg\+\_\+list(\char`\"{}rest\char`\"{}). This can only appear on a single value and should be the final named argument.
+
+Every command has implicit flags --help, --verbose and implicit options --output= and --error-\/output= which override the default use of std\+::cout and std\+::cerr.
+
+Use of --help is captured in run() and returns help\+\_\+text(). Use of --verbose can be checked with verbose() or flag\+\_\+set(\char`\"{}verbose\char`\"{}) 
+
+Definition at line 20 of file cli.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan___c_l_i_1_1_command_a2bf2603ec9998286f53f751c1d6ab9e1}\label{class_botan___c_l_i_1_1_command_a2bf2603ec9998286f53f751c1d6ab9e1}} 
+\index{Botan\+\_\+\+C\+L\+I\+::\+Command@{Botan\+\_\+\+C\+L\+I\+::\+Command}!get\+\_\+cmd@{get\+\_\+cmd}}
+\index{get\+\_\+cmd@{get\+\_\+cmd}!Botan\+\_\+\+C\+L\+I\+::\+Command@{Botan\+\_\+\+C\+L\+I\+::\+Command}}
+\subsubsection{\texorpdfstring{get\+\_\+cmd()}{get\_cmd()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_botan___c_l_i_1_1_command}{Command}} $>$ Command\+::get\+\_\+cmd (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get a registered command 
+
+Definition at line 275 of file cli.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/cli/cli.\+h\item 
+prerequisites/botan/src/cli/cli.\+cpp\end{DoxyCompactItemize}

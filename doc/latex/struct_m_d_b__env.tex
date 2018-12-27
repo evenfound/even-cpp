@@ -1,0 +1,444 @@
+\hypertarget{struct_m_d_b__env}{}\section{M\+D\+B\+\_\+env Struct Reference}
+\label{struct_m_d_b__env}\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+
+
+Collaboration diagram for M\+D\+B\+\_\+env\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__compat_gab521aa5010fb1afb801a899a55569e03}{H\+A\+N\+D\+LE}} \mbox{\hyperlink{struct_m_d_b__env_adff94c258f5af201410ef61e51a2f8a0}{me\+\_\+fd}}
+\item 
+\mbox{\hyperlink{group__compat_gab521aa5010fb1afb801a899a55569e03}{H\+A\+N\+D\+LE}} \mbox{\hyperlink{struct_m_d_b__env_a74decfb0ded4cd870c8fafe0208abefc}{me\+\_\+lfd}}
+\item 
+\mbox{\hyperlink{group__compat_gab521aa5010fb1afb801a899a55569e03}{H\+A\+N\+D\+LE}} \mbox{\hyperlink{struct_m_d_b__env_a8c5f5f596781bc4d39f0e76f244930b7}{me\+\_\+mfd}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_m_d_b__env_aaa9e268acef9c8f260ec10e967f12b58}{me\+\_\+flags}}
+\item 
+unsigned int \mbox{\hyperlink{struct_m_d_b__env_afdddd82c8660afbdbe45fd7e5353ec53}{me\+\_\+psize}}
+\item 
+unsigned int \mbox{\hyperlink{struct_m_d_b__env_ae79524ce1389402e6c5065472b63a64d}{me\+\_\+os\+\_\+psize}}
+\item 
+unsigned int \mbox{\hyperlink{struct_m_d_b__env_a9049837fe4c45b663201ac4e078eaf19}{me\+\_\+maxreaders}}
+\item 
+volatile int \mbox{\hyperlink{struct_m_d_b__env_a65a505dc850aa444442b4cbe1d3eaa3d}{me\+\_\+close\+\_\+readers}}
+\item 
+\mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} \mbox{\hyperlink{struct_m_d_b__env_ac34d9780c87bbf2d69bab073bb1964bd}{me\+\_\+numdbs}}
+\item 
+\mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} \mbox{\hyperlink{struct_m_d_b__env_ad34d8970e43557e28d1db2df5ffc6d8c}{me\+\_\+maxdbs}}
+\item 
+M\+D\+B\+\_\+\+P\+I\+D\+\_\+T \mbox{\hyperlink{struct_m_d_b__env_a417b6c74fbbde9f6474358517c577a96}{me\+\_\+pid}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a54e99a5b36b889bda5d78f783f724e13}{me\+\_\+path}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a58d7b9c0502757390c1631caa51cf96b}{me\+\_\+map}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__txninfo}{M\+D\+B\+\_\+txninfo}} $\ast$ \mbox{\hyperlink{struct_m_d_b__env_ae0082e483c3bb1a0d6572d21f7da3010}{me\+\_\+txns}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__meta}{M\+D\+B\+\_\+meta}} $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a9ff38b60b2d18b585577107ab469592a}{me\+\_\+metas}} \mbox{[}\mbox{\hyperlink{group__internal_gae066f6a2b21f2003b622dc654bc58327}{N\+U\+M\+\_\+\+M\+E\+T\+AS}}\mbox{]}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a1700deb7f48b9a1837007d82dd47da94}{me\+\_\+pbuf}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a41f4abc70ee54d822f4674d48d4c4461}{me\+\_\+txn}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a6981326b3defd1cd688922f896a1b279}{me\+\_\+txn0}}
+\item 
+\mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__env_a98bb1536454549ec21407c4cf376a6dd}{me\+\_\+mapsize}}
+\item 
+off\+\_\+t \mbox{\hyperlink{struct_m_d_b__env_ad6d73a08b30a6c370cefb129ee2313d8}{me\+\_\+size}}
+\item 
+\mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__env_a898e1efb92a2cdfe352dfdb6f6dfbc40}{me\+\_\+maxpg}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__dbx}{M\+D\+B\+\_\+dbx}} $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a3de13263d5176b1985c3581c4c728ed7}{me\+\_\+dbxs}}
+\item 
+uint16\+\_\+t $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a84e30bf602ca2810dc1f5ff8a474b86d}{me\+\_\+dbflags}}
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{struct_m_d_b__env_a7fd1b52643fcf729f927469d28d1b1c4}{me\+\_\+dbiseqs}}
+\item 
+pthread\+\_\+key\+\_\+t \mbox{\hyperlink{struct_m_d_b__env_a2f9ec605ad2ed099b970527d9aabb786}{me\+\_\+txkey}}
+\item 
+\mbox{\hyperlink{group__internal_gabbaef7c9c710f8652a62c32d748c040e}{txnid\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__env_ae2a8e75689dba70d92b5641711b3415a}{me\+\_\+pgoldest}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__pgstate}{M\+D\+B\+\_\+pgstate}} \mbox{\hyperlink{struct_m_d_b__env_a0db706a72d88cfe0e32f7ab80a4afa8b}{me\+\_\+pgstate}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__page}{M\+D\+B\+\_\+page}} $\ast$ \mbox{\hyperlink{struct_m_d_b__env_aeeb32fbf8557f37a933c762f391090ce}{me\+\_\+dpages}}
+\item 
+\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} \mbox{\hyperlink{struct_m_d_b__env_a440e7c52dc9d6bc4828c7484f78d2b9b}{me\+\_\+free\+\_\+pgs}}
+\item 
+\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} \mbox{\hyperlink{struct_m_d_b__env_a42dac152902b215639f9c8468b16608c}{me\+\_\+dirty\+\_\+list}}
+\item 
+int \mbox{\hyperlink{struct_m_d_b__env_aa428623a5a2731349c49a611fddd3d73}{me\+\_\+maxfree\+\_\+1pg}}
+\item 
+unsigned int \mbox{\hyperlink{struct_m_d_b__env_a718cafb69c2a74164b79a874f6aee9e0}{me\+\_\+nodemax}}
+\item 
+int \mbox{\hyperlink{struct_m_d_b__env_ab0aee4c3cd1006e27d8d76c4634c742e}{me\+\_\+live\+\_\+reader}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_m_d_b__env_ac71142f4e056b082f9d866d1561764e5}{me\+\_\+userctx}}
+\item 
+\mbox{\hyperlink{group__mdb_ga949ada362b3e84ec0435197056d82371}{M\+D\+B\+\_\+assert\+\_\+func}} $\ast$ \mbox{\hyperlink{struct_m_d_b__env_adac96bf9a61afe2859f3beee7ee224e8}{me\+\_\+assert\+\_\+func}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The database environment. 
+
+Definition at line 1361 of file mdb.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_d_b__env_adac96bf9a61afe2859f3beee7ee224e8}\label{struct_m_d_b__env_adac96bf9a61afe2859f3beee7ee224e8}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+assert\+\_\+func@{me\+\_\+assert\+\_\+func}}
+\index{me\+\_\+assert\+\_\+func@{me\+\_\+assert\+\_\+func}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+assert\+\_\+func}{me\_assert\_func}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mdb_ga949ada362b3e84ec0435197056d82371}{M\+D\+B\+\_\+assert\+\_\+func}}$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+assert\+\_\+func}
+
+Callback for assertion failures 
+
+Definition at line 1434 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a65a505dc850aa444442b4cbe1d3eaa3d}\label{struct_m_d_b__env_a65a505dc850aa444442b4cbe1d3eaa3d}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+close\+\_\+readers@{me\+\_\+close\+\_\+readers}}
+\index{me\+\_\+close\+\_\+readers@{me\+\_\+close\+\_\+readers}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+close\+\_\+readers}{me\_close\_readers}}
+{\footnotesize\ttfamily volatile int M\+D\+B\+\_\+env\+::me\+\_\+close\+\_\+readers}
+
+Max \mbox{\hyperlink{struct_m_d_b__txninfo}{M\+D\+B\+\_\+txninfo}}.mti\+\_\+numreaders of interest to \mbox{\hyperlink{group__mdb_ga4366c43ada8874588b6a62fbda2d1e95}{mdb\+\_\+env\+\_\+close()}} 
+
+Definition at line 1381 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a84e30bf602ca2810dc1f5ff8a474b86d}\label{struct_m_d_b__env_a84e30bf602ca2810dc1f5ff8a474b86d}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+dbflags@{me\+\_\+dbflags}}
+\index{me\+\_\+dbflags@{me\+\_\+dbflags}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+dbflags}{me\_dbflags}}
+{\footnotesize\ttfamily uint16\+\_\+t$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+dbflags}
+
+array of flags from \mbox{\hyperlink{struct_m_d_b__db_a91a11c5c8034bd175eb0dd01da528981}{M\+D\+B\+\_\+db.\+md\+\_\+flags}} 
+
+Definition at line 1396 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a7fd1b52643fcf729f927469d28d1b1c4}\label{struct_m_d_b__env_a7fd1b52643fcf729f927469d28d1b1c4}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+dbiseqs@{me\+\_\+dbiseqs}}
+\index{me\+\_\+dbiseqs@{me\+\_\+dbiseqs}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+dbiseqs}{me\_dbiseqs}}
+{\footnotesize\ttfamily unsigned int$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+dbiseqs}
+
+array of dbi sequence numbers 
+
+Definition at line 1397 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a3de13263d5176b1985c3581c4c728ed7}\label{struct_m_d_b__env_a3de13263d5176b1985c3581c4c728ed7}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+dbxs@{me\+\_\+dbxs}}
+\index{me\+\_\+dbxs@{me\+\_\+dbxs}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+dbxs}{me\_dbxs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__dbx}{M\+D\+B\+\_\+dbx}}$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+dbxs}
+
+array of static DB info 
+
+Definition at line 1395 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a42dac152902b215639f9c8468b16608c}\label{struct_m_d_b__env_a42dac152902b215639f9c8468b16608c}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+dirty\+\_\+list@{me\+\_\+dirty\+\_\+list}}
+\index{me\+\_\+dirty\+\_\+list@{me\+\_\+dirty\+\_\+list}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+dirty\+\_\+list}{me\_dirty\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} M\+D\+B\+\_\+env\+::me\+\_\+dirty\+\_\+list}
+
+I\+D2L of pages written during a write txn. Length M\+D\+B\+\_\+\+I\+D\+L\+\_\+\+U\+M\+\_\+\+S\+I\+ZE. 
+
+Definition at line 1407 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_aeeb32fbf8557f37a933c762f391090ce}\label{struct_m_d_b__env_aeeb32fbf8557f37a933c762f391090ce}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+dpages@{me\+\_\+dpages}}
+\index{me\+\_\+dpages@{me\+\_\+dpages}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+dpages}{me\_dpages}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__page}{M\+D\+B\+\_\+page}}$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+dpages}
+
+list of malloc\textquotesingle{}d blocks for re-\/use 
+
+Definition at line 1403 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_adff94c258f5af201410ef61e51a2f8a0}\label{struct_m_d_b__env_adff94c258f5af201410ef61e51a2f8a0}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+fd@{me\+\_\+fd}}
+\index{me\+\_\+fd@{me\+\_\+fd}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+fd}{me\_fd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__compat_gab521aa5010fb1afb801a899a55569e03}{H\+A\+N\+D\+LE}} M\+D\+B\+\_\+env\+::me\+\_\+fd}
+
+The main data file 
+
+Definition at line 1362 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_aaa9e268acef9c8f260ec10e967f12b58}\label{struct_m_d_b__env_aaa9e268acef9c8f260ec10e967f12b58}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+flags@{me\+\_\+flags}}
+\index{me\+\_\+flags@{me\+\_\+flags}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+flags}{me\_flags}}
+{\footnotesize\ttfamily uint32\+\_\+t M\+D\+B\+\_\+env\+::me\+\_\+flags}
+
+\mbox{\hyperlink{group__mdb__env}{Environment Flags}} 
+
+Definition at line 1376 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a440e7c52dc9d6bc4828c7484f78d2b9b}\label{struct_m_d_b__env_a440e7c52dc9d6bc4828c7484f78d2b9b}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+free\+\_\+pgs@{me\+\_\+free\+\_\+pgs}}
+\index{me\+\_\+free\+\_\+pgs@{me\+\_\+free\+\_\+pgs}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+free\+\_\+pgs}{me\_free\_pgs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} M\+D\+B\+\_\+env\+::me\+\_\+free\+\_\+pgs}
+
+I\+DL of pages that became unused in a write txn 
+
+Definition at line 1405 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a74decfb0ded4cd870c8fafe0208abefc}\label{struct_m_d_b__env_a74decfb0ded4cd870c8fafe0208abefc}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+lfd@{me\+\_\+lfd}}
+\index{me\+\_\+lfd@{me\+\_\+lfd}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+lfd}{me\_lfd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__compat_gab521aa5010fb1afb801a899a55569e03}{H\+A\+N\+D\+LE}} M\+D\+B\+\_\+env\+::me\+\_\+lfd}
+
+The lock file 
+
+Definition at line 1363 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_ab0aee4c3cd1006e27d8d76c4634c742e}\label{struct_m_d_b__env_ab0aee4c3cd1006e27d8d76c4634c742e}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+live\+\_\+reader@{me\+\_\+live\+\_\+reader}}
+\index{me\+\_\+live\+\_\+reader@{me\+\_\+live\+\_\+reader}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+live\+\_\+reader}{me\_live\_reader}}
+{\footnotesize\ttfamily int M\+D\+B\+\_\+env\+::me\+\_\+live\+\_\+reader}
+
+have liveness lock in reader table 
+
+Definition at line 1415 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a58d7b9c0502757390c1631caa51cf96b}\label{struct_m_d_b__env_a58d7b9c0502757390c1631caa51cf96b}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+map@{me\+\_\+map}}
+\index{me\+\_\+map@{me\+\_\+map}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+map}{me\_map}}
+{\footnotesize\ttfamily char$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+map}
+
+the memory map of the data file 
+
+Definition at line 1386 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a98bb1536454549ec21407c4cf376a6dd}\label{struct_m_d_b__env_a98bb1536454549ec21407c4cf376a6dd}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+mapsize@{me\+\_\+mapsize}}
+\index{me\+\_\+mapsize@{me\+\_\+mapsize}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+mapsize}{me\_mapsize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} M\+D\+B\+\_\+env\+::me\+\_\+mapsize}
+
+size of the data memory map 
+
+Definition at line 1392 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_ad34d8970e43557e28d1db2df5ffc6d8c}\label{struct_m_d_b__env_ad34d8970e43557e28d1db2df5ffc6d8c}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+maxdbs@{me\+\_\+maxdbs}}
+\index{me\+\_\+maxdbs@{me\+\_\+maxdbs}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+maxdbs}{me\_maxdbs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} M\+D\+B\+\_\+env\+::me\+\_\+maxdbs}
+
+size of the DB table 
+
+Definition at line 1383 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_aa428623a5a2731349c49a611fddd3d73}\label{struct_m_d_b__env_aa428623a5a2731349c49a611fddd3d73}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+maxfree\+\_\+1pg@{me\+\_\+maxfree\+\_\+1pg}}
+\index{me\+\_\+maxfree\+\_\+1pg@{me\+\_\+maxfree\+\_\+1pg}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+maxfree\+\_\+1pg}{me\_maxfree\_1pg}}
+{\footnotesize\ttfamily int M\+D\+B\+\_\+env\+::me\+\_\+maxfree\+\_\+1pg}
+
+Max number of freelist items that can fit in a single overflow page 
+
+Definition at line 1409 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a898e1efb92a2cdfe352dfdb6f6dfbc40}\label{struct_m_d_b__env_a898e1efb92a2cdfe352dfdb6f6dfbc40}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+maxpg@{me\+\_\+maxpg}}
+\index{me\+\_\+maxpg@{me\+\_\+maxpg}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+maxpg}{me\_maxpg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\+\_\+t}} M\+D\+B\+\_\+env\+::me\+\_\+maxpg}
+
+me\+\_\+mapsize / me\+\_\+psize 
+
+Definition at line 1394 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a9049837fe4c45b663201ac4e078eaf19}\label{struct_m_d_b__env_a9049837fe4c45b663201ac4e078eaf19}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+maxreaders@{me\+\_\+maxreaders}}
+\index{me\+\_\+maxreaders@{me\+\_\+maxreaders}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+maxreaders}{me\_maxreaders}}
+{\footnotesize\ttfamily unsigned int M\+D\+B\+\_\+env\+::me\+\_\+maxreaders}
+
+size of the reader table 
+
+Definition at line 1379 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a9ff38b60b2d18b585577107ab469592a}\label{struct_m_d_b__env_a9ff38b60b2d18b585577107ab469592a}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+metas@{me\+\_\+metas}}
+\index{me\+\_\+metas@{me\+\_\+metas}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+metas}{me\_metas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__meta}{M\+D\+B\+\_\+meta}}$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+metas\mbox{[}\mbox{\hyperlink{group__internal_gae066f6a2b21f2003b622dc654bc58327}{N\+U\+M\+\_\+\+M\+E\+T\+AS}}\mbox{]}}
+
+pointers to the two meta pages 
+
+Definition at line 1388 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a8c5f5f596781bc4d39f0e76f244930b7}\label{struct_m_d_b__env_a8c5f5f596781bc4d39f0e76f244930b7}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+mfd@{me\+\_\+mfd}}
+\index{me\+\_\+mfd@{me\+\_\+mfd}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+mfd}{me\_mfd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__compat_gab521aa5010fb1afb801a899a55569e03}{H\+A\+N\+D\+LE}} M\+D\+B\+\_\+env\+::me\+\_\+mfd}
+
+just for writing the meta pages 
+
+Definition at line 1364 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a718cafb69c2a74164b79a874f6aee9e0}\label{struct_m_d_b__env_a718cafb69c2a74164b79a874f6aee9e0}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+nodemax@{me\+\_\+nodemax}}
+\index{me\+\_\+nodemax@{me\+\_\+nodemax}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+nodemax}{me\_nodemax}}
+{\footnotesize\ttfamily unsigned int M\+D\+B\+\_\+env\+::me\+\_\+nodemax}
+
+Max size of a node on a page 
+
+Definition at line 1411 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_ac34d9780c87bbf2d69bab073bb1964bd}\label{struct_m_d_b__env_ac34d9780c87bbf2d69bab073bb1964bd}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+numdbs@{me\+\_\+numdbs}}
+\index{me\+\_\+numdbs@{me\+\_\+numdbs}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+numdbs}{me\_numdbs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} M\+D\+B\+\_\+env\+::me\+\_\+numdbs}
+
+number of D\+Bs opened 
+
+Definition at line 1382 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_ae79524ce1389402e6c5065472b63a64d}\label{struct_m_d_b__env_ae79524ce1389402e6c5065472b63a64d}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+os\+\_\+psize@{me\+\_\+os\+\_\+psize}}
+\index{me\+\_\+os\+\_\+psize@{me\+\_\+os\+\_\+psize}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+os\+\_\+psize}{me\_os\_psize}}
+{\footnotesize\ttfamily unsigned int M\+D\+B\+\_\+env\+::me\+\_\+os\+\_\+psize}
+
+OS page size, from \mbox{\hyperlink{group__compat_ga948570910e2e84a556977f585cbfa2bf}{G\+E\+T\+\_\+\+P\+A\+G\+E\+S\+I\+ZE}} 
+
+Definition at line 1378 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a54e99a5b36b889bda5d78f783f724e13}\label{struct_m_d_b__env_a54e99a5b36b889bda5d78f783f724e13}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+path@{me\+\_\+path}}
+\index{me\+\_\+path@{me\+\_\+path}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+path}{me\_path}}
+{\footnotesize\ttfamily char$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+path}
+
+path to the DB files 
+
+Definition at line 1385 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a1700deb7f48b9a1837007d82dd47da94}\label{struct_m_d_b__env_a1700deb7f48b9a1837007d82dd47da94}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+pbuf@{me\+\_\+pbuf}}
+\index{me\+\_\+pbuf@{me\+\_\+pbuf}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+pbuf}{me\_pbuf}}
+{\footnotesize\ttfamily void$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+pbuf}
+
+scratch area for D\+U\+P\+S\+O\+RT put() 
+
+Definition at line 1389 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_ae2a8e75689dba70d92b5641711b3415a}\label{struct_m_d_b__env_ae2a8e75689dba70d92b5641711b3415a}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+pgoldest@{me\+\_\+pgoldest}}
+\index{me\+\_\+pgoldest@{me\+\_\+pgoldest}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+pgoldest}{me\_pgoldest}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_gabbaef7c9c710f8652a62c32d748c040e}{txnid\+\_\+t}} M\+D\+B\+\_\+env\+::me\+\_\+pgoldest}
+
+ID of oldest reader last time we looked 
+
+Definition at line 1399 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a0db706a72d88cfe0e32f7ab80a4afa8b}\label{struct_m_d_b__env_a0db706a72d88cfe0e32f7ab80a4afa8b}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+pgstate@{me\+\_\+pgstate}}
+\index{me\+\_\+pgstate@{me\+\_\+pgstate}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+pgstate}{me\_pgstate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__pgstate}{M\+D\+B\+\_\+pgstate}} M\+D\+B\+\_\+env\+::me\+\_\+pgstate}
+
+state of old pages from free\+DB 
+
+Definition at line 1400 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a417b6c74fbbde9f6474358517c577a96}\label{struct_m_d_b__env_a417b6c74fbbde9f6474358517c577a96}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+pid@{me\+\_\+pid}}
+\index{me\+\_\+pid@{me\+\_\+pid}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+pid}{me\_pid}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+\+P\+I\+D\+\_\+T M\+D\+B\+\_\+env\+::me\+\_\+pid}
+
+process ID of this env 
+
+Definition at line 1384 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_afdddd82c8660afbdbe45fd7e5353ec53}\label{struct_m_d_b__env_afdddd82c8660afbdbe45fd7e5353ec53}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+psize@{me\+\_\+psize}}
+\index{me\+\_\+psize@{me\+\_\+psize}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+psize}{me\_psize}}
+{\footnotesize\ttfamily unsigned int M\+D\+B\+\_\+env\+::me\+\_\+psize}
+
+DB page size, inited from me\+\_\+os\+\_\+psize 
+
+Definition at line 1377 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_ad6d73a08b30a6c370cefb129ee2313d8}\label{struct_m_d_b__env_ad6d73a08b30a6c370cefb129ee2313d8}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+size@{me\+\_\+size}}
+\index{me\+\_\+size@{me\+\_\+size}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+size}{me\_size}}
+{\footnotesize\ttfamily off\+\_\+t M\+D\+B\+\_\+env\+::me\+\_\+size}
+
+current file size 
+
+Definition at line 1393 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a2f9ec605ad2ed099b970527d9aabb786}\label{struct_m_d_b__env_a2f9ec605ad2ed099b970527d9aabb786}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+txkey@{me\+\_\+txkey}}
+\index{me\+\_\+txkey@{me\+\_\+txkey}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+txkey}{me\_txkey}}
+{\footnotesize\ttfamily pthread\+\_\+key\+\_\+t M\+D\+B\+\_\+env\+::me\+\_\+txkey}
+
+thread-\/key for readers 
+
+Definition at line 1398 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a41f4abc70ee54d822f4674d48d4c4461}\label{struct_m_d_b__env_a41f4abc70ee54d822f4674d48d4c4461}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+txn@{me\+\_\+txn}}
+\index{me\+\_\+txn@{me\+\_\+txn}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+txn}{me\_txn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}}$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+txn}
+
+current write transaction 
+
+Definition at line 1390 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_a6981326b3defd1cd688922f896a1b279}\label{struct_m_d_b__env_a6981326b3defd1cd688922f896a1b279}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+txn0@{me\+\_\+txn0}}
+\index{me\+\_\+txn0@{me\+\_\+txn0}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+txn0}{me\_txn0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}}$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+txn0}
+
+prealloc\textquotesingle{}d write transaction 
+
+Definition at line 1391 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_ae0082e483c3bb1a0d6572d21f7da3010}\label{struct_m_d_b__env_ae0082e483c3bb1a0d6572d21f7da3010}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+txns@{me\+\_\+txns}}
+\index{me\+\_\+txns@{me\+\_\+txns}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+txns}{me\_txns}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__txninfo}{M\+D\+B\+\_\+txninfo}}$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+txns}
+
+the memory map of the lock file or N\+U\+LL 
+
+Definition at line 1387 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__env_ac71142f4e056b082f9d866d1561764e5}\label{struct_m_d_b__env_ac71142f4e056b082f9d866d1561764e5}} 
+\index{M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}!me\+\_\+userctx@{me\+\_\+userctx}}
+\index{me\+\_\+userctx@{me\+\_\+userctx}!M\+D\+B\+\_\+env@{M\+D\+B\+\_\+env}}
+\subsubsection{\texorpdfstring{me\+\_\+userctx}{me\_userctx}}
+{\footnotesize\ttfamily void$\ast$ M\+D\+B\+\_\+env\+::me\+\_\+userctx}
+
+User-\/settable context 
+
+Definition at line 1433 of file mdb.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

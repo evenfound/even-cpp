@@ -1,0 +1,257 @@
+\hypertarget{struct_m_d_b__txn}{}\section{M\+D\+B\+\_\+txn Struct Reference}
+\label{struct_m_d_b__txn}\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+
+
+Collaboration diagram for M\+D\+B\+\_\+txn\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_abc63d15f4e57a73ed26089e1ab7fb866}{mt\+\_\+parent}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_a58c028bf009e3968696ba65d41f6aa81}{mt\+\_\+child}}
+\item 
+\mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__txn_aa805ac6e787ed14ffd131964638901bc}{mt\+\_\+next\+\_\+pgno}}
+\item 
+\mbox{\hyperlink{group__internal_gabbaef7c9c710f8652a62c32d748c040e}{txnid\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__txn_a26512036328af11cdaeb6c9880859290}{mt\+\_\+txnid}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_a03c63e36f8e121d65172f1e5a1d70a55}{mt\+\_\+env}}
+\item 
+\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} \mbox{\hyperlink{struct_m_d_b__txn_a587e53ee229e04345eaba8e4f300c84a}{mt\+\_\+free\+\_\+pgs}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__page}{M\+D\+B\+\_\+page}} $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_a8ba581e64700739d049e172456305138}{mt\+\_\+loose\+\_\+pgs}}
+\item 
+int \mbox{\hyperlink{struct_m_d_b__txn_a2ff868cf712335c9c596ac8b10d73505}{mt\+\_\+loose\+\_\+count}}
+\item 
+\mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} \mbox{\hyperlink{struct_m_d_b__txn_a1a41741f6a5a601fd60fab7175285fd8}{mt\+\_\+spill\+\_\+pgs}}
+\item 
+\mbox{\Hypertarget{struct_m_d_b__txn_acf13c3197b192695065a2beded20601e}\label{struct_m_d_b__txn_acf13c3197b192695065a2beded20601e}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{MDB\_ID2L}} \mbox{\hyperlink{struct_m_d_b__txn_a0a89cc7b39f5aec84f629a2b43bb64d5}{dirty\_list}}\\
+\>\mbox{\hyperlink{struct_m_d_b__reader}{MDB\_reader}} $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_a0ca555e0c624a93f7106cfea434e9557}{reader}}\\
+\} {\bfseries mt\_u}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{struct_m_d_b__dbx}{M\+D\+B\+\_\+dbx}} $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_aa837e463f7e79368b55bec22baa0233b}{mt\+\_\+dbxs}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__db}{M\+D\+B\+\_\+db}} $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_a4e24dfe1a2ade2e1bf4c7305cef267b3}{mt\+\_\+dbs}}
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_a17bc725a62160766a6f844b5602799ee}{mt\+\_\+dbiseqs}}
+\item 
+\mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$$\ast$ \mbox{\hyperlink{struct_m_d_b__txn_aa8a8241adc1169c76b95498432540ce7}{mt\+\_\+cursors}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{struct_m_d_b__txn_a484dbc29f7f03b58676463d65cb628f1}{mt\+\_\+dbflags}}
+\item 
+\mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} \mbox{\hyperlink{struct_m_d_b__txn_ad4ead449fef79be9fb69c8c4279a6163}{mt\+\_\+numdbs}}
+\item 
+unsigned int \mbox{\hyperlink{struct_m_d_b__txn_a6daba5db3d626e789a7d4c8ee3d8c840}{mt\+\_\+flags}}
+\item 
+unsigned int \mbox{\hyperlink{struct_m_d_b__txn_ab62f1ad8141d56c66c8548934b7e0977}{mt\+\_\+dirty\+\_\+room}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A database transaction. Every operation requires a transaction handle. 
+
+Definition at line 1172 of file mdb.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_d_b__txn_a0a89cc7b39f5aec84f629a2b43bb64d5}\label{struct_m_d_b__txn_a0a89cc7b39f5aec84f629a2b43bb64d5}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!dirty\+\_\+list@{dirty\+\_\+list}}
+\index{dirty\+\_\+list@{dirty\+\_\+list}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{dirty\+\_\+list}{dirty\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__idls_gafcc5d61c06c726db2be5d088dbc68d51}{M\+D\+B\+\_\+\+I\+D2L}} M\+D\+B\+\_\+txn\+::dirty\+\_\+list}
+
+For write txns\+: Modified pages. Sorted when not M\+D\+B\+\_\+\+W\+R\+I\+T\+E\+M\+AP. 
+
+Definition at line 1202 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a58c028bf009e3968696ba65d41f6aa81}\label{struct_m_d_b__txn_a58c028bf009e3968696ba65d41f6aa81}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+child@{mt\+\_\+child}}
+\index{mt\+\_\+child@{mt\+\_\+child}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+child}{mt\_child}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}}$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+child}
+
+Nested txn under this txn, set together with flag \mbox{\hyperlink{group__mdb__txn_gae22c21354cea3cf2bddba79348c8f5b8}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+H\+A\+S\+\_\+\+C\+H\+I\+LD}} 
+
+Definition at line 1175 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_aa8a8241adc1169c76b95498432540ce7}\label{struct_m_d_b__txn_aa8a8241adc1169c76b95498432540ce7}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+cursors@{mt\+\_\+cursors}}
+\index{mt\+\_\+cursors@{mt\+\_\+cursors}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+cursors}{mt\_cursors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}}$\ast$$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+cursors}
+
+In write txns, array of cursors for each DB 
+
+Definition at line 1223 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a484dbc29f7f03b58676463d65cb628f1}\label{struct_m_d_b__txn_a484dbc29f7f03b58676463d65cb628f1}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+dbflags@{mt\+\_\+dbflags}}
+\index{mt\+\_\+dbflags@{mt\+\_\+dbflags}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+dbflags}{mt\_dbflags}}
+{\footnotesize\ttfamily unsigned char$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+dbflags}
+
+Array of flags for each DB 
+
+Definition at line 1225 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a17bc725a62160766a6f844b5602799ee}\label{struct_m_d_b__txn_a17bc725a62160766a6f844b5602799ee}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+dbiseqs@{mt\+\_\+dbiseqs}}
+\index{mt\+\_\+dbiseqs@{mt\+\_\+dbiseqs}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+dbiseqs}{mt\_dbiseqs}}
+{\footnotesize\ttfamily unsigned int$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+dbiseqs}
+
+Array of sequence numbers for each DB handle 
+
+Definition at line 1211 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a4e24dfe1a2ade2e1bf4c7305cef267b3}\label{struct_m_d_b__txn_a4e24dfe1a2ade2e1bf4c7305cef267b3}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+dbs@{mt\+\_\+dbs}}
+\index{mt\+\_\+dbs@{mt\+\_\+dbs}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+dbs}{mt\_dbs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__db}{M\+D\+B\+\_\+db}}$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+dbs}
+
+Array of \mbox{\hyperlink{struct_m_d_b__db}{M\+D\+B\+\_\+db}} records for each known DB 
+
+Definition at line 1209 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_aa837e463f7e79368b55bec22baa0233b}\label{struct_m_d_b__txn_aa837e463f7e79368b55bec22baa0233b}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+dbxs@{mt\+\_\+dbxs}}
+\index{mt\+\_\+dbxs@{mt\+\_\+dbxs}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+dbxs}{mt\_dbxs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__dbx}{M\+D\+B\+\_\+dbx}}$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+dbxs}
+
+Array of records for each DB known in the environment. 
+
+Definition at line 1207 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_ab62f1ad8141d56c66c8548934b7e0977}\label{struct_m_d_b__txn_ab62f1ad8141d56c66c8548934b7e0977}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+dirty\+\_\+room@{mt\+\_\+dirty\+\_\+room}}
+\index{mt\+\_\+dirty\+\_\+room@{mt\+\_\+dirty\+\_\+room}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+dirty\+\_\+room}{mt\_dirty\_room}}
+{\footnotesize\ttfamily unsigned int M\+D\+B\+\_\+txn\+::mt\+\_\+dirty\+\_\+room}
+
+\mbox{\hyperlink{struct_m_d_b__txn_a0a89cc7b39f5aec84f629a2b43bb64d5}{dirty\+\_\+list}} room\+: Array size -\/ \#dirty pages visible to this txn. Includes ancestor txns\textquotesingle{} dirty pages not hidden by other txns\textquotesingle{} dirty/spilled pages. Thus commit(nested txn) has room to merge dirty\+\_\+list into mt\+\_\+parent after freeing hidden mt\+\_\+parent pages. 
+
+Definition at line 1270 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a03c63e36f8e121d65172f1e5a1d70a55}\label{struct_m_d_b__txn_a03c63e36f8e121d65172f1e5a1d70a55}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+env@{mt\+\_\+env}}
+\index{mt\+\_\+env@{mt\+\_\+env}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+env}{mt\_env}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}}$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+env}
+
+the DB environment 
+
+Definition at line 1185 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a6daba5db3d626e789a7d4c8ee3d8c840}\label{struct_m_d_b__txn_a6daba5db3d626e789a7d4c8ee3d8c840}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+flags@{mt\+\_\+flags}}
+\index{mt\+\_\+flags@{mt\+\_\+flags}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+flags}{mt\_flags}}
+{\footnotesize\ttfamily unsigned int M\+D\+B\+\_\+txn\+::mt\+\_\+flags}
+
+\mbox{\hyperlink{group__mdb__txn}{Transaction Flags}} 
+
+Definition at line 1264 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a587e53ee229e04345eaba8e4f300c84a}\label{struct_m_d_b__txn_a587e53ee229e04345eaba8e4f300c84a}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+free\+\_\+pgs@{mt\+\_\+free\+\_\+pgs}}
+\index{mt\+\_\+free\+\_\+pgs@{mt\+\_\+free\+\_\+pgs}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+free\+\_\+pgs}{mt\_free\_pgs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} M\+D\+B\+\_\+txn\+::mt\+\_\+free\+\_\+pgs}
+
+The list of pages that became unused during this transaction. 
+
+Definition at line 1188 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a2ff868cf712335c9c596ac8b10d73505}\label{struct_m_d_b__txn_a2ff868cf712335c9c596ac8b10d73505}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+loose\+\_\+count@{mt\+\_\+loose\+\_\+count}}
+\index{mt\+\_\+loose\+\_\+count@{mt\+\_\+loose\+\_\+count}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+loose\+\_\+count}{mt\_loose\_count}}
+{\footnotesize\ttfamily int M\+D\+B\+\_\+txn\+::mt\+\_\+loose\+\_\+count}
+
+Number of loose pages (\mbox{\hyperlink{struct_m_d_b__txn_a8ba581e64700739d049e172456305138}{mt\+\_\+loose\+\_\+pgs}}) 
+
+Definition at line 1194 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a8ba581e64700739d049e172456305138}\label{struct_m_d_b__txn_a8ba581e64700739d049e172456305138}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+loose\+\_\+pgs@{mt\+\_\+loose\+\_\+pgs}}
+\index{mt\+\_\+loose\+\_\+pgs@{mt\+\_\+loose\+\_\+pgs}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+loose\+\_\+pgs}{mt\_loose\_pgs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__page}{M\+D\+B\+\_\+page}}$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+loose\+\_\+pgs}
+
+The list of loose pages that became unused and may be reused in this transaction, linked through \mbox{\hyperlink{group__internal_ga9bebe2cf570ff3959aefcad1fadfd6c2}{N\+E\+X\+T\+\_\+\+L\+O\+O\+S\+E\+\_\+\+P\+A\+G\+E(page)}}. 
+
+Definition at line 1192 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_aa805ac6e787ed14ffd131964638901bc}\label{struct_m_d_b__txn_aa805ac6e787ed14ffd131964638901bc}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+next\+\_\+pgno@{mt\+\_\+next\+\_\+pgno}}
+\index{mt\+\_\+next\+\_\+pgno@{mt\+\_\+next\+\_\+pgno}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+next\+\_\+pgno}{mt\_next\_pgno}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\+\_\+t}} M\+D\+B\+\_\+txn\+::mt\+\_\+next\+\_\+pgno}
+
+next unallocated page 
+
+Definition at line 1176 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_ad4ead449fef79be9fb69c8c4279a6163}\label{struct_m_d_b__txn_ad4ead449fef79be9fb69c8c4279a6163}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+numdbs@{mt\+\_\+numdbs}}
+\index{mt\+\_\+numdbs@{mt\+\_\+numdbs}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+numdbs}{mt\_numdbs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} M\+D\+B\+\_\+txn\+::mt\+\_\+numdbs}
+
+Number of DB records in use, or 0 when the txn is finished. This number only ever increments until the txn finishes; we don\textquotesingle{}t decrement it when individual DB handles are closed. 
+
+Definition at line 1243 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_abc63d15f4e57a73ed26089e1ab7fb866}\label{struct_m_d_b__txn_abc63d15f4e57a73ed26089e1ab7fb866}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+parent@{mt\+\_\+parent}}
+\index{mt\+\_\+parent@{mt\+\_\+parent}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+parent}{mt\_parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}}$\ast$ M\+D\+B\+\_\+txn\+::mt\+\_\+parent}
+
+parent of a nested txn 
+
+Definition at line 1173 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a1a41741f6a5a601fd60fab7175285fd8}\label{struct_m_d_b__txn_a1a41741f6a5a601fd60fab7175285fd8}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+spill\+\_\+pgs@{mt\+\_\+spill\+\_\+pgs}}
+\index{mt\+\_\+spill\+\_\+pgs@{mt\+\_\+spill\+\_\+pgs}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+spill\+\_\+pgs}{mt\_spill\_pgs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__idls_ga238cc39c422225e05cb3897e641ca9e5}{M\+D\+B\+\_\+\+I\+DL}} M\+D\+B\+\_\+txn\+::mt\+\_\+spill\+\_\+pgs}
+
+The sorted list of dirty pages we temporarily wrote to disk because the dirty list was full. page numbers in here are shifted left by 1, deleted slots have the L\+SB set. 
+
+Definition at line 1199 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a26512036328af11cdaeb6c9880859290}\label{struct_m_d_b__txn_a26512036328af11cdaeb6c9880859290}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!mt\+\_\+txnid@{mt\+\_\+txnid}}
+\index{mt\+\_\+txnid@{mt\+\_\+txnid}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{mt\+\_\+txnid}{mt\_txnid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_gabbaef7c9c710f8652a62c32d748c040e}{txnid\+\_\+t}} M\+D\+B\+\_\+txn\+::mt\+\_\+txnid}
+
+The ID of this transaction. I\+Ds are integers incrementing from 1. Only committed write transactions increment the ID. If a transaction aborts, the ID may be re-\/used by the next writer. 
+
+Definition at line 1184 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__txn_a0ca555e0c624a93f7106cfea434e9557}\label{struct_m_d_b__txn_a0ca555e0c624a93f7106cfea434e9557}} 
+\index{M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}!reader@{reader}}
+\index{reader@{reader}!M\+D\+B\+\_\+txn@{M\+D\+B\+\_\+txn}}
+\subsubsection{\texorpdfstring{reader}{reader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_d_b__reader}{M\+D\+B\+\_\+reader}}$\ast$ M\+D\+B\+\_\+txn\+::reader}
+
+For read txns\+: This thread/txn\textquotesingle{}s reader table slot, or N\+U\+LL. 
+
+Definition at line 1204 of file mdb.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

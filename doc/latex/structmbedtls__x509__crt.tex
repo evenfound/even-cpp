@@ -1,0 +1,352 @@
+\hypertarget{structmbedtls__x509__crt}{}\section{mbedtls\+\_\+x509\+\_\+crt Struct Reference}
+\label{structmbedtls__x509__crt}\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+
+
+{\ttfamily \#include $<$x509\+\_\+crt.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+x509\+\_\+crt\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_a5bfef6b8b81bc081f796cb1f6bb28839}{raw}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_a44e9a884baad5737ef0930af94ca3f94}{tbs}}
+\item 
+int \mbox{\hyperlink{structmbedtls__x509__crt_a879ea07a05ab857c0f5793572bf1696e}{version}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_a5c3ae8b4aba6e1c40cb1f6a85da36116}{serial}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_a128c3a665ffdce696b402435a74e97aa}{sig\+\_\+oid}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_afb876a6a7b85e160620c4549324d9e8d}{issuer\+\_\+raw}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_ac30aeab20c2cdf74dae631d6d0691651}{subject\+\_\+raw}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga2272228c7776102328df31623af3168c}{mbedtls\+\_\+x509\+\_\+name}} \mbox{\hyperlink{structmbedtls__x509__crt_ade48d67edd24629e28361d3fbc0aafd9}{issuer}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga2272228c7776102328df31623af3168c}{mbedtls\+\_\+x509\+\_\+name}} \mbox{\hyperlink{structmbedtls__x509__crt_a773e92423092ab65e5e50031bd9663a5}{subject}}
+\item 
+\mbox{\hyperlink{structmbedtls__x509__time}{mbedtls\+\_\+x509\+\_\+time}} \mbox{\hyperlink{structmbedtls__x509__crt_aad3cad5d228545a1950850239741784f}{valid\+\_\+from}}
+\item 
+\mbox{\hyperlink{structmbedtls__x509__time}{mbedtls\+\_\+x509\+\_\+time}} \mbox{\hyperlink{structmbedtls__x509__crt_a05af94003d5948703ca537b6a5f2d5b4}{valid\+\_\+to}}
+\item 
+\mbox{\hyperlink{structmbedtls__pk__context}{mbedtls\+\_\+pk\+\_\+context}} \mbox{\hyperlink{structmbedtls__x509__crt_a64f66291338e6b230542d83035fe5f20}{pk}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_a6bb2a7142b718fa43b948770ccc98dcd}{issuer\+\_\+id}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_adbbaba207a103a73f41b4b72ffc540f5}{subject\+\_\+id}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_a6baebf9741097506a60521fbcaf5996b}{v3\+\_\+ext}}
+\item 
+\mbox{\hyperlink{group__x509__module_gabd52d60a09315854d9ef849d02154f35}{mbedtls\+\_\+x509\+\_\+sequence}} \mbox{\hyperlink{structmbedtls__x509__crt_a1f148e8fb52e03e2604e716386a07df4}{subject\+\_\+alt\+\_\+names}}
+\item 
+int \mbox{\hyperlink{structmbedtls__x509__crt_a60878e1cb7a3058f19042d8f189158b0}{ext\+\_\+types}}
+\item 
+int \mbox{\hyperlink{structmbedtls__x509__crt_a196b3a43dae5a1c0058f46075f832890}{ca\+\_\+istrue}}
+\item 
+int \mbox{\hyperlink{structmbedtls__x509__crt_ab0af43652f426ace28052ec47fdde6fb}{max\+\_\+pathlen}}
+\item 
+unsigned int \mbox{\hyperlink{structmbedtls__x509__crt_a3b7650600aa6e637b8ab534a938aee94}{key\+\_\+usage}}
+\item 
+\mbox{\hyperlink{group__x509__module_gabd52d60a09315854d9ef849d02154f35}{mbedtls\+\_\+x509\+\_\+sequence}} \mbox{\hyperlink{structmbedtls__x509__crt_ac94f7360a7143ce1b983fab46c34dcf2}{ext\+\_\+key\+\_\+usage}}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__x509__crt_adc36c60aa279fae8bd35a20b9c2bba22}{ns\+\_\+cert\+\_\+type}}
+\item 
+\mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} \mbox{\hyperlink{structmbedtls__x509__crt_aea76ebaa8c8e23129bd905cdc0242a3a}{sig}}
+\item 
+mbedtls\+\_\+md\+\_\+type\+\_\+t \mbox{\hyperlink{structmbedtls__x509__crt_a5c56937aaf2a51a1d8bc814b142734ca}{sig\+\_\+md}}
+\item 
+\mbox{\hyperlink{pk_8h_a3fe41eff5605ae727eb9d28dad297020}{mbedtls\+\_\+pk\+\_\+type\+\_\+t}} \mbox{\hyperlink{structmbedtls__x509__crt_a65d5d20352a08c77e173808fde1f8660}{sig\+\_\+pk}}
+\item 
+void $\ast$ \mbox{\hyperlink{structmbedtls__x509__crt_a67c497ed6535050997c014507a866e9e}{sig\+\_\+opts}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$ \mbox{\hyperlink{structmbedtls__x509__crt_ac9dbc43b90ddd74fe55452495a304923}{next}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container for an X.\+509 certificate. The certificate may be chained. 
+
+Definition at line 52 of file x509\+\_\+crt.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__x509__crt_a196b3a43dae5a1c0058f46075f832890}\label{structmbedtls__x509__crt_a196b3a43dae5a1c0058f46075f832890}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!ca\+\_\+istrue@{ca\+\_\+istrue}}
+\index{ca\+\_\+istrue@{ca\+\_\+istrue}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{ca\+\_\+istrue}{ca\_istrue}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+::ca\+\_\+istrue}
+
+Optional Basic Constraint extension value\+: 1 if this certificate belongs to a CA, 0 otherwise. 
+
+Definition at line 78 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_ac94f7360a7143ce1b983fab46c34dcf2}\label{structmbedtls__x509__crt_ac94f7360a7143ce1b983fab46c34dcf2}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!ext\+\_\+key\+\_\+usage@{ext\+\_\+key\+\_\+usage}}
+\index{ext\+\_\+key\+\_\+usage@{ext\+\_\+key\+\_\+usage}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{ext\+\_\+key\+\_\+usage}{ext\_key\_usage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_gabd52d60a09315854d9ef849d02154f35}{mbedtls\+\_\+x509\+\_\+sequence}} mbedtls\+\_\+x509\+\_\+crt\+::ext\+\_\+key\+\_\+usage}
+
+Optional list of extended key usage O\+I\+Ds. 
+
+Definition at line 83 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a60878e1cb7a3058f19042d8f189158b0}\label{structmbedtls__x509__crt_a60878e1cb7a3058f19042d8f189158b0}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!ext\+\_\+types@{ext\+\_\+types}}
+\index{ext\+\_\+types@{ext\+\_\+types}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{ext\+\_\+types}{ext\_types}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+::ext\+\_\+types}
+
+Bit string containing detected and parsed extensions 
+
+Definition at line 77 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_ade48d67edd24629e28361d3fbc0aafd9}\label{structmbedtls__x509__crt_ade48d67edd24629e28361d3fbc0aafd9}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!issuer@{issuer}}
+\index{issuer@{issuer}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{issuer}{issuer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga2272228c7776102328df31623af3168c}{mbedtls\+\_\+x509\+\_\+name}} mbedtls\+\_\+x509\+\_\+crt\+::issuer}
+
+The parsed issuer data (named information object). 
+
+Definition at line 64 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a6bb2a7142b718fa43b948770ccc98dcd}\label{structmbedtls__x509__crt_a6bb2a7142b718fa43b948770ccc98dcd}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!issuer\+\_\+id@{issuer\+\_\+id}}
+\index{issuer\+\_\+id@{issuer\+\_\+id}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{issuer\+\_\+id}{issuer\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::issuer\+\_\+id}
+
+Optional X.\+509 v2/v3 issuer unique identifier. 
+
+Definition at line 72 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_afb876a6a7b85e160620c4549324d9e8d}\label{structmbedtls__x509__crt_afb876a6a7b85e160620c4549324d9e8d}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!issuer\+\_\+raw@{issuer\+\_\+raw}}
+\index{issuer\+\_\+raw@{issuer\+\_\+raw}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{issuer\+\_\+raw}{issuer\_raw}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::issuer\+\_\+raw}
+
+The raw issuer data (D\+ER). Used for quick comparison. 
+
+Definition at line 61 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a3b7650600aa6e637b8ab534a938aee94}\label{structmbedtls__x509__crt_a3b7650600aa6e637b8ab534a938aee94}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!key\+\_\+usage@{key\+\_\+usage}}
+\index{key\+\_\+usage@{key\+\_\+usage}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{key\+\_\+usage}{key\_usage}}
+{\footnotesize\ttfamily unsigned int mbedtls\+\_\+x509\+\_\+crt\+::key\+\_\+usage}
+
+Optional key usage extension value\+: See the values in x509.\+h 
+
+Definition at line 81 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_ab0af43652f426ace28052ec47fdde6fb}\label{structmbedtls__x509__crt_ab0af43652f426ace28052ec47fdde6fb}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!max\+\_\+pathlen@{max\+\_\+pathlen}}
+\index{max\+\_\+pathlen@{max\+\_\+pathlen}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{max\+\_\+pathlen}{max\_pathlen}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+::max\+\_\+pathlen}
+
+Optional Basic Constraint extension value\+: The maximum path length to the root certificate. Path length is 1 higher than R\+FC 5280 \textquotesingle{}meaning\textquotesingle{}, so 1+ 
+
+Definition at line 79 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_ac9dbc43b90ddd74fe55452495a304923}\label{structmbedtls__x509__crt_ac9dbc43b90ddd74fe55452495a304923}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!next@{next}}
+\index{next@{next}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}}$\ast$ mbedtls\+\_\+x509\+\_\+crt\+::next}
+
+Next certificate in the C\+A-\/chain. 
+
+Definition at line 92 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_adc36c60aa279fae8bd35a20b9c2bba22}\label{structmbedtls__x509__crt_adc36c60aa279fae8bd35a20b9c2bba22}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!ns\+\_\+cert\+\_\+type@{ns\+\_\+cert\+\_\+type}}
+\index{ns\+\_\+cert\+\_\+type@{ns\+\_\+cert\+\_\+type}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{ns\+\_\+cert\+\_\+type}{ns\_cert\_type}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+x509\+\_\+crt\+::ns\+\_\+cert\+\_\+type}
+
+Optional Netscape certificate type extension value\+: See the values in x509.\+h 
+
+Definition at line 85 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a64f66291338e6b230542d83035fe5f20}\label{structmbedtls__x509__crt_a64f66291338e6b230542d83035fe5f20}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!pk@{pk}}
+\index{pk@{pk}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{pk}{pk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__pk__context}{mbedtls\+\_\+pk\+\_\+context}} mbedtls\+\_\+x509\+\_\+crt\+::pk}
+
+Container for the public key context. 
+
+Definition at line 70 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a5bfef6b8b81bc081f796cb1f6bb28839}\label{structmbedtls__x509__crt_a5bfef6b8b81bc081f796cb1f6bb28839}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!raw@{raw}}
+\index{raw@{raw}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{raw}{raw}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::raw}
+
+The raw certificate data (D\+ER). 
+
+Definition at line 54 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a5c3ae8b4aba6e1c40cb1f6a85da36116}\label{structmbedtls__x509__crt_a5c3ae8b4aba6e1c40cb1f6a85da36116}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!serial@{serial}}
+\index{serial@{serial}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{serial}{serial}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::serial}
+
+Unique id for certificate issued by a specific CA. 
+
+Definition at line 58 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_aea76ebaa8c8e23129bd905cdc0242a3a}\label{structmbedtls__x509__crt_aea76ebaa8c8e23129bd905cdc0242a3a}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!sig@{sig}}
+\index{sig@{sig}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{sig}{sig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::sig}
+
+Signature\+: hash of the tbs part signed with the private key. 
+
+Definition at line 87 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a5c56937aaf2a51a1d8bc814b142734ca}\label{structmbedtls__x509__crt_a5c56937aaf2a51a1d8bc814b142734ca}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!sig\+\_\+md@{sig\+\_\+md}}
+\index{sig\+\_\+md@{sig\+\_\+md}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{sig\+\_\+md}{sig\_md}}
+{\footnotesize\ttfamily mbedtls\+\_\+md\+\_\+type\+\_\+t mbedtls\+\_\+x509\+\_\+crt\+::sig\+\_\+md}
+
+Internal representation of the MD algorithm of the signature algorithm, e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+D\+\_\+\+S\+H\+A256 
+
+Definition at line 88 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a128c3a665ffdce696b402435a74e97aa}\label{structmbedtls__x509__crt_a128c3a665ffdce696b402435a74e97aa}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!sig\+\_\+oid@{sig\+\_\+oid}}
+\index{sig\+\_\+oid@{sig\+\_\+oid}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{sig\+\_\+oid}{sig\_oid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::sig\+\_\+oid}
+
+Signature algorithm, e.\+g. sha1\+R\+SA 
+
+Definition at line 59 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a67c497ed6535050997c014507a866e9e}\label{structmbedtls__x509__crt_a67c497ed6535050997c014507a866e9e}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!sig\+\_\+opts@{sig\+\_\+opts}}
+\index{sig\+\_\+opts@{sig\+\_\+opts}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{sig\+\_\+opts}{sig\_opts}}
+{\footnotesize\ttfamily void$\ast$ mbedtls\+\_\+x509\+\_\+crt\+::sig\+\_\+opts}
+
+Signature options to be passed to \mbox{\hyperlink{pk_8h_a81f0c5e40b839f5eca676c2c2752036f}{mbedtls\+\_\+pk\+\_\+verify\+\_\+ext()}}, e.\+g. for R\+S\+A\+S\+S\+A-\/\+P\+SS 
+
+Definition at line 90 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a65d5d20352a08c77e173808fde1f8660}\label{structmbedtls__x509__crt_a65d5d20352a08c77e173808fde1f8660}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!sig\+\_\+pk@{sig\+\_\+pk}}
+\index{sig\+\_\+pk@{sig\+\_\+pk}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{sig\+\_\+pk}{sig\_pk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pk_8h_a3fe41eff5605ae727eb9d28dad297020}{mbedtls\+\_\+pk\+\_\+type\+\_\+t}} mbedtls\+\_\+x509\+\_\+crt\+::sig\+\_\+pk}
+
+Internal representation of the Public Key algorithm of the signature algorithm, e.\+g. M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+K\+\_\+\+R\+SA 
+
+Definition at line 89 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a773e92423092ab65e5e50031bd9663a5}\label{structmbedtls__x509__crt_a773e92423092ab65e5e50031bd9663a5}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!subject@{subject}}
+\index{subject@{subject}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{subject}{subject}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga2272228c7776102328df31623af3168c}{mbedtls\+\_\+x509\+\_\+name}} mbedtls\+\_\+x509\+\_\+crt\+::subject}
+
+The parsed subject data (named information object). 
+
+Definition at line 65 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a1f148e8fb52e03e2604e716386a07df4}\label{structmbedtls__x509__crt_a1f148e8fb52e03e2604e716386a07df4}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!subject\+\_\+alt\+\_\+names@{subject\+\_\+alt\+\_\+names}}
+\index{subject\+\_\+alt\+\_\+names@{subject\+\_\+alt\+\_\+names}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{subject\+\_\+alt\+\_\+names}{subject\_alt\_names}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_gabd52d60a09315854d9ef849d02154f35}{mbedtls\+\_\+x509\+\_\+sequence}} mbedtls\+\_\+x509\+\_\+crt\+::subject\+\_\+alt\+\_\+names}
+
+Optional list of Subject Alternative Names (Only d\+N\+S\+Name supported). 
+
+Definition at line 75 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_adbbaba207a103a73f41b4b72ffc540f5}\label{structmbedtls__x509__crt_adbbaba207a103a73f41b4b72ffc540f5}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!subject\+\_\+id@{subject\+\_\+id}}
+\index{subject\+\_\+id@{subject\+\_\+id}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{subject\+\_\+id}{subject\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::subject\+\_\+id}
+
+Optional X.\+509 v2/v3 subject unique identifier. 
+
+Definition at line 73 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_ac30aeab20c2cdf74dae631d6d0691651}\label{structmbedtls__x509__crt_ac30aeab20c2cdf74dae631d6d0691651}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!subject\+\_\+raw@{subject\+\_\+raw}}
+\index{subject\+\_\+raw@{subject\+\_\+raw}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{subject\+\_\+raw}{subject\_raw}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::subject\+\_\+raw}
+
+The raw subject data (D\+ER). Used for quick comparison. 
+
+Definition at line 62 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a44e9a884baad5737ef0930af94ca3f94}\label{structmbedtls__x509__crt_a44e9a884baad5737ef0930af94ca3f94}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!tbs@{tbs}}
+\index{tbs@{tbs}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{tbs}{tbs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::tbs}
+
+The raw certificate body (D\+ER). The part that is To Be Signed. 
+
+Definition at line 55 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a6baebf9741097506a60521fbcaf5996b}\label{structmbedtls__x509__crt_a6baebf9741097506a60521fbcaf5996b}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!v3\+\_\+ext@{v3\+\_\+ext}}
+\index{v3\+\_\+ext@{v3\+\_\+ext}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{v3\+\_\+ext}{v3\_ext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}} mbedtls\+\_\+x509\+\_\+crt\+::v3\+\_\+ext}
+
+Optional X.\+509 v3 extensions. 
+
+Definition at line 74 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_aad3cad5d228545a1950850239741784f}\label{structmbedtls__x509__crt_aad3cad5d228545a1950850239741784f}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!valid\+\_\+from@{valid\+\_\+from}}
+\index{valid\+\_\+from@{valid\+\_\+from}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{valid\+\_\+from}{valid\_from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__x509__time}{mbedtls\+\_\+x509\+\_\+time}} mbedtls\+\_\+x509\+\_\+crt\+::valid\+\_\+from}
+
+Start time of certificate validity. 
+
+Definition at line 67 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a05af94003d5948703ca537b6a5f2d5b4}\label{structmbedtls__x509__crt_a05af94003d5948703ca537b6a5f2d5b4}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!valid\+\_\+to@{valid\+\_\+to}}
+\index{valid\+\_\+to@{valid\+\_\+to}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{valid\+\_\+to}{valid\_to}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__x509__time}{mbedtls\+\_\+x509\+\_\+time}} mbedtls\+\_\+x509\+\_\+crt\+::valid\+\_\+to}
+
+End time of certificate validity. 
+
+Definition at line 68 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt_a879ea07a05ab857c0f5793572bf1696e}\label{structmbedtls__x509__crt_a879ea07a05ab857c0f5793572bf1696e}} 
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!version@{version}}
+\index{version@{version}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\subsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+::version}
+
+The X.\+509 version. (1=v1, 2=v2, 3=v3) 
+
+Definition at line 57 of file x509\+\_\+crt.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/\mbox{\hyperlink{x509__crt_8h}{x509\+\_\+crt.\+h}}\end{DoxyCompactItemize}

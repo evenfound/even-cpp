@@ -1,0 +1,15 @@
+digraph "stefanfrings::HttpSession::isNull"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node28 [label="stefanfrings::HttpSession\l::isNull",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node28 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="stefanfrings::HttpSession\lStore::getSession",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session_store.html#aeaf8409e1844366c12f18fd34d477a31"];
+  Node29 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="SessionController::\lservice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_session_controller.html#a2eb65af29d53ff51d709cc892611d5a9"];
+  Node30 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="RequestMapper::service",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_request_mapper.html#a5faa3e99e8599b260d2c9ec1479b6419"];
+  Node29 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="even::SessionController\l::service",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_session_controller.html#a2eb65af29d53ff51d709cc892611d5a9"];
+}

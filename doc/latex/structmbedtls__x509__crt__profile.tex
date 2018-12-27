@@ -1,0 +1,78 @@
+\hypertarget{structmbedtls__x509__crt__profile}{}\section{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile Struct Reference}
+\label{structmbedtls__x509__crt__profile}\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}}
+
+
+{\ttfamily \#include $<$x509\+\_\+crt.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structmbedtls__x509__crt__profile_a1251640211d47c8e4b80b99d5b178685}{allowed\+\_\+mds}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structmbedtls__x509__crt__profile_a13cba76eca3f0bce8a93b8f59fe69370}{allowed\+\_\+pks}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structmbedtls__x509__crt__profile_a8149f4d17f3f465e2255f5af997e4c8e}{allowed\+\_\+curves}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structmbedtls__x509__crt__profile_a094e9eb35ed5e9a16b67d2e8bd97e83c}{rsa\+\_\+min\+\_\+bitlen}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Security profile for certificate verification.
+
+All lists are bitfields, built by O\+Ring flags from \mbox{\hyperlink{group__x509__module_gaedcb73f1c615c266a348a0c62763c5de}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+I\+D\+\_\+\+F\+L\+A\+G()}}. 
+
+Definition at line 107 of file x509\+\_\+crt.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__x509__crt__profile_a8149f4d17f3f465e2255f5af997e4c8e}\label{structmbedtls__x509__crt__profile_a8149f4d17f3f465e2255f5af997e4c8e}} 
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}!allowed\+\_\+curves@{allowed\+\_\+curves}}
+\index{allowed\+\_\+curves@{allowed\+\_\+curves}!mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}}
+\subsubsection{\texorpdfstring{allowed\+\_\+curves}{allowed\_curves}}
+{\footnotesize\ttfamily uint32\+\_\+t mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+::allowed\+\_\+curves}
+
+Elliptic curves for E\+C\+D\+SA 
+
+Definition at line 111 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt__profile_a1251640211d47c8e4b80b99d5b178685}\label{structmbedtls__x509__crt__profile_a1251640211d47c8e4b80b99d5b178685}} 
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}!allowed\+\_\+mds@{allowed\+\_\+mds}}
+\index{allowed\+\_\+mds@{allowed\+\_\+mds}!mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}}
+\subsubsection{\texorpdfstring{allowed\+\_\+mds}{allowed\_mds}}
+{\footnotesize\ttfamily uint32\+\_\+t mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+::allowed\+\_\+mds}
+
+M\+Ds for signatures 
+
+Definition at line 109 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt__profile_a13cba76eca3f0bce8a93b8f59fe69370}\label{structmbedtls__x509__crt__profile_a13cba76eca3f0bce8a93b8f59fe69370}} 
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}!allowed\+\_\+pks@{allowed\+\_\+pks}}
+\index{allowed\+\_\+pks@{allowed\+\_\+pks}!mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}}
+\subsubsection{\texorpdfstring{allowed\+\_\+pks}{allowed\_pks}}
+{\footnotesize\ttfamily uint32\+\_\+t mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+::allowed\+\_\+pks}
+
+PK algs for signatures 
+
+Definition at line 110 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{structmbedtls__x509__crt__profile_a094e9eb35ed5e9a16b67d2e8bd97e83c}\label{structmbedtls__x509__crt__profile_a094e9eb35ed5e9a16b67d2e8bd97e83c}} 
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}!rsa\+\_\+min\+\_\+bitlen@{rsa\+\_\+min\+\_\+bitlen}}
+\index{rsa\+\_\+min\+\_\+bitlen@{rsa\+\_\+min\+\_\+bitlen}!mbedtls\+\_\+x509\+\_\+crt\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}}
+\subsubsection{\texorpdfstring{rsa\+\_\+min\+\_\+bitlen}{rsa\_min\_bitlen}}
+{\footnotesize\ttfamily uint32\+\_\+t mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+::rsa\+\_\+min\+\_\+bitlen}
+
+Minimum size for R\+SA keys 
+
+Definition at line 112 of file x509\+\_\+crt.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/\mbox{\hyperlink{x509__crt_8h}{x509\+\_\+crt.\+h}}\end{DoxyCompactItemize}

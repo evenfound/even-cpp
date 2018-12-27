@@ -1,0 +1,96 @@
+\hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Outgoing\+Packet Class Reference}
+\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet}\index{Q\+Ssh\+::\+Internal\+::\+Ssh\+Outgoing\+Packet@{Q\+Ssh\+::\+Internal\+::\+Ssh\+Outgoing\+Packet}}
+
+
+Inheritance diagram for Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Outgoing\+Packet\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Outgoing\+Packet\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_aa417768fd580479f96749cbc91fa8faf}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_aa417768fd580479f96749cbc91fa8faf}} 
+{\bfseries Ssh\+Outgoing\+Packet} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_encryption_facility}{Ssh\+Encryption\+Facility}} \&encrypter, const quint32 \&seq\+Nr)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a1e7a17cf44c369d49f40f5f865a3558f}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a1e7a17cf44c369d49f40f5f865a3558f}} 
+Q\+Byte\+Array {\bfseries generate\+Key\+Exchange\+Init\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a70b75f4a8fb7222a2385e0599aad2878}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a70b75f4a8fb7222a2385e0599aad2878}} 
+void {\bfseries generate\+Key\+Dh\+Init\+Packet} (const Botan\+::\+Big\+Int \&e)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a5cacc93b2fe7a0f1efbaebe824b814e1}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a5cacc93b2fe7a0f1efbaebe824b814e1}} 
+void {\bfseries generate\+New\+Keys\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ab2b534c66ac6684250ccb1d8e12975b2}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ab2b534c66ac6684250ccb1d8e12975b2}} 
+void {\bfseries generate\+Disconnect\+Packet} (Ssh\+Error\+Code reason, const Q\+Byte\+Array \&reason\+String)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ab84cb1817bade7531cfb80b5fd833ac7}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ab84cb1817bade7531cfb80b5fd833ac7}} 
+void {\bfseries generate\+Msg\+Unimplemented\+Packet} (quint32 server\+Seq\+Nr)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_afa634e3dea6511052328d7ed74f6c4f2}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_afa634e3dea6511052328d7ed74f6c4f2}} 
+void {\bfseries generate\+User\+Auth\+Service\+Request\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ab3d044a980bd8903b5736b894442acbe}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ab3d044a980bd8903b5736b894442acbe}} 
+void {\bfseries generate\+User\+Auth\+By\+Pwd\+Request\+Packet} (const Q\+Byte\+Array \&user, const Q\+Byte\+Array \&service, const Q\+Byte\+Array \&pwd)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ae1e8f2651a0af5fb913dd209f0f581ff}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ae1e8f2651a0af5fb913dd209f0f581ff}} 
+void {\bfseries generate\+User\+Auth\+By\+Key\+Request\+Packet} (const Q\+Byte\+Array \&user, const Q\+Byte\+Array \&service)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ac841e5dd63b3f8442b602936991af4f7}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ac841e5dd63b3f8442b602936991af4f7}} 
+void {\bfseries generate\+Request\+Failure\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a8bc80da7a3d2400e684c4f73f9cdb760}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a8bc80da7a3d2400e684c4f73f9cdb760}} 
+void {\bfseries generate\+Ignore\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ad485a75a6969c9c99e2c42fa2a7da3ff}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ad485a75a6969c9c99e2c42fa2a7da3ff}} 
+void {\bfseries generate\+Invalid\+Message\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a66788afcf708c6e713c881a9e5a8ef39}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a66788afcf708c6e713c881a9e5a8ef39}} 
+void {\bfseries generate\+Session\+Packet} (quint32 channel\+Id, quint32 window\+Size, quint32 max\+Packet\+Size)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_af6480bef347f306f8d56740dd406e771}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_af6480bef347f306f8d56740dd406e771}} 
+void {\bfseries generate\+Env\+Packet} (quint32 remote\+Channel, const Q\+Byte\+Array \&var, const Q\+Byte\+Array \&value)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a6b03c96d62c2479b8716537eb2ab1029}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a6b03c96d62c2479b8716537eb2ab1029}} 
+void {\bfseries generate\+Pty\+Request\+Packet} (quint32 remote\+Channel, const \mbox{\hyperlink{class_q_ssh_1_1_ssh_pseudo_terminal}{Ssh\+Pseudo\+Terminal}} \&terminal)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ae291b01d1dd4c3de87f6e9f69c0c467b}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ae291b01d1dd4c3de87f6e9f69c0c467b}} 
+void {\bfseries generate\+Exec\+Packet} (quint32 remote\+Channel, const Q\+Byte\+Array \&command)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ace27533b0e353b49f096a7d1c9fea48b}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_ace27533b0e353b49f096a7d1c9fea48b}} 
+void {\bfseries generate\+Shell\+Packet} (quint32 remote\+Channel)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_aeb73326257fd994f705c0002670953e7}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_aeb73326257fd994f705c0002670953e7}} 
+void {\bfseries generate\+Sftp\+Packet} (quint32 remote\+Channel)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a9529a2b53f19206dbc58a98e662be6ab}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a9529a2b53f19206dbc58a98e662be6ab}} 
+void {\bfseries generate\+Window\+Adjust\+Packet} (quint32 remote\+Channel, quint32 bytes\+To\+Add)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_abac70d097ba3f4406f3a6bd6d1282b2a}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_abac70d097ba3f4406f3a6bd6d1282b2a}} 
+void {\bfseries generate\+Channel\+Data\+Packet} (quint32 remote\+Channel, const Q\+Byte\+Array \&data)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_aede079e0239d4ba14f2abb8740420ad7}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_aede079e0239d4ba14f2abb8740420ad7}} 
+void {\bfseries generate\+Channel\+Signal\+Packet} (quint32 remote\+Channel, const Q\+Byte\+Array \&signal\+Name)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_acdf563ce18d2c34d38645c55721095e8}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_acdf563ce18d2c34d38645c55721095e8}} 
+void {\bfseries generate\+Channel\+Eof\+Packet} (quint32 remote\+Channel)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a8bff0c8f0f5bcddc4581550ed52702b6}\label{class_q_ssh_1_1_internal_1_1_ssh_outgoing_packet_a8bff0c8f0f5bcddc4581550ed52702b6}} 
+void {\bfseries generate\+Channel\+Close\+Packet} (quint32 remote\+Channel)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 43 of file sshoutgoingpacket\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sshoutgoingpacket\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sshoutgoingpacket.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c}{}\section{Botan\+:\+:T\+LS\+:\+:Encrypt\+\_\+then\+\_\+\+M\+AC Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c}\index{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC@{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC}}
+
+
+{\ttfamily \#include $<$tls\+\_\+extensions.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Encrypt\+\_\+then\+\_\+\+M\+AC\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:T\+LS\+:\+:Encrypt\+\_\+then\+\_\+\+M\+AC\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Handshake\+\_\+\+Extension\+\_\+\+Type \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_a56854b4e65b0cf1395b3b053df42f4f3}{type}} () const override
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_a599289acb3fc84c9e34a1dee1345904e}{serialize}} () const override
+\item 
+bool \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_af8412e160e798f87de854889a66faec5}{empty}} () const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_afe72de65403f8f85c96203ed19f3309b}\label{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_afe72de65403f8f85c96203ed19f3309b}} 
+{\bfseries Encrypt\+\_\+then\+\_\+\+M\+AC} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}{T\+L\+S\+\_\+\+Data\+\_\+\+Reader}} \&reader, uint16\+\_\+t extension\+\_\+size)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_a8abfc8a29dfce0ea83d6d1d6e98a6481}\label{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_a8abfc8a29dfce0ea83d6d1d6e98a6481}} 
+static Handshake\+\_\+\+Extension\+\_\+\+Type {\bfseries static\+\_\+type} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encrypt-\/then-\/\+M\+AC \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension}{Extension}} (R\+FC 7366) 
+
+Definition at line 367 of file tls\+\_\+extensions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_af8412e160e798f87de854889a66faec5}\label{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_af8412e160e798f87de854889a66faec5}} 
+\index{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC@{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC}!empty@{empty}}
+\index{empty@{empty}!Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC@{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+A\+C\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+if we should encode this extension or not 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_aa850b9be2322f94e7c65e583cd51acc5}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 377 of file tls\+\_\+extensions.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_a599289acb3fc84c9e34a1dee1345904e}\label{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_a599289acb3fc84c9e34a1dee1345904e}} 
+\index{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC@{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC}!serialize@{serialize}}
+\index{serialize@{serialize}!Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC@{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+A\+C\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+serialized binary for the extension 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_a56788726ad2526db54e5a26039cb69db}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 497 of file tls\+\_\+extensions.\+cpp.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_a56854b4e65b0cf1395b3b053df42f4f3}\label{class_botan_1_1_t_l_s_1_1_encrypt__then___m_a_c_a56854b4e65b0cf1395b3b053df42f4f3}} 
+\index{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC@{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC}!type@{type}}
+\index{type@{type}!Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC@{Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+AC}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily Handshake\+\_\+\+Extension\+\_\+\+Type Botan\+::\+T\+L\+S\+::\+Encrypt\+\_\+then\+\_\+\+M\+A\+C\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+code number of the extension 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_ac8819b312ce604453225e7b4f7c373ec}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 373 of file tls\+\_\+extensions.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+h\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+cpp\end{DoxyCompactItemize}

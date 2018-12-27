@@ -1,0 +1,101 @@
+\hypertarget{class_botan_1_1_timer}{}\section{Botan\+:\+:Timer Class Reference}
+\label{class_botan_1_1_timer}\index{Botan\+::\+Timer@{Botan\+::\+Timer}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_botan_1_1_timer_1_1_timer___scope}{Timer\+\_\+\+Scope}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a83d4e09f70865389d4aac62382e00d03}\label{class_botan_1_1_timer_a83d4e09f70865389d4aac62382e00d03}} 
+{\bfseries Timer} (const std\+::string \&name, const std\+::string \&provider, const std\+::string \&doing, uint64\+\_\+t event\+\_\+mult, size\+\_\+t buf\+\_\+size, double clock\+\_\+cycle\+\_\+ratio, uint64\+\_\+t clock\+\_\+speed)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_ac25601941a38110e97fac5f6e915f728}\label{class_botan_1_1_timer_ac25601941a38110e97fac5f6e915f728}} 
+{\bfseries Timer} (const std\+::string \&name, size\+\_\+t buf\+\_\+size=0)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a8274e31214574a6ca9770edadc092d93}\label{class_botan_1_1_timer_a8274e31214574a6ca9770edadc092d93}} 
+{\bfseries Timer} (const \mbox{\hyperlink{class_botan_1_1_timer}{Timer}} \&other)=default
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a3631b1abb774a66a5c870f9d250d9edb}\label{class_botan_1_1_timer_a3631b1abb774a66a5c870f9d250d9edb}} 
+void {\bfseries start} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a8d43e28fa369565ab503b13e85dd711f}\label{class_botan_1_1_timer_a8d43e28fa369565ab503b13e85dd711f}} 
+void {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a498b8a4251abb03f4a391f30b29260ff}\label{class_botan_1_1_timer_a498b8a4251abb03f4a391f30b29260ff}} 
+bool {\bfseries under} (std\+::chrono\+::milliseconds msec)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a71dae9db0b133c02fba78f21c46ab854}\label{class_botan_1_1_timer_a71dae9db0b133c02fba78f21c46ab854}} 
+{\footnotesize template$<$typename F $>$ }\\auto {\bfseries run} (F f) -\/$>$ decltype(f())
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_ad9de45e7a691b17dcec505cb57712db4}\label{class_botan_1_1_timer_ad9de45e7a691b17dcec505cb57712db4}} 
+{\footnotesize template$<$typename F $>$ }\\void {\bfseries run\+\_\+until\+\_\+elapsed} (std\+::chrono\+::milliseconds msec, F f)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a40955920ed9565042f1aa178a3fc6ecb}\label{class_botan_1_1_timer_a40955920ed9565042f1aa178a3fc6ecb}} 
+uint64\+\_\+t {\bfseries value} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_ae22acc3e3f2feb2ea06138486f6d9030}\label{class_botan_1_1_timer_ae22acc3e3f2feb2ea06138486f6d9030}} 
+double {\bfseries seconds} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a2127863566bb1e3f01d2bbca74c9a695}\label{class_botan_1_1_timer_a2127863566bb1e3f01d2bbca74c9a695}} 
+double {\bfseries milliseconds} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a53c447b8de2aaa2128f836896831d7fd}\label{class_botan_1_1_timer_a53c447b8de2aaa2128f836896831d7fd}} 
+double {\bfseries ms\+\_\+per\+\_\+event} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a4d518d2e8e03ff3d1156bf68b2d1d759}\label{class_botan_1_1_timer_a4d518d2e8e03ff3d1156bf68b2d1d759}} 
+uint64\+\_\+t {\bfseries cycles\+\_\+consumed} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_ad3cf66e2d6965e46ba53f4566a10ff59}\label{class_botan_1_1_timer_ad3cf66e2d6965e46ba53f4566a10ff59}} 
+uint64\+\_\+t {\bfseries events} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_ae87cc35b0220a13012fea2b05d97225b}\label{class_botan_1_1_timer_ae87cc35b0220a13012fea2b05d97225b}} 
+const std\+::string \& {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a06a0119b2834676703e78baf16f51527}\label{class_botan_1_1_timer_a06a0119b2834676703e78baf16f51527}} 
+const std\+::string \& {\bfseries doing} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_ab945fc325d3e2e827cec0d218093dd87}\label{class_botan_1_1_timer_ab945fc325d3e2e827cec0d218093dd87}} 
+size\+\_\+t {\bfseries buf\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_af51991e8d47d21efbd478e1a944c3b7e}\label{class_botan_1_1_timer_af51991e8d47d21efbd478e1a944c3b7e}} 
+double {\bfseries bytes\+\_\+per\+\_\+second} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a32e4e855d82d6e4a298872f4cb17ca31}\label{class_botan_1_1_timer_a32e4e855d82d6e4a298872f4cb17ca31}} 
+double {\bfseries events\+\_\+per\+\_\+second} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a65f9b04b6540cd4c2d865e8f6ec06b08}\label{class_botan_1_1_timer_a65f9b04b6540cd4c2d865e8f6ec06b08}} 
+double {\bfseries seconds\+\_\+per\+\_\+event} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a6b302fa68f00c7c38a2dacbd074ae4dd}\label{class_botan_1_1_timer_a6b302fa68f00c7c38a2dacbd074ae4dd}} 
+void {\bfseries set\+\_\+custom\+\_\+msg} (const std\+::string \&s)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a0cad6fb37750c526156173a55d17b0d2}\label{class_botan_1_1_timer_a0cad6fb37750c526156173a55d17b0d2}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_botan_1_1_timer}{Timer}} \&other) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a563324a8fb62bc785051c50a88170130}\label{class_botan_1_1_timer_a563324a8fb62bc785051c50a88170130}} 
+std\+::string {\bfseries to\+\_\+string} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_aa9975950c54334a4b5f7eef6311c8b15}\label{class_botan_1_1_timer_aa9975950c54334a4b5f7eef6311c8b15}} 
+static uint64\+\_\+t {\bfseries get\+\_\+system\+\_\+timestamp\+\_\+ns} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_timer_a2ab6923d7e6b1c17b50d28544a841502}\label{class_botan_1_1_timer_a2ab6923d7e6b1c17b50d28544a841502}} 
+static uint64\+\_\+t {\bfseries get\+\_\+cpu\+\_\+cycle\+\_\+counter} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 17 of file timer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/utils/timer.\+h\item 
+prerequisites/botan/src/lib/utils/timer.\+cpp\end{DoxyCompactItemize}

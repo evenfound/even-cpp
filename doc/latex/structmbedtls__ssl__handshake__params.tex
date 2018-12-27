@@ -1,0 +1,444 @@
+\hypertarget{structmbedtls__ssl__handshake__params}{}\section{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params Struct Reference}
+\label{structmbedtls__ssl__handshake__params}\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+
+
+Collaboration diagram for mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a5bd51cd234637157e288f1e5779701c5}{sig\+\_\+alg}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_ab950ce283cc477ea1a246689ecd2a22d}{verify\+\_\+sig\+\_\+alg}}
+\item 
+\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} \mbox{\hyperlink{structmbedtls__ssl__handshake__params_aaa85609e03e300c910db01e8a321950f}{dhm\+\_\+ctx}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecdh__context}{mbedtls\+\_\+ecdh\+\_\+context}} \mbox{\hyperlink{structmbedtls__ssl__handshake__params_ac817564988b758dfa0d6829f78817712}{ecdh\+\_\+ctx}}
+\item 
+const \mbox{\hyperlink{structmbedtls__ecp__curve__info}{mbedtls\+\_\+ecp\+\_\+curve\+\_\+info}} $\ast$$\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a521abec631fe5c81cf5c094cc374b8eb}{curves}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a249e9ec2254eef073c3ead5544139415}{psk}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structmbedtls__ssl__handshake__params_ac91fb6cfeeda006fa2b9a1749186d216}{psk\+\_\+len}}
+\item 
+\mbox{\hyperlink{structmbedtls__ssl__key__cert}{mbedtls\+\_\+ssl\+\_\+key\+\_\+cert}} $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a149899c222855d2cc33aa4cc326b09cd}{key\+\_\+cert}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_ada4c8d021bb297b6728d6f117a026fd0}{sni\+\_\+authmode}}
+\item 
+\mbox{\hyperlink{structmbedtls__ssl__key__cert}{mbedtls\+\_\+ssl\+\_\+key\+\_\+cert}} $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_abe0893bc6a388d5e2f584cd4025a76b4}{sni\+\_\+key\+\_\+cert}}
+\item 
+\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a4d18e84d136e133fe5edfff81a207168}{sni\+\_\+ca\+\_\+chain}}
+\item 
+\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_ae2b1df99f674ec78b072234a0bb4fa40}{sni\+\_\+ca\+\_\+crl}}
+\item 
+unsigned int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a5dd64f971dd0b4b43828e264117304d0}{out\+\_\+msg\+\_\+seq}}
+\item 
+unsigned int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a71e7df587788d6ae5e30a4957b69649b}{in\+\_\+msg\+\_\+seq}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a95f37efbc53f2f542632527f5c9931af}{verify\+\_\+cookie}}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a12cd286ea50d184e53a51c3cc60a8a06}{verify\+\_\+cookie\+\_\+len}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a7951f655fd1dda5eb8f54c4683c4da1e}{hs\+\_\+msg}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a915ed07c7ce86c7cc3e10a0eab2547f0}{retransmit\+\_\+timeout}}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a86a5f7294fa563413f5ae5421628a8da}{retransmit\+\_\+state}}
+\item 
+\mbox{\hyperlink{structmbedtls__ssl__flight__item}{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}} $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a2c8fb6344a9fb81db52b5add59baf95b}{flight}}
+\item 
+\mbox{\hyperlink{structmbedtls__ssl__flight__item}{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}} $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_ac2760d03e7f79984a26cf0c06e816211}{cur\+\_\+msg}}
+\item 
+unsigned int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a1757d84efd08fac62efed7e9e50eaa3e}{in\+\_\+flight\+\_\+start\+\_\+seq}}
+\item 
+\mbox{\hyperlink{structmbedtls__ssl__transform}{mbedtls\+\_\+ssl\+\_\+transform}} $\ast$ \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a398394cd035898f11b9e944bfb50186f}{alt\+\_\+transform\+\_\+out}}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a5b4529651b9f246676e52a94d29fe303}{alt\+\_\+out\+\_\+ctr}} \mbox{[}8\mbox{]}
+\item 
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ae6766d55786eccbb01c5ba3be2ede43d}\label{structmbedtls__ssl__handshake__params_ae6766d55786eccbb01c5ba3be2ede43d}} 
+\mbox{\hyperlink{structmbedtls__md5__context}{mbedtls\+\_\+md5\+\_\+context}} {\bfseries fin\+\_\+md5}
+\item 
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ad0196daffb9450149c00a920c286db53}\label{structmbedtls__ssl__handshake__params_ad0196daffb9450149c00a920c286db53}} 
+\mbox{\hyperlink{structmbedtls__sha1__context}{mbedtls\+\_\+sha1\+\_\+context}} {\bfseries fin\+\_\+sha1}
+\item 
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a27db74c184eaf379d217fe26228a4dfb}\label{structmbedtls__ssl__handshake__params_a27db74c184eaf379d217fe26228a4dfb}} 
+\mbox{\hyperlink{structmbedtls__sha256__context}{mbedtls\+\_\+sha256\+\_\+context}} {\bfseries fin\+\_\+sha256}
+\item 
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_aa3a4af54e6efae22bcdcc0c2c7cebb73}\label{structmbedtls__ssl__handshake__params_aa3a4af54e6efae22bcdcc0c2c7cebb73}} 
+\mbox{\hyperlink{structmbedtls__sha512__context}{mbedtls\+\_\+sha512\+\_\+context}} {\bfseries fin\+\_\+sha512}
+\item 
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a0b03f53ee70ddc8e1dc3ca1229bea459}\label{structmbedtls__ssl__handshake__params_a0b03f53ee70ddc8e1dc3ca1229bea459}} 
+void($\ast$ {\bfseries update\+\_\+checksum} )(\mbox{\hyperlink{structmbedtls__ssl__context}{mbedtls\+\_\+ssl\+\_\+context}} $\ast$, const unsigned char $\ast$, size\+\_\+t)
+\item 
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_af1c54ddf29dc4cb06f4af291281a6e3f}\label{structmbedtls__ssl__handshake__params_af1c54ddf29dc4cb06f4af291281a6e3f}} 
+void($\ast$ {\bfseries calc\+\_\+verify} )(\mbox{\hyperlink{structmbedtls__ssl__context}{mbedtls\+\_\+ssl\+\_\+context}} $\ast$, unsigned char $\ast$)
+\item 
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a5ec52e1c2565fdac6ce925c864d4389b}\label{structmbedtls__ssl__handshake__params_a5ec52e1c2565fdac6ce925c864d4389b}} 
+void($\ast$ {\bfseries calc\+\_\+finished} )(\mbox{\hyperlink{structmbedtls__ssl__context}{mbedtls\+\_\+ssl\+\_\+context}} $\ast$, unsigned char $\ast$, int)
+\item 
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a91a6fc612b18e31269e1db1c2b89487a}\label{structmbedtls__ssl__handshake__params_a91a6fc612b18e31269e1db1c2b89487a}} 
+int($\ast$ {\bfseries tls\+\_\+prf} )(const unsigned char $\ast$, size\+\_\+t, const char $\ast$, const unsigned char $\ast$, size\+\_\+t, unsigned char $\ast$, size\+\_\+t)
+\item 
+size\+\_\+t \mbox{\hyperlink{structmbedtls__ssl__handshake__params_afe09d4bb37384dbb6aa6d77f1fa38449}{pmslen}}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a7ccdd41754ab6c0ae3b7d1b3090ed1a5}{randbytes}} \mbox{[}64\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a2a6bbee172aff64433acb004134616a3}{premaster}} \mbox{[}M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+R\+E\+M\+A\+S\+T\+E\+R\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a2cb07171af1e3ed74fa45e795d063ba3}{resume}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a43b54e0e0bb2b88402aa038ba85141a1}{max\+\_\+major\+\_\+ver}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a23245feaafac570f7e64b3e3c2ef90d3}{max\+\_\+minor\+\_\+ver}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a77de3ed4997da823dbeb52c02728fdc3}{cli\+\_\+exts}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_a576d0c2cbfd8b226f9def975403376ce}{new\+\_\+session\+\_\+ticket}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ssl__handshake__params_ad230c6beea9b3ec7a5d6eb072c80e3db}{extended\+\_\+ms}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 163 of file ssl\+\_\+internal.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a5b4529651b9f246676e52a94d29fe303}\label{structmbedtls__ssl__handshake__params_a5b4529651b9f246676e52a94d29fe303}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!alt\+\_\+out\+\_\+ctr@{alt\+\_\+out\+\_\+ctr}}
+\index{alt\+\_\+out\+\_\+ctr@{alt\+\_\+out\+\_\+ctr}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{alt\+\_\+out\+\_\+ctr}{alt\_out\_ctr}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::alt\+\_\+out\+\_\+ctr\mbox{[}8\mbox{]}}
+
+Alternative record epoch/counter for resending messages 
+
+Definition at line 219 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a398394cd035898f11b9e944bfb50186f}\label{structmbedtls__ssl__handshake__params_a398394cd035898f11b9e944bfb50186f}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!alt\+\_\+transform\+\_\+out@{alt\+\_\+transform\+\_\+out}}
+\index{alt\+\_\+transform\+\_\+out@{alt\+\_\+transform\+\_\+out}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{alt\+\_\+transform\+\_\+out}{alt\_transform\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ssl__transform}{mbedtls\+\_\+ssl\+\_\+transform}}$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::alt\+\_\+transform\+\_\+out}
+
+Alternative transform for resending messages 
+
+Definition at line 217 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a77de3ed4997da823dbeb52c02728fdc3}\label{structmbedtls__ssl__handshake__params_a77de3ed4997da823dbeb52c02728fdc3}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!cli\+\_\+exts@{cli\+\_\+exts}}
+\index{cli\+\_\+exts@{cli\+\_\+exts}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{cli\+\_\+exts}{cli\_exts}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::cli\+\_\+exts}
+
+client extension presence 
+
+Definition at line 256 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ac2760d03e7f79984a26cf0c06e816211}\label{structmbedtls__ssl__handshake__params_ac2760d03e7f79984a26cf0c06e816211}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!cur\+\_\+msg@{cur\+\_\+msg}}
+\index{cur\+\_\+msg@{cur\+\_\+msg}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{cur\+\_\+msg}{cur\_msg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ssl__flight__item}{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}}$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::cur\+\_\+msg}
+
+Current message in flight 
+
+Definition at line 214 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a521abec631fe5c81cf5c094cc374b8eb}\label{structmbedtls__ssl__handshake__params_a521abec631fe5c81cf5c094cc374b8eb}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!curves@{curves}}
+\index{curves@{curves}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{curves}{curves}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__ecp__curve__info}{mbedtls\+\_\+ecp\+\_\+curve\+\_\+info}}$\ast$$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::curves}
+
+Supported elliptic curves 
+
+Definition at line 185 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_aaa85609e03e300c910db01e8a321950f}\label{structmbedtls__ssl__handshake__params_aaa85609e03e300c910db01e8a321950f}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!dhm\+\_\+ctx@{dhm\+\_\+ctx}}
+\index{dhm\+\_\+ctx@{dhm\+\_\+ctx}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{dhm\+\_\+ctx}{dhm\_ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::dhm\+\_\+ctx}
+
+D\+HM key exchange 
+
+Definition at line 171 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ac817564988b758dfa0d6829f78817712}\label{structmbedtls__ssl__handshake__params_ac817564988b758dfa0d6829f78817712}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!ecdh\+\_\+ctx@{ecdh\+\_\+ctx}}
+\index{ecdh\+\_\+ctx@{ecdh\+\_\+ctx}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{ecdh\+\_\+ctx}{ecdh\_ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecdh__context}{mbedtls\+\_\+ecdh\+\_\+context}} mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::ecdh\+\_\+ctx}
+
+E\+C\+DH key exchange 
+
+Definition at line 174 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ad230c6beea9b3ec7a5d6eb072c80e3db}\label{structmbedtls__ssl__handshake__params_ad230c6beea9b3ec7a5d6eb072c80e3db}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!extended\+\_\+ms@{extended\+\_\+ms}}
+\index{extended\+\_\+ms@{extended\+\_\+ms}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{extended\+\_\+ms}{extended\_ms}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::extended\+\_\+ms}
+
+use Extended Master Secret? 
+
+Definition at line 262 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a2c8fb6344a9fb81db52b5add59baf95b}\label{structmbedtls__ssl__handshake__params_a2c8fb6344a9fb81db52b5add59baf95b}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!flight@{flight}}
+\index{flight@{flight}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{flight}{flight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ssl__flight__item}{mbedtls\+\_\+ssl\+\_\+flight\+\_\+item}}$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::flight}
+
+Current outgoing flight 
+
+Definition at line 213 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a7951f655fd1dda5eb8f54c4683c4da1e}\label{structmbedtls__ssl__handshake__params_a7951f655fd1dda5eb8f54c4683c4da1e}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!hs\+\_\+msg@{hs\+\_\+msg}}
+\index{hs\+\_\+msg@{hs\+\_\+msg}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{hs\+\_\+msg}{hs\_msg}}
+{\footnotesize\ttfamily unsigned char$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::hs\+\_\+msg}
+
+Reassembled handshake message 
+
+Definition at line 209 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a1757d84efd08fac62efed7e9e50eaa3e}\label{structmbedtls__ssl__handshake__params_a1757d84efd08fac62efed7e9e50eaa3e}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!in\+\_\+flight\+\_\+start\+\_\+seq@{in\+\_\+flight\+\_\+start\+\_\+seq}}
+\index{in\+\_\+flight\+\_\+start\+\_\+seq@{in\+\_\+flight\+\_\+start\+\_\+seq}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{in\+\_\+flight\+\_\+start\+\_\+seq}{in\_flight\_start\_seq}}
+{\footnotesize\ttfamily unsigned int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::in\+\_\+flight\+\_\+start\+\_\+seq}
+
+Minimum message sequence in the flight being received 
+
+Definition at line 215 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a71e7df587788d6ae5e30a4957b69649b}\label{structmbedtls__ssl__handshake__params_a71e7df587788d6ae5e30a4957b69649b}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!in\+\_\+msg\+\_\+seq@{in\+\_\+msg\+\_\+seq}}
+\index{in\+\_\+msg\+\_\+seq@{in\+\_\+msg\+\_\+seq}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{in\+\_\+msg\+\_\+seq}{in\_msg\_seq}}
+{\footnotesize\ttfamily unsigned int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::in\+\_\+msg\+\_\+seq}
+
+Incoming handshake sequence number 
+
+Definition at line 202 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a149899c222855d2cc33aa4cc326b09cd}\label{structmbedtls__ssl__handshake__params_a149899c222855d2cc33aa4cc326b09cd}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!key\+\_\+cert@{key\+\_\+cert}}
+\index{key\+\_\+cert@{key\+\_\+cert}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{key\+\_\+cert}{key\_cert}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ssl__key__cert}{mbedtls\+\_\+ssl\+\_\+key\+\_\+cert}}$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::key\+\_\+cert}
+
+chosen key/cert pair (server) 
+
+Definition at line 192 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a43b54e0e0bb2b88402aa038ba85141a1}\label{structmbedtls__ssl__handshake__params_a43b54e0e0bb2b88402aa038ba85141a1}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!max\+\_\+major\+\_\+ver@{max\+\_\+major\+\_\+ver}}
+\index{max\+\_\+major\+\_\+ver@{max\+\_\+major\+\_\+ver}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{max\+\_\+major\+\_\+ver}{max\_major\_ver}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::max\+\_\+major\+\_\+ver}
+
+max. major version client 
+
+Definition at line 254 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a23245feaafac570f7e64b3e3c2ef90d3}\label{structmbedtls__ssl__handshake__params_a23245feaafac570f7e64b3e3c2ef90d3}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!max\+\_\+minor\+\_\+ver@{max\+\_\+minor\+\_\+ver}}
+\index{max\+\_\+minor\+\_\+ver@{max\+\_\+minor\+\_\+ver}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{max\+\_\+minor\+\_\+ver}{max\_minor\_ver}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::max\+\_\+minor\+\_\+ver}
+
+max. minor version client 
+
+Definition at line 255 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a576d0c2cbfd8b226f9def975403376ce}\label{structmbedtls__ssl__handshake__params_a576d0c2cbfd8b226f9def975403376ce}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!new\+\_\+session\+\_\+ticket@{new\+\_\+session\+\_\+ticket}}
+\index{new\+\_\+session\+\_\+ticket@{new\+\_\+session\+\_\+ticket}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{new\+\_\+session\+\_\+ticket}{new\_session\_ticket}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::new\+\_\+session\+\_\+ticket}
+
+use New\+Session\+Ticket? 
+
+Definition at line 259 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a5dd64f971dd0b4b43828e264117304d0}\label{structmbedtls__ssl__handshake__params_a5dd64f971dd0b4b43828e264117304d0}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!out\+\_\+msg\+\_\+seq@{out\+\_\+msg\+\_\+seq}}
+\index{out\+\_\+msg\+\_\+seq@{out\+\_\+msg\+\_\+seq}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{out\+\_\+msg\+\_\+seq}{out\_msg\_seq}}
+{\footnotesize\ttfamily unsigned int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::out\+\_\+msg\+\_\+seq}
+
+Outgoing handshake sequence number 
+
+Definition at line 201 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_afe09d4bb37384dbb6aa6d77f1fa38449}\label{structmbedtls__ssl__handshake__params_afe09d4bb37384dbb6aa6d77f1fa38449}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!pmslen@{pmslen}}
+\index{pmslen@{pmslen}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{pmslen}{pmslen}}
+{\footnotesize\ttfamily size\+\_\+t mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::pmslen}
+
+premaster length 
+
+Definition at line 247 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a2a6bbee172aff64433acb004134616a3}\label{structmbedtls__ssl__handshake__params_a2a6bbee172aff64433acb004134616a3}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!premaster@{premaster}}
+\index{premaster@{premaster}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{premaster}{premaster}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::premaster\mbox{[}M\+B\+E\+D\+T\+L\+S\+\_\+\+P\+R\+E\+M\+A\+S\+T\+E\+R\+\_\+\+S\+I\+ZE\mbox{]}}
+
+premaster secret 
+
+Definition at line 250 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a249e9ec2254eef073c3ead5544139415}\label{structmbedtls__ssl__handshake__params_a249e9ec2254eef073c3ead5544139415}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!psk@{psk}}
+\index{psk@{psk}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{psk}{psk}}
+{\footnotesize\ttfamily unsigned char$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::psk}
+
+P\+SK from the callback 
+
+Definition at line 188 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ac91fb6cfeeda006fa2b9a1749186d216}\label{structmbedtls__ssl__handshake__params_ac91fb6cfeeda006fa2b9a1749186d216}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!psk\+\_\+len@{psk\+\_\+len}}
+\index{psk\+\_\+len@{psk\+\_\+len}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{psk\+\_\+len}{psk\_len}}
+{\footnotesize\ttfamily size\+\_\+t mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::psk\+\_\+len}
+
+Length of P\+SK from callback 
+
+Definition at line 189 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a7ccdd41754ab6c0ae3b7d1b3090ed1a5}\label{structmbedtls__ssl__handshake__params_a7ccdd41754ab6c0ae3b7d1b3090ed1a5}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!randbytes@{randbytes}}
+\index{randbytes@{randbytes}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{randbytes}{randbytes}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::randbytes\mbox{[}64\mbox{]}}
+
+random bytes 
+
+Definition at line 249 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a2cb07171af1e3ed74fa45e795d063ba3}\label{structmbedtls__ssl__handshake__params_a2cb07171af1e3ed74fa45e795d063ba3}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!resume@{resume}}
+\index{resume@{resume}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{resume}{resume}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::resume}
+
+session resume indicator 
+
+Definition at line 253 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a86a5f7294fa563413f5ae5421628a8da}\label{structmbedtls__ssl__handshake__params_a86a5f7294fa563413f5ae5421628a8da}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!retransmit\+\_\+state@{retransmit\+\_\+state}}
+\index{retransmit\+\_\+state@{retransmit\+\_\+state}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{retransmit\+\_\+state}{retransmit\_state}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::retransmit\+\_\+state}
+
+Retransmission state 
+
+Definition at line 212 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a915ed07c7ce86c7cc3e10a0eab2547f0}\label{structmbedtls__ssl__handshake__params_a915ed07c7ce86c7cc3e10a0eab2547f0}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!retransmit\+\_\+timeout@{retransmit\+\_\+timeout}}
+\index{retransmit\+\_\+timeout@{retransmit\+\_\+timeout}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{retransmit\+\_\+timeout}{retransmit\_timeout}}
+{\footnotesize\ttfamily uint32\+\_\+t mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::retransmit\+\_\+timeout}
+
+Current value of timeout 
+
+Definition at line 211 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a5bd51cd234637157e288f1e5779701c5}\label{structmbedtls__ssl__handshake__params_a5bd51cd234637157e288f1e5779701c5}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!sig\+\_\+alg@{sig\+\_\+alg}}
+\index{sig\+\_\+alg@{sig\+\_\+alg}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{sig\+\_\+alg}{sig\_alg}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::sig\+\_\+alg}
+
+Hash algorithm for signature 
+
+Definition at line 168 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ada4c8d021bb297b6728d6f117a026fd0}\label{structmbedtls__ssl__handshake__params_ada4c8d021bb297b6728d6f117a026fd0}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!sni\+\_\+authmode@{sni\+\_\+authmode}}
+\index{sni\+\_\+authmode@{sni\+\_\+authmode}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{sni\+\_\+authmode}{sni\_authmode}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::sni\+\_\+authmode}
+
+authmode from S\+NI callback 
+
+Definition at line 194 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a4d18e84d136e133fe5edfff81a207168}\label{structmbedtls__ssl__handshake__params_a4d18e84d136e133fe5edfff81a207168}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!sni\+\_\+ca\+\_\+chain@{sni\+\_\+ca\+\_\+chain}}
+\index{sni\+\_\+ca\+\_\+chain@{sni\+\_\+ca\+\_\+chain}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{sni\+\_\+ca\+\_\+chain}{sni\_ca\_chain}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}}$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::sni\+\_\+ca\+\_\+chain}
+
+trusted C\+As from S\+NI callback 
+
+Definition at line 196 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ae2b1df99f674ec78b072234a0bb4fa40}\label{structmbedtls__ssl__handshake__params_ae2b1df99f674ec78b072234a0bb4fa40}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!sni\+\_\+ca\+\_\+crl@{sni\+\_\+ca\+\_\+crl}}
+\index{sni\+\_\+ca\+\_\+crl@{sni\+\_\+ca\+\_\+crl}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{sni\+\_\+ca\+\_\+crl}{sni\_ca\_crl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}}$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::sni\+\_\+ca\+\_\+crl}
+
+trusted C\+As C\+R\+Ls from S\+NI 
+
+Definition at line 197 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_abe0893bc6a388d5e2f584cd4025a76b4}\label{structmbedtls__ssl__handshake__params_abe0893bc6a388d5e2f584cd4025a76b4}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!sni\+\_\+key\+\_\+cert@{sni\+\_\+key\+\_\+cert}}
+\index{sni\+\_\+key\+\_\+cert@{sni\+\_\+key\+\_\+cert}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{sni\+\_\+key\+\_\+cert}{sni\_key\_cert}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ssl__key__cert}{mbedtls\+\_\+ssl\+\_\+key\+\_\+cert}}$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::sni\+\_\+key\+\_\+cert}
+
+key/cert list from S\+NI 
+
+Definition at line 195 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a95f37efbc53f2f542632527f5c9931af}\label{structmbedtls__ssl__handshake__params_a95f37efbc53f2f542632527f5c9931af}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!verify\+\_\+cookie@{verify\+\_\+cookie}}
+\index{verify\+\_\+cookie@{verify\+\_\+cookie}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{verify\+\_\+cookie}{verify\_cookie}}
+{\footnotesize\ttfamily unsigned char$\ast$ mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::verify\+\_\+cookie}
+
+Cli\+: Hello\+Verify\+Request cookie Srv\+: unused 
+
+Definition at line 204 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_a12cd286ea50d184e53a51c3cc60a8a06}\label{structmbedtls__ssl__handshake__params_a12cd286ea50d184e53a51c3cc60a8a06}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!verify\+\_\+cookie\+\_\+len@{verify\+\_\+cookie\+\_\+len}}
+\index{verify\+\_\+cookie\+\_\+len@{verify\+\_\+cookie\+\_\+len}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{verify\+\_\+cookie\+\_\+len}{verify\_cookie\_len}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::verify\+\_\+cookie\+\_\+len}
+
+Cli\+: cookie length Srv\+: flag for sending a cookie 
+
+Definition at line 206 of file ssl\+\_\+internal.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ssl__handshake__params_ab950ce283cc477ea1a246689ecd2a22d}\label{structmbedtls__ssl__handshake__params_ab950ce283cc477ea1a246689ecd2a22d}} 
+\index{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}!verify\+\_\+sig\+\_\+alg@{verify\+\_\+sig\+\_\+alg}}
+\index{verify\+\_\+sig\+\_\+alg@{verify\+\_\+sig\+\_\+alg}!mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params@{mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params}}
+\subsubsection{\texorpdfstring{verify\+\_\+sig\+\_\+alg}{verify\_sig\_alg}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ssl\+\_\+handshake\+\_\+params\+::verify\+\_\+sig\+\_\+alg}
+
+Signature algorithm for verify 
+
+Definition at line 169 of file ssl\+\_\+internal.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/ssl\+\_\+internal.\+h\end{DoxyCompactItemize}

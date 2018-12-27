@@ -1,0 +1,44 @@
+\hypertarget{struct_m_d_b__txninfo}{}\section{M\+D\+B\+\_\+txninfo Struct Reference}
+\label{struct_m_d_b__txninfo}\index{M\+D\+B\+\_\+txninfo@{M\+D\+B\+\_\+txninfo}}
+
+
+Collaboration diagram for M\+D\+B\+\_\+txninfo\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_m_d_b__txninfo_a53cb5f52ac49f4d085ccac3df6bfaae2}\label{struct_m_d_b__txninfo_a53cb5f52ac49f4d085ccac3df6bfaae2}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_m_d_b__txbody}{MDB\_txbody}} {\bfseries mtb}\\
+\>char {\bfseries pad} \mbox{[}(sizeof(\mbox{\hyperlink{struct_m_d_b__txbody}{MDB\_txbody}})+\mbox{\hyperlink{group__readers_gaa62717a1fae2c57f94f2a9b8ae08ec49}{CACHELINE}}-\/1) \\
+\>\>\&$\sim$(\mbox{\hyperlink{group__readers_gaa62717a1fae2c57f94f2a9b8ae08ec49}{CACHELINE}}-\/1)\mbox{]}\\
+\} {\bfseries mt1}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{struct_m_d_b__txninfo_a189bfb18438f231dd8dd0d5a96c37b93}\label{struct_m_d_b__txninfo_a189bfb18438f231dd8dd0d5a96c37b93}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{group__compat_ga9b7b61d0ad68b601d11d93e5c1193391}{mdb\_mutex\_t}} {\bfseries mt2\_wmutex}\\
+\>char {\bfseries pad} \mbox{[}(MNAME\_LEN+\mbox{\hyperlink{group__readers_gaa62717a1fae2c57f94f2a9b8ae08ec49}{CACHELINE}}-\/1) \\
+\>\>\&$\sim$(\mbox{\hyperlink{group__readers_gaa62717a1fae2c57f94f2a9b8ae08ec49}{CACHELINE}}-\/1)\mbox{]}\\
+\} {\bfseries mt2}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{struct_m_d_b__txninfo_a117ef3a179ebedd591908fc6051e16ee}\label{struct_m_d_b__txninfo_a117ef3a179ebedd591908fc6051e16ee}} 
+\mbox{\hyperlink{struct_m_d_b__reader}{M\+D\+B\+\_\+reader}} {\bfseries mti\+\_\+readers} \mbox{[}1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The actual reader table definition. 
+
+Definition at line 834 of file mdb.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

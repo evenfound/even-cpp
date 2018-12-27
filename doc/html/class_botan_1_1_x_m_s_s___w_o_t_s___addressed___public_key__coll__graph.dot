@@ -1,0 +1,17 @@
+digraph "Botan::XMSS_WOTS_Addressed_PublicKey"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="Botan::XMSS_WOTS_Addressed\l_PublicKey",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Public_Key",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_adrs" ,fontname="Helvetica"];
+  Node5 [label="Botan::XMSS_Address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___address.html"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_pub_key" ,fontname="Helvetica"];
+  Node6 [label="Botan::XMSS_WOTS_PublicKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___public_key.html"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_hash" ,fontname="Helvetica"];
+  Node7 [label="Botan::XMSS_Hash",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___hash.html"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_wots_params" ,fontname="Helvetica"];
+  Node8 [label="Botan::XMSS_WOTS_Parameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___parameters.html"];
+}

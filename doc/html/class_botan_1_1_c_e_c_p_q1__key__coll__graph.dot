@@ -1,0 +1,10 @@
+digraph "Botan::CECPQ1_key"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Botan::CECPQ1_key",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_newhope" ,fontname="Helvetica"];
+  Node2 [label="Botan::newhope_poly",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1newhope__poly.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" coeffs" ,fontname="Helvetica"];
+  Node3 [label="uint16_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,186 @@
+\hypertarget{struct_stream}{}\section{Stream Struct Reference}
+\label{struct_stream}\index{Stream@{Stream}}
+
+
+{\ttfamily \#include $<$stream.\+h$>$}
+
+
+
+Collaboration diagram for Stream\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_multi_address}{Multi\+Address}} $\ast$ \mbox{\hyperlink{struct_stream_ad9a082e3fc895a65f41645645f31b595}{address}}
+\item 
+\mbox{\Hypertarget{struct_stream_a46b3f79a0db0fdac1e7404b051dd5df0}\label{struct_stream_a46b3f79a0db0fdac1e7404b051dd5df0}} 
+pthread\+\_\+mutex\+\_\+t $\ast$ {\bfseries socket\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{struct_stream_af1c6f3faae170f35a0b393c9c57e191c}\label{struct_stream_af1c6f3faae170f35a0b393c9c57e191c}} 
+struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$ {\bfseries parent\+\_\+stream}
+\item 
+\mbox{\Hypertarget{struct_stream_a3e3d54add259a7f6f9ab58e02c7cff72}\label{struct_stream_a3e3d54add259a7f6f9ab58e02c7cff72}} 
+int {\bfseries channel}
+\item 
+\mbox{\Hypertarget{struct_stream_a211ce3a0b5d436bddc74a73586a2487b}\label{struct_stream_a211ce3a0b5d436bddc74a73586a2487b}} 
+enum stream\+\_\+type {\bfseries stream\+\_\+type}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_stream_af790417ff01dff00a0109fccc33ca92d}{stream\+\_\+context}}
+\item 
+int($\ast$ \mbox{\hyperlink{struct_stream_a377ec76a9d98f6db043e05648b4ecfc1}{read}} )(void $\ast$\mbox{\hyperlink{struct_stream_af790417ff01dff00a0109fccc33ca92d}{stream\+\_\+context}}, struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}} $\ast$$\ast$message, int timeout\+\_\+secs)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_stream_ac6d37c11cc2f25e3faf08bc9a8127149}{read\+\_\+raw}} )(void $\ast$\mbox{\hyperlink{struct_stream_af790417ff01dff00a0109fccc33ca92d}{stream\+\_\+context}}, uint8\+\_\+t $\ast$buffer, int buffer\+\_\+size, int timeout\+\_\+secs)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_stream_ada37f7d4d7dbec7712e73e542b15205f}{write}} )(void $\ast$\mbox{\hyperlink{struct_stream_af790417ff01dff00a0109fccc33ca92d}{stream\+\_\+context}}, struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}} $\ast$buffer)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_stream_aac06dde158b42477ea8c1a8808cce86a}{close}} )(struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$stream)
+\item 
+\mbox{\Hypertarget{struct_stream_a510025d035ea664ed67607fecb10d553}\label{struct_stream_a510025d035ea664ed67607fecb10d553}} 
+int($\ast$ {\bfseries peek} )(void $\ast$\mbox{\hyperlink{struct_stream_af790417ff01dff00a0109fccc33ca92d}{stream\+\_\+context}})
+\item 
+int($\ast$ \mbox{\hyperlink{struct_stream_a54b3ad336198807f766a31db287cb29a}{handle\+\_\+upgrade}} )(struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$stream, struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$new\+\_\+stream)
+\item 
+\mbox{\Hypertarget{struct_stream_a7c2f27f91cb6ddd6e8e6a0cd510a2680}\label{struct_stream_a7c2f27f91cb6ddd6e8e6a0cd510a2680}} 
+struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$($\ast$ {\bfseries negotiate} )(struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$parent\+\_\+stream)
+\item 
+\mbox{\Hypertarget{struct_stream_a167fc87d5d2f20ee277c4c4aace60510}\label{struct_stream_a167fc87d5d2f20ee277c4c4aace60510}} 
+int($\ast$ {\bfseries bytes\+\_\+waiting} )(struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$stream)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interface in front of various streams 
+
+Definition at line 61 of file stream.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_stream_ad9a082e3fc895a65f41645645f31b595}\label{struct_stream_ad9a082e3fc895a65f41645645f31b595}} 
+\index{Stream@{Stream}!address@{address}}
+\index{address@{address}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_multi_address}{Multi\+Address}}$\ast$ Stream\+::address}
+
+A generic socket descriptor 
+
+Definition at line 65 of file stream.\+h.
+
+\mbox{\Hypertarget{struct_stream_aac06dde158b42477ea8c1a8808cce86a}\label{struct_stream_aac06dde158b42477ea8c1a8808cce86a}} 
+\index{Stream@{Stream}!close@{close}}
+\index{close@{close}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{close}{close}}
+{\footnotesize\ttfamily int($\ast$ Stream\+::close) (struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$stream)}
+
+Closes a stream
+
+N\+O\+TE\+: This is also responsible for deallocating the \mbox{\hyperlink{struct_stream}{Stream}} struct 
+\begin{DoxyParams}{Parameters}
+{\em stream} & the stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, otherwise false(0) 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file stream.\+h.
+
+\mbox{\Hypertarget{struct_stream_a54b3ad336198807f766a31db287cb29a}\label{struct_stream_a54b3ad336198807f766a31db287cb29a}} 
+\index{Stream@{Stream}!handle\+\_\+upgrade@{handle\+\_\+upgrade}}
+\index{handle\+\_\+upgrade@{handle\+\_\+upgrade}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{handle\+\_\+upgrade}{handle\_upgrade}}
+{\footnotesize\ttfamily int($\ast$ Stream\+::handle\+\_\+upgrade) (struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$stream, struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$new\+\_\+stream)}
+
+Handle a stream upgrade 
+\begin{DoxyParams}{Parameters}
+{\em stream} & the current stream \\
+\hline
+{\em new\+\_\+stream} & the newly created stream \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 125 of file stream.\+h.
+
+\mbox{\Hypertarget{struct_stream_a377ec76a9d98f6db043e05648b4ecfc1}\label{struct_stream_a377ec76a9d98f6db043e05648b4ecfc1}} 
+\index{Stream@{Stream}!read@{read}}
+\index{read@{read}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily int($\ast$ Stream\+::read) (void $\ast$\mbox{\hyperlink{struct_stream_af790417ff01dff00a0109fccc33ca92d}{stream\+\_\+context}}, struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}} $\ast$$\ast$message, int timeout\+\_\+secs)}
+
+Reads from the stream 
+\begin{DoxyParams}{Parameters}
+{\em stream} & the stream context (usually a \mbox{\hyperlink{struct_session_context}{Session\+Context}} pointer) \\
+\hline
+{\em message} & where to put the incoming message (will be allocated) \\
+\hline
+{\em timeout\+\_\+secs} & number of seconds before a timeout \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, false(0) otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file stream.\+h.
+
+\mbox{\Hypertarget{struct_stream_ac6d37c11cc2f25e3faf08bc9a8127149}\label{struct_stream_ac6d37c11cc2f25e3faf08bc9a8127149}} 
+\index{Stream@{Stream}!read\+\_\+raw@{read\+\_\+raw}}
+\index{read\+\_\+raw@{read\+\_\+raw}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{read\+\_\+raw}{read\_raw}}
+{\footnotesize\ttfamily int($\ast$ Stream\+::read\+\_\+raw) (void $\ast$\mbox{\hyperlink{struct_stream_af790417ff01dff00a0109fccc33ca92d}{stream\+\_\+context}}, uint8\+\_\+t $\ast$buffer, int buffer\+\_\+size, int timeout\+\_\+secs)}
+
+Reads a certain amount of bytes directly from the stream 
+\begin{DoxyParams}{Parameters}
+{\em stream\+\_\+context} & the context \\
+\hline
+{\em buffer} & where to put the results \\
+\hline
+{\em buffer\+\_\+size} & the number of bytes to read \\
+\hline
+{\em timeout\+\_\+secs} & number of seconds before a timeout \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes read, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file stream.\+h.
+
+\mbox{\Hypertarget{struct_stream_af790417ff01dff00a0109fccc33ca92d}\label{struct_stream_af790417ff01dff00a0109fccc33ca92d}} 
+\index{Stream@{Stream}!stream\+\_\+context@{stream\+\_\+context}}
+\index{stream\+\_\+context@{stream\+\_\+context}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{stream\+\_\+context}{stream\_context}}
+{\footnotesize\ttfamily void$\ast$ Stream\+::stream\+\_\+context}
+
+A generic place to store implementation-\/specific context items 
+
+Definition at line 74 of file stream.\+h.
+
+\mbox{\Hypertarget{struct_stream_ada37f7d4d7dbec7712e73e542b15205f}\label{struct_stream_ada37f7d4d7dbec7712e73e542b15205f}} 
+\index{Stream@{Stream}!write@{write}}
+\index{write@{write}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily int($\ast$ Stream\+::write) (void $\ast$\mbox{\hyperlink{struct_stream_af790417ff01dff00a0109fccc33ca92d}{stream\+\_\+context}}, struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}} $\ast$buffer)}
+
+Writes to a stream 
+\begin{DoxyParams}{Parameters}
+{\em stream} & the stream context (usually a \mbox{\hyperlink{struct_session_context}{Session\+Context}} pointer) \\
+\hline
+{\em buffer} & what to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, false(0) otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file stream.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/libp2p/net/stream.\+h\end{DoxyCompactItemize}

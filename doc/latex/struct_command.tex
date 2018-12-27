@@ -1,0 +1,51 @@
+\hypertarget{struct_command}{}\section{Command Struct Reference}
+\label{struct_command}\index{Command@{Command}}
+
+
+Collaboration diagram for Command\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_command_aadf3757b34f84b2c6b99dd4c6edadbb4}\label{struct_command_aadf3757b34f84b2c6b99dd4c6edadbb4}} 
+struct \mbox{\hyperlink{struct_command_option}{Command\+Option}} $\ast$$\ast$ {\bfseries options}
+\item 
+\mbox{\Hypertarget{struct_command_a284495cc5ba8bda98ff01a50c0cb3a57}\label{struct_command_a284495cc5ba8bda98ff01a50c0cb3a57}} 
+int {\bfseries option\+\_\+count}
+\item 
+\mbox{\Hypertarget{struct_command_ac77e5c01a10019168a4a8de61b602f8a}\label{struct_command_ac77e5c01a10019168a4a8de61b602f8a}} 
+struct \mbox{\hyperlink{struct_argument}{Argument}} $\ast$$\ast$ {\bfseries arguments}
+\item 
+\mbox{\Hypertarget{struct_command_aa15ba44735df6b10e31c0ae77f3fb27f}\label{struct_command_aa15ba44735df6b10e31c0ae77f3fb27f}} 
+int {\bfseries argument\+\_\+count}
+\item 
+\mbox{\Hypertarget{struct_command_a58d1289f88a5a956616edcc5a089eed4}\label{struct_command_a58d1289f88a5a956616edcc5a089eed4}} 
+int($\ast$ {\bfseries pre\+\_\+run} )(struct \mbox{\hyperlink{struct_request}{Request}} $\ast$)
+\item 
+\mbox{\Hypertarget{struct_command_aafe4582a7f08511833bc742a49b6bb84}\label{struct_command_aafe4582a7f08511833bc742a49b6bb84}} 
+int($\ast$ {\bfseries run} )(struct \mbox{\hyperlink{struct_request}{Request}} $\ast$)
+\item 
+\mbox{\Hypertarget{struct_command_aead6bb1a524890359e546a2de53c6721}\label{struct_command_aead6bb1a524890359e546a2de53c6721}} 
+int($\ast$ {\bfseries post\+\_\+run} )(struct \mbox{\hyperlink{struct_request}{Request}} $\ast$)
+\item 
+\mbox{\Hypertarget{struct_command_ad2b4f033dd129564d68ff3a1e256c71c}\label{struct_command_ad2b4f033dd129564d68ff3a1e256c71c}} 
+struct \mbox{\hyperlink{struct_help_text}{Help\+Text}} {\bfseries help\+\_\+text}
+\item 
+\mbox{\Hypertarget{struct_command_a28bb1edd8542c9644f8d5add2de3dc7e}\label{struct_command_a28bb1edd8542c9644f8d5add2de3dc7e}} 
+int {\bfseries external}
+\item 
+\mbox{\Hypertarget{struct_command_a5200170e33b8042cec125cdaef8078f5}\label{struct_command_a5200170e33b8042cec125cdaef8078f5}} 
+char $\ast$$\ast$ {\bfseries subcommands}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file command.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/ipfs/include/ipfs/commands/command.\+h\end{DoxyCompactItemize}

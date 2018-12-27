@@ -1,0 +1,414 @@
+\hypertarget{lmdb_8h}{}\section{prerequisites/lmbd/libraries/liblmdb/lmdb.h File Reference}
+\label{lmdb_8h}\index{prerequisites/lmbd/libraries/liblmdb/lmdb.\+h@{prerequisites/lmbd/libraries/liblmdb/lmdb.\+h}}
+
+
+Lightning memory-\/mapped database library.  
+
+
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+Include dependency graph for lmdb.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}}
+\begin{DoxyCompactList}\small\item\em Generic structure used for passing keys and data in and out of the database. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_m_d_b__stat}{M\+D\+B\+\_\+stat}}
+\begin{DoxyCompactList}\small\item\em Statistics for a database in the environment. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_m_d_b__envinfo}{M\+D\+B\+\_\+envinfo}}
+\begin{DoxyCompactList}\small\item\em Information about the environment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}}~\char`\"{}z\char`\"{}
+\item 
+\#define \mbox{\hyperlink{lmdb_8h_abfe692b089b80947bf616edcbfd39ebc}{M\+D\+B\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX}}~S\+I\+Z\+E\+\_\+\+M\+AX
+\item 
+\#define \mbox{\hyperlink{lmdb_8h_a11fe126f6ef1f04b1e2ea23c5a433865}{M\+D\+B\+\_\+\+P\+R\+Iy}}(t)~\mbox{\hyperlink{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}} \#t
+\item 
+\#define \mbox{\hyperlink{lmdb_8h_a15ef0067135e5e538bca4440e58add94}{M\+D\+B\+\_\+\+S\+C\+Ny}}(t)~\mbox{\hyperlink{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}} \#t
+\item 
+\#define \mbox{\hyperlink{group___version_ga4d29d48a85ec25636fac7831b8b9b807}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}}~0
+\item 
+\#define \mbox{\hyperlink{group___version_ga44da0474969d76ad5521f8b7de4dd32f}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}}~9
+\item 
+\#define \mbox{\hyperlink{group___version_gaeddac7231e1cdcbe2b7541cbfa33e82a}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH}}~70
+\item 
+\#define \mbox{\hyperlink{group___version_gaa50172fa8a795f877c9304d29aefb14b}{M\+D\+B\+\_\+\+V\+E\+R\+I\+NT}}(a,  b,  c)~(((a) $<$$<$ 24) $\vert$ ((b) $<$$<$ 16) $\vert$ (c))
+\item 
+\#define \mbox{\hyperlink{group___version_gaf76019a5896eaa538be876942c28f262}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+F\+U\+LL}}~\mbox{\hyperlink{group___version_gaa50172fa8a795f877c9304d29aefb14b}{M\+D\+B\+\_\+\+V\+E\+R\+I\+NT}}(\mbox{\hyperlink{group___version_ga4d29d48a85ec25636fac7831b8b9b807}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}},\mbox{\hyperlink{group___version_ga44da0474969d76ad5521f8b7de4dd32f}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}},\mbox{\hyperlink{group___version_gaeddac7231e1cdcbe2b7541cbfa33e82a}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH}})
+\item 
+\#define \mbox{\hyperlink{group___version_ga24212e54d8dc0e0949970b5995b3b663}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE}}~\char`\"{}December 19, 2015\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group___version_ga1e8ad3b918e27a5a55179c1ab4b2e0d1}{M\+D\+B\+\_\+\+V\+E\+R\+S\+TR}}(a,  b,  c,  d)~\char`\"{}L\+M\+DB \char`\"{} \#a \char`\"{}.\char`\"{} \#b \char`\"{}.\char`\"{} \#c \char`\"{}\+: (\char`\"{} d \char`\"{})\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group___version_ga9e259368ceadd84622c214f0c7442970}{M\+D\+B\+\_\+\+V\+E\+R\+F\+OO}}(a,  b,  c,  d)~\mbox{\hyperlink{group___version_ga1e8ad3b918e27a5a55179c1ab4b2e0d1}{M\+D\+B\+\_\+\+V\+E\+R\+S\+TR}}(a,b,c,d)
+\item 
+\#define \mbox{\hyperlink{group___version_ga44546ec3a3ab85addf079124ef4af21e}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}}~\mbox{\hyperlink{group___version_ga9e259368ceadd84622c214f0c7442970}{M\+D\+B\+\_\+\+V\+E\+R\+F\+OO}}(\mbox{\hyperlink{group___version_ga4d29d48a85ec25636fac7831b8b9b807}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}},\mbox{\hyperlink{group___version_ga44da0474969d76ad5521f8b7de4dd32f}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}},\mbox{\hyperlink{group___version_gaeddac7231e1cdcbe2b7541cbfa33e82a}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH}},\mbox{\hyperlink{group___version_ga24212e54d8dc0e0949970b5995b3b663}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+D\+A\+TE}})
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_ga492952277c481bc4a6fa08ef71c29487}{M\+D\+B\+\_\+\+F\+I\+X\+E\+D\+M\+AP}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_gabf0e3e3b1e18df6526969f6825a388ea}{M\+D\+B\+\_\+\+N\+O\+S\+U\+B\+D\+IR}}~0x4000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_ga5791dd1adb09123f82dd1f331209e12e}{M\+D\+B\+\_\+\+N\+O\+S\+Y\+NC}}~0x10000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_gac4c41c0ae044127b2fc80420c323cac6}{M\+D\+B\+\_\+\+R\+D\+O\+N\+LY}}~0x20000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_ga5021c4e96ffe9f383f5b8ab2af8e4b16}{M\+D\+B\+\_\+\+N\+O\+M\+E\+T\+A\+S\+Y\+NC}}~0x40000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_ga7b81e9fd5f8fae38786d67e1a8387fa7}{M\+D\+B\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}~0x80000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_gab034ed0d8e5938090aef5ee0997f7e94}{M\+D\+B\+\_\+\+M\+A\+P\+A\+S\+Y\+NC}}~0x100000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_ga5dca84a576d14b4bfe2deddc2dc622d3}{M\+D\+B\+\_\+\+N\+O\+T\+LS}}~0x200000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_ga9b0450b1a87cb9f22e033550e49e5037}{M\+D\+B\+\_\+\+N\+O\+L\+O\+CK}}~0x400000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_ga0fcdaf42f0c45749a2dff11ee322303f}{M\+D\+B\+\_\+\+N\+O\+R\+D\+A\+H\+E\+AD}}~0x800000
+\item 
+\#define \mbox{\hyperlink{group__mdb__env_gafa035a1f17ebf31376eafb7bd2cdd448}{M\+D\+B\+\_\+\+N\+O\+M\+E\+M\+I\+N\+IT}}~0x1000000
+\item 
+\#define \mbox{\hyperlink{group__mdb__dbi__open_gaea2d873575b7875771ea5296b4c85beb}{M\+D\+B\+\_\+\+R\+E\+V\+E\+R\+S\+E\+K\+EY}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__mdb__dbi__open_gae0626566c2562e9007f5c8c9535bab1a}{M\+D\+B\+\_\+\+D\+U\+P\+S\+O\+RT}}~0x04
+\item 
+\#define \mbox{\hyperlink{group__mdb__dbi__open_ga219c5c50d41902fca79c68d8836e7753}{M\+D\+B\+\_\+\+I\+N\+T\+E\+G\+E\+R\+K\+EY}}~0x08
+\item 
+\#define \mbox{\hyperlink{group__mdb__dbi__open_ga5acc26f80668d1ebc31265d178c69338}{M\+D\+B\+\_\+\+D\+U\+P\+F\+I\+X\+ED}}~0x10
+\item 
+\#define \mbox{\hyperlink{group__mdb__dbi__open_gad9b1b4e231bf2e4fa8d7f90be8ba2765}{M\+D\+B\+\_\+\+I\+N\+T\+E\+G\+E\+R\+D\+UP}}~0x20
+\item 
+\#define \mbox{\hyperlink{group__mdb__dbi__open_gaf99ce592b75d65e23503f78a7933c297}{M\+D\+B\+\_\+\+R\+E\+V\+E\+R\+S\+E\+D\+UP}}~0x40
+\item 
+\#define \mbox{\hyperlink{group__mdb__dbi__open_gafd47620cff55fb3ec7cd7501d4d1cb4a}{M\+D\+B\+\_\+\+C\+R\+E\+A\+TE}}~0x40000
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga23eb9813f9a4cdf7a7da5e01815b0cfb}{M\+D\+B\+\_\+\+N\+O\+O\+V\+E\+R\+W\+R\+I\+TE}}~0x10
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga8d723ae10cf0afdc771ce5eafa8f6c9e}{M\+D\+B\+\_\+\+N\+O\+D\+U\+P\+D\+A\+TA}}~0x20
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga92f7832a496213db0f03105e6fa9afae}{M\+D\+B\+\_\+\+C\+U\+R\+R\+E\+NT}}~0x40
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_gac0545c6aea719991e3eae6ccc686efcc}{M\+D\+B\+\_\+\+R\+E\+S\+E\+R\+VE}}~0x10000
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga06af7a6e87588fd723e2dd1d7e580e6a}{M\+D\+B\+\_\+\+A\+P\+P\+E\+ND}}~0x20000
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga0583fe408057ff1c03b8dd071c0d68d2}{M\+D\+B\+\_\+\+A\+P\+P\+E\+N\+D\+D\+UP}}~0x40000
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga67a8d26a8c8bc56f02f2e03fd07a74b0}{M\+D\+B\+\_\+\+M\+U\+L\+T\+I\+P\+LE}}~0x80000
+\item 
+\#define \mbox{\hyperlink{group__mdb__copy_gad38b21b591921c711e025703620f396e}{M\+D\+B\+\_\+\+C\+P\+\_\+\+C\+O\+M\+P\+A\+CT}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__errors_gad01fd0bf65d986197e7bf63024278ab6}{M\+D\+B\+\_\+\+S\+U\+C\+C\+E\+SS}}~0
+\item 
+\#define \mbox{\hyperlink{group__errors_ga05dc5bbcc7da81a7345bd8676e8e0e3b}{M\+D\+B\+\_\+\+K\+E\+Y\+E\+X\+I\+ST}}~(-\/30799)
+\item 
+\#define \mbox{\hyperlink{group__errors_gabeb52e4c4be21b329e31c4add1b71926}{M\+D\+B\+\_\+\+N\+O\+T\+F\+O\+U\+ND}}~(-\/30798)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga7b77315de5265d94cae12609b0fe1f44}{M\+D\+B\+\_\+\+P\+A\+G\+E\+\_\+\+N\+O\+T\+F\+O\+U\+ND}}~(-\/30797)
+\item 
+\#define \mbox{\hyperlink{group__errors_gaf8148bf1b85f58e264e57194bafb03ef}{M\+D\+B\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}}~(-\/30796)
+\item 
+\#define \mbox{\hyperlink{group__errors_gae37b9aedcb3767faba3de8c1cf6d3473}{M\+D\+B\+\_\+\+P\+A\+N\+IC}}~(-\/30795)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga909b2db047fa90fb0d37a78f86a6f99b}{M\+D\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+S\+M\+A\+T\+CH}}~(-\/30794)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga9c2257e8cd8ea027cb682588b235a6f0}{M\+D\+B\+\_\+\+I\+N\+V\+A\+L\+ID}}~(-\/30793)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga0a83370402a060c9175100d4bbfb9f25}{M\+D\+B\+\_\+\+M\+A\+P\+\_\+\+F\+U\+LL}}~(-\/30792)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga6288de36b58badda2e5a64ecddd1da70}{M\+D\+B\+\_\+\+D\+B\+S\+\_\+\+F\+U\+LL}}~(-\/30791)
+\item 
+\#define \mbox{\hyperlink{group__errors_gadd6aaa88823710b97cc44f4f8c160799}{M\+D\+B\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+F\+U\+LL}}~(-\/30790)
+\item 
+\#define \mbox{\hyperlink{group__errors_gabe74ed736c4594b8e1c6f1b86b77f8f4}{M\+D\+B\+\_\+\+T\+L\+S\+\_\+\+F\+U\+LL}}~(-\/30789)
+\item 
+\#define \mbox{\hyperlink{group__errors_gacba5cdc8618093f59d0339e88e69570e}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+F\+U\+LL}}~(-\/30788)
+\item 
+\#define \mbox{\hyperlink{group__errors_gae1e5002c56df52ded874bb3495e2a733}{M\+D\+B\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+F\+U\+LL}}~(-\/30787)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga0501aacf4483f755c7bdcdba643b028e}{M\+D\+B\+\_\+\+P\+A\+G\+E\+\_\+\+F\+U\+LL}}~(-\/30786)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga75c014faa4f02ffd234a5ee0e14baa92}{M\+D\+B\+\_\+\+M\+A\+P\+\_\+\+R\+E\+S\+I\+Z\+ED}}~(-\/30785)
+\item 
+\#define \mbox{\hyperlink{group__errors_gaa39c88fa25b3163b643198f0572a3bee}{M\+D\+B\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+LE}}~(-\/30784)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga1b6cbb28da30e28c48c9df66dd398bf0}{M\+D\+B\+\_\+\+B\+A\+D\+\_\+\+R\+S\+L\+OT}}~(-\/30783)
+\item 
+\#define \mbox{\hyperlink{group__errors_gadcc86b34304f2ae761e3ba7c2eb88ba9}{M\+D\+B\+\_\+\+B\+A\+D\+\_\+\+T\+XN}}~(-\/30782)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga4630697cffb88ca6dc92504271941d0b}{M\+D\+B\+\_\+\+B\+A\+D\+\_\+\+V\+A\+L\+S\+I\+ZE}}~(-\/30781)
+\item 
+\#define \mbox{\hyperlink{group__errors_gab4c82e050391b60a18a5df08d22a7083}{M\+D\+B\+\_\+\+B\+A\+D\+\_\+\+D\+BI}}~(-\/30780)
+\item 
+\#define \mbox{\hyperlink{group__errors_gad6e68438cf673fecdf31bde35f996f99}{M\+D\+B\+\_\+\+P\+R\+O\+B\+L\+EM}}~(-\/30779)
+\item 
+\#define \mbox{\hyperlink{group__errors_ga4577d36100db836719f5c304a1fb5cc6}{M\+D\+B\+\_\+\+L\+A\+S\+T\+\_\+\+E\+R\+R\+C\+O\+DE}}~\mbox{\hyperlink{group__errors_gad6e68438cf673fecdf31bde35f996f99}{M\+D\+B\+\_\+\+P\+R\+O\+B\+L\+EM}}
+\item 
+\#define \mbox{\hyperlink{group__mdb_gab69d2d8eea05c0eb11cdb7a1916727bd}{mdb\+\_\+open}}(txn,  name,  flags,  dbi)~\mbox{\hyperlink{group__internal_gac08cad5b096925642ca359a6d6f0562a}{mdb\+\_\+dbi\+\_\+open}}(txn,name,flags,dbi)
+\item 
+\#define \mbox{\hyperlink{group__mdb_gac56dd5b9c0cecaee35d3d6719939212a}{mdb\+\_\+close}}(env,  dbi)~\mbox{\hyperlink{group__internal_ga52dd98d0c542378370cd6b712ff961b5}{mdb\+\_\+dbi\+\_\+close}}(env,dbi)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef mode\+\_\+t \mbox{\hyperlink{lmdb_8h_a6bc5fbe1ea1873df138108acdf04a28d}{mdb\+\_\+mode\+\_\+t}}
+\item 
+typedef size\+\_\+t \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}}
+\item 
+typedef int \mbox{\hyperlink{lmdb_8h_a6799f2853adc2e3b863dc2e6d9d0064f}{mdb\+\_\+filehandle\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} \mbox{\hyperlink{group__mdb_ga265e83b041e875e14deb7b597e07d9ab}{M\+D\+B\+\_\+env}}
+\begin{DoxyCompactList}\small\item\em Opaque structure for a database environment. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} \mbox{\hyperlink{group__mdb_ga3e1db36dac9468d7517567da4653c645}{M\+D\+B\+\_\+txn}}
+\begin{DoxyCompactList}\small\item\em Opaque structure for a transaction handle. \end{DoxyCompactList}\item 
+typedef unsigned int \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}}
+\begin{DoxyCompactList}\small\item\em A handle for an individual database in the DB environment. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} \mbox{\hyperlink{group__mdb_gaf48cc601fde5137372077852187bf596}{M\+D\+B\+\_\+cursor}}
+\begin{DoxyCompactList}\small\item\em Opaque structure for navigating through a database. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} \mbox{\hyperlink{group__mdb_gadbf837292dc74689b20df5937fddc96c}{M\+D\+B\+\_\+val}}
+\begin{DoxyCompactList}\small\item\em Generic structure used for passing keys and data in and out of the database. \end{DoxyCompactList}\item 
+typedef int() \mbox{\hyperlink{group__mdb_gac1ea382293d1da331ab88ca59052847d}{M\+D\+B\+\_\+cmp\+\_\+func}}(const \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$a, const \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em A callback function used to compare two keys in a database. \end{DoxyCompactList}\item 
+typedef void() \mbox{\hyperlink{group__mdb_ga311e8b7d73c5e7c03b625a894c5014cb}{M\+D\+B\+\_\+rel\+\_\+func}}(\mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$item, void $\ast$oldptr, void $\ast$newptr, void $\ast$relctx)
+\begin{DoxyCompactList}\small\item\em A callback function used to relocate a position-\/dependent data item in a fixed-\/address database. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group__mdb_ga1206b2af8b95e7f6b0ef6b28708c9127}{M\+D\+B\+\_\+cursor\+\_\+op}} \mbox{\hyperlink{group__mdb_gad2e1aad89e5f072d94d053b6c45d1d28}{M\+D\+B\+\_\+cursor\+\_\+op}}
+\begin{DoxyCompactList}\small\item\em Cursor Get operations. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__stat}{M\+D\+B\+\_\+stat}} \mbox{\hyperlink{group__mdb_ga36740c8749b8609a4c62b6e62ba32f57}{M\+D\+B\+\_\+stat}}
+\begin{DoxyCompactList}\small\item\em Statistics for a database in the environment. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_m_d_b__envinfo}{M\+D\+B\+\_\+envinfo}} \mbox{\hyperlink{group__mdb_gab571fbd9b2a68e5e2c20fa3bd91e64f4}{M\+D\+B\+\_\+envinfo}}
+\begin{DoxyCompactList}\small\item\em Information about the environment. \end{DoxyCompactList}\item 
+typedef void \mbox{\hyperlink{group__mdb_ga949ada362b3e84ec0435197056d82371}{M\+D\+B\+\_\+assert\+\_\+func}}(\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em A callback function for most L\+M\+DB assert() failures, called before printing the message and aborting. \end{DoxyCompactList}\item 
+typedef int() \mbox{\hyperlink{group__mdb_ga02f6d37e96b28c8feed7e467f3414863}{M\+D\+B\+\_\+msg\+\_\+func}}(const char $\ast$msg, void $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em A callback function used to print a message from the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__mdb_ga1206b2af8b95e7f6b0ef6b28708c9127}{M\+D\+B\+\_\+cursor\+\_\+op}} \{ \newline
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a7fa6e5dfe596e146026309ca4bc1fa8c}{M\+D\+B\+\_\+\+F\+I\+R\+ST}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a6d1d6a1b5d2786521cf01199b74e4707}{M\+D\+B\+\_\+\+F\+I\+R\+S\+T\+\_\+\+D\+UP}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127af6e8d2250238fc53d63f57a7dfd7fc9d}{M\+D\+B\+\_\+\+G\+E\+T\+\_\+\+B\+O\+TH}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a2a35a3f4da5c7e8d24aad482c971def5}{M\+D\+B\+\_\+\+G\+E\+T\+\_\+\+B\+O\+T\+H\+\_\+\+R\+A\+N\+GE}}, 
+\newline
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a57c48da61ad7d53ea56323ab3be53643}{M\+D\+B\+\_\+\+G\+E\+T\+\_\+\+C\+U\+R\+R\+E\+NT}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127aadfff65301fefedcb29d612a721717a1}{M\+D\+B\+\_\+\+G\+E\+T\+\_\+\+M\+U\+L\+T\+I\+P\+LE}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127ae651b65401ec2877105ff8bf6d8c8424}{M\+D\+B\+\_\+\+L\+A\+ST}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127aa3fd7b44991227e8590b9f5bac71c051}{M\+D\+B\+\_\+\+L\+A\+S\+T\+\_\+\+D\+UP}}, 
+\newline
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127ab4c331a54ff8f314d20c62f03a8c8505}{M\+D\+B\+\_\+\+N\+E\+XT}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a184e21dcc148ee01f9325ba644a37bf2}{M\+D\+B\+\_\+\+N\+E\+X\+T\+\_\+\+D\+UP}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a37d22eecd320d77fbba9f905483f99e5}{M\+D\+B\+\_\+\+N\+E\+X\+T\+\_\+\+M\+U\+L\+T\+I\+P\+LE}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127ad1fe99714d88bbf18b36767b5fe4bf26}{M\+D\+B\+\_\+\+N\+E\+X\+T\+\_\+\+N\+O\+D\+UP}}, 
+\newline
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127ac3f9d31387235be1e0dc85bb947a7f9e}{M\+D\+B\+\_\+\+P\+R\+EV}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127acc8bcecdcf6368f5e5fc15c885097bf7}{M\+D\+B\+\_\+\+P\+R\+E\+V\+\_\+\+D\+UP}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127ad5a35ed59afffdd86253de2fe03b6a09}{M\+D\+B\+\_\+\+P\+R\+E\+V\+\_\+\+N\+O\+D\+UP}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a0e2a8c96dea14b11fa8dee617ccc1d7e}{M\+D\+B\+\_\+\+S\+ET}}, 
+\newline
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a60ca5862cebed7f3487a8a622e77831a}{M\+D\+B\+\_\+\+S\+E\+T\+\_\+\+K\+EY}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127af9feb0557c2954dbf7732eee5e1b59e7}{M\+D\+B\+\_\+\+S\+E\+T\+\_\+\+R\+A\+N\+GE}}, 
+\mbox{\hyperlink{group__mdb_gga1206b2af8b95e7f6b0ef6b28708c9127a09b9f6988c48e6dcd71b6bf8c7ded437}{M\+D\+B\+\_\+\+P\+R\+E\+V\+\_\+\+M\+U\+L\+T\+I\+P\+LE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Cursor Get operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{group__mdb_ga0e5d7298fc39b3c187fffbe30264c968}{mdb\+\_\+version}} (int $\ast$major, int $\ast$minor, int $\ast$patch)
+\begin{DoxyCompactList}\small\item\em Return the L\+M\+DB library version information. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{group__mdb_ga569e66c1e3edc1a6016b86719ee3d098}{mdb\+\_\+strerror}} (int err)
+\begin{DoxyCompactList}\small\item\em Return a string describing a given error code. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gaad6be3d8dcd4ea01f8df436f41d158d4}{mdb\+\_\+env\+\_\+create}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$$\ast$env)
+\begin{DoxyCompactList}\small\item\em Create an L\+M\+DB environment handle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga32a193c6bf4d7d5c5d579e71f22e9340}{mdb\+\_\+env\+\_\+open}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, const char $\ast$path, unsigned int flags, \mbox{\hyperlink{lmdb_8h_a6bc5fbe1ea1873df138108acdf04a28d}{mdb\+\_\+mode\+\_\+t}} mode)
+\begin{DoxyCompactList}\small\item\em Open an environment handle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga5d51d6130325f7353db0955dbedbc378}{mdb\+\_\+env\+\_\+copy}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Copy an L\+M\+DB environment to the specified path. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga470b0bcc64ac417de5de5930f20b1a28}{mdb\+\_\+env\+\_\+copyfd}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{lmdb_8h_a6799f2853adc2e3b863dc2e6d9d0064f}{mdb\+\_\+filehandle\+\_\+t}} fd)
+\begin{DoxyCompactList}\small\item\em Copy an L\+M\+DB environment to the specified file descriptor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga3bf50d7793b36aaddf6b481a44e24244}{mdb\+\_\+env\+\_\+copy2}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, const char $\ast$path, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em Copy an L\+M\+DB environment to the specified path, with options. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga5040d0de1f14000fa01fc0b522ff1f86}{mdb\+\_\+env\+\_\+copyfd2}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{lmdb_8h_a6799f2853adc2e3b863dc2e6d9d0064f}{mdb\+\_\+filehandle\+\_\+t}} fd, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em Copy an L\+M\+DB environment to the specified file descriptor, with options. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gaf881dca452050efbd434cd16e4bae255}{mdb\+\_\+env\+\_\+stat}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{struct_m_d_b__stat}{M\+D\+B\+\_\+stat}} $\ast$stat)
+\begin{DoxyCompactList}\small\item\em Return statistics about the L\+M\+DB environment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga18769362c7e7d6cf91889a028a5c5947}{mdb\+\_\+env\+\_\+info}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{struct_m_d_b__envinfo}{M\+D\+B\+\_\+envinfo}} $\ast$stat)
+\begin{DoxyCompactList}\small\item\em Return information about the L\+M\+DB environment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga85e61f05aa68b520cc6c3b981dba5037}{mdb\+\_\+env\+\_\+sync}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, int force)
+\begin{DoxyCompactList}\small\item\em Flush the data buffers to disk. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mdb_ga4366c43ada8874588b6a62fbda2d1e95}{mdb\+\_\+env\+\_\+close}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env)
+\begin{DoxyCompactList}\small\item\em Close the environment and release the memory map. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga83f66cf02bfd42119451e9468dc58445}{mdb\+\_\+env\+\_\+set\+\_\+flags}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, unsigned int flags, int onoff)
+\begin{DoxyCompactList}\small\item\em Set environment flags. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga2733aefc6f50beb49dd0c6eb19b067d9}{mdb\+\_\+env\+\_\+get\+\_\+flags}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, unsigned int $\ast$flags)
+\begin{DoxyCompactList}\small\item\em Get environment flags. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gac699fdd8c4f8013577cb933fb6a757fe}{mdb\+\_\+env\+\_\+get\+\_\+path}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, const char $\ast$$\ast$path)
+\begin{DoxyCompactList}\small\item\em Return the path that was used in \mbox{\hyperlink{group__mdb_ga32a193c6bf4d7d5c5d579e71f22e9340}{mdb\+\_\+env\+\_\+open()}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gaf1570e7c0e5a5d860fef1032cec7d5f2}{mdb\+\_\+env\+\_\+get\+\_\+fd}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{lmdb_8h_a6799f2853adc2e3b863dc2e6d9d0064f}{mdb\+\_\+filehandle\+\_\+t}} $\ast$fd)
+\begin{DoxyCompactList}\small\item\em Return the filedescriptor for the given environment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga4c47a5830f1071e578eaa1bbda2ae83e}{mdb\+\_\+env\+\_\+set\+\_\+mapsize}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em Set the size of the memory map to use for this environment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gae687966c24b790630be2a41573fe40e2}{mdb\+\_\+env\+\_\+set\+\_\+maxreaders}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, unsigned int readers)
+\begin{DoxyCompactList}\small\item\em Set the maximum number of threads/reader slots for the environment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga70e143cf11760d869f754c9c9956e6cc}{mdb\+\_\+env\+\_\+get\+\_\+maxreaders}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, unsigned int $\ast$readers)
+\begin{DoxyCompactList}\small\item\em Get the maximum number of threads/reader slots for the environment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gaa2fc2f1f37cb1115e733b62cab2fcdbc}{mdb\+\_\+env\+\_\+set\+\_\+maxdbs}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbs)
+\begin{DoxyCompactList}\small\item\em Set the maximum number of named databases for the environment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gaaf0be004f33828bf2fb09d77eb3cef94}{mdb\+\_\+env\+\_\+get\+\_\+maxkeysize}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env)
+\begin{DoxyCompactList}\small\item\em Get the maximum size of keys and \mbox{\hyperlink{group__mdb__dbi__open_gae0626566c2562e9007f5c8c9535bab1a}{M\+D\+B\+\_\+\+D\+U\+P\+S\+O\+RT}} data we can write. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gaf2fe09eb9c96eeb915a76bf713eecc46}{mdb\+\_\+env\+\_\+set\+\_\+userctx}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, void $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Set application information associated with the \mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}}. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{group__mdb_ga45df6a4fb150cda2316b5ae224ba52f1}{mdb\+\_\+env\+\_\+get\+\_\+userctx}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env)
+\begin{DoxyCompactList}\small\item\em Get the application information associated with the \mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga6df57850b14a8b3f237ea4dc012a4e0b}{mdb\+\_\+env\+\_\+set\+\_\+assert}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{group__mdb_ga949ada362b3e84ec0435197056d82371}{M\+D\+B\+\_\+assert\+\_\+func}} $\ast$func)
+\item 
+int \mbox{\hyperlink{group__mdb_gad7ea55da06b77513609efebd44b26920}{mdb\+\_\+txn\+\_\+begin}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$parent, unsigned int flags, \mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$$\ast$txn)
+\begin{DoxyCompactList}\small\item\em Create a transaction for use with the environment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$ \mbox{\hyperlink{group__mdb_gaeb17735b8aaa2938a78a45cab85c06a0}{mdb\+\_\+txn\+\_\+env}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn)
+\begin{DoxyCompactList}\small\item\em Returns the transaction\textquotesingle{}s \mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} \mbox{\hyperlink{group__mdb_ga7b057cd5215b52b5bfa85d30699d3c8d}{mdb\+\_\+txn\+\_\+id}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn)
+\begin{DoxyCompactList}\small\item\em Return the transaction\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga846fbd6f46105617ac9f4d76476f6597}{mdb\+\_\+txn\+\_\+commit}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn)
+\begin{DoxyCompactList}\small\item\em Commit all the operations of a transaction into the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mdb_ga73a5938ae4c3239ee11efa07eb22b882}{mdb\+\_\+txn\+\_\+abort}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn)
+\begin{DoxyCompactList}\small\item\em Abandon all the operations of the transaction instead of saving them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mdb_ga02b06706f8a66249769503c4e88c56cd}{mdb\+\_\+txn\+\_\+reset}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn)
+\begin{DoxyCompactList}\small\item\em Reset a read-\/only transaction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga6c6f917959517ede1c504cf7c720ce6d}{mdb\+\_\+txn\+\_\+renew}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn)
+\begin{DoxyCompactList}\small\item\em Renew a read-\/only transaction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gac08cad5b096925642ca359a6d6f0562a}{mdb\+\_\+dbi\+\_\+open}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, const char $\ast$name, unsigned int flags, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} $\ast$dbi)
+\begin{DoxyCompactList}\small\item\em Open a database in the environment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gae6c1069febe94299769dbdd032fadef6}{mdb\+\_\+stat}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, \mbox{\hyperlink{struct_m_d_b__stat}{M\+D\+B\+\_\+stat}} $\ast$stat)
+\begin{DoxyCompactList}\small\item\em Retrieve statistics for a database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga95ba4cb721035478a8705e57b91ae4d4}{mdb\+\_\+dbi\+\_\+flags}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, unsigned int $\ast$flags)
+\begin{DoxyCompactList}\small\item\em Retrieve the DB flags for a database handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mdb_ga52dd98d0c542378370cd6b712ff961b5}{mdb\+\_\+dbi\+\_\+close}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi)
+\begin{DoxyCompactList}\small\item\em Close a database handle. Normally unnecessary. Use with care\+: \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gab966fab3840fc54a6571dfb32b00f2db}{mdb\+\_\+drop}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, int del)
+\begin{DoxyCompactList}\small\item\em Empty or delete+close a database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga68e47ffcf72eceec553c72b1784ee0fe}{mdb\+\_\+set\+\_\+compare}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, \mbox{\hyperlink{group__mdb_gac1ea382293d1da331ab88ca59052847d}{M\+D\+B\+\_\+cmp\+\_\+func}} $\ast$cmp)
+\begin{DoxyCompactList}\small\item\em Set a custom key comparison function for a database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gacef4ec3dab0bbd9bc978b73c19c879ae}{mdb\+\_\+set\+\_\+dupsort}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, \mbox{\hyperlink{group__mdb_gac1ea382293d1da331ab88ca59052847d}{M\+D\+B\+\_\+cmp\+\_\+func}} $\ast$cmp)
+\begin{DoxyCompactList}\small\item\em Set a custom data comparison function for a \mbox{\hyperlink{group__mdb__dbi__open_gae0626566c2562e9007f5c8c9535bab1a}{M\+D\+B\+\_\+\+D\+U\+P\+S\+O\+RT}} database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga697d82c7afe79f142207ad5adcdebfeb}{mdb\+\_\+set\+\_\+relfunc}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, \mbox{\hyperlink{group__mdb_ga311e8b7d73c5e7c03b625a894c5014cb}{M\+D\+B\+\_\+rel\+\_\+func}} $\ast$rel)
+\begin{DoxyCompactList}\small\item\em Set a relocation function for a \mbox{\hyperlink{group__mdb__env_ga492952277c481bc4a6fa08ef71c29487}{M\+D\+B\+\_\+\+F\+I\+X\+E\+D\+M\+AP}} database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga7c34246308cee01724a1839a8f5cc594}{mdb\+\_\+set\+\_\+relctx}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, void $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Set a context pointer for a \mbox{\hyperlink{group__mdb__env_ga492952277c481bc4a6fa08ef71c29487}{M\+D\+B\+\_\+\+F\+I\+X\+E\+D\+M\+AP}} database\textquotesingle{}s relocation function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga8bf10cd91d3f3a83a34d04ce6b07992d}{mdb\+\_\+get}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$key, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Get items from a database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga4fa8573d9236d54687c61827ebf8cac0}{mdb\+\_\+put}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$key, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$data, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em Store items into a database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gab8182f9360ea69ac0afd4a4eaab1ddb0}{mdb\+\_\+del}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$key, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Delete items from a database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga9ff5d7bd42557fd5ee235dc1d62613aa}{mdb\+\_\+cursor\+\_\+open}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, \mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$$\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Create a cursor handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mdb_gad685f5d73c052715c7bd859cc4c05188}{mdb\+\_\+cursor\+\_\+close}} (\mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Close a cursor handle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gac8b57befb68793070c85ea813df481af}{mdb\+\_\+cursor\+\_\+renew}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Renew a cursor handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$ \mbox{\hyperlink{group__mdb_ga7bf0d458f7f36b5232fcb368ebda79e0}{mdb\+\_\+cursor\+\_\+txn}} (\mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Return the cursor\textquotesingle{}s transaction handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} \mbox{\hyperlink{group__mdb_ga2f7092cf70ee816fb3d2c3267a732372}{mdb\+\_\+cursor\+\_\+dbi}} (\mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Return the cursor\textquotesingle{}s database handle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga48df35fb102536b32dfbb801a47b4cb0}{mdb\+\_\+cursor\+\_\+get}} (\mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$cursor, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$key, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$data, \mbox{\hyperlink{group__mdb_ga1206b2af8b95e7f6b0ef6b28708c9127}{M\+D\+B\+\_\+cursor\+\_\+op}} op)
+\begin{DoxyCompactList}\small\item\em Retrieve by cursor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga1f83ccb40011837ff37cc32be01ad91e}{mdb\+\_\+cursor\+\_\+put}} (\mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$cursor, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$key, \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$data, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em Store by cursor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga26a52d3efcfd72e5bf6bd6960bf75f95}{mdb\+\_\+cursor\+\_\+del}} (\mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$cursor, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em Delete current key/data pair. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga182be40c73eae62dba8751477e5c0e26}{mdb\+\_\+cursor\+\_\+count}} (\mbox{\hyperlink{struct_m_d_b__cursor}{M\+D\+B\+\_\+cursor}} $\ast$cursor, \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} $\ast$countp)
+\begin{DoxyCompactList}\small\item\em Return count of duplicates for current key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gaba790a2493f744965b810efac73bac0e}{mdb\+\_\+cmp}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, const \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$a, const \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compare two data items according to a particular database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_gac61d3087282b0824c8c5caff6caabdf3}{mdb\+\_\+dcmp}} (\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$txn, \mbox{\hyperlink{group__mdb_gadbe68a06c448dfb62da16443d251a78b}{M\+D\+B\+\_\+dbi}} dbi, const \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$a, const \mbox{\hyperlink{struct_m_d_b__val}{M\+D\+B\+\_\+val}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compare two data items according to a particular database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga8550000cd0501a44f57ee6dff0188744}{mdb\+\_\+reader\+\_\+list}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, \mbox{\hyperlink{group__mdb_ga02f6d37e96b28c8feed7e467f3414863}{M\+D\+B\+\_\+msg\+\_\+func}} $\ast$func, void $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Dump the entries in the reader lock table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mdb_ga366923d08bb384b3d9580a98edf5d668}{mdb\+\_\+reader\+\_\+check}} (\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$env, int $\ast$dead)
+\begin{DoxyCompactList}\small\item\em Check for stale entries in the reader lock table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Lightning memory-\/mapped database library. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}\label{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}} 
+\index{lmdb.\+h@{lmdb.\+h}!M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z@{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}}
+\index{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z@{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}!lmdb.\+h@{lmdb.\+h}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}{MDB\_FMT\_Z}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z~\char`\"{}z\char`\"{}}
+
+printf/scanf format modifier for size\+\_\+t 
+
+Definition at line 186 of file lmdb.\+h.
+
+\mbox{\Hypertarget{lmdb_8h_a11fe126f6ef1f04b1e2ea23c5a433865}\label{lmdb_8h_a11fe126f6ef1f04b1e2ea23c5a433865}} 
+\index{lmdb.\+h@{lmdb.\+h}!M\+D\+B\+\_\+\+P\+R\+Iy@{M\+D\+B\+\_\+\+P\+R\+Iy}}
+\index{M\+D\+B\+\_\+\+P\+R\+Iy@{M\+D\+B\+\_\+\+P\+R\+Iy}!lmdb.\+h@{lmdb.\+h}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+P\+R\+Iy}{MDB\_PRIy}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+P\+R\+Iy(\begin{DoxyParamCaption}\item[{}]{t }\end{DoxyParamCaption})~\mbox{\hyperlink{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}} \#t}
+
+\mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} printf formats, {\bfseries t} = one of \mbox{[}diouxX\mbox{]} without quotes 
+
+Definition at line 198 of file lmdb.\+h.
+
+\mbox{\Hypertarget{lmdb_8h_a15ef0067135e5e538bca4440e58add94}\label{lmdb_8h_a15ef0067135e5e538bca4440e58add94}} 
+\index{lmdb.\+h@{lmdb.\+h}!M\+D\+B\+\_\+\+S\+C\+Ny@{M\+D\+B\+\_\+\+S\+C\+Ny}}
+\index{M\+D\+B\+\_\+\+S\+C\+Ny@{M\+D\+B\+\_\+\+S\+C\+Ny}!lmdb.\+h@{lmdb.\+h}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+S\+C\+Ny}{MDB\_SCNy}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+S\+C\+Ny(\begin{DoxyParamCaption}\item[{}]{t }\end{DoxyParamCaption})~\mbox{\hyperlink{lmdb_8h_a02f14b3b04c0dabb94e0742ca77882d1}{M\+D\+B\+\_\+\+F\+M\+T\+\_\+Z}} \#t}
+
+\mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} scanf formats, {\bfseries t} = one of \mbox{[}dioux\mbox{]} without quotes 
+
+Definition at line 200 of file lmdb.\+h.
+
+\mbox{\Hypertarget{lmdb_8h_abfe692b089b80947bf616edcbfd39ebc}\label{lmdb_8h_abfe692b089b80947bf616edcbfd39ebc}} 
+\index{lmdb.\+h@{lmdb.\+h}!M\+D\+B\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX@{M\+D\+B\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX}}
+\index{M\+D\+B\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX@{M\+D\+B\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX}!lmdb.\+h@{lmdb.\+h}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX}{MDB\_SIZE\_MAX}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+AX~S\+I\+Z\+E\+\_\+\+M\+AX}
+
+max \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}} 
+
+Definition at line 196 of file lmdb.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{lmdb_8h_a6799f2853adc2e3b863dc2e6d9d0064f}\label{lmdb_8h_a6799f2853adc2e3b863dc2e6d9d0064f}} 
+\index{lmdb.\+h@{lmdb.\+h}!mdb\+\_\+filehandle\+\_\+t@{mdb\+\_\+filehandle\+\_\+t}}
+\index{mdb\+\_\+filehandle\+\_\+t@{mdb\+\_\+filehandle\+\_\+t}!lmdb.\+h@{lmdb.\+h}}
+\subsubsection{\texorpdfstring{mdb\+\_\+filehandle\+\_\+t}{mdb\_filehandle\_t}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{lmdb_8h_a6799f2853adc2e3b863dc2e6d9d0064f}{mdb\+\_\+filehandle\+\_\+t}}}
+
+An abstraction for a file handle. On P\+O\+S\+IX systems file handles are small integers. On Windows they\textquotesingle{}re opaque pointers. 
+
+Definition at line 216 of file lmdb.\+h.
+
+\mbox{\Hypertarget{lmdb_8h_a6bc5fbe1ea1873df138108acdf04a28d}\label{lmdb_8h_a6bc5fbe1ea1873df138108acdf04a28d}} 
+\index{lmdb.\+h@{lmdb.\+h}!mdb\+\_\+mode\+\_\+t@{mdb\+\_\+mode\+\_\+t}}
+\index{mdb\+\_\+mode\+\_\+t@{mdb\+\_\+mode\+\_\+t}!lmdb.\+h@{lmdb.\+h}}
+\subsubsection{\texorpdfstring{mdb\+\_\+mode\+\_\+t}{mdb\_mode\_t}}
+{\footnotesize\ttfamily typedef mode\+\_\+t \mbox{\hyperlink{lmdb_8h_a6bc5fbe1ea1873df138108acdf04a28d}{mdb\+\_\+mode\+\_\+t}}}
+
+Unix permissions for creating files, or dummy definition for Windows 
+
+Definition at line 180 of file lmdb.\+h.
+
+\mbox{\Hypertarget{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}\label{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}} 
+\index{lmdb.\+h@{lmdb.\+h}!mdb\+\_\+size\+\_\+t@{mdb\+\_\+size\+\_\+t}}
+\index{mdb\+\_\+size\+\_\+t@{mdb\+\_\+size\+\_\+t}!lmdb.\+h@{lmdb.\+h}}
+\subsubsection{\texorpdfstring{mdb\+\_\+size\+\_\+t}{mdb\_size\_t}}
+{\footnotesize\ttfamily typedef size\+\_\+t \mbox{\hyperlink{lmdb_8h_a78821971e612e3898ef4b3ae45ed86f1}{mdb\+\_\+size\+\_\+t}}}
+
+Unsigned type used for mapsize, entry counts and page/transaction I\+Ds.
+
+It is normally size\+\_\+t, hence the name. Defining M\+D\+B\+\_\+\+V\+L32 makes it uint64\+\_\+t, but do not try this unless you know what you are doing. 
+
+Definition at line 195 of file lmdb.\+h.
+

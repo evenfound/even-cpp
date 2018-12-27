@@ -1,0 +1,19 @@
+digraph "stefanfrings::HttpRequestHandler::service"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="stefanfrings::HttpRequest\lHandler::service",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="stefanfrings::HttpRequest\l::getMethod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_request.html#ae3c92d9c0f5279c6d5b1bfdb47aaa5e0"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="stefanfrings::HttpRequest\l::getPath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_request.html#a9e9f87cc06cdeae2ca03c97d576c217b"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="stefanfrings::HttpRequest\l::urlDecode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_request.html#a83651afcea6094403fb7cdb2d947cd0c"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="stefanfrings::HttpRequest\l::getVersion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_request.html#adfd550673eb70a6477b0c04eb2023bad"];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="stefanfrings::HttpResponse\l::setStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_response.html#a07af281f6437c377e6f729051ce4e13c"];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="stefanfrings::HttpResponse\l::write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_response.html#a6e49919cc568835ca6d81fec02533260"];
+}

@@ -1,0 +1,11 @@
+digraph "prerequisites/c-libp2p/secio" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d3dc2089ddf61d8be1e3bff92bba4632 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="c-libp2p" fontname="Helvetica", fontsize="10", URL="dir_d3dc2089ddf61d8be1e3bff92bba4632.html"]
+  dir_de0752ef19fa099e4bbb2a75b5f3c268 [shape=box, label="secio", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_de0752ef19fa099e4bbb2a75b5f3c268.html"];
+  }
+  dir_cc29cad4378de7015a7283c1cd2ac4e7 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_cc29cad4378de7015a7283c1cd2ac4e7.html"];
+  dir_de0752ef19fa099e4bbb2a75b5f3c268->dir_cc29cad4378de7015a7283c1cd2ac4e7 [headlabel="3", labeldistance=1.5 headhref="dir_000406_000070.html"];
+}

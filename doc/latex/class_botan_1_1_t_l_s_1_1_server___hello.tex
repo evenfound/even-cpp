@@ -1,0 +1,95 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_server___hello}{}\section{Botan\+:\+:T\+LS\+:\+:Server\+\_\+\+Hello Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_server___hello}\index{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Hello@{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Hello}}
+
+
+{\ttfamily \#include $<$tls\+\_\+messages.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Server\+\_\+\+Hello\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:T\+LS\+:\+:Server\+\_\+\+Hello\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_server___hello_1_1_settings}{Settings}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a2e7d2d74c21312a9a529bff460a624b1}\label{class_botan_1_1_t_l_s_1_1_server___hello_a2e7d2d74c21312a9a529bff460a624b1}} 
+Handshake\+\_\+\+Type {\bfseries type} () const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_ab0ea92e3bc88b7ce3bfa1375ada96621}\label{class_botan_1_1_t_l_s_1_1_server___hello_ab0ea92e3bc88b7ce3bfa1375ada96621}} 
+Protocol\+\_\+\+Version {\bfseries version} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a96aeea79169892a102ff9b135e0ff72b}\label{class_botan_1_1_t_l_s_1_1_server___hello_a96aeea79169892a102ff9b135e0ff72b}} 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& {\bfseries random} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_ae5ef5f2edf115291f8a9391202b8dfbc}\label{class_botan_1_1_t_l_s_1_1_server___hello_ae5ef5f2edf115291f8a9391202b8dfbc}} 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& {\bfseries session\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a0fe70e754f6c21dd68afdfd29624d13b}\label{class_botan_1_1_t_l_s_1_1_server___hello_a0fe70e754f6c21dd68afdfd29624d13b}} 
+uint16\+\_\+t {\bfseries ciphersuite} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a3d2ae3d21a68a9fa116c275b464eece4}\label{class_botan_1_1_t_l_s_1_1_server___hello_a3d2ae3d21a68a9fa116c275b464eece4}} 
+uint8\+\_\+t {\bfseries compression\+\_\+method} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_aa54d992ffe3abc194024f3f598e3e440}\label{class_botan_1_1_t_l_s_1_1_server___hello_aa54d992ffe3abc194024f3f598e3e440}} 
+bool {\bfseries secure\+\_\+renegotiation} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a909ae7ce21b588b168121fc7ae72830a}\label{class_botan_1_1_t_l_s_1_1_server___hello_a909ae7ce21b588b168121fc7ae72830a}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries renegotiation\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_aead7398f1d6b04667f2b07cc3c037e69}\label{class_botan_1_1_t_l_s_1_1_server___hello_aead7398f1d6b04667f2b07cc3c037e69}} 
+bool {\bfseries supports\+\_\+extended\+\_\+master\+\_\+secret} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a6ce3a08dd5830fb045abe73e16a287c9}\label{class_botan_1_1_t_l_s_1_1_server___hello_a6ce3a08dd5830fb045abe73e16a287c9}} 
+bool {\bfseries supports\+\_\+encrypt\+\_\+then\+\_\+mac} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a839bae8a47c772d74d82c237bb5ae364}\label{class_botan_1_1_t_l_s_1_1_server___hello_a839bae8a47c772d74d82c237bb5ae364}} 
+bool {\bfseries supports\+\_\+certificate\+\_\+status\+\_\+message} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a8225b017d30ee0ba77d633d1c11a0ea4}\label{class_botan_1_1_t_l_s_1_1_server___hello_a8225b017d30ee0ba77d633d1c11a0ea4}} 
+bool {\bfseries supports\+\_\+session\+\_\+ticket} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a46f04ecb1aad28bfe45d0ba2b177ad0d}\label{class_botan_1_1_t_l_s_1_1_server___hello_a46f04ecb1aad28bfe45d0ba2b177ad0d}} 
+uint16\+\_\+t {\bfseries srtp\+\_\+profile} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a0d4f16bda622b1d96f8d5c601df681fd}\label{class_botan_1_1_t_l_s_1_1_server___hello_a0d4f16bda622b1d96f8d5c601df681fd}} 
+std\+::string {\bfseries next\+\_\+protocol} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a2807fa56d95fe67bd7934f8f22fa57aa}\label{class_botan_1_1_t_l_s_1_1_server___hello_a2807fa56d95fe67bd7934f8f22fa57aa}} 
+std\+::set$<$ Handshake\+\_\+\+Extension\+\_\+\+Type $>$ {\bfseries extension\+\_\+types} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a2c86f968d47b2d3d646d0f9194b7417f}\label{class_botan_1_1_t_l_s_1_1_server___hello_a2c86f968d47b2d3d646d0f9194b7417f}} 
+const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extensions}{Extensions}} \& {\bfseries extensions} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a4d8cad563a24d80b8535f243f338a706}\label{class_botan_1_1_t_l_s_1_1_server___hello_a4d8cad563a24d80b8535f243f338a706}} 
+bool {\bfseries prefers\+\_\+compressed\+\_\+ec\+\_\+points} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a82204a2faf1ca574f88c51f70b0bb582}\label{class_botan_1_1_t_l_s_1_1_server___hello_a82204a2faf1ca574f88c51f70b0bb582}} 
+{\bfseries Server\+\_\+\+Hello} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \&io, \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___hash}{Handshake\+\_\+\+Hash}} \&hash, const Policy \&policy, Callbacks \&cb, Random\+Number\+Generator \&rng, const std\+::vector$<$ uint8\+\_\+t $>$ \&secure\+\_\+reneg\+\_\+info, const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_client___hello}{Client\+\_\+\+Hello}} \&client\+\_\+hello, const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_server___hello_1_1_settings}{Server\+\_\+\+Hello\+::\+Settings}} \&settings, const std\+::string next\+\_\+protocol)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a0cabbc32c43de6c7e8614075db6ca5f3}\label{class_botan_1_1_t_l_s_1_1_server___hello_a0cabbc32c43de6c7e8614075db6ca5f3}} 
+{\bfseries Server\+\_\+\+Hello} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \&io, \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___hash}{Handshake\+\_\+\+Hash}} \&hash, const Policy \&policy, Callbacks \&cb, Random\+Number\+Generator \&rng, const std\+::vector$<$ uint8\+\_\+t $>$ \&secure\+\_\+reneg\+\_\+info, const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_client___hello}{Client\+\_\+\+Hello}} \&client\+\_\+hello, Session \&resumed\+\_\+session, bool offer\+\_\+session\+\_\+ticket, const std\+::string \&next\+\_\+protocol)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___hello_a7e146c79f28f006242198f67ba9d5f82}\label{class_botan_1_1_t_l_s_1_1_server___hello_a7e146c79f28f006242198f67ba9d5f82}} 
+{\bfseries Server\+\_\+\+Hello} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Server Hello Message 
+
+Definition at line 186 of file tls\+\_\+messages.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+messages.\+h\item 
+prerequisites/botan/src/lib/tls/msg\+\_\+server\+\_\+hello.\+cpp\end{DoxyCompactItemize}

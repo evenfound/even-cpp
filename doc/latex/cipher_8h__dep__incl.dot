@@ -1,0 +1,45 @@
+digraph "prerequisites/c-libp2p/include/mbedtls/cipher.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node5 [label="prerequisites/c-libp2p\l/include/mbedtls/cipher.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="prerequisites/c-libp2p\l/include/mbedtls/ccm.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c-libp2p_2include_2mbedtls_2ccm_8h_source.html"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="prerequisites/c-libp2p\l/include/mbedtls/cipher\l_internal.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cipher__internal_8h.html",tooltip="Cipher wrappers. "];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="prerequisites/c-libp2p\l/include/mbedtls/cmac.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c-libp2p_2include_2mbedtls_2cmac_8h_source.html"];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_ciphersuites.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__ciphersuites_8h.html",tooltip="SSL Ciphersuites for mbed TLS. "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl_8h.html",tooltip="SSL/TLS functions. "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="prerequisites/c-libp2p\l/include/mbedtls/debug.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$debug_8h.html",tooltip="Functions for controlling and providing debug output from the library. "];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="prerequisites/c-libp2p\l/include/mbedtls/net_sockets.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$net__sockets_8h.html",tooltip="Network communication functions. "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="prerequisites/c-libp2p\l/include/mbedtls/net.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c-libp2p_2include_2mbedtls_2net_8h_source.html"];
+  Node10 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_cache.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__cache_8h.html",tooltip="SSL session cache implementation. "];
+  Node10 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_cookie.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__cookie_8h.html",tooltip="DTLS cookie callbacks implementation. "];
+  Node10 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_internal.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__internal_8h_source.html"];
+  Node10 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="prerequisites/c-libp2p\l/include/mbedtls/ssl_ticket.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ssl__ticket_8h.html",tooltip="Internal functions shared by the SSL modules. "];
+  Node5 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="prerequisites/c-libp2p\l/include/mbedtls/gcm.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c-libp2p_2include_2mbedtls_2gcm_8h_source.html"];
+  Node5 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="prerequisites/c-libp2p\l/include/mbedtls/oid.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$oid_8h.html",tooltip="Object Identifier (OID) database. "];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="prerequisites/c-libp2p\l/crypto/rsa.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$crypto_2rsa_8c_source.html"];
+  Node5 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="prerequisites/c-libp2p\l/include/mbedtls/pkcs12.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pkcs12_8h.html",tooltip="PKCS#12 Personal Information Exchange Syntax. "];
+  Node5 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="prerequisites/c-libp2p\l/secio/secio.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$secio_8c_source.html"];
+  Node5 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node23 [label="prerequisites/c-libp2p\l/test/test_secio.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test__secio_8h_source.html"];
+  Node23 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 [label="prerequisites/c-libp2p\l/test/testit.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c-libp2p_2test_2testit_8c_source.html"];
+}

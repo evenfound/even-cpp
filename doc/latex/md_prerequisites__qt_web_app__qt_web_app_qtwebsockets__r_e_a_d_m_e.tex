@@ -1,0 +1,45 @@
+{\ttfamily Qt\+Web\+Sockets} is a pure Qt implementation of Web\+Sockets -\/ both client and server. It is implemented as a Qt add-\/on module, that can easily be embedded into existing Qt projects. It has no other dependencies than Qt.
+
+\subsubsection*{Features}
+
+
+\begin{DoxyItemize}
+\item Client and server capable
+\item Text and binary sockets
+\item Frame-\/based and message-\/based signals
+\item Strict Unicode checking
+\item W\+SS and proxy support
+\end{DoxyItemize}
+
+\subsubsection*{Requirements}
+
+Qt 5.\+x
+
+\subsubsection*{Build And Usage}
+
+Checkout the source code from code.\+qt.\+io Go into the source directory and execute\+: \begin{DoxyVerb}qmake
+make
+make install
+\end{DoxyVerb}
+
+
+The last command will install {\ttfamily Qt\+Web\+Sockets} as a Qt module.
+
+To use, add {\ttfamily websockets} to the QT variable.
+
+{\ttfamily QT += websockets}
+
+\subsubsection*{Compliance}
+
+{\ttfamily Qt\+Web\+Sockets} is compliant with \href{http://datatracker.ietf.org/doc/rfc6455/?include_text=1}{\tt R\+F\+C6455} and has been tested with the \href{http://autobahn.ws/testsuite}{\tt Autobahn Testsuite}.
+
+\subsubsection*{Missing Features}
+
+
+\begin{DoxyItemize}
+\item Extensions and sub-\/protocols
+\end{DoxyItemize}
+
+\subsubsection*{License}
+
+This code is licensed under L\+G\+P\+Lv3 or L\+G\+P\+Lv2.\+1. 

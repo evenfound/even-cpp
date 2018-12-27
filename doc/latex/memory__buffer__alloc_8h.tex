@@ -1,0 +1,138 @@
+\hypertarget{memory__buffer__alloc_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/memory\+\_\+buffer\+\_\+alloc.h File Reference}
+\label{memory__buffer__alloc_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/memory\+\_\+buffer\+\_\+alloc.\+h@{prerequisites/c-\/libp2p/include/mbedtls/memory\+\_\+buffer\+\_\+alloc.\+h}}
+
+
+Buffer-\/based memory allocator.  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for memory\+\_\+buffer\+\_\+alloc.\+h\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{memory__buffer__alloc_8h_a2b9fd1ef7a128cf7680e6c9c377134d4}\label{memory__buffer__alloc_8h_a2b9fd1ef7a128cf7680e6c9c377134d4}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+N\+O\+NE}~0
+\item 
+\mbox{\Hypertarget{memory__buffer__alloc_8h_a3fb815b3f3b7cfce7c5ddd6f2a33b80d}\label{memory__buffer__alloc_8h_a3fb815b3f3b7cfce7c5ddd6f2a33b80d}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+A\+L\+L\+OC}~(1 $<$$<$ 0)
+\item 
+\mbox{\Hypertarget{memory__buffer__alloc_8h_a1c7f2d8956e95373dcb4fe24154b6650}\label{memory__buffer__alloc_8h_a1c7f2d8956e95373dcb4fe24154b6650}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+R\+EE}~(1 $<$$<$ 1)
+\item 
+\mbox{\Hypertarget{memory__buffer__alloc_8h_a581a709e67d33b34d3c8a7dfb4b3df00}\label{memory__buffer__alloc_8h_a581a709e67d33b34d3c8a7dfb4b3df00}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+A\+L\+W\+A\+YS}~(M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+A\+L\+L\+OC $\vert$ M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+R\+EE)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ S\+E\+C\+T\+I\+ON\+: Module settings}\par
+{\em The configuration options you can set for this module are in this section. Either change them in config.\+h or define them on the compiler command line. }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{memory__buffer__alloc_8h_a1fa1e20d4ff40eb6c2a740d7d26b2749}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+P\+LE}}~4
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{memory__buffer__alloc_8h_ac70d134be54133c272d8eab2cb85dfbf}{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+init}} (unsigned char $\ast$buf, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Initialize use of stack-\/based memory allocator. The stack-\/based allocator does memory management inside the presented buffer and does not call calloc() and free(). It sets the global mbedtls\+\_\+calloc() and mbedtls\+\_\+free() pointers to its own functions. (Provided mbedtls\+\_\+calloc() and mbedtls\+\_\+free() are thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is defined) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{memory__buffer__alloc_8h_ae9d7316a19b72776f34ba74720a06325}\label{memory__buffer__alloc_8h_ae9d7316a19b72776f34ba74720a06325}} 
+void \mbox{\hyperlink{memory__buffer__alloc_8h_ae9d7316a19b72776f34ba74720a06325}{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+free}} (void)
+\begin{DoxyCompactList}\small\item\em Free the mutex for thread-\/safety and clear remaining memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{memory__buffer__alloc_8h_aaa50603bb2f2f1fe8d97d6953589b832}{mbedtls\+\_\+memory\+\_\+buffer\+\_\+set\+\_\+verify}} (int verify)
+\begin{DoxyCompactList}\small\item\em Determine when the allocator should automatically verify the state of the entire chain of headers / meta-\/data. (Default\+: M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+N\+O\+NE) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{memory__buffer__alloc_8h_a7aae8a0cd61f08dd6734ebc8a8a3ba38}{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+verify}} (void)
+\begin{DoxyCompactList}\small\item\em Verifies that all headers in the memory buffer are correct and contain sane values. Helps debug buffer-\/overflow errors. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{memory__buffer__alloc_8h_ab1304c317468fb66c21ee52c79efe084}{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+self\+\_\+test}} (int verbose)
+\begin{DoxyCompactList}\small\item\em Checkup routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Buffer-\/based memory allocator. 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{memory__buffer__alloc_8h_a1fa1e20d4ff40eb6c2a740d7d26b2749}\label{memory__buffer__alloc_8h_a1fa1e20d4ff40eb6c2a740d7d26b2749}} 
+\index{memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+P\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+P\+LE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+P\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+P\+LE}!memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+P\+LE}{MBEDTLS\_MEMORY\_ALIGN\_MULTIPLE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+P\+LE~4}
+
+Align on multiples of this value 
+
+Definition at line 43 of file memory\+\_\+buffer\+\_\+alloc.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{memory__buffer__alloc_8h_ac70d134be54133c272d8eab2cb85dfbf}\label{memory__buffer__alloc_8h_ac70d134be54133c272d8eab2cb85dfbf}} 
+\index{memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}!mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+init@{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+init}}
+\index{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+init@{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+init}!memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+init()}{mbedtls\_memory\_buffer\_alloc\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+init (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Initialize use of stack-\/based memory allocator. The stack-\/based allocator does memory management inside the presented buffer and does not call calloc() and free(). It sets the global mbedtls\+\_\+calloc() and mbedtls\+\_\+free() pointers to its own functions. (Provided mbedtls\+\_\+calloc() and mbedtls\+\_\+free() are thread-\/safe if M\+B\+E\+D\+T\+L\+S\+\_\+\+T\+H\+R\+E\+A\+D\+I\+N\+G\+\_\+C is defined) 
+
+\begin{DoxyNote}{Note}
+This code is not optimized and provides a straight-\/forward implementation of a stack-\/based memory allocator.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & buffer to use as heap \\
+\hline
+{\em len} & size of the buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{memory__buffer__alloc_8h_ab1304c317468fb66c21ee52c79efe084}\label{memory__buffer__alloc_8h_ab1304c317468fb66c21ee52c79efe084}} 
+\index{memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}!mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+self\+\_\+test@{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+self\+\_\+test}}
+\index{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+self\+\_\+test@{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+self\+\_\+test}!memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+self\+\_\+test()}{mbedtls\_memory\_buffer\_alloc\_self\_test()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+self\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{verbose }\end{DoxyParamCaption})}
+
+
+
+Checkup routine. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, or 1 if a test failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{memory__buffer__alloc_8h_a7aae8a0cd61f08dd6734ebc8a8a3ba38}\label{memory__buffer__alloc_8h_a7aae8a0cd61f08dd6734ebc8a8a3ba38}} 
+\index{memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}!mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+verify@{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+verify}}
+\index{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+verify@{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+verify}!memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+verify()}{mbedtls\_memory\_buffer\_alloc\_verify()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+memory\+\_\+buffer\+\_\+alloc\+\_\+verify (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Verifies that all headers in the memory buffer are correct and contain sane values. Helps debug buffer-\/overflow errors. 
+
+Prints out first failure if M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+D\+E\+B\+UG is defined. Prints out full header information if M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+D\+E\+B\+UG is defined. (Includes stack trace information for each block if M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+A\+C\+K\+T\+R\+A\+CE is defined as well).
+
+\begin{DoxyReturn}{Returns}
+0 if verified, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{memory__buffer__alloc_8h_aaa50603bb2f2f1fe8d97d6953589b832}\label{memory__buffer__alloc_8h_aaa50603bb2f2f1fe8d97d6953589b832}} 
+\index{memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}!mbedtls\+\_\+memory\+\_\+buffer\+\_\+set\+\_\+verify@{mbedtls\+\_\+memory\+\_\+buffer\+\_\+set\+\_\+verify}}
+\index{mbedtls\+\_\+memory\+\_\+buffer\+\_\+set\+\_\+verify@{mbedtls\+\_\+memory\+\_\+buffer\+\_\+set\+\_\+verify}!memory\+\_\+buffer\+\_\+alloc.\+h@{memory\+\_\+buffer\+\_\+alloc.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+memory\+\_\+buffer\+\_\+set\+\_\+verify()}{mbedtls\_memory\_buffer\_set\_verify()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+memory\+\_\+buffer\+\_\+set\+\_\+verify (\begin{DoxyParamCaption}\item[{int}]{verify }\end{DoxyParamCaption})}
+
+
+
+Determine when the allocator should automatically verify the state of the entire chain of headers / meta-\/data. (Default\+: M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+N\+O\+NE) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verify} & One of M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+N\+O\+NE, M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+A\+L\+L\+OC, M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+R\+EE or M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+A\+L\+W\+A\+YS \\
+\hline
+\end{DoxyParams}

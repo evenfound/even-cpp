@@ -1,0 +1,11 @@
+digraph "QWebSocket::sslConfiguration"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node96 [label="QWebSocket::sslConfiguration",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node96 -> Node97 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node97 [label="QWebSocket::setSslConfiguration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_web_socket.html#a2b47402d89258caa95e46452b698cc3a"];
+  Node97 -> Node98 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node98 [label="QWebSocketPrivate::\lupgradeFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_web_socket_private.html#a5c867be71bd2e6a66136cab1d954e611"];
+}

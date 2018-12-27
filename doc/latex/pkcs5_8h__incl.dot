@@ -1,0 +1,29 @@
+digraph "prerequisites/c-libp2p/include/mbedtls/pkcs5.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="prerequisites/c-libp2p\l/include/mbedtls/pkcs5.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="asn1.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$asn1_8h.html",tooltip="Generic ASN.1 parsing. "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="config.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$c-libp2p_2include_2mbedtls_2config_8h_source.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="check_config.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$check__config_8h.html",tooltip="Consistency checks for configuration options. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="limits.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="stddef.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="bignum.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bignum_8h.html",tooltip="Multi-precision integer library. "];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="md.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$md_8h.html",tooltip="Generic message digest wrapper. "];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node0 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node0 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+}

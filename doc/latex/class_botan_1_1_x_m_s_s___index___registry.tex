@@ -1,0 +1,75 @@
+\hypertarget{class_botan_1_1_x_m_s_s___index___registry}{}\section{Botan\+:\+:X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry Class Reference}
+\label{class_botan_1_1_x_m_s_s___index___registry}\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry@{Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}}
+
+
+{\ttfamily \#include $<$xmss\+\_\+index\+\_\+registry.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___index___registry_add9f8d6bd8f776b4ffaa8b446a28a918}\label{class_botan_1_1_x_m_s_s___index___registry_add9f8d6bd8f776b4ffaa8b446a28a918}} 
+{\bfseries X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry} (const \mbox{\hyperlink{class_botan_1_1_x_m_s_s___index___registry}{X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___index___registry_a83a4bf4d25f6a03e25021aeff1e32684}\label{class_botan_1_1_x_m_s_s___index___registry_a83a4bf4d25f6a03e25021aeff1e32684}} 
+\mbox{\hyperlink{class_botan_1_1_x_m_s_s___index___registry}{X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_botan_1_1_x_m_s_s___index___registry}{X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}} \&)=delete
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_botan_1_1_atomic}{Atomic}}$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{class_botan_1_1_x_m_s_s___index___registry_a10f269ceb92c6fa9c0916708c399d6c2}{get}} (const secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&private\+\_\+seed, const secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&prf)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_botan_1_1_x_m_s_s___index___registry}{X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}} \& \mbox{\hyperlink{class_botan_1_1_x_m_s_s___index___registry_a1f1342ed0b520a67ae8165d3cf0e989e}{get\+\_\+instance}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A registry for X\+M\+SS private keys, keeps track of the leaf index for independend copies of the same key. 
+
+Definition at line 21 of file xmss\+\_\+index\+\_\+registry.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___index___registry_a10f269ceb92c6fa9c0916708c399d6c2}\label{class_botan_1_1_x_m_s_s___index___registry_a10f269ceb92c6fa9c0916708c399d6c2}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry@{Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}!get@{get}}
+\index{get@{get}!Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry@{Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_botan_1_1_atomic}{Atomic}}$<$ size\+\_\+t $>$ $>$ Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry\+::get (\begin{DoxyParamCaption}\item[{const secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&}]{private\+\_\+seed,  }\item[{const secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&}]{prf }\end{DoxyParamCaption})}
+
+Retrieves the last unused leaf index for the private key identified by private\+\_\+seed and prf. The leaf index will be updated properly across independent copies of private\+\_\+key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em private\+\_\+seed} & Part of the unique identifier for an X\+M\+S\+S\+\_\+\+Private\+Key. \\
+\hline
+{\em prf} & Part of the unique identifier for an X\+M\+S\+S\+\_\+\+Private\+Key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+last unused leaf index for private\+\_\+key. 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file xmss\+\_\+index\+\_\+registry.\+cpp.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___index___registry_a1f1342ed0b520a67ae8165d3cf0e989e}\label{class_botan_1_1_x_m_s_s___index___registry_a1f1342ed0b520a67ae8165d3cf0e989e}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry@{Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}!get\+\_\+instance@{get\+\_\+instance}}
+\index{get\+\_\+instance@{get\+\_\+instance}!Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry@{Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}}
+\subsubsection{\texorpdfstring{get\+\_\+instance()}{get\_instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_botan_1_1_x_m_s_s___index___registry}{X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry}}\& Botan\+::\+X\+M\+S\+S\+\_\+\+Index\+\_\+\+Registry\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Retrieves a handle to the process-\/wide unique X\+M\+SS index registry.
+
+\begin{DoxyReturn}{Returns}
+Reference to unique X\+M\+SS index registry. 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file xmss\+\_\+index\+\_\+registry.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/pubkey/xmss/xmss\+\_\+index\+\_\+registry.\+h\item 
+prerequisites/botan/src/lib/pubkey/xmss/xmss\+\_\+index\+\_\+registry.\+cpp\end{DoxyCompactItemize}

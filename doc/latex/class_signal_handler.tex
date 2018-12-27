@@ -1,0 +1,49 @@
+\hypertarget{class_signal_handler}{}\section{Signal\+Handler Class Reference}
+\label{class_signal_handler}\index{Signal\+Handler@{Signal\+Handler}}
+
+
+Inheritance diagram for Signal\+Handler\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_signal_handler_a4fb7422612f6ad73fe4364edb7a37efa}\label{class_signal_handler_a4fb7422612f6ad73fe4364edb7a37efa}} 
+enum {\bfseries S\+I\+G\+N\+A\+LS} \{ \newline
+{\bfseries S\+I\+G\+\_\+\+U\+N\+H\+A\+N\+D\+L\+ED} = 0, 
+{\bfseries S\+I\+G\+\_\+\+N\+O\+OP} = 1, 
+{\bfseries S\+I\+G\+\_\+\+I\+NT} = 2, 
+{\bfseries S\+I\+G\+\_\+\+T\+E\+RM} = 4, 
+\newline
+{\bfseries S\+I\+G\+\_\+\+C\+L\+O\+SE} = 8, 
+{\bfseries S\+I\+G\+\_\+\+R\+E\+L\+O\+AD} = 16, 
+{\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+G\+N\+A\+LS} = S\+I\+G\+\_\+\+I\+NT $\vert$ S\+I\+G\+\_\+\+T\+E\+RM $\vert$ S\+I\+G\+\_\+\+C\+L\+O\+SE
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_signal_handler_ab23ae5b558f9d2cf929e1f43d3c7039d}\label{class_signal_handler_ab23ae5b558f9d2cf929e1f43d3c7039d}} 
+{\bfseries Signal\+Handler} (int mask=D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+G\+N\+A\+LS)
+\item 
+\mbox{\Hypertarget{class_signal_handler_ab3288a366fbbc53493e0f2e22afacca4}\label{class_signal_handler_ab3288a366fbbc53493e0f2e22afacca4}} 
+virtual bool {\bfseries handle\+Signal} (int signal)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_signal_handler_ae9142efda56e33a2cec2fc767079fa3d}\label{class_signal_handler_ae9142efda56e33a2cec2fc767079fa3d}} 
+static const int {\bfseries num\+Signals} = 6
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 4 of file Signal\+Handler.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/Signal\+Handler.\+hxx\item 
+src/core/\mbox{\hyperlink{_signal_handler_8cxx}{Signal\+Handler.\+cxx}}\end{DoxyCompactItemize}

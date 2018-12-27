@@ -1,0 +1,75 @@
+\hypertarget{struct_connection}{}\section{Connection Struct Reference}
+\label{struct_connection}\index{Connection@{Connection}}
+
+
+{\ttfamily \#include $<$connection.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_connection_a67179dde53baeb40e057fff83c580db9}\label{struct_connection_a67179dde53baeb40e057fff83c580db9}} 
+int {\bfseries socket\+\_\+handle}
+\item 
+int($\ast$ \mbox{\hyperlink{struct_connection_a2a49f61cc45251e0c80af339320eeaf6}{read}} )(const struct \mbox{\hyperlink{struct_connection}{Connection}} $\ast$conn, char $\ast$$\ast$in, size\+\_\+t $\ast$in\+\_\+size)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_connection_a30845295ec102e6bb5a505490a906689}{write}} )(const struct \mbox{\hyperlink{struct_connection}{Connection}} $\ast$conn, const char $\ast$out, size\+\_\+t out\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements an interface to connect and talk to different nodes. A \mbox{\hyperlink{struct_dialer}{Dialer}} will connect, and return a \mbox{\hyperlink{struct_connection}{Connection}} structure 
+
+Definition at line 10 of file connection.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_connection_a2a49f61cc45251e0c80af339320eeaf6}\label{struct_connection_a2a49f61cc45251e0c80af339320eeaf6}} 
+\index{Connection@{Connection}!read@{read}}
+\index{read@{read}!Connection@{Connection}}
+\subsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily int($\ast$ Connection\+::read) (const struct \mbox{\hyperlink{struct_connection}{Connection}} $\ast$conn, char $\ast$$\ast$in, size\+\_\+t $\ast$in\+\_\+size)}
+
+Read from the stream 
+\begin{DoxyParams}{Parameters}
+{\em socket\+\_\+handle} & the socket to read from \\
+\hline
+{\em in} & what was read in N\+O\+TE\+: this allocates memory \\
+\hline
+{\em in\+\_\+size} & the number of bytes read in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes written or negative number on error 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file connection.\+h.
+
+\mbox{\Hypertarget{struct_connection_a30845295ec102e6bb5a505490a906689}\label{struct_connection_a30845295ec102e6bb5a505490a906689}} 
+\index{Connection@{Connection}!write@{write}}
+\index{write@{write}!Connection@{Connection}}
+\subsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily int($\ast$ Connection\+::write) (const struct \mbox{\hyperlink{struct_connection}{Connection}} $\ast$conn, const char $\ast$out, size\+\_\+t out\+\_\+size)}
+
+Write to the stream 
+\begin{DoxyParams}{Parameters}
+{\em socket\+\_\+handle} & the socket to write to \\
+\hline
+{\em out} & the bytes to write to the stream \\
+\hline
+{\em out\+\_\+size} & the number of bytes to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, otherwise an error code 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file connection.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/libp2p/conn/connection.\+h\end{DoxyCompactItemize}

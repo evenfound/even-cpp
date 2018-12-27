@@ -1,0 +1,100 @@
+\hypertarget{startup_8cpp}{}\section{prerequisites/\+Qt\+Web\+App/\+Demo3/src/startup.cpp File Reference}
+\label{startup_8cpp}\index{prerequisites/\+Qt\+Web\+App/\+Demo3/src/startup.\+cpp@{prerequisites/\+Qt\+Web\+App/\+Demo3/src/startup.\+cpp}}
+{\ttfamily \#include \char`\"{}static.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}startup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}filelogger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}requesthandler.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Q\+Dir$>$}\newline
+{\ttfamily \#include $<$Q\+File$>$}\newline
+Include dependency graph for startup.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{startup_8cpp_a237e4d19d7046d08c4cc00a45808feaf}{A\+P\+P\+N\+A\+ME}}~\char`\"{}Demo3\char`\"{}
+\item 
+\#define \mbox{\hyperlink{startup_8cpp_a4212c063f8d4b795358798ef1577e554}{O\+R\+G\+A\+N\+I\+S\+A\+T\+I\+ON}}~\char`\"{}Butterfly\char`\"{}
+\item 
+\#define \mbox{\hyperlink{startup_8cpp_a5f024226e6b8e20da1226b39ce384857}{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}}~\char`\"{}Demo application for Qt\+Web\+App\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{startup_8cpp_a20ea8d5eeb954aedbca663ead4275346}{search\+Config\+File}} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_file_logger}{File\+Logger}} $\ast$ \mbox{\hyperlink{startup_8cpp_a080e39ee92023bf78e104a0b247d098d}{logger}}
+\begin{DoxyCompactList}\small\item\em Global value of logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Stefan Frings 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{startup_8cpp_a237e4d19d7046d08c4cc00a45808feaf}\label{startup_8cpp_a237e4d19d7046d08c4cc00a45808feaf}} 
+\index{startup.\+cpp@{startup.\+cpp}!A\+P\+P\+N\+A\+ME@{A\+P\+P\+N\+A\+ME}}
+\index{A\+P\+P\+N\+A\+ME@{A\+P\+P\+N\+A\+ME}!startup.\+cpp@{startup.\+cpp}}
+\subsubsection{\texorpdfstring{A\+P\+P\+N\+A\+ME}{APPNAME}}
+{\footnotesize\ttfamily \#define A\+P\+P\+N\+A\+ME~\char`\"{}Demo3\char`\"{}}
+
+Name of this application 
+
+Definition at line 14 of file startup.\+cpp.
+
+\mbox{\Hypertarget{startup_8cpp_a5f024226e6b8e20da1226b39ce384857}\label{startup_8cpp_a5f024226e6b8e20da1226b39ce384857}} 
+\index{startup.\+cpp@{startup.\+cpp}!D\+E\+S\+C\+R\+I\+P\+T\+I\+ON@{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}}
+\index{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON@{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}!startup.\+cpp@{startup.\+cpp}}
+\subsubsection{\texorpdfstring{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}{DESCRIPTION}}
+{\footnotesize\ttfamily \#define D\+E\+S\+C\+R\+I\+P\+T\+I\+ON~\char`\"{}Demo application for Qt\+Web\+App\char`\"{}}
+
+Short description of the Windows service 
+
+Definition at line 20 of file startup.\+cpp.
+
+\mbox{\Hypertarget{startup_8cpp_a4212c063f8d4b795358798ef1577e554}\label{startup_8cpp_a4212c063f8d4b795358798ef1577e554}} 
+\index{startup.\+cpp@{startup.\+cpp}!O\+R\+G\+A\+N\+I\+S\+A\+T\+I\+ON@{O\+R\+G\+A\+N\+I\+S\+A\+T\+I\+ON}}
+\index{O\+R\+G\+A\+N\+I\+S\+A\+T\+I\+ON@{O\+R\+G\+A\+N\+I\+S\+A\+T\+I\+ON}!startup.\+cpp@{startup.\+cpp}}
+\subsubsection{\texorpdfstring{O\+R\+G\+A\+N\+I\+S\+A\+T\+I\+ON}{ORGANISATION}}
+{\footnotesize\ttfamily \#define O\+R\+G\+A\+N\+I\+S\+A\+T\+I\+ON~\char`\"{}Butterfly\char`\"{}}
+
+Publisher of this application 
+
+Definition at line 17 of file startup.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{startup_8cpp_a20ea8d5eeb954aedbca663ead4275346}\label{startup_8cpp_a20ea8d5eeb954aedbca663ead4275346}} 
+\index{startup.\+cpp@{startup.\+cpp}!search\+Config\+File@{search\+Config\+File}}
+\index{search\+Config\+File@{search\+Config\+File}!startup.\+cpp@{startup.\+cpp}}
+\subsubsection{\texorpdfstring{search\+Config\+File()}{searchConfigFile()}}
+{\footnotesize\ttfamily Q\+String search\+Config\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Search the configuration file 
+
+Definition at line 26 of file startup.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{startup_8cpp_a080e39ee92023bf78e104a0b247d098d}\label{startup_8cpp_a080e39ee92023bf78e104a0b247d098d}} 
+\index{startup.\+cpp@{startup.\+cpp}!logger@{logger}}
+\index{logger@{logger}!startup.\+cpp@{startup.\+cpp}}
+\subsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstefanfrings_1_1_file_logger}{File\+Logger}}$\ast$ logger}
+
+
+
+Global value of logger. 
+
+Logger class 
+
+Definition at line 23 of file startup.\+cpp.
+

@@ -1,0 +1,48 @@
+digraph "QtServiceController::serviceName"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node44 [label="QtServiceController\l::serviceName",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node44 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node45 [label="QtServiceBase::serviceName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_base.html#a643f253b3931e6a6c4e8caa190756214"];
+  Node45 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node46 [label="QtServiceBase::exec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_base.html#afae2e589de71c1ae3ae8db3dc9ab9c64"];
+  Node46 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node47 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$prerequisites_2_qt_web_app_2_demo3_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node45 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node48 [label="QtServiceBase::logMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_base.html#ac071ce0b30547e17c3b3ca9dcb0108c9"];
+  Node44 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node49 [label="QtServiceController\l::serviceDescription",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a503c0fadf098b4c5bbccbb2a57f911e2"];
+  Node44 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node50 [label="QtServiceController\l::startupType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#acfd3b5cb23c17bf415f1d606b8461109"];
+  Node44 -> Node51 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node51 [label="QtServiceController\l::serviceFilePath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a5ab709fdeb3ab526c92ccbbe1b2706c6"];
+  Node51 -> Node52 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node52 [label="QtServiceController\l::install",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a7e2b85e911ff152557dd25959e76094b"];
+  Node51 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node53 [label="QtServiceController\l::start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a70f274d3f4f5a5fea60b8fd7331b31fb"];
+  Node44 -> Node54 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node54 [label="QtServiceController\l::uninstall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a25cd2f1f6868ece5de77976eb55cb74c"];
+  Node54 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 -> Node55 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node55 [label="QtServiceController\l::stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#ad06afa647666769e309474b18bf7cf90"];
+  Node55 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 -> Node56 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node56 [label="QtServiceController\l::pause",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#aeee2fcc9469f77c7ed8a7955c4fa3a07"];
+  Node56 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 -> Node57 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node57 [label="QtServiceController\l::resume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a2d71eab6146427fc7b431386bf72eaec"];
+  Node57 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 -> Node58 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node58 [label="QtServiceController\l::sendCommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a1428c7d51403416bc7663ae37c446cfc"];
+  Node58 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 -> Node59 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node59 [label="QtServiceController\l::isInstalled",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a7e36fb18a273118709faf22f732feac4"];
+  Node59 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node59 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 -> Node60 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node60 [label="QtServiceController\l::isRunning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service_controller.html#a4a11b35468848388174a36af66f25fc3"];
+  Node60 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node60 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

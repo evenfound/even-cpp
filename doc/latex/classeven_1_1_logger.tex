@@ -1,0 +1,114 @@
+\hypertarget{classeven_1_1_logger}{}\section{even\+:\+:Logger Class Reference}
+\label{classeven_1_1_logger}\index{even\+::\+Logger@{even\+::\+Logger}}
+
+
+Class Loggerger -\/ manage out log message to directed output.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+hxx$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classeven_1_1_logger_1_1_message}{Message}}
+\begin{DoxyCompactList}\small\item\em Inherit class for object \mbox{\hyperlink{classeven_1_1_logger_1_1_message}{Message}} type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}\label{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}} 
+enum \mbox{\hyperlink{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}{Severity}} \{ \newline
+{\bfseries Silent} = 0, 
+{\bfseries Critical} = 10, 
+{\bfseries Warning} = 20, 
+{\bfseries Info} = 30, 
+\newline
+{\bfseries Debug} = 40
+ \}
+\begin{DoxyCompactList}\small\item\em Type of outline message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeven_1_1_logger_a4dd8f8d34117f1ac13d0f72e7ad7cf55}\label{classeven_1_1_logger_a4dd8f8d34117f1ac13d0f72e7ad7cf55}} 
+{\bfseries Logger} (\mbox{\hyperlink{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}{Severity}} severity)
+\item 
+\mbox{\hyperlink{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}{Severity}} \mbox{\hyperlink{classeven_1_1_logger_a8aa6bfc4490b9cff931d5d809f146136}{get\+Severity}} ()
+\begin{DoxyCompactList}\small\item\em get\+Severity -\/ Got the type log level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_logger_ab338881066760d6d309f21e984703cac}\label{classeven_1_1_logger_ab338881066760d6d309f21e984703cac}} 
+void \mbox{\hyperlink{classeven_1_1_logger_ab338881066760d6d309f21e984703cac}{set\+Severity}} (\mbox{\hyperlink{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}{Severity}} new\+Severety)
+\begin{DoxyCompactList}\small\item\em Set log type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeven_1_1_logger_a8869f9a06b7b6103328d1cf2e787bb23}\label{classeven_1_1_logger_a8869f9a06b7b6103328d1cf2e787bb23}} 
+static void \mbox{\hyperlink{classeven_1_1_logger_a8869f9a06b7b6103328d1cf2e787bb23}{console\+Message\+Output}} (Qt\+Msg\+Type type, const Q\+Message\+Log\+Context \&context, const Q\+String \&msg)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classeven_1_1_logger_1_1_message}{Message}} logger callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+Map$<$ \mbox{\hyperlink{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}{Severity}}, int $>$ \mbox{\hyperlink{classeven_1_1_logger_aefbda568413248ac5d03fe072f30eea2}{log\+Level}}
+\begin{DoxyCompactList}\small\item\em Level verbosity of out line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class Loggerger -\/ manage out log message to directed output. 
+
+Definition at line 23 of file Logger.\+hxx.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeven_1_1_logger_a8aa6bfc4490b9cff931d5d809f146136}\label{classeven_1_1_logger_a8aa6bfc4490b9cff931d5d809f146136}} 
+\index{even\+::\+Logger@{even\+::\+Logger}!get\+Severity@{get\+Severity}}
+\index{get\+Severity@{get\+Severity}!even\+::\+Logger@{even\+::\+Logger}}
+\subsubsection{\texorpdfstring{get\+Severity()}{getSeverity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}{Severity}} even\+::\+Logger\+::get\+Severity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Severity -\/ Got the type log level 
+
+\begin{DoxyReturn}{Returns}
+-\/ type Severity 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Logger.\+hxx.
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classeven_1_1_logger_aefbda568413248ac5d03fe072f30eea2}\label{classeven_1_1_logger_aefbda568413248ac5d03fe072f30eea2}} 
+\index{even\+::\+Logger@{even\+::\+Logger}!log\+Level@{log\+Level}}
+\index{log\+Level@{log\+Level}!even\+::\+Logger@{even\+::\+Logger}}
+\subsubsection{\texorpdfstring{log\+Level}{logLevel}}
+{\footnotesize\ttfamily Q\+Map$<$ \mbox{\hyperlink{classeven_1_1_logger_adac430b7650d87ac25ace824917d66cf}{Logger\+::\+Severity}}, int $>$ Logger\+::log\+Level\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{Debug, 15\},
+    \{Warning, 20\},
+    \{Info, 15\},
+    \{Critical, 10\}
+\}
+\end{DoxyCode}
+
+
+Level verbosity of out line. 
+
+$<$
+
+Level verbosity of out line 
+
+Definition at line 39 of file Logger.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_logger_8hxx}{Logger.\+hxx}}\item 
+src/core/\mbox{\hyperlink{_logger_8cxx}{Logger.\+cxx}}\end{DoxyCompactItemize}

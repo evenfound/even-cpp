@@ -1,0 +1,51 @@
+\hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Key\+Exchange Class Reference}
+\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange}\index{Q\+Ssh\+::\+Internal\+::\+Ssh\+Key\+Exchange@{Q\+Ssh\+::\+Internal\+::\+Ssh\+Key\+Exchange}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a0325f4838892bc9739335a650ea72d37}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a0325f4838892bc9739335a650ea72d37}} 
+{\bfseries Ssh\+Key\+Exchange} (\mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_send_facility}{Ssh\+Send\+Facility}} \&send\+Facility)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a3007f5fa434e2828ac4bfe87da6f1030}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a3007f5fa434e2828ac4bfe87da6f1030}} 
+void {\bfseries send\+Kex\+Init\+Packet} (const Q\+Byte\+Array \&server\+Id)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a69ddfac9f244b3c6d197e2844619109b}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a69ddfac9f244b3c6d197e2844619109b}} 
+bool {\bfseries send\+Dh\+Init\+Packet} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&server\+Kex\+Init)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_aa6a737580681d469fbe9b2df0dd552fb}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_aa6a737580681d469fbe9b2df0dd552fb}} 
+void {\bfseries send\+New\+Keys\+Packet} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&dh\+Reply, const Q\+Byte\+Array \&client\+Id)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a640fef7fd431677a98057584cb33ba4c}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a640fef7fd431677a98057584cb33ba4c}} 
+Q\+Byte\+Array {\bfseries k} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_ab15378688078d75681e6972883f01c8a}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_ab15378688078d75681e6972883f01c8a}} 
+Q\+Byte\+Array {\bfseries h} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_adc204675e68da1be7c27f6e19668c480}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_adc204675e68da1be7c27f6e19668c480}} 
+Botan\+::\+Hash\+Function $\ast$ {\bfseries hash} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_aca3eab14c976b7b136ac80c8575dc7e5}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_aca3eab14c976b7b136ac80c8575dc7e5}} 
+Q\+Byte\+Array {\bfseries encryption\+Algo} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_ad2089c0eb2efa176bf7185dd9a7c9feb}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_ad2089c0eb2efa176bf7185dd9a7c9feb}} 
+Q\+Byte\+Array {\bfseries decryption\+Algo} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a65938f28dc6d5d0937c3d37935c6fbf1}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_a65938f28dc6d5d0937c3d37935c6fbf1}} 
+Q\+Byte\+Array {\bfseries h\+Mac\+Algo\+Client\+To\+Server} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_af99966bb7c0b8fb698a19fc41c1203c8}\label{class_q_ssh_1_1_internal_1_1_ssh_key_exchange_af99966bb7c0b8fb698a19fc41c1203c8}} 
+Q\+Byte\+Array {\bfseries h\+Mac\+Algo\+Server\+To\+Client} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 48 of file sshkeyexchange\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sshkeyexchange\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sshkeyexchange.\+cpp\end{DoxyCompactItemize}

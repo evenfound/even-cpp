@@ -1,0 +1,35 @@
+digraph "mbedtls_ssl_cache_entry"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="mbedtls_ssl_cache_entry",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" peer_cert" ,fontname="Helvetica"];
+  Node2 [label="mbedtls_asn1_buf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__asn1__buf.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" len" ,fontname="Helvetica"];
+  Node3 [label="size_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session" ,fontname="Helvetica"];
+  Node4 [label="mbedtls_ssl_session",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__ssl__session.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ticket_lifetime\nverify_result" ,fontname="Helvetica"];
+  Node5 [label="uint32_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" peer_cert" ,fontname="Helvetica"];
+  Node6 [label="mbedtls_x509_crt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__x509__crt.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" subject_alt_names\next_key_usage" ,fontname="Helvetica"];
+  Node7 [label="mbedtls_asn1_sequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__asn1__sequence.html"];
+  Node7 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node2 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" buf" ,fontname="Helvetica"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" issuer\nsubject" ,fontname="Helvetica"];
+  Node8 [label="mbedtls_asn1_named_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__asn1__named__data.html"];
+  Node8 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node2 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" oid\nval" ,fontname="Helvetica"];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" raw\nissuer_raw\nsig_oid\nv3_ext\nserial\nsubject_raw\nsubject_id\nsig\nissuer_id\ntbs\n..." ,fontname="Helvetica"];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" valid_to\nvalid_from" ,fontname="Helvetica"];
+  Node9 [label="mbedtls_x509_time",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__x509__time.html"];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pk" ,fontname="Helvetica"];
+  Node10 [label="mbedtls_pk_context",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__pk__context.html",tooltip="Public key container. "];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pk_info" ,fontname="Helvetica"];
+  Node11 [label="mbedtls_pk_info_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__pk__info__t.html"];
+  Node3 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" get_bitlen" ,fontname="Helvetica"];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_len\nticket_len" ,fontname="Helvetica"];
+}

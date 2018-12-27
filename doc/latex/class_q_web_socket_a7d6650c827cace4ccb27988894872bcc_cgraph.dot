@@ -1,0 +1,9 @@
+digraph "QWebSocket::setPauseMode"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node84 [label="QWebSocket::setPauseMode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node84 -> Node85 [color="midnightblue",fontsize="10",style="solid"];
+  Node85 [label="QWebSocket::pauseMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_web_socket.html#a15778b8a5f6ffb83c61b5e9b1701eb28"];
+}

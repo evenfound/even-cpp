@@ -1,0 +1,17 @@
+digraph "stefanfrings::TemplateLoader::tryFile"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node11 [label="stefanfrings::TemplateLoader\l::tryFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="stefanfrings::TemplateCache\l::tryFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_template_cache.html#a65584abe7d62c93659c741f41bdeeada"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="stefanfrings::TemplateLoader\l::getTemplate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_template_loader.html#ae8639b349ec9c9a01ec82ea1ed8d0af8"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="TemplateController\l::service",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_template_controller.html#ad34c48cf60094e0deb73aa7145e93eac"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="RequestMapper::service",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_request_mapper.html#a5faa3e99e8599b260d2c9ec1479b6419"];
+  Node13 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="even::TemplateController\l::service",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_template_controller.html#ad34c48cf60094e0deb73aa7145e93eac"];
+}

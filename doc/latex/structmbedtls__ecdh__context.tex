@@ -1,0 +1,141 @@
+\hypertarget{structmbedtls__ecdh__context}{}\section{mbedtls\+\_\+ecdh\+\_\+context Struct Reference}
+\label{structmbedtls__ecdh__context}\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+
+
+E\+C\+DH context structure.  
+
+
+
+
+{\ttfamily \#include $<$ecdh.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+ecdh\+\_\+context\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__group}{mbedtls\+\_\+ecp\+\_\+group}} \mbox{\hyperlink{structmbedtls__ecdh__context_a9fd1b03576203de87a92a2d49a4d20ed}{grp}}
+\item 
+\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} \mbox{\hyperlink{structmbedtls__ecdh__context_a22e51b2ea7d4728e48e8897535831cf4}{d}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecdh__context_af2657e12e87be5b3e73bcf1ea2941d0b}{Q}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecdh__context_a64ecde7d95dcc725d6af5f8e3ce542ca}{Qp}}
+\item 
+\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} \mbox{\hyperlink{structmbedtls__ecdh__context_abfd253d99f23c57cbeafc41985db764c}{z}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ecdh__context_ae7ae7b0231e898b0d973df360aea8f17}{point\+\_\+format}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecdh__context_a6e374b0be49dce0fb02ca8ccfbfe1fee}{Vi}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecdh__context_a2ee12052791b2f212047a16b4e0dcc77}{Vf}}
+\item 
+\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} \mbox{\hyperlink{structmbedtls__ecdh__context_af5412a43eb79b11a6cc13c3a9af55e13}{\+\_\+d}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+C\+DH context structure. 
+
+Definition at line 44 of file ecdh.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__ecdh__context_af5412a43eb79b11a6cc13c3a9af55e13}\label{structmbedtls__ecdh__context_af5412a43eb79b11a6cc13c3a9af55e13}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!\+\_\+d@{\+\_\+d}}
+\index{\+\_\+d@{\+\_\+d}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{\+\_\+d}{\_d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} mbedtls\+\_\+ecdh\+\_\+context\+::\+\_\+d}
+
+previous d (for later) 
+
+Definition at line 54 of file ecdh.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecdh__context_a22e51b2ea7d4728e48e8897535831cf4}\label{structmbedtls__ecdh__context_a22e51b2ea7d4728e48e8897535831cf4}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!d@{d}}
+\index{d@{d}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} mbedtls\+\_\+ecdh\+\_\+context\+::d}
+
+our secret value (private key) 
+
+Definition at line 47 of file ecdh.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecdh__context_a9fd1b03576203de87a92a2d49a4d20ed}\label{structmbedtls__ecdh__context_a9fd1b03576203de87a92a2d49a4d20ed}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!grp@{grp}}
+\index{grp@{grp}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{grp}{grp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__group}{mbedtls\+\_\+ecp\+\_\+group}} mbedtls\+\_\+ecdh\+\_\+context\+::grp}
+
+elliptic curve used 
+
+Definition at line 46 of file ecdh.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecdh__context_ae7ae7b0231e898b0d973df360aea8f17}\label{structmbedtls__ecdh__context_ae7ae7b0231e898b0d973df360aea8f17}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!point\+\_\+format@{point\+\_\+format}}
+\index{point\+\_\+format@{point\+\_\+format}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{point\+\_\+format}{point\_format}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ecdh\+\_\+context\+::point\+\_\+format}
+
+format for point export in T\+LS messages 
+
+Definition at line 51 of file ecdh.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecdh__context_af2657e12e87be5b3e73bcf1ea2941d0b}\label{structmbedtls__ecdh__context_af2657e12e87be5b3e73bcf1ea2941d0b}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!Q@{Q}}
+\index{Q@{Q}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{Q}{Q}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecdh\+\_\+context\+::Q}
+
+our public value (public key) 
+
+Definition at line 48 of file ecdh.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecdh__context_a64ecde7d95dcc725d6af5f8e3ce542ca}\label{structmbedtls__ecdh__context_a64ecde7d95dcc725d6af5f8e3ce542ca}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!Qp@{Qp}}
+\index{Qp@{Qp}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{Qp}{Qp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecdh\+\_\+context\+::\+Qp}
+
+peer\textquotesingle{}s public value (public key) 
+
+Definition at line 49 of file ecdh.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecdh__context_a2ee12052791b2f212047a16b4e0dcc77}\label{structmbedtls__ecdh__context_a2ee12052791b2f212047a16b4e0dcc77}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!Vf@{Vf}}
+\index{Vf@{Vf}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{Vf}{Vf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecdh\+\_\+context\+::\+Vf}
+
+un-\/blinding value (for later) 
+
+Definition at line 53 of file ecdh.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecdh__context_a6e374b0be49dce0fb02ca8ccfbfe1fee}\label{structmbedtls__ecdh__context_a6e374b0be49dce0fb02ca8ccfbfe1fee}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!Vi@{Vi}}
+\index{Vi@{Vi}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{Vi}{Vi}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecdh\+\_\+context\+::\+Vi}
+
+blinding value (for later) 
+
+Definition at line 52 of file ecdh.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecdh__context_abfd253d99f23c57cbeafc41985db764c}\label{structmbedtls__ecdh__context_abfd253d99f23c57cbeafc41985db764c}} 
+\index{mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}!z@{z}}
+\index{z@{z}!mbedtls\+\_\+ecdh\+\_\+context@{mbedtls\+\_\+ecdh\+\_\+context}}
+\subsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} mbedtls\+\_\+ecdh\+\_\+context\+::z}
+
+shared secret 
+
+Definition at line 50 of file ecdh.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/ecdh.\+h\end{DoxyCompactItemize}

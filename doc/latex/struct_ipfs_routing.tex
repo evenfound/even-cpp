@@ -1,0 +1,215 @@
+\hypertarget{struct_ipfs_routing}{}\section{Ipfs\+Routing Struct Reference}
+\label{struct_ipfs_routing}\index{Ipfs\+Routing@{Ipfs\+Routing}}
+
+
+Collaboration diagram for Ipfs\+Routing\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_ipfs_routing_ae1708cb3d50aa163ebfaa297cbbfafe4}\label{struct_ipfs_routing_ae1708cb3d50aa163ebfaa297cbbfafe4}} 
+struct \mbox{\hyperlink{struct_ipfs_node}{Ipfs\+Node}} $\ast$ {\bfseries local\+\_\+node}
+\item 
+\mbox{\Hypertarget{struct_ipfs_routing_a35d80ab136cb81c104655e313be7aae9}\label{struct_ipfs_routing_a35d80ab136cb81c104655e313be7aae9}} 
+size\+\_\+t {\bfseries ds\+\_\+len}
+\item 
+\mbox{\Hypertarget{struct_ipfs_routing_afa2e7ff725a80e20a0ad310e6f7a5c2b}\label{struct_ipfs_routing_afa2e7ff725a80e20a0ad310e6f7a5c2b}} 
+struct \mbox{\hyperlink{struct_rsa_private_key}{Rsa\+Private\+Key}} $\ast$ {\bfseries sk}
+\item 
+int($\ast$ \mbox{\hyperlink{struct_ipfs_routing_af24b01a157cb630156caece339bfc8ae}{Put\+Value}} )(struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$, const unsigned char $\ast$, size\+\_\+t, const void $\ast$, size\+\_\+t)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_ipfs_routing_a6ae480b788a12725f4c8806d7046a526}{Get\+Value}} )(struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$, const unsigned char $\ast$, size\+\_\+t, void $\ast$$\ast$, size\+\_\+t $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_ipfs_routing_a94e1c1810459db593ef60cb2bea4c3f4}{Find\+Providers}} )(struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$routing, const unsigned char $\ast$key, size\+\_\+t key\+\_\+size, struct \mbox{\hyperlink{struct_libp2p_vector}{Libp2p\+Vector}} $\ast$$\ast$peers)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_ipfs_routing_a74a86860bbd48c4f7425b4da88724116}{Find\+Peer}} )(struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$, const unsigned char $\ast$, size\+\_\+t, struct \mbox{\hyperlink{struct_libp2p_peer}{Libp2p\+Peer}} $\ast$$\ast$result)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_ipfs_routing_a1cd051e48802e5100a42b3fe2cfa9386}{Provide}} )(struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$, const unsigned char $\ast$, size\+\_\+t)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_ipfs_routing_a37ff4bfa56e10890c6aabfaf29751758}{Ping}} )(struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$routing, struct \mbox{\hyperlink{struct_libp2p_peer}{Libp2p\+Peer}} $\ast$\mbox{\hyperlink{structpeer}{peer}})
+\item 
+int($\ast$ \mbox{\hyperlink{struct_ipfs_routing_a253c1b042c6c206af18048ad10c34155}{Bootstrap}} )(struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$)
+\item 
+\mbox{\Hypertarget{struct_ipfs_routing_a3927a61760b24ce2018666555ee8429d}\label{struct_ipfs_routing_a3927a61760b24ce2018666555ee8429d}} 
+void $\ast$($\ast$ {\bfseries Listen} )(void $\ast$)
+\item 
+\mbox{\Hypertarget{struct_ipfs_routing_a5cfebe7107c92a146ea8932e078e4135}\label{struct_ipfs_routing_a5cfebe7107c92a146ea8932e078e4135}} 
+int($\ast$ {\bfseries Shutdown} )()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file routing.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_ipfs_routing_a253c1b042c6c206af18048ad10c34155}\label{struct_ipfs_routing_a253c1b042c6c206af18048ad10c34155}} 
+\index{Ipfs\+Routing@{Ipfs\+Routing}!Bootstrap@{Bootstrap}}
+\index{Bootstrap@{Bootstrap}!Ipfs\+Routing@{Ipfs\+Routing}}
+\subsubsection{\texorpdfstring{Bootstrap}{Bootstrap}}
+{\footnotesize\ttfamily int($\ast$ Ipfs\+Routing\+::\+Bootstrap) (struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$)}
+
+Get everything going 
+\begin{DoxyParams}{Parameters}
+{\em routing} & the context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, otherwise false(0) 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file routing.\+h.
+
+\mbox{\Hypertarget{struct_ipfs_routing_a74a86860bbd48c4f7425b4da88724116}\label{struct_ipfs_routing_a74a86860bbd48c4f7425b4da88724116}} 
+\index{Ipfs\+Routing@{Ipfs\+Routing}!Find\+Peer@{Find\+Peer}}
+\index{Find\+Peer@{Find\+Peer}!Ipfs\+Routing@{Ipfs\+Routing}}
+\subsubsection{\texorpdfstring{Find\+Peer}{FindPeer}}
+{\footnotesize\ttfamily int($\ast$ Ipfs\+Routing\+::\+Find\+Peer) (struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$, const unsigned char $\ast$, size\+\_\+t, struct \mbox{\hyperlink{struct_libp2p_peer}{Libp2p\+Peer}} $\ast$$\ast$result)}
+
+Find a peer 
+\begin{DoxyParams}{Parameters}
+{\em 1} & the context \\
+\hline
+{\em 2} & the peer to look for \\
+\hline
+{\em 3} & the size of the peer char array \\
+\hline
+{\em 4} & the results \\
+\hline
+{\em 5} & the size of the results \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 or error code 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file routing.\+h.
+
+\mbox{\Hypertarget{struct_ipfs_routing_a94e1c1810459db593ef60cb2bea4c3f4}\label{struct_ipfs_routing_a94e1c1810459db593ef60cb2bea4c3f4}} 
+\index{Ipfs\+Routing@{Ipfs\+Routing}!Find\+Providers@{Find\+Providers}}
+\index{Find\+Providers@{Find\+Providers}!Ipfs\+Routing@{Ipfs\+Routing}}
+\subsubsection{\texorpdfstring{Find\+Providers}{FindProviders}}
+{\footnotesize\ttfamily int($\ast$ Ipfs\+Routing\+::\+Find\+Providers) (struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$routing, const unsigned char $\ast$key, size\+\_\+t key\+\_\+size, struct \mbox{\hyperlink{struct_libp2p_vector}{Libp2p\+Vector}} $\ast$$\ast$peers)}
+
+Find a provider 
+\begin{DoxyParams}{Parameters}
+{\em routing} & the context \\
+\hline
+{\em key} & the information that is being looked for \\
+\hline
+{\em key\+\_\+size} & the size of param 2 \\
+\hline
+{\em peers} & a vector of Libp2p\+Peers found that can provide the value for the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, otherwise false(0) 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file routing.\+h.
+
+\mbox{\Hypertarget{struct_ipfs_routing_a6ae480b788a12725f4c8806d7046a526}\label{struct_ipfs_routing_a6ae480b788a12725f4c8806d7046a526}} 
+\index{Ipfs\+Routing@{Ipfs\+Routing}!Get\+Value@{Get\+Value}}
+\index{Get\+Value@{Get\+Value}!Ipfs\+Routing@{Ipfs\+Routing}}
+\subsubsection{\texorpdfstring{Get\+Value}{GetValue}}
+{\footnotesize\ttfamily int($\ast$ Ipfs\+Routing\+::\+Get\+Value) (struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$, const unsigned char $\ast$, size\+\_\+t, void $\ast$$\ast$, size\+\_\+t $\ast$)}
+
+Get a value from the filestore 
+\begin{DoxyParams}{Parameters}
+{\em 1} & the struct that contains the connection information \\
+\hline
+{\em 2} & the key to look for \\
+\hline
+{\em 3} & the size of the key \\
+\hline
+{\em 4} & a place to store the value \\
+\hline
+{\em 5} & the size of the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, false(0) otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file routing.\+h.
+
+\mbox{\Hypertarget{struct_ipfs_routing_a37ff4bfa56e10890c6aabfaf29751758}\label{struct_ipfs_routing_a37ff4bfa56e10890c6aabfaf29751758}} 
+\index{Ipfs\+Routing@{Ipfs\+Routing}!Ping@{Ping}}
+\index{Ping@{Ping}!Ipfs\+Routing@{Ipfs\+Routing}}
+\subsubsection{\texorpdfstring{Ping}{Ping}}
+{\footnotesize\ttfamily int($\ast$ Ipfs\+Routing\+::\+Ping) (struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$routing, struct \mbox{\hyperlink{struct_libp2p_peer}{Libp2p\+Peer}} $\ast$\mbox{\hyperlink{structpeer}{peer}})}
+
+Ping 
+\begin{DoxyParams}{Parameters}
+{\em routing} & the context \\
+\hline
+{\em peer} & the peer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, otherwise false(0) 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file routing.\+h.
+
+\mbox{\Hypertarget{struct_ipfs_routing_a1cd051e48802e5100a42b3fe2cfa9386}\label{struct_ipfs_routing_a1cd051e48802e5100a42b3fe2cfa9386}} 
+\index{Ipfs\+Routing@{Ipfs\+Routing}!Provide@{Provide}}
+\index{Provide@{Provide}!Ipfs\+Routing@{Ipfs\+Routing}}
+\subsubsection{\texorpdfstring{Provide}{Provide}}
+{\footnotesize\ttfamily int($\ast$ Ipfs\+Routing\+::\+Provide) (struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$, const unsigned char $\ast$, size\+\_\+t)}
+
+Announce to the network that this host can provide this key 
+\begin{DoxyParams}{Parameters}
+{\em 1} & the context \\
+\hline
+{\em 2} & the key \\
+\hline
+{\em 3} & the key size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true(1) on success, otherwise false(0) 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file routing.\+h.
+
+\mbox{\Hypertarget{struct_ipfs_routing_af24b01a157cb630156caece339bfc8ae}\label{struct_ipfs_routing_af24b01a157cb630156caece339bfc8ae}} 
+\index{Ipfs\+Routing@{Ipfs\+Routing}!Put\+Value@{Put\+Value}}
+\index{Put\+Value@{Put\+Value}!Ipfs\+Routing@{Ipfs\+Routing}}
+\subsubsection{\texorpdfstring{Put\+Value}{PutValue}}
+{\footnotesize\ttfamily int($\ast$ Ipfs\+Routing\+::\+Put\+Value) (struct \mbox{\hyperlink{struct_ipfs_routing}{Ipfs\+Routing}} $\ast$, const unsigned char $\ast$, size\+\_\+t, const void $\ast$, size\+\_\+t)}
+
+Put a value in the datastore 
+\begin{DoxyParams}{Parameters}
+{\em 1} & the struct that contains connection information \\
+\hline
+{\em 2} & the key \\
+\hline
+{\em 3} & the size of the key \\
+\hline
+{\em 4} & the value \\
+\hline
+{\em 5} & the size of the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, otherwise -\/1 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file routing.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/ipfs/include/ipfs/routing/routing.\+h\end{DoxyCompactItemize}

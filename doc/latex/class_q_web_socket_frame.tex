@@ -1,0 +1,100 @@
+\hypertarget{class_q_web_socket_frame}{}\section{Q\+Web\+Socket\+Frame Class Reference}
+\label{class_q_web_socket_frame}\index{Q\+Web\+Socket\+Frame@{Q\+Web\+Socket\+Frame}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a8d007c47e3f0fe8d532202eeb640d665}\label{class_q_web_socket_frame_a8d007c47e3f0fe8d532202eeb640d665}} 
+{\bfseries Q\+Web\+Socket\+Frame} (const \mbox{\hyperlink{class_q_web_socket_frame}{Q\+Web\+Socket\+Frame}} \&other)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a44b7a08546c9e44bd491beb632df908f}\label{class_q_web_socket_frame_a44b7a08546c9e44bd491beb632df908f}} 
+\mbox{\hyperlink{class_q_web_socket_frame}{Q\+Web\+Socket\+Frame}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_q_web_socket_frame}{Q\+Web\+Socket\+Frame}} \&other)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a4e0b456cbc3523c5d92f6483ddcdd7f4}\label{class_q_web_socket_frame_a4e0b456cbc3523c5d92f6483ddcdd7f4}} 
+void {\bfseries swap} (\mbox{\hyperlink{class_q_web_socket_frame}{Q\+Web\+Socket\+Frame}} \&other)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a745d6b16651cc6eaef38a2b4641368b2}\label{class_q_web_socket_frame_a745d6b16651cc6eaef38a2b4641368b2}} 
+\mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}} {\bfseries close\+Code} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_ada81728fdcc976758a6913d5b1d23239}\label{class_q_web_socket_frame_ada81728fdcc976758a6913d5b1d23239}} 
+Q\+String {\bfseries close\+Reason} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a9ee084aee6fe85f988e667bac68fd7ff}\label{class_q_web_socket_frame_a9ee084aee6fe85f988e667bac68fd7ff}} 
+bool {\bfseries is\+Final\+Frame} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_aa07494fd872e79537951a84df7502025}\label{class_q_web_socket_frame_aa07494fd872e79537951a84df7502025}} 
+bool {\bfseries is\+Control\+Frame} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a46a65520102fbe43ceff2b593c46e8e8}\label{class_q_web_socket_frame_a46a65520102fbe43ceff2b593c46e8e8}} 
+bool {\bfseries is\+Data\+Frame} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a2fd37d6c6c8aee0b34f56f472418e813}\label{class_q_web_socket_frame_a2fd37d6c6c8aee0b34f56f472418e813}} 
+bool {\bfseries is\+Continuation\+Frame} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_ad2aedb9d5cb8605cdea7c5469c5a20f4}\label{class_q_web_socket_frame_ad2aedb9d5cb8605cdea7c5469c5a20f4}} 
+bool {\bfseries has\+Mask} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a38c64be863c11362d34ed8c7fe92cf86}\label{class_q_web_socket_frame_a38c64be863c11362d34ed8c7fe92cf86}} 
+quint32 {\bfseries mask} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a602e1acf5f9396a98160597ae44557e0}\label{class_q_web_socket_frame_a602e1acf5f9396a98160597ae44557e0}} 
+bool {\bfseries rsv1} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a98173a14ea6170b1996558218183c6f5}\label{class_q_web_socket_frame_a98173a14ea6170b1996558218183c6f5}} 
+bool {\bfseries rsv2} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_aadb63b50a106d50ebf9bbdde10f6fd7a}\label{class_q_web_socket_frame_aadb63b50a106d50ebf9bbdde10f6fd7a}} 
+bool {\bfseries rsv3} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a3233cec712a5c2184e9d115475d132b6}\label{class_q_web_socket_frame_a3233cec712a5c2184e9d115475d132b6}} 
+\mbox{\hyperlink{namespace_q_web_socket_protocol_a93d3033ae9be614a2bc8f76c792e2e14}{Q\+Web\+Socket\+Protocol\+::\+Op\+Code}} {\bfseries op\+Code} () const
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a48df171ac3c141b90a5320c215e7f902}\label{class_q_web_socket_frame_a48df171ac3c141b90a5320c215e7f902}} 
+Q\+Byte\+Array {\bfseries payload} () const
+\item 
+void \mbox{\hyperlink{class_q_web_socket_frame_a27035db6c866b11f552650282bf9cc89}{clear}} ()
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_afdfea01d1c4b6dec18d3c93de96c13e5}\label{class_q_web_socket_frame_afdfea01d1c4b6dec18d3c93de96c13e5}} 
+bool {\bfseries is\+Valid} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_web_socket_frame_a7c85311219636ec4840a85e0a002100a}\label{class_q_web_socket_frame_a7c85311219636ec4840a85e0a002100a}} 
+static \mbox{\hyperlink{class_q_web_socket_frame}{Q\+Web\+Socket\+Frame}} {\bfseries read\+Frame} (Q\+I\+O\+Device $\ast$p\+Io\+Device)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class \mbox{\hyperlink{class_q_web_socket_frame}{Q\+Web\+Socket\+Frame}} is responsible for reading, validating and interpreting frames from a Web\+Socket. It reads data from a Q\+I\+O\+Device, validates it against R\+FC 6455, and parses it into a frame (data, control). Whenever an error is detected, is\+Valid() returns false.
+
+\begin{DoxyNote}{Note}
+The \mbox{\hyperlink{class_q_web_socket_frame}{Q\+Web\+Socket\+Frame}} class does not look at valid sequences of frames. It processes frames one at a time. 
+
+It is the \mbox{\hyperlink{class_q_web_socket_data_processor}{Q\+Web\+Socket\+Data\+Processor}} that takes the sequence into account.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_web_socket_data_processor}{Q\+Web\+Socket\+Data\+Processor}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 70 of file qwebsocketframe\+\_\+p.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_web_socket_frame_a27035db6c866b11f552650282bf9cc89}\label{class_q_web_socket_frame_a27035db6c866b11f552650282bf9cc89}} 
+\index{Q\+Web\+Socket\+Frame@{Q\+Web\+Socket\+Frame}!clear@{clear}}
+\index{clear@{clear}!Q\+Web\+Socket\+Frame@{Q\+Web\+Socket\+Frame}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Q\+Web\+Socket\+Frame\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets all member variables, and invalidates the object. 
+
+Definition at line 266 of file qwebsocketframe.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qwebsocketframe\+\_\+p.\+h\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qwebsocketframe.\+cpp\end{DoxyCompactItemize}

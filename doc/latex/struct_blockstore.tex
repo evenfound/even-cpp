@@ -1,0 +1,48 @@
+\hypertarget{struct_blockstore}{}\section{Blockstore Struct Reference}
+\label{struct_blockstore}\index{Blockstore@{Blockstore}}
+
+
+Collaboration diagram for Blockstore\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_blockstore_a3af0c76f200f6eae0ba1468cd031b74b}\label{struct_blockstore_a3af0c76f200f6eae0ba1468cd031b74b}} 
+struct \mbox{\hyperlink{struct_blockstore_context}{Blockstore\+Context}} $\ast$ {\bfseries blockstore\+Context}
+\item 
+\mbox{\Hypertarget{struct_blockstore_a941491d01404bcb2096f817dee5fc72d}\label{struct_blockstore_a941491d01404bcb2096f817dee5fc72d}} 
+int($\ast$ {\bfseries Delete} )(const struct \mbox{\hyperlink{struct_blockstore_context}{Blockstore\+Context}} $\ast$context, struct \mbox{\hyperlink{struct_cid}{Cid}} $\ast$cid)
+\item 
+\mbox{\Hypertarget{struct_blockstore_adfbcb9b463e5965aca9db997c681b964}\label{struct_blockstore_adfbcb9b463e5965aca9db997c681b964}} 
+int($\ast$ {\bfseries Has} )(const struct \mbox{\hyperlink{struct_blockstore_context}{Blockstore\+Context}} $\ast$context, struct \mbox{\hyperlink{struct_cid}{Cid}} $\ast$cid)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_blockstore_ac1e6e1a9463c75febb3bdf09e81c6497}{Get}} )(const struct \mbox{\hyperlink{struct_blockstore_context}{Blockstore\+Context}} $\ast$context, struct \mbox{\hyperlink{struct_cid}{Cid}} $\ast$cid, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$$\ast$block)
+\item 
+\mbox{\Hypertarget{struct_blockstore_a043419cb7056d2d1c2b7261952fda6b3}\label{struct_blockstore_a043419cb7056d2d1c2b7261952fda6b3}} 
+int($\ast$ {\bfseries Put} )(const struct \mbox{\hyperlink{struct_blockstore_context}{Blockstore\+Context}} $\ast$context, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$block, size\+\_\+t $\ast$bytes\+\_\+written)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file blockstore.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_blockstore_ac1e6e1a9463c75febb3bdf09e81c6497}\label{struct_blockstore_ac1e6e1a9463c75febb3bdf09e81c6497}} 
+\index{Blockstore@{Blockstore}!Get@{Get}}
+\index{Get@{Get}!Blockstore@{Blockstore}}
+\subsubsection{\texorpdfstring{Get}{Get}}
+{\footnotesize\ttfamily int($\ast$ Blockstore\+::\+Get) (const struct \mbox{\hyperlink{struct_blockstore_context}{Blockstore\+Context}} $\ast$context, struct \mbox{\hyperlink{struct_cid}{Cid}} $\ast$cid, struct \mbox{\hyperlink{struct_block}{Block}} $\ast$$\ast$block)}
+
+Retrieve a block from the blockstore 
+
+Definition at line 22 of file blockstore.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/ipfs/include/ipfs/blocks/blockstore.\+h\end{DoxyCompactItemize}

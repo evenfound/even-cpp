@@ -1,0 +1,15 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node166 [label="RandomNumberGenerator",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node166 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="Botan_Tests::Fixed\l_Output_RNG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan___tests_1_1_fixed___output___r_n_g.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Botan_Tests::Fixed\l_Output_Position_RNG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan___tests_1_1_fixed___output___position___r_n_g.html"];
+  Node166 -> Node169 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 [label="Botan_Tests::Request\l_Counting_RNG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan___tests_1_1_request___counting___r_n_g.html"];
+  Node166 -> Node170 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node170 [label="Botan_Tests::SeedCapturing_RNG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan___tests_1_1_seed_capturing___r_n_g.html"];
+}

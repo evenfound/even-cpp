@@ -1,0 +1,33 @@
+\hypertarget{struct_transport_dialer}{}\section{Transport\+Dialer Struct Reference}
+\label{struct_transport_dialer}\index{Transport\+Dialer@{Transport\+Dialer}}
+
+
+Collaboration diagram for Transport\+Dialer\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_transport_dialer_a2fb04324ca4cffc314c1a85d559ff53d}\label{struct_transport_dialer_a2fb04324ca4cffc314c1a85d559ff53d}} 
+char $\ast$ {\bfseries peer\+\_\+id}
+\item 
+\mbox{\Hypertarget{struct_transport_dialer_a6e7e7414fdb1af87a46d02f5d42e4ae9}\label{struct_transport_dialer_a6e7e7414fdb1af87a46d02f5d42e4ae9}} 
+struct \mbox{\hyperlink{struct_rsa_private_key}{Rsa\+Private\+Key}} $\ast$ {\bfseries private\+\_\+key}
+\item 
+\mbox{\Hypertarget{struct_transport_dialer_a7dc3356cf4f2c4d5f802a1f3b86a2c2c}\label{struct_transport_dialer_a7dc3356cf4f2c4d5f802a1f3b86a2c2c}} 
+int($\ast$ {\bfseries can\+\_\+handle} )(const struct \mbox{\hyperlink{struct_multi_address}{Multi\+Address}} $\ast$multiaddr)
+\item 
+\mbox{\Hypertarget{struct_transport_dialer_a3d22f6248e2dd30259e14b1910a83fc8}\label{struct_transport_dialer_a3d22f6248e2dd30259e14b1910a83fc8}} 
+struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$($\ast$ {\bfseries dial} )(const struct \mbox{\hyperlink{struct_transport_dialer}{Transport\+Dialer}} $\ast$transport\+\_\+dialer, const struct \mbox{\hyperlink{struct_multi_address}{Multi\+Address}} $\ast$multiaddr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file transport\+\_\+dialer.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/libp2p/conn/transport\+\_\+dialer.\+h\end{DoxyCompactItemize}

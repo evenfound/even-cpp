@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node483 [label="KEM_Encryption",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node483 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="Botan::PK_Ops::KEM\l_Encryption_with_KDF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_p_k___ops_1_1_k_e_m___encryption__with___k_d_f.html"];
+}

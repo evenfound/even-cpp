@@ -1,0 +1,19 @@
+digraph "mbedtls_x509_csr"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="mbedtls_x509_csr",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" subject" ,fontname="Helvetica"];
+  Node2 [label="mbedtls_asn1_named_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__asn1__named__data.html"];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" oid\nval" ,fontname="Helvetica"];
+  Node3 [label="mbedtls_asn1_buf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__asn1__buf.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" len" ,fontname="Helvetica"];
+  Node4 [label="size_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" raw\nsig_oid\ncri\nsubject_raw\nsig" ,fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pk" ,fontname="Helvetica"];
+  Node5 [label="mbedtls_pk_context",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__pk__context.html",tooltip="Public key container. "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pk_info" ,fontname="Helvetica"];
+  Node6 [label="mbedtls_pk_info_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmbedtls__pk__info__t.html"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" get_bitlen" ,fontname="Helvetica"];
+}

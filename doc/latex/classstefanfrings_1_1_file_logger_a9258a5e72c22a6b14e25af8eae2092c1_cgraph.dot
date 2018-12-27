@@ -1,0 +1,14 @@
+digraph "stefanfrings::FileLogger::write"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6 [label="stefanfrings::FileLogger\l::write",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="stefanfrings::LogMessage\l::toString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_log_message.html#a0afc95ed8eb8b5cc611b5b9436f65053"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="stefanfrings::LogMessage\l::getType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_log_message.html#a6e0563caa0e118de2b9664b08ee6c856"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="stefanfrings::Logger\l::write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_logger.html#a69f50fe67efaa254ee219f6de384e9fa"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+}

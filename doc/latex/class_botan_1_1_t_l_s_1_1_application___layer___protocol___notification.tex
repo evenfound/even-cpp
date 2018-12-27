@@ -1,0 +1,134 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification}{}\section{Botan\+:\+:T\+LS\+:\+:Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification}\index{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}}
+
+
+{\ttfamily \#include $<$tls\+\_\+extensions.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:T\+LS\+:\+:Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Handshake\+\_\+\+Extension\+\_\+\+Type \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ab60d32531c669dd0d23fdddec69eee17}{type}} () const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ae88699feca78c6622f85a890b88dbaa2}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ae88699feca78c6622f85a890b88dbaa2}} 
+const std\+::vector$<$ std\+::string $>$ \& {\bfseries protocols} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_aabb91661b46187aac6677c6b8c67cbf1}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_aabb91661b46187aac6677c6b8c67cbf1}} 
+const std\+::string \& {\bfseries single\+\_\+protocol} () const
+\item 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_a9c2deb6b705e0f4cff14fcd80b3211fe}{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}} (const std\+::string \&protocol)
+\item 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_a510b8c26bf5284ffabb9c1884ead02cf}{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}} (const std\+::vector$<$ std\+::string $>$ \&protocols)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_a05ec806ab06cdf7aa96582111410d86f}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_a05ec806ab06cdf7aa96582111410d86f}} 
+{\bfseries Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}{T\+L\+S\+\_\+\+Data\+\_\+\+Reader}} \&reader, uint16\+\_\+t extension\+\_\+size)
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_af665dac05218679d77fbd990e877d3d1}{serialize}} () const override
+\item 
+bool \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ab6232ae6d76319a276b698c9cf69d510}{empty}} () const override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ad327b79762f3eeaf8d48564b092f87dc}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ad327b79762f3eeaf8d48564b092f87dc}} 
+static Handshake\+\_\+\+Extension\+\_\+\+Type {\bfseries static\+\_\+type} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+L\+PN (R\+FC 7301) 
+
+Definition at line 157 of file tls\+\_\+extensions.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_a9c2deb6b705e0f4cff14fcd80b3211fe}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_a9c2deb6b705e0f4cff14fcd80b3211fe}} 
+\index{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}!Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}}
+\index{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}!Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}}
+\subsubsection{\texorpdfstring{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification()}{Application\_Layer\_Protocol\_Notification()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{protocol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Single protocol, used by server 
+
+Definition at line 171 of file tls\+\_\+extensions.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_a510b8c26bf5284ffabb9c1884ead02cf}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_a510b8c26bf5284ffabb9c1884ead02cf}} 
+\index{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}!Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}}
+\index{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}!Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}}
+\subsubsection{\texorpdfstring{Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification()}{Application\_Layer\_Protocol\_Notification()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{protocols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+List of protocols, used by client 
+
+Definition at line 177 of file tls\+\_\+extensions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ab6232ae6d76319a276b698c9cf69d510}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ab6232ae6d76319a276b698c9cf69d510}} 
+\index{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}!empty@{empty}}
+\index{empty@{empty}!Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+if we should encode this extension or not 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_aa850b9be2322f94e7c65e583cd51acc5}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 185 of file tls\+\_\+extensions.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_af665dac05218679d77fbd990e877d3d1}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_af665dac05218679d77fbd990e877d3d1}} 
+\index{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}!serialize@{serialize}}
+\index{serialize@{serialize}!Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+serialized binary for the extension 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_a56788726ad2526db54e5a26039cb69db}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 277 of file tls\+\_\+extensions.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ab60d32531c669dd0d23fdddec69eee17}\label{class_botan_1_1_t_l_s_1_1_application___layer___protocol___notification_ab60d32531c669dd0d23fdddec69eee17}} 
+\index{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}!type@{type}}
+\index{type@{type}!Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification@{Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily Handshake\+\_\+\+Extension\+\_\+\+Type Botan\+::\+T\+L\+S\+::\+Application\+\_\+\+Layer\+\_\+\+Protocol\+\_\+\+Notification\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+code number of the extension 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_ac8819b312ce604453225e7b4f7c373ec}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 162 of file tls\+\_\+extensions.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+h\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+cpp\end{DoxyCompactItemize}

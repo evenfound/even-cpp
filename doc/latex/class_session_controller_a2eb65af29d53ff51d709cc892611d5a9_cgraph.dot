@@ -1,0 +1,35 @@
+digraph "SessionController::service"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="SessionController::\lservice",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="stefanfrings::HttpResponse\l::setHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_response.html#a41029ee24e05e419e6da7ea970bc3724"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="stefanfrings::HttpSession\lStore::getSession",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session_store.html#aeaf8409e1844366c12f18fd34d477a31"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="stefanfrings::HttpSession\lStore::getSessionId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session_store.html#aaf9147137698db03b322ea93de548fba"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="stefanfrings::HttpResponse\l::getCookies",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_response.html#a1bcd416f520020e944900e35ab51864c"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="stefanfrings::HttpRequest\l::getCookie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_request.html#a8df857484bbe4cc8362ddd49a604f649"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="stefanfrings::HttpSession\l::isNull",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session.html#a195963a20805ad00e0eacd90c0194d84"];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="stefanfrings::HttpResponse\l::setCookie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_response.html#ac32c7fcc332d3f834ec88ae06b2e7d63"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="stefanfrings::HttpCookie\l::getName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_cookie.html#abecd0373e90e3701e82bb4dc630c54a7"];
+  Node4 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="stefanfrings::HttpSession\l::getId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session.html#a40a020b5fa0350f28fd40891642c967e"];
+  Node4 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="stefanfrings::HttpSession\l::setLastAccess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session.html#a3e27faa5905e05aefa8feca7fbddfb70"];
+  Node2 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="stefanfrings::HttpSession\l::contains",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session.html#a5941c26024d0f026ae11668321353f70"];
+  Node2 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="stefanfrings::HttpResponse\l::write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_response.html#a6e49919cc568835ca6d81fec02533260"];
+  Node2 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="stefanfrings::HttpSession::set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session.html#a777e082016803939b9ba5b7e4a7c9ab0"];
+  Node2 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="stefanfrings::HttpSession::get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_http_session.html#a6e5ae2c6d598511ca64acca9be0421be"];
+}

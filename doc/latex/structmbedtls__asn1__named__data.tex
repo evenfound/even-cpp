@@ -1,0 +1,76 @@
+\hypertarget{structmbedtls__asn1__named__data}{}\section{mbedtls\+\_\+asn1\+\_\+named\+\_\+data Struct Reference}
+\label{structmbedtls__asn1__named__data}\index{mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}}
+
+
+{\ttfamily \#include $<$asn1.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+asn1\+\_\+named\+\_\+data\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmbedtls__asn1__buf}{mbedtls\+\_\+asn1\+\_\+buf}} \mbox{\hyperlink{structmbedtls__asn1__named__data_a0981fcdac0ce14b6922a953adf0624d9}{oid}}
+\item 
+\mbox{\hyperlink{structmbedtls__asn1__buf}{mbedtls\+\_\+asn1\+\_\+buf}} \mbox{\hyperlink{structmbedtls__asn1__named__data_ad99636f90fae31a96c26df85a7896b07}{val}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__asn1__named__data}{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}} $\ast$ \mbox{\hyperlink{structmbedtls__asn1__named__data_a38f29c37c55319b3c0a9c998c3e5bd0d}{next}}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__asn1__named__data_aee15b65458fa2c10596ff7c210ba4ee1}{next\+\_\+merged}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container for a sequence or list of \textquotesingle{}named\textquotesingle{} A\+S\+N.\+1 data items 
+
+Definition at line 150 of file asn1.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__asn1__named__data_a38f29c37c55319b3c0a9c998c3e5bd0d}\label{structmbedtls__asn1__named__data_a38f29c37c55319b3c0a9c998c3e5bd0d}} 
+\index{mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}!next@{next}}
+\index{next@{next}!mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structmbedtls__asn1__named__data}{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}}$\ast$ mbedtls\+\_\+asn1\+\_\+named\+\_\+data\+::next}
+
+The next entry in the sequence. 
+
+Definition at line 154 of file asn1.\+h.
+
+\mbox{\Hypertarget{structmbedtls__asn1__named__data_aee15b65458fa2c10596ff7c210ba4ee1}\label{structmbedtls__asn1__named__data_aee15b65458fa2c10596ff7c210ba4ee1}} 
+\index{mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}!next\+\_\+merged@{next\+\_\+merged}}
+\index{next\+\_\+merged@{next\+\_\+merged}!mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}}
+\subsubsection{\texorpdfstring{next\+\_\+merged}{next\_merged}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+asn1\+\_\+named\+\_\+data\+::next\+\_\+merged}
+
+Merge next item into the current one? 
+
+Definition at line 155 of file asn1.\+h.
+
+\mbox{\Hypertarget{structmbedtls__asn1__named__data_a0981fcdac0ce14b6922a953adf0624d9}\label{structmbedtls__asn1__named__data_a0981fcdac0ce14b6922a953adf0624d9}} 
+\index{mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}!oid@{oid}}
+\index{oid@{oid}!mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}}
+\subsubsection{\texorpdfstring{oid}{oid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__asn1__buf}{mbedtls\+\_\+asn1\+\_\+buf}} mbedtls\+\_\+asn1\+\_\+named\+\_\+data\+::oid}
+
+The object identifier. 
+
+Definition at line 152 of file asn1.\+h.
+
+\mbox{\Hypertarget{structmbedtls__asn1__named__data_ad99636f90fae31a96c26df85a7896b07}\label{structmbedtls__asn1__named__data_ad99636f90fae31a96c26df85a7896b07}} 
+\index{mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}!val@{val}}
+\index{val@{val}!mbedtls\+\_\+asn1\+\_\+named\+\_\+data@{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}}
+\subsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__asn1__buf}{mbedtls\+\_\+asn1\+\_\+buf}} mbedtls\+\_\+asn1\+\_\+named\+\_\+data\+::val}
+
+The named value. 
+
+Definition at line 153 of file asn1.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/\mbox{\hyperlink{asn1_8h}{asn1.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{structeven_1_1details_1_1is__uniform__real}{}\section{even\+:\+:details\+:\+:is\+\_\+uniform\+\_\+real$<$ T $>$ Struct Template Reference}
+\label{structeven_1_1details_1_1is__uniform__real}\index{even\+::details\+::is\+\_\+uniform\+\_\+real$<$ T $>$@{even\+::details\+::is\+\_\+uniform\+\_\+real$<$ T $>$}}
+
+
+True if type T is applicable by a std\+::uniform\+\_\+real\+\_\+distribution.  
+
+
+
+
+{\ttfamily \#include $<$Random.\+hxx$>$}
+
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool {\bfseries value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+struct even\+::details\+::is\+\_\+uniform\+\_\+real$<$ T $>$}
+
+True if type T is applicable by a std\+::uniform\+\_\+real\+\_\+distribution. 
+
+Definition at line 31 of file Random.\+hxx.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structeven_1_1details_1_1is__uniform__real_a08c410ace968ca5be572b213f629154f}\label{structeven_1_1details_1_1is__uniform__real_a08c410ace968ca5be572b213f629154f}} 
+\index{even\+::details\+::is\+\_\+uniform\+\_\+real@{even\+::details\+::is\+\_\+uniform\+\_\+real}!value@{value}}
+\index{value@{value}!even\+::details\+::is\+\_\+uniform\+\_\+real@{even\+::details\+::is\+\_\+uniform\+\_\+real}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr bool \mbox{\hyperlink{structeven_1_1details_1_1is__uniform__real}{even\+::details\+::is\+\_\+uniform\+\_\+real}}$<$ T $>$\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+                std::is\_same<T,       float>::value ||
+        std::is\_same<T, double>::value ||
+        std::is\_same<T, long double>::value
+\end{DoxyCode}
+
+
+Definition at line 32 of file Random.\+hxx.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_random_8hxx}{Random.\+hxx}}\end{DoxyCompactItemize}

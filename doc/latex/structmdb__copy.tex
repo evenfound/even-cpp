@@ -1,0 +1,99 @@
+\hypertarget{structmdb__copy}{}\section{mdb\+\_\+copy Struct Reference}
+\label{structmdb__copy}\index{mdb\+\_\+copy@{mdb\+\_\+copy}}
+
+
+Collaboration diagram for mdb\+\_\+copy\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmdb__copy_a540d0c0ed25e9dd2caf456d1cae7c61e}\label{structmdb__copy_a540d0c0ed25e9dd2caf456d1cae7c61e}} 
+pthread\+\_\+mutex\+\_\+t {\bfseries mc\+\_\+mutex}
+\item 
+pthread\+\_\+cond\+\_\+t \mbox{\hyperlink{structmdb__copy_ac5841d54d99b78b4dde87d043a232224}{mc\+\_\+cond}}
+\item 
+\mbox{\Hypertarget{structmdb__copy_a9006957fe0385ca8763971d160777784}\label{structmdb__copy_a9006957fe0385ca8763971d160777784}} 
+char $\ast$ {\bfseries mc\+\_\+wbuf} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{structmdb__copy_ad53247499593374fa16eec8a5fc71d5d}\label{structmdb__copy_ad53247499593374fa16eec8a5fc71d5d}} 
+char $\ast$ {\bfseries mc\+\_\+over} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{structmdb__copy_a95da466b3fb9559738c5b7ce2b9fa5d9}\label{structmdb__copy_a95da466b3fb9559738c5b7ce2b9fa5d9}} 
+\mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} $\ast$ {\bfseries mc\+\_\+env}
+\item 
+\mbox{\Hypertarget{structmdb__copy_a094eb7bac9746c525bb7dffa50c7c950}\label{structmdb__copy_a094eb7bac9746c525bb7dffa50c7c950}} 
+\mbox{\hyperlink{struct_m_d_b__txn}{M\+D\+B\+\_\+txn}} $\ast$ {\bfseries mc\+\_\+txn}
+\item 
+\mbox{\Hypertarget{structmdb__copy_af976e1d6a0fd312c0682223cb29077b2}\label{structmdb__copy_af976e1d6a0fd312c0682223cb29077b2}} 
+int {\bfseries mc\+\_\+wlen} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{structmdb__copy_aca167759205051eed5a2f81bf52286b8}\label{structmdb__copy_aca167759205051eed5a2f81bf52286b8}} 
+int {\bfseries mc\+\_\+olen} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{structmdb__copy_a0811993b00ad7b94d27e7fadd23cafbc}\label{structmdb__copy_a0811993b00ad7b94d27e7fadd23cafbc}} 
+\mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\+\_\+t}} {\bfseries mc\+\_\+next\+\_\+pgno}
+\item 
+\mbox{\Hypertarget{structmdb__copy_a2aff548a1f92440c3bbe5aba9b37e4b4}\label{structmdb__copy_a2aff548a1f92440c3bbe5aba9b37e4b4}} 
+\mbox{\hyperlink{group__compat_gab521aa5010fb1afb801a899a55569e03}{H\+A\+N\+D\+LE}} {\bfseries mc\+\_\+fd}
+\item 
+int \mbox{\hyperlink{structmdb__copy_a1c11af71f83f104842d8d185f63bdf3b}{mc\+\_\+toggle}}
+\item 
+int \mbox{\hyperlink{structmdb__copy_ad0b5ae51d58c4d5e227931c00e955b86}{mc\+\_\+new}}
+\item 
+volatile int \mbox{\hyperlink{structmdb__copy_a1e93acde2473500804ddc2d71b39997f}{mc\+\_\+error}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+State needed for a double-\/buffering compacting copy. 
+
+Definition at line 9630 of file mdb.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmdb__copy_ac5841d54d99b78b4dde87d043a232224}\label{structmdb__copy_ac5841d54d99b78b4dde87d043a232224}} 
+\index{mdb\+\_\+copy@{mdb\+\_\+copy}!mc\+\_\+cond@{mc\+\_\+cond}}
+\index{mc\+\_\+cond@{mc\+\_\+cond}!mdb\+\_\+copy@{mdb\+\_\+copy}}
+\subsubsection{\texorpdfstring{mc\+\_\+cond}{mc\_cond}}
+{\footnotesize\ttfamily pthread\+\_\+cond\+\_\+t mdb\+\_\+copy\+::mc\+\_\+cond}
+
+Condition variable for \mbox{\hyperlink{structmdb__copy_ad0b5ae51d58c4d5e227931c00e955b86}{mc\+\_\+new}} 
+
+Definition at line 9632 of file mdb.\+c.
+
+\mbox{\Hypertarget{structmdb__copy_a1e93acde2473500804ddc2d71b39997f}\label{structmdb__copy_a1e93acde2473500804ddc2d71b39997f}} 
+\index{mdb\+\_\+copy@{mdb\+\_\+copy}!mc\+\_\+error@{mc\+\_\+error}}
+\index{mc\+\_\+error@{mc\+\_\+error}!mdb\+\_\+copy@{mdb\+\_\+copy}}
+\subsubsection{\texorpdfstring{mc\+\_\+error}{mc\_error}}
+{\footnotesize\ttfamily volatile int mdb\+\_\+copy\+::mc\+\_\+error}
+
+Error code, never cleared if set 
+
+Definition at line 9643 of file mdb.\+c.
+
+\mbox{\Hypertarget{structmdb__copy_ad0b5ae51d58c4d5e227931c00e955b86}\label{structmdb__copy_ad0b5ae51d58c4d5e227931c00e955b86}} 
+\index{mdb\+\_\+copy@{mdb\+\_\+copy}!mc\+\_\+new@{mc\+\_\+new}}
+\index{mc\+\_\+new@{mc\+\_\+new}!mdb\+\_\+copy@{mdb\+\_\+copy}}
+\subsubsection{\texorpdfstring{mc\+\_\+new}{mc\_new}}
+{\footnotesize\ttfamily int mdb\+\_\+copy\+::mc\+\_\+new}
+
+(0-\/2 buffers to write) $\vert$ (\mbox{\hyperlink{group__internal_ga21baf54777b0859e49ca44ac0e336863}{M\+D\+B\+\_\+\+E\+OF}} at end) 
+
+Definition at line 9642 of file mdb.\+c.
+
+\mbox{\Hypertarget{structmdb__copy_a1c11af71f83f104842d8d185f63bdf3b}\label{structmdb__copy_a1c11af71f83f104842d8d185f63bdf3b}} 
+\index{mdb\+\_\+copy@{mdb\+\_\+copy}!mc\+\_\+toggle@{mc\+\_\+toggle}}
+\index{mc\+\_\+toggle@{mc\+\_\+toggle}!mdb\+\_\+copy@{mdb\+\_\+copy}}
+\subsubsection{\texorpdfstring{mc\+\_\+toggle}{mc\_toggle}}
+{\footnotesize\ttfamily int mdb\+\_\+copy\+::mc\+\_\+toggle}
+
+Buffer number in provider 
+
+Definition at line 9641 of file mdb.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

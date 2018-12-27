@@ -1,0 +1,1366 @@
+\hypertarget{group__x509__module}{}\section{X509\+\_\+module}
+\label{group__x509__module}\index{X509\+\_\+module@{X509\+\_\+module}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509__time}{mbedtls\+\_\+x509\+\_\+time}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509__crl__entry}{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509write__cert}{mbedtls\+\_\+x509write\+\_\+cert}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}}
+\item 
+struct \mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gab98caf7dfede54b5c576b5a27a5c6a6a}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+CA}}~8
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__x509__module_gae1bf556398cac1761aa2041908e9f619}{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhm}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$dhm, const unsigned char $\ast$dhmin, size\+\_\+t dhminlen)
+\begin{DoxyCompactList}\small\item\em Parse D\+HM parameters in P\+EM or D\+ER format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gae2f53ca5e795b7e8674f092777a5a828}{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhmfile}} (\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$dhm, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load and parse D\+HM parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{X509 Error codes}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga185bc7f27a2b1f7742537a2377c52ee3}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}}~-\/0x2080
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gab4e8e2e41bfe62e969343efaa2784103}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+O\+ID}}~-\/0x2100
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga45b8366804b7e2cbf3e25011f054802c}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}}~-\/0x2180
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga527608dc04b2c831fe5b161ec26aab76}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+E\+R\+S\+I\+ON}}~-\/0x2200
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga8124a68edabf35ed9323880584128f16}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+I\+AL}}~-\/0x2280
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gae16cddbd42e08f6dd093cf4326e59413}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+LG}}~-\/0x2300
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga8f61c2f303bf065af4f783e03f952ede}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME}}~-\/0x2380
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gac36bf085ce8f7f57f039bda8828bd824}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TE}}~-\/0x2400
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga022c175386f082b4e056e6268ee68cab}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}}~-\/0x2480
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gaa0788dbf0325aea4ab566717514b4422}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS}}~-\/0x2500
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gab80a4eb806328731def21ec2ebcbc365}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+E\+R\+S\+I\+ON}}~-\/0x2580
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga488f8616b42eae6fe3fb9815d43c976f}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+G\+\_\+\+A\+LG}}~-\/0x2600
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gac489ce5e8ba417bcd86012ebbb7f5044}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+S\+I\+G\+\_\+\+M\+I\+S\+M\+A\+T\+CH}}~-\/0x2680
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gaba46df0041dcf48fa9d164d28cf3a154}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x2700
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gaeb90af9ad906c5075b1ad625ebc26553}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+AT}}~-\/0x2780
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gaeeef11ebf0b31a54a665b1a3fd65c3f7}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}~-\/0x2800
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gacf6d98c6cbb76728260d1dcb1fe3bc7d}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x2880
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gad85d9c7aa5c30b9730297bef3386407c}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}~-\/0x2900
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gab9516fc53ff90c547fd77d35c71feec7}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}}~-\/0x2980
+\end{DoxyCompactItemize}
+\subsection*{X509 Verify codes}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga5f03158dcacc5914872e38c68231b642}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+P\+I\+R\+ED}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gaddd96a9eb80fab17bce02d2a147ea504}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+R\+E\+V\+O\+K\+ED}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga6e71468985ebf243ca7cfce5c3dea881}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+C\+N\+\_\+\+M\+I\+S\+M\+A\+T\+CH}}~0x04
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga0e5b1d4c9c1a1a3227238c82042c1d1b}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED}}~0x08
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gad1da8228ca957c2947fd329c32fc7ca4}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED}}~0x10
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gaebccb1707af21f2d3d6610a7c6485f32}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+E\+X\+P\+I\+R\+ED}}~0x20
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga8bca03e3c2c89460bea17ab142b0b7ab}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+M\+I\+S\+S\+I\+NG}}~0x40
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga1b87b2e1d26077023adf2a5c65a76776}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+S\+K\+I\+P\+\_\+\+V\+E\+R\+I\+FY}}~0x80
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga76bdd50937a671ef62474b7e38e23e02}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+O\+T\+H\+ER}}~0x0100
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gac769acbb18e53198ae2d2e63bd339cfa}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+F\+U\+T\+U\+RE}}~0x0200
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gad93c0f614969729f7d13fb0a3acac68e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+F\+U\+T\+U\+RE}}~0x0400
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga28705c8c3091a013487df25842249c0f}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE}}~0x0800
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gac3dab3183efdbca7e988916e7fc1a02a}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE}}~0x1000
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gaa383ae441177fa7a16fb2313bb48bb10}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+PE}}~0x2000
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga41b54b526c11bf51cc431ef1a151816d}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+MD}}~0x4000
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga9332fa1e09a373cc56234525b14546c4}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+PK}}~0x8000
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gaef5f9a34b327eb79750ebc3779e98282}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+K\+EY}}~0x010000
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gad3f810fb74f94164185b88b90fffa329}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+MD}}~0x020000
+\item 
+\#define \mbox{\hyperlink{group__x509__module_ga182a6f1f465e566de7586e6ee8fa7c4e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+PK}}~0x040000
+\item 
+\#define \mbox{\hyperlink{group__x509__module_gac2947ead6fd1035296826110ca74a364}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+K\+EY}}~0x080000
+\end{DoxyCompactItemize}
+\subsection*{Structures for parsing X.509 certificates, C\+R\+Ls and C\+S\+Rs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structmbedtls__asn1__buf}{mbedtls\+\_\+asn1\+\_\+buf}} \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}}
+\item 
+typedef \mbox{\hyperlink{structmbedtls__asn1__bitstring}{mbedtls\+\_\+asn1\+\_\+bitstring}} \mbox{\hyperlink{group__x509__module_gaf25a97602f25027e160f22f6d5590636}{mbedtls\+\_\+x509\+\_\+bitstring}}
+\item 
+typedef \mbox{\hyperlink{structmbedtls__asn1__named__data}{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}} \mbox{\hyperlink{group__x509__module_ga2272228c7776102328df31623af3168c}{mbedtls\+\_\+x509\+\_\+name}}
+\item 
+typedef \mbox{\hyperlink{structmbedtls__asn1__sequence}{mbedtls\+\_\+asn1\+\_\+sequence}} \mbox{\hyperlink{group__x509__module_gabd52d60a09315854d9ef849d02154f35}{mbedtls\+\_\+x509\+\_\+sequence}}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509__time}{mbedtls\+\_\+x509\+\_\+time}} \mbox{\hyperlink{group__x509__module_ga38827540a02fb2ddca08ec0917a8a41b}{mbedtls\+\_\+x509\+\_\+time}}
+\end{DoxyCompactItemize}
+\subsection*{Structures and functions for parsing C\+R\+Ls}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509__crl__entry}{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry}} \mbox{\hyperlink{group__x509__module_ga1e0c6230061fd501f9d00bd1b09ade33}{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry}}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} \mbox{\hyperlink{group__x509__module_ga7957605a0ced963e12880ec9e19874fc}{mbedtls\+\_\+x509\+\_\+crl}}
+\item 
+int \mbox{\hyperlink{group__x509__module_ga29ab5f1216a727b334ee26cce9f5d4b5}{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+der}} (\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$chain, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Parse a D\+E\+R-\/encoded C\+RL and append it to the chained list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gadfce4fc5f5af62e371695e74c5b67d70}{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse}} (\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$chain, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Parse one or more C\+R\+Ls and append them to the chained list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga8e096827f1240b8f8bc15d6a83593f22}{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+file}} (\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$chain, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load one or more C\+R\+Ls and append them to the chained list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga35898e101f5039c6db6b930da9892366}{mbedtls\+\_\+x509\+\_\+crl\+\_\+info}} (char $\ast$buf, size\+\_\+t size, const char $\ast$prefix, const \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$crl)
+\begin{DoxyCompactList}\small\item\em Returns an informational string about the C\+RL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__x509__module_ga8513a192e281217802837571da98e218}{mbedtls\+\_\+x509\+\_\+crl\+\_\+init}} (\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$crl)
+\begin{DoxyCompactList}\small\item\em Initialize a C\+RL (chain) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__x509__module_gaeb19c3326889f9e493fbd605c1113b96}{mbedtls\+\_\+x509\+\_\+crl\+\_\+free}} (\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$crl)
+\begin{DoxyCompactList}\small\item\em Unallocate all C\+RL data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Structures and functions for parsing and writing X.509 certificates}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} \mbox{\hyperlink{group__x509__module_ga836544fec94d5bc02bc97aa87885b9d9}{mbedtls\+\_\+x509\+\_\+crt}}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509write__cert}{mbedtls\+\_\+x509write\+\_\+cert}} \mbox{\hyperlink{group__x509__module_gacc3115587f8d882a7a137c38d6939e07}{mbedtls\+\_\+x509write\+\_\+cert}}
+\item 
+const \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}} \mbox{\hyperlink{group__x509__module_ga9cd2de10ffeff0f339abcc1ba7e26fdf}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+default}}
+\item 
+const \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}} \mbox{\hyperlink{group__x509__module_ga8ab1f8a044fd25f76ecb4ba15c6d5bcd}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+next}}
+\item 
+const \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}} \mbox{\hyperlink{group__x509__module_gaf09067a39129236125e353a68ceb45d6}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+suiteb}}
+\item 
+int \mbox{\hyperlink{group__x509__module_ga003c2483a2691e025641fa9d68d4a96a}{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+der}} (\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$chain, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Parse a single D\+ER formatted certificate and add it to the chained list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga033567483649030f7f859db4f4cb7e14}{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse}} (\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$chain, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Parse one or more certificates and add them to the chained list. Parses permissively. If some certificates can be parsed, the result is the number of failed certificates it encountered. If none complete correctly, the first error is returned. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gad4da63133d3590aa311488497d4c38ec}{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+file}} (\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$chain, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load one or more certificates and add them to the chained list. Parses permissively. If some certificates can be parsed, the result is the number of failed certificates it encountered. If none complete correctly, the first error is returned. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga571fc89b9f3217ab3dd67bd7af905066}{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+path}} (\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$chain, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load one or more certificate files from a path and add them to the chained list. Parses permissively. If some certificates can be parsed, the result is the number of failed certificates it encountered. If none complete correctly, the first error is returned. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gabaf30f2269fc3b6608b25871f9d09da6}{mbedtls\+\_\+x509\+\_\+crt\+\_\+info}} (char $\ast$buf, size\+\_\+t size, const char $\ast$prefix, const \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt)
+\begin{DoxyCompactList}\small\item\em Returns an informational string about the certificate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gae88f1d8e6696eb2beeffe0a708219e6b}{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+info}} (char $\ast$buf, size\+\_\+t size, const char $\ast$prefix, uint32\+\_\+t flags)
+\begin{DoxyCompactList}\small\item\em Returns an informational string about the verification status of a certificate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga98ed4504e4f832b735a230acf54fcde3}{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify}} (\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt, \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$trust\+\_\+ca, \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$ca\+\_\+crl, const char $\ast$cn, uint32\+\_\+t $\ast$flags, int($\ast$f\+\_\+vrfy)(void $\ast$, \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$, int, uint32\+\_\+t $\ast$), void $\ast$p\+\_\+vrfy)
+\begin{DoxyCompactList}\small\item\em Verify the certificate signature. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gaf044a51e5b5bc854bf12aeeccb440e55}{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+with\+\_\+profile}} (\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt, \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$trust\+\_\+ca, \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$ca\+\_\+crl, const \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}} $\ast$profile, const char $\ast$cn, uint32\+\_\+t $\ast$flags, int($\ast$f\+\_\+vrfy)(void $\ast$, \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$, int, uint32\+\_\+t $\ast$), void $\ast$p\+\_\+vrfy)
+\begin{DoxyCompactList}\small\item\em Verify the certificate signature according to profile. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga0ab7857ffd82467207e718bb9f0131a2}{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+key\+\_\+usage}} (const \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt, unsigned int usage)
+\begin{DoxyCompactList}\small\item\em Check usage of certificate against key\+Usage extension. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gad21c0e75a3fdbeb1f65e4d339e479df3}{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+extended\+\_\+key\+\_\+usage}} (const \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt, const char $\ast$usage\+\_\+oid, size\+\_\+t usage\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Check usage of certificate against extented\+Jey\+Usage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga0dc256a70f90cb68002d53bafffab232}{mbedtls\+\_\+x509\+\_\+crt\+\_\+is\+\_\+revoked}} (const \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt, const \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$crl)
+\begin{DoxyCompactList}\small\item\em Verify the certificate revocation status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__x509__module_ga016dd06bc770e77b84005f305df20ed1}{mbedtls\+\_\+x509\+\_\+crt\+\_\+init}} (\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt)
+\begin{DoxyCompactList}\small\item\em Initialize a certificate (chain) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__x509__module_gab33c1e4e20bea7ce536119f54a113c6b}{mbedtls\+\_\+x509\+\_\+crt\+\_\+free}} (\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt)
+\begin{DoxyCompactList}\small\item\em Unallocate all certificate data. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__x509__module_gaedcb73f1c615c266a348a0c62763c5de}{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+I\+D\+\_\+\+F\+L\+AG}}(id)~( 1 $<$$<$ ( id -\/ 1 ) )
+\item 
+\mbox{\Hypertarget{group__x509__module_ga8d124765addc200627de55f2018b1ed3}\label{group__x509__module_ga8d124765addc200627de55f2018b1ed3}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+C\+R\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+1}~0
+\item 
+\mbox{\Hypertarget{group__x509__module_ga46a0b7f3a4c1f279f609fd8ea304c192}\label{group__x509__module_ga46a0b7f3a4c1f279f609fd8ea304c192}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+C\+R\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+2}~1
+\item 
+\mbox{\Hypertarget{group__x509__module_ga7c22a610222ea94e1faf96223bc5d9a4}\label{group__x509__module_ga7c22a610222ea94e1faf96223bc5d9a4}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+C\+R\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+3}~2
+\item 
+\mbox{\Hypertarget{group__x509__module_ga189113155d9c64d4b4255b16761377c7}\label{group__x509__module_ga189113155d9c64d4b4255b16761377c7}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+R\+F\+C5280\+\_\+\+M\+A\+X\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+L\+EN}~32
+\item 
+\mbox{\Hypertarget{group__x509__module_ga533580091501768fa25d4d682febbb08}\label{group__x509__module_ga533580091501768fa25d4d682febbb08}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+R\+F\+C5280\+\_\+\+U\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+\+L\+EN}~15
+\item 
+\mbox{\Hypertarget{group__x509__module_ga4ebc833300be4f784ac13ff0a38085ce}\label{group__x509__module_ga4ebc833300be4f784ac13ff0a38085ce}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}~512
+\end{DoxyCompactItemize}
+\subsection*{Structures and functions for X.509 Certificate Signing Requests (C\+SR)}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} \mbox{\hyperlink{group__x509__module_gae481b23df67001bdac96ef9c2ab3ef7c}{mbedtls\+\_\+x509\+\_\+csr}}
+\item 
+typedef struct \mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}} \mbox{\hyperlink{group__x509__module_ga7b0b4f8c5cfd541ee20c53907edb636d}{mbedtls\+\_\+x509write\+\_\+csr}}
+\item 
+int \mbox{\hyperlink{group__x509__module_ga4c58fa3804ea9feb1acf745221f17208}{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR) in D\+ER format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_ga53012fb8859f4835ccfb0a5e359b3176}{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR), D\+ER or P\+EM format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gaf49db7323eee45d9649600de18d715f8}{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+file}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__x509__module_gaeec330c8cb351adc2870f4f088f36fdc}{mbedtls\+\_\+x509\+\_\+csr\+\_\+info}} (char $\ast$buf, size\+\_\+t size, const char $\ast$prefix, const \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr)
+\begin{DoxyCompactList}\small\item\em Returns an informational string about the C\+SR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__x509__module_ga984db025f6953ea61be7dfca2d928f37}{mbedtls\+\_\+x509\+\_\+csr\+\_\+init}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr)
+\begin{DoxyCompactList}\small\item\em Initialize a C\+SR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__x509__module_gac2139becff64aa7294ecad4f40767a84}{mbedtls\+\_\+x509\+\_\+csr\+\_\+free}} (\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$csr)
+\begin{DoxyCompactList}\small\item\em Unallocate all C\+SR data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__x509__module_gacf6d98c6cbb76728260d1dcb1fe3bc7d}\label{group__x509__module_gacf6d98c6cbb76728260d1dcb1fe3bc7d}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_X509\_ALLOC\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED~-\/0x2880}
+
+Allocation of memory failed. 
+
+Definition at line 76 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaeeef11ebf0b31a54a665b1a3fd65c3f7}\label{group__x509__module_gaeeef11ebf0b31a54a665b1a3fd65c3f7}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}{MBEDTLS\_ERR\_X509\_BAD\_INPUT\_DATA}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA~-\/0x2800}
+
+Input invalid. 
+
+Definition at line 75 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gab9516fc53ff90c547fd77d35c71feec7}\label{group__x509__module_gab9516fc53ff90c547fd77d35c71feec7}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}{MBEDTLS\_ERR\_X509\_BUFFER\_TOO\_SMALL}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL~-\/0x2980}
+
+Destination buffer is too small. 
+
+Definition at line 78 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaeb90af9ad906c5075b1ad625ebc26553}\label{group__x509__module_gaeb90af9ad906c5075b1ad625ebc26553}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+AT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+AT}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+AT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+AT}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+AT}{MBEDTLS\_ERR\_X509\_CERT\_UNKNOWN\_FORMAT}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+F\+O\+R\+M\+AT~-\/0x2780}
+
+Format not recognized as D\+ER or P\+EM. 
+
+Definition at line 74 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaba46df0041dcf48fa9d164d28cf3a154}\label{group__x509__module_gaba46df0041dcf48fa9d164d28cf3a154}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_X509\_CERT\_VERIFY\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED~-\/0x2700}
+
+Certificate verification failed, e.\+g. C\+RL, CA or signature check failed. 
+
+Definition at line 73 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga185bc7f27a2b1f7742537a2377c52ee3}\label{group__x509__module_ga185bc7f27a2b1f7742537a2377c52ee3}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}{MBEDTLS\_ERR\_X509\_FEATURE\_UNAVAILABLE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE~-\/0x2080}
+
+Unavailable feature, e.\+g. R\+SA hashing/encryption combination. 
+
+Definition at line 60 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gad85d9c7aa5c30b9730297bef3386407c}\label{group__x509__module_gad85d9c7aa5c30b9730297bef3386407c}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}{MBEDTLS\_ERR\_X509\_FILE\_IO\_ERROR}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR~-\/0x2900}
+
+Read/write of file failed. 
+
+Definition at line 77 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gae16cddbd42e08f6dd093cf4326e59413}\label{group__x509__module_gae16cddbd42e08f6dd093cf4326e59413}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+LG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+LG}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+LG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+LG}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+LG}{MBEDTLS\_ERR\_X509\_INVALID\_ALG}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+LG~-\/0x2300}
+
+The algorithm tag or value is invalid. 
+
+Definition at line 65 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gac36bf085ce8f7f57f039bda8828bd824}\label{group__x509__module_gac36bf085ce8f7f57f039bda8828bd824}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TE}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TE}{MBEDTLS\_ERR\_X509\_INVALID\_DATE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TE~-\/0x2400}
+
+The date tag or value is invalid. 
+
+Definition at line 67 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaa0788dbf0325aea4ab566717514b4422}\label{group__x509__module_gaa0788dbf0325aea4ab566717514b4422}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS}{MBEDTLS\_ERR\_X509\_INVALID\_EXTENSIONS}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS~-\/0x2500}
+
+The extension tag or value is invalid. 
+
+Definition at line 69 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga45b8366804b7e2cbf3e25011f054802c}\label{group__x509__module_ga45b8366804b7e2cbf3e25011f054802c}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}{MBEDTLS\_ERR\_X509\_INVALID\_FORMAT}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT~-\/0x2180}
+
+The C\+R\+T/\+C\+R\+L/\+C\+SR format is invalid, e.\+g. different type expected. 
+
+Definition at line 62 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga8f61c2f303bf065af4f783e03f952ede}\label{group__x509__module_ga8f61c2f303bf065af4f783e03f952ede}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME}{MBEDTLS\_ERR\_X509\_INVALID\_NAME}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME~-\/0x2380}
+
+The name tag or value is invalid. 
+
+Definition at line 66 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga8124a68edabf35ed9323880584128f16}\label{group__x509__module_ga8124a68edabf35ed9323880584128f16}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+I\+AL@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+I\+AL}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+I\+AL@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+I\+AL}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+I\+AL}{MBEDTLS\_ERR\_X509\_INVALID\_SERIAL}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+R\+I\+AL~-\/0x2280}
+
+The serial tag or value is invalid. 
+
+Definition at line 64 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga022c175386f082b4e056e6268ee68cab}\label{group__x509__module_ga022c175386f082b4e056e6268ee68cab}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}{MBEDTLS\_ERR\_X509\_INVALID\_SIGNATURE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE~-\/0x2480}
+
+The signature tag or value invalid. 
+
+Definition at line 68 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga527608dc04b2c831fe5b161ec26aab76}\label{group__x509__module_ga527608dc04b2c831fe5b161ec26aab76}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+E\+R\+S\+I\+ON}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+E\+R\+S\+I\+ON}{MBEDTLS\_ERR\_X509\_INVALID\_VERSION}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+E\+R\+S\+I\+ON~-\/0x2200}
+
+The C\+R\+T/\+C\+R\+L/\+C\+SR version element is invalid. 
+
+Definition at line 63 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gac489ce5e8ba417bcd86012ebbb7f5044}\label{group__x509__module_gac489ce5e8ba417bcd86012ebbb7f5044}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+S\+I\+G\+\_\+\+M\+I\+S\+M\+A\+T\+CH@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+S\+I\+G\+\_\+\+M\+I\+S\+M\+A\+T\+CH}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+S\+I\+G\+\_\+\+M\+I\+S\+M\+A\+T\+CH@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+S\+I\+G\+\_\+\+M\+I\+S\+M\+A\+T\+CH}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+S\+I\+G\+\_\+\+M\+I\+S\+M\+A\+T\+CH}{MBEDTLS\_ERR\_X509\_SIG\_MISMATCH}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+S\+I\+G\+\_\+\+M\+I\+S\+M\+A\+T\+CH~-\/0x2680}
+
+Signature algorithms do not match. (see {\ttfamily \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}}} sig\+\_\+oid) 
+
+Definition at line 72 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gab4e8e2e41bfe62e969343efaa2784103}\label{group__x509__module_gab4e8e2e41bfe62e969343efaa2784103}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+O\+ID@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+O\+ID}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+O\+ID@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+O\+ID}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+O\+ID}{MBEDTLS\_ERR\_X509\_UNKNOWN\_OID}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+O\+ID~-\/0x2100}
+
+Requested O\+ID is unknown. 
+
+Definition at line 61 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga488f8616b42eae6fe3fb9815d43c976f}\label{group__x509__module_ga488f8616b42eae6fe3fb9815d43c976f}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+G\+\_\+\+A\+LG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+G\+\_\+\+A\+LG}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+G\+\_\+\+A\+LG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+G\+\_\+\+A\+LG}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+G\+\_\+\+A\+LG}{MBEDTLS\_ERR\_X509\_UNKNOWN\_SIG\_ALG}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+I\+G\+\_\+\+A\+LG~-\/0x2600}
+
+Signature algorithm (oid) is unsupported. 
+
+Definition at line 71 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gab80a4eb806328731def21ec2ebcbc365}\label{group__x509__module_gab80a4eb806328731def21ec2ebcbc365}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+E\+R\+S\+I\+ON}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+E\+R\+S\+I\+ON}{MBEDTLS\_ERR\_X509\_UNKNOWN\_VERSION}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+E\+R\+S\+I\+ON~-\/0x2580}
+
+C\+R\+T/\+C\+R\+L/\+C\+SR has an unsupported version number. 
+
+Definition at line 70 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaef5f9a34b327eb79750ebc3779e98282}\label{group__x509__module_gaef5f9a34b327eb79750ebc3779e98282}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+K\+EY@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+K\+EY}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+K\+EY@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+K\+EY}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+K\+EY}{MBEDTLS\_X509\_BADCERT\_BAD\_KEY}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+K\+EY~0x010000}
+
+The certificate is signed with an unacceptable key (eg bad curve, R\+SA too short). 
+
+Definition at line 102 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga41b54b526c11bf51cc431ef1a151816d}\label{group__x509__module_ga41b54b526c11bf51cc431ef1a151816d}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+MD@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+MD}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+MD@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+MD}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+MD}{MBEDTLS\_X509\_BADCERT\_BAD\_MD}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+MD~0x4000}
+
+The certificate is signed with an unacceptable hash. 
+
+Definition at line 100 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga9332fa1e09a373cc56234525b14546c4}\label{group__x509__module_ga9332fa1e09a373cc56234525b14546c4}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+PK@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+PK}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+PK@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+PK}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+PK}{MBEDTLS\_X509\_BADCERT\_BAD\_PK}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+B\+A\+D\+\_\+\+PK~0x8000}
+
+The certificate is signed with an unacceptable PK alg (eg R\+SA vs E\+C\+D\+SA). 
+
+Definition at line 101 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga6e71468985ebf243ca7cfce5c3dea881}\label{group__x509__module_ga6e71468985ebf243ca7cfce5c3dea881}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+C\+N\+\_\+\+M\+I\+S\+M\+A\+T\+CH@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+C\+N\+\_\+\+M\+I\+S\+M\+A\+T\+CH}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+C\+N\+\_\+\+M\+I\+S\+M\+A\+T\+CH@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+C\+N\+\_\+\+M\+I\+S\+M\+A\+T\+CH}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+C\+N\+\_\+\+M\+I\+S\+M\+A\+T\+CH}{MBEDTLS\_X509\_BADCERT\_CN\_MISMATCH}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+C\+N\+\_\+\+M\+I\+S\+M\+A\+T\+CH~0x04}
+
+The certificate Common Name (CN) does not match with the expected CN. 
+
+Definition at line 88 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga5f03158dcacc5914872e38c68231b642}\label{group__x509__module_ga5f03158dcacc5914872e38c68231b642}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+P\+I\+R\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+P\+I\+R\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+P\+I\+R\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+P\+I\+R\+ED}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+P\+I\+R\+ED}{MBEDTLS\_X509\_BADCERT\_EXPIRED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+P\+I\+R\+ED~0x01}
+
+The certificate validity has expired. 
+
+Definition at line 86 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gac3dab3183efdbca7e988916e7fc1a02a}\label{group__x509__module_gac3dab3183efdbca7e988916e7fc1a02a}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE}{MBEDTLS\_X509\_BADCERT\_EXT\_KEY\_USAGE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+E\+X\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE~0x1000}
+
+Usage does not match the extended\+Key\+Usage extension. 
+
+Definition at line 98 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gac769acbb18e53198ae2d2e63bd339cfa}\label{group__x509__module_gac769acbb18e53198ae2d2e63bd339cfa}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+F\+U\+T\+U\+RE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+F\+U\+T\+U\+RE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+F\+U\+T\+U\+RE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+F\+U\+T\+U\+RE}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+F\+U\+T\+U\+RE}{MBEDTLS\_X509\_BADCERT\_FUTURE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+F\+U\+T\+U\+RE~0x0200}
+
+The certificate validity starts in the future. 
+
+Definition at line 95 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga28705c8c3091a013487df25842249c0f}\label{group__x509__module_ga28705c8c3091a013487df25842249c0f}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE}{MBEDTLS\_X509\_BADCERT\_KEY\_USAGE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+U\+S\+A\+GE~0x0800}
+
+Usage does not match the key\+Usage extension. 
+
+Definition at line 97 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga8bca03e3c2c89460bea17ab142b0b7ab}\label{group__x509__module_ga8bca03e3c2c89460bea17ab142b0b7ab}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+M\+I\+S\+S\+I\+NG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+M\+I\+S\+S\+I\+NG}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+M\+I\+S\+S\+I\+NG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+M\+I\+S\+S\+I\+NG}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+M\+I\+S\+S\+I\+NG}{MBEDTLS\_X509\_BADCERT\_MISSING}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+M\+I\+S\+S\+I\+NG~0x40}
+
+Certificate was missing. 
+
+Definition at line 92 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga0e5b1d4c9c1a1a3227238c82042c1d1b}\label{group__x509__module_ga0e5b1d4c9c1a1a3227238c82042c1d1b}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED}{MBEDTLS\_X509\_BADCERT\_NOT\_TRUSTED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED~0x08}
+
+The certificate is not correctly signed by the trusted CA. 
+
+Definition at line 89 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaa383ae441177fa7a16fb2313bb48bb10}\label{group__x509__module_gaa383ae441177fa7a16fb2313bb48bb10}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+PE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+PE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+PE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+PE}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+PE}{MBEDTLS\_X509\_BADCERT\_NS\_CERT\_TYPE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+N\+S\+\_\+\+C\+E\+R\+T\+\_\+\+T\+Y\+PE~0x2000}
+
+Usage does not match the ns\+Cert\+Type extension. 
+
+Definition at line 99 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga76bdd50937a671ef62474b7e38e23e02}\label{group__x509__module_ga76bdd50937a671ef62474b7e38e23e02}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+O\+T\+H\+ER@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+O\+T\+H\+ER}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+O\+T\+H\+ER@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+O\+T\+H\+ER}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+O\+T\+H\+ER}{MBEDTLS\_X509\_BADCERT\_OTHER}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+O\+T\+H\+ER~0x0100}
+
+Other reason (can be used by verify callback) 
+
+Definition at line 94 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaddd96a9eb80fab17bce02d2a147ea504}\label{group__x509__module_gaddd96a9eb80fab17bce02d2a147ea504}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+R\+E\+V\+O\+K\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+R\+E\+V\+O\+K\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+R\+E\+V\+O\+K\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+R\+E\+V\+O\+K\+ED}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+R\+E\+V\+O\+K\+ED}{MBEDTLS\_X509\_BADCERT\_REVOKED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+R\+E\+V\+O\+K\+ED~0x02}
+
+The certificate has been revoked (is on a C\+RL). 
+
+Definition at line 87 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga1b87b2e1d26077023adf2a5c65a76776}\label{group__x509__module_ga1b87b2e1d26077023adf2a5c65a76776}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+S\+K\+I\+P\+\_\+\+V\+E\+R\+I\+FY@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+S\+K\+I\+P\+\_\+\+V\+E\+R\+I\+FY}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+S\+K\+I\+P\+\_\+\+V\+E\+R\+I\+FY@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+S\+K\+I\+P\+\_\+\+V\+E\+R\+I\+FY}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+S\+K\+I\+P\+\_\+\+V\+E\+R\+I\+FY}{MBEDTLS\_X509\_BADCERT\_SKIP\_VERIFY}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+S\+K\+I\+P\+\_\+\+V\+E\+R\+I\+FY~0x80}
+
+Certificate verification was skipped. 
+
+Definition at line 93 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gac2947ead6fd1035296826110ca74a364}\label{group__x509__module_gac2947ead6fd1035296826110ca74a364}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+K\+EY@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+K\+EY}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+K\+EY@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+K\+EY}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+K\+EY}{MBEDTLS\_X509\_BADCRL\_BAD\_KEY}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+K\+EY~0x080000}
+
+The C\+RL is signed with an unacceptable key (eg bad curve, R\+SA too short). 
+
+Definition at line 105 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gad3f810fb74f94164185b88b90fffa329}\label{group__x509__module_gad3f810fb74f94164185b88b90fffa329}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+MD@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+MD}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+MD@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+MD}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+MD}{MBEDTLS\_X509\_BADCRL\_BAD\_MD}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+MD~0x020000}
+
+The C\+RL is signed with an unacceptable hash. 
+
+Definition at line 103 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga182a6f1f465e566de7586e6ee8fa7c4e}\label{group__x509__module_ga182a6f1f465e566de7586e6ee8fa7c4e}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+PK@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+PK}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+PK@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+PK}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+PK}{MBEDTLS\_X509\_BADCRL\_BAD\_PK}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+B\+A\+D\+\_\+\+PK~0x040000}
+
+The C\+RL is signed with an unacceptable PK alg (eg R\+SA vs E\+C\+D\+SA). 
+
+Definition at line 104 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaebccb1707af21f2d3d6610a7c6485f32}\label{group__x509__module_gaebccb1707af21f2d3d6610a7c6485f32}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+E\+X\+P\+I\+R\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+E\+X\+P\+I\+R\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+E\+X\+P\+I\+R\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+E\+X\+P\+I\+R\+ED}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+E\+X\+P\+I\+R\+ED}{MBEDTLS\_X509\_BADCRL\_EXPIRED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+E\+X\+P\+I\+R\+ED~0x20}
+
+The C\+RL is expired. 
+
+Definition at line 91 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gad93c0f614969729f7d13fb0a3acac68e}\label{group__x509__module_gad93c0f614969729f7d13fb0a3acac68e}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+F\+U\+T\+U\+RE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+F\+U\+T\+U\+RE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+F\+U\+T\+U\+RE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+F\+U\+T\+U\+RE}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+F\+U\+T\+U\+RE}{MBEDTLS\_X509\_BADCRL\_FUTURE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+F\+U\+T\+U\+RE~0x0400}
+
+The C\+RL is from the future 
+
+Definition at line 96 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gad1da8228ca957c2947fd329c32fc7ca4}\label{group__x509__module_gad1da8228ca957c2947fd329c32fc7ca4}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED}{MBEDTLS\_X509\_BADCRL\_NOT\_TRUSTED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+N\+O\+T\+\_\+\+T\+R\+U\+S\+T\+ED~0x10}
+
+The C\+RL is not correctly signed by the trusted CA. 
+
+Definition at line 90 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gaedcb73f1c615c266a348a0c62763c5de}\label{group__x509__module_gaedcb73f1c615c266a348a0c62763c5de}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+I\+D\+\_\+\+F\+L\+AG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+I\+D\+\_\+\+F\+L\+AG}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+I\+D\+\_\+\+F\+L\+AG@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+I\+D\+\_\+\+F\+L\+AG}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+I\+D\+\_\+\+F\+L\+AG}{MBEDTLS\_X509\_ID\_FLAG}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+I\+D\+\_\+\+F\+L\+AG(\begin{DoxyParamCaption}\item[{}]{id }\end{DoxyParamCaption})~( 1 $<$$<$ ( id -\/ 1 ) )}
+
+Build flag from an algorithm/curve identifier (pk, md, ecp) Since 0 is always X\+X\+X\+\_\+\+N\+O\+NE, ignore it. 
+
+Definition at line 100 of file x509\+\_\+crt.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gab98caf7dfede54b5c576b5a27a5c6a6a}\label{group__x509__module_gab98caf7dfede54b5c576b5a27a5c6a6a}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+CA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+CA}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+CA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+CA}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+CA}{MBEDTLS\_X509\_MAX\_INTERMEDIATE\_CA}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E\+\_\+\+CA~8}
+
+Maximum number of intermediate C\+As in a verification chain. That is, maximum length of the chain, excluding the end-\/entity certificate and the trusted root certificate.
+
+Set this to a low value to prevent an adversary from making you waste resources verifying an overlong certificate chain. 
+
+Definition at line 53 of file x509.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__x509__module_gaf25a97602f25027e160f22f6d5590636}\label{group__x509__module_gaf25a97602f25027e160f22f6d5590636}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+bitstring@{mbedtls\+\_\+x509\+\_\+bitstring}}
+\index{mbedtls\+\_\+x509\+\_\+bitstring@{mbedtls\+\_\+x509\+\_\+bitstring}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+bitstring}{mbedtls\_x509\_bitstring}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structmbedtls__asn1__bitstring}{mbedtls\+\_\+asn1\+\_\+bitstring}} \mbox{\hyperlink{group__x509__module_gaf25a97602f25027e160f22f6d5590636}{mbedtls\+\_\+x509\+\_\+bitstring}}}
+
+Container for A\+S\+N1 bit strings. 
+
+Definition at line 192 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}\label{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+buf@{mbedtls\+\_\+x509\+\_\+buf}}
+\index{mbedtls\+\_\+x509\+\_\+buf@{mbedtls\+\_\+x509\+\_\+buf}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+buf}{mbedtls\_x509\_buf}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structmbedtls__asn1__buf}{mbedtls\+\_\+asn1\+\_\+buf}} \mbox{\hyperlink{group__x509__module_ga4d02c9e8e4e2934555e0d132cd2976dc}{mbedtls\+\_\+x509\+\_\+buf}}}
+
+Type-\/length-\/value structure that allows for A\+S\+N1 using D\+ER. 
+
+Definition at line 187 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga7957605a0ced963e12880ec9e19874fc}\label{group__x509__module_ga7957605a0ced963e12880ec9e19874fc}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crl@{mbedtls\+\_\+x509\+\_\+crl}}
+\index{mbedtls\+\_\+x509\+\_\+crl@{mbedtls\+\_\+x509\+\_\+crl}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crl}{mbedtls\_x509\_crl}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}}
+ \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}}}
+
+Certificate revocation list structure. Every C\+RL may have multiple entries. \mbox{\Hypertarget{group__x509__module_ga1e0c6230061fd501f9d00bd1b09ade33}\label{group__x509__module_ga1e0c6230061fd501f9d00bd1b09ade33}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crl\+\_\+entry@{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry}}
+\index{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry@{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry}{mbedtls\_x509\_crl\_entry}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__x509__crl__entry}{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry}}
+ \mbox{\hyperlink{structmbedtls__x509__crl__entry}{mbedtls\+\_\+x509\+\_\+crl\+\_\+entry}}}
+
+Certificate revocation list entry. Contains the C\+A-\/specific serial numbers and revocation dates. \mbox{\Hypertarget{group__x509__module_ga836544fec94d5bc02bc97aa87885b9d9}\label{group__x509__module_ga836544fec94d5bc02bc97aa87885b9d9}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}}
+\index{mbedtls\+\_\+x509\+\_\+crt@{mbedtls\+\_\+x509\+\_\+crt}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt}{mbedtls\_x509\_crt}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}}
+ \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}}}
+
+Container for an X.\+509 certificate. The certificate may be chained. \mbox{\Hypertarget{group__x509__module_gae481b23df67001bdac96ef9c2ab3ef7c}\label{group__x509__module_gae481b23df67001bdac96ef9c2ab3ef7c}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+csr@{mbedtls\+\_\+x509\+\_\+csr}}
+\index{mbedtls\+\_\+x509\+\_\+csr@{mbedtls\+\_\+x509\+\_\+csr}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+csr}{mbedtls\_x509\_csr}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}}
+ \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}}}
+
+Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR) structure. \mbox{\Hypertarget{group__x509__module_ga2272228c7776102328df31623af3168c}\label{group__x509__module_ga2272228c7776102328df31623af3168c}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+name@{mbedtls\+\_\+x509\+\_\+name}}
+\index{mbedtls\+\_\+x509\+\_\+name@{mbedtls\+\_\+x509\+\_\+name}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+name}{mbedtls\_x509\_name}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structmbedtls__asn1__named__data}{mbedtls\+\_\+asn1\+\_\+named\+\_\+data}} \mbox{\hyperlink{group__x509__module_ga2272228c7776102328df31623af3168c}{mbedtls\+\_\+x509\+\_\+name}}}
+
+Container for A\+S\+N1 named information objects. It allows for Relative Distinguished Names (e.\+g. cn=localhost,ou=code,etc.). 
+
+Definition at line 198 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_gabd52d60a09315854d9ef849d02154f35}\label{group__x509__module_gabd52d60a09315854d9ef849d02154f35}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+sequence@{mbedtls\+\_\+x509\+\_\+sequence}}
+\index{mbedtls\+\_\+x509\+\_\+sequence@{mbedtls\+\_\+x509\+\_\+sequence}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+sequence}{mbedtls\_x509\_sequence}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structmbedtls__asn1__sequence}{mbedtls\+\_\+asn1\+\_\+sequence}} \mbox{\hyperlink{group__x509__module_gabd52d60a09315854d9ef849d02154f35}{mbedtls\+\_\+x509\+\_\+sequence}}}
+
+Container for a sequence of A\+S\+N.\+1 items 
+
+Definition at line 203 of file x509.\+h.
+
+\mbox{\Hypertarget{group__x509__module_ga38827540a02fb2ddca08ec0917a8a41b}\label{group__x509__module_ga38827540a02fb2ddca08ec0917a8a41b}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+time@{mbedtls\+\_\+x509\+\_\+time}}
+\index{mbedtls\+\_\+x509\+\_\+time@{mbedtls\+\_\+x509\+\_\+time}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+time}{mbedtls\_x509\_time}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__x509__time}{mbedtls\+\_\+x509\+\_\+time}}
+ \mbox{\hyperlink{structmbedtls__x509__time}{mbedtls\+\_\+x509\+\_\+time}}}
+
+Container for date and time (precision in seconds). \mbox{\Hypertarget{group__x509__module_gacc3115587f8d882a7a137c38d6939e07}\label{group__x509__module_gacc3115587f8d882a7a137c38d6939e07}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509write\+\_\+cert@{mbedtls\+\_\+x509write\+\_\+cert}}
+\index{mbedtls\+\_\+x509write\+\_\+cert@{mbedtls\+\_\+x509write\+\_\+cert}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+cert}{mbedtls\_x509write\_cert}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__x509write__cert}{mbedtls\+\_\+x509write\+\_\+cert}}
+ \mbox{\hyperlink{structmbedtls__x509write__cert}{mbedtls\+\_\+x509write\+\_\+cert}}}
+
+Container for writing a certificate (C\+RT) \mbox{\Hypertarget{group__x509__module_ga7b0b4f8c5cfd541ee20c53907edb636d}\label{group__x509__module_ga7b0b4f8c5cfd541ee20c53907edb636d}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509write\+\_\+csr@{mbedtls\+\_\+x509write\+\_\+csr}}
+\index{mbedtls\+\_\+x509write\+\_\+csr@{mbedtls\+\_\+x509write\+\_\+csr}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509write\+\_\+csr}{mbedtls\_x509write\_csr}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}}
+ \mbox{\hyperlink{structmbedtls__x509write__csr}{mbedtls\+\_\+x509write\+\_\+csr}}}
+
+Container for writing a C\+SR 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__x509__module_gae1bf556398cac1761aa2041908e9f619}\label{group__x509__module_gae1bf556398cac1761aa2041908e9f619}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhm@{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhm}}
+\index{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhm@{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhm}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhm()}{mbedtls\_dhm\_parse\_dhm()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{dhm,  }\item[{const unsigned char $\ast$}]{dhmin,  }\item[{size\+\_\+t}]{dhminlen }\end{DoxyParamCaption})}
+
+
+
+Parse D\+HM parameters in P\+EM or D\+ER format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dhm} & D\+HM context to be initialized \\
+\hline
+{\em dhmin} & input buffer \\
+\hline
+{\em dhminlen} & size of the buffer (including the terminating null byte for P\+EM data)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific D\+HM or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_gae2f53ca5e795b7e8674f092777a5a828}\label{group__x509__module_gae2f53ca5e795b7e8674f092777a5a828}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhmfile@{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhmfile}}
+\index{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhmfile@{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhmfile}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhmfile()}{mbedtls\_dhm\_parse\_dhmfile()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+dhm\+\_\+parse\+\_\+dhmfile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__dhm__context}{mbedtls\+\_\+dhm\+\_\+context}} $\ast$}]{dhm,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Load and parse D\+HM parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dhm} & D\+HM context to be initialized \\
+\hline
+{\em path} & filename to read the D\+HM \mbox{\hyperlink{struct_parameters}{Parameters}} from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific D\+HM or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_gaeb19c3326889f9e493fbd605c1113b96}\label{group__x509__module_gaeb19c3326889f9e493fbd605c1113b96}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crl\+\_\+free@{mbedtls\+\_\+x509\+\_\+crl\+\_\+free}}
+\index{mbedtls\+\_\+x509\+\_\+crl\+\_\+free@{mbedtls\+\_\+x509\+\_\+crl\+\_\+free}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crl\+\_\+free()}{mbedtls\_x509\_crl\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509\+\_\+crl\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{crl }\end{DoxyParamCaption})}
+
+
+
+Unallocate all C\+RL data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crl} & C\+RL chain to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__x509__module_ga35898e101f5039c6db6b930da9892366}\label{group__x509__module_ga35898e101f5039c6db6b930da9892366}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crl\+\_\+info@{mbedtls\+\_\+x509\+\_\+crl\+\_\+info}}
+\index{mbedtls\+\_\+x509\+\_\+crl\+\_\+info@{mbedtls\+\_\+x509\+\_\+crl\+\_\+info}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crl\+\_\+info()}{mbedtls\_x509\_crl\_info()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crl\+\_\+info (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size,  }\item[{const char $\ast$}]{prefix,  }\item[{const \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{crl }\end{DoxyParamCaption})}
+
+
+
+Returns an informational string about the C\+RL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to write to \\
+\hline
+{\em size} & Maximum size of buffer \\
+\hline
+{\em prefix} & A line prefix \\
+\hline
+{\em crl} & The X509 C\+RL to represent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string written (not including the terminated nul byte), or a negative error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga8513a192e281217802837571da98e218}\label{group__x509__module_ga8513a192e281217802837571da98e218}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crl\+\_\+init@{mbedtls\+\_\+x509\+\_\+crl\+\_\+init}}
+\index{mbedtls\+\_\+x509\+\_\+crl\+\_\+init@{mbedtls\+\_\+x509\+\_\+crl\+\_\+init}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crl\+\_\+init()}{mbedtls\_x509\_crl\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509\+\_\+crl\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{crl }\end{DoxyParamCaption})}
+
+
+
+Initialize a C\+RL (chain) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crl} & C\+RL chain to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__x509__module_gadfce4fc5f5af62e371695e74c5b67d70}\label{group__x509__module_gadfce4fc5f5af62e371695e74c5b67d70}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crl\+\_\+parse@{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse}}
+\index{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse@{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse()}{mbedtls\_x509\_crl\_parse()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crl\+\_\+parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{chain,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen }\end{DoxyParamCaption})}
+
+
+
+Parse one or more C\+R\+Ls and append them to the chained list. 
+
+\begin{DoxyNote}{Note}
+Mutliple C\+R\+Ls are accepted only if using P\+EM format
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em chain} & points to the start of the chain \\
+\hline
+{\em buf} & buffer holding the C\+RL data in P\+EM or D\+ER format \\
+\hline
+{\em buflen} & size of the buffer (including the terminating null byte for P\+EM data)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga29ab5f1216a727b334ee26cce9f5d4b5}\label{group__x509__module_ga29ab5f1216a727b334ee26cce9f5d4b5}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+der@{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+der}}
+\index{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+der@{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+der}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+der()}{mbedtls\_x509\_crl\_parse\_der()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+der (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{chain,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen }\end{DoxyParamCaption})}
+
+
+
+Parse a D\+E\+R-\/encoded C\+RL and append it to the chained list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chain} & points to the start of the chain \\
+\hline
+{\em buf} & buffer holding the C\+RL data in D\+ER format \\
+\hline
+{\em buflen} & size of the buffer (including the terminating null byte for P\+EM data)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga8e096827f1240b8f8bc15d6a83593f22}\label{group__x509__module_ga8e096827f1240b8f8bc15d6a83593f22}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+file@{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+file}}
+\index{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+file@{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+file}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+file()}{mbedtls\_x509\_crl\_parse\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crl\+\_\+parse\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{chain,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Load one or more C\+R\+Ls and append them to the chained list. 
+
+\begin{DoxyNote}{Note}
+Mutliple C\+R\+Ls are accepted only if using P\+EM format
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em chain} & points to the start of the chain \\
+\hline
+{\em path} & filename to read the C\+R\+Ls from (in P\+EM or D\+ER encoding)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_gad21c0e75a3fdbeb1f65e4d339e479df3}\label{group__x509__module_gad21c0e75a3fdbeb1f65e4d339e479df3}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+extended\+\_\+key\+\_\+usage@{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+extended\+\_\+key\+\_\+usage}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+extended\+\_\+key\+\_\+usage@{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+extended\+\_\+key\+\_\+usage}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+extended\+\_\+key\+\_\+usage()}{mbedtls\_x509\_crt\_check\_extended\_key\_usage()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+extended\+\_\+key\+\_\+usage (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{crt,  }\item[{const char $\ast$}]{usage\+\_\+oid,  }\item[{size\+\_\+t}]{usage\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Check usage of certificate against extented\+Jey\+Usage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crt} & Leaf certificate used. \\
+\hline
+{\em usage\+\_\+oid} & Intended usage (eg M\+B\+E\+D\+T\+L\+S\+\_\+\+O\+I\+D\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+A\+U\+TH or M\+B\+E\+D\+T\+L\+S\+\_\+\+O\+I\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+A\+U\+TH). \\
+\hline
+{\em usage\+\_\+len} & Length of usage\+\_\+oid (eg given by \mbox{\hyperlink{asn1_8h_ac2f2e00874ca486c912c33bb4f7bb16a}{M\+B\+E\+D\+T\+L\+S\+\_\+\+O\+I\+D\+\_\+\+S\+I\+Z\+E()}}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if this use of the certificate is allowed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if not.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Usually only makes sense on leaf certificates. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__x509__module_ga0ab7857ffd82467207e718bb9f0131a2}\label{group__x509__module_ga0ab7857ffd82467207e718bb9f0131a2}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+key\+\_\+usage@{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+key\+\_\+usage}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+key\+\_\+usage@{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+key\+\_\+usage}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+key\+\_\+usage()}{mbedtls\_x509\_crt\_check\_key\_usage()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+check\+\_\+key\+\_\+usage (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{crt,  }\item[{unsigned int}]{usage }\end{DoxyParamCaption})}
+
+
+
+Check usage of certificate against key\+Usage extension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crt} & Leaf certificate used. \\
+\hline
+{\em usage} & Intended usage(s) (eg M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+K\+U\+\_\+\+K\+E\+Y\+\_\+\+E\+N\+C\+I\+P\+H\+E\+R\+M\+E\+NT before using the certificate to perform an R\+SA key exchange).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Except for decipher\+Only and encipher\+Only, a bit set in the usage argument means this bit M\+U\+ST be set in the certificate. For decipher\+Only and encipher\+Only, it means that bit M\+AY be set.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+0 is these uses of the certificate are allowed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if the key\+Usage extension is present but does not match the usage argument.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+You should only call this function on leaf certificates, on (intermediate) C\+As the key\+Usage extension is automatically checked by {\ttfamily \mbox{\hyperlink{group__x509__module_ga98ed4504e4f832b735a230acf54fcde3}{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify()}}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__x509__module_gab33c1e4e20bea7ce536119f54a113c6b}\label{group__x509__module_gab33c1e4e20bea7ce536119f54a113c6b}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+free@{mbedtls\+\_\+x509\+\_\+crt\+\_\+free}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+free@{mbedtls\+\_\+x509\+\_\+crt\+\_\+free}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+free()}{mbedtls\_x509\_crt\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509\+\_\+crt\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{crt }\end{DoxyParamCaption})}
+
+
+
+Unallocate all certificate data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crt} & Certificate chain to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__x509__module_gabaf30f2269fc3b6608b25871f9d09da6}\label{group__x509__module_gabaf30f2269fc3b6608b25871f9d09da6}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+info@{mbedtls\+\_\+x509\+\_\+crt\+\_\+info}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+info@{mbedtls\+\_\+x509\+\_\+crt\+\_\+info}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+info()}{mbedtls\_x509\_crt\_info()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+info (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size,  }\item[{const char $\ast$}]{prefix,  }\item[{const \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{crt }\end{DoxyParamCaption})}
+
+
+
+Returns an informational string about the certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to write to \\
+\hline
+{\em size} & Maximum size of buffer \\
+\hline
+{\em prefix} & A line prefix \\
+\hline
+{\em crt} & The X509 certificate to represent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string written (not including the terminated nul byte), or a negative error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga016dd06bc770e77b84005f305df20ed1}\label{group__x509__module_ga016dd06bc770e77b84005f305df20ed1}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+init@{mbedtls\+\_\+x509\+\_\+crt\+\_\+init}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+init@{mbedtls\+\_\+x509\+\_\+crt\+\_\+init}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+init()}{mbedtls\_x509\_crt\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509\+\_\+crt\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{crt }\end{DoxyParamCaption})}
+
+
+
+Initialize a certificate (chain) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crt} & Certificate chain to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__x509__module_ga0dc256a70f90cb68002d53bafffab232}\label{group__x509__module_ga0dc256a70f90cb68002d53bafffab232}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+is\+\_\+revoked@{mbedtls\+\_\+x509\+\_\+crt\+\_\+is\+\_\+revoked}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+is\+\_\+revoked@{mbedtls\+\_\+x509\+\_\+crt\+\_\+is\+\_\+revoked}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+is\+\_\+revoked()}{mbedtls\_x509\_crt\_is\_revoked()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+is\+\_\+revoked (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{crt,  }\item[{const \mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{crl }\end{DoxyParamCaption})}
+
+
+
+Verify the certificate revocation status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crt} & a certificate to be verified \\
+\hline
+{\em crl} & the C\+RL to verify against\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the certificate is revoked, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga033567483649030f7f859db4f4cb7e14}\label{group__x509__module_ga033567483649030f7f859db4f4cb7e14}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+parse@{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse@{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse()}{mbedtls\_x509\_crt\_parse()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{chain,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen }\end{DoxyParamCaption})}
+
+
+
+Parse one or more certificates and add them to the chained list. Parses permissively. If some certificates can be parsed, the result is the number of failed certificates it encountered. If none complete correctly, the first error is returned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chain} & points to the start of the chain \\
+\hline
+{\em buf} & buffer holding the certificate data in P\+EM or D\+ER format \\
+\hline
+{\em buflen} & size of the buffer (including the terminating null byte for P\+EM data)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if all certificates parsed successfully, a positive number if partly successful or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga003c2483a2691e025641fa9d68d4a96a}\label{group__x509__module_ga003c2483a2691e025641fa9d68d4a96a}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+der@{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+der}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+der@{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+der}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+der()}{mbedtls\_x509\_crt\_parse\_der()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+der (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{chain,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen }\end{DoxyParamCaption})}
+
+
+
+Parse a single D\+ER formatted certificate and add it to the chained list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chain} & points to the start of the chain \\
+\hline
+{\em buf} & buffer holding the certificate D\+ER data \\
+\hline
+{\em buflen} & size of the buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_gad4da63133d3590aa311488497d4c38ec}\label{group__x509__module_gad4da63133d3590aa311488497d4c38ec}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+file@{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+file}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+file@{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+file}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+file()}{mbedtls\_x509\_crt\_parse\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{chain,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Load one or more certificates and add them to the chained list. Parses permissively. If some certificates can be parsed, the result is the number of failed certificates it encountered. If none complete correctly, the first error is returned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chain} & points to the start of the chain \\
+\hline
+{\em path} & filename to read the certificates from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if all certificates parsed successfully, a positive number if partly successful or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga571fc89b9f3217ab3dd67bd7af905066}\label{group__x509__module_ga571fc89b9f3217ab3dd67bd7af905066}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+path@{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+path}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+path@{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+path}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+path()}{mbedtls\_x509\_crt\_parse\_path()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+parse\+\_\+path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{chain,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Load one or more certificate files from a path and add them to the chained list. Parses permissively. If some certificates can be parsed, the result is the number of failed certificates it encountered. If none complete correctly, the first error is returned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chain} & points to the start of the chain \\
+\hline
+{\em path} & directory / folder to read the certificate files from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if all certificates parsed successfully, a positive number if partly successful or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga98ed4504e4f832b735a230acf54fcde3}\label{group__x509__module_ga98ed4504e4f832b735a230acf54fcde3}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+verify@{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify@{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify()}{mbedtls\_x509\_crt\_verify()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+verify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{crt,  }\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{trust\+\_\+ca,  }\item[{\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{ca\+\_\+crl,  }\item[{const char $\ast$}]{cn,  }\item[{uint32\+\_\+t $\ast$}]{flags,  }\item[{int($\ast$)(void $\ast$, \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$, int, uint32\+\_\+t $\ast$)}]{f\+\_\+vrfy,  }\item[{void $\ast$}]{p\+\_\+vrfy }\end{DoxyParamCaption})}
+
+
+
+Verify the certificate signature. 
+
+The verify callback is a user-\/supplied callback that can clear / modify / add flags for a certificate. If set, the verification callback is called for each certificate in the chain (from the trust-\/ca down to the presented crt). The parameters for the callback are\+: (void $\ast$parameter, \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$crt, int certificate\+\_\+depth, int $\ast$flags). With the flags representing current flags for that specific certificate and the certificate depth from the bottom (Peer cert depth = 0).
+
+All flags left after returning from the callback are also returned to the application. The function should return 0 for anything but a fatal error.
+
+\begin{DoxyNote}{Note}
+In case verification failed, the results can be displayed using {\ttfamily \mbox{\hyperlink{group__x509__module_gae88f1d8e6696eb2beeffe0a708219e6b}{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+info()}}} 
+
+Same as {\ttfamily \mbox{\hyperlink{group__x509__module_gaf044a51e5b5bc854bf12aeeccb440e55}{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+with\+\_\+profile()}}} with the default security profile.
+
+It is your responsibility to provide up-\/to-\/date C\+R\+Ls for all trusted C\+As. If no C\+RL is provided for the CA that was used to sign the certificate, C\+RL verification is skipped silently, that is {\itshape without} setting any flag.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em crt} & a certificate (chain) to be verified \\
+\hline
+{\em trust\+\_\+ca} & the list of trusted C\+As \\
+\hline
+{\em ca\+\_\+crl} & the list of C\+R\+Ls for trusted C\+As (see note above) \\
+\hline
+{\em cn} & expected Common Name (can be set to N\+U\+LL if the CN must not be verified) \\
+\hline
+{\em flags} & result of the verification \\
+\hline
+{\em f\+\_\+vrfy} & verification function \\
+\hline
+{\em p\+\_\+vrfy} & verification parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED in which case $\ast$flags will have one or more M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+X\+XX or M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+X\+XX flags set, or another error in case of a fatal error encountered during the verification process. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_gae88f1d8e6696eb2beeffe0a708219e6b}\label{group__x509__module_gae88f1d8e6696eb2beeffe0a708219e6b}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+info@{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+info}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+info@{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+info}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+info()}{mbedtls\_x509\_crt\_verify\_info()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+info (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size,  }\item[{const char $\ast$}]{prefix,  }\item[{uint32\+\_\+t}]{flags }\end{DoxyParamCaption})}
+
+
+
+Returns an informational string about the verification status of a certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to write to \\
+\hline
+{\em size} & Maximum size of buffer \\
+\hline
+{\em prefix} & A line prefix \\
+\hline
+{\em flags} & Verification flags created by \mbox{\hyperlink{group__x509__module_ga98ed4504e4f832b735a230acf54fcde3}{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify()}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string written (not including the terminated nul byte), or a negative error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_gaf044a51e5b5bc854bf12aeeccb440e55}\label{group__x509__module_gaf044a51e5b5bc854bf12aeeccb440e55}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+with\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+with\+\_\+profile}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+with\+\_\+profile@{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+with\+\_\+profile}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+with\+\_\+profile()}{mbedtls\_x509\_crt\_verify\_with\_profile()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+crt\+\_\+verify\+\_\+with\+\_\+profile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{crt,  }\item[{\mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$}]{trust\+\_\+ca,  }\item[{\mbox{\hyperlink{structmbedtls__x509__crl}{mbedtls\+\_\+x509\+\_\+crl}} $\ast$}]{ca\+\_\+crl,  }\item[{const \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}} $\ast$}]{profile,  }\item[{const char $\ast$}]{cn,  }\item[{uint32\+\_\+t $\ast$}]{flags,  }\item[{int($\ast$)(void $\ast$, \mbox{\hyperlink{structmbedtls__x509__crt}{mbedtls\+\_\+x509\+\_\+crt}} $\ast$, int, uint32\+\_\+t $\ast$)}]{f\+\_\+vrfy,  }\item[{void $\ast$}]{p\+\_\+vrfy }\end{DoxyParamCaption})}
+
+
+
+Verify the certificate signature according to profile. 
+
+\begin{DoxyNote}{Note}
+Same as {\ttfamily \mbox{\hyperlink{group__x509__module_ga98ed4504e4f832b735a230acf54fcde3}{mbedtls\+\_\+x509\+\_\+crt\+\_\+verify()}}}, but with explicit security profile.
+
+The restrictions on keys (R\+SA minimum size, allowed curves for E\+C\+D\+SA) apply to all certificates\+: trusted root, intermediate C\+As if any, and end entity certificate.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em crt} & a certificate (chain) to be verified \\
+\hline
+{\em trust\+\_\+ca} & the list of trusted C\+As \\
+\hline
+{\em ca\+\_\+crl} & the list of C\+R\+Ls for trusted C\+As \\
+\hline
+{\em profile} & security profile for verification \\
+\hline
+{\em cn} & expected Common Name (can be set to N\+U\+LL if the CN must not be verified) \\
+\hline
+{\em flags} & result of the verification \\
+\hline
+{\em f\+\_\+vrfy} & verification function \\
+\hline
+{\em p\+\_\+vrfy} & verification parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful or M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+X509\+\_\+\+C\+E\+R\+T\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED in which case $\ast$flags will have one or more M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+E\+R\+T\+\_\+\+X\+XX or M\+B\+E\+D\+T\+L\+S\+\_\+\+X509\+\_\+\+B\+A\+D\+C\+R\+L\+\_\+\+X\+XX flags set, or another error in case of a fatal error encountered during the verification process. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_gac2139becff64aa7294ecad4f40767a84}\label{group__x509__module_gac2139becff64aa7294ecad4f40767a84}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+csr\+\_\+free@{mbedtls\+\_\+x509\+\_\+csr\+\_\+free}}
+\index{mbedtls\+\_\+x509\+\_\+csr\+\_\+free@{mbedtls\+\_\+x509\+\_\+csr\+\_\+free}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+csr\+\_\+free()}{mbedtls\_x509\_csr\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509\+\_\+csr\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$}]{csr }\end{DoxyParamCaption})}
+
+
+
+Unallocate all C\+SR data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csr} & C\+SR to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__x509__module_gaeec330c8cb351adc2870f4f088f36fdc}\label{group__x509__module_gaeec330c8cb351adc2870f4f088f36fdc}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+csr\+\_\+info@{mbedtls\+\_\+x509\+\_\+csr\+\_\+info}}
+\index{mbedtls\+\_\+x509\+\_\+csr\+\_\+info@{mbedtls\+\_\+x509\+\_\+csr\+\_\+info}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+csr\+\_\+info()}{mbedtls\_x509\_csr\_info()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+csr\+\_\+info (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size,  }\item[{const char $\ast$}]{prefix,  }\item[{const \mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$}]{csr }\end{DoxyParamCaption})}
+
+
+
+Returns an informational string about the C\+SR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to write to \\
+\hline
+{\em size} & Maximum size of buffer \\
+\hline
+{\em prefix} & A line prefix \\
+\hline
+{\em csr} & The X509 C\+SR to represent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string written (not including the terminated nul byte), or a negative error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga984db025f6953ea61be7dfca2d928f37}\label{group__x509__module_ga984db025f6953ea61be7dfca2d928f37}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+csr\+\_\+init@{mbedtls\+\_\+x509\+\_\+csr\+\_\+init}}
+\index{mbedtls\+\_\+x509\+\_\+csr\+\_\+init@{mbedtls\+\_\+x509\+\_\+csr\+\_\+init}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+csr\+\_\+init()}{mbedtls\_x509\_csr\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+x509\+\_\+csr\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$}]{csr }\end{DoxyParamCaption})}
+
+
+
+Initialize a C\+SR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csr} & C\+SR to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__x509__module_ga53012fb8859f4835ccfb0a5e359b3176}\label{group__x509__module_ga53012fb8859f4835ccfb0a5e359b3176}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+csr\+\_\+parse@{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse}}
+\index{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse@{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse()}{mbedtls\_x509\_csr\_parse()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+csr\+\_\+parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$}]{csr,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen }\end{DoxyParamCaption})}
+
+
+
+Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR), D\+ER or P\+EM format. 
+
+\begin{DoxyNote}{Note}
+See notes for {\ttfamily \mbox{\hyperlink{group__x509__module_ga4c58fa3804ea9feb1acf745221f17208}{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der()}}} 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em csr} & C\+SR context to fill \\
+\hline
+{\em buf} & buffer holding the C\+RL data \\
+\hline
+{\em buflen} & size of the buffer (including the terminating null byte for P\+EM data)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_ga4c58fa3804ea9feb1acf745221f17208}\label{group__x509__module_ga4c58fa3804ea9feb1acf745221f17208}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der@{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der}}
+\index{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der@{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der()}{mbedtls\_x509\_csr\_parse\_der()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+der (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$}]{csr,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen }\end{DoxyParamCaption})}
+
+
+
+Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR) in D\+ER format. 
+
+\begin{DoxyNote}{Note}
+C\+SR attributes (if any) are currently silently ignored.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em csr} & C\+SR context to fill \\
+\hline
+{\em buf} & buffer holding the C\+RL data \\
+\hline
+{\em buflen} & size of the buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific X509 error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__x509__module_gaf49db7323eee45d9649600de18d715f8}\label{group__x509__module_gaf49db7323eee45d9649600de18d715f8}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+file@{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+file}}
+\index{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+file@{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+file}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+file()}{mbedtls\_x509\_csr\_parse\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+x509\+\_\+csr\+\_\+parse\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__x509__csr}{mbedtls\+\_\+x509\+\_\+csr}} $\ast$}]{csr,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Load a Certificate Signing \mbox{\hyperlink{struct_request}{Request}} (C\+SR) 
+
+\begin{DoxyNote}{Note}
+See notes for {\ttfamily \mbox{\hyperlink{group__x509__module_ga53012fb8859f4835ccfb0a5e359b3176}{mbedtls\+\_\+x509\+\_\+csr\+\_\+parse()}}} 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em csr} & C\+SR context to fill \\
+\hline
+{\em path} & filename to read the C\+SR from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a specific X509 or P\+EM error code 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__x509__module_ga9cd2de10ffeff0f339abcc1ba7e26fdf}\label{group__x509__module_ga9cd2de10ffeff0f339abcc1ba7e26fdf}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+default@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+default}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+default@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+default}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+default}{mbedtls\_x509\_crt\_profile\_default}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}} mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+default}
+
+Default security profile. Should provide a good balance between security and compatibility with current deployments. \mbox{\Hypertarget{group__x509__module_ga8ab1f8a044fd25f76ecb4ba15c6d5bcd}\label{group__x509__module_ga8ab1f8a044fd25f76ecb4ba15c6d5bcd}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+next@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+next}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+next@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+next}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+next}{mbedtls\_x509\_crt\_profile\_next}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}} mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+next}
+
+Expected next default profile. Recommended for new deployments. Currently targets a 128-\/bit security level, except for R\+S\+A-\/2048. \mbox{\Hypertarget{group__x509__module_gaf09067a39129236125e353a68ceb45d6}\label{group__x509__module_gaf09067a39129236125e353a68ceb45d6}} 
+\index{X509\+\_\+module@{X509\+\_\+module}!mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+suiteb@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+suiteb}}
+\index{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+suiteb@{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+suiteb}!X509\+\_\+module@{X509\+\_\+module}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+suiteb}{mbedtls\_x509\_crt\_profile\_suiteb}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__x509__crt__profile}{mbedtls\+\_\+x509\+\_\+crt\+\_\+profile}} mbedtls\+\_\+x509\+\_\+crt\+\_\+profile\+\_\+suiteb}
+
+N\+SA Suite B profile. 

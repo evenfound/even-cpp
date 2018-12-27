@@ -1,0 +1,113 @@
+\hypertarget{classstefanfrings_1_1_template_cache}{}\section{stefanfrings\+:\+:Template\+Cache Class Reference}
+\label{classstefanfrings_1_1_template_cache}\index{stefanfrings\+::\+Template\+Cache@{stefanfrings\+::\+Template\+Cache}}
+
+
+{\ttfamily \#include $<$templatecache.\+h$>$}
+
+
+
+Inheritance diagram for stefanfrings\+:\+:Template\+Cache\+:
+% FIG 0
+
+
+Collaboration diagram for stefanfrings\+:\+:Template\+Cache\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_template_cache_aef9bd0bd1ca5a4592054e1608eae80dc}{Template\+Cache}} (Q\+Settings $\ast$settings, Q\+Object $\ast$parent=0)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Q\+String \mbox{\hyperlink{classstefanfrings_1_1_template_cache_a65584abe7d62c93659c741f41bdeeada}{try\+File}} (Q\+String localized\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Caching template loader, reduces the amount of I/O and improves performance on remote file systems. The cache has a limited size, it prefers to keep the last recently used files. Optionally, the maximum time of cached entries can be defined to enforce a reload of the template file after a while. 
+
+In case of local file system, the use of this cache is optionally, since the operating system caches files already. 
+
+Loads localized versions of template files. If the caller requests a file with the name \char`\"{}index\char`\"{} and the suffix is \char`\"{}.\+tpl\char`\"{} and the requested locale is \char`\"{}de\+\_\+\+D\+E, de, en-\/\+U\+S\char`\"{}, then files are searched in the following order\+:
+
+
+\begin{DoxyItemize}
+\item index-\/de\+\_\+\+D\+E.\+tpl
+\item index-\/de.\+tpl
+\item index-\/en\+\_\+\+U\+S.\+tpl
+\item index-\/en.\+tpl
+\item index.\+tpl 
+\end{DoxyItemize}
+
+The following settings are required\+: {\ttfamily 
+\begin{DoxyPre}
+path=../templates
+suffix=.tpl
+encoding=UTF-8
+cacheSize=1000000
+cacheTime=60000
+\end{DoxyPre}
+} The path is relative to the directory of the config file. In case of windows, if the settings are in the registry, the path is relative to the current working directory. 
+
+Files are cached as long as possible, when cache\+Time=0. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classstefanfrings_1_1_template_loader}{Template\+Loader}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file templatecache.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_template_cache_aef9bd0bd1ca5a4592054e1608eae80dc}\label{classstefanfrings_1_1_template_cache_aef9bd0bd1ca5a4592054e1608eae80dc}} 
+\index{stefanfrings\+::\+Template\+Cache@{stefanfrings\+::\+Template\+Cache}!Template\+Cache@{Template\+Cache}}
+\index{Template\+Cache@{Template\+Cache}!stefanfrings\+::\+Template\+Cache@{stefanfrings\+::\+Template\+Cache}}
+\subsubsection{\texorpdfstring{Template\+Cache()}{TemplateCache()}}
+{\footnotesize\ttfamily Template\+Cache\+::\+Template\+Cache (\begin{DoxyParamCaption}\item[{Q\+Settings $\ast$}]{settings,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & configurations settings \\
+\hline
+{\em parent} & Parent object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file templatecache.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_template_cache_a65584abe7d62c93659c741f41bdeeada}\label{classstefanfrings_1_1_template_cache_a65584abe7d62c93659c741f41bdeeada}} 
+\index{stefanfrings\+::\+Template\+Cache@{stefanfrings\+::\+Template\+Cache}!try\+File@{try\+File}}
+\index{try\+File@{try\+File}!stefanfrings\+::\+Template\+Cache@{stefanfrings\+::\+Template\+Cache}}
+\subsubsection{\texorpdfstring{try\+File()}{tryFile()}}
+{\footnotesize\ttfamily Q\+String Template\+Cache\+::try\+File (\begin{DoxyParamCaption}\item[{Q\+String}]{localized\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Try to get a file from cache or filesystem. 
+\begin{DoxyParams}{Parameters}
+{\em localized\+Name} & Name of the template with locale to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The template document, or empty string if not found 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classstefanfrings_1_1_template_loader_a006cbda0c014ad08199563ea56fc05a3}{stefanfrings\+::\+Template\+Loader}}.
+
+
+
+Definition at line 16 of file templatecache.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/templateengine/templatecache.\+h\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/templateengine/templatecache.\+cpp\end{DoxyCompactItemize}

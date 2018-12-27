@@ -1,0 +1,113 @@
+\hypertarget{class_q_ssh_1_1_ssh_pseudo_terminal}{}\section{Q\+Ssh\+:\+:Ssh\+Pseudo\+Terminal Class Reference}
+\label{class_q_ssh_1_1_ssh_pseudo_terminal}\index{Q\+Ssh\+::\+Ssh\+Pseudo\+Terminal@{Q\+Ssh\+::\+Ssh\+Pseudo\+Terminal}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_ssh_pseudo_terminal_ae9b18a07c4c5ff1274e89d41a1fbcbd3}\label{class_q_ssh_1_1_ssh_pseudo_terminal_ae9b18a07c4c5ff1274e89d41a1fbcbd3}} 
+enum {\bfseries Mode} \{ \newline
+{\bfseries V\+I\+N\+TR} = 1, 
+{\bfseries V\+Q\+U\+IT} = 2, 
+{\bfseries V\+E\+R\+A\+SE} = 3, 
+{\bfseries V\+K\+I\+LL} = 4, 
+\newline
+{\bfseries V\+E\+OF} = 5, 
+{\bfseries V\+E\+OL} = 6, 
+{\bfseries V\+E\+O\+L2} = 7, 
+{\bfseries V\+S\+T\+A\+RT} = 8, 
+\newline
+{\bfseries V\+S\+T\+OP} = 9, 
+{\bfseries V\+S\+U\+SP} = 10, 
+{\bfseries V\+D\+S\+U\+SP} = 11, 
+{\bfseries V\+R\+E\+P\+R\+I\+NT} = 12, 
+\newline
+{\bfseries V\+W\+E\+R\+A\+SE} = 13, 
+{\bfseries V\+L\+N\+E\+XT} = 14, 
+{\bfseries V\+F\+L\+U\+SH} = 15, 
+{\bfseries V\+S\+W\+T\+CH} = 16, 
+\newline
+{\bfseries V\+S\+T\+A\+T\+US} = 17, 
+{\bfseries V\+D\+I\+S\+C\+A\+RD} = 18, 
+{\bfseries I\+G\+N\+P\+AR} = 30, 
+{\bfseries P\+A\+R\+M\+RK} = 31, 
+\newline
+{\bfseries I\+N\+P\+CK} = 32, 
+{\bfseries I\+S\+T\+R\+IP} = 33, 
+{\bfseries I\+N\+L\+CR} = 34, 
+{\bfseries I\+G\+N\+CR} = 35, 
+\newline
+{\bfseries I\+C\+R\+NL} = 36, 
+{\bfseries I\+U\+C\+LC} = 37, 
+{\bfseries I\+X\+ON} = 38, 
+{\bfseries I\+X\+A\+NY} = 39, 
+\newline
+{\bfseries I\+X\+O\+FF} = 40, 
+{\bfseries I\+M\+A\+X\+B\+EL} = 41, 
+{\bfseries I\+S\+IG} = 50, 
+{\bfseries I\+C\+A\+N\+ON} = 51, 
+\newline
+{\bfseries X\+C\+A\+SE} = 52, 
+{\bfseries E\+C\+HO} = 53, 
+{\bfseries E\+C\+H\+OE} = 54, 
+{\bfseries E\+C\+H\+OK} = 55, 
+\newline
+{\bfseries E\+C\+H\+O\+NL} = 56, 
+{\bfseries N\+O\+F\+L\+SH} = 57, 
+{\bfseries T\+O\+S\+T\+OP} = 58, 
+{\bfseries I\+E\+X\+T\+EN} = 59, 
+\newline
+{\bfseries E\+C\+H\+O\+C\+TL} = 60, 
+{\bfseries E\+C\+H\+O\+KE} = 61, 
+{\bfseries P\+E\+N\+D\+IN} = 62, 
+{\bfseries O\+P\+O\+ST} = 70, 
+\newline
+{\bfseries O\+L\+C\+UC} = 71, 
+{\bfseries O\+N\+L\+CR} = 72, 
+{\bfseries O\+C\+R\+NL} = 73, 
+{\bfseries O\+N\+O\+CR} = 74, 
+\newline
+{\bfseries O\+N\+L\+R\+ET} = 75, 
+{\bfseries C\+S7} = 90, 
+{\bfseries C\+S8} = 91, 
+{\bfseries P\+A\+R\+E\+NB} = 92, 
+\newline
+{\bfseries P\+A\+R\+O\+DD} = 93, 
+{\bfseries T\+T\+Y\+\_\+\+O\+P\+\_\+\+I\+S\+P\+E\+ED} = 128, 
+{\bfseries T\+T\+Y\+\_\+\+O\+P\+\_\+\+O\+S\+P\+E\+ED} = 129
+ \}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_ssh_pseudo_terminal_af01d09c2b69c61aa253d3f0f55388948}\label{class_q_ssh_1_1_ssh_pseudo_terminal_af01d09c2b69c61aa253d3f0f55388948}} 
+typedef Q\+Hash$<$ Mode, quint32 $>$ {\bfseries Mode\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_ssh_pseudo_terminal_a61fec0977756ff7608e5aef0f85a9b47}\label{class_q_ssh_1_1_ssh_pseudo_terminal_a61fec0977756ff7608e5aef0f85a9b47}} 
+{\bfseries Ssh\+Pseudo\+Terminal} (const Q\+Byte\+Array \&term\+Type=\char`\"{}vt100\char`\"{}, int row\+Count=24, int column\+Count=80)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_ssh_pseudo_terminal_a7096f932b2c57588cdb7ab5141ebd919}\label{class_q_ssh_1_1_ssh_pseudo_terminal_a7096f932b2c57588cdb7ab5141ebd919}} 
+Q\+Byte\+Array {\bfseries term\+Type}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_ssh_pseudo_terminal_a92100e039f0a209fcd5c7734eab7cef3}\label{class_q_ssh_1_1_ssh_pseudo_terminal_a92100e039f0a209fcd5c7734eab7cef3}} 
+int {\bfseries row\+Count}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_ssh_pseudo_terminal_a0ad635a7f0d3ca31daa5093d99ecd496}\label{class_q_ssh_1_1_ssh_pseudo_terminal_a0ad635a7f0d3ca31daa5093d99ecd496}} 
+int {\bfseries column\+Count}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_ssh_pseudo_terminal_a6fec8c8590b488a481ba99b128cfe87d}\label{class_q_ssh_1_1_ssh_pseudo_terminal_a6fec8c8590b488a481ba99b128cfe87d}} 
+Mode\+Map {\bfseries modes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file sshpseudoterminal.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sshpseudoterminal.\+h\end{DoxyCompactItemize}

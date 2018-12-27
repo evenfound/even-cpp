@@ -1,0 +1,176 @@
+\hypertarget{structmbedtls__ecjpake__context}{}\section{mbedtls\+\_\+ecjpake\+\_\+context Struct Reference}
+\label{structmbedtls__ecjpake__context}\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+
+
+{\ttfamily \#include $<$ecjpake.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+ecjpake\+\_\+context\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structmbedtls__md__info__t}{mbedtls\+\_\+md\+\_\+info\+\_\+t}} $\ast$ \mbox{\hyperlink{structmbedtls__ecjpake__context_a2c8920999ae02d5742f4dcfd0a36e02c}{md\+\_\+info}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__group}{mbedtls\+\_\+ecp\+\_\+group}} \mbox{\hyperlink{structmbedtls__ecjpake__context_ac2604256267f50b4bd75f17655c6299a}{grp}}
+\item 
+\mbox{\hyperlink{ecjpake_8h_a3f1fa77b9cda6a2540b9bd6b84fb9f3f}{mbedtls\+\_\+ecjpake\+\_\+role}} \mbox{\hyperlink{structmbedtls__ecjpake__context_a50dc89b5a0871cdee0e1e78d5848b364}{role}}
+\item 
+int \mbox{\hyperlink{structmbedtls__ecjpake__context_acf904eb3228525b6b74117b2c9686fd3}{point\+\_\+format}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecjpake__context_af48836057581977acd52e7bf079a3368}{Xm1}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecjpake__context_a55676584cea41d167008b594748ca0d5}{Xm2}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecjpake__context_a3278c6093f4ef2bfd90984fc3d4cf773}{Xp1}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecjpake__context_a586f1c91152f57b4398b5e9711b93c46}{Xp2}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecjpake__context_a8f830784980935408a08b5a7e37f7a88}{Xp}}
+\item 
+\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} \mbox{\hyperlink{structmbedtls__ecjpake__context_adb90dac8428128ad65d595fc9904fdd3}{xm1}}
+\item 
+\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} \mbox{\hyperlink{structmbedtls__ecjpake__context_ae1769cd75e437d673b4a49fc0d01bafc}{xm2}}
+\item 
+\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} \mbox{\hyperlink{structmbedtls__ecjpake__context_a532bce70f1a6652df129e28e7193357a}{s}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+EC J-\/\+P\+A\+KE context structure.
+
+J-\/\+P\+A\+KE is a symmetric protocol, except for the identifiers used in Zero-\/\+Knowledge Proofs, and the serialization of the second message (Key\+Exchange) as defined by the Thread spec.
+
+In order to benefit from this symmetry, we choose a different naming convetion from the Thread v1.\+0 spec. Correspondance is indicated in the description as a pair C\+: client name, S\+: server name 
+
+Definition at line 69 of file ecjpake.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_ac2604256267f50b4bd75f17655c6299a}\label{structmbedtls__ecjpake__context_ac2604256267f50b4bd75f17655c6299a}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!grp@{grp}}
+\index{grp@{grp}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{grp}{grp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__group}{mbedtls\+\_\+ecp\+\_\+group}} mbedtls\+\_\+ecjpake\+\_\+context\+::grp}
+
+Elliptic curve 
+
+Definition at line 72 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_a2c8920999ae02d5742f4dcfd0a36e02c}\label{structmbedtls__ecjpake__context_a2c8920999ae02d5742f4dcfd0a36e02c}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!md\+\_\+info@{md\+\_\+info}}
+\index{md\+\_\+info@{md\+\_\+info}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{md\+\_\+info}{md\_info}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmbedtls__md__info__t}{mbedtls\+\_\+md\+\_\+info\+\_\+t}}$\ast$ mbedtls\+\_\+ecjpake\+\_\+context\+::md\+\_\+info}
+
+Hash to use 
+
+Definition at line 71 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_acf904eb3228525b6b74117b2c9686fd3}\label{structmbedtls__ecjpake__context_acf904eb3228525b6b74117b2c9686fd3}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!point\+\_\+format@{point\+\_\+format}}
+\index{point\+\_\+format@{point\+\_\+format}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{point\+\_\+format}{point\_format}}
+{\footnotesize\ttfamily int mbedtls\+\_\+ecjpake\+\_\+context\+::point\+\_\+format}
+
+Format for point export 
+
+Definition at line 74 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_a50dc89b5a0871cdee0e1e78d5848b364}\label{structmbedtls__ecjpake__context_a50dc89b5a0871cdee0e1e78d5848b364}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!role@{role}}
+\index{role@{role}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ecjpake_8h_a3f1fa77b9cda6a2540b9bd6b84fb9f3f}{mbedtls\+\_\+ecjpake\+\_\+role}} mbedtls\+\_\+ecjpake\+\_\+context\+::role}
+
+Are we client or server? 
+
+Definition at line 73 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_a532bce70f1a6652df129e28e7193357a}\label{structmbedtls__ecjpake__context_a532bce70f1a6652df129e28e7193357a}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!s@{s}}
+\index{s@{s}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} mbedtls\+\_\+ecjpake\+\_\+context\+::s}
+
+Pre-\/shared secret (passphrase) 
+
+Definition at line 85 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_af48836057581977acd52e7bf079a3368}\label{structmbedtls__ecjpake__context_af48836057581977acd52e7bf079a3368}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!Xm1@{Xm1}}
+\index{Xm1@{Xm1}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{Xm1}{Xm1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecjpake\+\_\+context\+::\+Xm1}
+
+My public key 1 C\+: X1, S\+: X3 
+
+Definition at line 76 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_adb90dac8428128ad65d595fc9904fdd3}\label{structmbedtls__ecjpake__context_adb90dac8428128ad65d595fc9904fdd3}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!xm1@{xm1}}
+\index{xm1@{xm1}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{xm1}{xm1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} mbedtls\+\_\+ecjpake\+\_\+context\+::xm1}
+
+My private key 1 C\+: x1, S\+: x3 
+
+Definition at line 82 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_a55676584cea41d167008b594748ca0d5}\label{structmbedtls__ecjpake__context_a55676584cea41d167008b594748ca0d5}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!Xm2@{Xm2}}
+\index{Xm2@{Xm2}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{Xm2}{Xm2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecjpake\+\_\+context\+::\+Xm2}
+
+My public key 2 C\+: X2, S\+: X4 
+
+Definition at line 77 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_ae1769cd75e437d673b4a49fc0d01bafc}\label{structmbedtls__ecjpake__context_ae1769cd75e437d673b4a49fc0d01bafc}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!xm2@{xm2}}
+\index{xm2@{xm2}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{xm2}{xm2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} mbedtls\+\_\+ecjpake\+\_\+context\+::xm2}
+
+My private key 2 C\+: x2, S\+: x4 
+
+Definition at line 83 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_a8f830784980935408a08b5a7e37f7a88}\label{structmbedtls__ecjpake__context_a8f830784980935408a08b5a7e37f7a88}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!Xp@{Xp}}
+\index{Xp@{Xp}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{Xp}{Xp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecjpake\+\_\+context\+::\+Xp}
+
+Peer public key C\+: Xs, S\+: Xc 
+
+Definition at line 80 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_a3278c6093f4ef2bfd90984fc3d4cf773}\label{structmbedtls__ecjpake__context_a3278c6093f4ef2bfd90984fc3d4cf773}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!Xp1@{Xp1}}
+\index{Xp1@{Xp1}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{Xp1}{Xp1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecjpake\+\_\+context\+::\+Xp1}
+
+Peer public key 1 C\+: X3, S\+: X1 
+
+Definition at line 78 of file ecjpake.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecjpake__context_a586f1c91152f57b4398b5e9711b93c46}\label{structmbedtls__ecjpake__context_a586f1c91152f57b4398b5e9711b93c46}} 
+\index{mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}!Xp2@{Xp2}}
+\index{Xp2@{Xp2}!mbedtls\+\_\+ecjpake\+\_\+context@{mbedtls\+\_\+ecjpake\+\_\+context}}
+\subsubsection{\texorpdfstring{Xp2}{Xp2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecjpake\+\_\+context\+::\+Xp2}
+
+Peer public key 2 C\+: X4, S\+: X2 
+
+Definition at line 79 of file ecjpake.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/\mbox{\hyperlink{ecjpake_8h}{ecjpake.\+h}}\end{DoxyCompactItemize}

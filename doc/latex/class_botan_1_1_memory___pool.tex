@@ -1,0 +1,62 @@
+\hypertarget{class_botan_1_1_memory___pool}{}\section{Botan\+:\+:Memory\+\_\+\+Pool Class Reference}
+\label{class_botan_1_1_memory___pool}\index{Botan\+::\+Memory\+\_\+\+Pool@{Botan\+::\+Memory\+\_\+\+Pool}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_botan_1_1_memory___pool_a2960cd6fb9463c231c1c36f2d0e06897}{Memory\+\_\+\+Pool}} (uint8\+\_\+t $\ast$pool, size\+\_\+t pool\+\_\+size, size\+\_\+t page\+\_\+size, size\+\_\+t min\+\_\+allocation, size\+\_\+t max\+\_\+allocation, uint8\+\_\+t align\+\_\+bit)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_memory___pool_ad07caa00fcfb264974dd0a322d751132}\label{class_botan_1_1_memory___pool_ad07caa00fcfb264974dd0a322d751132}} 
+void $\ast$ {\bfseries allocate} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_memory___pool_ac98f9abb1ec900a711680bfeb7eba2f6}\label{class_botan_1_1_memory___pool_ac98f9abb1ec900a711680bfeb7eba2f6}} 
+bool {\bfseries deallocate} (void $\ast$p, size\+\_\+t size) noexcept
+\item 
+\mbox{\Hypertarget{class_botan_1_1_memory___pool_adc95ce8af605b479c17984d8e769c457}\label{class_botan_1_1_memory___pool_adc95ce8af605b479c17984d8e769c457}} 
+{\bfseries Memory\+\_\+\+Pool} (const \mbox{\hyperlink{class_botan_1_1_memory___pool}{Memory\+\_\+\+Pool}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_botan_1_1_memory___pool_a77f691473f0aa88b5ca76bf053d94645}\label{class_botan_1_1_memory___pool_a77f691473f0aa88b5ca76bf053d94645}} 
+\mbox{\hyperlink{class_botan_1_1_memory___pool}{Memory\+\_\+\+Pool}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_botan_1_1_memory___pool}{Memory\+\_\+\+Pool}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 16 of file mem\+\_\+pool.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan_1_1_memory___pool_a2960cd6fb9463c231c1c36f2d0e06897}\label{class_botan_1_1_memory___pool_a2960cd6fb9463c231c1c36f2d0e06897}} 
+\index{Botan\+::\+Memory\+\_\+\+Pool@{Botan\+::\+Memory\+\_\+\+Pool}!Memory\+\_\+\+Pool@{Memory\+\_\+\+Pool}}
+\index{Memory\+\_\+\+Pool@{Memory\+\_\+\+Pool}!Botan\+::\+Memory\+\_\+\+Pool@{Botan\+::\+Memory\+\_\+\+Pool}}
+\subsubsection{\texorpdfstring{Memory\+\_\+\+Pool()}{Memory\_Pool()}}
+{\footnotesize\ttfamily Botan\+::\+Memory\+\_\+\+Pool\+::\+Memory\+\_\+\+Pool (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pool,  }\item[{size\+\_\+t}]{pool\+\_\+size,  }\item[{size\+\_\+t}]{page\+\_\+size,  }\item[{size\+\_\+t}]{min\+\_\+allocation,  }\item[{size\+\_\+t}]{max\+\_\+allocation,  }\item[{uint8\+\_\+t}]{align\+\_\+bit }\end{DoxyParamCaption})}
+
+Initialize a memory pool. The memory is not owned by $\ast$this, it must be freed by the caller. 
+\begin{DoxyParams}{Parameters}
+{\em pool} & the pool \\
+\hline
+{\em pool\+\_\+size} & size of pool \\
+\hline
+{\em page\+\_\+size} & some nominal page size (does not need to match the system page size) \\
+\hline
+{\em min\+\_\+allocation} & return null for allocs for smaller amounts \\
+\hline
+{\em max\+\_\+allocation} & return null for allocs of larger amounts \\
+\hline
+{\em align\+\_\+bit} & align all returned memory to (1$<$$<$align\+\_\+bit) bytes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file mem\+\_\+pool.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/utils/mem\+\_\+pool/mem\+\_\+pool.\+h\item 
+prerequisites/botan/src/lib/utils/mem\+\_\+pool/mem\+\_\+pool.\+cpp\end{DoxyCompactItemize}

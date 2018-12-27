@@ -1,0 +1,66 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}{}\section{Botan\+:\+:T\+LS\+:\+:T\+L\+S\+\_\+\+Data\+\_\+\+Reader Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}\index{Botan\+::\+T\+L\+S\+::\+T\+L\+S\+\_\+\+Data\+\_\+\+Reader@{Botan\+::\+T\+L\+S\+::\+T\+L\+S\+\_\+\+Data\+\_\+\+Reader}}
+
+
+{\ttfamily \#include $<$tls\+\_\+reader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a9a39a0e225912c3c2b676ddcf3630a9b}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a9a39a0e225912c3c2b676ddcf3630a9b}} 
+{\bfseries T\+L\+S\+\_\+\+Data\+\_\+\+Reader} (const char $\ast$type, const std\+::vector$<$ uint8\+\_\+t $>$ \&buf\+\_\+in)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a200dcd6721bb003af2d24c0919bbad74}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a200dcd6721bb003af2d24c0919bbad74}} 
+void {\bfseries assert\+\_\+done} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a2232ef0e996b3cff45c55eaf90318b6a}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a2232ef0e996b3cff45c55eaf90318b6a}} 
+size\+\_\+t {\bfseries read\+\_\+so\+\_\+far} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_ab9f22811f622f912127369ebd7931468}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_ab9f22811f622f912127369ebd7931468}} 
+size\+\_\+t {\bfseries remaining\+\_\+bytes} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a0a59f90738241c63d689e061e0a53f62}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a0a59f90738241c63d689e061e0a53f62}} 
+bool {\bfseries has\+\_\+remaining} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a61f8aa6665ea83874fb98a3ba6234b4b}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a61f8aa6665ea83874fb98a3ba6234b4b}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries get\+\_\+remaining} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a237a3ca35b42b66f4e43363d0e666f74}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a237a3ca35b42b66f4e43363d0e666f74}} 
+void {\bfseries discard\+\_\+next} (size\+\_\+t bytes)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_adbdacfce57a050a2727ceb47383b9c23}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_adbdacfce57a050a2727ceb47383b9c23}} 
+uint32\+\_\+t {\bfseries get\+\_\+uint32\+\_\+t} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_ad65ee94c4324b898bda33fbb2e9d5a7b}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_ad65ee94c4324b898bda33fbb2e9d5a7b}} 
+uint16\+\_\+t {\bfseries get\+\_\+uint16\+\_\+t} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a882e65dac23cde74e35abbf51e7d6ee8}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a882e65dac23cde74e35abbf51e7d6ee8}} 
+uint8\+\_\+t {\bfseries get\+\_\+byte} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a6a1f88eb1af2169956deef9fbe1f3391}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a6a1f88eb1af2169956deef9fbe1f3391}} 
+{\footnotesize template$<$typename T , typename Container $>$ }\\Container {\bfseries get\+\_\+elem} (size\+\_\+t num\+\_\+elems)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_ae1e66a9809134db568ebb95fc9297982}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_ae1e66a9809134db568ebb95fc9297982}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ {\bfseries get\+\_\+range} (size\+\_\+t len\+\_\+bytes, size\+\_\+t min\+\_\+elems, size\+\_\+t max\+\_\+elems)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_aa1812db126b6da0710b2d28b9cc35728}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_aa1812db126b6da0710b2d28b9cc35728}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ {\bfseries get\+\_\+range\+\_\+vector} (size\+\_\+t len\+\_\+bytes, size\+\_\+t min\+\_\+elems, size\+\_\+t max\+\_\+elems)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a0177be13e0d96d8e07b0897918029906}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_a0177be13e0d96d8e07b0897918029906}} 
+std\+::string {\bfseries get\+\_\+string} (size\+\_\+t len\+\_\+bytes, size\+\_\+t min\+\_\+bytes, size\+\_\+t max\+\_\+bytes)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_ae9a8f7875592cccded599cebdba79e87}\label{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader_ae9a8f7875592cccded599cebdba79e87}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ {\bfseries get\+\_\+fixed} (size\+\_\+t size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class for decoding T\+LS protocol messages 
+
+Definition at line 24 of file tls\+\_\+reader.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+reader.\+h\end{DoxyCompactItemize}

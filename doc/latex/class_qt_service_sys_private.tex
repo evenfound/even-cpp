@@ -1,0 +1,105 @@
+\hypertarget{class_qt_service_sys_private}{}\section{Qt\+Service\+Sys\+Private Class Reference}
+\label{class_qt_service_sys_private}\index{Qt\+Service\+Sys\+Private@{Qt\+Service\+Sys\+Private}}
+
+
+Inheritance diagram for Qt\+Service\+Sys\+Private\+:
+% FIG 0
+
+
+Collaboration diagram for Qt\+Service\+Sys\+Private\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a68b461403ad1050c75a568d08b2c4492}\label{class_qt_service_sys_private_a68b461403ad1050c75a568d08b2c4492}} 
+enum \{ {\bfseries Q\+T\+S\+E\+R\+V\+I\+C\+E\+\_\+\+S\+T\+A\+R\+T\+UP} = 256
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a1d33416e766b6f475d36038467bdd69a}\label{class_qt_service_sys_private_a1d33416e766b6f475d36038467bdd69a}} 
+void {\bfseries set\+Status} (D\+W\+O\+RD dw\+State)
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a8d9929e1406f32ac3f71446ab86d0577}\label{class_qt_service_sys_private_a8d9929e1406f32ac3f71446ab86d0577}} 
+void {\bfseries set\+Service\+Flags} (Qt\+Service\+Base\+::\+Service\+Flags flags)
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a8951a293950f651468b69ba142afe017}\label{class_qt_service_sys_private_a8951a293950f651468b69ba142afe017}} 
+D\+W\+O\+RD {\bfseries service\+Flags} (Qt\+Service\+Base\+::\+Service\+Flags flags) const
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_ab023c74e63bc134ff13495891e34f385}\label{class_qt_service_sys_private_ab023c74e63bc134ff13495891e34f385}} 
+bool {\bfseries available} () const
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_aeb0603830564cf6d730549866020bf0a}\label{class_qt_service_sys_private_aeb0603830564cf6d730549866020bf0a}} 
+void {\bfseries handle\+Custom\+Event} (Q\+Event $\ast$e)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a0ebf25dd25c87974b313c79b696aec6e}\label{class_qt_service_sys_private_a0ebf25dd25c87974b313c79b696aec6e}} 
+static void W\+I\+N\+A\+PI {\bfseries service\+Main} (D\+W\+O\+RD dw\+Argc, wchar\+\_\+t $\ast$$\ast$lpsz\+Argv)
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_abec91d93c5a6562dfac877e4074c24d2}\label{class_qt_service_sys_private_abec91d93c5a6562dfac877e4074c24d2}} 
+static void W\+I\+N\+A\+PI {\bfseries handler} (D\+W\+O\+RD dw\+Opcode)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a5b718dc890ba28a1a8ecc2c292ed3683}\label{class_qt_service_sys_private_a5b718dc890ba28a1a8ecc2c292ed3683}} 
+char $\ast$ {\bfseries ident}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_ab3a1a34e95b1028d2d2437ce5683ce25}\label{class_qt_service_sys_private_ab3a1a34e95b1028d2d2437ce5683ce25}} 
+Qt\+Service\+Base\+::\+Service\+Flags {\bfseries service\+Flags}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a4eaa8c9fb344d5fcbe52e13d9b563749}\label{class_qt_service_sys_private_a4eaa8c9fb344d5fcbe52e13d9b563749}} 
+S\+E\+R\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+US {\bfseries status}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a5794a5ac189b478c944426805b41ae2c}\label{class_qt_service_sys_private_a5794a5ac189b478c944426805b41ae2c}} 
+S\+E\+R\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+H\+A\+N\+D\+LE {\bfseries service\+Status}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_aece0e34030f5abf3ec7bee64b4ab22a3}\label{class_qt_service_sys_private_aece0e34030f5abf3ec7bee64b4ab22a3}} 
+Q\+String\+List {\bfseries service\+Args}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a8fc09bc3f805b5afe18e5d2a5d42f466}\label{class_qt_service_sys_private_a8fc09bc3f805b5afe18e5d2a5d42f466}} 
+Q\+Wait\+Condition {\bfseries condition}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a13840c7d50506cea8ac099d75ed5bd94}\label{class_qt_service_sys_private_a13840c7d50506cea8ac099d75ed5bd94}} 
+Q\+Mutex {\bfseries mutex}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a2b96b9ff0db26655accab99d6527fe3d}\label{class_qt_service_sys_private_a2b96b9ff0db26655accab99d6527fe3d}} 
+Q\+Semaphore {\bfseries start\+Semaphore}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_ab81c4cc12732b32d6962253868fde059}\label{class_qt_service_sys_private_ab81c4cc12732b32d6962253868fde059}} 
+Q\+Semaphore {\bfseries start\+Semaphore2}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_ac8834f0ad3dd97b1dfb9e7de563ee5cb}\label{class_qt_service_sys_private_ac8834f0ad3dd97b1dfb9e7de563ee5cb}} 
+\mbox{\hyperlink{class_qt_service_controller_handler}{Qt\+Service\+Controller\+Handler}} $\ast$ {\bfseries controller\+Handler}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_a1c67be022e972d4e1f7d9aad91464222}\label{class_qt_service_sys_private_a1c67be022e972d4e1f7d9aad91464222}} 
+static \mbox{\hyperlink{class_qt_service_sys_private}{Qt\+Service\+Sys\+Private}} $\ast$ {\bfseries instance} = 0
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_aeb77807c5daf3c8f1386ffec7a9157c7}\label{class_qt_service_sys_private_aeb77807c5daf3c8f1386ffec7a9157c7}} 
+static Q\+Core\+Application\+::\+Event\+Filter {\bfseries next\+Filter} = 0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_qt_service_sys_private_af33e49296c17528601b4aeb93638e979}\label{class_qt_service_sys_private_af33e49296c17528601b4aeb93638e979}} 
+void {\bfseries incoming\+Connection} (t\+Socket\+Descriptor socket\+Descriptor) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 279 of file qtservice\+\_\+unix.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtservice/qtservice\+\_\+unix.\+cpp\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtservice/qtservice\+\_\+win.\+cpp\end{DoxyCompactItemize}

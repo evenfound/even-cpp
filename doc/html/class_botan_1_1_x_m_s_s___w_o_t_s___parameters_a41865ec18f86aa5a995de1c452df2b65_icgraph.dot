@@ -1,0 +1,13 @@
+digraph "Botan::XMSS_WOTS_Parameters::element_size"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="Botan::XMSS_WOTS_Parameters\l::element_size",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Botan::XMSS_WOTS_Private\lKey::at",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___private_key.html#ac79a078ba4db7829e1065721c8980cfa"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Botan::XMSS_WOTS_Private\lKey::sign",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___private_key.html#a035d5d63b7042ebf1709e9c898956e96"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Botan::XMSS_WOTS_Private\lKey::operator[]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___private_key.html#ae80b5d24e94411aa807ba31e6662658e"];
+}

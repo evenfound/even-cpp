@@ -1,0 +1,60 @@
+\hypertarget{struct_yamux_context}{}\section{Yamux\+Context Struct Reference}
+\label{struct_yamux_context}\index{Yamux\+Context@{Yamux\+Context}}
+
+
+Collaboration diagram for Yamux\+Context\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_yamux_context_a18a43cf010afd8761c9b368ac5264b71}\label{struct_yamux_context_a18a43cf010afd8761c9b368ac5264b71}} 
+char {\bfseries type}
+\item 
+\mbox{\Hypertarget{struct_yamux_context_a9173dde91a83782adf3948964411c2ce}\label{struct_yamux_context_a9173dde91a83782adf3948964411c2ce}} 
+struct \mbox{\hyperlink{struct_stream}{Stream}} $\ast$ {\bfseries stream}
+\item 
+\mbox{\Hypertarget{struct_yamux_context_ad2116fb2f861df6747ffa40e3dde408e}\label{struct_yamux_context_ad2116fb2f861df6747ffa40e3dde408e}} 
+struct \mbox{\hyperlink{structyamux__session}{yamux\+\_\+session}} $\ast$ {\bfseries session}
+\item 
+\mbox{\Hypertarget{struct_yamux_context_a76f975aa90d8c45b977763606deb903b}\label{struct_yamux_context_a76f975aa90d8c45b977763606deb903b}} 
+struct \mbox{\hyperlink{struct_libp2p_vector}{Libp2p\+Vector}} $\ast$ {\bfseries channels}
+\item 
+\mbox{\Hypertarget{struct_yamux_context_af9d8054352d3b04e3de4647f9b8cc695}\label{struct_yamux_context_af9d8054352d3b04e3de4647f9b8cc695}} 
+int {\bfseries am\+\_\+server}
+\item 
+\mbox{\Hypertarget{struct_yamux_context_a48045c070e3a0ba7c0b9724f6bc64e4d}\label{struct_yamux_context_a48045c070e3a0ba7c0b9724f6bc64e4d}} 
+int {\bfseries state}
+\item 
+\mbox{\Hypertarget{struct_yamux_context_a31db478fbdc2d6ed97e6f011182980cc}\label{struct_yamux_context_a31db478fbdc2d6ed97e6f011182980cc}} 
+struct \mbox{\hyperlink{struct_libp2p_vector}{Libp2p\+Vector}} $\ast$ {\bfseries protocol\+\_\+handlers}
+\item 
+struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}} $\ast$ \mbox{\hyperlink{struct_yamux_context_aead2ca72642a6109167f0fe86cf6f728}{buffered\+\_\+message}}
+\item 
+\mbox{\Hypertarget{struct_yamux_context_a3ee6f36f0b1b8f231584d0bc45a98d5f}\label{struct_yamux_context_a3ee6f36f0b1b8f231584d0bc45a98d5f}} 
+long {\bfseries buffered\+\_\+message\+\_\+pos}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file yamux.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_yamux_context_aead2ca72642a6109167f0fe86cf6f728}\label{struct_yamux_context_aead2ca72642a6109167f0fe86cf6f728}} 
+\index{Yamux\+Context@{Yamux\+Context}!buffered\+\_\+message@{buffered\+\_\+message}}
+\index{buffered\+\_\+message@{buffered\+\_\+message}!Yamux\+Context@{Yamux\+Context}}
+\subsubsection{\texorpdfstring{buffered\+\_\+message}{buffered\_message}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_stream_message}{Stream\+Message}}$\ast$ Yamux\+Context\+::buffered\+\_\+message}
+
+What is stored here is from a read\+\_\+raw call. It could be garbage, but it could be a decent message. It has been \char`\"{}unframed\char`\"{} so contains the data portion of the last frame captured in a read\+\_\+raw call, or if it was empty, the data from a new read call. 
+
+Definition at line 39 of file yamux.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/libp2p/yamux/yamux.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,184 @@
+\hypertarget{classstefanfrings_1_1_template_loader}{}\section{stefanfrings\+:\+:Template\+Loader Class Reference}
+\label{classstefanfrings_1_1_template_loader}\index{stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}}
+
+
+{\ttfamily \#include $<$templateloader.\+h$>$}
+
+
+
+Inheritance diagram for stefanfrings\+:\+:Template\+Loader\+:
+% FIG 0
+
+
+Collaboration diagram for stefanfrings\+:\+:Template\+Loader\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_template_loader_a826a8afe9a89d7635183320f3891e66f}{Template\+Loader}} (Q\+Settings $\ast$settings, Q\+Object $\ast$parent=0)
+\item 
+virtual \mbox{\hyperlink{classstefanfrings_1_1_template_loader_a6914af0af09bc3f0e00f373c23e79382}{$\sim$\+Template\+Loader}} ()
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_template}{Template}} \mbox{\hyperlink{classstefanfrings_1_1_template_loader_ae8639b349ec9c9a01ec82ea1ed8d0af8}{get\+Template}} (Q\+String template\+Name, Q\+String locales=Q\+String())
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Q\+String \mbox{\hyperlink{classstefanfrings_1_1_template_loader_a006cbda0c014ad08199563ea56fc05a3}{try\+File}} (Q\+String localized\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{classstefanfrings_1_1_template_loader_aee91532454f736858307239c48c69523}{template\+Path}}
+\item 
+Q\+String \mbox{\hyperlink{classstefanfrings_1_1_template_loader_a08d5758493b8e26f42f72799fed1caac}{file\+Name\+Suffix}}
+\item 
+Q\+Text\+Codec $\ast$ \mbox{\hyperlink{classstefanfrings_1_1_template_loader_a2cb81190ac3993fda6e20e65713bfcce}{text\+Codec}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Loads localized versions of template files. If the caller requests a file with the name \char`\"{}index\char`\"{} and the suffix is \char`\"{}.\+tpl\char`\"{} and the requested locale is \char`\"{}de\+\_\+\+D\+E, de, en-\/\+U\+S\char`\"{}, then files are searched in the following order\+:
+
+
+\begin{DoxyItemize}
+\item index-\/de\+\_\+\+D\+E.\+tpl
+\item index-\/de.\+tpl
+\item index-\/en\+\_\+\+U\+S.\+tpl
+\item index-\/en.\+tpl
+\item index.\+tpl
+\end{DoxyItemize}
+
+The following settings are required\+: {\ttfamily 
+\begin{DoxyPre}
+path=../templates
+suffix=.tpl
+encoding=UTF-8
+\end{DoxyPre}
+} The path is relative to the directory of the config file. In case of windows, if the settings are in the registry, the path is relative to the current working directory. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classstefanfrings_1_1_template_cache}{Template\+Cache}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 40 of file templateloader.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_template_loader_a826a8afe9a89d7635183320f3891e66f}\label{classstefanfrings_1_1_template_loader_a826a8afe9a89d7635183320f3891e66f}} 
+\index{stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}!Template\+Loader@{Template\+Loader}}
+\index{Template\+Loader@{Template\+Loader}!stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}}
+\subsubsection{\texorpdfstring{Template\+Loader()}{TemplateLoader()}}
+{\footnotesize\ttfamily Template\+Loader\+::\+Template\+Loader (\begin{DoxyParamCaption}\item[{Q\+Settings $\ast$}]{settings,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & configurations settings \\
+\hline
+{\em parent} & parent object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file templateloader.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_template_loader_a6914af0af09bc3f0e00f373c23e79382}\label{classstefanfrings_1_1_template_loader_a6914af0af09bc3f0e00f373c23e79382}} 
+\index{stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}!````~Template\+Loader@{$\sim$\+Template\+Loader}}
+\index{````~Template\+Loader@{$\sim$\+Template\+Loader}!stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}}
+\subsubsection{\texorpdfstring{$\sim$\+Template\+Loader()}{~TemplateLoader()}}
+{\footnotesize\ttfamily Template\+Loader\+::$\sim$\+Template\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 42 of file templateloader.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_template_loader_ae8639b349ec9c9a01ec82ea1ed8d0af8}\label{classstefanfrings_1_1_template_loader_ae8639b349ec9c9a01ec82ea1ed8d0af8}} 
+\index{stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}!get\+Template@{get\+Template}}
+\index{get\+Template@{get\+Template}!stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}}
+\subsubsection{\texorpdfstring{get\+Template()}{getTemplate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstefanfrings_1_1_template}{Template}} Template\+Loader\+::get\+Template (\begin{DoxyParamCaption}\item[{Q\+String}]{template\+Name,  }\item[{Q\+String}]{locales = {\ttfamily QString()} }\end{DoxyParamCaption})}
+
+Get a template for a given locale. This method is thread safe. 
+\begin{DoxyParams}{Parameters}
+{\em template\+Name} & base name of the template file, without suffix and without locale \\
+\hline
+{\em locales} & Requested locale(s), e.\+g. \char`\"{}de\+\_\+\+D\+E, en\+\_\+\+E\+N\char`\"{}. Strings in the format of the H\+T\+TP header Accept-\/\+Locale may be used. Badly formatted parts in the string are silently ignored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the template cannot be loaded, an error message is logged and an empty template is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file templateloader.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classstefanfrings_1_1_template_loader_a006cbda0c014ad08199563ea56fc05a3}\label{classstefanfrings_1_1_template_loader_a006cbda0c014ad08199563ea56fc05a3}} 
+\index{stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}!try\+File@{try\+File}}
+\index{try\+File@{try\+File}!stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}}
+\subsubsection{\texorpdfstring{try\+File()}{tryFile()}}
+{\footnotesize\ttfamily Q\+String Template\+Loader\+::try\+File (\begin{DoxyParamCaption}\item[{Q\+String}]{localized\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Try to get a file from cache or filesystem. 
+\begin{DoxyParams}{Parameters}
+{\em localized\+Name} & Name of the template with locale to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The template document, or empty string if not found 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classstefanfrings_1_1_template_cache_a65584abe7d62c93659c741f41bdeeada}{stefanfrings\+::\+Template\+Cache}}.
+
+
+
+Definition at line 45 of file templateloader.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_template_loader_a08d5758493b8e26f42f72799fed1caac}\label{classstefanfrings_1_1_template_loader_a08d5758493b8e26f42f72799fed1caac}} 
+\index{stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}!file\+Name\+Suffix@{file\+Name\+Suffix}}
+\index{file\+Name\+Suffix@{file\+Name\+Suffix}!stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}}
+\subsubsection{\texorpdfstring{file\+Name\+Suffix}{fileNameSuffix}}
+{\footnotesize\ttfamily Q\+String stefanfrings\+::\+Template\+Loader\+::file\+Name\+Suffix\hspace{0.3cm}{\ttfamily [protected]}}
+
+Suffix to the filenames 
+
+Definition at line 79 of file templateloader.\+h.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_template_loader_aee91532454f736858307239c48c69523}\label{classstefanfrings_1_1_template_loader_aee91532454f736858307239c48c69523}} 
+\index{stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}!template\+Path@{template\+Path}}
+\index{template\+Path@{template\+Path}!stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}}
+\subsubsection{\texorpdfstring{template\+Path}{templatePath}}
+{\footnotesize\ttfamily Q\+String stefanfrings\+::\+Template\+Loader\+::template\+Path\hspace{0.3cm}{\ttfamily [protected]}}
+
+Directory where the templates are searched 
+
+Definition at line 76 of file templateloader.\+h.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_template_loader_a2cb81190ac3993fda6e20e65713bfcce}\label{classstefanfrings_1_1_template_loader_a2cb81190ac3993fda6e20e65713bfcce}} 
+\index{stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}!text\+Codec@{text\+Codec}}
+\index{text\+Codec@{text\+Codec}!stefanfrings\+::\+Template\+Loader@{stefanfrings\+::\+Template\+Loader}}
+\subsubsection{\texorpdfstring{text\+Codec}{textCodec}}
+{\footnotesize\ttfamily Q\+Text\+Codec$\ast$ stefanfrings\+::\+Template\+Loader\+::text\+Codec\hspace{0.3cm}{\ttfamily [protected]}}
+
+Codec for decoding the files 
+
+Definition at line 82 of file templateloader.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/templateengine/\mbox{\hyperlink{templateloader_8h}{templateloader.\+h}}\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/templateengine/\mbox{\hyperlink{templateloader_8cpp}{templateloader.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+digraph "Startup::start"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="Startup::start",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="QtService\< QCoreApplication\l \>::application",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_qt_service.html#a39743415a6ece5c7c6e6b5b01289c00b"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="searchConfigFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$startup_8cpp.html#a20ea8d5eeb954aedbca663ead4275346"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="stefanfrings::Logger\l::installMsgHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstefanfrings_1_1_logger.html#a333125f7ac75da148f3345ad4e5c49f3"];
+}

@@ -1,0 +1,120 @@
+\hypertarget{namespace_botan_1_1_x509}{}\section{Botan\+:\+:X509 Namespace Reference}
+\label{namespace_botan_1_1_x509}\index{Botan\+::\+X509@{Botan\+::\+X509}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_ab91dec69998c75add40509cd39c41909}\label{namespace_botan_1_1_x509_ab91dec69998c75add40509cd39c41909}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries B\+E\+R\+\_\+encode} (const Public\+\_\+\+Key \&key)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_af5a907ded1245bb777fea76a04fa8af6}\label{namespace_botan_1_1_x509_af5a907ded1245bb777fea76a04fa8af6}} 
+std\+::string {\bfseries P\+E\+M\+\_\+encode} (const Public\+\_\+\+Key \&key)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_a4fcadeecf849a4d69737d23d761818fe}\label{namespace_botan_1_1_x509_a4fcadeecf849a4d69737d23d761818fe}} 
+Public\+\_\+\+Key $\ast$ {\bfseries load\+\_\+key} (Data\+Source \&source)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_a66ab995f1f74fc24e9b60237f7fc03ec}\label{namespace_botan_1_1_x509_a66ab995f1f74fc24e9b60237f7fc03ec}} 
+Public\+\_\+\+Key $\ast$ {\bfseries load\+\_\+key} (const std\+::vector$<$ uint8\+\_\+t $>$ \&mem)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_a2d472ccf016d93553b3ec41a6c2f7069}\label{namespace_botan_1_1_x509_a2d472ccf016d93553b3ec41a6c2f7069}} 
+Public\+\_\+\+Key $\ast$ {\bfseries copy\+\_\+key} (const Public\+\_\+\+Key \&key)
+\item 
+B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI(2, 0) std B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI(2, 0) std \mbox{\hyperlink{namespace_botan_1_1_x509_af5ed8fe1a15fe04e788faea89f386728}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}} (2, 0) Public\+\_\+\+Key $\ast$load\+\_\+key(Data\+Source \&source)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_a9aa3d7576a991f8204dd8306a434dcc6}\label{namespace_botan_1_1_x509_a9aa3d7576a991f8204dd8306a434dcc6}} 
+X509\+\_\+\+Certificate {\bfseries create\+\_\+self\+\_\+signed\+\_\+cert} (const X509\+\_\+\+Cert\+\_\+\+Options \&opts, const Private\+\_\+\+Key \&key, const std\+::string \&hash\+\_\+fn, Random\+Number\+Generator \&rng)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_a38d606bf9311a22020423d8e2f2f76d2}\label{namespace_botan_1_1_x509_a38d606bf9311a22020423d8e2f2f76d2}} 
+P\+K\+C\+S10\+\_\+\+Request {\bfseries create\+\_\+cert\+\_\+req} (const X509\+\_\+\+Cert\+\_\+\+Options \&opts, const Private\+\_\+\+Key \&key, const std\+::string \&hash\+\_\+fn, Random\+Number\+Generator \&rng)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_a5966e109de2a0b2097e6150b998003f9}\label{namespace_botan_1_1_x509_a5966e109de2a0b2097e6150b998003f9}} 
+const Private\+\_\+\+Key \& {\bfseries key}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_aa3e6bc9a931d4d28c4ae1f5d4bd293b4}\label{namespace_botan_1_1_x509_aa3e6bc9a931d4d28c4ae1f5d4bd293b4}} 
+const Private\+\_\+\+Key const std\+::string \& {\bfseries hash\+\_\+fn}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_x509_a3e023aac93d4b925c8051d200243db37}\label{namespace_botan_1_1_x509_a3e023aac93d4b925c8051d200243db37}} 
+const Private\+\_\+\+Key const std\+::string Random\+Number\+Generator \& {\bfseries rng}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This namespace contains functions for handling X.\+509 public keys 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_botan_1_1_x509_af5ed8fe1a15fe04e788faea89f386728}\label{namespace_botan_1_1_x509_af5ed8fe1a15fe04e788faea89f386728}} 
+\index{Botan\+::\+X509@{Botan\+::\+X509}!B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI@{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}
+\index{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI@{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}!Botan\+::\+X509@{Botan\+::\+X509}}
+\subsubsection{\texorpdfstring{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+P\+I()}{BOTAN\_PUBLIC\_API()}}
+{\footnotesize\ttfamily Botan\+::\+X509\+::\+B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{0}]{ }\end{DoxyParamCaption}) \&}
+
+B\+ER encode a key 
+\begin{DoxyParams}{Parameters}
+{\em key} & the public key to encode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+ER encoding of this key P\+EM encode a public key into a string. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P\+EM encoded key Create a public key from a data source. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & the source providing the D\+ER or P\+EM encoded key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new public key object
+\end{DoxyReturn}
+Create a public key from a memory region. 
+\begin{DoxyParams}{Parameters}
+{\em enc} & the memory region containing the D\+ER or P\+EM encoded key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new public key object Copy a key. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the public key to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new public key object
+\end{DoxyReturn}
+Create a self-\/signed X.\+509 certificate. 
+\begin{DoxyParams}{Parameters}
+{\em opts} & the options defining the certificate to create \\
+\hline
+{\em key} & the private key used for signing, i.\+e. the key associated with this self-\/signed certificate \\
+\hline
+{\em hash\+\_\+fn} & the hash function to use \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly created self-\/signed certificate
+\end{DoxyReturn}
+Create a P\+K\+CS\#10 certificate request. 
+\begin{DoxyParams}{Parameters}
+{\em opts} & the options defining the request to create \\
+\hline
+{\em key} & the key used to sign this request \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em hash\+\_\+fn} & the hash function to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly created P\+K\+CS\#10 request 
+\end{DoxyReturn}

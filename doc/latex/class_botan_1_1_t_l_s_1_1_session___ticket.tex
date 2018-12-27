@@ -1,0 +1,146 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket}{}\section{Botan\+:\+:T\+LS\+:\+:Session\+\_\+\+Ticket Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_session___ticket}\index{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}}
+
+
+{\ttfamily \#include $<$tls\+\_\+extensions.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Session\+\_\+\+Ticket\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:T\+LS\+:\+:Session\+\_\+\+Ticket\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Handshake\+\_\+\+Extension\+\_\+\+Type \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___ticket_a0fb84fe33c30d28e0dee120ecc2fe228}{type}} () const override
+\item 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___ticket_abe74c7dc9a16b878f02694e62364243d}{contents}} () const
+\item 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___ticket_a362933f62a9c5d9eb8d06a2545cf78a1}{Session\+\_\+\+Ticket}} ()=default
+\item 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___ticket_a24f03efc3f21477de5c5be578f53dd69}{Session\+\_\+\+Ticket}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&session\+\_\+ticket)
+\item 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___ticket_a677e88a19f33368be6ffa73b2b86a58a}{Session\+\_\+\+Ticket}} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}{T\+L\+S\+\_\+\+Data\+\_\+\+Reader}} \&reader, uint16\+\_\+t extension\+\_\+size)
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___ticket_a446a320f05bfc710740defcd5ac0ca58}{serialize}} () const override
+\item 
+bool \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___ticket_a6796d47c184b69f1eaf5bcee582a4ebe}{empty}} () const override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket_acf1d5d6209304a3b171b5e8c45195b36}\label{class_botan_1_1_t_l_s_1_1_session___ticket_acf1d5d6209304a3b171b5e8c45195b36}} 
+static Handshake\+\_\+\+Extension\+\_\+\+Type {\bfseries static\+\_\+type} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Session Ticket \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension}{Extension}} (R\+FC 5077) 
+
+Definition at line 193 of file tls\+\_\+extensions.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket_a362933f62a9c5d9eb8d06a2545cf78a1}\label{class_botan_1_1_t_l_s_1_1_session___ticket_a362933f62a9c5d9eb8d06a2545cf78a1}} 
+\index{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}!Session\+\_\+\+Ticket@{Session\+\_\+\+Ticket}}
+\index{Session\+\_\+\+Ticket@{Session\+\_\+\+Ticket}!Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}}
+\subsubsection{\texorpdfstring{Session\+\_\+\+Ticket()}{Session\_Ticket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket\+::\+Session\+\_\+\+Ticket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Create empty extension, used by both client and server \mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket_a24f03efc3f21477de5c5be578f53dd69}\label{class_botan_1_1_t_l_s_1_1_session___ticket_a24f03efc3f21477de5c5be578f53dd69}} 
+\index{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}!Session\+\_\+\+Ticket@{Session\+\_\+\+Ticket}}
+\index{Session\+\_\+\+Ticket@{Session\+\_\+\+Ticket}!Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}}
+\subsubsection{\texorpdfstring{Session\+\_\+\+Ticket()}{Session\_Ticket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket\+::\+Session\+\_\+\+Ticket (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{session\+\_\+ticket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension}{Extension}} with ticket, used by client 
+
+Definition at line 214 of file tls\+\_\+extensions.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket_a677e88a19f33368be6ffa73b2b86a58a}\label{class_botan_1_1_t_l_s_1_1_session___ticket_a677e88a19f33368be6ffa73b2b86a58a}} 
+\index{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}!Session\+\_\+\+Ticket@{Session\+\_\+\+Ticket}}
+\index{Session\+\_\+\+Ticket@{Session\+\_\+\+Ticket}!Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}}
+\subsubsection{\texorpdfstring{Session\+\_\+\+Ticket()}{Session\_Ticket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket\+::\+Session\+\_\+\+Ticket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}{T\+L\+S\+\_\+\+Data\+\_\+\+Reader}} \&}]{reader,  }\item[{uint16\+\_\+t}]{extension\+\_\+size }\end{DoxyParamCaption})}
+
+Deserialize a session ticket 
+
+Definition at line 443 of file tls\+\_\+extensions.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket_abe74c7dc9a16b878f02694e62364243d}\label{class_botan_1_1_t_l_s_1_1_session___ticket_abe74c7dc9a16b878f02694e62364243d}} 
+\index{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}!contents@{contents}}
+\index{contents@{contents}!Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}}
+\subsubsection{\texorpdfstring{contents()}{contents()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint8\+\_\+t$>$\& Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket\+::contents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+contents of the session ticket 
+\end{DoxyReturn}
+
+
+Definition at line 204 of file tls\+\_\+extensions.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket_a6796d47c184b69f1eaf5bcee582a4ebe}\label{class_botan_1_1_t_l_s_1_1_session___ticket_a6796d47c184b69f1eaf5bcee582a4ebe}} 
+\index{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}!empty@{empty}}
+\index{empty@{empty}!Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+if we should encode this extension or not 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_aa850b9be2322f94e7c65e583cd51acc5}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 224 of file tls\+\_\+extensions.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket_a446a320f05bfc710740defcd5ac0ca58}\label{class_botan_1_1_t_l_s_1_1_session___ticket_a446a320f05bfc710740defcd5ac0ca58}} 
+\index{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}!serialize@{serialize}}
+\index{serialize@{serialize}!Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily std\+::vector$<$uint8\+\_\+t$>$ Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+serialized binary for the extension 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_a56788726ad2526db54e5a26039cb69db}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 222 of file tls\+\_\+extensions.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_session___ticket_a0fb84fe33c30d28e0dee120ecc2fe228}\label{class_botan_1_1_t_l_s_1_1_session___ticket_a0fb84fe33c30d28e0dee120ecc2fe228}} 
+\index{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}!type@{type}}
+\index{type@{type}!Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket@{Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily Handshake\+\_\+\+Extension\+\_\+\+Type Botan\+::\+T\+L\+S\+::\+Session\+\_\+\+Ticket\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+code number of the extension 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_ac8819b312ce604453225e7b4f7c373ec}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 199 of file tls\+\_\+extensions.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+h\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+cpp\end{DoxyCompactItemize}

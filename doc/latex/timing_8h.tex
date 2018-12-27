@@ -1,0 +1,153 @@
+\hypertarget{timing_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/timing.h File Reference}
+\label{timing_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/timing.\+h@{prerequisites/c-\/libp2p/include/mbedtls/timing.\+h}}
+
+
+Portable interface to the C\+PU cycle counter.  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for timing.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__timing__hr__time}{mbedtls\+\_\+timing\+\_\+hr\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em timer structure \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmbedtls__timing__delay__context}{mbedtls\+\_\+timing\+\_\+delay\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_context}{Context}} for mbedtls\+\_\+timing\+\_\+set/get\+\_\+delay() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \mbox{\hyperlink{timing_8h_aeec9ae2577ce34ab01f2d213b99d07e1}{mbedtls\+\_\+timing\+\_\+hardclock}} (void)
+\begin{DoxyCompactList}\small\item\em Return the C\+PU cycle counter value. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{timing_8h_a427660928e1e0339d497390c167f895c}{mbedtls\+\_\+timing\+\_\+get\+\_\+timer}} (struct \mbox{\hyperlink{structmbedtls__timing__hr__time}{mbedtls\+\_\+timing\+\_\+hr\+\_\+time}} $\ast$val, int reset)
+\begin{DoxyCompactList}\small\item\em Return the elapsed time in milliseconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timing_8h_a7ea7574e836da0dc51b4b16c4033ede3}{mbedtls\+\_\+set\+\_\+alarm}} (int seconds)
+\begin{DoxyCompactList}\small\item\em Setup an alarm clock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timing_8h_aeb3497ab85adabf7db89d81c34e2ef92}{mbedtls\+\_\+timing\+\_\+set\+\_\+delay}} (void $\ast$data, uint32\+\_\+t int\+\_\+ms, uint32\+\_\+t fin\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Set a pair of delays to watch (See {\ttfamily \mbox{\hyperlink{timing_8h_afb1705e8c4227b0ec03089aa7fc54d9b}{mbedtls\+\_\+timing\+\_\+get\+\_\+delay()}}}.) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timing_8h_afb1705e8c4227b0ec03089aa7fc54d9b}{mbedtls\+\_\+timing\+\_\+get\+\_\+delay}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Get the status of delays (Memory helper\+: number of delays passed.) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timing_8h_aa832a2e14723215d909150c337199f53}{mbedtls\+\_\+timing\+\_\+self\+\_\+test}} (int verbose)
+\begin{DoxyCompactList}\small\item\em Checkup routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{timing_8h_af5df1e20d5197a5af9f5daba5b6ca654}\label{timing_8h_af5df1e20d5197a5af9f5daba5b6ca654}} 
+volatile int {\bfseries mbedtls\+\_\+timing\+\_\+alarmed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Portable interface to the C\+PU cycle counter. 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{timing_8h_a7ea7574e836da0dc51b4b16c4033ede3}\label{timing_8h_a7ea7574e836da0dc51b4b16c4033ede3}} 
+\index{timing.\+h@{timing.\+h}!mbedtls\+\_\+set\+\_\+alarm@{mbedtls\+\_\+set\+\_\+alarm}}
+\index{mbedtls\+\_\+set\+\_\+alarm@{mbedtls\+\_\+set\+\_\+alarm}!timing.\+h@{timing.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+set\+\_\+alarm()}{mbedtls\_set\_alarm()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+set\+\_\+alarm (\begin{DoxyParamCaption}\item[{int}]{seconds }\end{DoxyParamCaption})}
+
+
+
+Setup an alarm clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & delay before the \char`\"{}mbedtls\+\_\+timing\+\_\+alarmed\char`\"{} flag is set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Only one alarm at a time is supported. In a threaded context, this means one for the whole process, not one per thread. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{timing_8h_afb1705e8c4227b0ec03089aa7fc54d9b}\label{timing_8h_afb1705e8c4227b0ec03089aa7fc54d9b}} 
+\index{timing.\+h@{timing.\+h}!mbedtls\+\_\+timing\+\_\+get\+\_\+delay@{mbedtls\+\_\+timing\+\_\+get\+\_\+delay}}
+\index{mbedtls\+\_\+timing\+\_\+get\+\_\+delay@{mbedtls\+\_\+timing\+\_\+get\+\_\+delay}!timing.\+h@{timing.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+timing\+\_\+get\+\_\+delay()}{mbedtls\_timing\_get\_delay()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+timing\+\_\+get\+\_\+delay (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Get the status of delays (Memory helper\+: number of delays passed.) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to timing data Must point to a valid {\ttfamily \mbox{\hyperlink{structmbedtls__timing__delay__context}{mbedtls\+\_\+timing\+\_\+delay\+\_\+context}}} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if cancelled (fin\+\_\+ms = 0) 0 if none of the delays are passed, 1 if only the intermediate delay is passed, 2 if the final delay is passed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timing_8h_a427660928e1e0339d497390c167f895c}\label{timing_8h_a427660928e1e0339d497390c167f895c}} 
+\index{timing.\+h@{timing.\+h}!mbedtls\+\_\+timing\+\_\+get\+\_\+timer@{mbedtls\+\_\+timing\+\_\+get\+\_\+timer}}
+\index{mbedtls\+\_\+timing\+\_\+get\+\_\+timer@{mbedtls\+\_\+timing\+\_\+get\+\_\+timer}!timing.\+h@{timing.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+timing\+\_\+get\+\_\+timer()}{mbedtls\_timing\_get\_timer()}}
+{\footnotesize\ttfamily unsigned long mbedtls\+\_\+timing\+\_\+get\+\_\+timer (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmbedtls__timing__hr__time}{mbedtls\+\_\+timing\+\_\+hr\+\_\+time}} $\ast$}]{val,  }\item[{int}]{reset }\end{DoxyParamCaption})}
+
+
+
+Return the elapsed time in milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & points to a timer structure \\
+\hline
+{\em reset} & if set to 1, the timer is restarted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{timing_8h_aeec9ae2577ce34ab01f2d213b99d07e1}\label{timing_8h_aeec9ae2577ce34ab01f2d213b99d07e1}} 
+\index{timing.\+h@{timing.\+h}!mbedtls\+\_\+timing\+\_\+hardclock@{mbedtls\+\_\+timing\+\_\+hardclock}}
+\index{mbedtls\+\_\+timing\+\_\+hardclock@{mbedtls\+\_\+timing\+\_\+hardclock}!timing.\+h@{timing.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+timing\+\_\+hardclock()}{mbedtls\_timing\_hardclock()}}
+{\footnotesize\ttfamily unsigned long mbedtls\+\_\+timing\+\_\+hardclock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return the C\+PU cycle counter value. 
+
+\begin{DoxyWarning}{Warning}
+This is only a best effort! Do not rely on this! In particular, it is known to be unreliable on virtual machines. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{timing_8h_aa832a2e14723215d909150c337199f53}\label{timing_8h_aa832a2e14723215d909150c337199f53}} 
+\index{timing.\+h@{timing.\+h}!mbedtls\+\_\+timing\+\_\+self\+\_\+test@{mbedtls\+\_\+timing\+\_\+self\+\_\+test}}
+\index{mbedtls\+\_\+timing\+\_\+self\+\_\+test@{mbedtls\+\_\+timing\+\_\+self\+\_\+test}!timing.\+h@{timing.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+timing\+\_\+self\+\_\+test()}{mbedtls\_timing\_self\_test()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+timing\+\_\+self\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{verbose }\end{DoxyParamCaption})}
+
+
+
+Checkup routine. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, or 1 if a test failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timing_8h_aeb3497ab85adabf7db89d81c34e2ef92}\label{timing_8h_aeb3497ab85adabf7db89d81c34e2ef92}} 
+\index{timing.\+h@{timing.\+h}!mbedtls\+\_\+timing\+\_\+set\+\_\+delay@{mbedtls\+\_\+timing\+\_\+set\+\_\+delay}}
+\index{mbedtls\+\_\+timing\+\_\+set\+\_\+delay@{mbedtls\+\_\+timing\+\_\+set\+\_\+delay}!timing.\+h@{timing.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+timing\+\_\+set\+\_\+delay()}{mbedtls\_timing\_set\_delay()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+timing\+\_\+set\+\_\+delay (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{uint32\+\_\+t}]{int\+\_\+ms,  }\item[{uint32\+\_\+t}]{fin\+\_\+ms }\end{DoxyParamCaption})}
+
+
+
+Set a pair of delays to watch (See {\ttfamily \mbox{\hyperlink{timing_8h_afb1705e8c4227b0ec03089aa7fc54d9b}{mbedtls\+\_\+timing\+\_\+get\+\_\+delay()}}}.) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to timing data Must point to a valid {\ttfamily \mbox{\hyperlink{structmbedtls__timing__delay__context}{mbedtls\+\_\+timing\+\_\+delay\+\_\+context}}} struct. \\
+\hline
+{\em int\+\_\+ms} & First (intermediate) delay in milliseconds. \\
+\hline
+{\em fin\+\_\+ms} & Second (final) delay in milliseconds. Pass 0 to cancel the current delay. \\
+\hline
+\end{DoxyParams}

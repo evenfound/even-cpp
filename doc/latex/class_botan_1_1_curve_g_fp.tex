@@ -1,0 +1,206 @@
+\hypertarget{class_botan_1_1_curve_g_fp}{}\section{Botan\+:\+:Curve\+G\+Fp Class Reference}
+\label{class_botan_1_1_curve_g_fp}\index{Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}}
+
+
+{\ttfamily \#include $<$curve\+\_\+gfp.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_botan_1_1_curve_g_fp_aa040fce271ca5bcff4b19717aae958a2}{Curve\+G\+Fp}} ()=default
+\item 
+\mbox{\hyperlink{class_botan_1_1_curve_g_fp_aaeb72bf32cd4e5169be11094c244f92b}{Curve\+G\+Fp}} (const Big\+Int \&p, const Big\+Int \&a, const Big\+Int \&b)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a0827d9e3a5e78669d53b85591985ec26}\label{class_botan_1_1_curve_g_fp_a0827d9e3a5e78669d53b85591985ec26}} 
+{\bfseries Curve\+G\+Fp} (const \mbox{\hyperlink{class_botan_1_1_curve_g_fp}{Curve\+G\+Fp}} \&)=default
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a68e202327c9eb8e76b8291750f4bdce7}\label{class_botan_1_1_curve_g_fp_a68e202327c9eb8e76b8291750f4bdce7}} 
+\mbox{\hyperlink{class_botan_1_1_curve_g_fp}{Curve\+G\+Fp}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_botan_1_1_curve_g_fp}{Curve\+G\+Fp}} \&)=default
+\item 
+const Big\+Int \& \mbox{\hyperlink{class_botan_1_1_curve_g_fp_a20794afb1e795f6c571bf535a875f588}{get\+\_\+a}} () const
+\item 
+const Big\+Int \& \mbox{\hyperlink{class_botan_1_1_curve_g_fp_ac5dfeca3af6f79d62334b1efd5392764}{get\+\_\+b}} () const
+\item 
+const Big\+Int \& \mbox{\hyperlink{class_botan_1_1_curve_g_fp_ae2fbbaf2290f610c23719a395e935f1e}{get\+\_\+p}} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_abf3dbc424a1738d64145be1e3183d271}\label{class_botan_1_1_curve_g_fp_abf3dbc424a1738d64145be1e3183d271}} 
+size\+\_\+t {\bfseries get\+\_\+p\+\_\+words} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a21119bc97e1b671511030a58809f5e3b}\label{class_botan_1_1_curve_g_fp_a21119bc97e1b671511030a58809f5e3b}} 
+size\+\_\+t {\bfseries get\+\_\+ws\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a72b9901ea8bb28a45d4099c5df17dac5}\label{class_botan_1_1_curve_g_fp_a72b9901ea8bb28a45d4099c5df17dac5}} 
+const Big\+Int \& {\bfseries get\+\_\+a\+\_\+rep} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a916ab22308875884e0ee59fadee43fb4}\label{class_botan_1_1_curve_g_fp_a916ab22308875884e0ee59fadee43fb4}} 
+const Big\+Int \& {\bfseries get\+\_\+b\+\_\+rep} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a4076862f0c6024c2652929b26049ce10}\label{class_botan_1_1_curve_g_fp_a4076862f0c6024c2652929b26049ce10}} 
+const Big\+Int \& {\bfseries get\+\_\+1\+\_\+rep} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a1680fefc41c4b1638cfeb1bc6735c6fe}\label{class_botan_1_1_curve_g_fp_a1680fefc41c4b1638cfeb1bc6735c6fe}} 
+bool {\bfseries a\+\_\+is\+\_\+minus\+\_\+3} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a5ef49004461eecb5130f9faabdd6f47e}\label{class_botan_1_1_curve_g_fp_a5ef49004461eecb5130f9faabdd6f47e}} 
+bool {\bfseries a\+\_\+is\+\_\+zero} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a414ef8f77843cec78aca0c2dadcee305}\label{class_botan_1_1_curve_g_fp_a414ef8f77843cec78aca0c2dadcee305}} 
+bool {\bfseries is\+\_\+one} (const Big\+Int \&x) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a2a756517a4bf28bd7db7216d13bffd80}\label{class_botan_1_1_curve_g_fp_a2a756517a4bf28bd7db7216d13bffd80}} 
+Big\+Int {\bfseries invert\+\_\+element} (const Big\+Int \&x, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_aa6ad54213e6741e2ed9408f0794b6ac1}\label{class_botan_1_1_curve_g_fp_aa6ad54213e6741e2ed9408f0794b6ac1}} 
+void {\bfseries to\+\_\+rep} (Big\+Int \&x, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_af0fc7c4e141087407348e88d8efe41cd}\label{class_botan_1_1_curve_g_fp_af0fc7c4e141087407348e88d8efe41cd}} 
+void {\bfseries from\+\_\+rep} (Big\+Int \&x, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a506ad44c75e73c604aa6c5bfc21ebc32}\label{class_botan_1_1_curve_g_fp_a506ad44c75e73c604aa6c5bfc21ebc32}} 
+Big\+Int {\bfseries from\+\_\+rep} (const Big\+Int \&x, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a642c3bb3ffa9bdc0f67f43925877cc5c}\label{class_botan_1_1_curve_g_fp_a642c3bb3ffa9bdc0f67f43925877cc5c}} 
+void {\bfseries redc\+\_\+mod\+\_\+p} (Big\+Int \&z, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a1d4eac437417358cec57881e6233a5b1}\label{class_botan_1_1_curve_g_fp_a1d4eac437417358cec57881e6233a5b1}} 
+void {\bfseries mul} (Big\+Int \&z, const Big\+Int \&x, const Big\+Int \&y, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a1f5864273be0c7140752ffb663599ef1}\label{class_botan_1_1_curve_g_fp_a1f5864273be0c7140752ffb663599ef1}} 
+void {\bfseries mul} (Big\+Int \&z, const word x\+\_\+w\mbox{[}$\,$\mbox{]}, size\+\_\+t x\+\_\+size, const Big\+Int \&y, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a53633c7d5a122beeb441493ae2212095}\label{class_botan_1_1_curve_g_fp_a53633c7d5a122beeb441493ae2212095}} 
+void {\bfseries sqr} (Big\+Int \&z, const Big\+Int \&x, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a9aae7d8b28571d726bc8dace6fd60ea5}\label{class_botan_1_1_curve_g_fp_a9aae7d8b28571d726bc8dace6fd60ea5}} 
+void {\bfseries sqr} (Big\+Int \&z, const word x\+\_\+w\mbox{[}$\,$\mbox{]}, size\+\_\+t x\+\_\+size, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_abb039814d0af92ff1c1ddc9c42735bb4}\label{class_botan_1_1_curve_g_fp_abb039814d0af92ff1c1ddc9c42735bb4}} 
+Big\+Int {\bfseries mul} (const Big\+Int \&x, const Big\+Int \&y, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_add9d5289bb5778a5049ddf8f3106f3ff}\label{class_botan_1_1_curve_g_fp_add9d5289bb5778a5049ddf8f3106f3ff}} 
+Big\+Int {\bfseries sqr} (const Big\+Int \&x, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_af745003fff56cc3530c44189b65f22fb}\label{class_botan_1_1_curve_g_fp_af745003fff56cc3530c44189b65f22fb}} 
+Big\+Int {\bfseries mul\+\_\+to\+\_\+tmp} (const Big\+Int \&x, const Big\+Int \&y, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_ac98411eb77d69b2e2aa7da14f5522ba5}\label{class_botan_1_1_curve_g_fp_ac98411eb77d69b2e2aa7da14f5522ba5}} 
+Big\+Int {\bfseries sqr\+\_\+to\+\_\+tmp} (const Big\+Int \&x, secure\+\_\+vector$<$ word $>$ \&ws) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a58953b2563d8c6a59cd146820a83b13e}\label{class_botan_1_1_curve_g_fp_a58953b2563d8c6a59cd146820a83b13e}} 
+void {\bfseries swap} (\mbox{\hyperlink{class_botan_1_1_curve_g_fp}{Curve\+G\+Fp}} \&other)
+\item 
+bool \mbox{\hyperlink{class_botan_1_1_curve_g_fp_adf896804903ce76835069b5d51aeb161}{operator==}} (const \mbox{\hyperlink{class_botan_1_1_curve_g_fp}{Curve\+G\+Fp}} \&other) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents an elliptic curve over G\+F(p)
+
+There should not be any reason for applications to use this type. If you need EC primitives use the interfaces E\+C\+\_\+\+Group and Point\+G\+Fp
+
+It is likely this class will be removed entirely in a future major release. 
+
+Definition at line 95 of file curve\+\_\+gfp.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_aa040fce271ca5bcff4b19717aae958a2}\label{class_botan_1_1_curve_g_fp_aa040fce271ca5bcff4b19717aae958a2}} 
+\index{Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}!Curve\+G\+Fp@{Curve\+G\+Fp}}
+\index{Curve\+G\+Fp@{Curve\+G\+Fp}!Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}}
+\subsubsection{\texorpdfstring{Curve\+G\+Fp()}{CurveGFp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Botan\+::\+Curve\+G\+Fp\+::\+Curve\+G\+Fp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Create an uninitialized \mbox{\hyperlink{class_botan_1_1_curve_g_fp}{Curve\+G\+Fp}} \mbox{\Hypertarget{class_botan_1_1_curve_g_fp_aaeb72bf32cd4e5169be11094c244f92b}\label{class_botan_1_1_curve_g_fp_aaeb72bf32cd4e5169be11094c244f92b}} 
+\index{Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}!Curve\+G\+Fp@{Curve\+G\+Fp}}
+\index{Curve\+G\+Fp@{Curve\+G\+Fp}!Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}}
+\subsubsection{\texorpdfstring{Curve\+G\+Fp()}{CurveGFp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Botan\+::\+Curve\+G\+Fp\+::\+Curve\+G\+Fp (\begin{DoxyParamCaption}\item[{const Big\+Int \&}]{p,  }\item[{const Big\+Int \&}]{a,  }\item[{const Big\+Int \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct the elliptic curve E\+: y$^\wedge$2 = x$^\wedge$3 + ax + b over G\+F(p) 
+\begin{DoxyParams}{Parameters}
+{\em p} & prime number of the field \\
+\hline
+{\em a} & first coefficient \\
+\hline
+{\em b} & second coefficient \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file curve\+\_\+gfp.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_a20794afb1e795f6c571bf535a875f588}\label{class_botan_1_1_curve_g_fp_a20794afb1e795f6c571bf535a875f588}} 
+\index{Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}!get\+\_\+a@{get\+\_\+a}}
+\index{get\+\_\+a@{get\+\_\+a}!Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}}
+\subsubsection{\texorpdfstring{get\+\_\+a()}{get\_a()}}
+{\footnotesize\ttfamily const Big\+Int\& Botan\+::\+Curve\+G\+Fp\+::get\+\_\+a (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+curve coefficient a 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file curve\+\_\+gfp.\+h.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_ac5dfeca3af6f79d62334b1efd5392764}\label{class_botan_1_1_curve_g_fp_ac5dfeca3af6f79d62334b1efd5392764}} 
+\index{Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}!get\+\_\+b@{get\+\_\+b}}
+\index{get\+\_\+b@{get\+\_\+b}!Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}}
+\subsubsection{\texorpdfstring{get\+\_\+b()}{get\_b()}}
+{\footnotesize\ttfamily const Big\+Int\& Botan\+::\+Curve\+G\+Fp\+::get\+\_\+b (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+curve coefficient b 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file curve\+\_\+gfp.\+h.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_ae2fbbaf2290f610c23719a395e935f1e}\label{class_botan_1_1_curve_g_fp_ae2fbbaf2290f610c23719a395e935f1e}} 
+\index{Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}!get\+\_\+p@{get\+\_\+p}}
+\index{get\+\_\+p@{get\+\_\+p}!Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}}
+\subsubsection{\texorpdfstring{get\+\_\+p()}{get\_p()}}
+{\footnotesize\ttfamily const Big\+Int\& Botan\+::\+Curve\+G\+Fp\+::get\+\_\+p (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get prime modulus of the field of the curve \begin{DoxyReturn}{Returns}
+prime modulus of the field of the curve 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file curve\+\_\+gfp.\+h.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_botan_1_1_curve_g_fp_adf896804903ce76835069b5d51aeb161}\label{class_botan_1_1_curve_g_fp_adf896804903ce76835069b5d51aeb161}} 
+\index{Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}!operator==@{operator==}}
+\index{operator==@{operator==}!Botan\+::\+Curve\+G\+Fp@{Botan\+::\+Curve\+G\+Fp}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Botan\+::\+Curve\+G\+Fp\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_botan_1_1_curve_g_fp}{Curve\+G\+Fp}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equality operator 
+\begin{DoxyParams}{Parameters}
+{\em other} & a curve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff $\ast$this is the same as other 
+\end{DoxyReturn}
+
+
+Definition at line 234 of file curve\+\_\+gfp.\+h.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/pubkey/ec\+\_\+group/curve\+\_\+gfp.\+h\item 
+prerequisites/botan/src/lib/pubkey/ec\+\_\+group/curve\+\_\+gfp.\+cpp\end{DoxyCompactItemize}

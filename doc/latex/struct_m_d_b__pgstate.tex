@@ -1,0 +1,48 @@
+\hypertarget{struct_m_d_b__pgstate}{}\section{M\+D\+B\+\_\+pgstate Struct Reference}
+\label{struct_m_d_b__pgstate}\index{M\+D\+B\+\_\+pgstate@{M\+D\+B\+\_\+pgstate}}
+
+
+Collaboration diagram for M\+D\+B\+\_\+pgstate\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\+\_\+t}} $\ast$ \mbox{\hyperlink{struct_m_d_b__pgstate_a87885b2e082589287b381554cb8f7e7a}{mf\+\_\+pghead}}
+\item 
+\mbox{\hyperlink{group__internal_gabbaef7c9c710f8652a62c32d748c040e}{txnid\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__pgstate_a4a9a958ac39b45693ca27140bd4f63de}{mf\+\_\+pglast}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+State of Free\+DB old pages, stored in the \mbox{\hyperlink{struct_m_d_b__env}{M\+D\+B\+\_\+env}} 
+
+Definition at line 1355 of file mdb.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_d_b__pgstate_a87885b2e082589287b381554cb8f7e7a}\label{struct_m_d_b__pgstate_a87885b2e082589287b381554cb8f7e7a}} 
+\index{M\+D\+B\+\_\+pgstate@{M\+D\+B\+\_\+pgstate}!mf\+\_\+pghead@{mf\+\_\+pghead}}
+\index{mf\+\_\+pghead@{mf\+\_\+pghead}!M\+D\+B\+\_\+pgstate@{M\+D\+B\+\_\+pgstate}}
+\subsubsection{\texorpdfstring{mf\+\_\+pghead}{mf\_pghead}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_gadb65f0424c9d3827bf6409087ad555cd}{pgno\+\_\+t}}$\ast$ M\+D\+B\+\_\+pgstate\+::mf\+\_\+pghead}
+
+Reclaimed free\+DB pages, or N\+U\+LL before use 
+
+Definition at line 1356 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__pgstate_a4a9a958ac39b45693ca27140bd4f63de}\label{struct_m_d_b__pgstate_a4a9a958ac39b45693ca27140bd4f63de}} 
+\index{M\+D\+B\+\_\+pgstate@{M\+D\+B\+\_\+pgstate}!mf\+\_\+pglast@{mf\+\_\+pglast}}
+\index{mf\+\_\+pglast@{mf\+\_\+pglast}!M\+D\+B\+\_\+pgstate@{M\+D\+B\+\_\+pgstate}}
+\subsubsection{\texorpdfstring{mf\+\_\+pglast}{mf\_pglast}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__internal_gabbaef7c9c710f8652a62c32d748c040e}{txnid\+\_\+t}} M\+D\+B\+\_\+pgstate\+::mf\+\_\+pglast}
+
+ID of last used record, or 0 if !mf\+\_\+pghead 
+
+Definition at line 1357 of file mdb.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

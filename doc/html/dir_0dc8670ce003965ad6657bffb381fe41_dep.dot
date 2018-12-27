@@ -1,0 +1,21 @@
+digraph "prerequisites" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0dc8670ce003965ad6657bffb381fe41 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0dc8670ce003965ad6657bffb381fe41.html"];
+    dir_0dc8670ce003965ad6657bffb381fe41 [shape=plaintext label="prerequisites"];
+    dir_3760fb49a0b0a4f2f97de0930ae08865 [shape=box label="botan" color="red" fillcolor="white" style="filled" URL="dir_3760fb49a0b0a4f2f97de0930ae08865.html"];
+    dir_86d5a990c06b35e8670fcfb2f15cb39a [shape=box label="build" color="red" fillcolor="white" style="filled" URL="dir_86d5a990c06b35e8670fcfb2f15cb39a.html"];
+    dir_710942753667abff5e940805c2388c41 [shape=box label="c-ipfs" color="red" fillcolor="white" style="filled" URL="dir_710942753667abff5e940805c2388c41.html"];
+    dir_d3dc2089ddf61d8be1e3bff92bba4632 [shape=box label="c-libp2p" color="red" fillcolor="white" style="filled" URL="dir_d3dc2089ddf61d8be1e3bff92bba4632.html"];
+    dir_7ceacaba80086961ed59354b406439da [shape=box label="c-multiaddr" color="red" fillcolor="white" style="filled" URL="dir_7ceacaba80086961ed59354b406439da.html"];
+    dir_376f672eea2f3ce9a4a47f8d242629b2 [shape=box label="c-multihash" color="red" fillcolor="white" style="filled" URL="dir_376f672eea2f3ce9a4a47f8d242629b2.html"];
+    dir_b262b56d00554f1152fe82f2020de539 [shape=box label="c-protobuf" color="red" fillcolor="white" style="filled" URL="dir_b262b56d00554f1152fe82f2020de539.html"];
+    dir_8be01a3804ca0ad9f3bc9f8a64e2041f [shape=box label="lmbd" color="red" fillcolor="white" style="filled" URL="dir_8be01a3804ca0ad9f3bc9f8a64e2041f.html"];
+    dir_22e21bbfaa8440d5a2934bc04e06b10c [shape=box label="qssh" color="red" fillcolor="white" style="filled" URL="dir_22e21bbfaa8440d5a2934bc04e06b10c.html"];
+    dir_c8ee3321b9bb547ee3793e57e69b2b24 [shape=box label="QtWebApp" color="red" fillcolor="white" style="filled" URL="dir_c8ee3321b9bb547ee3793e57e69b2b24.html"];
+  }
+  dir_710942753667abff5e940805c2388c41->dir_8be01a3804ca0ad9f3bc9f8a64e2041f [headlabel="6", labeldistance=1.5 headhref="dir_000047_000350.html"];
+  dir_86d5a990c06b35e8670fcfb2f15cb39a->dir_c8ee3321b9bb547ee3793e57e69b2b24 [headlabel="9", labeldistance=1.5 headhref="dir_000006_000031.html"];
+}

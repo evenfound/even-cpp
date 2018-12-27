@@ -1,0 +1,327 @@
+\hypertarget{namespace_botan_1_1_p_k_c_s8}{}\section{Botan\+:\+:P\+K\+C\+S8 Namespace Reference}
+\label{namespace_botan_1_1_p_k_c_s8}\index{Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_ab38d9070f3641a1c0a01293eabb1c503}\label{namespace_botan_1_1_p_k_c_s8_ab38d9070f3641a1c0a01293eabb1c503}} 
+secure\+\_\+vector$<$ uint8\+\_\+t $>$ {\bfseries B\+E\+R\+\_\+encode} (const Private\+\_\+\+Key \&key)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a077362bdd5cb9b2d1beb52a4de61a8f9}\label{namespace_botan_1_1_p_k_c_s8_a077362bdd5cb9b2d1beb52a4de61a8f9}} 
+std\+::string {\bfseries P\+E\+M\+\_\+encode} (const Private\+\_\+\+Key \&key)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a0b492a201c4bb86bd4fcfddbe727faef}\label{namespace_botan_1_1_p_k_c_s8_a0b492a201c4bb86bd4fcfddbe727faef}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries B\+E\+R\+\_\+encode} (const Private\+\_\+\+Key \&key, Random\+Number\+Generator \&rng, const std\+::string \&pass, std\+::chrono\+::milliseconds msec, const std\+::string \&pbe\+\_\+algo)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a05243f48ff302175572e7f27b2b4232e}\label{namespace_botan_1_1_p_k_c_s8_a05243f48ff302175572e7f27b2b4232e}} 
+std\+::string {\bfseries P\+E\+M\+\_\+encode} (const Private\+\_\+\+Key \&key, Random\+Number\+Generator \&rng, const std\+::string \&pass, std\+::chrono\+::milliseconds msec, const std\+::string \&pbe\+\_\+algo)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_ae0d51558d0bbb0c766905dea77ec2040}\label{namespace_botan_1_1_p_k_c_s8_ae0d51558d0bbb0c766905dea77ec2040}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries B\+E\+R\+\_\+encode\+\_\+encrypted\+\_\+pbkdf\+\_\+iter} (const Private\+\_\+\+Key \&key, Random\+Number\+Generator \&rng, const std\+::string \&pass, size\+\_\+t pbkdf\+\_\+iterations, const std\+::string \&cipher, const std\+::string \&pbkdf\+\_\+hash)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_abaf15563bd9be9763e39a44ef10fb8ce}\label{namespace_botan_1_1_p_k_c_s8_abaf15563bd9be9763e39a44ef10fb8ce}} 
+std\+::string {\bfseries P\+E\+M\+\_\+encode\+\_\+encrypted\+\_\+pbkdf\+\_\+iter} (const Private\+\_\+\+Key \&key, Random\+Number\+Generator \&rng, const std\+::string \&pass, size\+\_\+t pbkdf\+\_\+iterations, const std\+::string \&cipher, const std\+::string \&pbkdf\+\_\+hash)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a76f22dd73d63fead220247977f188827}\label{namespace_botan_1_1_p_k_c_s8_a76f22dd73d63fead220247977f188827}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries B\+E\+R\+\_\+encode\+\_\+encrypted\+\_\+pbkdf\+\_\+msec} (const Private\+\_\+\+Key \&key, Random\+Number\+Generator \&rng, const std\+::string \&pass, std\+::chrono\+::milliseconds pbkdf\+\_\+msec, size\+\_\+t $\ast$pbkdf\+\_\+iterations, const std\+::string \&cipher, const std\+::string \&pbkdf\+\_\+hash)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a09caf53597ac027e85805b1b6c65bfbc}\label{namespace_botan_1_1_p_k_c_s8_a09caf53597ac027e85805b1b6c65bfbc}} 
+std\+::string {\bfseries P\+E\+M\+\_\+encode\+\_\+encrypted\+\_\+pbkdf\+\_\+msec} (const Private\+\_\+\+Key \&key, Random\+Number\+Generator \&rng, const std\+::string \&pass, std\+::chrono\+::milliseconds pbkdf\+\_\+msec, size\+\_\+t $\ast$pbkdf\+\_\+iterations, const std\+::string \&cipher, const std\+::string \&pbkdf\+\_\+hash)
+\item 
+std\+::unique\+\_\+ptr$<$ Private\+\_\+\+Key $>$ \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a4f6f93f2069527bb1be1ba1dea671102}{load\+\_\+key}} (Data\+Source \&source, std\+::function$<$ std\+::string()$>$ get\+\_\+pass)
+\item 
+std\+::unique\+\_\+ptr$<$ Private\+\_\+\+Key $>$ \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a3d0c7493d43c45f3f6c1f03410132c46}{load\+\_\+key}} (Data\+Source \&source, const std\+::string \&pass)
+\item 
+std\+::unique\+\_\+ptr$<$ Private\+\_\+\+Key $>$ \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_ae1ad1d7d3cac5fbb7edf2ce073887a70}{load\+\_\+key}} (Data\+Source \&source)
+\item 
+std\+::unique\+\_\+ptr$<$ Private\+\_\+\+Key $>$ \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a01138a33ca808e42f3d927459ea05d46}{copy\+\_\+key}} (const Private\+\_\+\+Key \&key)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a1546bdcd156db79cd01e9a05743c7c9c}\label{namespace_botan_1_1_p_k_c_s8_a1546bdcd156db79cd01e9a05743c7c9c}} 
+Private\+\_\+\+Key $\ast$ {\bfseries load\+\_\+key} (Data\+Source \&source, Random\+Number\+Generator \&rng, std\+::function$<$ std\+::string()$>$ get\+\_\+pass)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_acd7a153bfd812efe5dde18befbb5c6f5}\label{namespace_botan_1_1_p_k_c_s8_acd7a153bfd812efe5dde18befbb5c6f5}} 
+Private\+\_\+\+Key $\ast$ {\bfseries load\+\_\+key} (Data\+Source \&source, Random\+Number\+Generator \&rng, const std\+::string \&pass)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_ac54f29979d71f9e890251074e49323c0}\label{namespace_botan_1_1_p_k_c_s8_ac54f29979d71f9e890251074e49323c0}} 
+Private\+\_\+\+Key $\ast$ {\bfseries load\+\_\+key} (Data\+Source \&source, Random\+Number\+Generator \&rng)
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a0c780e2eb58d9b19eb78b7e05cdd61a7}\label{namespace_botan_1_1_p_k_c_s8_a0c780e2eb58d9b19eb78b7e05cdd61a7}} 
+Private\+\_\+\+Key $\ast$ {\bfseries copy\+\_\+key} (const Private\+\_\+\+Key \&key, Random\+Number\+Generator \&rng)
+\item 
+\mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}} (2, 0) secure\+\_\+vector$<$ uint8\+\_\+t $>$ B\+E\+R\+\_\+encode(const Private\+\_\+\+Key \&key)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_ab5d2d5b166cd076d2dbd598c30943702}\label{namespace_botan_1_1_p_k_c_s8_ab5d2d5b166cd076d2dbd598c30943702}} 
+\mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 0) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 0) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 0) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 1) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 1) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 1) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 1) std Random\+Number\+Generator \& {\bfseries rng}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a8f34bd15202e08b3f0f4536a9b66c592}\label{namespace_botan_1_1_p_k_c_s8_a8f34bd15202e08b3f0f4536a9b66c592}} 
+\mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 0) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 0) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 0) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 1) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 1) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 1) std \mbox{\hyperlink{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}(2, 1) std Random\+Number\+Generator std\+::function$<$ std\+::string()$>$ {\bfseries get\+\_\+passphrase}
+\item 
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a09579aec1504665fce7ad86098758f72}\label{namespace_botan_1_1_p_k_c_s8_a09579aec1504665fce7ad86098758f72}} 
+Random\+Number\+Generator const std\+::string \& {\bfseries pass}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+K\+CS \#8 General Exception This namespace contains functions for handling P\+K\+CS \#8 private keys 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}\label{namespace_botan_1_1_p_k_c_s8_a1a8abd3b8ed274b93110ebebefcb0eb6}} 
+\index{Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}!B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI@{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}}
+\index{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI@{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI}!Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}}
+\subsubsection{\texorpdfstring{B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+P\+I()}{BOTAN\_PUBLIC\_API()}}
+{\footnotesize\ttfamily Botan\+::\+P\+K\+C\+S8\+::\+B\+O\+T\+A\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+A\+PI (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{0}]{ }\end{DoxyParamCaption}) const \&}
+
+B\+ER encode a private key 
+\begin{DoxyParams}{Parameters}
+{\em key} & the private key to encode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+ER encoded key
+\end{DoxyReturn}
+Get a string containing a P\+EM encoded private key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encoded key Encrypt a key using P\+K\+CS \#8 encryption 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em msec} & number of milliseconds to run the password derivation \\
+\hline
+{\em pbe\+\_\+algo} & the name of the desired password-\/based encryption algorithm; if empty (\char`\"{}\char`\"{}) a reasonable (portable/secure) default will be chosen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted key in binary B\+ER form Get a string containing a P\+EM encoded private key, encrypting it with a password. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em msec} & number of milliseconds to run the password derivation \\
+\hline
+{\em pbe\+\_\+algo} & the name of the desired password-\/based encryption algorithm; if empty (\char`\"{}\char`\"{}) a reasonable (portable/secure) default will be chosen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted key in P\+EM form Encrypt a key using P\+K\+CS \#8 encryption and a fixed iteration count 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em pbkdf\+\_\+iter} & number of interations to run P\+B\+K\+D\+F2 \\
+\hline
+{\em cipher} & if non-\/empty specifies the cipher to use. C\+BC and G\+CM modes are supported, for example \char`\"{}\+A\+E\+S-\/128/\+C\+B\+C\char`\"{}, \char`\"{}\+A\+E\+S-\/256/\+G\+C\+M\char`\"{}, \char`\"{}\+Serpent/\+C\+B\+C\char`\"{}. If empty a suitable default is chosen. \\
+\hline
+{\em pbkdf\+\_\+hash} & if non-\/empty specifies the P\+B\+K\+DF hash function to use. For example \char`\"{}\+S\+H\+A-\/256\char`\"{} or \char`\"{}\+S\+H\+A-\/384\char`\"{}. If empty a suitable default is chosen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted key in binary B\+ER form Get a string containing a P\+EM encoded private key, encrypting it with a password. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em pbkdf\+\_\+iter} & number of iterations to run P\+B\+K\+DF \\
+\hline
+{\em cipher} & if non-\/empty specifies the cipher to use. C\+BC and G\+CM modes are supported, for example \char`\"{}\+A\+E\+S-\/128/\+C\+B\+C\char`\"{}, \char`\"{}\+A\+E\+S-\/256/\+G\+C\+M\char`\"{}, \char`\"{}\+Serpent/\+C\+B\+C\char`\"{}. If empty a suitable default is chosen. \\
+\hline
+{\em pbkdf\+\_\+hash} & if non-\/empty specifies the P\+B\+K\+DF hash function to use. For example \char`\"{}\+S\+H\+A-\/256\char`\"{} or \char`\"{}\+S\+H\+A-\/384\char`\"{}. If empty a suitable default is chosen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted key in P\+EM form Encrypt a key using P\+K\+CS \#8 encryption and a variable iteration count 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em pbkdf\+\_\+msec} & how long to run P\+B\+K\+D\+F2 \\
+\hline
+{\em pbkdf\+\_\+iterations} & if non-\/null, set to the number of iterations used \\
+\hline
+{\em cipher} & if non-\/empty specifies the cipher to use. C\+BC and G\+CM modes are supported, for example \char`\"{}\+A\+E\+S-\/128/\+C\+B\+C\char`\"{}, \char`\"{}\+A\+E\+S-\/256/\+G\+C\+M\char`\"{}, \char`\"{}\+Serpent/\+C\+B\+C\char`\"{}. If empty a suitable default is chosen. \\
+\hline
+{\em pbkdf\+\_\+hash} & if non-\/empty specifies the P\+B\+K\+DF hash function to use. For example \char`\"{}\+S\+H\+A-\/256\char`\"{} or \char`\"{}\+S\+H\+A-\/384\char`\"{}. If empty a suitable default is chosen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted key in binary B\+ER form Get a string containing a P\+EM encoded private key, encrypting it with a password. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em pbkdf\+\_\+msec} & how long in milliseconds to run P\+B\+K\+D\+F2 \\
+\hline
+{\em pbkdf\+\_\+iterations} & (output argument) number of iterations of P\+B\+K\+DF that ended up being used \\
+\hline
+{\em cipher} & if non-\/empty specifies the cipher to use. C\+BC and G\+CM modes are supported, for example \char`\"{}\+A\+E\+S-\/128/\+C\+B\+C\char`\"{}, \char`\"{}\+A\+E\+S-\/256/\+G\+C\+M\char`\"{}, \char`\"{}\+Serpent/\+C\+B\+C\char`\"{}. If empty a suitable default is chosen. \\
+\hline
+{\em pbkdf\+\_\+hash} & if non-\/empty specifies the P\+B\+K\+DF hash function to use. For example \char`\"{}\+S\+H\+A-\/256\char`\"{} or \char`\"{}\+S\+H\+A-\/384\char`\"{}. If empty a suitable default is chosen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted key in P\+EM form Load an encrypted key from a data source. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the encoded key \\
+\hline
+{\em rng} & ignored for compatibility \\
+\hline
+{\em get\+\_\+passphrase} & a function that returns passphrases \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object
+\end{DoxyReturn}
+Load an encrypted key from a data source. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the encoded key \\
+\hline
+{\em rng} & ignored for compatibility \\
+\hline
+{\em pass} & the passphrase to decrypt the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object
+\end{DoxyReturn}
+Load an unencrypted key from a data source. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the encoded key \\
+\hline
+{\em rng} & ignored for compatibility \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object
+\end{DoxyReturn}
+Copy an existing encoded key object. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to copy \\
+\hline
+{\em rng} & ignored for compatibility \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new copy of the key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a01138a33ca808e42f3d927459ea05d46}\label{namespace_botan_1_1_p_k_c_s8_a01138a33ca808e42f3d927459ea05d46}} 
+\index{Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}!copy\+\_\+key@{copy\+\_\+key}}
+\index{copy\+\_\+key@{copy\+\_\+key}!Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}}
+\subsubsection{\texorpdfstring{copy\+\_\+key()}{copy\_key()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ Private\+\_\+\+Key $>$ Botan\+::\+P\+K\+C\+S8\+::copy\+\_\+key (\begin{DoxyParamCaption}\item[{const Private\+\_\+\+Key \&}]{key }\end{DoxyParamCaption})}
+
+Copy an existing encoded key object. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new copy of the key 
+\end{DoxyReturn}
+
+
+Definition at line 380 of file pkcs8.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a4f6f93f2069527bb1be1ba1dea671102}\label{namespace_botan_1_1_p_k_c_s8_a4f6f93f2069527bb1be1ba1dea671102}} 
+\index{Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}!load\+\_\+key@{load\+\_\+key}}
+\index{load\+\_\+key@{load\+\_\+key}!Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}}
+\subsubsection{\texorpdfstring{load\+\_\+key()}{load\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ Private\+\_\+\+Key $>$ Botan\+::\+P\+K\+C\+S8\+::load\+\_\+key (\begin{DoxyParamCaption}\item[{Data\+Source \&}]{source,  }\item[{std\+::function$<$ std\+::string()$>$}]{get\+\_\+passphrase }\end{DoxyParamCaption})}
+
+Load an encrypted key from a data source. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the encoded key \\
+\hline
+{\em get\+\_\+passphrase} & a function that returns passphrases \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object 
+\end{DoxyReturn}
+
+
+Definition at line 350 of file pkcs8.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_a3d0c7493d43c45f3f6c1f03410132c46}\label{namespace_botan_1_1_p_k_c_s8_a3d0c7493d43c45f3f6c1f03410132c46}} 
+\index{Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}!load\+\_\+key@{load\+\_\+key}}
+\index{load\+\_\+key@{load\+\_\+key}!Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}}
+\subsubsection{\texorpdfstring{load\+\_\+key()}{load\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ Private\+\_\+\+Key $>$ Botan\+::\+P\+K\+C\+S8\+::load\+\_\+key (\begin{DoxyParamCaption}\item[{Data\+Source \&}]{source,  }\item[{const std\+::string \&}]{pass }\end{DoxyParamCaption})}
+
+Load an encrypted key from a data source. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the encoded key \\
+\hline
+{\em pass} & the passphrase to decrypt the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object 
+\end{DoxyReturn}
+
+
+Definition at line 359 of file pkcs8.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{namespace_botan_1_1_p_k_c_s8_ae1ad1d7d3cac5fbb7edf2ce073887a70}\label{namespace_botan_1_1_p_k_c_s8_ae1ad1d7d3cac5fbb7edf2ce073887a70}} 
+\index{Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}!load\+\_\+key@{load\+\_\+key}}
+\index{load\+\_\+key@{load\+\_\+key}!Botan\+::\+P\+K\+C\+S8@{Botan\+::\+P\+K\+C\+S8}}
+\subsubsection{\texorpdfstring{load\+\_\+key()}{load\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ Private\+\_\+\+Key $>$ Botan\+::\+P\+K\+C\+S8\+::load\+\_\+key (\begin{DoxyParamCaption}\item[{Data\+Source \&}]{source }\end{DoxyParamCaption})}
+
+Load an unencrypted key from a data source. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the encoded key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object 
+\end{DoxyReturn}
+
+
+Definition at line 368 of file pkcs8.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3

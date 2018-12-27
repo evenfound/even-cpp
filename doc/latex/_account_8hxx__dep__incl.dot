@@ -1,0 +1,27 @@
+digraph "include/core/Account.hxx"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node70 [label="include/core/Account.hxx",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node70 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node71 [label="include/core/Wallet.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wallet_8hxx.html"];
+  Node71 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node72 [label="even-boffin/include\l/Node.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_node_8hxx.html"];
+  Node72 -> Node73 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node73 [label="even-boffin/include\l/Network.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_network_8hxx.html"];
+  Node73 -> Node74 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node74 [label="even-boffin/build/debug\l/moc_Network.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$moc___network_8cpp_source.html"];
+  Node73 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node75 [label="even-boffin/src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$even-boffin_2src_2main_8cpp_source.html"];
+  Node73 -> Node76 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node76 [label="even-boffin/src/Network.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_network_8cxx.html"];
+  Node73 -> Node77 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node77 [label="even-boffin/src/Node.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_node_8cxx.html"];
+  Node72 -> Node78 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node78 [label="even-boffin/build/debug\l/moc_Node.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$moc___node_8cpp_source.html"];
+  Node72 -> Node77 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node71 -> Node79 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node79 [label="src/core/Wallet.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wallet_8cxx.html"];
+  Node70 -> Node80 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node80 [label="src/core/Account.cxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_account_8cxx.html"];
+}

@@ -1,0 +1,51 @@
+\hypertarget{class_botan___tests_1_1_fixed___output___position___r_n_g}{}\section{Botan\+\_\+\+Tests\+:\+:Fixed\+\_\+\+Output\+\_\+\+Position\+\_\+\+R\+NG Class Reference}
+\label{class_botan___tests_1_1_fixed___output___position___r_n_g}\index{Botan\+\_\+\+Tests\+::\+Fixed\+\_\+\+Output\+\_\+\+Position\+\_\+\+R\+NG@{Botan\+\_\+\+Tests\+::\+Fixed\+\_\+\+Output\+\_\+\+Position\+\_\+\+R\+NG}}
+
+
+{\ttfamily \#include $<$test\+\_\+rng.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+\_\+\+Tests\+:\+:Fixed\+\_\+\+Output\+\_\+\+Position\+\_\+\+R\+NG\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+\_\+\+Tests\+:\+:Fixed\+\_\+\+Output\+\_\+\+Position\+\_\+\+R\+NG\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___position___r_n_g_a0551a83aa6ef79845b50231f0b17b4fd}\label{class_botan___tests_1_1_fixed___output___position___r_n_g_a0551a83aa6ef79845b50231f0b17b4fd}} 
+bool {\bfseries is\+\_\+seeded} () const override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___position___r_n_g_a7e00602518cb32cac98b9d63f7479a50}\label{class_botan___tests_1_1_fixed___output___position___r_n_g_a7e00602518cb32cac98b9d63f7479a50}} 
+void {\bfseries randomize} (uint8\+\_\+t out\mbox{[}$\,$\mbox{]}, size\+\_\+t len) override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___position___r_n_g_a7a532fe3427cb9a7764bed64c12d154f}\label{class_botan___tests_1_1_fixed___output___position___r_n_g_a7a532fe3427cb9a7764bed64c12d154f}} 
+bool {\bfseries accepts\+\_\+input} () const override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___position___r_n_g_a5628431900bedf2effcb8c90623c3b6b}\label{class_botan___tests_1_1_fixed___output___position___r_n_g_a5628431900bedf2effcb8c90623c3b6b}} 
+void {\bfseries add\+\_\+entropy} (const uint8\+\_\+t $\ast$, size\+\_\+t) override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___position___r_n_g_a906802f5ba6e0e519bba160462ab40fa}\label{class_botan___tests_1_1_fixed___output___position___r_n_g_a906802f5ba6e0e519bba160462ab40fa}} 
+std\+::string {\bfseries name} () const override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___position___r_n_g_abd09076c8d049f94bdd0f6eaafad3b08}\label{class_botan___tests_1_1_fixed___output___position___r_n_g_abd09076c8d049f94bdd0f6eaafad3b08}} 
+{\bfseries Fixed\+\_\+\+Output\+\_\+\+Position\+\_\+\+R\+NG} (const std\+::vector$<$ uint8\+\_\+t $>$ \&in, size\+\_\+t pos)
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___position___r_n_g_ac1effe97fc42913cf5b1f87d87c4c508}\label{class_botan___tests_1_1_fixed___output___position___r_n_g_ac1effe97fc42913cf5b1f87d87c4c508}} 
+{\bfseries Fixed\+\_\+\+Output\+\_\+\+Position\+\_\+\+R\+NG} (const std\+::string \&in\+\_\+str, size\+\_\+t pos)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+R\+NG that outputs a given set of fixed bytes for a specific request count, outputs random otherwise. Useful for test vectors with fixed nonces, where the algorithm consumes more random than just the fixed nonce. 
+
+Definition at line 94 of file test\+\_\+rng.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/tests/test\+\_\+rng.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{classeven_1_1_scene}{}\section{even\+:\+:Scene Class Reference}
+\label{classeven_1_1_scene}\index{even\+::\+Scene@{even\+::\+Scene}}
+
+
+Entity of the Q\+Painter derived object contained graphics drawing axis and any labels for drawing 2D data queues.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+hxx$>$}
+
+
+
+Inheritance diagram for even\+:\+:Scene\+:
+% FIG 0
+
+
+Collaboration diagram for even\+:\+:Scene\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classeven_1_1_scene_af610df9d9f7ea262950e1e2184874153}{Scene}} (Q\+Paint\+Device $\ast$device\+\_\+, qreal margin\+\_\+\mbox{[}4\mbox{]}, qreal xmin\+\_\+, qreal xmax\+\_\+, qreal ymin\+\_\+, qreal ymax\+\_\+)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classeven_1_1_scene}{Scene}} Entity constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_scene_a477bb59cf5656eae03ec68123a05f2e5}\label{classeven_1_1_scene_a477bb59cf5656eae03ec68123a05f2e5}} 
+void \mbox{\hyperlink{classeven_1_1_scene_a477bb59cf5656eae03ec68123a05f2e5}{draw\+Line}} (qreal x1\+\_\+, qreal y1\+\_\+, qreal x2\+\_\+, qreal y2\+\_\+, const Q\+Pen \&pen\+\_\+)
+\begin{DoxyCompactList}\small\item\em Draw line on scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_scene_a45164ee3f314cf776041fd14a5b793d4}\label{classeven_1_1_scene_a45164ee3f314cf776041fd14a5b793d4}} 
+void \mbox{\hyperlink{classeven_1_1_scene_a45164ee3f314cf776041fd14a5b793d4}{draw\+Rect}} (const Q\+RectF \&rect\+\_\+, const Q\+Pen \&pen\+\_\+, const Q\+Brush \&brush\+\_\+)
+\begin{DoxyCompactList}\small\item\em Draw rectangle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_scene_ac8bc7255ab96561e606ebb621a529629}\label{classeven_1_1_scene_ac8bc7255ab96561e606ebb621a529629}} 
+void \mbox{\hyperlink{classeven_1_1_scene_ac8bc7255ab96561e606ebb621a529629}{draw\+Text}} (qreal x\+\_\+, qreal y\+\_\+, Q\+String text\+\_\+, Q\+Pen pen\+\_\+)
+\begin{DoxyCompactList}\small\item\em Draw text on rect\+\_\+ position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_scene_aa44791cac7d3617cd3f740c1fe2a610e}\label{classeven_1_1_scene_aa44791cac7d3617cd3f740c1fe2a610e}} 
+void \mbox{\hyperlink{classeven_1_1_scene_aa44791cac7d3617cd3f740c1fe2a610e}{draw\+Rect\+On\+Chart}} (const Q\+RectF \&rect\+\_\+, const Q\+Pen \&pen\+\_\+, const Q\+Brush \&brush\+\_\+)
+\begin{DoxyCompactList}\small\item\em Draw text on chart in Q\+Rect position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_scene_a0f695bad8950131b8f537f0bb11b17d9}\label{classeven_1_1_scene_a0f695bad8950131b8f537f0bb11b17d9}} 
+qreal \mbox{\hyperlink{classeven_1_1_scene_a0f695bad8950131b8f537f0bb11b17d9}{x\+Factor}} () const
+\begin{DoxyCompactList}\small\item\em Take calculated scale factor by X. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeven_1_1_scene_afeac9b5486be73efa30dc124865d674b}\label{classeven_1_1_scene_afeac9b5486be73efa30dc124865d674b}} 
+qreal \mbox{\hyperlink{classeven_1_1_scene_afeac9b5486be73efa30dc124865d674b}{y\+Factor}} () const
+\begin{DoxyCompactList}\small\item\em Take calculated scale factor by Y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Entity of the Q\+Painter derived object contained graphics drawing axis and any labels for drawing 2D data queues. 
+
+Distribute for any graphics showing algorithms 
+
+Definition at line 25 of file Scene.\+hxx.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classeven_1_1_scene_af610df9d9f7ea262950e1e2184874153}\label{classeven_1_1_scene_af610df9d9f7ea262950e1e2184874153}} 
+\index{even\+::\+Scene@{even\+::\+Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!even\+::\+Scene@{even\+::\+Scene}}
+\subsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{Q\+Paint\+Device $\ast$}]{device\+\_\+,  }\item[{qreal}]{margin\+\_\+\mbox{[}4\mbox{]},  }\item[{qreal}]{xmin\+\_\+,  }\item[{qreal}]{xmax\+\_\+,  }\item[{qreal}]{ymin\+\_\+,  }\item[{qreal}]{ymax\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classeven_1_1_scene}{Scene}} Entity constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+} & -\/ pointer to Q\+Paint\+Device where Series will be drawing \\
+\hline
+{\em margin\+\_\+} & -\/ margin of chart area \\
+\hline
+{\em xmin\+\_\+} & -\/ lowest horizontal axe parameter \\
+\hline
+{\em xmax\+\_\+} & -\/ higest horizontal axe parameter \\
+\hline
+{\em ymin\+\_\+} & -\/ lowest vertical axe parameter \\
+\hline
+{\em ymax\+\_\+} & -\/ higest vertical axe parameter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Scene.\+cxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/widgets/Scene.\+hxx\item 
+src/widgets/\mbox{\hyperlink{_scene_8cxx}{Scene.\+cxx}}\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\hypertarget{class_q_ssh_1_1_sftp_channel}{}\section{Q\+Ssh\+:\+:Sftp\+Channel Class Reference}
+\label{class_q_ssh_1_1_sftp_channel}\index{Q\+Ssh\+::\+Sftp\+Channel@{Q\+Ssh\+::\+Sftp\+Channel}}
+
+
+This class provides S\+F\+TP operations.  
+
+
+
+
+Inheritance diagram for Q\+Ssh\+:\+:Sftp\+Channel\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Ssh\+:\+:Sftp\+Channel\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a1d9b495d8a65dd7768eef7871307de9e}\label{class_q_ssh_1_1_sftp_channel_a1d9b495d8a65dd7768eef7871307de9e}} 
+enum {\bfseries State} \{ \newline
+{\bfseries Uninitialized}, 
+{\bfseries Initializing}, 
+{\bfseries Initialized}, 
+{\bfseries Closing}, 
+\newline
+{\bfseries Closed}
+ \}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a2c9332ee487b98505f3e64c0d76c20d4}\label{class_q_ssh_1_1_sftp_channel_a2c9332ee487b98505f3e64c0d76c20d4}} 
+typedef Q\+Shared\+Pointer$<$ \mbox{\hyperlink{class_q_ssh_1_1_sftp_channel}{Sftp\+Channel}} $>$ {\bfseries Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a755193c1620368b58c91784117a0c27b}\label{class_q_ssh_1_1_sftp_channel_a755193c1620368b58c91784117a0c27b}} 
+void {\bfseries initialized} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_abbb2ba7d8de4100914cf15389919d783}\label{class_q_ssh_1_1_sftp_channel_abbb2ba7d8de4100914cf15389919d783}} 
+void {\bfseries initialization\+Failed} (const Q\+String \&reason)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_aa4a457aca6115681dce24fa29b78b091}\label{class_q_ssh_1_1_sftp_channel_aa4a457aca6115681dce24fa29b78b091}} 
+void {\bfseries closed} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_acf1f71f422d79ef808f5ca0f22a8e408}\label{class_q_ssh_1_1_sftp_channel_acf1f71f422d79ef808f5ca0f22a8e408}} 
+void {\bfseries finished} (Q\+Ssh\+::\+Sftp\+Job\+Id \mbox{\hyperlink{structjob}{job}}, const Q\+String \&error=Q\+String())
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a5f329efaf41c23b5420e0e0893f4b266}\label{class_q_ssh_1_1_sftp_channel_a5f329efaf41c23b5420e0e0893f4b266}} 
+void {\bfseries data\+Available} (Q\+Ssh\+::\+Sftp\+Job\+Id \mbox{\hyperlink{structjob}{job}}, const Q\+String \&data)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a390ca2ad6c9e93cf5a99ea9d17720465}\label{class_q_ssh_1_1_sftp_channel_a390ca2ad6c9e93cf5a99ea9d17720465}} 
+void {\bfseries file\+Info\+Available} (Q\+Ssh\+::\+Sftp\+Job\+Id \mbox{\hyperlink{structjob}{job}}, const Q\+List$<$ \mbox{\hyperlink{class_q_ssh_1_1_sftp_file_info}{Q\+Ssh\+::\+Sftp\+File\+Info}} $>$ \&file\+Info\+List)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a32d1ff95d1975131aeaccbcaa3533995}\label{class_q_ssh_1_1_sftp_channel_a32d1ff95d1975131aeaccbcaa3533995}} 
+State {\bfseries state} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a9c751af7796dd9f5244b99b5e3fe7df2}\label{class_q_ssh_1_1_sftp_channel_a9c751af7796dd9f5244b99b5e3fe7df2}} 
+void {\bfseries initialize} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a2eada0358284dc088254fe9537c21362}\label{class_q_ssh_1_1_sftp_channel_a2eada0358284dc088254fe9537c21362}} 
+void {\bfseries close\+Channel} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_abb6f9c1276fbc8d04e84264deb48c113}\label{class_q_ssh_1_1_sftp_channel_abb6f9c1276fbc8d04e84264deb48c113}} 
+Sftp\+Job\+Id {\bfseries stat\+File} (const Q\+String \&path)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a22c225764c4f5fa231fa8b3a20507926}\label{class_q_ssh_1_1_sftp_channel_a22c225764c4f5fa231fa8b3a20507926}} 
+Sftp\+Job\+Id {\bfseries list\+Directory} (const Q\+String \&dir\+Path)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a639042844054b0e986b33c26aa510813}\label{class_q_ssh_1_1_sftp_channel_a639042844054b0e986b33c26aa510813}} 
+Sftp\+Job\+Id {\bfseries create\+Directory} (const Q\+String \&dir\+Path)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a413b3eff6814507cdbf6d4959920a4a8}\label{class_q_ssh_1_1_sftp_channel_a413b3eff6814507cdbf6d4959920a4a8}} 
+Sftp\+Job\+Id {\bfseries remove\+Directory} (const Q\+String \&dir\+Path)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a3021178e6163a7e134f4d1c7e729057b}\label{class_q_ssh_1_1_sftp_channel_a3021178e6163a7e134f4d1c7e729057b}} 
+Sftp\+Job\+Id {\bfseries remove\+File} (const Q\+String \&file\+Path)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a2c8b5ba6de6ca79557295f946f8130c2}\label{class_q_ssh_1_1_sftp_channel_a2c8b5ba6de6ca79557295f946f8130c2}} 
+Sftp\+Job\+Id {\bfseries rename\+File\+Or\+Directory} (const Q\+String \&old\+Path, const Q\+String \&new\+Path)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_ad5f944a5e998f7750b0d93239e825652}\label{class_q_ssh_1_1_sftp_channel_ad5f944a5e998f7750b0d93239e825652}} 
+Sftp\+Job\+Id {\bfseries create\+File} (const Q\+String \&file\+Path, Sftp\+Overwrite\+Mode mode)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_ab8974032685bde82598c9a1a8ee66997}\label{class_q_ssh_1_1_sftp_channel_ab8974032685bde82598c9a1a8ee66997}} 
+Sftp\+Job\+Id {\bfseries create\+Link} (const Q\+String \&file\+Path, const Q\+String \&target)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_adf9df55e6fcc94e0f2d6ccacc09269ad}\label{class_q_ssh_1_1_sftp_channel_adf9df55e6fcc94e0f2d6ccacc09269ad}} 
+Sftp\+Job\+Id {\bfseries upload\+File} (Q\+Shared\+Pointer$<$ Q\+I\+O\+Device $>$ local\+File, const Q\+String \&remote\+File\+Path, Sftp\+Overwrite\+Mode mode)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_aef5f43cc670c2e471435cc41e4b42fef}\label{class_q_ssh_1_1_sftp_channel_aef5f43cc670c2e471435cc41e4b42fef}} 
+Sftp\+Job\+Id {\bfseries upload\+File} (const Q\+String \&local\+File\+Path, const Q\+String \&remote\+File\+Path, Sftp\+Overwrite\+Mode mode)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_ad3a860d3c748417bd78a594731983c9d}\label{class_q_ssh_1_1_sftp_channel_ad3a860d3c748417bd78a594731983c9d}} 
+Sftp\+Job\+Id {\bfseries download\+File} (const Q\+String \&remote\+File\+Path, const Q\+String \&local\+File\+Path, Sftp\+Overwrite\+Mode mode)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_ae27f88d97c7eebc6fc9b587f3114062e}\label{class_q_ssh_1_1_sftp_channel_ae27f88d97c7eebc6fc9b587f3114062e}} 
+Sftp\+Job\+Id {\bfseries download\+File} (const Q\+String \&remote\+File\+Path, Q\+Shared\+Pointer$<$ Q\+I\+O\+Device $>$ local\+File)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a70ce68bad21720c53272c22fded868b2}\label{class_q_ssh_1_1_sftp_channel_a70ce68bad21720c53272c22fded868b2}} 
+Sftp\+Job\+Id {\bfseries upload\+Dir} (const Q\+String \&local\+Dir\+Path, const Q\+String \&remote\+Parent\+Dir\+Path)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a41c22485de6cd3a4c764e64b31a13500}\label{class_q_ssh_1_1_sftp_channel_a41c22485de6cd3a4c764e64b31a13500}} 
+Sftp\+Job\+Id {\bfseries download\+Dir} (const Q\+String \&remote\+Dir\+Path, const Q\+String \&local\+Dir\+Path, Sftp\+Overwrite\+Mode mode)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_ae701abaaf26b484832858956c94daf43}\label{class_q_ssh_1_1_sftp_channel_ae701abaaf26b484832858956c94daf43}} 
+class {\bfseries Internal\+::\+Sftp\+Channel\+Private}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_sftp_channel_a5a13e7a749b7e2d0ce43e5d17a60afaf}\label{class_q_ssh_1_1_sftp_channel_a5a13e7a749b7e2d0ce43e5d17a60afaf}} 
+class {\bfseries Internal\+::\+Ssh\+Channel\+Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides S\+F\+TP operations. 
+
+Objects are created via Ssh\+Connection\+::create\+Sftp\+Channel(). The channel needs to be initialized with a call to initialize() and is closed via close\+Channel(). After closing a channel, no more operations are possible. It cannot be re-\/opened using initialize(); use Ssh\+Connection\+::create\+Sftp\+Channel() if you need a new one.
+
+After the initialized() signal has been emitted, operations can be started. All S\+F\+TP operations are asynchronous (non-\/blocking) and can be in-\/flight simultaneously (though callers must ensure that concurrently running jobs are independent of each other, e.\+g. they must not write to the same file). Operations are identified by their job id, which is returned by the respective member function. If the function can right away detect that the operation cannot succeed, it returns Sftp\+Invalid\+Job. If an error occurs later, the finished() signal is emitted for the respective job with a non-\/empty error string.
+
+Note that directory names must not have a trailing slash. 
+
+Definition at line 52 of file sftpchannel.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sftpchannel.\+h\item 
+prerequisites/qssh/src/libs/ssh/sftpchannel.\+cpp\end{DoxyCompactItemize}

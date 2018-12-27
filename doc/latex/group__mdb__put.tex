@@ -1,0 +1,99 @@
+\hypertarget{group__mdb__put}{}\section{Write Flags}
+\label{group__mdb__put}\index{Write Flags@{Write Flags}}
+Collaboration diagram for Write Flags\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga23eb9813f9a4cdf7a7da5e01815b0cfb}{M\+D\+B\+\_\+\+N\+O\+O\+V\+E\+R\+W\+R\+I\+TE}}~0x10
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga8d723ae10cf0afdc771ce5eafa8f6c9e}{M\+D\+B\+\_\+\+N\+O\+D\+U\+P\+D\+A\+TA}}~0x20
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga92f7832a496213db0f03105e6fa9afae}{M\+D\+B\+\_\+\+C\+U\+R\+R\+E\+NT}}~0x40
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_gac0545c6aea719991e3eae6ccc686efcc}{M\+D\+B\+\_\+\+R\+E\+S\+E\+R\+VE}}~0x10000
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga06af7a6e87588fd723e2dd1d7e580e6a}{M\+D\+B\+\_\+\+A\+P\+P\+E\+ND}}~0x20000
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga0583fe408057ff1c03b8dd071c0d68d2}{M\+D\+B\+\_\+\+A\+P\+P\+E\+N\+D\+D\+UP}}~0x40000
+\item 
+\#define \mbox{\hyperlink{group__mdb__put_ga67a8d26a8c8bc56f02f2e03fd07a74b0}{M\+D\+B\+\_\+\+M\+U\+L\+T\+I\+P\+LE}}~0x80000
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__mdb__put_ga06af7a6e87588fd723e2dd1d7e580e6a}\label{group__mdb__put_ga06af7a6e87588fd723e2dd1d7e580e6a}} 
+\index{Write Flags@{Write Flags}!M\+D\+B\+\_\+\+A\+P\+P\+E\+ND@{M\+D\+B\+\_\+\+A\+P\+P\+E\+ND}}
+\index{M\+D\+B\+\_\+\+A\+P\+P\+E\+ND@{M\+D\+B\+\_\+\+A\+P\+P\+E\+ND}!Write Flags@{Write Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+A\+P\+P\+E\+ND}{MDB\_APPEND}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+A\+P\+P\+E\+ND~0x20000}
+
+Data is being appended, don\textquotesingle{}t split full pages. 
+
+Definition at line 374 of file lmdb.\+h.
+
+\mbox{\Hypertarget{group__mdb__put_ga0583fe408057ff1c03b8dd071c0d68d2}\label{group__mdb__put_ga0583fe408057ff1c03b8dd071c0d68d2}} 
+\index{Write Flags@{Write Flags}!M\+D\+B\+\_\+\+A\+P\+P\+E\+N\+D\+D\+UP@{M\+D\+B\+\_\+\+A\+P\+P\+E\+N\+D\+D\+UP}}
+\index{M\+D\+B\+\_\+\+A\+P\+P\+E\+N\+D\+D\+UP@{M\+D\+B\+\_\+\+A\+P\+P\+E\+N\+D\+D\+UP}!Write Flags@{Write Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+A\+P\+P\+E\+N\+D\+D\+UP}{MDB\_APPENDDUP}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+A\+P\+P\+E\+N\+D\+D\+UP~0x40000}
+
+Duplicate data is being appended, don\textquotesingle{}t split full pages. 
+
+Definition at line 376 of file lmdb.\+h.
+
+\mbox{\Hypertarget{group__mdb__put_ga92f7832a496213db0f03105e6fa9afae}\label{group__mdb__put_ga92f7832a496213db0f03105e6fa9afae}} 
+\index{Write Flags@{Write Flags}!M\+D\+B\+\_\+\+C\+U\+R\+R\+E\+NT@{M\+D\+B\+\_\+\+C\+U\+R\+R\+E\+NT}}
+\index{M\+D\+B\+\_\+\+C\+U\+R\+R\+E\+NT@{M\+D\+B\+\_\+\+C\+U\+R\+R\+E\+NT}!Write Flags@{Write Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+C\+U\+R\+R\+E\+NT}{MDB\_CURRENT}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+C\+U\+R\+R\+E\+NT~0x40}
+
+For mdb\+\_\+cursor\+\_\+put\+: overwrite the current key/data pair 
+
+Definition at line 368 of file lmdb.\+h.
+
+\mbox{\Hypertarget{group__mdb__put_ga67a8d26a8c8bc56f02f2e03fd07a74b0}\label{group__mdb__put_ga67a8d26a8c8bc56f02f2e03fd07a74b0}} 
+\index{Write Flags@{Write Flags}!M\+D\+B\+\_\+\+M\+U\+L\+T\+I\+P\+LE@{M\+D\+B\+\_\+\+M\+U\+L\+T\+I\+P\+LE}}
+\index{M\+D\+B\+\_\+\+M\+U\+L\+T\+I\+P\+LE@{M\+D\+B\+\_\+\+M\+U\+L\+T\+I\+P\+LE}!Write Flags@{Write Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+M\+U\+L\+T\+I\+P\+LE}{MDB\_MULTIPLE}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+M\+U\+L\+T\+I\+P\+LE~0x80000}
+
+Store multiple data items in one call. Only for \mbox{\hyperlink{group__mdb__dbi__open_ga5acc26f80668d1ebc31265d178c69338}{M\+D\+B\+\_\+\+D\+U\+P\+F\+I\+X\+ED}}. 
+
+Definition at line 378 of file lmdb.\+h.
+
+\mbox{\Hypertarget{group__mdb__put_ga8d723ae10cf0afdc771ce5eafa8f6c9e}\label{group__mdb__put_ga8d723ae10cf0afdc771ce5eafa8f6c9e}} 
+\index{Write Flags@{Write Flags}!M\+D\+B\+\_\+\+N\+O\+D\+U\+P\+D\+A\+TA@{M\+D\+B\+\_\+\+N\+O\+D\+U\+P\+D\+A\+TA}}
+\index{M\+D\+B\+\_\+\+N\+O\+D\+U\+P\+D\+A\+TA@{M\+D\+B\+\_\+\+N\+O\+D\+U\+P\+D\+A\+TA}!Write Flags@{Write Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+N\+O\+D\+U\+P\+D\+A\+TA}{MDB\_NODUPDATA}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+N\+O\+D\+U\+P\+D\+A\+TA~0x20}
+
+Only for \mbox{\hyperlink{group__mdb__dbi__open_gae0626566c2562e9007f5c8c9535bab1a}{M\+D\+B\+\_\+\+D\+U\+P\+S\+O\+RT}}~\newline
+ For put\+: don\textquotesingle{}t write if the key and data pair already exist.~\newline
+ For mdb\+\_\+cursor\+\_\+del\+: remove all duplicate data items. 
+
+Definition at line 366 of file lmdb.\+h.
+
+\mbox{\Hypertarget{group__mdb__put_ga23eb9813f9a4cdf7a7da5e01815b0cfb}\label{group__mdb__put_ga23eb9813f9a4cdf7a7da5e01815b0cfb}} 
+\index{Write Flags@{Write Flags}!M\+D\+B\+\_\+\+N\+O\+O\+V\+E\+R\+W\+R\+I\+TE@{M\+D\+B\+\_\+\+N\+O\+O\+V\+E\+R\+W\+R\+I\+TE}}
+\index{M\+D\+B\+\_\+\+N\+O\+O\+V\+E\+R\+W\+R\+I\+TE@{M\+D\+B\+\_\+\+N\+O\+O\+V\+E\+R\+W\+R\+I\+TE}!Write Flags@{Write Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+N\+O\+O\+V\+E\+R\+W\+R\+I\+TE}{MDB\_NOOVERWRITE}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+N\+O\+O\+V\+E\+R\+W\+R\+I\+TE~0x10}
+
+For put\+: Don\textquotesingle{}t write if the key already exists. 
+
+Definition at line 361 of file lmdb.\+h.
+
+\mbox{\Hypertarget{group__mdb__put_gac0545c6aea719991e3eae6ccc686efcc}\label{group__mdb__put_gac0545c6aea719991e3eae6ccc686efcc}} 
+\index{Write Flags@{Write Flags}!M\+D\+B\+\_\+\+R\+E\+S\+E\+R\+VE@{M\+D\+B\+\_\+\+R\+E\+S\+E\+R\+VE}}
+\index{M\+D\+B\+\_\+\+R\+E\+S\+E\+R\+VE@{M\+D\+B\+\_\+\+R\+E\+S\+E\+R\+VE}!Write Flags@{Write Flags}}
+\subsubsection{\texorpdfstring{M\+D\+B\+\_\+\+R\+E\+S\+E\+R\+VE}{MDB\_RESERVE}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+\+R\+E\+S\+E\+R\+VE~0x10000}
+
+For put\+: Just reserve space for data, don\textquotesingle{}t copy it. Return a pointer to the reserved space. 
+
+Definition at line 372 of file lmdb.\+h.
+

@@ -1,0 +1,9 @@
+digraph "Botan::XMSS_WOTS_PrivateKey::generate_public_key"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node31 [label="Botan::XMSS_WOTS_Private\lKey::generate_public_key",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node31 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="Botan::XMSS_WOTS_Private\lKey::generate_public_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_x_m_s_s___w_o_t_s___private_key.html#a6557ddafc4e18ce4750c8a69b843481d"];
+}

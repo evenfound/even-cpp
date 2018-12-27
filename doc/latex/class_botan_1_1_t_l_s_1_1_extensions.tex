@@ -1,0 +1,62 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_extensions}{}\section{Botan\+:\+:T\+LS\+:\+:Extensions Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_extensions}\index{Botan\+::\+T\+L\+S\+::\+Extensions@{Botan\+::\+T\+L\+S\+::\+Extensions}}
+
+
+{\ttfamily \#include $<$tls\+\_\+extensions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_a547825edf6d0ed909025cd609e7c75d6}\label{class_botan_1_1_t_l_s_1_1_extensions_a547825edf6d0ed909025cd609e7c75d6}} 
+std\+::set$<$ Handshake\+\_\+\+Extension\+\_\+\+Type $>$ {\bfseries extension\+\_\+types} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_a236517e345c0d96e13ee70abcb5fe655}\label{class_botan_1_1_t_l_s_1_1_extensions_a236517e345c0d96e13ee70abcb5fe655}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ {\bfseries get} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_afe9d5fe73cb473313f758877c3f131e3}\label{class_botan_1_1_t_l_s_1_1_extensions_afe9d5fe73cb473313f758877c3f131e3}} 
+{\footnotesize template$<$typename T $>$ }\\bool {\bfseries has} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_a7311e3e553dff2b904f3f000433979d5}\label{class_botan_1_1_t_l_s_1_1_extensions_a7311e3e553dff2b904f3f000433979d5}} 
+void {\bfseries add} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension}{Extension}} $\ast$extn)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_a072605270a7281e890afba9043ac038e}\label{class_botan_1_1_t_l_s_1_1_extensions_a072605270a7281e890afba9043ac038e}} 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension}{Extension}} $\ast$ {\bfseries get} (Handshake\+\_\+\+Extension\+\_\+\+Type type) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_adf45e5e253c9d39338022fd9da0e6db8}\label{class_botan_1_1_t_l_s_1_1_extensions_adf45e5e253c9d39338022fd9da0e6db8}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries serialize} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_aeeada6e5f3b71c9cd0fdceb594533819}\label{class_botan_1_1_t_l_s_1_1_extensions_aeeada6e5f3b71c9cd0fdceb594533819}} 
+void {\bfseries deserialize} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}{T\+L\+S\+\_\+\+Data\+\_\+\+Reader}} \&reader)
+\item 
+bool \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extensions_a4adf35cd9f8155846e973c104e72703b}{remove\+\_\+extension}} (Handshake\+\_\+\+Extension\+\_\+\+Type typ)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_a34cc01c87e8ec2f49a941bedae2422bc}\label{class_botan_1_1_t_l_s_1_1_extensions_a34cc01c87e8ec2f49a941bedae2422bc}} 
+{\bfseries Extensions} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}{T\+L\+S\+\_\+\+Data\+\_\+\+Reader}} \&reader)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a block of extensions in a hello message 
+
+Definition at line 441 of file tls\+\_\+extensions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_extensions_a4adf35cd9f8155846e973c104e72703b}\label{class_botan_1_1_t_l_s_1_1_extensions_a4adf35cd9f8155846e973c104e72703b}} 
+\index{Botan\+::\+T\+L\+S\+::\+Extensions@{Botan\+::\+T\+L\+S\+::\+Extensions}!remove\+\_\+extension@{remove\+\_\+extension}}
+\index{remove\+\_\+extension@{remove\+\_\+extension}!Botan\+::\+T\+L\+S\+::\+Extensions@{Botan\+::\+T\+L\+S\+::\+Extensions}}
+\subsubsection{\texorpdfstring{remove\+\_\+extension()}{remove\_extension()}}
+{\footnotesize\ttfamily bool Botan\+::\+T\+L\+S\+::\+Extensions\+::remove\+\_\+extension (\begin{DoxyParamCaption}\item[{Handshake\+\_\+\+Extension\+\_\+\+Type}]{typ }\end{DoxyParamCaption})}
+
+Remvoe an extension from this extensions object, if it exists. Returns true if the extension existed (and thus is now removed), otherwise false (the extension wasn\textquotesingle{}t set in the first place). 
+
+Definition at line 125 of file tls\+\_\+extensions.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+h\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+cpp\item 
+prerequisites/botan/src/lib/x509/x509\+\_\+ext.\+cpp\end{DoxyCompactItemize}

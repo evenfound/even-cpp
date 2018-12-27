@@ -1,0 +1,51 @@
+\hypertarget{class_botan_1_1_o_s_1_1_socket}{}\section{Botan\+:\+:OS\+:\+:Socket Class Reference}
+\label{class_botan_1_1_o_s_1_1_socket}\index{Botan\+::\+O\+S\+::\+Socket@{Botan\+::\+O\+S\+::\+Socket}}
+
+
+{\ttfamily \#include $<$socket.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_botan_1_1_o_s_1_1_socket_aacf377bf577d67ed13f1a2e196f4f2ed}{$\sim$\+Socket}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_botan_1_1_o_s_1_1_socket_ae342393ce22c475f8197e14c45eee73b}{write}} (const uint8\+\_\+t buf\mbox{[}$\,$\mbox{]}, size\+\_\+t len)=0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_botan_1_1_o_s_1_1_socket_aa6b883f7ee070a0257ccbf1a7b27ad16}{read}} (uint8\+\_\+t buf\mbox{[}$\,$\mbox{]}, size\+\_\+t len)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A wrapper around a simple blocking T\+CP socket 
+
+Definition at line 31 of file socket.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan_1_1_o_s_1_1_socket_aacf377bf577d67ed13f1a2e196f4f2ed}\label{class_botan_1_1_o_s_1_1_socket_aacf377bf577d67ed13f1a2e196f4f2ed}} 
+\index{Botan\+::\+O\+S\+::\+Socket@{Botan\+::\+O\+S\+::\+Socket}!````~Socket@{$\sim$\+Socket}}
+\index{````~Socket@{$\sim$\+Socket}!Botan\+::\+O\+S\+::\+Socket@{Botan\+::\+O\+S\+::\+Socket}}
+\subsubsection{\texorpdfstring{$\sim$\+Socket()}{~Socket()}}
+{\footnotesize\ttfamily virtual Botan\+::\+O\+S\+::\+Socket\+::$\sim$\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+The socket will be closed upon destruction 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_o_s_1_1_socket_aa6b883f7ee070a0257ccbf1a7b27ad16}\label{class_botan_1_1_o_s_1_1_socket_aa6b883f7ee070a0257ccbf1a7b27ad16}} 
+\index{Botan\+::\+O\+S\+::\+Socket@{Botan\+::\+O\+S\+::\+Socket}!read@{read}}
+\index{read@{read}!Botan\+::\+O\+S\+::\+Socket@{Botan\+::\+O\+S\+::\+Socket}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Botan\+::\+O\+S\+::\+Socket\+::read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{buf\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Reads up to len bytes, returns bytes written to buf. Returns 0 on E\+OF. Throws on error. \mbox{\Hypertarget{class_botan_1_1_o_s_1_1_socket_ae342393ce22c475f8197e14c45eee73b}\label{class_botan_1_1_o_s_1_1_socket_ae342393ce22c475f8197e14c45eee73b}} 
+\index{Botan\+::\+O\+S\+::\+Socket@{Botan\+::\+O\+S\+::\+Socket}!write@{write}}
+\index{write@{write}!Botan\+::\+O\+S\+::\+Socket@{Botan\+::\+O\+S\+::\+Socket}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual void Botan\+::\+O\+S\+::\+Socket\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{buf\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Write to the socket. Blocks until all bytes sent. Throws on error. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/utils/socket/socket.\+h\end{DoxyCompactItemize}

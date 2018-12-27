@@ -1,0 +1,99 @@
+\hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Send\+Facility Class Reference}
+\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility}\index{Q\+Ssh\+::\+Internal\+::\+Ssh\+Send\+Facility@{Q\+Ssh\+::\+Internal\+::\+Ssh\+Send\+Facility}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ae957d120345e26c153298296421536b9}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ae957d120345e26c153298296421536b9}} 
+{\bfseries Ssh\+Send\+Facility} (Q\+Tcp\+Socket $\ast$socket)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_aa82b09cf47247577f489658c2360ecb7}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_aa82b09cf47247577f489658c2360ecb7}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a20bddd18afaef477e70ae546197da885}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a20bddd18afaef477e70ae546197da885}} 
+void {\bfseries recreate\+Keys} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_key_exchange}{Ssh\+Key\+Exchange}} \&key\+Exchange)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_af3f88d2bed2d6c44abf8586a37a9a39b}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_af3f88d2bed2d6c44abf8586a37a9a39b}} 
+void {\bfseries create\+Authentication\+Key} (const Q\+Byte\+Array \&priv\+Key\+File\+Contents)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a682e4b0a9240d9b81cb10e94b5d5a389}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a682e4b0a9240d9b81cb10e94b5d5a389}} 
+Q\+Byte\+Array {\bfseries send\+Key\+Exchange\+Init\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a08b44d5b0936ff3147b233ff4aa11e84}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a08b44d5b0936ff3147b233ff4aa11e84}} 
+void {\bfseries send\+Key\+Dh\+Init\+Packet} (const Botan\+::\+Big\+Int \&e)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ae5735ca1f749d3b65399ec10ac9eff95}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ae5735ca1f749d3b65399ec10ac9eff95}} 
+void {\bfseries send\+New\+Keys\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ac7094a183f8f3db61baf49677284876f}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ac7094a183f8f3db61baf49677284876f}} 
+void {\bfseries send\+Disconnect\+Packet} (Ssh\+Error\+Code reason, const Q\+Byte\+Array \&reason\+String)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a35ed8ed711cd7dfdcd35a0be37f404af}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a35ed8ed711cd7dfdcd35a0be37f404af}} 
+void {\bfseries send\+Msg\+Unimplemented\+Packet} (quint32 server\+Seq\+Nr)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a90b571f9ce1fb6e468eeeab8ad6b25da}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a90b571f9ce1fb6e468eeeab8ad6b25da}} 
+void {\bfseries send\+User\+Auth\+Service\+Request\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a91265dde71c58b327b4cb4311104404a}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a91265dde71c58b327b4cb4311104404a}} 
+void {\bfseries send\+User\+Auth\+By\+Pwd\+Request\+Packet} (const Q\+Byte\+Array \&user, const Q\+Byte\+Array \&service, const Q\+Byte\+Array \&pwd)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a213136dea131cd60bc16e7636ca973be}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a213136dea131cd60bc16e7636ca973be}} 
+void {\bfseries send\+User\+Auth\+By\+Key\+Request\+Packet} (const Q\+Byte\+Array \&user, const Q\+Byte\+Array \&service)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_aaf7ff60a28fdbfb5b775a2d8384419aa}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_aaf7ff60a28fdbfb5b775a2d8384419aa}} 
+void {\bfseries send\+Request\+Failure\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a5a8ad4ef5a47048a616116444b26359a}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a5a8ad4ef5a47048a616116444b26359a}} 
+void {\bfseries send\+Ignore\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a688786f9bc5702057848e1268b6a17bb}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a688786f9bc5702057848e1268b6a17bb}} 
+void {\bfseries send\+Invalid\+Packet} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ac2b64dbe41fb02707c1c4c6d960437c9}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ac2b64dbe41fb02707c1c4c6d960437c9}} 
+void {\bfseries send\+Session\+Packet} (quint32 channel\+Id, quint32 window\+Size, quint32 max\+Packet\+Size)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a0eb555c0542a5f32742dd4fc89340a75}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a0eb555c0542a5f32742dd4fc89340a75}} 
+void {\bfseries send\+Pty\+Request\+Packet} (quint32 remote\+Channel, const \mbox{\hyperlink{class_q_ssh_1_1_ssh_pseudo_terminal}{Ssh\+Pseudo\+Terminal}} \&terminal)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a8f873c55cdf77a848d48255a53b7fe56}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a8f873c55cdf77a848d48255a53b7fe56}} 
+void {\bfseries send\+Env\+Packet} (quint32 remote\+Channel, const Q\+Byte\+Array \&var, const Q\+Byte\+Array \&value)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ae924c7db209022b1269ab1911336e3cd}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ae924c7db209022b1269ab1911336e3cd}} 
+void {\bfseries send\+Exec\+Packet} (quint32 remote\+Channel, const Q\+Byte\+Array \&command)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a9d964359f6fbbe32980a7571dd568aa6}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a9d964359f6fbbe32980a7571dd568aa6}} 
+void {\bfseries send\+Shell\+Packet} (quint32 remote\+Channel)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a466031cd0d8368906eed1dbc57d2de65}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a466031cd0d8368906eed1dbc57d2de65}} 
+void {\bfseries send\+Sftp\+Packet} (quint32 remote\+Channel)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ace6cbcea322dace8cbb4619dc89a4404}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ace6cbcea322dace8cbb4619dc89a4404}} 
+void {\bfseries send\+Window\+Adjust\+Packet} (quint32 remote\+Channel, quint32 bytes\+To\+Add)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a6e0558c292456b60942dd1e821c14ba8}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a6e0558c292456b60942dd1e821c14ba8}} 
+void {\bfseries send\+Channel\+Data\+Packet} (quint32 remote\+Channel, const Q\+Byte\+Array \&data)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a28834517a9b8815ed13326eff6110411}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a28834517a9b8815ed13326eff6110411}} 
+void {\bfseries send\+Channel\+Signal\+Packet} (quint32 remote\+Channel, const Q\+Byte\+Array \&signal\+Name)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ae79cc652a34c3040c55e384f2c2d8395}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ae79cc652a34c3040c55e384f2c2d8395}} 
+void {\bfseries send\+Channel\+Eof\+Packet} (quint32 remote\+Channel)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a3af5d85c2c316b34ed5a4d2c26ee5017}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_a3af5d85c2c316b34ed5a4d2c26ee5017}} 
+void {\bfseries send\+Channel\+Close\+Packet} (quint32 remote\+Channel)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ab4af62ccc73927556a357a2d8052f26d}\label{class_q_ssh_1_1_internal_1_1_ssh_send_facility_ab4af62ccc73927556a357a2d8052f26d}} 
+quint32 {\bfseries next\+Client\+Seq\+Nr} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 48 of file sshsendfacility\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sshsendfacility\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sshsendfacility.\+cpp\end{DoxyCompactItemize}

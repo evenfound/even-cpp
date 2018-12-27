@@ -1,0 +1,57 @@
+\hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Sftp\+Download Struct Reference}
+\label{struct_q_ssh_1_1_internal_1_1_sftp_download}\index{Q\+Ssh\+::\+Internal\+::\+Sftp\+Download@{Q\+Ssh\+::\+Internal\+::\+Sftp\+Download}}
+
+
+Inheritance diagram for Q\+Ssh\+:\+:Internal\+:\+:Sftp\+Download\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Ssh\+:\+:Internal\+:\+:Sftp\+Download\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download_a2a61b783146353acaa9b0c5e86fe6767}\label{struct_q_ssh_1_1_internal_1_1_sftp_download_a2a61b783146353acaa9b0c5e86fe6767}} 
+typedef Q\+Shared\+Pointer$<$ \mbox{\hyperlink{struct_q_ssh_1_1_internal_1_1_sftp_download}{Sftp\+Download}} $>$ {\bfseries Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download_ac8039da3b426e885341578ea1c9282f1}\label{struct_q_ssh_1_1_internal_1_1_sftp_download_ac8039da3b426e885341578ea1c9282f1}} 
+{\bfseries Sftp\+Download} (Sftp\+Job\+Id job\+Id, const Q\+String \&remote\+Path, const Q\+Shared\+Pointer$<$ Q\+I\+O\+Device $>$ \&local\+File, Sftp\+Overwrite\+Mode mode, const Q\+Shared\+Pointer$<$ \mbox{\hyperlink{struct_q_ssh_1_1_internal_1_1_sftp_download_dir}{Sftp\+Download\+Dir}} $>$ \&parent\+Job=Q\+Shared\+Pointer$<$ \mbox{\hyperlink{struct_q_ssh_1_1_internal_1_1_sftp_download_dir}{Sftp\+Download\+Dir}} $>$())
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download_a9f98ce2ad0f4356fca67e7ce66c1953f}\label{struct_q_ssh_1_1_internal_1_1_sftp_download_a9f98ce2ad0f4356fca67e7ce66c1953f}} 
+virtual Type {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download_a821d59268b51243be6eb9262f1c7d931}\label{struct_q_ssh_1_1_internal_1_1_sftp_download_a821d59268b51243be6eb9262f1c7d931}} 
+virtual \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_sftp_outgoing_packet}{Sftp\+Outgoing\+Packet}} \& {\bfseries initial\+Packet} (\mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_sftp_outgoing_packet}{Sftp\+Outgoing\+Packet}} \&packet)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download_a8088b5d2dd9fda17b1f87b964813a891}\label{struct_q_ssh_1_1_internal_1_1_sftp_download_a8088b5d2dd9fda17b1f87b964813a891}} 
+Q\+Map$<$ quint32, quint64 $>$ {\bfseries offsets}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download_a703f10bc006912871ca1a99fa8fb109a}\label{struct_q_ssh_1_1_internal_1_1_sftp_download_a703f10bc006912871ca1a99fa8fb109a}} 
+Sftp\+Job\+Id {\bfseries eof\+Id}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download_a0a4b39636492a4daeb50ab0091327056}\label{struct_q_ssh_1_1_internal_1_1_sftp_download_a0a4b39636492a4daeb50ab0091327056}} 
+Sftp\+Overwrite\+Mode {\bfseries mode}
+\item 
+\mbox{\Hypertarget{struct_q_ssh_1_1_internal_1_1_sftp_download_aa1e974d9e4bb83560e8d1269aa789eb2}\label{struct_q_ssh_1_1_internal_1_1_sftp_download_aa1e974d9e4bb83560e8d1269aa789eb2}} 
+const Q\+Shared\+Pointer$<$ \mbox{\hyperlink{struct_q_ssh_1_1_internal_1_1_sftp_download_dir}{Q\+Ssh\+::\+Internal\+::\+Sftp\+Download\+Dir}} $>$ {\bfseries parent\+Job}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 200 of file sftpoperation\+\_\+p.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sftpoperation\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sftpoperation.\+cpp\end{DoxyCompactItemize}

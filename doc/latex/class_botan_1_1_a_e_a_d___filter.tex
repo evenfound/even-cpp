@@ -1,0 +1,56 @@
+\hypertarget{class_botan_1_1_a_e_a_d___filter}{}\section{Botan\+:\+:A\+E\+A\+D\+\_\+\+Filter Class Reference}
+\label{class_botan_1_1_a_e_a_d___filter}\index{Botan\+::\+A\+E\+A\+D\+\_\+\+Filter@{Botan\+::\+A\+E\+A\+D\+\_\+\+Filter}}
+
+
+{\ttfamily \#include $<$aead\+\_\+filt.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:A\+E\+A\+D\+\_\+\+Filter\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:A\+E\+A\+D\+\_\+\+Filter\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_a_e_a_d___filter_a7b985bb43560408aa651ba3c3d07d53d}\label{class_botan_1_1_a_e_a_d___filter_a7b985bb43560408aa651ba3c3d07d53d}} 
+{\bfseries A\+E\+A\+D\+\_\+\+Filter} (A\+E\+A\+D\+\_\+\+Mode $\ast$aead)
+\item 
+void \mbox{\hyperlink{class_botan_1_1_a_e_a_d___filter_a6788dae43fe6f0380149b0439813d407}{set\+\_\+associated\+\_\+data}} (const uint8\+\_\+t ad\mbox{[}$\,$\mbox{]}, size\+\_\+t ad\+\_\+len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Filter interface for A\+E\+AD Modes 
+
+Definition at line 19 of file aead\+\_\+filt.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_a_e_a_d___filter_a6788dae43fe6f0380149b0439813d407}\label{class_botan_1_1_a_e_a_d___filter_a6788dae43fe6f0380149b0439813d407}} 
+\index{Botan\+::\+A\+E\+A\+D\+\_\+\+Filter@{Botan\+::\+A\+E\+A\+D\+\_\+\+Filter}!set\+\_\+associated\+\_\+data@{set\+\_\+associated\+\_\+data}}
+\index{set\+\_\+associated\+\_\+data@{set\+\_\+associated\+\_\+data}!Botan\+::\+A\+E\+A\+D\+\_\+\+Filter@{Botan\+::\+A\+E\+A\+D\+\_\+\+Filter}}
+\subsubsection{\texorpdfstring{set\+\_\+associated\+\_\+data()}{set\_associated\_data()}}
+{\footnotesize\ttfamily void Botan\+::\+A\+E\+A\+D\+\_\+\+Filter\+::set\+\_\+associated\+\_\+data (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{ad\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{ad\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set associated data that is not included in the ciphertext but that should be authenticated. Must be called after set\+\_\+key and before end\+\_\+msg.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad} & the associated data \\
+\hline
+{\em ad\+\_\+len} & length of add in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file aead\+\_\+filt.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/filters/aead\+\_\+filt.\+h\end{DoxyCompactItemize}

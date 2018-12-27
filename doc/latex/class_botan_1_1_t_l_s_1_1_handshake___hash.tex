@@ -1,0 +1,51 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_handshake___hash}{}\section{Botan\+:\+:T\+LS\+:\+:Handshake\+\_\+\+Hash Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_handshake___hash}\index{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+Hash@{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+Hash}}
+
+
+{\ttfamily \#include $<$tls\+\_\+handshake\+\_\+hash.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___hash_a6739b5ab750b0234078df6aaa6da4046}\label{class_botan_1_1_t_l_s_1_1_handshake___hash_a6739b5ab750b0234078df6aaa6da4046}} 
+void {\bfseries update} (const uint8\+\_\+t in\mbox{[}$\,$\mbox{]}, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___hash_af0b1d300606be0331c562c52e8813110}\label{class_botan_1_1_t_l_s_1_1_handshake___hash_af0b1d300606be0331c562c52e8813110}} 
+void {\bfseries update} (const std\+::vector$<$ uint8\+\_\+t $>$ \&in)
+\item 
+secure\+\_\+vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___hash_aa7bb43268391e1407afce564188c903f}{final}} (Protocol\+\_\+\+Version version, const std\+::string \&mac\+\_\+algo) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___hash_a28c76ddf6a77ba4cd0a695437fad13ff}\label{class_botan_1_1_t_l_s_1_1_handshake___hash_a28c76ddf6a77ba4cd0a695437fad13ff}} 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& {\bfseries get\+\_\+contents} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___hash_a91af7fc0847e1799b352d8f54ce01430}\label{class_botan_1_1_t_l_s_1_1_handshake___hash_a91af7fc0847e1799b352d8f54ce01430}} 
+void {\bfseries reset} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+LS Handshake Hash 
+
+Definition at line 21 of file tls\+\_\+handshake\+\_\+hash.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___hash_aa7bb43268391e1407afce564188c903f}\label{class_botan_1_1_t_l_s_1_1_handshake___hash_aa7bb43268391e1407afce564188c903f}} 
+\index{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+Hash@{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+Hash}!final@{final}}
+\index{final@{final}!Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+Hash@{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+Hash}}
+\subsubsection{\texorpdfstring{final()}{final()}}
+{\footnotesize\ttfamily secure\+\_\+vector$<$ uint8\+\_\+t $>$ Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+Hash\+::final (\begin{DoxyParamCaption}\item[{Protocol\+\_\+\+Version}]{version,  }\item[{const std\+::string \&}]{mac\+\_\+algo }\end{DoxyParamCaption}) const}
+
+Return a T\+LS Handshake Hash 
+
+Definition at line 18 of file tls\+\_\+handshake\+\_\+hash.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+handshake\+\_\+hash.\+h\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+handshake\+\_\+hash.\+cpp\end{DoxyCompactItemize}

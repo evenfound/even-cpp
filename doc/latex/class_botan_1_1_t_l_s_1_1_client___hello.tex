@@ -1,0 +1,122 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_client___hello}{}\section{Botan\+:\+:T\+LS\+:\+:Client\+\_\+\+Hello Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_client___hello}\index{Botan\+::\+T\+L\+S\+::\+Client\+\_\+\+Hello@{Botan\+::\+T\+L\+S\+::\+Client\+\_\+\+Hello}}
+
+
+{\ttfamily \#include $<$tls\+\_\+messages.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Client\+\_\+\+Hello\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:T\+LS\+:\+:Client\+\_\+\+Hello\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_client___hello_1_1_settings}{Settings}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_ad4a149baa547ebdda7eb7bd0337df1bb}\label{class_botan_1_1_t_l_s_1_1_client___hello_ad4a149baa547ebdda7eb7bd0337df1bb}} 
+Handshake\+\_\+\+Type {\bfseries type} () const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a39cc16019ece063688370495d3172260}\label{class_botan_1_1_t_l_s_1_1_client___hello_a39cc16019ece063688370495d3172260}} 
+Protocol\+\_\+\+Version {\bfseries version} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_aefd20decceddadc72574ea99ac02c45e}\label{class_botan_1_1_t_l_s_1_1_client___hello_aefd20decceddadc72574ea99ac02c45e}} 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& {\bfseries random} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_ae6653c8214bb701b0074abd864f4f2bd}\label{class_botan_1_1_t_l_s_1_1_client___hello_ae6653c8214bb701b0074abd864f4f2bd}} 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& {\bfseries session\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_ab6417bb1546d803e0fcb89252ca1f5c5}\label{class_botan_1_1_t_l_s_1_1_client___hello_ab6417bb1546d803e0fcb89252ca1f5c5}} 
+const std\+::vector$<$ uint16\+\_\+t $>$ \& {\bfseries ciphersuites} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a24f31b634e35a2e554ef28ce6ea39ee1}\label{class_botan_1_1_t_l_s_1_1_client___hello_a24f31b634e35a2e554ef28ce6ea39ee1}} 
+bool {\bfseries offered\+\_\+suite} (uint16\+\_\+t ciphersuite) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_ad19741dbebef039775fdfe53db08dace}\label{class_botan_1_1_t_l_s_1_1_client___hello_ad19741dbebef039775fdfe53db08dace}} 
+bool {\bfseries sent\+\_\+fallback\+\_\+scsv} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a13c5cd4d41929e2b325732656960066c}\label{class_botan_1_1_t_l_s_1_1_client___hello_a13c5cd4d41929e2b325732656960066c}} 
+std\+::vector$<$ Signature\+\_\+\+Scheme $>$ {\bfseries signature\+\_\+schemes} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a464f495f8c9747218635a318e89237de}\label{class_botan_1_1_t_l_s_1_1_client___hello_a464f495f8c9747218635a318e89237de}} 
+std\+::vector$<$ Group\+\_\+\+Params $>$ {\bfseries supported\+\_\+ecc\+\_\+curves} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a81985cd99451908b825f6b587ff1b901}\label{class_botan_1_1_t_l_s_1_1_client___hello_a81985cd99451908b825f6b587ff1b901}} 
+std\+::vector$<$ Group\+\_\+\+Params $>$ {\bfseries supported\+\_\+dh\+\_\+groups} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_ad1ec699557386656cfe817ddf1636788}\label{class_botan_1_1_t_l_s_1_1_client___hello_ad1ec699557386656cfe817ddf1636788}} 
+bool {\bfseries prefers\+\_\+compressed\+\_\+ec\+\_\+points} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a0a07c56a2c2f343e0225665da3aebcff}\label{class_botan_1_1_t_l_s_1_1_client___hello_a0a07c56a2c2f343e0225665da3aebcff}} 
+std\+::string {\bfseries sni\+\_\+hostname} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_af6ffc2bb984d6b56bcb4c45f531b914b}\label{class_botan_1_1_t_l_s_1_1_client___hello_af6ffc2bb984d6b56bcb4c45f531b914b}} 
+bool {\bfseries secure\+\_\+renegotiation} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_aa88b190f45d457739457a8ca8b81dfe3}\label{class_botan_1_1_t_l_s_1_1_client___hello_aa88b190f45d457739457a8ca8b81dfe3}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries renegotiation\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a2ae1633751181ce99c295ca4535be241}\label{class_botan_1_1_t_l_s_1_1_client___hello_a2ae1633751181ce99c295ca4535be241}} 
+bool {\bfseries supports\+\_\+session\+\_\+ticket} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a8730aee26562a456a7f25c2cccfd15c2}\label{class_botan_1_1_t_l_s_1_1_client___hello_a8730aee26562a456a7f25c2cccfd15c2}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries session\+\_\+ticket} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a4ca07eaae1cd82b6df12460e0b8630f1}\label{class_botan_1_1_t_l_s_1_1_client___hello_a4ca07eaae1cd82b6df12460e0b8630f1}} 
+bool {\bfseries supports\+\_\+alpn} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_abc7528347bb52609aca8b3647283049c}\label{class_botan_1_1_t_l_s_1_1_client___hello_abc7528347bb52609aca8b3647283049c}} 
+bool {\bfseries supports\+\_\+extended\+\_\+master\+\_\+secret} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a5979db068cee155cb7265c9192228f20}\label{class_botan_1_1_t_l_s_1_1_client___hello_a5979db068cee155cb7265c9192228f20}} 
+bool {\bfseries supports\+\_\+cert\+\_\+status\+\_\+message} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_ac80096d2ae6b8476d0c4ced2f301fe9f}\label{class_botan_1_1_t_l_s_1_1_client___hello_ac80096d2ae6b8476d0c4ced2f301fe9f}} 
+bool {\bfseries supports\+\_\+encrypt\+\_\+then\+\_\+mac} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a3cf910f1f672362e50fd4cda8c1bf9fc}\label{class_botan_1_1_t_l_s_1_1_client___hello_a3cf910f1f672362e50fd4cda8c1bf9fc}} 
+bool {\bfseries sent\+\_\+signature\+\_\+algorithms} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a8f7181a5ec21e87c92d1b63d56899c7d}\label{class_botan_1_1_t_l_s_1_1_client___hello_a8f7181a5ec21e87c92d1b63d56899c7d}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries next\+\_\+protocols} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_ad10a75a0735c7533468ea26faa25c6ae}\label{class_botan_1_1_t_l_s_1_1_client___hello_ad10a75a0735c7533468ea26faa25c6ae}} 
+std\+::vector$<$ uint16\+\_\+t $>$ {\bfseries srtp\+\_\+profiles} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_aa4ce0efb4da5c07822f714557a84c28a}\label{class_botan_1_1_t_l_s_1_1_client___hello_aa4ce0efb4da5c07822f714557a84c28a}} 
+void {\bfseries update\+\_\+hello\+\_\+cookie} (const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_hello___verify___request}{Hello\+\_\+\+Verify\+\_\+\+Request}} \&hello\+\_\+verify)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a9ff6a4f09fc7a26a63c3ce985cf51d03}\label{class_botan_1_1_t_l_s_1_1_client___hello_a9ff6a4f09fc7a26a63c3ce985cf51d03}} 
+std\+::set$<$ Handshake\+\_\+\+Extension\+\_\+\+Type $>$ {\bfseries extension\+\_\+types} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a3d3139562dc4d0d9b9e017f2da87da9a}\label{class_botan_1_1_t_l_s_1_1_client___hello_a3d3139562dc4d0d9b9e017f2da87da9a}} 
+const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extensions}{Extensions}} \& {\bfseries extensions} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a23b5ddd3f8874d4f21735caf1b8a74bf}\label{class_botan_1_1_t_l_s_1_1_client___hello_a23b5ddd3f8874d4f21735caf1b8a74bf}} 
+{\bfseries Client\+\_\+\+Hello} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \&io, \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___hash}{Handshake\+\_\+\+Hash}} \&hash, const Policy \&policy, Callbacks \&cb, Random\+Number\+Generator \&rng, const std\+::vector$<$ uint8\+\_\+t $>$ \&reneg\+\_\+info, const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_client___hello_1_1_settings}{Client\+\_\+\+Hello\+::\+Settings}} \&client\+\_\+settings, const std\+::vector$<$ std\+::string $>$ \&next\+\_\+protocols)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_afac7f76bc1d5da48d139db2ccdbc01fa}\label{class_botan_1_1_t_l_s_1_1_client___hello_afac7f76bc1d5da48d139db2ccdbc01fa}} 
+{\bfseries Client\+\_\+\+Hello} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \&io, \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___hash}{Handshake\+\_\+\+Hash}} \&hash, const Policy \&policy, Callbacks \&cb, Random\+Number\+Generator \&rng, const std\+::vector$<$ uint8\+\_\+t $>$ \&reneg\+\_\+info, const Session \&resumed\+\_\+session, const std\+::vector$<$ std\+::string $>$ \&next\+\_\+protocols)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_client___hello_a6344772d277964e5e413cd3bd9fa6dda}\label{class_botan_1_1_t_l_s_1_1_client___hello_a6344772d277964e5e413cd3bd9fa6dda}} 
+{\bfseries Client\+\_\+\+Hello} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client Hello Message 
+
+Definition at line 70 of file tls\+\_\+messages.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+messages.\+h\item 
+prerequisites/botan/src/lib/tls/msg\+\_\+client\+\_\+hello.\+cpp\end{DoxyCompactItemize}

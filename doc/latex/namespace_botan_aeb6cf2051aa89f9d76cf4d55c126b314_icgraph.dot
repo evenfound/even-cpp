@@ -1,0 +1,15 @@
+digraph "Botan::clear_mem"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node89 [label="Botan::clear_mem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node89 -> Node90 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node90 [label="Botan::zeroise",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a09ce987463cc4e1b7682f31bb486fdb1"];
+  Node90 -> Node91 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node91 [label="Botan::zap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a2534f0fffcfe960b963990832bd1d26e"];
+  Node89 -> Node92 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node92 [label="Botan::base_decode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#ab1d8df562b6507ed384c0f214f9b6a07"];
+  Node89 -> Node93 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node93 [label="Botan::Memory_Pool\l::Memory_Pool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_memory___pool.html#a2960cd6fb9463c231c1c36f2d0e06897"];
+}

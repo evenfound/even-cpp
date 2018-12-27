@@ -1,0 +1,81 @@
+\hypertarget{structmbedtls__sha256__context}{}\section{mbedtls\+\_\+sha256\+\_\+context Struct Reference}
+\label{structmbedtls__sha256__context}\index{mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}}
+
+
+S\+H\+A-\/256 context structure.  
+
+
+
+
+{\ttfamily \#include $<$sha256.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+sha256\+\_\+context\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structmbedtls__sha256__context_ab7444610a95153450180924862b2a0fa}{total}} \mbox{[}2\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structmbedtls__sha256__context_a88df25a0934134bd8b686152ba763322}{state}} \mbox{[}8\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{structmbedtls__sha256__context_adb4c87a904e9d4099592c5bf7ff0b308}{buffer}} \mbox{[}64\mbox{]}
+\item 
+int \mbox{\hyperlink{structmbedtls__sha256__context_ac73158ffb252c4bd2ccb991653619cc1}{is224}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+H\+A-\/256 context structure. 
+
+Definition at line 46 of file sha256.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__sha256__context_adb4c87a904e9d4099592c5bf7ff0b308}\label{structmbedtls__sha256__context_adb4c87a904e9d4099592c5bf7ff0b308}} 
+\index{mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}!buffer@{buffer}}
+\index{buffer@{buffer}!mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}}
+\subsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily unsigned char mbedtls\+\_\+sha256\+\_\+context\+::buffer\mbox{[}64\mbox{]}}
+
+data block being processed 
+
+Definition at line 50 of file sha256.\+h.
+
+\mbox{\Hypertarget{structmbedtls__sha256__context_ac73158ffb252c4bd2ccb991653619cc1}\label{structmbedtls__sha256__context_ac73158ffb252c4bd2ccb991653619cc1}} 
+\index{mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}!is224@{is224}}
+\index{is224@{is224}!mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}}
+\subsubsection{\texorpdfstring{is224}{is224}}
+{\footnotesize\ttfamily int mbedtls\+\_\+sha256\+\_\+context\+::is224}
+
+0 =$>$ S\+H\+A-\/256, else S\+H\+A-\/224 
+
+Definition at line 51 of file sha256.\+h.
+
+\mbox{\Hypertarget{structmbedtls__sha256__context_a88df25a0934134bd8b686152ba763322}\label{structmbedtls__sha256__context_a88df25a0934134bd8b686152ba763322}} 
+\index{mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}!state@{state}}
+\index{state@{state}!mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily uint32\+\_\+t mbedtls\+\_\+sha256\+\_\+context\+::state\mbox{[}8\mbox{]}}
+
+intermediate digest state 
+
+Definition at line 49 of file sha256.\+h.
+
+\mbox{\Hypertarget{structmbedtls__sha256__context_ab7444610a95153450180924862b2a0fa}\label{structmbedtls__sha256__context_ab7444610a95153450180924862b2a0fa}} 
+\index{mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}!total@{total}}
+\index{total@{total}!mbedtls\+\_\+sha256\+\_\+context@{mbedtls\+\_\+sha256\+\_\+context}}
+\subsubsection{\texorpdfstring{total}{total}}
+{\footnotesize\ttfamily uint32\+\_\+t mbedtls\+\_\+sha256\+\_\+context\+::total\mbox{[}2\mbox{]}}
+
+number of bytes processed 
+
+Definition at line 48 of file sha256.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/sha256.\+h\end{DoxyCompactItemize}

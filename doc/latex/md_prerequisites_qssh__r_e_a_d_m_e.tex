@@ -1,0 +1,25 @@
+Q\+Ssh provides S\+SH and S\+F\+TP support for Qt applications. The aim of this project is to provide a easy way to use these protocols in any Qt application.
+
+This project is based on Qt Creator\textquotesingle{}s lib\+Qtc\+Ssh.\+so. All the credits to Qt Creator\textquotesingle{}s team! (\href{http://qt.gitorious.org/qt-creator}{\tt http\+://qt.\+gitorious.\+org/qt-\/creator})
+
+\subsubsection*{Compiling Q\+Ssh}
+
+Prerequisites\+:
+\begin{DoxyItemize}
+\item Qt 4.\+7.\+4 (May work with older versions)
+\item On Windows\+: Min\+GW 4.\+4 or later, Visual Studio 2008 or later
+\item On Mac\+: X\+Code 2.\+5 or later, compiling on 10.\+4 requires setting the environment variable Q\+T\+C\+\_\+\+T\+I\+G\+E\+R\+\_\+\+C\+O\+M\+P\+AT before running qmake
+\end{DoxyItemize}
+
+Steps\+: 
+\begin{DoxyCode}
+mkdir $BUILD\_DIRECTORY
+cd $BUILD\_DIRECTORY
+qmake $SOURCE\_DIRECTORY/qssh.pro
+make (or mingw32-make or nmake depending on your platform)
+\end{DoxyCode}
+
+
+\subsubsection*{Examples}
+
+Directory examples/\+Secure\+Uploader/ contains an example on how to upload a file using S\+F\+TP 

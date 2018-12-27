@@ -1,0 +1,15 @@
+digraph "configure.main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node21 [label="configure.main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node21 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="configure.process_command_line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceconfigure.html#a625fe15115495a28f82cad8a1f183d06"];
+  Node21 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="configure.create_template_vars",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceconfigure.html#a5cddf00194b4c5daec9d4fd96c4d1fc7"];
+  Node23 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="configure.normalize\l_source_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceconfigure.html#a60af6ffd74cbefc9b8125d9e0d94f003"];
+  Node23 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="configure.read_textfile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceconfigure.html#a759d51888d7834a21084790c8e819889"];
+}

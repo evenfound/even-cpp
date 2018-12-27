@@ -1,0 +1,61 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o}{}\section{Botan\+:\+:T\+LS\+:\+:Handshake\+\_\+\+IO Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_handshake___i_o}\index{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+IO@{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+IO}}
+
+
+{\ttfamily \#include $<$tls\+\_\+handshake\+\_\+io.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Handshake\+\_\+\+IO\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o_a9ae3a09cf8928062cc1f847b474bf88e}\label{class_botan_1_1_t_l_s_1_1_handshake___i_o_a9ae3a09cf8928062cc1f847b474bf88e}} 
+virtual Protocol\+\_\+\+Version {\bfseries initial\+\_\+record\+\_\+version} () const =0
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o_a0a69d60379fe1159fd0adee8a00217ed}\label{class_botan_1_1_t_l_s_1_1_handshake___i_o_a0a69d60379fe1159fd0adee8a00217ed}} 
+virtual std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries send} (const Handshake\+\_\+\+Message \&msg)=0
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o_a2c5e39be0c330fb729f122c75d0d5d1f}\label{class_botan_1_1_t_l_s_1_1_handshake___i_o_a2c5e39be0c330fb729f122c75d0d5d1f}} 
+virtual bool {\bfseries timeout\+\_\+check} ()=0
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o_a797a98cb57551d5194e12dad7f2bc3ff}\label{class_botan_1_1_t_l_s_1_1_handshake___i_o_a797a98cb57551d5194e12dad7f2bc3ff}} 
+virtual std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries format} (const std\+::vector$<$ uint8\+\_\+t $>$ \&handshake\+\_\+msg, Handshake\+\_\+\+Type handshake\+\_\+type) const =0
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o_a348ecce2ce6aa46c5e5c2d3790a25ef4}\label{class_botan_1_1_t_l_s_1_1_handshake___i_o_a348ecce2ce6aa46c5e5c2d3790a25ef4}} 
+virtual void {\bfseries add\+\_\+record} (const std\+::vector$<$ uint8\+\_\+t $>$ \&record, Record\+\_\+\+Type type, uint64\+\_\+t sequence\+\_\+number)=0
+\item 
+virtual std\+::pair$<$ Handshake\+\_\+\+Type, std\+::vector$<$ uint8\+\_\+t $>$ $>$ \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o_a3ebecdb050cb44831453dda8498373a8}{get\+\_\+next\+\_\+record}} (bool expecting\+\_\+ccs)=0
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o_a0c65724131c7d977f6863c9e13f8402b}\label{class_botan_1_1_t_l_s_1_1_handshake___i_o_a0c65724131c7d977f6863c9e13f8402b}} 
+{\bfseries Handshake\+\_\+\+IO} (const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o_af7e1c690f71715b7551993d7367d5b33}\label{class_botan_1_1_t_l_s_1_1_handshake___i_o_af7e1c690f71715b7551993d7367d5b33}} 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_handshake___i_o}{Handshake\+\_\+\+IO}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handshake IO Interface 
+
+Definition at line 29 of file tls\+\_\+handshake\+\_\+io.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_handshake___i_o_a3ebecdb050cb44831453dda8498373a8}\label{class_botan_1_1_t_l_s_1_1_handshake___i_o_a3ebecdb050cb44831453dda8498373a8}} 
+\index{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+IO@{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+IO}!get\+\_\+next\+\_\+record@{get\+\_\+next\+\_\+record}}
+\index{get\+\_\+next\+\_\+record@{get\+\_\+next\+\_\+record}!Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+IO@{Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+IO}}
+\subsubsection{\texorpdfstring{get\+\_\+next\+\_\+record()}{get\_next\_record()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$Handshake\+\_\+\+Type, std\+::vector$<$uint8\+\_\+t$>$ $>$ Botan\+::\+T\+L\+S\+::\+Handshake\+\_\+\+I\+O\+::get\+\_\+next\+\_\+record (\begin{DoxyParamCaption}\item[{bool}]{expecting\+\_\+ccs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns (H\+A\+N\+D\+S\+H\+A\+K\+E\+\_\+\+N\+O\+NE, std\+::vector$<$$>$()) if no message currently available 
+
+Implemented in \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_datagram___handshake___i_o_a70dbb457e3ba6ae8d43522c4e6db3c3b}{Botan\+::\+T\+L\+S\+::\+Datagram\+\_\+\+Handshake\+\_\+\+IO}}, and \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_stream___handshake___i_o_aa198869863aa2d98b8a6c89e01e73d4d}{Botan\+::\+T\+L\+S\+::\+Stream\+\_\+\+Handshake\+\_\+\+IO}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+handshake\+\_\+io.\+h\end{DoxyCompactItemize}

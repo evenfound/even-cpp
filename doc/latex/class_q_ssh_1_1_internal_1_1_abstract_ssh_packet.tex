@@ -1,0 +1,106 @@
+\hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Abstract\+Ssh\+Packet Class Reference}
+\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet}\index{Q\+Ssh\+::\+Internal\+::\+Abstract\+Ssh\+Packet@{Q\+Ssh\+::\+Internal\+::\+Abstract\+Ssh\+Packet}}
+
+
+Inheritance diagram for Q\+Ssh\+:\+:Internal\+:\+:Abstract\+Ssh\+Packet\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a28515b86958d86ce7b802162f56f1459}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a28515b86958d86ce7b802162f56f1459}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_af796f5286507c0f83419b7c81f5bbe2b}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_af796f5286507c0f83419b7c81f5bbe2b}} 
+bool {\bfseries is\+Complete} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a5a7ffa3b2bfb49e631027429eac4e6f4}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a5a7ffa3b2bfb49e631027429eac4e6f4}} 
+Ssh\+Packet\+Type {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a0820171969c5207b251dacfe5809eaec}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a0820171969c5207b251dacfe5809eaec}} 
+void {\bfseries print\+Raw\+Bytes} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a3e6a87309e6a9adbf71234058fa4341b}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a3e6a87309e6a9adbf71234058fa4341b}} 
+const Q\+Byte\+Array \& {\bfseries raw\+Data} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_ac8e6b31985439cdd23918f37d28df89a}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_ac8e6b31985439cdd23918f37d28df89a}} 
+Q\+Byte\+Array {\bfseries pay\+Load} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_aaefc211894bf8da89bd6b261fc56351e}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_aaefc211894bf8da89bd6b261fc56351e}} 
+static Q\+Byte\+Array {\bfseries encode\+String} (const Q\+Byte\+Array \&string)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a2f33042253511f3adfb033cf7c11ef65}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a2f33042253511f3adfb033cf7c11ef65}} 
+static Q\+Byte\+Array {\bfseries encode\+Mp\+Int} (const Botan\+::\+Big\+Int \&number)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_aee949d9c4d9b5448f97d850ac930b689}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_aee949d9c4d9b5448f97d850ac930b689}} 
+{\footnotesize template$<$typename T $>$ }\\static Q\+Byte\+Array {\bfseries encode\+Int} (T value)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a7acf02ddb60eb38b2ae64a9dd80aff1b}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a7acf02ddb60eb38b2ae64a9dd80aff1b}} 
+static void {\bfseries set\+Length\+Field} (Q\+Byte\+Array \&data)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a0aa198711113c9f24a2163921407076d}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a0aa198711113c9f24a2163921407076d}} 
+virtual quint32 {\bfseries cipher\+Block\+Size} () const =0
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a5f6dbae0379a565136d51fdfd7a453db}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a5f6dbae0379a565136d51fdfd7a453db}} 
+virtual quint32 {\bfseries mac\+Length} () const =0
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_af1e6c8a2f63564fac4c801cc0d35f1a1}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_af1e6c8a2f63564fac4c801cc0d35f1a1}} 
+virtual void {\bfseries calculate\+Length} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a6a8c63e0cc6a450e9c8e109041602233}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a6a8c63e0cc6a450e9c8e109041602233}} 
+quint32 {\bfseries length} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a525beb264d63b2adafeb6f4037eb7420}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a525beb264d63b2adafeb6f4037eb7420}} 
+int {\bfseries padding\+Length} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a424e9ce5d6713e4a55abcaec68d5f63f}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a424e9ce5d6713e4a55abcaec68d5f63f}} 
+quint32 {\bfseries min\+Packet\+Size} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a6e3262a330d909742e801ed85aa1e226}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a6e3262a330d909742e801ed85aa1e226}} 
+quint32 {\bfseries current\+Data\+Size} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_ad12e242e00de732c40e47a101be308c8}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_ad12e242e00de732c40e47a101be308c8}} 
+Q\+Byte\+Array {\bfseries generate\+Mac} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_abstract_crypto_facility}{Ssh\+Abstract\+Crypto\+Facility}} \&crypt, quint32 seq\+Nr) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a7858227e5e931ea94e69a4b9876e2328}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a7858227e5e931ea94e69a4b9876e2328}} 
+Q\+Byte\+Array {\bfseries m\+\_\+data}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a0736ecffc550c00098c0007c33301137}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a0736ecffc550c00098c0007c33301137}} 
+quint32 {\bfseries m\+\_\+length}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a1cbab3cc3b4efad3ad203066de017ef8}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a1cbab3cc3b4efad3ad203066de017ef8}} 
+static const quint32 {\bfseries Padding\+Length\+Offset} = 4
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_acba2969b09b8756723c3679568c5ae57}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_acba2969b09b8756723c3679568c5ae57}} 
+static const quint32 {\bfseries Payload\+Offset} = Padding\+Length\+Offset + 1
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a5d24dc506b1ed3c5ea45dca2739f1e26}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a5d24dc506b1ed3c5ea45dca2739f1e26}} 
+static const quint32 {\bfseries Type\+Offset} = Payload\+Offset
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a7dbdf1f0b8f522c26c0237188db24b75}\label{class_q_ssh_1_1_internal_1_1_abstract_ssh_packet_a7dbdf1f0b8f522c26c0237188db24b75}} 
+static const quint32 {\bfseries Min\+Padding\+Length} = 4
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 93 of file sshpacket\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sshpacket\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sshpacket.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,97 @@
+\hypertarget{group__mdb__cursor}{}\section{Cursor Flags}
+\label{group__mdb__cursor}\index{Cursor Flags@{Cursor Flags}}
+Collaboration diagram for Cursor Flags\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__mdb__cursor_ga491771b32c4fdf08d7b66ffb20bbbb32}{C\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__mdb__cursor_gaf3433775e39a8f78e6bdcac026b9354d}{C\+\_\+\+E\+OF}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__mdb__cursor_ga31bd2871aca0e24b95e6d50b916f7b5b}{C\+\_\+\+S\+UB}}~0x04
+\item 
+\#define \mbox{\hyperlink{group__mdb__cursor_ga186b8075211f880eab30e33434e511a9}{C\+\_\+\+D\+EL}}~0x08
+\item 
+\#define \mbox{\hyperlink{group__mdb__cursor_ga79af151f605df221750d7cecbbf498eb}{C\+\_\+\+U\+N\+T\+R\+A\+CK}}~0x40
+\item 
+\#define \mbox{\hyperlink{group__mdb__cursor_gac4a428761468f9013ada1d11512e5539}{C\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}~\mbox{\hyperlink{group__mdb__txn_ga03da701716875fe8b56118a63a4106ab}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}
+\item 
+\#define \mbox{\hyperlink{group__mdb__cursor_gad7756b1e12235bcfbe30931f11e78030}{C\+\_\+\+O\+R\+I\+G\+\_\+\+R\+D\+O\+N\+LY}}~\mbox{\hyperlink{group__mdb__txn_ga8b592ca7b3e70786c23510f9f56a0ae2}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cursor state flags. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__mdb__cursor_ga186b8075211f880eab30e33434e511a9}\label{group__mdb__cursor_ga186b8075211f880eab30e33434e511a9}} 
+\index{Cursor Flags@{Cursor Flags}!C\+\_\+\+D\+EL@{C\+\_\+\+D\+EL}}
+\index{C\+\_\+\+D\+EL@{C\+\_\+\+D\+EL}!Cursor Flags@{Cursor Flags}}
+\subsubsection{\texorpdfstring{C\+\_\+\+D\+EL}{C\_DEL}}
+{\footnotesize\ttfamily \#define C\+\_\+\+D\+EL~0x08}
+
+last op was a cursor\+\_\+del 
+
+Definition at line 1316 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__cursor_gaf3433775e39a8f78e6bdcac026b9354d}\label{group__mdb__cursor_gaf3433775e39a8f78e6bdcac026b9354d}} 
+\index{Cursor Flags@{Cursor Flags}!C\+\_\+\+E\+OF@{C\+\_\+\+E\+OF}}
+\index{C\+\_\+\+E\+OF@{C\+\_\+\+E\+OF}!Cursor Flags@{Cursor Flags}}
+\subsubsection{\texorpdfstring{C\+\_\+\+E\+OF}{C\_EOF}}
+{\footnotesize\ttfamily \#define C\+\_\+\+E\+OF~0x02}
+
+No more data 
+
+Definition at line 1314 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__cursor_ga491771b32c4fdf08d7b66ffb20bbbb32}\label{group__mdb__cursor_ga491771b32c4fdf08d7b66ffb20bbbb32}} 
+\index{Cursor Flags@{Cursor Flags}!C\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{C\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}}
+\index{C\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{C\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}!Cursor Flags@{Cursor Flags}}
+\subsubsection{\texorpdfstring{C\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}{C\_INITIALIZED}}
+{\footnotesize\ttfamily \#define C\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED~0x01}
+
+cursor has been initialized and is valid 
+
+Definition at line 1313 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__cursor_gad7756b1e12235bcfbe30931f11e78030}\label{group__mdb__cursor_gad7756b1e12235bcfbe30931f11e78030}} 
+\index{Cursor Flags@{Cursor Flags}!C\+\_\+\+O\+R\+I\+G\+\_\+\+R\+D\+O\+N\+LY@{C\+\_\+\+O\+R\+I\+G\+\_\+\+R\+D\+O\+N\+LY}}
+\index{C\+\_\+\+O\+R\+I\+G\+\_\+\+R\+D\+O\+N\+LY@{C\+\_\+\+O\+R\+I\+G\+\_\+\+R\+D\+O\+N\+LY}!Cursor Flags@{Cursor Flags}}
+\subsubsection{\texorpdfstring{C\+\_\+\+O\+R\+I\+G\+\_\+\+R\+D\+O\+N\+LY}{C\_ORIG\_RDONLY}}
+{\footnotesize\ttfamily \#define C\+\_\+\+O\+R\+I\+G\+\_\+\+R\+D\+O\+N\+LY~\mbox{\hyperlink{group__mdb__txn_ga8b592ca7b3e70786c23510f9f56a0ae2}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+R\+D\+O\+N\+LY}}}
+
+Read-\/only cursor into the txn\textquotesingle{}s original snapshot in the map. Set for read-\/only txns, and in mdb\+\_\+page\+\_\+alloc() for \mbox{\hyperlink{group__internal_ga3aa4d92eab9197f1d5f24403b1cfaaca}{F\+R\+E\+E\+\_\+\+D\+BI}} when \mbox{\hyperlink{group__compat_ga103b045068a1d21bf2347a7342f8f486}{M\+D\+B\+\_\+\+D\+E\+V\+EL}} \& 2. Only implements code which is necessary for this. 
+
+Definition at line 1323 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__cursor_ga31bd2871aca0e24b95e6d50b916f7b5b}\label{group__mdb__cursor_ga31bd2871aca0e24b95e6d50b916f7b5b}} 
+\index{Cursor Flags@{Cursor Flags}!C\+\_\+\+S\+UB@{C\+\_\+\+S\+UB}}
+\index{C\+\_\+\+S\+UB@{C\+\_\+\+S\+UB}!Cursor Flags@{Cursor Flags}}
+\subsubsection{\texorpdfstring{C\+\_\+\+S\+UB}{C\_SUB}}
+{\footnotesize\ttfamily \#define C\+\_\+\+S\+UB~0x04}
+
+Cursor is a sub-\/cursor 
+
+Definition at line 1315 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__cursor_ga79af151f605df221750d7cecbbf498eb}\label{group__mdb__cursor_ga79af151f605df221750d7cecbbf498eb}} 
+\index{Cursor Flags@{Cursor Flags}!C\+\_\+\+U\+N\+T\+R\+A\+CK@{C\+\_\+\+U\+N\+T\+R\+A\+CK}}
+\index{C\+\_\+\+U\+N\+T\+R\+A\+CK@{C\+\_\+\+U\+N\+T\+R\+A\+CK}!Cursor Flags@{Cursor Flags}}
+\subsubsection{\texorpdfstring{C\+\_\+\+U\+N\+T\+R\+A\+CK}{C\_UNTRACK}}
+{\footnotesize\ttfamily \#define C\+\_\+\+U\+N\+T\+R\+A\+CK~0x40}
+
+Un-\/track cursor when closing 
+
+Definition at line 1317 of file mdb.\+c.
+
+\mbox{\Hypertarget{group__mdb__cursor_gac4a428761468f9013ada1d11512e5539}\label{group__mdb__cursor_gac4a428761468f9013ada1d11512e5539}} 
+\index{Cursor Flags@{Cursor Flags}!C\+\_\+\+W\+R\+I\+T\+E\+M\+AP@{C\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}
+\index{C\+\_\+\+W\+R\+I\+T\+E\+M\+AP@{C\+\_\+\+W\+R\+I\+T\+E\+M\+AP}!Cursor Flags@{Cursor Flags}}
+\subsubsection{\texorpdfstring{C\+\_\+\+W\+R\+I\+T\+E\+M\+AP}{C\_WRITEMAP}}
+{\footnotesize\ttfamily \#define C\+\_\+\+W\+R\+I\+T\+E\+M\+AP~\mbox{\hyperlink{group__mdb__txn_ga03da701716875fe8b56118a63a4106ab}{M\+D\+B\+\_\+\+T\+X\+N\+\_\+\+W\+R\+I\+T\+E\+M\+AP}}}
+
+Copy of txn flag 
+
+Definition at line 1318 of file mdb.\+c.
+

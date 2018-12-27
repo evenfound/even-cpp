@@ -1,0 +1,215 @@
+\hypertarget{namespacebotan2}{}\section{botan2 Namespace Reference}
+\label{namespacebotan2}\index{botan2@{botan2}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_botan_exception}{Botan\+Exception}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_format_preserving_encryption_f_e1}{Format\+Preserving\+Encryption\+F\+E1}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_hash_function}{Hash\+Function}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_h_o_t_p}{H\+O\+TP}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_m_p_i}{M\+PI}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_msg_auth_code}{Msg\+Auth\+Code}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_p_k_decrypt}{P\+K\+Decrypt}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_p_k_encrypt}{P\+K\+Encrypt}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_p_k_key_agreement}{P\+K\+Key\+Agreement}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_p_k_sign}{P\+K\+Sign}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_p_k_verify}{P\+K\+Verify}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_private_key}{Private\+Key}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_public_key}{Public\+Key}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_random_number_generator}{Random\+Number\+Generator}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_symmetric_cipher}{Symmetric\+Cipher}}
+\item 
+class \mbox{\hyperlink{classbotan2_1_1_x509_cert}{X509\+Cert}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacebotan2_ace6a00cda1723b250f6952e85b4c0cb5}\label{namespacebotan2_ace6a00cda1723b250f6952e85b4c0cb5}} 
+def {\bfseries load\+\_\+botan\+\_\+dll} (expected\+\_\+version)
+\item 
+\mbox{\Hypertarget{namespacebotan2_ab0d08045bbc24e2d1437c9f81644598e}\label{namespacebotan2_ab0d08045bbc24e2d1437c9f81644598e}} 
+def {\bfseries errcheck\+\_\+for} (fn\+\_\+name)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a990672a328076776faa8754863d3226b}\label{namespacebotan2_a990672a328076776faa8754863d3226b}} 
+def {\bfseries version\+\_\+major} ()
+\item 
+\mbox{\Hypertarget{namespacebotan2_ae41ae6a6384300b070ed328c3eea3d86}\label{namespacebotan2_ae41ae6a6384300b070ed328c3eea3d86}} 
+def {\bfseries version\+\_\+minor} ()
+\item 
+\mbox{\Hypertarget{namespacebotan2_a5925726f12772187d9c647bf42045818}\label{namespacebotan2_a5925726f12772187d9c647bf42045818}} 
+def {\bfseries version\+\_\+patch} ()
+\item 
+\mbox{\Hypertarget{namespacebotan2_a39de77f838adc7c42488a5ec103c9afd}\label{namespacebotan2_a39de77f838adc7c42488a5ec103c9afd}} 
+def {\bfseries version\+\_\+string} ()
+\item 
+def \mbox{\hyperlink{namespacebotan2_a4007ddd20b2518c25853bc23fcd57b2c}{bcrypt}} (passwd, rng\+\_\+obj, work\+\_\+factor=10)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a8d3665799ddefeb41af2b7306cdf3ff5}\label{namespacebotan2_a8d3665799ddefeb41af2b7306cdf3ff5}} 
+def {\bfseries check\+\_\+bcrypt} (passwd, passwd\+\_\+hash)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a5fa159dd99655cf6caf82c103193af29}\label{namespacebotan2_a5fa159dd99655cf6caf82c103193af29}} 
+def {\bfseries pbkdf} (algo, password, out\+\_\+len, iterations=10000, salt=None)
+\item 
+\mbox{\Hypertarget{namespacebotan2_af3c0ad9946f21e1950864d2b0f7ee099}\label{namespacebotan2_af3c0ad9946f21e1950864d2b0f7ee099}} 
+def {\bfseries pbkdf\+\_\+timed} (algo, password, out\+\_\+len, ms\+\_\+to\+\_\+run=300, salt=None)
+\item 
+\mbox{\Hypertarget{namespacebotan2_af63c31aaebc337dc0a13042ce4a97519}\label{namespacebotan2_af63c31aaebc337dc0a13042ce4a97519}} 
+def {\bfseries scrypt} (out\+\_\+len, password, salt, n=1024, r=8, p=8)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a2bdda3c82a8c1648359b0e6c462407b2}\label{namespacebotan2_a2bdda3c82a8c1648359b0e6c462407b2}} 
+def {\bfseries kdf} (algo, secret, out\+\_\+len, salt, label)
+\item 
+\mbox{\Hypertarget{namespacebotan2_ac38d8328052f046bd090e31cc40ae7c8}\label{namespacebotan2_ac38d8328052f046bd090e31cc40ae7c8}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, obj=c\+\_\+void\+\_\+p(0))
+\item 
+\mbox{\Hypertarget{namespacebotan2_a50841957183ed3d44d0f630782cb6eaf}\label{namespacebotan2_a50841957183ed3d44d0f630782cb6eaf}} 
+def {\bfseries \+\_\+\+\_\+del\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_afffc6de3f085c6ad6720263ff7b9346d}\label{namespacebotan2_afffc6de3f085c6ad6720263ff7b9346d}} 
+def {\bfseries handle\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a6b045b8c034b41855e0f56b7c57bf053}\label{namespacebotan2_a6b045b8c034b41855e0f56b7c57bf053}} 
+def {\bfseries estimated\+\_\+strength} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a31810ea673649bb5990e46bad50602a2}\label{namespacebotan2_a31810ea673649bb5990e46bad50602a2}} 
+def {\bfseries algo\+\_\+name} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_adb34d9c637276932542829ffc468dcaf}\label{namespacebotan2_adb34d9c637276932542829ffc468dcaf}} 
+def {\bfseries encoding} (self, pem=False)
+\item 
+\mbox{\Hypertarget{namespacebotan2_afdf0ad2445f7f37c5b6d31ee42333b73}\label{namespacebotan2_afdf0ad2445f7f37c5b6d31ee42333b73}} 
+def {\bfseries fingerprint} (self, hash\+\_\+algorithm=\textquotesingle{}S\+HA-\/256\textquotesingle{})
+\item 
+\mbox{\Hypertarget{namespacebotan2_aab6fe89f0def8ffc80291fba31c6d688}\label{namespacebotan2_aab6fe89f0def8ffc80291fba31c6d688}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, key, padding)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a7b4d806e68aa7eddb5e77add19190159}\label{namespacebotan2_a7b4d806e68aa7eddb5e77add19190159}} 
+def {\bfseries update} (self, msg)
+\item 
+\mbox{\Hypertarget{namespacebotan2_ab590cadbbb9273afa5dee1d0da0cda02}\label{namespacebotan2_ab590cadbbb9273afa5dee1d0da0cda02}} 
+def {\bfseries finish} (self, rng\+\_\+obj)
+\item 
+\mbox{\Hypertarget{namespacebotan2_ab12f88af8a66ec6ef77ca91215c596ac}\label{namespacebotan2_ab12f88af8a66ec6ef77ca91215c596ac}} 
+def {\bfseries mceies\+\_\+encrypt} (mce, rng\+\_\+obj, aead, pt, ad)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a3eace7996663871c95ac63179920f8e6}\label{namespacebotan2_a3eace7996663871c95ac63179920f8e6}} 
+def {\bfseries mceies\+\_\+decrypt} (mce, aead, ct, ad)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a85dc1eefc40bf00b79c81c021fe75f8a}\label{namespacebotan2_a85dc1eefc40bf00b79c81c021fe75f8a}} 
+def {\bfseries time\+\_\+starts} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_ada4c27ad339d38a01021b3dce10e4172}\label{namespacebotan2_ada4c27ad339d38a01021b3dce10e4172}} 
+def {\bfseries time\+\_\+expires} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a748a4dd3f986228a35d58836b26b6f37}\label{namespacebotan2_a748a4dd3f986228a35d58836b26b6f37}} 
+def {\bfseries to\+\_\+string} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a32585b90839179c1ebea1dd4a9d487ea}\label{namespacebotan2_a32585b90839179c1ebea1dd4a9d487ea}} 
+def {\bfseries serial\+\_\+number} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a7636a59afdcd70d57ffc5f51613a32c9}\label{namespacebotan2_a7636a59afdcd70d57ffc5f51613a32c9}} 
+def {\bfseries authority\+\_\+key\+\_\+id} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a97c82d9d6f544906e5d5b43ba6049a8d}\label{namespacebotan2_a97c82d9d6f544906e5d5b43ba6049a8d}} 
+def {\bfseries subject\+\_\+key\+\_\+id} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_ad0c88c34f26051fdbdba16cb57851999}\label{namespacebotan2_ad0c88c34f26051fdbdba16cb57851999}} 
+def {\bfseries subject\+\_\+public\+\_\+key\+\_\+bits} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a83d1ff2dcc532e9277624652d4eed911}\label{namespacebotan2_a83d1ff2dcc532e9277624652d4eed911}} 
+def {\bfseries subject\+\_\+public\+\_\+key} (self)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a3fc15ad2e3a1f13980d130925fd83901}\label{namespacebotan2_a3fc15ad2e3a1f13980d130925fd83901}} 
+def {\bfseries subject\+\_\+dn} (self, key, index)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacebotan2_a7c49966812d8deabee5d9e406b043b09}\label{namespacebotan2_a7c49966812d8deabee5d9e406b043b09}} 
+int {\bfseries B\+O\+T\+A\+N\+\_\+\+F\+F\+I\+\_\+\+V\+E\+R\+S\+I\+ON} = 20180713
+\item 
+\mbox{\Hypertarget{namespacebotan2_abccc43f4081c7549b40d9f332eac7893}\label{namespacebotan2_abccc43f4081c7549b40d9f332eac7893}} 
+def {\bfseries botan} = load\+\_\+botan\+\_\+dll(B\+O\+T\+A\+N\+\_\+\+F\+F\+I\+\_\+\+V\+E\+R\+S\+I\+ON)
+\item 
+\mbox{\Hypertarget{namespacebotan2_a72cbfa076b0bf1db0dc7f0e16196f7ed}\label{namespacebotan2_a72cbfa076b0bf1db0dc7f0e16196f7ed}} 
+{\bfseries cipher} = \mbox{\hyperlink{classbotan2_1_1_symmetric_cipher}{Symmetric\+Cipher}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_a1722d51263c8701089d78289a580e00e}\label{namespacebotan2_a1722d51263c8701089d78289a580e00e}} 
+{\bfseries rng} = \mbox{\hyperlink{classbotan2_1_1_random_number_generator}{Random\+Number\+Generator}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_a428480355f413caf515a94c984418ff4}\label{namespacebotan2_a428480355f413caf515a94c984418ff4}} 
+{\bfseries hash\+\_\+function} = \mbox{\hyperlink{classbotan2_1_1_hash_function}{Hash\+Function}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_abcba0b2891bb8c404031baf8d30ec255}\label{namespacebotan2_abcba0b2891bb8c404031baf8d30ec255}} 
+{\bfseries message\+\_\+authentication\+\_\+code} = \mbox{\hyperlink{classbotan2_1_1_msg_auth_code}{Msg\+Auth\+Code}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_ae746ffbe085a5b8a994f1c58793b11f3}\label{namespacebotan2_ae746ffbe085a5b8a994f1c58793b11f3}} 
+{\bfseries x509\+\_\+cert} = \mbox{\hyperlink{classbotan2_1_1_x509_cert}{X509\+Cert}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_a7d795702715788182e241d4248c80669}\label{namespacebotan2_a7d795702715788182e241d4248c80669}} 
+{\bfseries public\+\_\+key} = \mbox{\hyperlink{classbotan2_1_1_public_key}{Public\+Key}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_aa5140f030b460af8fc0377174c51dc1b}\label{namespacebotan2_aa5140f030b460af8fc0377174c51dc1b}} 
+{\bfseries private\+\_\+key} = \mbox{\hyperlink{classbotan2_1_1_private_key}{Private\+Key}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_acd657c07bcf11b000f999dc8cee4f42e}\label{namespacebotan2_acd657c07bcf11b000f999dc8cee4f42e}} 
+{\bfseries pk\+\_\+op\+\_\+encrypt} = \mbox{\hyperlink{classbotan2_1_1_p_k_encrypt}{P\+K\+Encrypt}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_a20df69628b42e5555b9ee1357c919ceb}\label{namespacebotan2_a20df69628b42e5555b9ee1357c919ceb}} 
+{\bfseries pk\+\_\+op\+\_\+decrypt} = \mbox{\hyperlink{classbotan2_1_1_p_k_decrypt}{P\+K\+Decrypt}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_abeb04222756e488978235baf8cd5e68a}\label{namespacebotan2_abeb04222756e488978235baf8cd5e68a}} 
+{\bfseries pk\+\_\+op\+\_\+sign} = \mbox{\hyperlink{classbotan2_1_1_p_k_sign}{P\+K\+Sign}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_a881e48eb0731e562df3de156890696ca}\label{namespacebotan2_a881e48eb0731e562df3de156890696ca}} 
+{\bfseries pk\+\_\+op\+\_\+verify} = \mbox{\hyperlink{classbotan2_1_1_p_k_verify}{P\+K\+Verify}}
+\item 
+\mbox{\Hypertarget{namespacebotan2_a5eb304bd97ad7d72045c1a06a52ae824}\label{namespacebotan2_a5eb304bd97ad7d72045c1a06a52ae824}} 
+{\bfseries pk\+\_\+op\+\_\+key\+\_\+agreement} = \mbox{\hyperlink{classbotan2_1_1_p_k_key_agreement}{P\+K\+Key\+Agreement}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Python wrapper of the botan crypto library
+https://botan.randombit.net
+
+(C) 2015,2017,2018 Jack Lloyd
+(C) 2015 Uri  Blumenthal (extensions and patches)
+
+Botan is released under the Simplified BSD License (see license.txt)
+
+This module uses the ctypes module and is usable by programs running
+under at least CPython 2.7, CPython 3.x, and PyPy
+
+It uses botan's ffi module, which exposes a C API. This version of the
+module requires FFI API version 20180713, which was introduced in
+Botan 2.8\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacebotan2_a4007ddd20b2518c25853bc23fcd57b2c}\label{namespacebotan2_a4007ddd20b2518c25853bc23fcd57b2c}} 
+\index{botan2@{botan2}!bcrypt@{bcrypt}}
+\index{bcrypt@{bcrypt}!botan2@{botan2}}
+\subsubsection{\texorpdfstring{bcrypt()}{bcrypt()}}
+{\footnotesize\ttfamily def botan2.\+bcrypt (\begin{DoxyParamCaption}\item[{}]{passwd,  }\item[{}]{rng\+\_\+obj,  }\item[{}]{work\+\_\+factor = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Bcrypt password hashing
+\end{DoxyVerb}
+ 
+
+Definition at line 793 of file botan2.\+py.
+

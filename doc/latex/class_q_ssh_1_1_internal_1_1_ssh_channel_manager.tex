@@ -1,0 +1,91 @@
+\hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager}{}\section{Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Channel\+Manager Class Reference}
+\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager}\index{Q\+Ssh\+::\+Internal\+::\+Ssh\+Channel\+Manager@{Q\+Ssh\+::\+Internal\+::\+Ssh\+Channel\+Manager}}
+
+
+Inheritance diagram for Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Channel\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Ssh\+:\+:Internal\+:\+:Ssh\+Channel\+Manager\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a0ff04266f0cc559744a028c08ac6cfa9}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a0ff04266f0cc559744a028c08ac6cfa9}} 
+enum {\bfseries Close\+All\+Mode} \{ {\bfseries Close\+All\+Regular}, 
+{\bfseries Close\+All\+And\+Reset}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_ad39fff3dfa8fef43b3e30e94edc924a8}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_ad39fff3dfa8fef43b3e30e94edc924a8}} 
+void {\bfseries timeout} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a61c65f4120f6006017a7dbad5681492d}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a61c65f4120f6006017a7dbad5681492d}} 
+{\bfseries Ssh\+Channel\+Manager} (\mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_send_facility}{Ssh\+Send\+Facility}} \&send\+Facility, Q\+Object $\ast$parent)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a7018116d06b1eb167266705030a8d007}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a7018116d06b1eb167266705030a8d007}} 
+Q\+Shared\+Pointer$<$ \mbox{\hyperlink{class_q_ssh_1_1_ssh_remote_process}{Ssh\+Remote\+Process}} $>$ {\bfseries create\+Remote\+Process} (const Q\+Byte\+Array \&command)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a4c1f65f75ea945c5408213435c8096d0}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a4c1f65f75ea945c5408213435c8096d0}} 
+Q\+Shared\+Pointer$<$ \mbox{\hyperlink{class_q_ssh_1_1_ssh_remote_process}{Ssh\+Remote\+Process}} $>$ {\bfseries create\+Remote\+Shell} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a0d1059115bc0d5995c0a674503433b87}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a0d1059115bc0d5995c0a674503433b87}} 
+Q\+Shared\+Pointer$<$ \mbox{\hyperlink{class_q_ssh_1_1_sftp_channel}{Sftp\+Channel}} $>$ {\bfseries create\+Sftp\+Channel} ()
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a064b2c49733742e5fc99a43a2a2603ca}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a064b2c49733742e5fc99a43a2a2603ca}} 
+int {\bfseries channel\+Count} () const
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a50cdc1a51e41f40b53ae8ce0127304da}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a50cdc1a51e41f40b53ae8ce0127304da}} 
+int {\bfseries close\+All\+Channels} (Close\+All\+Mode mode)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a80f692fe9cc0f033c1bb0fd53fd338c1}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a80f692fe9cc0f033c1bb0fd53fd338c1}} 
+void {\bfseries handle\+Channel\+Request} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_afa9790f8c30a64b4ee9434cf28687463}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_afa9790f8c30a64b4ee9434cf28687463}} 
+void {\bfseries handle\+Channel\+Open} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a19e0fc9a70ba3f852e1a0b551f85974a}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a19e0fc9a70ba3f852e1a0b551f85974a}} 
+void {\bfseries handle\+Channel\+Open\+Failure} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_af417b39acad2d311ff4d82a0922e784a}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_af417b39acad2d311ff4d82a0922e784a}} 
+void {\bfseries handle\+Channel\+Open\+Confirmation} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a132fa9aea356fe40510f7ed0f554c4a6}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a132fa9aea356fe40510f7ed0f554c4a6}} 
+void {\bfseries handle\+Channel\+Success} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a5c95f6a78b9795b92093854800a7939a}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a5c95f6a78b9795b92093854800a7939a}} 
+void {\bfseries handle\+Channel\+Failure} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a70127a277c5a21eaa8db9b5bf2b17d57}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a70127a277c5a21eaa8db9b5bf2b17d57}} 
+void {\bfseries handle\+Channel\+Window\+Adjust} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_afc77f657f5ee8812eef76d001e24c418}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_afc77f657f5ee8812eef76d001e24c418}} 
+void {\bfseries handle\+Channel\+Data} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a5f3009941cade1f06818e2458990e4b4}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a5f3009941cade1f06818e2458990e4b4}} 
+void {\bfseries handle\+Channel\+Extended\+Data} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_afa371f013e9969bf84aab5bf59b7b7f5}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_afa371f013e9969bf84aab5bf59b7b7f5}} 
+void {\bfseries handle\+Channel\+Eof} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\item 
+\mbox{\Hypertarget{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a9498923058c2bb234ff20c3469d1583f}\label{class_q_ssh_1_1_internal_1_1_ssh_channel_manager_a9498923058c2bb234ff20c3469d1583f}} 
+void {\bfseries handle\+Channel\+Close} (const \mbox{\hyperlink{class_q_ssh_1_1_internal_1_1_ssh_incoming_packet}{Ssh\+Incoming\+Packet}} \&packet)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 49 of file sshchannelmanager\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/qssh/src/libs/ssh/sshchannelmanager\+\_\+p.\+h\item 
+prerequisites/qssh/src/libs/ssh/sshchannelmanager.\+cpp\end{DoxyCompactItemize}

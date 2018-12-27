@@ -1,0 +1,49 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers}{}\section{Botan\+:\+:T\+LS\+:\+:Datagram\+\_\+\+Sequence\+\_\+\+Numbers Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers}\index{Botan\+::\+T\+L\+S\+::\+Datagram\+\_\+\+Sequence\+\_\+\+Numbers@{Botan\+::\+T\+L\+S\+::\+Datagram\+\_\+\+Sequence\+\_\+\+Numbers}}
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Datagram\+\_\+\+Sequence\+\_\+\+Numbers\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:T\+LS\+:\+:Datagram\+\_\+\+Sequence\+\_\+\+Numbers\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a6d894ac2824b106152b2a1dd21d362e2}\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a6d894ac2824b106152b2a1dd21d362e2}} 
+void {\bfseries new\+\_\+read\+\_\+cipher\+\_\+state} () override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_ad8da0bcd7ca649ecb55d2fbb7beec9a1}\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_ad8da0bcd7ca649ecb55d2fbb7beec9a1}} 
+void {\bfseries new\+\_\+write\+\_\+cipher\+\_\+state} () override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a3e99076cbb523d862b84c09d235f682d}\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a3e99076cbb523d862b84c09d235f682d}} 
+uint16\+\_\+t {\bfseries current\+\_\+read\+\_\+epoch} () const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a755a6576198e9cb16518fa620165fc9c}\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a755a6576198e9cb16518fa620165fc9c}} 
+uint16\+\_\+t {\bfseries current\+\_\+write\+\_\+epoch} () const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a8464ea1edd8f0042275ef5a85712b202}\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a8464ea1edd8f0042275ef5a85712b202}} 
+uint64\+\_\+t {\bfseries next\+\_\+write\+\_\+sequence} (uint16\+\_\+t epoch) override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a36ee36c112c48aa75930002343e881d3}\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a36ee36c112c48aa75930002343e881d3}} 
+uint64\+\_\+t {\bfseries next\+\_\+read\+\_\+sequence} () override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_aa1a007e3ccdeb690a7701c74c97664a6}\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_aa1a007e3ccdeb690a7701c74c97664a6}} 
+bool {\bfseries already\+\_\+seen} (uint64\+\_\+t sequence) const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a3de490cdefde8a3098948344fb3e8c88}\label{class_botan_1_1_t_l_s_1_1_datagram___sequence___numbers_a3de490cdefde8a3098948344fb3e8c88}} 
+void {\bfseries read\+\_\+accept} (uint64\+\_\+t sequence) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 57 of file tls\+\_\+seq\+\_\+numbers.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+seq\+\_\+numbers.\+h\end{DoxyCompactItemize}

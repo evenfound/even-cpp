@@ -1,0 +1,393 @@
+\hypertarget{classstefanfrings_1_1_http_request}{}\section{stefanfrings\+:\+:Http\+Request Class Reference}
+\label{classstefanfrings_1_1_http_request}\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+
+
+{\ttfamily \#include $<$httprequest.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classstefanfrings_1_1_http_request_a45b0d7b99dbbb1b2c62afd8f51887995}{Request\+Status}} \{ \newline
+{\bfseries wait\+For\+Request}, 
+{\bfseries wait\+For\+Header}, 
+{\bfseries wait\+For\+Body}, 
+{\bfseries complete}, 
+\newline
+{\bfseries abort}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_http_request_a948b749ba225459dad7514630897cca8}{Http\+Request}} (Q\+Settings $\ast$settings)
+\item 
+virtual \mbox{\hyperlink{classstefanfrings_1_1_http_request_adfc7ae561e6ba03d21890ee1855df72b}{$\sim$\+Http\+Request}} ()
+\item 
+void \mbox{\hyperlink{classstefanfrings_1_1_http_request_a87e7ca425b96545e062454f66e346caf}{read\+From\+Socket}} (Q\+Tcp\+Socket $\ast$socket)
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_http_request_a45b0d7b99dbbb1b2c62afd8f51887995}{Request\+Status}} \mbox{\hyperlink{classstefanfrings_1_1_http_request_a1e53a0d5566400eae00e47b819a26c30}{get\+Status}} () const
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{classstefanfrings_1_1_http_request_ae3c92d9c0f5279c6d5b1bfdb47aaa5e0}{get\+Method}} () const
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{classstefanfrings_1_1_http_request_a9e9f87cc06cdeae2ca03c97d576c217b}{get\+Path}} () const
+\item 
+const Q\+Byte\+Array \& \mbox{\hyperlink{classstefanfrings_1_1_http_request_ad472e46e79a5bfc676f5670f3655009b}{get\+Raw\+Path}} () const
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{classstefanfrings_1_1_http_request_adfd550673eb70a6477b0c04eb2023bad}{get\+Version}} () const
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{classstefanfrings_1_1_http_request_a490265254cf6ad8b642205aef325d4da}{get\+Header}} (const Q\+Byte\+Array \&name) const
+\item 
+Q\+List$<$ Q\+Byte\+Array $>$ \mbox{\hyperlink{classstefanfrings_1_1_http_request_ac59f41dbdc579cc1827427d6e77303af}{get\+Headers}} (const Q\+Byte\+Array \&name) const
+\item 
+Q\+Multi\+Map$<$ Q\+Byte\+Array, Q\+Byte\+Array $>$ \mbox{\hyperlink{classstefanfrings_1_1_http_request_a14a7f04cbe53ffc8d54c9b21fbd55704}{get\+Header\+Map}} () const
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{classstefanfrings_1_1_http_request_ad231eca50e6a0cba6b01c5093542447e}{get\+Parameter}} (const Q\+Byte\+Array \&name) const
+\item 
+Q\+List$<$ Q\+Byte\+Array $>$ \mbox{\hyperlink{classstefanfrings_1_1_http_request_a0711a770d0547a75f5cfb68c9ac1a760}{get\+Parameters}} (const Q\+Byte\+Array \&name) const
+\item 
+Q\+Multi\+Map$<$ Q\+Byte\+Array, Q\+Byte\+Array $>$ \mbox{\hyperlink{classstefanfrings_1_1_http_request_a25c8d4b0ff23dc67bbbbb2b03bba3a5b}{get\+Parameter\+Map}} () const
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{classstefanfrings_1_1_http_request_abbeb8becf2709b15be3096bcd3b85181}{get\+Body}} () const
+\item 
+Q\+Temporary\+File $\ast$ \mbox{\hyperlink{classstefanfrings_1_1_http_request_ac85c0bf7867adf6145902c51d4bc4701}{get\+Uploaded\+File}} (const Q\+Byte\+Array field\+Name) const
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{classstefanfrings_1_1_http_request_a8df857484bbe4cc8362ddd49a604f649}{get\+Cookie}} (const Q\+Byte\+Array \&name) const
+\item 
+Q\+Map$<$ Q\+Byte\+Array, Q\+Byte\+Array $>$ \& \mbox{\hyperlink{classstefanfrings_1_1_http_request_a408b9110494fbeb1d5e1140bc2a49112}{get\+Cookie\+Map}} ()
+\item 
+Q\+Host\+Address \mbox{\hyperlink{classstefanfrings_1_1_http_request_ae7cd8408c9b67f1632784468ace2d560}{get\+Peer\+Address}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+Byte\+Array \mbox{\hyperlink{classstefanfrings_1_1_http_request_a83651afcea6094403fb7cdb2d947cd0c}{url\+Decode}} (const Q\+Byte\+Array source)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a1a26a85c96397fab7acf42d9c3fc61df}\label{classstefanfrings_1_1_http_request_a1a26a85c96397fab7acf42d9c3fc61df}} 
+class {\bfseries Http\+Session\+Store}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This object represents a single H\+T\+TP request. It reads the request from a T\+CP socket and provides getters for the individual parts of the request. 
+
+The follwing config settings are required\+: {\ttfamily 
+\begin{DoxyPre}
+maxRequestSize=16000
+maxMultiPartSize=1000000
+\end{DoxyPre}
+} 
+
+Max\+Request\+Size is the maximum size of a H\+T\+TP request. In case of multipart/form-\/data requests (also known as file-\/upload), the maximum size of the body must not exceed max\+Multi\+Part\+Size. The body is always a little larger than the file itself. 
+
+Definition at line 38 of file httprequest.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a45b0d7b99dbbb1b2c62afd8f51887995}\label{classstefanfrings_1_1_http_request_a45b0d7b99dbbb1b2c62afd8f51887995}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!Request\+Status@{Request\+Status}}
+\index{Request\+Status@{Request\+Status}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{Request\+Status}{RequestStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classstefanfrings_1_1_http_request_a45b0d7b99dbbb1b2c62afd8f51887995}{stefanfrings\+::\+Http\+Request\+::\+Request\+Status}}}
+
+Values for \mbox{\hyperlink{classstefanfrings_1_1_http_request_a1e53a0d5566400eae00e47b819a26c30}{get\+Status()}} 
+
+Definition at line 45 of file httprequest.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a948b749ba225459dad7514630897cca8}\label{classstefanfrings_1_1_http_request_a948b749ba225459dad7514630897cca8}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!Http\+Request@{Http\+Request}}
+\index{Http\+Request@{Http\+Request}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{Http\+Request()}{HttpRequest()}}
+{\footnotesize\ttfamily Http\+Request\+::\+Http\+Request (\begin{DoxyParamCaption}\item[{Q\+Settings $\ast$}]{settings }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Configuration settings \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file httprequest.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_adfc7ae561e6ba03d21890ee1855df72b}\label{classstefanfrings_1_1_http_request_adfc7ae561e6ba03d21890ee1855df72b}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!````~Http\+Request@{$\sim$\+Http\+Request}}
+\index{````~Http\+Request@{$\sim$\+Http\+Request}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{$\sim$\+Http\+Request()}{~HttpRequest()}}
+{\footnotesize\ttfamily Http\+Request\+::$\sim$\+Http\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. 
+
+Definition at line 523 of file httprequest.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_abbeb8becf2709b15be3096bcd3b85181}\label{classstefanfrings_1_1_http_request_abbeb8becf2709b15be3096bcd3b85181}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Body@{get\+Body}}
+\index{get\+Body@{get\+Body}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Body()}{getBody()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Http\+Request\+::get\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the H\+T\+TP request body. 
+
+Definition at line 380 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a8df857484bbe4cc8362ddd49a604f649}\label{classstefanfrings_1_1_http_request_a8df857484bbe4cc8362ddd49a604f649}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Cookie@{get\+Cookie}}
+\index{get\+Cookie@{get\+Cookie}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Cookie()}{getCookie()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Http\+Request\+::get\+Cookie (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{name }\end{DoxyParamCaption}) const}
+
+Get the value of a cookie. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the cookie \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 549 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a408b9110494fbeb1d5e1140bc2a49112}\label{classstefanfrings_1_1_http_request_a408b9110494fbeb1d5e1140bc2a49112}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Cookie\+Map@{get\+Cookie\+Map}}
+\index{get\+Cookie\+Map@{get\+Cookie\+Map}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Cookie\+Map()}{getCookieMap()}}
+{\footnotesize\ttfamily Q\+Map$<$ Q\+Byte\+Array, Q\+Byte\+Array $>$ \& Http\+Request\+::get\+Cookie\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get all cookies.
+
+Get the map of cookies 
+
+Definition at line 555 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a490265254cf6ad8b642205aef325d4da}\label{classstefanfrings_1_1_http_request_a490265254cf6ad8b642205aef325d4da}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Header()}{getHeader()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Http\+Request\+::get\+Header (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{name }\end{DoxyParamCaption}) const}
+
+Get the value of a H\+T\+TP request header. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the header, not case-\/senitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the header occurs multiple times, only the last one is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 350 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a14a7f04cbe53ffc8d54c9b21fbd55704}\label{classstefanfrings_1_1_http_request_a14a7f04cbe53ffc8d54c9b21fbd55704}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Header\+Map@{get\+Header\+Map}}
+\index{get\+Header\+Map@{get\+Header\+Map}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Header\+Map()}{getHeaderMap()}}
+{\footnotesize\ttfamily Q\+Multi\+Map$<$ Q\+Byte\+Array, Q\+Byte\+Array $>$ Http\+Request\+::get\+Header\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get all H\+T\+TP request headers. Note that the header names are returned in lower-\/case. 
+
+Definition at line 360 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_ac59f41dbdc579cc1827427d6e77303af}\label{classstefanfrings_1_1_http_request_ac59f41dbdc579cc1827427d6e77303af}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Headers@{get\+Headers}}
+\index{get\+Headers@{get\+Headers}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Headers()}{getHeaders()}}
+{\footnotesize\ttfamily Q\+List$<$ Q\+Byte\+Array $>$ Http\+Request\+::get\+Headers (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{name }\end{DoxyParamCaption}) const}
+
+Get the values of a H\+T\+TP request header. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the header, not case-\/senitive. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 355 of file httprequest.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_ae3c92d9c0f5279c6d5b1bfdb47aaa5e0}\label{classstefanfrings_1_1_http_request_ae3c92d9c0f5279c6d5b1bfdb47aaa5e0}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Method@{get\+Method}}
+\index{get\+Method@{get\+Method}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Method()}{getMethod()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Http\+Request\+::get\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the method of the H\+T\+TP request (e.\+g. \char`\"{}\+G\+E\+T\char`\"{}) 
+
+Definition at line 326 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_ad231eca50e6a0cba6b01c5093542447e}\label{classstefanfrings_1_1_http_request_ad231eca50e6a0cba6b01c5093542447e}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Parameter@{get\+Parameter}}
+\index{get\+Parameter@{get\+Parameter}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Parameter()}{getParameter()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Http\+Request\+::get\+Parameter (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{name }\end{DoxyParamCaption}) const}
+
+Get the value of a H\+T\+TP request parameter. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the parameter, case-\/sensitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the parameter occurs multiple times, only the last one is returned. 
+\end{DoxyReturn}
+
+
+Definition at line 365 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a25c8d4b0ff23dc67bbbbb2b03bba3a5b}\label{classstefanfrings_1_1_http_request_a25c8d4b0ff23dc67bbbbb2b03bba3a5b}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Parameter\+Map@{get\+Parameter\+Map}}
+\index{get\+Parameter\+Map@{get\+Parameter\+Map}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Parameter\+Map()}{getParameterMap()}}
+{\footnotesize\ttfamily Q\+Multi\+Map$<$ Q\+Byte\+Array, Q\+Byte\+Array $>$ Http\+Request\+::get\+Parameter\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get all H\+T\+TP request parameters. 
+
+Definition at line 375 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a0711a770d0547a75f5cfb68c9ac1a760}\label{classstefanfrings_1_1_http_request_a0711a770d0547a75f5cfb68c9ac1a760}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Parameters@{get\+Parameters}}
+\index{get\+Parameters@{get\+Parameters}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Parameters()}{getParameters()}}
+{\footnotesize\ttfamily Q\+List$<$ Q\+Byte\+Array $>$ Http\+Request\+::get\+Parameters (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{name }\end{DoxyParamCaption}) const}
+
+Get the values of a H\+T\+TP request parameter. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the parameter, case-\/sensitive. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 370 of file httprequest.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a9e9f87cc06cdeae2ca03c97d576c217b}\label{classstefanfrings_1_1_http_request_a9e9f87cc06cdeae2ca03c97d576c217b}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Path@{get\+Path}}
+\index{get\+Path@{get\+Path}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Path()}{getPath()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Http\+Request\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the decoded path of the H\+T\+PP request (e.\+g. \char`\"{}/index.\+html\char`\"{}) 
+
+Definition at line 332 of file httprequest.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_ae7cd8408c9b67f1632784468ace2d560}\label{classstefanfrings_1_1_http_request_ae7cd8408c9b67f1632784468ace2d560}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Peer\+Address@{get\+Peer\+Address}}
+\index{get\+Peer\+Address@{get\+Peer\+Address}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Peer\+Address()}{getPeerAddress()}}
+{\footnotesize\ttfamily Q\+Host\+Address Http\+Request\+::get\+Peer\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the address of the connected client. Note that multiple clients may have the same IP address, if they share an internet connection (which is very common). 
+
+Definition at line 565 of file httprequest.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_ad472e46e79a5bfc676f5670f3655009b}\label{classstefanfrings_1_1_http_request_ad472e46e79a5bfc676f5670f3655009b}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Raw\+Path@{get\+Raw\+Path}}
+\index{get\+Raw\+Path@{get\+Raw\+Path}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Raw\+Path()}{getRawPath()}}
+{\footnotesize\ttfamily const Q\+Byte\+Array \& Http\+Request\+::get\+Raw\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the raw path of the H\+T\+TP request (e.\+g. \char`\"{}/file\%20with\%20spaces.\+html\char`\"{}) 
+
+Definition at line 338 of file httprequest.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a1e53a0d5566400eae00e47b819a26c30}\label{classstefanfrings_1_1_http_request_a1e53a0d5566400eae00e47b819a26c30}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Status()}{getStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstefanfrings_1_1_http_request_a45b0d7b99dbbb1b2c62afd8f51887995}{Http\+Request\+::\+Request\+Status}} Http\+Request\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the status of this reqeust. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classstefanfrings_1_1_http_request_a45b0d7b99dbbb1b2c62afd8f51887995}{Request\+Status}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 320 of file httprequest.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_ac85c0bf7867adf6145902c51d4bc4701}\label{classstefanfrings_1_1_http_request_ac85c0bf7867adf6145902c51d4bc4701}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Uploaded\+File@{get\+Uploaded\+File}}
+\index{get\+Uploaded\+File@{get\+Uploaded\+File}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Uploaded\+File()}{getUploadedFile()}}
+{\footnotesize\ttfamily Q\+Temporary\+File $\ast$ Http\+Request\+::get\+Uploaded\+File (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array}]{field\+Name }\end{DoxyParamCaption}) const}
+
+Get an uploaded file. The file is already open. It will be closed and deleted by the destructor of this \mbox{\hyperlink{classstefanfrings_1_1_http_request}{Http\+Request}} object (after processing the request). 
+
+For uploaded files, the method \mbox{\hyperlink{classstefanfrings_1_1_http_request_a0711a770d0547a75f5cfb68c9ac1a760}{get\+Parameters()}} returns the original file\+Name as provided by the calling web browser. 
+
+Definition at line 544 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_adfd550673eb70a6477b0c04eb2023bad}\label{classstefanfrings_1_1_http_request_adfd550673eb70a6477b0c04eb2023bad}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!get\+Version@{get\+Version}}
+\index{get\+Version@{get\+Version}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{get\+Version()}{getVersion()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Http\+Request\+::get\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the version of the H\+T\+PP request (e.\+g. \char`\"{}\+H\+T\+T\+P/1.\+1\char`\"{}) 
+
+Definition at line 344 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a87e7ca425b96545e062454f66e346caf}\label{classstefanfrings_1_1_http_request_a87e7ca425b96545e062454f66e346caf}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!read\+From\+Socket@{read\+From\+Socket}}
+\index{read\+From\+Socket@{read\+From\+Socket}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{read\+From\+Socket()}{readFromSocket()}}
+{\footnotesize\ttfamily void Http\+Request\+::read\+From\+Socket (\begin{DoxyParamCaption}\item[{Q\+Tcp\+Socket $\ast$}]{socket }\end{DoxyParamCaption})}
+
+Read the H\+T\+TP request from a socket. This method is called by the connection handler repeatedly until the status is Request\+Status\+::complete or Request\+Status\+::abort. 
+\begin{DoxyParams}{Parameters}
+{\em socket} & Source of the data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 290 of file httprequest.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_request_a83651afcea6094403fb7cdb2d947cd0c}\label{classstefanfrings_1_1_http_request_a83651afcea6094403fb7cdb2d947cd0c}} 
+\index{stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}!url\+Decode@{url\+Decode}}
+\index{url\+Decode@{url\+Decode}!stefanfrings\+::\+Http\+Request@{stefanfrings\+::\+Http\+Request}}
+\subsubsection{\texorpdfstring{url\+Decode()}{urlDecode()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Http\+Request\+::url\+Decode (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Decode an U\+RL parameter. E.\+g. replace \char`\"{}\%23\char`\"{} by \textquotesingle{}\#\textquotesingle{} and replace \textquotesingle{}+\textquotesingle{} by \textquotesingle{} \textquotesingle{}. 
+\begin{DoxyParams}{Parameters}
+{\em source} & The url encoded strings \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Q\+Url\+::to\+Percent\+Encoding for the reverse direction 
+\end{DoxySeeAlso}
+
+
+Definition at line 385 of file httprequest.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/httpserver/\mbox{\hyperlink{httprequest_8h}{httprequest.\+h}}\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/httpserver/\mbox{\hyperlink{httprequest_8cpp}{httprequest.\+cpp}}\end{DoxyCompactItemize}

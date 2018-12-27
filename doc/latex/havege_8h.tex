@@ -1,0 +1,98 @@
+\hypertarget{havege_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/havege.h File Reference}
+\label{havege_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/havege.\+h@{prerequisites/c-\/libp2p/include/mbedtls/havege.\+h}}
+
+
+H\+A\+V\+E\+GE\+: H\+Ardware Volatile Entropy Gathering and Expansion.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for havege.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__havege__state}{mbedtls\+\_\+havege\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em H\+A\+V\+E\+GE state structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{havege_8h_aed0b2c3b0f101838f30c6d81b524a093}\label{havege_8h_aed0b2c3b0f101838f30c6d81b524a093}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+H\+A\+V\+E\+G\+E\+\_\+\+C\+O\+L\+L\+E\+C\+T\+\_\+\+S\+I\+ZE}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{havege_8h_a37279eecf09d4665ae18ad98c7c77f72}{mbedtls\+\_\+havege\+\_\+init}} (\mbox{\hyperlink{structmbedtls__havege__state}{mbedtls\+\_\+havege\+\_\+state}} $\ast$hs)
+\begin{DoxyCompactList}\small\item\em H\+A\+V\+E\+GE initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{havege_8h_a061c764314cfb0c50ad6815596a99b50}{mbedtls\+\_\+havege\+\_\+free}} (\mbox{\hyperlink{structmbedtls__havege__state}{mbedtls\+\_\+havege\+\_\+state}} $\ast$hs)
+\begin{DoxyCompactList}\small\item\em Clear H\+A\+V\+E\+GE state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{havege_8h_ad18325f837c7482ee7de5bc31e9b57aa}{mbedtls\+\_\+havege\+\_\+random}} (void $\ast$p\+\_\+rng, unsigned char $\ast$output, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em H\+A\+V\+E\+GE rand function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+H\+A\+V\+E\+GE\+: H\+Ardware Volatile Entropy Gathering and Expansion. 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{havege_8h_a061c764314cfb0c50ad6815596a99b50}\label{havege_8h_a061c764314cfb0c50ad6815596a99b50}} 
+\index{havege.\+h@{havege.\+h}!mbedtls\+\_\+havege\+\_\+free@{mbedtls\+\_\+havege\+\_\+free}}
+\index{mbedtls\+\_\+havege\+\_\+free@{mbedtls\+\_\+havege\+\_\+free}!havege.\+h@{havege.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+havege\+\_\+free()}{mbedtls\_havege\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+havege\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__havege__state}{mbedtls\+\_\+havege\+\_\+state}} $\ast$}]{hs }\end{DoxyParamCaption})}
+
+
+
+Clear H\+A\+V\+E\+GE state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hs} & H\+A\+V\+E\+GE state to be cleared \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{havege_8h_a37279eecf09d4665ae18ad98c7c77f72}\label{havege_8h_a37279eecf09d4665ae18ad98c7c77f72}} 
+\index{havege.\+h@{havege.\+h}!mbedtls\+\_\+havege\+\_\+init@{mbedtls\+\_\+havege\+\_\+init}}
+\index{mbedtls\+\_\+havege\+\_\+init@{mbedtls\+\_\+havege\+\_\+init}!havege.\+h@{havege.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+havege\+\_\+init()}{mbedtls\_havege\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+havege\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__havege__state}{mbedtls\+\_\+havege\+\_\+state}} $\ast$}]{hs }\end{DoxyParamCaption})}
+
+
+
+H\+A\+V\+E\+GE initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hs} & H\+A\+V\+E\+GE state to be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{havege_8h_ad18325f837c7482ee7de5bc31e9b57aa}\label{havege_8h_ad18325f837c7482ee7de5bc31e9b57aa}} 
+\index{havege.\+h@{havege.\+h}!mbedtls\+\_\+havege\+\_\+random@{mbedtls\+\_\+havege\+\_\+random}}
+\index{mbedtls\+\_\+havege\+\_\+random@{mbedtls\+\_\+havege\+\_\+random}!havege.\+h@{havege.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+havege\+\_\+random()}{mbedtls\_havege\_random()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+havege\+\_\+random (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+\_\+rng,  }\item[{unsigned char $\ast$}]{output,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+H\+A\+V\+E\+GE rand function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+rng} & A H\+A\+V\+E\+GE state \\
+\hline
+{\em output} & Buffer to fill \\
+\hline
+{\em len} & Length of buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}

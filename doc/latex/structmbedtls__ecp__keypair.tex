@@ -1,0 +1,76 @@
+\hypertarget{structmbedtls__ecp__keypair}{}\section{mbedtls\+\_\+ecp\+\_\+keypair Struct Reference}
+\label{structmbedtls__ecp__keypair}\index{mbedtls\+\_\+ecp\+\_\+keypair@{mbedtls\+\_\+ecp\+\_\+keypair}}
+
+
+E\+CP key pair structure.  
+
+
+
+
+{\ttfamily \#include $<$ecp.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+ecp\+\_\+keypair\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__group}{mbedtls\+\_\+ecp\+\_\+group}} \mbox{\hyperlink{structmbedtls__ecp__keypair_ab5b77c1c63b7396b6869545b121d8828}{grp}}
+\item 
+\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} \mbox{\hyperlink{structmbedtls__ecp__keypair_aa3d38ffe795a2953fb283644845087d6}{d}}
+\item 
+\mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} \mbox{\hyperlink{structmbedtls__ecp__keypair_a30cb41708701bb9ed9bdba5972a2ccea}{Q}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+CP key pair structure. 
+
+A generic key pair that could be used for E\+C\+D\+SA, fixed E\+C\+DH, etc.
+
+\begin{DoxyNote}{Note}
+Members purposefully in the same order as struc mbedtls\+\_\+ecdsa\+\_\+context. 
+\end{DoxyNote}
+
+
+Definition at line 156 of file ecp.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__ecp__keypair_aa3d38ffe795a2953fb283644845087d6}\label{structmbedtls__ecp__keypair_aa3d38ffe795a2953fb283644845087d6}} 
+\index{mbedtls\+\_\+ecp\+\_\+keypair@{mbedtls\+\_\+ecp\+\_\+keypair}!d@{d}}
+\index{d@{d}!mbedtls\+\_\+ecp\+\_\+keypair@{mbedtls\+\_\+ecp\+\_\+keypair}}
+\subsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} mbedtls\+\_\+ecp\+\_\+keypair\+::d}
+
+our secret value 
+
+Definition at line 159 of file ecp.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecp__keypair_ab5b77c1c63b7396b6869545b121d8828}\label{structmbedtls__ecp__keypair_ab5b77c1c63b7396b6869545b121d8828}} 
+\index{mbedtls\+\_\+ecp\+\_\+keypair@{mbedtls\+\_\+ecp\+\_\+keypair}!grp@{grp}}
+\index{grp@{grp}!mbedtls\+\_\+ecp\+\_\+keypair@{mbedtls\+\_\+ecp\+\_\+keypair}}
+\subsubsection{\texorpdfstring{grp}{grp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__group}{mbedtls\+\_\+ecp\+\_\+group}} mbedtls\+\_\+ecp\+\_\+keypair\+::grp}
+
+Elliptic curve and base point 
+
+Definition at line 158 of file ecp.\+h.
+
+\mbox{\Hypertarget{structmbedtls__ecp__keypair_a30cb41708701bb9ed9bdba5972a2ccea}\label{structmbedtls__ecp__keypair_a30cb41708701bb9ed9bdba5972a2ccea}} 
+\index{mbedtls\+\_\+ecp\+\_\+keypair@{mbedtls\+\_\+ecp\+\_\+keypair}!Q@{Q}}
+\index{Q@{Q}!mbedtls\+\_\+ecp\+\_\+keypair@{mbedtls\+\_\+ecp\+\_\+keypair}}
+\subsubsection{\texorpdfstring{Q}{Q}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmbedtls__ecp__point}{mbedtls\+\_\+ecp\+\_\+point}} mbedtls\+\_\+ecp\+\_\+keypair\+::Q}
+
+our public value 
+
+Definition at line 160 of file ecp.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/\mbox{\hyperlink{ecp_8h}{ecp.\+h}}\end{DoxyCompactItemize}

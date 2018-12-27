@@ -1,0 +1,62 @@
+\hypertarget{class_botan___tests_1_1_fixed___output___r_n_g}{}\section{Botan\+\_\+\+Tests\+:\+:Fixed\+\_\+\+Output\+\_\+\+R\+NG Class Reference}
+\label{class_botan___tests_1_1_fixed___output___r_n_g}\index{Botan\+\_\+\+Tests\+::\+Fixed\+\_\+\+Output\+\_\+\+R\+NG@{Botan\+\_\+\+Tests\+::\+Fixed\+\_\+\+Output\+\_\+\+R\+NG}}
+
+
+{\ttfamily \#include $<$test\+\_\+rng.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+\_\+\+Tests\+:\+:Fixed\+\_\+\+Output\+\_\+\+R\+NG\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+\_\+\+Tests\+:\+:Fixed\+\_\+\+Output\+\_\+\+R\+NG\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_a12b55f05356655d410d88755390ec18b}\label{class_botan___tests_1_1_fixed___output___r_n_g_a12b55f05356655d410d88755390ec18b}} 
+bool {\bfseries is\+\_\+seeded} () const override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_a18d3bf359bd47279c4f98655cf534085}\label{class_botan___tests_1_1_fixed___output___r_n_g_a18d3bf359bd47279c4f98655cf534085}} 
+bool {\bfseries accepts\+\_\+input} () const override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_a4dae9a4d5e6f24a4c4e550b00d82c52e}\label{class_botan___tests_1_1_fixed___output___r_n_g_a4dae9a4d5e6f24a4c4e550b00d82c52e}} 
+size\+\_\+t {\bfseries reseed} (Botan\+::\+Entropy\+\_\+\+Sources \&, size\+\_\+t, std\+::chrono\+::milliseconds) override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_a0449fad0acc9db2a06d4e1cfdd0b2a8a}\label{class_botan___tests_1_1_fixed___output___r_n_g_a0449fad0acc9db2a06d4e1cfdd0b2a8a}} 
+void {\bfseries randomize} (uint8\+\_\+t out\mbox{[}$\,$\mbox{]}, size\+\_\+t len) override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_a5b823332f1e51d474ac66bb5373098ca}\label{class_botan___tests_1_1_fixed___output___r_n_g_a5b823332f1e51d474ac66bb5373098ca}} 
+void {\bfseries add\+\_\+entropy} (const uint8\+\_\+t b\mbox{[}$\,$\mbox{]}, size\+\_\+t s) override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_a2d968d244bdfb6d0ac12aebe7167450d}\label{class_botan___tests_1_1_fixed___output___r_n_g_a2d968d244bdfb6d0ac12aebe7167450d}} 
+std\+::string {\bfseries name} () const override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_a681de2c0f75483a001c63bb4fa722bf1}\label{class_botan___tests_1_1_fixed___output___r_n_g_a681de2c0f75483a001c63bb4fa722bf1}} 
+void {\bfseries clear} () noexcept override
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_a25bab27ecb28f73806cf2bde5a77865c}\label{class_botan___tests_1_1_fixed___output___r_n_g_a25bab27ecb28f73806cf2bde5a77865c}} 
+{\bfseries Fixed\+\_\+\+Output\+\_\+\+R\+NG} (const std\+::vector$<$ uint8\+\_\+t $>$ \&in)
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_afc1fd1f397db736a3894ac4f485be3b4}\label{class_botan___tests_1_1_fixed___output___r_n_g_afc1fd1f397db736a3894ac4f485be3b4}} 
+{\bfseries Fixed\+\_\+\+Output\+\_\+\+R\+NG} (const std\+::string \&in\+\_\+str)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan___tests_1_1_fixed___output___r_n_g_adb7302fa4d80f15591053e5d7e8aed54}\label{class_botan___tests_1_1_fixed___output___r_n_g_adb7302fa4d80f15591053e5d7e8aed54}} 
+uint8\+\_\+t {\bfseries random} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+NG that outputs only a given set of fixed bytes, throws otherwise. Useful for test vectors with fixed nonces, where the algorithm consumes only the fixed nonce. 
+
+Definition at line 24 of file test\+\_\+rng.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/tests/test\+\_\+rng.\+h\end{DoxyCompactItemize}

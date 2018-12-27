@@ -1,0 +1,131 @@
+\hypertarget{classstefanfrings_1_1_http_connection_handler}{}\section{stefanfrings\+:\+:Http\+Connection\+Handler Class Reference}
+\label{classstefanfrings_1_1_http_connection_handler}\index{stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}}
+
+
+{\ttfamily \#include $<$httpconnectionhandler.\+h$>$}
+
+
+
+Inheritance diagram for stefanfrings\+:\+:Http\+Connection\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for stefanfrings\+:\+:Http\+Connection\+Handler\+:
+% FIG 1
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classstefanfrings_1_1_http_connection_handler_ae431cfa4b0a866867f93436517200f1d}{handle\+Connection}} (\mbox{\hyperlink{httpconnectionhandler_8h_a9884f8c3364a6510f6118c5336fd0458}{t\+Socket\+Descriptor}} socket\+Descriptor)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstefanfrings_1_1_http_connection_handler_a7d60c4a8f80eaeab436adba6e8d529d3}{Http\+Connection\+Handler}} (Q\+Settings $\ast$settings, \mbox{\hyperlink{classstefanfrings_1_1_http_request_handler}{Http\+Request\+Handler}} $\ast$request\+Handler, Q\+Ssl\+Configuration $\ast$ssl\+Configuration=N\+U\+LL)
+\item 
+virtual \mbox{\hyperlink{classstefanfrings_1_1_http_connection_handler_af47c5713b7e92040d59803bd7c99c9f5}{$\sim$\+Http\+Connection\+Handler}} ()
+\item 
+bool \mbox{\hyperlink{classstefanfrings_1_1_http_connection_handler_a3ce005483981faf3b1b5cabf1fe6c24f}{is\+Busy}} ()
+\item 
+void \mbox{\hyperlink{classstefanfrings_1_1_http_connection_handler_a7fcffe53d6604499fbb298bbc0fa453e}{set\+Busy}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Alias for Q\+Ssl\+Configuration if Open\+S\+SL is not supported ~\newline
+The connection handler accepts incoming connections and dispatches incoming requests to to a request mapper. Since H\+T\+TP clients can send multiple requests before waiting for the response, the incoming requests are queued and processed one after the other. 
+
+Example for the required configuration settings\+: {\ttfamily 
+\begin{DoxyPre}
+readTimeout=60000
+maxRequestSize=16000
+maxMultiPartSize=1000000
+\end{DoxyPre}
+} 
+
+The read\+Timeout value defines the maximum time to wait for a complete H\+T\+TP request. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classstefanfrings_1_1_http_request}{Http\+Request}} for description of config settings max\+Request\+Size and max\+Multi\+Part\+Size. 
+\end{DoxySeeAlso}
+
+
+Definition at line 50 of file httpconnectionhandler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_http_connection_handler_a7d60c4a8f80eaeab436adba6e8d529d3}\label{classstefanfrings_1_1_http_connection_handler_a7d60c4a8f80eaeab436adba6e8d529d3}} 
+\index{stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}!Http\+Connection\+Handler@{Http\+Connection\+Handler}}
+\index{Http\+Connection\+Handler@{Http\+Connection\+Handler}!stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}}
+\subsubsection{\texorpdfstring{Http\+Connection\+Handler()}{HttpConnectionHandler()}}
+{\footnotesize\ttfamily Http\+Connection\+Handler\+::\+Http\+Connection\+Handler (\begin{DoxyParamCaption}\item[{Q\+Settings $\ast$}]{settings,  }\item[{\mbox{\hyperlink{classstefanfrings_1_1_http_request_handler}{Http\+Request\+Handler}} $\ast$}]{request\+Handler,  }\item[{Q\+Ssl\+Configuration $\ast$}]{ssl\+Configuration = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Configuration settings of the H\+T\+TP webserver \\
+\hline
+{\em request\+Handler} & Handler that will process each incoming H\+T\+TP request \\
+\hline
+{\em ssl\+Configuration} & S\+SL (H\+T\+T\+PS) will be used if not N\+U\+LL \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file httpconnectionhandler.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_connection_handler_af47c5713b7e92040d59803bd7c99c9f5}\label{classstefanfrings_1_1_http_connection_handler_af47c5713b7e92040d59803bd7c99c9f5}} 
+\index{stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}!````~Http\+Connection\+Handler@{$\sim$\+Http\+Connection\+Handler}}
+\index{````~Http\+Connection\+Handler@{$\sim$\+Http\+Connection\+Handler}!stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Http\+Connection\+Handler()}{~HttpConnectionHandler()}}
+{\footnotesize\ttfamily Http\+Connection\+Handler\+::$\sim$\+Http\+Connection\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+Definition at line 39 of file httpconnectionhandler.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstefanfrings_1_1_http_connection_handler_ae431cfa4b0a866867f93436517200f1d}\label{classstefanfrings_1_1_http_connection_handler_ae431cfa4b0a866867f93436517200f1d}} 
+\index{stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}!handle\+Connection@{handle\+Connection}}
+\index{handle\+Connection@{handle\+Connection}!stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}}
+\subsubsection{\texorpdfstring{handle\+Connection}{handleConnection}}
+{\footnotesize\ttfamily void Http\+Connection\+Handler\+::handle\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{httpconnectionhandler_8h_a9884f8c3364a6510f6118c5336fd0458}{t\+Socket\+Descriptor}}}]{socket\+Descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Received from from the listener, when the handler shall start processing a new connection. 
+\begin{DoxyParams}{Parameters}
+{\em socket\+Descriptor} & references the accepted connection. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 115 of file httpconnectionhandler.\+cpp.
+
+\mbox{\Hypertarget{classstefanfrings_1_1_http_connection_handler_a3ce005483981faf3b1b5cabf1fe6c24f}\label{classstefanfrings_1_1_http_connection_handler_a3ce005483981faf3b1b5cabf1fe6c24f}} 
+\index{stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}!is\+Busy@{is\+Busy}}
+\index{is\+Busy@{is\+Busy}!stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}}
+\subsubsection{\texorpdfstring{is\+Busy()}{isBusy()}}
+{\footnotesize\ttfamily bool Http\+Connection\+Handler\+::is\+Busy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns true, if this handler is in use. 
+
+Definition at line 186 of file httpconnectionhandler.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classstefanfrings_1_1_http_connection_handler_a7fcffe53d6604499fbb298bbc0fa453e}\label{classstefanfrings_1_1_http_connection_handler_a7fcffe53d6604499fbb298bbc0fa453e}} 
+\index{stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}!set\+Busy@{set\+Busy}}
+\index{set\+Busy@{set\+Busy}!stefanfrings\+::\+Http\+Connection\+Handler@{stefanfrings\+::\+Http\+Connection\+Handler}}
+\subsubsection{\texorpdfstring{set\+Busy()}{setBusy()}}
+{\footnotesize\ttfamily void Http\+Connection\+Handler\+::set\+Busy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Mark this handler as busy 
+
+Definition at line 191 of file httpconnectionhandler.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/httpserver/\mbox{\hyperlink{httpconnectionhandler_8h}{httpconnectionhandler.\+h}}\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/httpserver/\mbox{\hyperlink{httpconnectionhandler_8cpp}{httpconnectionhandler.\+cpp}}\end{DoxyCompactItemize}

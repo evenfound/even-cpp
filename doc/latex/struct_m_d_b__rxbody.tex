@@ -1,0 +1,63 @@
+\hypertarget{struct_m_d_b__rxbody}{}\section{M\+D\+B\+\_\+rxbody Struct Reference}
+\label{struct_m_d_b__rxbody}\index{M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}}
+
+
+Collaboration diagram for M\+D\+B\+\_\+rxbody\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile \mbox{\hyperlink{group__internal_gabbaef7c9c710f8652a62c32d748c040e}{txnid\+\_\+t}} \mbox{\hyperlink{struct_m_d_b__rxbody_ac88ac750e500b2080ab2fd379e1880fb}{mrb\+\_\+txnid}}
+\item 
+volatile M\+D\+B\+\_\+\+P\+I\+D\+\_\+T \mbox{\hyperlink{struct_m_d_b__rxbody_a154374dde6c1f0e480e6d92b4d6a1fc3}{mrb\+\_\+pid}}
+\item 
+volatile M\+D\+B\+\_\+\+T\+H\+R\+\_\+T \mbox{\hyperlink{struct_m_d_b__rxbody_ab7aceed58454ea79f33c4bc5c201e6ec}{mrb\+\_\+tid}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The information we store in a single slot of the reader table. In addition to a transaction ID, we also record the process and thread ID that owns a slot, so that we can detect stale information, e.\+g. threads or processes that went away without cleaning up. \begin{DoxyNote}{Note}
+We currently don\textquotesingle{}t check for stale records. We simply re-\/init the table when we know that we\textquotesingle{}re the only process opening the lock file. 
+\end{DoxyNote}
+
+
+Definition at line 762 of file mdb.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_d_b__rxbody_a154374dde6c1f0e480e6d92b4d6a1fc3}\label{struct_m_d_b__rxbody_a154374dde6c1f0e480e6d92b4d6a1fc3}} 
+\index{M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}!mrb\+\_\+pid@{mrb\+\_\+pid}}
+\index{mrb\+\_\+pid@{mrb\+\_\+pid}!M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}}
+\subsubsection{\texorpdfstring{mrb\+\_\+pid}{mrb\_pid}}
+{\footnotesize\ttfamily volatile M\+D\+B\+\_\+\+P\+I\+D\+\_\+T M\+D\+B\+\_\+rxbody\+::mrb\+\_\+pid}
+
+The process ID of the process owning this reader txn. 
+
+Definition at line 772 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__rxbody_ab7aceed58454ea79f33c4bc5c201e6ec}\label{struct_m_d_b__rxbody_ab7aceed58454ea79f33c4bc5c201e6ec}} 
+\index{M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}!mrb\+\_\+tid@{mrb\+\_\+tid}}
+\index{mrb\+\_\+tid@{mrb\+\_\+tid}!M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}}
+\subsubsection{\texorpdfstring{mrb\+\_\+tid}{mrb\_tid}}
+{\footnotesize\ttfamily volatile M\+D\+B\+\_\+\+T\+H\+R\+\_\+T M\+D\+B\+\_\+rxbody\+::mrb\+\_\+tid}
+
+The thread ID of the thread owning this txn. 
+
+Definition at line 774 of file mdb.\+c.
+
+\mbox{\Hypertarget{struct_m_d_b__rxbody_ac88ac750e500b2080ab2fd379e1880fb}\label{struct_m_d_b__rxbody_ac88ac750e500b2080ab2fd379e1880fb}} 
+\index{M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}!mrb\+\_\+txnid@{mrb\+\_\+txnid}}
+\index{mrb\+\_\+txnid@{mrb\+\_\+txnid}!M\+D\+B\+\_\+rxbody@{M\+D\+B\+\_\+rxbody}}
+\subsubsection{\texorpdfstring{mrb\+\_\+txnid}{mrb\_txnid}}
+{\footnotesize\ttfamily volatile \mbox{\hyperlink{group__internal_gabbaef7c9c710f8652a62c32d748c040e}{txnid\+\_\+t}} M\+D\+B\+\_\+rxbody\+::mrb\+\_\+txnid}
+
+Current Transaction ID when this transaction began, or (txnid\+\_\+t)-\/1. Multiple readers that start at the same time will probably have the same ID here. Again, it\textquotesingle{}s not important to exclude them from anything; all we need to know is which version of the DB they started from so we can avoid overwriting any data used in that particular version. 
+
+Definition at line 770 of file mdb.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

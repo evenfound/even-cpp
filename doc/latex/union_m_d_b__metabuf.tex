@@ -1,0 +1,33 @@
+\hypertarget{union_m_d_b__metabuf}{}\section{M\+D\+B\+\_\+metabuf Union Reference}
+\label{union_m_d_b__metabuf}\index{M\+D\+B\+\_\+metabuf@{M\+D\+B\+\_\+metabuf}}
+
+
+Collaboration diagram for M\+D\+B\+\_\+metabuf\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{union_m_d_b__metabuf_adf60c908715689ce6f32c0c136f74e24}\label{union_m_d_b__metabuf_adf60c908715689ce6f32c0c136f74e24}} 
+\mbox{\hyperlink{struct_m_d_b__page}{M\+D\+B\+\_\+page}} {\bfseries mb\+\_\+page}
+\item 
+\mbox{\Hypertarget{union_m_d_b__metabuf_a0af57d23cb50dee1b6d697260fd96a3f}\label{union_m_d_b__metabuf_a0af57d23cb50dee1b6d697260fd96a3f}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char {\bfseries mm\_pad} \mbox{[}\mbox{\hyperlink{group__internal_gae25bcf0c0c5c5ead27e82543cbce02e1}{PAGEHDRSZ}}\mbox{]}\\
+\>\mbox{\hyperlink{struct_m_d_b__meta}{MDB\_meta}} {\bfseries mm\_meta}\\
+\} {\bfseries mb\_metabuf}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Buffer for a stack-\/allocated meta page. The members define size and alignment, and silence type aliasing warnings. They are not used directly; that could mean incorrectly using several union members in parallel. 
+
+Definition at line 1149 of file mdb.\+c.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/lmbd/libraries/liblmdb/\mbox{\hyperlink{mdb_8c}{mdb.\+c}}\end{DoxyCompactItemize}

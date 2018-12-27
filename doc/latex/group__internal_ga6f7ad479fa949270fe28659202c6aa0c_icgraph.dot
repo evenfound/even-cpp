@@ -1,0 +1,9 @@
+digraph "mdb_cursor_open"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13 [label="mdb_cursor_open",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="mdb_drop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__internal.html#gab966fab3840fc54a6571dfb32b00f2db",tooltip="Empty or delete+close a database. "];
+}

@@ -1,0 +1,15 @@
+digraph "prerequisites/QtWebApp/Demo3" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c8ee3321b9bb547ee3793e57e69b2b24 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="QtWebApp" fontname="Helvetica", fontsize="10", URL="dir_c8ee3321b9bb547ee3793e57e69b2b24.html"]
+  subgraph clusterdir_be1a6a200aca2ecce48491ca7899e9cd {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_be1a6a200aca2ecce48491ca7899e9cd.html"];
+    dir_be1a6a200aca2ecce48491ca7899e9cd [shape=plaintext label="Demo3"];
+    dir_c4425219b2e1cc84aaaef6366d9850e0 [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_c4425219b2e1cc84aaaef6366d9850e0.html"];
+  }
+  }
+  dir_fcefc31fc3f25546f55bfcf4421333ad [shape=box label="QtWebApp" fillcolor="white" style="filled" color="red" URL="dir_fcefc31fc3f25546f55bfcf4421333ad.html"];
+  dir_c4425219b2e1cc84aaaef6366d9850e0->dir_fcefc31fc3f25546f55bfcf4421333ad [headlabel="5", labeldistance=1.5 headhref="dir_000037_000400.html"];
+}

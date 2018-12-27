@@ -1,0 +1,107 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_server___name___indicator}{}\section{Botan\+:\+:T\+LS\+:\+:Server\+\_\+\+Name\+\_\+\+Indicator Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_server___name___indicator}\index{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator@{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator}}
+
+
+{\ttfamily \#include $<$tls\+\_\+extensions.\+h$>$}
+
+
+
+Inheritance diagram for Botan\+:\+:T\+LS\+:\+:Server\+\_\+\+Name\+\_\+\+Indicator\+:
+% FIG 0
+
+
+Collaboration diagram for Botan\+:\+:T\+LS\+:\+:Server\+\_\+\+Name\+\_\+\+Indicator\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Handshake\+\_\+\+Extension\+\_\+\+Type \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_server___name___indicator_a3ecbe137658cbab2797a05441e65f42f}{type}} () const override
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___name___indicator_a7d5960fcd5fcb3fc939112968dc4b8ae}\label{class_botan_1_1_t_l_s_1_1_server___name___indicator_a7d5960fcd5fcb3fc939112968dc4b8ae}} 
+{\bfseries Server\+\_\+\+Name\+\_\+\+Indicator} (const std\+::string \&host\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___name___indicator_ae376ef83ee5d49e0cce8089fc3c508bc}\label{class_botan_1_1_t_l_s_1_1_server___name___indicator_ae376ef83ee5d49e0cce8089fc3c508bc}} 
+{\bfseries Server\+\_\+\+Name\+\_\+\+Indicator} (\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_t_l_s___data___reader}{T\+L\+S\+\_\+\+Data\+\_\+\+Reader}} \&reader, uint16\+\_\+t extension\+\_\+size)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___name___indicator_a1fb2c1f096aec8be1b5bbeda647a8241}\label{class_botan_1_1_t_l_s_1_1_server___name___indicator_a1fb2c1f096aec8be1b5bbeda647a8241}} 
+std\+::string {\bfseries host\+\_\+name} () const
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_server___name___indicator_a0088bcdbfb50c9b2bf13ec3fe1144439}{serialize}} () const override
+\item 
+bool \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_server___name___indicator_a24967daf77707733edc72619984bfb8a}{empty}} () const override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___name___indicator_a5484b9262e16114c3b7abd76ebfed58a}\label{class_botan_1_1_t_l_s_1_1_server___name___indicator_a5484b9262e16114c3b7abd76ebfed58a}} 
+static Handshake\+\_\+\+Extension\+\_\+\+Type {\bfseries static\+\_\+type} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Server Name Indicator extension (R\+FC 3546) 
+
+Definition at line 74 of file tls\+\_\+extensions.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___name___indicator_a24967daf77707733edc72619984bfb8a}\label{class_botan_1_1_t_l_s_1_1_server___name___indicator_a24967daf77707733edc72619984bfb8a}} 
+\index{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator@{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator}!empty@{empty}}
+\index{empty@{empty}!Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator@{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+if we should encode this extension or not 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_aa850b9be2322f94e7c65e583cd51acc5}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 92 of file tls\+\_\+extensions.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___name___indicator_a0088bcdbfb50c9b2bf13ec3fe1144439}\label{class_botan_1_1_t_l_s_1_1_server___name___indicator_a0088bcdbfb50c9b2bf13ec3fe1144439}} 
+\index{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator@{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator}!serialize@{serialize}}
+\index{serialize@{serialize}!Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator@{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+serialized binary for the extension 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_a56788726ad2526db54e5a26039cb69db}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 187 of file tls\+\_\+extensions.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_server___name___indicator_a3ecbe137658cbab2797a05441e65f42f}\label{class_botan_1_1_t_l_s_1_1_server___name___indicator_a3ecbe137658cbab2797a05441e65f42f}} 
+\index{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator@{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator}!type@{type}}
+\index{type@{type}!Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator@{Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily Handshake\+\_\+\+Extension\+\_\+\+Type Botan\+::\+T\+L\+S\+::\+Server\+\_\+\+Name\+\_\+\+Indicator\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+code number of the extension 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_extension_ac8819b312ce604453225e7b4f7c373ec}{Botan\+::\+T\+L\+S\+::\+Extension}}.
+
+
+
+Definition at line 80 of file tls\+\_\+extensions.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+h\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+extensions.\+cpp\end{DoxyCompactItemize}

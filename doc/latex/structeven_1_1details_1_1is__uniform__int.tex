@@ -1,0 +1,57 @@
+\hypertarget{structeven_1_1details_1_1is__uniform__int}{}\section{even\+:\+:details\+:\+:is\+\_\+uniform\+\_\+int$<$ T $>$ Struct Template Reference}
+\label{structeven_1_1details_1_1is__uniform__int}\index{even\+::details\+::is\+\_\+uniform\+\_\+int$<$ T $>$@{even\+::details\+::is\+\_\+uniform\+\_\+int$<$ T $>$}}
+
+
+True if type T is applicable by a std\+::uniform\+\_\+int\+\_\+distribution.  
+
+
+
+
+{\ttfamily \#include $<$Random.\+hxx$>$}
+
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool {\bfseries value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+struct even\+::details\+::is\+\_\+uniform\+\_\+int$<$ T $>$}
+
+True if type T is applicable by a std\+::uniform\+\_\+int\+\_\+distribution. 
+
+Definition at line 17 of file Random.\+hxx.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structeven_1_1details_1_1is__uniform__int_a53f23396c66649f3137b5cc2678a1d7d}\label{structeven_1_1details_1_1is__uniform__int_a53f23396c66649f3137b5cc2678a1d7d}} 
+\index{even\+::details\+::is\+\_\+uniform\+\_\+int@{even\+::details\+::is\+\_\+uniform\+\_\+int}!value@{value}}
+\index{value@{value}!even\+::details\+::is\+\_\+uniform\+\_\+int@{even\+::details\+::is\+\_\+uniform\+\_\+int}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr bool \mbox{\hyperlink{structeven_1_1details_1_1is__uniform__int}{even\+::details\+::is\+\_\+uniform\+\_\+int}}$<$ T $>$\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+                std::is\_same<T,              short>::value ||
+        std::is\_same<T, int>::value ||
+        std::is\_same<T, long>::value ||
+        std::is\_same<T, long long>::value ||
+        std::is\_same<T, unsigned short>::value ||
+        std::is\_same<T, unsigned int>::value ||
+        std::is\_same<T, unsigned long>::value ||
+        std::is\_same<T, unsigned long long>::value
+\end{DoxyCode}
+
+
+Definition at line 18 of file Random.\+hxx.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_random_8hxx}{Random.\+hxx}}\end{DoxyCompactItemize}

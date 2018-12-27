@@ -1,0 +1,80 @@
+\hypertarget{class_q_web_socket_data_processor}{}\section{Q\+Web\+Socket\+Data\+Processor Class Reference}
+\label{class_q_web_socket_data_processor}\index{Q\+Web\+Socket\+Data\+Processor@{Q\+Web\+Socket\+Data\+Processor}}
+
+
+Inheritance diagram for Q\+Web\+Socket\+Data\+Processor\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+Web\+Socket\+Data\+Processor\+:
+% FIG 1
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_a27b07eb0195b640cbe682763280f0e0f}\label{class_q_web_socket_data_processor_a27b07eb0195b640cbe682763280f0e0f}} 
+void {\bfseries process} (Q\+I\+O\+Device $\ast$p\+Io\+Device)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_af6ef6143ecd4a3b12ad722820448ded3}\label{class_q_web_socket_data_processor_af6ef6143ecd4a3b12ad722820448ded3}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_ae305717a87a30fe513de68f3622bbc77}\label{class_q_web_socket_data_processor_ae305717a87a30fe513de68f3622bbc77}} 
+void {\bfseries ping\+Received} (const Q\+Byte\+Array \&data)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_ae46e061b2351d457931fd1470b8c2816}\label{class_q_web_socket_data_processor_ae46e061b2351d457931fd1470b8c2816}} 
+void {\bfseries pong\+Received} (const Q\+Byte\+Array \&data)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_a7831f415db378567a094a1bcf8fc1588}\label{class_q_web_socket_data_processor_a7831f415db378567a094a1bcf8fc1588}} 
+void {\bfseries close\+Received} (\mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}} close\+Code, const Q\+String \&close\+Reason)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_a59547c6bf74b1ecc07e21faa7962c5fa}\label{class_q_web_socket_data_processor_a59547c6bf74b1ecc07e21faa7962c5fa}} 
+void {\bfseries text\+Frame\+Received} (const Q\+String \&frame, bool last\+Frame)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_a49d81d9a2291a25fa42ca8e1bc810bce}\label{class_q_web_socket_data_processor_a49d81d9a2291a25fa42ca8e1bc810bce}} 
+void {\bfseries binary\+Frame\+Received} (const Q\+Byte\+Array \&frame, bool last\+Frame)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_aaca728610e03568e074a3c2ebac2cc8b}\label{class_q_web_socket_data_processor_aaca728610e03568e074a3c2ebac2cc8b}} 
+void {\bfseries text\+Message\+Received} (const Q\+String \&message)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_ab256e07223dae23dc4b84ab09b9a015d}\label{class_q_web_socket_data_processor_ab256e07223dae23dc4b84ab09b9a015d}} 
+void {\bfseries binary\+Message\+Received} (const Q\+Byte\+Array \&message)
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_a93f21142cf8aa5af216e1fb62db4e387}\label{class_q_web_socket_data_processor_a93f21142cf8aa5af216e1fb62db4e387}} 
+void {\bfseries error\+Encountered} (\mbox{\hyperlink{namespace_q_web_socket_protocol_a9f236676f594451d8d723f260b71028c}{Q\+Web\+Socket\+Protocol\+::\+Close\+Code}} code, const Q\+String \&description)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_af808649fa844cb7bddbecf876d258e0d}\label{class_q_web_socket_data_processor_af808649fa844cb7bddbecf876d258e0d}} 
+{\bfseries Q\+Web\+Socket\+Data\+Processor} (Q\+Object $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_a7669d4119d6cd01d06111de2b20663ba}\label{class_q_web_socket_data_processor_a7669d4119d6cd01d06111de2b20663ba}} 
+static quint64 {\bfseries max\+Message\+Size} ()
+\item 
+\mbox{\Hypertarget{class_q_web_socket_data_processor_a843bdb662a38b770d6dadffd28c3ebce}\label{class_q_web_socket_data_processor_a843bdb662a38b770d6dadffd28c3ebce}} 
+static quint64 {\bfseries max\+Frame\+Size} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class \mbox{\hyperlink{class_q_web_socket_data_processor}{Q\+Web\+Socket\+Data\+Processor}} is responsible for reading, validating and interpreting data from a Web\+Socket. It reads data from a Q\+I\+O\+Device, validates it against \{R\+FC 6455\}, and parses it into frames (data, control). It emits signals that correspond to the type of the frame\+: text\+Frame\+Received(), binary\+Frame\+Received(), text\+Message\+Received(), binary\+Message\+Received(), ping\+Received(), pong\+Received() and close\+Received(). Whenever an error is detected, the error\+Encountered() signal is emitted. \mbox{\hyperlink{class_q_web_socket_data_processor}{Q\+Web\+Socket\+Data\+Processor}} also checks if a frame is allowed in a sequence of frames (e.\+g. a continuation frame cannot follow a final frame). This class is an internal class used by Q\+Web\+Socket\+Internal for data processing and validation.
+
+\begin{DoxySeeAlso}{See also}
+Frame() 
+\end{DoxySeeAlso}
+
+
+Definition at line 66 of file qwebsocketdataprocessor\+\_\+p.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qwebsocketdataprocessor\+\_\+p.\+h\item 
+prerequisites/build/debug/moc\+\_\+qwebsocketdataprocessor\+\_\+p.\+cpp\item 
+prerequisites/\+Qt\+Web\+App/\+Qt\+Web\+App/qtwebsockets/src/websockets/qwebsocketdataprocessor.\+cpp\end{DoxyCompactItemize}

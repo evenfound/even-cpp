@@ -1,0 +1,168 @@
+\hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters}{}\section{Botan\+:\+:X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters Class Reference}
+\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters}\index{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}}
+
+
+{\ttfamily \#include $<$xmss\+\_\+wots\+\_\+parameters.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a5a19c4431fda7a80fa3e116d072349c3}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a5a19c4431fda7a80fa3e116d072349c3}} 
+enum {\bfseries ots\+\_\+algorithm\+\_\+t} \{ {\bfseries W\+O\+T\+S\+P\+\_\+\+S\+H\+A2\+\_\+256\+\_\+\+W16} = 0x01000001, 
+{\bfseries W\+O\+T\+S\+P\+\_\+\+S\+H\+A2\+\_\+512\+\_\+\+W16} = 0x02000002, 
+{\bfseries W\+O\+T\+S\+P\+\_\+\+S\+H\+A\+K\+E128\+\_\+\+W16} = 0x03000003, 
+{\bfseries W\+O\+T\+S\+P\+\_\+\+S\+H\+A\+K\+E256\+\_\+\+W16} = 0x04000004
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a675efe5f9bd0e6aede345ed18072ac49}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a675efe5f9bd0e6aede345ed18072ac49}} 
+{\bfseries X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters} (const std\+::string \&algo\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_ac47da0c4bf533e8ff641a347e1e6666c}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_ac47da0c4bf533e8ff641a347e1e6666c}} 
+{\bfseries X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters} (ots\+\_\+algorithm\+\_\+t ots\+\_\+spec)
+\item 
+secure\+\_\+vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a9e0a602c991a69061c24d062363d43a7}{base\+\_\+w}} (const secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&msg, size\+\_\+t out\+\_\+size) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a9611b34cec9ddac0bc41463a0bacf68b}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a9611b34cec9ddac0bc41463a0bacf68b}} 
+secure\+\_\+vector$<$ uint8\+\_\+t $>$ {\bfseries base\+\_\+w} (size\+\_\+t value) const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a9857ccfc25d7d6e5222e471a5795e062}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a9857ccfc25d7d6e5222e471a5795e062}} 
+void {\bfseries append\+\_\+checksum} (secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&data)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a8ab4c1563ea45a0a612580f52b99ccd6}{name}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_af21ced80c6176475b613ab966811e6aa}{hash\+\_\+function\+\_\+name}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a41865ec18f86aa5a995de1c452df2b65}{element\+\_\+size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a1226fc756a477864962d5a0d1c88184b}{wots\+\_\+parameter}} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_ab51271c681946048cafb71fa29d86b31}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_ab51271c681946048cafb71fa29d86b31}} 
+size\+\_\+t {\bfseries len} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a2b3177d186feacaa12bb8f72a88ac971}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a2b3177d186feacaa12bb8f72a88ac971}} 
+size\+\_\+t {\bfseries len\+\_\+1} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a008bf71408eebbd39f282df0ff0c816d}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a008bf71408eebbd39f282df0ff0c816d}} 
+size\+\_\+t {\bfseries len\+\_\+2} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_ad0418aae7bcd69d71f7444d9d6824d3a}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_ad0418aae7bcd69d71f7444d9d6824d3a}} 
+size\+\_\+t {\bfseries lg\+\_\+w} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a8edc4cb8a1664deb7bfb99de71ff132c}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a8edc4cb8a1664deb7bfb99de71ff132c}} 
+ots\+\_\+algorithm\+\_\+t {\bfseries oid} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_aa1ee31abc2eb95e14e5a68293141ca0c}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_aa1ee31abc2eb95e14e5a68293141ca0c}} 
+size\+\_\+t {\bfseries estimated\+\_\+strength} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_aef4a3e78fc89d9ec1ee8a5756cec938b}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_aef4a3e78fc89d9ec1ee8a5756cec938b}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_botan_1_1_x_m_s_s___w_o_t_s___parameters}{X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}} \&p) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_ae4e07fbc2279204e3ff06c2530e32b69}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_ae4e07fbc2279204e3ff06c2530e32b69}} 
+static ots\+\_\+algorithm\+\_\+t {\bfseries xmss\+\_\+wots\+\_\+id\+\_\+from\+\_\+string} (const std\+::string \&param\+\_\+set)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Descibes a signature method for X\+M\+SS Winternitz One Time Signatures, as defined in\+: \mbox{[}1\mbox{]} X\+M\+SS\+: Extended Hash-\/\+Based Signatures, draft-\/itrf-\/cfrg-\/xmss-\/hash-\/based-\/signatures-\/06 Release\+: July 2016. \href{https://datatracker.ietf.org/doc/}{\tt https\+://datatracker.\+ietf.\+org/doc/} draft-\/irtf-\/cfrg-\/xmss-\/hash-\/based-\/signatures/?include\+\_\+text=1 
+
+Definition at line 27 of file xmss\+\_\+wots\+\_\+parameters.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a9e0a602c991a69061c24d062363d43a7}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a9e0a602c991a69061c24d062363d43a7}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}!base\+\_\+w@{base\+\_\+w}}
+\index{base\+\_\+w@{base\+\_\+w}!Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}}
+\subsubsection{\texorpdfstring{base\+\_\+w()}{base\_w()}}
+{\footnotesize\ttfamily secure\+\_\+vector$<$ uint8\+\_\+t $>$ Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters\+::base\+\_\+w (\begin{DoxyParamCaption}\item[{const secure\+\_\+vector$<$ uint8\+\_\+t $>$ \&}]{msg,  }\item[{size\+\_\+t}]{out\+\_\+size }\end{DoxyParamCaption}) const}
+
+Algorithm 1\+: convert input string to base.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Input string (referred to as X in \mbox{[}1\mbox{]}). \\
+\hline
+{\em out\+\_\+size} & size of message in base w.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Input string converted to the given base. 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file xmss\+\_\+wots\+\_\+parameters.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a41865ec18f86aa5a995de1c452df2b65}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a41865ec18f86aa5a995de1c452df2b65}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}!element\+\_\+size@{element\+\_\+size}}
+\index{element\+\_\+size@{element\+\_\+size}!Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}}
+\subsubsection{\texorpdfstring{element\+\_\+size()}{element\_size()}}
+{\footnotesize\ttfamily size\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters\+::element\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves the uniform length of a message, and the size of each node. This correlates to X\+M\+SS parameter \char`\"{}n\char`\"{} defined in \mbox{[}1\mbox{]}.
+
+\begin{DoxyReturn}{Returns}
+element length in bytes. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file xmss\+\_\+wots\+\_\+parameters.\+h.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_af21ced80c6176475b613ab966811e6aa}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_af21ced80c6176475b613ab966811e6aa}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}!hash\+\_\+function\+\_\+name@{hash\+\_\+function\+\_\+name}}
+\index{hash\+\_\+function\+\_\+name@{hash\+\_\+function\+\_\+name}!Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}}
+\subsubsection{\texorpdfstring{hash\+\_\+function\+\_\+name()}{hash\_function\_name()}}
+{\footnotesize\ttfamily const std\+::string\& Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters\+::hash\+\_\+function\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespace_botan}{Botan}} name for the hash function used. 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file xmss\+\_\+wots\+\_\+parameters.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a8ab4c1563ea45a0a612580f52b99ccd6}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a8ab4c1563ea45a0a612580f52b99ccd6}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}!name@{name}}
+\index{name@{name}!Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+X\+M\+SS W\+O\+TS registry name for the chosen parameter set. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file xmss\+\_\+wots\+\_\+parameters.\+h.
+
+\mbox{\Hypertarget{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a1226fc756a477864962d5a0d1c88184b}\label{class_botan_1_1_x_m_s_s___w_o_t_s___parameters_a1226fc756a477864962d5a0d1c88184b}} 
+\index{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}!wots\+\_\+parameter@{wots\+\_\+parameter}}
+\index{wots\+\_\+parameter@{wots\+\_\+parameter}!Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters@{Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters}}
+\subsubsection{\texorpdfstring{wots\+\_\+parameter()}{wots\_parameter()}}
+{\footnotesize\ttfamily size\+\_\+t Botan\+::\+X\+M\+S\+S\+\_\+\+W\+O\+T\+S\+\_\+\+Parameters\+::wots\+\_\+parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+The Winternitz parameter.
+
+\begin{DoxyReturn}{Returns}
+numeric base used for internal representation of data. 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file xmss\+\_\+wots\+\_\+parameters.\+h.
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/pubkey/xmss/xmss\+\_\+wots\+\_\+parameters.\+h\item 
+prerequisites/botan/src/lib/pubkey/xmss/xmss\+\_\+wots\+\_\+parameters.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,1248 @@
+\hypertarget{bignum_8h}{}\section{prerequisites/c-\/libp2p/include/mbedtls/bignum.h File Reference}
+\label{bignum_8h}\index{prerequisites/c-\/libp2p/include/mbedtls/bignum.\+h@{prerequisites/c-\/libp2p/include/mbedtls/bignum.\+h}}
+
+
+Multi-\/precision integer library.  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for bignum.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}}
+\begin{DoxyCompactList}\small\item\em M\+PI structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a5ba505f058780047978dcdafd50d0b1e}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}~-\/0x0002
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a3989a97b1d92d04dd05242731e6f37f2}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}~-\/0x0004
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a0ef495d9a083d986f00e5f604126382f}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+ER}}~-\/0x0006
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a7fc9b9c20686c88b949d0a35c0def909}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}}~-\/0x0008
+\item 
+\#define \mbox{\hyperlink{bignum_8h_ab7f06e7dfde557a02fe7137d4d47eed3}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE}}~-\/0x000A
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a97e2c5a552770757da26b4a9b2e56f6c}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO}}~-\/0x000C
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a24f0dfbee8599f6e72852247d5681503}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE}}~-\/0x000E
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a9bb66b22357ba30dedfe856efeab5544}{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}}~-\/0x0010
+\item 
+\mbox{\Hypertarget{bignum_8h_ab0a21d28acd6b59cc60a45547e2412af}\label{bignum_8h_ab0a21d28acd6b59cc60a45547e2412af}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+C\+HK}(f)~do \{ if( ( ret = f ) != 0 ) goto cleanup; \} while( 0 )
+\item 
+\mbox{\Hypertarget{bignum_8h_a50617c9e123096b168d65a9d957b2ebe}\label{bignum_8h_a50617c9e123096b168d65a9d957b2ebe}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+L\+I\+M\+BS}~10000
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a7cec1de79c434f1053488b1d3b9454c4}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE}}~6
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a02bfffc46b7b2e10c0080d29bb56e6b0}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}}~1024
+\item 
+\#define \mbox{\hyperlink{bignum_8h_a134ba62182ca105e273d465861f5a4d5}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS}}~( 8 $\ast$ \mbox{\hyperlink{bignum_8h_a02bfffc46b7b2e10c0080d29bb56e6b0}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}} )
+\item 
+\mbox{\Hypertarget{bignum_8h_a5e807323a5823be0f1e7eef38dce9cb0}\label{bignum_8h_a5e807323a5823be0f1e7eef38dce9cb0}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+T\+S\+\_\+\+S\+C\+A\+L\+E100}~( 100 $\ast$ \mbox{\hyperlink{bignum_8h_a134ba62182ca105e273d465861f5a4d5}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS}} )
+\item 
+\mbox{\Hypertarget{bignum_8h_a844008ccbe6672f636d250230755d5ee}\label{bignum_8h_a844008ccbe6672f636d250230755d5ee}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+L\+N\+\_\+2\+\_\+\+D\+I\+V\+\_\+\+L\+N\+\_\+10\+\_\+\+S\+C\+A\+L\+E100}~332
+\item 
+\mbox{\Hypertarget{bignum_8h_a95aa572170385895daf25b70c6f0d63f}\label{bignum_8h_a95aa572170385895daf25b70c6f0d63f}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+R\+W\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~( ((M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+T\+S\+\_\+\+S\+C\+A\+L\+E100 + M\+B\+E\+D\+T\+L\+S\+\_\+\+L\+N\+\_\+2\+\_\+\+D\+I\+V\+\_\+\+L\+N\+\_\+10\+\_\+\+S\+C\+A\+L\+E100 -\/ 1) / M\+B\+E\+D\+T\+L\+S\+\_\+\+L\+N\+\_\+2\+\_\+\+D\+I\+V\+\_\+\+L\+N\+\_\+10\+\_\+\+S\+C\+A\+L\+E100) + 10 + 6 )
+\item 
+\mbox{\Hypertarget{bignum_8h_ae9ed748679544c60d2b429ee2bc93818}\label{bignum_8h_ae9ed748679544c60d2b429ee2bc93818}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+H\+A\+V\+E\+\_\+\+I\+N\+T32}
+\item 
+\mbox{\Hypertarget{bignum_8h_ae1ace2caabfb2c45a1dab0a8f0bd6b66}\label{bignum_8h_ae1ace2caabfb2c45a1dab0a8f0bd6b66}} 
+\#define {\bfseries M\+B\+E\+D\+T\+L\+S\+\_\+\+H\+A\+V\+E\+\_\+\+U\+D\+BL}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{bignum_8h_a831621e03bb6892a866c36673644612e}\label{bignum_8h_a831621e03bb6892a866c36673644612e}} 
+typedef int32\+\_\+t {\bfseries mbedtls\+\_\+mpi\+\_\+sint}
+\item 
+\mbox{\Hypertarget{bignum_8h_ae5f62e04027ff6e12397b3e94c3912cd}\label{bignum_8h_ae5f62e04027ff6e12397b3e94c3912cd}} 
+typedef uint32\+\_\+t {\bfseries mbedtls\+\_\+mpi\+\_\+uint}
+\item 
+\mbox{\Hypertarget{bignum_8h_af64c95417575870c4f465c0a663fb51b}\label{bignum_8h_af64c95417575870c4f465c0a663fb51b}} 
+typedef uint64\+\_\+t {\bfseries mbedtls\+\_\+t\+\_\+udbl}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bignum_8h_a99c7cca612b47dc4f3b96905c4f9d69e}{mbedtls\+\_\+mpi\+\_\+init}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X)
+\begin{DoxyCompactList}\small\item\em Initialize one M\+PI (make internal references valid) This just makes it ready to be set or freed, but does not define a value for the M\+PI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bignum_8h_abffd5d8382cb86c089a1ef2bebb90f9f}{mbedtls\+\_\+mpi\+\_\+free}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X)
+\begin{DoxyCompactList}\small\item\em Unallocate one M\+PI. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a22263d90d838cb58f271aa8f1920843d}{mbedtls\+\_\+mpi\+\_\+grow}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, size\+\_\+t nblimbs)
+\begin{DoxyCompactList}\small\item\em Enlarge to the specified number of limbs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_abaaef229c95711a53b2f38eff0a2c14a}{mbedtls\+\_\+mpi\+\_\+shrink}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, size\+\_\+t nblimbs)
+\begin{DoxyCompactList}\small\item\em Resize down, keeping at least the specified number of limbs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a2f722863f9fd9098690f8a9db9962044}{mbedtls\+\_\+mpi\+\_\+copy}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Copy the contents of Y into X. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bignum_8h_a60d0c82301d6cf50e69808b6a3c5cd63}{mbedtls\+\_\+mpi\+\_\+swap}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Swap the contents of X and Y. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a623c565706f22d8fbcc665ba49a51c7c}{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+assign}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$Y, unsigned char assign)
+\begin{DoxyCompactList}\small\item\em Safe conditional assignement X = Y if assign is 1. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a956c54f87d26ceb6da98043805e67684}{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+swap}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$Y, unsigned char assign)
+\begin{DoxyCompactList}\small\item\em Safe conditional swap X $<$-\/$>$ Y if swap is 1. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a65644d139404325130491759a5651f6d}{mbedtls\+\_\+mpi\+\_\+lset}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, mbedtls\+\_\+mpi\+\_\+sint z)
+\begin{DoxyCompactList}\small\item\em Set value from integer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_abfc40fb7192507bc0eeb9f24e8e69c2d}{mbedtls\+\_\+mpi\+\_\+get\+\_\+bit}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, size\+\_\+t pos)
+\begin{DoxyCompactList}\small\item\em Get a specific bit from X. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a39a475e7957e7a60993fc6e801d9913b}{mbedtls\+\_\+mpi\+\_\+set\+\_\+bit}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, size\+\_\+t pos, unsigned char val)
+\begin{DoxyCompactList}\small\item\em Set a bit of X to a specific value of 0 or 1. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{bignum_8h_aa67117fd61db9570746dc2ffca88d004}{mbedtls\+\_\+mpi\+\_\+lsb}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X)
+\begin{DoxyCompactList}\small\item\em Return the number of zero-\/bits before the least significant \textquotesingle{}1\textquotesingle{} bit. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{bignum_8h_a681ab2710d044c0cb091b6497c6ed395}{mbedtls\+\_\+mpi\+\_\+bitlen}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X)
+\begin{DoxyCompactList}\small\item\em Return the number of bits up to and including the most significant \textquotesingle{}1\textquotesingle{} bit\textquotesingle{}. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{bignum_8h_a538110c9da02704d34d67a07d16fb3ab}{mbedtls\+\_\+mpi\+\_\+size}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X)
+\begin{DoxyCompactList}\small\item\em Return the total size in bytes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a15efd3f2f86700b69f6c18d34ac05758}{mbedtls\+\_\+mpi\+\_\+read\+\_\+string}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, int radix, const char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Import from an A\+S\+C\+II string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_ab2197e4833449c3e505ec8d11b348913}{mbedtls\+\_\+mpi\+\_\+write\+\_\+string}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, int radix, char $\ast$buf, size\+\_\+t buflen, size\+\_\+t $\ast$olen)
+\begin{DoxyCompactList}\small\item\em Export into an A\+S\+C\+II string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_acb4d0ed28a946cfa83219ae8709941d4}{mbedtls\+\_\+mpi\+\_\+read\+\_\+file}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, int radix, F\+I\+LE $\ast$fin)
+\begin{DoxyCompactList}\small\item\em Read X from an opened file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_ab23e312f4a0479c8b63a4bc9328e1324}{mbedtls\+\_\+mpi\+\_\+write\+\_\+file}} (const char $\ast$p, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, int radix, F\+I\+LE $\ast$fout)
+\begin{DoxyCompactList}\small\item\em Write X into an opened file, or stdout if fout is N\+U\+LL. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a68f62c99e53eb034daea486e5d5d83ca}{mbedtls\+\_\+mpi\+\_\+read\+\_\+binary}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Import X from unsigned binary data, big endian. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_aceb4aeeb376a582a5e904135205ada44}{mbedtls\+\_\+mpi\+\_\+write\+\_\+binary}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, unsigned char $\ast$buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Export X into unsigned binary data, big endian. Always fills the whole buffer, which will start with zeros if the number is smaller. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a8d48a56155412dda56e67256be4d10d9}{mbedtls\+\_\+mpi\+\_\+shift\+\_\+l}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Left-\/shift\+: X $<$$<$= count. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_aee1140147b1e807645cebf64ebded168}{mbedtls\+\_\+mpi\+\_\+shift\+\_\+r}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Right-\/shift\+: X $>$$>$= count. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a81ea45be21ea77f5d8deae9e99d9a11b}{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+abs}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Compare unsigned values. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a762dd8add46384d4935a4aecc125096e}{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+mpi}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Compare signed values. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_ad0e7f426326afc7d3fde309a7a8d82fa}{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+int}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, mbedtls\+\_\+mpi\+\_\+sint z)
+\begin{DoxyCompactList}\small\item\em Compare signed values. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a5ddb2c6dc59dd39874695e04ff40afdb}{mbedtls\+\_\+mpi\+\_\+add\+\_\+abs}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Unsigned addition\+: X = $\vert$\+A$\vert$ + $\vert$\+B$\vert$. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_ad5840808639d50a98edbede345251293}{mbedtls\+\_\+mpi\+\_\+sub\+\_\+abs}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Unsigned subtraction\+: X = $\vert$\+A$\vert$ -\/ $\vert$\+B$\vert$. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a5fd1cfd561c1ada500097f860aa4fe68}{mbedtls\+\_\+mpi\+\_\+add\+\_\+mpi}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Signed addition\+: X = A + B. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a1a38a8d9f5052491df94d8010bd34955}{mbedtls\+\_\+mpi\+\_\+sub\+\_\+mpi}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Signed subtraction\+: X = A -\/ B. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a1e6f6ba90e3c73ce6022ed7354443b2a}{mbedtls\+\_\+mpi\+\_\+add\+\_\+int}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, mbedtls\+\_\+mpi\+\_\+sint b)
+\begin{DoxyCompactList}\small\item\em Signed addition\+: X = A + b. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a1a925403c039d920059297cfb4ad5bad}{mbedtls\+\_\+mpi\+\_\+sub\+\_\+int}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, mbedtls\+\_\+mpi\+\_\+sint b)
+\begin{DoxyCompactList}\small\item\em Signed subtraction\+: X = A -\/ b. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_aa9065cae8e3a287095b4043317f6b706}{mbedtls\+\_\+mpi\+\_\+mul\+\_\+mpi}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Baseline multiplication\+: X = A $\ast$ B. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_ac4a22cb29f7e19dd4c823d1868f45eab}{mbedtls\+\_\+mpi\+\_\+mul\+\_\+int}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, mbedtls\+\_\+mpi\+\_\+uint b)
+\begin{DoxyCompactList}\small\item\em Baseline multiplication\+: X = A $\ast$ b. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a5f3db711e21b4fe2f1a009099478e796}{mbedtls\+\_\+mpi\+\_\+div\+\_\+mpi}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$Q, \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$R, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Division by \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}}\+: A = Q $\ast$ B + R. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a7ffac96dd27bbe62dba7c6307edd2c60}{mbedtls\+\_\+mpi\+\_\+div\+\_\+int}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$Q, \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$R, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, mbedtls\+\_\+mpi\+\_\+sint b)
+\begin{DoxyCompactList}\small\item\em Division by int\+: A = Q $\ast$ b + R. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a7b9db15054cb320c69dd065d3f17e674}{mbedtls\+\_\+mpi\+\_\+mod\+\_\+mpi}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$R, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Modulo\+: R = A mod B. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a3d2a4a4c3d64490e26e05153ed798058}{mbedtls\+\_\+mpi\+\_\+mod\+\_\+int}} (mbedtls\+\_\+mpi\+\_\+uint $\ast$r, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, mbedtls\+\_\+mpi\+\_\+sint b)
+\begin{DoxyCompactList}\small\item\em Modulo\+: r = A mod b. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a55433a16c951178e2b98a01c6386239e}{mbedtls\+\_\+mpi\+\_\+exp\+\_\+mod}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$E, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$N, \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$\+\_\+\+RR)
+\begin{DoxyCompactList}\small\item\em Sliding-\/window exponentiation\+: X = A$^\wedge$E mod N. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a81b99c0a79d3e8ddedfd4a6ee37ceb1e}{mbedtls\+\_\+mpi\+\_\+fill\+\_\+random}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, size\+\_\+t size, int($\ast$f\+\_\+rng)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+rng)
+\begin{DoxyCompactList}\small\item\em Fill an M\+PI X with size bytes of random. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_aeebcfa54676b583d2e767b1c01c9844f}{mbedtls\+\_\+mpi\+\_\+gcd}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$G, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Greatest common divisor\+: G = gcd(\+A, B) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_abb720bf24bc902fe6edd2ce0cd9ce6e3}{mbedtls\+\_\+mpi\+\_\+inv\+\_\+mod}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$A, const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Modular inverse\+: X = A$^\wedge$-\/1 mod N. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a5e5d03e6e1758bf871d23c96f7b91394}{mbedtls\+\_\+mpi\+\_\+is\+\_\+prime}} (const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, int($\ast$f\+\_\+rng)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+rng)
+\begin{DoxyCompactList}\small\item\em Miller-\/\+Rabin primality test. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_ad1267890b0187b0a73ce0e7ce4ab4929}{mbedtls\+\_\+mpi\+\_\+gen\+\_\+prime}} (\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$X, size\+\_\+t nbits, int dh\+\_\+flag, int($\ast$f\+\_\+rng)(void $\ast$, unsigned char $\ast$, size\+\_\+t), void $\ast$p\+\_\+rng)
+\begin{DoxyCompactList}\small\item\em Prime number generation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bignum_8h_a75b6f4376bdceb63ef5a65737c1a638c}{mbedtls\+\_\+mpi\+\_\+self\+\_\+test}} (int verbose)
+\begin{DoxyCompactList}\small\item\em Checkup routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Multi-\/precision integer library. 
+
+Copyright (C) 2006-\/2015, A\+RM Limited, All Rights Reserved S\+P\+D\+X-\/\+License-\/\+Identifier\+: Apache-\/2.\+0
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+This file is part of mbed T\+LS (\href{https://tls.mbed.org}{\tt https\+://tls.\+mbed.\+org}) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{bignum_8h_a9bb66b22357ba30dedfe856efeab5544}\label{bignum_8h_a9bb66b22357ba30dedfe856efeab5544}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED}{MBEDTLS\_ERR\_MPI\_ALLOC\_FAILED}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED~-\/0x0010}
+
+Memory allocation failed. 
+
+Definition at line 46 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a3989a97b1d92d04dd05242731e6f37f2}\label{bignum_8h_a3989a97b1d92d04dd05242731e6f37f2}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA}{MBEDTLS\_ERR\_MPI\_BAD\_INPUT\_DATA}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA~-\/0x0004}
+
+Bad input parameters to function. 
+
+Definition at line 40 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a7fc9b9c20686c88b949d0a35c0def909}\label{bignum_8h_a7fc9b9c20686c88b949d0a35c0def909}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}{MBEDTLS\_ERR\_MPI\_BUFFER\_TOO\_SMALL}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL~-\/0x0008}
+
+The buffer is too small to write to. 
+
+Definition at line 42 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a97e2c5a552770757da26b4a9b2e56f6c}\label{bignum_8h_a97e2c5a552770757da26b4a9b2e56f6c}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO}{MBEDTLS\_ERR\_MPI\_DIVISION\_BY\_ZERO}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO~-\/0x000C}
+
+The input argument for division is zero, which is not allowed. 
+
+Definition at line 44 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a5ba505f058780047978dcdafd50d0b1e}\label{bignum_8h_a5ba505f058780047978dcdafd50d0b1e}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR}{MBEDTLS\_ERR\_MPI\_FILE\_IO\_ERROR}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+F\+I\+L\+E\+\_\+\+I\+O\+\_\+\+E\+R\+R\+OR~-\/0x0002}
+
+An error occurred while reading from or writing to a file. 
+
+Definition at line 39 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a0ef495d9a083d986f00e5f604126382f}\label{bignum_8h_a0ef495d9a083d986f00e5f604126382f}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+ER@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+ER}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+ER@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+ER}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+ER}{MBEDTLS\_ERR\_MPI\_INVALID\_CHARACTER}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+H\+A\+R\+A\+C\+T\+ER~-\/0x0006}
+
+There is an invalid character in the digit string. 
+
+Definition at line 41 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_ab7f06e7dfde557a02fe7137d4d47eed3}\label{bignum_8h_ab7f06e7dfde557a02fe7137d4d47eed3}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE}{MBEDTLS\_ERR\_MPI\_NEGATIVE\_VALUE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE~-\/0x000A}
+
+The input arguments are negative or result in illegal output. 
+
+Definition at line 43 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a24f0dfbee8599f6e72852247d5681503}\label{bignum_8h_a24f0dfbee8599f6e72852247d5681503}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE}{MBEDTLS\_ERR\_MPI\_NOT\_ACCEPTABLE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE~-\/0x000E}
+
+The input arguments are not acceptable. 
+
+Definition at line 45 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a134ba62182ca105e273d465861f5a4d5}\label{bignum_8h_a134ba62182ca105e273d465861f5a4d5}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS}{MBEDTLS\_MPI\_MAX\_BITS}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS~( 8 $\ast$ \mbox{\hyperlink{bignum_8h_a02bfffc46b7b2e10c0080d29bb56e6b0}{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}} )}
+
+Maximum number of bits for usable M\+P\+Is. 
+
+Definition at line 79 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a02bfffc46b7b2e10c0080d29bb56e6b0}\label{bignum_8h_a02bfffc46b7b2e10c0080d29bb56e6b0}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}{MBEDTLS\_MPI\_MAX\_SIZE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE~1024}
+
+Maximum number of bytes for usable M\+P\+Is. 
+
+Definition at line 76 of file bignum.\+h.
+
+\mbox{\Hypertarget{bignum_8h_a7cec1de79c434f1053488b1d3b9454c4}\label{bignum_8h_a7cec1de79c434f1053488b1d3b9454c4}} 
+\index{bignum.\+h@{bignum.\+h}!M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE}}
+\index{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE@{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE}{MBEDTLS\_MPI\_WINDOW\_SIZE}}
+{\footnotesize\ttfamily \#define M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE~6}
+
+Maximum windows size used. 
+
+Definition at line 65 of file bignum.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{bignum_8h_a5ddb2c6dc59dd39874695e04ff40afdb}\label{bignum_8h_a5ddb2c6dc59dd39874695e04ff40afdb}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+add\+\_\+abs@{mbedtls\+\_\+mpi\+\_\+add\+\_\+abs}}
+\index{mbedtls\+\_\+mpi\+\_\+add\+\_\+abs@{mbedtls\+\_\+mpi\+\_\+add\+\_\+abs}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+add\+\_\+abs()}{mbedtls\_mpi\_add\_abs()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+add\+\_\+abs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Unsigned addition\+: X = $\vert$\+A$\vert$ + $\vert$\+B$\vert$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em B} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a1e6f6ba90e3c73ce6022ed7354443b2a}\label{bignum_8h_a1e6f6ba90e3c73ce6022ed7354443b2a}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+add\+\_\+int@{mbedtls\+\_\+mpi\+\_\+add\+\_\+int}}
+\index{mbedtls\+\_\+mpi\+\_\+add\+\_\+int@{mbedtls\+\_\+mpi\+\_\+add\+\_\+int}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+add\+\_\+int()}{mbedtls\_mpi\_add\_int()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+add\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{mbedtls\+\_\+mpi\+\_\+sint}]{b }\end{DoxyParamCaption})}
+
+
+
+Signed addition\+: X = A + b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em b} & The integer value to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a5fd1cfd561c1ada500097f860aa4fe68}\label{bignum_8h_a5fd1cfd561c1ada500097f860aa4fe68}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+add\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+add\+\_\+mpi}}
+\index{mbedtls\+\_\+mpi\+\_\+add\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+add\+\_\+mpi}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+add\+\_\+mpi()}{mbedtls\_mpi\_add\_mpi()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+add\+\_\+mpi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Signed addition\+: X = A + B. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em B} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a681ab2710d044c0cb091b6497c6ed395}\label{bignum_8h_a681ab2710d044c0cb091b6497c6ed395}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+bitlen@{mbedtls\+\_\+mpi\+\_\+bitlen}}
+\index{mbedtls\+\_\+mpi\+\_\+bitlen@{mbedtls\+\_\+mpi\+\_\+bitlen}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+bitlen()}{mbedtls\_mpi\_bitlen()}}
+{\footnotesize\ttfamily size\+\_\+t mbedtls\+\_\+mpi\+\_\+bitlen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X }\end{DoxyParamCaption})}
+
+
+
+Return the number of bits up to and including the most significant \textquotesingle{}1\textquotesingle{} bit\textquotesingle{}. 
+
+Note\+: Thus also the one-\/based index of the most significant \textquotesingle{}1\textquotesingle{} bit
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bignum_8h_a81ea45be21ea77f5d8deae9e99d9a11b}\label{bignum_8h_a81ea45be21ea77f5d8deae9e99d9a11b}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+cmp\+\_\+abs@{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+abs}}
+\index{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+abs@{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+abs}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+abs()}{mbedtls\_mpi\_cmp\_abs()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+cmp\+\_\+abs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Compare unsigned values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Left-\/hand M\+PI \\
+\hline
+{\em Y} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if $\vert$\+X$\vert$ is greater than $\vert$\+Y$\vert$, -\/1 if $\vert$\+X$\vert$ is lesser than $\vert$\+Y$\vert$ or 0 if $\vert$\+X$\vert$ is equal to $\vert$\+Y$\vert$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_ad0e7f426326afc7d3fde309a7a8d82fa}\label{bignum_8h_ad0e7f426326afc7d3fde309a7a8d82fa}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+cmp\+\_\+int@{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+int}}
+\index{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+int@{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+int}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+int()}{mbedtls\_mpi\_cmp\_int()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+cmp\+\_\+int (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{mbedtls\+\_\+mpi\+\_\+sint}]{z }\end{DoxyParamCaption})}
+
+
+
+Compare signed values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Left-\/hand M\+PI \\
+\hline
+{\em z} & The integer value to compare to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if X is greater than z, -\/1 if X is lesser than z or 0 if X is equal to z 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a762dd8add46384d4935a4aecc125096e}\label{bignum_8h_a762dd8add46384d4935a4aecc125096e}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+cmp\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+mpi}}
+\index{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+mpi}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+cmp\+\_\+mpi()}{mbedtls\_mpi\_cmp\_mpi()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+cmp\+\_\+mpi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Compare signed values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Left-\/hand M\+PI \\
+\hline
+{\em Y} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if X is greater than Y, -\/1 if X is lesser than Y or 0 if X is equal to Y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a2f722863f9fd9098690f8a9db9962044}\label{bignum_8h_a2f722863f9fd9098690f8a9db9962044}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+copy@{mbedtls\+\_\+mpi\+\_\+copy}}
+\index{mbedtls\+\_\+mpi\+\_\+copy@{mbedtls\+\_\+mpi\+\_\+copy}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+copy()}{mbedtls\_mpi\_copy()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Copy the contents of Y into X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em Y} & Source M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a7ffac96dd27bbe62dba7c6307edd2c60}\label{bignum_8h_a7ffac96dd27bbe62dba7c6307edd2c60}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+div\+\_\+int@{mbedtls\+\_\+mpi\+\_\+div\+\_\+int}}
+\index{mbedtls\+\_\+mpi\+\_\+div\+\_\+int@{mbedtls\+\_\+mpi\+\_\+div\+\_\+int}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+div\+\_\+int()}{mbedtls\_mpi\_div\_int()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+div\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{Q,  }\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{R,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{mbedtls\+\_\+mpi\+\_\+sint}]{b }\end{DoxyParamCaption})}
+
+
+
+Division by int\+: A = Q $\ast$ b + R. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Q} & Destination M\+PI for the quotient \\
+\hline
+{\em R} & Destination M\+PI for the rest value \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em b} & Integer to divide by\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO if b == 0
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Either Q or R can be N\+U\+LL. 
+\end{DoxyNote}
+\mbox{\Hypertarget{bignum_8h_a5f3db711e21b4fe2f1a009099478e796}\label{bignum_8h_a5f3db711e21b4fe2f1a009099478e796}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+div\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+div\+\_\+mpi}}
+\index{mbedtls\+\_\+mpi\+\_\+div\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+div\+\_\+mpi}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+div\+\_\+mpi()}{mbedtls\_mpi\_div\_mpi()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+div\+\_\+mpi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{Q,  }\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{R,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Division by \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}}\+: A = Q $\ast$ B + R. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Q} & Destination M\+PI for the quotient \\
+\hline
+{\em R} & Destination M\+PI for the rest value \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em B} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO if B == 0
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Either Q or R can be N\+U\+LL. 
+\end{DoxyNote}
+\mbox{\Hypertarget{bignum_8h_a55433a16c951178e2b98a01c6386239e}\label{bignum_8h_a55433a16c951178e2b98a01c6386239e}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+exp\+\_\+mod@{mbedtls\+\_\+mpi\+\_\+exp\+\_\+mod}}
+\index{mbedtls\+\_\+mpi\+\_\+exp\+\_\+mod@{mbedtls\+\_\+mpi\+\_\+exp\+\_\+mod}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+exp\+\_\+mod()}{mbedtls\_mpi\_exp\_mod()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+exp\+\_\+mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{E,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{N,  }\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{\+\_\+\+RR }\end{DoxyParamCaption})}
+
+
+
+Sliding-\/window exponentiation\+: X = A$^\wedge$E mod N. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em E} & Exponent M\+PI \\
+\hline
+{\em N} & Modular M\+PI \\
+\hline
+{\em \+\_\+\+RR} & Speed-\/up M\+PI used for recalculations\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if N is negative or even or if E is negative
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\+\_\+\+RR is used to avoid re-\/computing R$\ast$R mod N across multiple calls, which speeds up things a bit. It can be set to N\+U\+LL if the extra performance is unneeded. 
+\end{DoxyNote}
+\mbox{\Hypertarget{bignum_8h_a81b99c0a79d3e8ddedfd4a6ee37ceb1e}\label{bignum_8h_a81b99c0a79d3e8ddedfd4a6ee37ceb1e}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+fill\+\_\+random@{mbedtls\+\_\+mpi\+\_\+fill\+\_\+random}}
+\index{mbedtls\+\_\+mpi\+\_\+fill\+\_\+random@{mbedtls\+\_\+mpi\+\_\+fill\+\_\+random}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+fill\+\_\+random()}{mbedtls\_mpi\_fill\_random()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+fill\+\_\+random (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{size\+\_\+t}]{size,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+rng,  }\item[{void $\ast$}]{p\+\_\+rng }\end{DoxyParamCaption})}
+
+
+
+Fill an M\+PI X with size bytes of random. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em size} & Size in bytes \\
+\hline
+{\em f\+\_\+rng} & R\+NG function \\
+\hline
+{\em p\+\_\+rng} & R\+NG parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_abffd5d8382cb86c089a1ef2bebb90f9f}\label{bignum_8h_abffd5d8382cb86c089a1ef2bebb90f9f}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+free@{mbedtls\+\_\+mpi\+\_\+free}}
+\index{mbedtls\+\_\+mpi\+\_\+free@{mbedtls\+\_\+mpi\+\_\+free}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+free()}{mbedtls\_mpi\_free()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+mpi\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X }\end{DoxyParamCaption})}
+
+
+
+Unallocate one M\+PI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & One M\+PI to unallocate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bignum_8h_aeebcfa54676b583d2e767b1c01c9844f}\label{bignum_8h_aeebcfa54676b583d2e767b1c01c9844f}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+gcd@{mbedtls\+\_\+mpi\+\_\+gcd}}
+\index{mbedtls\+\_\+mpi\+\_\+gcd@{mbedtls\+\_\+mpi\+\_\+gcd}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+gcd()}{mbedtls\_mpi\_gcd()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+gcd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{G,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Greatest common divisor\+: G = gcd(\+A, B) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em B} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_ad1267890b0187b0a73ce0e7ce4ab4929}\label{bignum_8h_ad1267890b0187b0a73ce0e7ce4ab4929}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+gen\+\_\+prime@{mbedtls\+\_\+mpi\+\_\+gen\+\_\+prime}}
+\index{mbedtls\+\_\+mpi\+\_\+gen\+\_\+prime@{mbedtls\+\_\+mpi\+\_\+gen\+\_\+prime}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+gen\+\_\+prime()}{mbedtls\_mpi\_gen\_prime()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+gen\+\_\+prime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{size\+\_\+t}]{nbits,  }\item[{int}]{dh\+\_\+flag,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+rng,  }\item[{void $\ast$}]{p\+\_\+rng }\end{DoxyParamCaption})}
+
+
+
+Prime number generation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em nbits} & Required size of X in bits ( 3 $<$= nbits $<$= M\+B\+E\+D\+T\+L\+S\+\_\+\+M\+P\+I\+\_\+\+M\+A\+X\+\_\+\+B\+I\+TS ) \\
+\hline
+{\em dh\+\_\+flag} & If 1, then (X-\/1)/2 will be prime too \\
+\hline
+{\em f\+\_\+rng} & R\+NG function \\
+\hline
+{\em p\+\_\+rng} & R\+NG parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful (probably prime), M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if nbits is $<$ 3 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_abfc40fb7192507bc0eeb9f24e8e69c2d}\label{bignum_8h_abfc40fb7192507bc0eeb9f24e8e69c2d}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+get\+\_\+bit@{mbedtls\+\_\+mpi\+\_\+get\+\_\+bit}}
+\index{mbedtls\+\_\+mpi\+\_\+get\+\_\+bit@{mbedtls\+\_\+mpi\+\_\+get\+\_\+bit}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+get\+\_\+bit()}{mbedtls\_mpi\_get\_bit()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+get\+\_\+bit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption})}
+
+
+
+Get a specific bit from X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to use \\
+\hline
+{\em pos} & Zero-\/based index of the bit in X\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Either a 0 or a 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a22263d90d838cb58f271aa8f1920843d}\label{bignum_8h_a22263d90d838cb58f271aa8f1920843d}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+grow@{mbedtls\+\_\+mpi\+\_\+grow}}
+\index{mbedtls\+\_\+mpi\+\_\+grow@{mbedtls\+\_\+mpi\+\_\+grow}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+grow()}{mbedtls\_mpi\_grow()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+grow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{size\+\_\+t}]{nblimbs }\end{DoxyParamCaption})}
+
+
+
+Enlarge to the specified number of limbs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to grow \\
+\hline
+{\em nblimbs} & The target number of limbs\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a99c7cca612b47dc4f3b96905c4f9d69e}\label{bignum_8h_a99c7cca612b47dc4f3b96905c4f9d69e}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+init@{mbedtls\+\_\+mpi\+\_\+init}}
+\index{mbedtls\+\_\+mpi\+\_\+init@{mbedtls\+\_\+mpi\+\_\+init}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+init()}{mbedtls\_mpi\_init()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+mpi\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X }\end{DoxyParamCaption})}
+
+
+
+Initialize one M\+PI (make internal references valid) This just makes it ready to be set or freed, but does not define a value for the M\+PI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & One M\+PI to initialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bignum_8h_abb720bf24bc902fe6edd2ce0cd9ce6e3}\label{bignum_8h_abb720bf24bc902fe6edd2ce0cd9ce6e3}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+inv\+\_\+mod@{mbedtls\+\_\+mpi\+\_\+inv\+\_\+mod}}
+\index{mbedtls\+\_\+mpi\+\_\+inv\+\_\+mod@{mbedtls\+\_\+mpi\+\_\+inv\+\_\+mod}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+inv\+\_\+mod()}{mbedtls\_mpi\_inv\_mod()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+inv\+\_\+mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{N }\end{DoxyParamCaption})}
+
+
+
+Modular inverse\+: X = A$^\wedge$-\/1 mod N. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em N} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if N is negative or nil M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE if A has no inverse mod N 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a5e5d03e6e1758bf871d23c96f7b91394}\label{bignum_8h_a5e5d03e6e1758bf871d23c96f7b91394}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+is\+\_\+prime@{mbedtls\+\_\+mpi\+\_\+is\+\_\+prime}}
+\index{mbedtls\+\_\+mpi\+\_\+is\+\_\+prime@{mbedtls\+\_\+mpi\+\_\+is\+\_\+prime}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+is\+\_\+prime()}{mbedtls\_mpi\_is\_prime()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+is\+\_\+prime (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{int($\ast$)(void $\ast$, unsigned char $\ast$, size\+\_\+t)}]{f\+\_\+rng,  }\item[{void $\ast$}]{p\+\_\+rng }\end{DoxyParamCaption})}
+
+
+
+Miller-\/\+Rabin primality test. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to check \\
+\hline
+{\em f\+\_\+rng} & R\+NG function \\
+\hline
+{\em p\+\_\+rng} & R\+NG parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful (probably prime), M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+O\+T\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+LE if X is not prime 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_aa67117fd61db9570746dc2ffca88d004}\label{bignum_8h_aa67117fd61db9570746dc2ffca88d004}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+lsb@{mbedtls\+\_\+mpi\+\_\+lsb}}
+\index{mbedtls\+\_\+mpi\+\_\+lsb@{mbedtls\+\_\+mpi\+\_\+lsb}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+lsb()}{mbedtls\_mpi\_lsb()}}
+{\footnotesize\ttfamily size\+\_\+t mbedtls\+\_\+mpi\+\_\+lsb (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X }\end{DoxyParamCaption})}
+
+
+
+Return the number of zero-\/bits before the least significant \textquotesingle{}1\textquotesingle{} bit. 
+
+Note\+: Thus also the zero-\/based index of the least significant \textquotesingle{}1\textquotesingle{} bit
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bignum_8h_a65644d139404325130491759a5651f6d}\label{bignum_8h_a65644d139404325130491759a5651f6d}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+lset@{mbedtls\+\_\+mpi\+\_\+lset}}
+\index{mbedtls\+\_\+mpi\+\_\+lset@{mbedtls\+\_\+mpi\+\_\+lset}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+lset()}{mbedtls\_mpi\_lset()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+lset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{mbedtls\+\_\+mpi\+\_\+sint}]{z }\end{DoxyParamCaption})}
+
+
+
+Set value from integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to set \\
+\hline
+{\em z} & Value to use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a3d2a4a4c3d64490e26e05153ed798058}\label{bignum_8h_a3d2a4a4c3d64490e26e05153ed798058}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+mod\+\_\+int@{mbedtls\+\_\+mpi\+\_\+mod\+\_\+int}}
+\index{mbedtls\+\_\+mpi\+\_\+mod\+\_\+int@{mbedtls\+\_\+mpi\+\_\+mod\+\_\+int}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+mod\+\_\+int()}{mbedtls\_mpi\_mod\_int()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+mod\+\_\+int (\begin{DoxyParamCaption}\item[{mbedtls\+\_\+mpi\+\_\+uint $\ast$}]{r,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{mbedtls\+\_\+mpi\+\_\+sint}]{b }\end{DoxyParamCaption})}
+
+
+
+Modulo\+: r = A mod b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Destination mbedtls\+\_\+mpi\+\_\+uint \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em b} & Integer to divide by\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO if b == 0, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE if b $<$ 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a7b9db15054cb320c69dd065d3f17e674}\label{bignum_8h_a7b9db15054cb320c69dd065d3f17e674}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+mod\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+mod\+\_\+mpi}}
+\index{mbedtls\+\_\+mpi\+\_\+mod\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+mod\+\_\+mpi}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+mod\+\_\+mpi()}{mbedtls\_mpi\_mod\_mpi()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+mod\+\_\+mpi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{R,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Modulo\+: R = A mod B. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Destination M\+PI for the rest value \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em B} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO if B == 0, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE if B $<$ 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_ac4a22cb29f7e19dd4c823d1868f45eab}\label{bignum_8h_ac4a22cb29f7e19dd4c823d1868f45eab}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+mul\+\_\+int@{mbedtls\+\_\+mpi\+\_\+mul\+\_\+int}}
+\index{mbedtls\+\_\+mpi\+\_\+mul\+\_\+int@{mbedtls\+\_\+mpi\+\_\+mul\+\_\+int}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+mul\+\_\+int()}{mbedtls\_mpi\_mul\_int()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+mul\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{mbedtls\+\_\+mpi\+\_\+uint}]{b }\end{DoxyParamCaption})}
+
+
+
+Baseline multiplication\+: X = A $\ast$ b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em b} & The unsigned integer value to multiply with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+b is unsigned
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_aa9065cae8e3a287095b4043317f6b706}\label{bignum_8h_aa9065cae8e3a287095b4043317f6b706}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+mul\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+mul\+\_\+mpi}}
+\index{mbedtls\+\_\+mpi\+\_\+mul\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+mul\+\_\+mpi}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+mul\+\_\+mpi()}{mbedtls\_mpi\_mul\_mpi()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+mul\+\_\+mpi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Baseline multiplication\+: X = A $\ast$ B. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em B} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a68f62c99e53eb034daea486e5d5d83ca}\label{bignum_8h_a68f62c99e53eb034daea486e5d5d83ca}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+read\+\_\+binary@{mbedtls\+\_\+mpi\+\_\+read\+\_\+binary}}
+\index{mbedtls\+\_\+mpi\+\_\+read\+\_\+binary@{mbedtls\+\_\+mpi\+\_\+read\+\_\+binary}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+read\+\_\+binary()}{mbedtls\_mpi\_read\_binary()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+read\+\_\+binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen }\end{DoxyParamCaption})}
+
+
+
+Import X from unsigned binary data, big endian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em buf} & Input buffer \\
+\hline
+{\em buflen} & Input buffer size\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_acb4d0ed28a946cfa83219ae8709941d4}\label{bignum_8h_acb4d0ed28a946cfa83219ae8709941d4}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+read\+\_\+file@{mbedtls\+\_\+mpi\+\_\+read\+\_\+file}}
+\index{mbedtls\+\_\+mpi\+\_\+read\+\_\+file@{mbedtls\+\_\+mpi\+\_\+read\+\_\+file}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+read\+\_\+file()}{mbedtls\_mpi\_read\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+read\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{int}]{radix,  }\item[{F\+I\+LE $\ast$}]{fin }\end{DoxyParamCaption})}
+
+
+
+Read X from an opened file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em radix} & Input numeric base \\
+\hline
+{\em fin} & Input file handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL if the file read buffer is too small or a M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+X\+XX error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a15efd3f2f86700b69f6c18d34ac05758}\label{bignum_8h_a15efd3f2f86700b69f6c18d34ac05758}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+read\+\_\+string@{mbedtls\+\_\+mpi\+\_\+read\+\_\+string}}
+\index{mbedtls\+\_\+mpi\+\_\+read\+\_\+string@{mbedtls\+\_\+mpi\+\_\+read\+\_\+string}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+read\+\_\+string()}{mbedtls\_mpi\_read\_string()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+read\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{int}]{radix,  }\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Import from an A\+S\+C\+II string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em radix} & Input numeric base \\
+\hline
+{\em s} & Null-\/terminated string buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+X\+XX error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a623c565706f22d8fbcc665ba49a51c7c}\label{bignum_8h_a623c565706f22d8fbcc665ba49a51c7c}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+assign@{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+assign}}
+\index{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+assign@{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+assign}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+assign()}{mbedtls\_mpi\_safe\_cond\_assign()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{Y,  }\item[{unsigned char}]{assign }\end{DoxyParamCaption})}
+
+
+
+Safe conditional assignement X = Y if assign is 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to conditionally assign to \\
+\hline
+{\em Y} & Value to be assigned \\
+\hline
+{\em assign} & 1\+: perform the assignment, 0\+: keep X\textquotesingle{}s original value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed,
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is equivalent to if( assign ) mbedtls\+\_\+mpi\+\_\+copy( X, Y ); except that it avoids leaking any information about whether the assignment was done or not (the above code may leak information through branch prediction and/or memory access patterns analysis). 
+\end{DoxyNote}
+\mbox{\Hypertarget{bignum_8h_a956c54f87d26ceb6da98043805e67684}\label{bignum_8h_a956c54f87d26ceb6da98043805e67684}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+swap@{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+swap}}
+\index{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+swap@{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+swap}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+swap()}{mbedtls\_mpi\_safe\_cond\_swap()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+safe\+\_\+cond\+\_\+swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{Y,  }\item[{unsigned char}]{assign }\end{DoxyParamCaption})}
+
+
+
+Safe conditional swap X $<$-\/$>$ Y if swap is 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & First \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} value \\
+\hline
+{\em Y} & Second \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} value \\
+\hline
+{\em assign} & 1\+: perform the swap, 0\+: keep X and Y\textquotesingle{}s original values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed,
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is equivalent to if( assign ) mbedtls\+\_\+mpi\+\_\+swap( X, Y ); except that it avoids leaking any information about whether the assignment was done or not (the above code may leak information through branch prediction and/or memory access patterns analysis). 
+\end{DoxyNote}
+\mbox{\Hypertarget{bignum_8h_a75b6f4376bdceb63ef5a65737c1a638c}\label{bignum_8h_a75b6f4376bdceb63ef5a65737c1a638c}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+self\+\_\+test@{mbedtls\+\_\+mpi\+\_\+self\+\_\+test}}
+\index{mbedtls\+\_\+mpi\+\_\+self\+\_\+test@{mbedtls\+\_\+mpi\+\_\+self\+\_\+test}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+self\+\_\+test()}{mbedtls\_mpi\_self\_test()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+self\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{verbose }\end{DoxyParamCaption})}
+
+
+
+Checkup routine. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, or 1 if the test failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a39a475e7957e7a60993fc6e801d9913b}\label{bignum_8h_a39a475e7957e7a60993fc6e801d9913b}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+set\+\_\+bit@{mbedtls\+\_\+mpi\+\_\+set\+\_\+bit}}
+\index{mbedtls\+\_\+mpi\+\_\+set\+\_\+bit@{mbedtls\+\_\+mpi\+\_\+set\+\_\+bit}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+set\+\_\+bit()}{mbedtls\_mpi\_set\_bit()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+set\+\_\+bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{size\+\_\+t}]{pos,  }\item[{unsigned char}]{val }\end{DoxyParamCaption})}
+
+
+
+Set a bit of X to a specific value of 0 or 1. 
+
+\begin{DoxyNote}{Note}
+Will grow X if necessary to set a bit to 1 in a not yet existing limb. Will not grow if bit should be set to 0
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to use \\
+\hline
+{\em pos} & Zero-\/based index of the bit in X \\
+\hline
+{\em val} & The value to set the bit to (0 or 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+A\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+A\+TA if val is not 0 or 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a8d48a56155412dda56e67256be4d10d9}\label{bignum_8h_a8d48a56155412dda56e67256be4d10d9}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+shift\+\_\+l@{mbedtls\+\_\+mpi\+\_\+shift\+\_\+l}}
+\index{mbedtls\+\_\+mpi\+\_\+shift\+\_\+l@{mbedtls\+\_\+mpi\+\_\+shift\+\_\+l}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+shift\+\_\+l()}{mbedtls\_mpi\_shift\_l()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+shift\+\_\+l (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Left-\/shift\+: X $<$$<$= count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to shift \\
+\hline
+{\em count} & Amount to shift\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_aee1140147b1e807645cebf64ebded168}\label{bignum_8h_aee1140147b1e807645cebf64ebded168}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+shift\+\_\+r@{mbedtls\+\_\+mpi\+\_\+shift\+\_\+r}}
+\index{mbedtls\+\_\+mpi\+\_\+shift\+\_\+r@{mbedtls\+\_\+mpi\+\_\+shift\+\_\+r}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+shift\+\_\+r()}{mbedtls\_mpi\_shift\_r()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+shift\+\_\+r (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Right-\/shift\+: X $>$$>$= count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to shift \\
+\hline
+{\em count} & Amount to shift\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_abaaef229c95711a53b2f38eff0a2c14a}\label{bignum_8h_abaaef229c95711a53b2f38eff0a2c14a}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+shrink@{mbedtls\+\_\+mpi\+\_\+shrink}}
+\index{mbedtls\+\_\+mpi\+\_\+shrink@{mbedtls\+\_\+mpi\+\_\+shrink}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+shrink()}{mbedtls\_mpi\_shrink()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+shrink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{size\+\_\+t}]{nblimbs }\end{DoxyParamCaption})}
+
+
+
+Resize down, keeping at least the specified number of limbs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to shrink \\
+\hline
+{\em nblimbs} & The minimum number of limbs to keep\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a538110c9da02704d34d67a07d16fb3ab}\label{bignum_8h_a538110c9da02704d34d67a07d16fb3ab}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+size@{mbedtls\+\_\+mpi\+\_\+size}}
+\index{mbedtls\+\_\+mpi\+\_\+size@{mbedtls\+\_\+mpi\+\_\+size}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+size()}{mbedtls\_mpi\_size()}}
+{\footnotesize\ttfamily size\+\_\+t mbedtls\+\_\+mpi\+\_\+size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X }\end{DoxyParamCaption})}
+
+
+
+Return the total size in bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & M\+PI to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bignum_8h_ad5840808639d50a98edbede345251293}\label{bignum_8h_ad5840808639d50a98edbede345251293}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+sub\+\_\+abs@{mbedtls\+\_\+mpi\+\_\+sub\+\_\+abs}}
+\index{mbedtls\+\_\+mpi\+\_\+sub\+\_\+abs@{mbedtls\+\_\+mpi\+\_\+sub\+\_\+abs}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+sub\+\_\+abs()}{mbedtls\_mpi\_sub\_abs()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+sub\+\_\+abs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Unsigned subtraction\+: X = $\vert$\+A$\vert$ -\/ $\vert$\+B$\vert$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em B} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+V\+A\+L\+UE if B is greater than A 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a1a925403c039d920059297cfb4ad5bad}\label{bignum_8h_a1a925403c039d920059297cfb4ad5bad}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+sub\+\_\+int@{mbedtls\+\_\+mpi\+\_\+sub\+\_\+int}}
+\index{mbedtls\+\_\+mpi\+\_\+sub\+\_\+int@{mbedtls\+\_\+mpi\+\_\+sub\+\_\+int}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+sub\+\_\+int()}{mbedtls\_mpi\_sub\_int()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+sub\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{mbedtls\+\_\+mpi\+\_\+sint}]{b }\end{DoxyParamCaption})}
+
+
+
+Signed subtraction\+: X = A -\/ b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em b} & The integer value to subtract\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a1a38a8d9f5052491df94d8010bd34955}\label{bignum_8h_a1a38a8d9f5052491df94d8010bd34955}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+sub\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+sub\+\_\+mpi}}
+\index{mbedtls\+\_\+mpi\+\_\+sub\+\_\+mpi@{mbedtls\+\_\+mpi\+\_\+sub\+\_\+mpi}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+sub\+\_\+mpi()}{mbedtls\_mpi\_sub\_mpi()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+sub\+\_\+mpi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{A,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Signed subtraction\+: X = A -\/ B. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Destination M\+PI \\
+\hline
+{\em A} & Left-\/hand M\+PI \\
+\hline
+{\em B} & Right-\/hand M\+PI\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+I\+L\+ED if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_a60d0c82301d6cf50e69808b6a3c5cd63}\label{bignum_8h_a60d0c82301d6cf50e69808b6a3c5cd63}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+swap@{mbedtls\+\_\+mpi\+\_\+swap}}
+\index{mbedtls\+\_\+mpi\+\_\+swap@{mbedtls\+\_\+mpi\+\_\+swap}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+swap()}{mbedtls\_mpi\_swap()}}
+{\footnotesize\ttfamily void mbedtls\+\_\+mpi\+\_\+swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{\mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Swap the contents of X and Y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & First M\+PI value \\
+\hline
+{\em Y} & Second M\+PI value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bignum_8h_aceb4aeeb376a582a5e904135205ada44}\label{bignum_8h_aceb4aeeb376a582a5e904135205ada44}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+write\+\_\+binary@{mbedtls\+\_\+mpi\+\_\+write\+\_\+binary}}
+\index{mbedtls\+\_\+mpi\+\_\+write\+\_\+binary@{mbedtls\+\_\+mpi\+\_\+write\+\_\+binary}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+write\+\_\+binary()}{mbedtls\_mpi\_write\_binary()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+write\+\_\+binary (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{unsigned char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen }\end{DoxyParamCaption})}
+
+
+
+Export X into unsigned binary data, big endian. Always fills the whole buffer, which will start with zeros if the number is smaller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Source M\+PI \\
+\hline
+{\em buf} & Output buffer \\
+\hline
+{\em buflen} & Output buffer size\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL if buf isn\textquotesingle{}t large enough 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bignum_8h_ab23e312f4a0479c8b63a4bc9328e1324}\label{bignum_8h_ab23e312f4a0479c8b63a4bc9328e1324}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+write\+\_\+file@{mbedtls\+\_\+mpi\+\_\+write\+\_\+file}}
+\index{mbedtls\+\_\+mpi\+\_\+write\+\_\+file@{mbedtls\+\_\+mpi\+\_\+write\+\_\+file}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+write\+\_\+file()}{mbedtls\_mpi\_write\_file()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+write\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p,  }\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{int}]{radix,  }\item[{F\+I\+LE $\ast$}]{fout }\end{DoxyParamCaption})}
+
+
+
+Write X into an opened file, or stdout if fout is N\+U\+LL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Prefix, can be N\+U\+LL \\
+\hline
+{\em X} & Source M\+PI \\
+\hline
+{\em radix} & Output numeric base \\
+\hline
+{\em fout} & Output file handle (can be N\+U\+LL)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+X\+XX error code
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Set fout == N\+U\+LL to print X on the console. 
+\end{DoxyNote}
+\mbox{\Hypertarget{bignum_8h_ab2197e4833449c3e505ec8d11b348913}\label{bignum_8h_ab2197e4833449c3e505ec8d11b348913}} 
+\index{bignum.\+h@{bignum.\+h}!mbedtls\+\_\+mpi\+\_\+write\+\_\+string@{mbedtls\+\_\+mpi\+\_\+write\+\_\+string}}
+\index{mbedtls\+\_\+mpi\+\_\+write\+\_\+string@{mbedtls\+\_\+mpi\+\_\+write\+\_\+string}!bignum.\+h@{bignum.\+h}}
+\subsubsection{\texorpdfstring{mbedtls\+\_\+mpi\+\_\+write\+\_\+string()}{mbedtls\_mpi\_write\_string()}}
+{\footnotesize\ttfamily int mbedtls\+\_\+mpi\+\_\+write\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmbedtls__mpi}{mbedtls\+\_\+mpi}} $\ast$}]{X,  }\item[{int}]{radix,  }\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buflen,  }\item[{size\+\_\+t $\ast$}]{olen }\end{DoxyParamCaption})}
+
+
+
+Export into an A\+S\+C\+II string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Source M\+PI \\
+\hline
+{\em radix} & Output numeric base \\
+\hline
+{\em buf} & Buffer to write the string to \\
+\hline
+{\em buflen} & Length of buf \\
+\hline
+{\em olen} & Length of the string written, including final N\+UL byte\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, or a M\+B\+E\+D\+T\+L\+S\+\_\+\+E\+R\+R\+\_\+\+M\+P\+I\+\_\+\+X\+XX error code. $\ast$olen is always updated to reflect the amount of data that has (or would have) been written.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Call this function with buflen = 0 to obtain the minimum required buffer size in $\ast$olen. 
+\end{DoxyNote}

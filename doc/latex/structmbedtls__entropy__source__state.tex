@@ -1,0 +1,93 @@
+\hypertarget{structmbedtls__entropy__source__state}{}\section{mbedtls\+\_\+entropy\+\_\+source\+\_\+state Struct Reference}
+\label{structmbedtls__entropy__source__state}\index{mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}}
+
+
+Entropy source state.  
+
+
+
+
+{\ttfamily \#include $<$entropy.\+h$>$}
+
+
+
+Collaboration diagram for mbedtls\+\_\+entropy\+\_\+source\+\_\+state\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{entropy_8h_a2168f0720e2e869e440fd7fa35c941bd}{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr}} \mbox{\hyperlink{structmbedtls__entropy__source__state_afa26f990bd3ae555a84bdee710fd5844}{f\+\_\+source}}
+\item 
+void $\ast$ \mbox{\hyperlink{structmbedtls__entropy__source__state_ac290f929e3382e26443b6625ab9a0d78}{p\+\_\+source}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structmbedtls__entropy__source__state_a395d9641c3aa0cddd5b1977c9e2a6aba}{size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structmbedtls__entropy__source__state_ab5ac92f3c7acd5a47ee986fb915e9686}{threshold}}
+\item 
+int \mbox{\hyperlink{structmbedtls__entropy__source__state_a13f749f23a93d986357832477335ec83}{strong}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Entropy source state. 
+
+Definition at line 109 of file entropy.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmbedtls__entropy__source__state_afa26f990bd3ae555a84bdee710fd5844}\label{structmbedtls__entropy__source__state_afa26f990bd3ae555a84bdee710fd5844}} 
+\index{mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}!f\+\_\+source@{f\+\_\+source}}
+\index{f\+\_\+source@{f\+\_\+source}!mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}}
+\subsubsection{\texorpdfstring{f\+\_\+source}{f\_source}}
+{\footnotesize\ttfamily \mbox{\hyperlink{entropy_8h_a2168f0720e2e869e440fd7fa35c941bd}{mbedtls\+\_\+entropy\+\_\+f\+\_\+source\+\_\+ptr}} mbedtls\+\_\+entropy\+\_\+source\+\_\+state\+::f\+\_\+source}
+
+The entropy source callback 
+
+Definition at line 111 of file entropy.\+h.
+
+\mbox{\Hypertarget{structmbedtls__entropy__source__state_ac290f929e3382e26443b6625ab9a0d78}\label{structmbedtls__entropy__source__state_ac290f929e3382e26443b6625ab9a0d78}} 
+\index{mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}!p\+\_\+source@{p\+\_\+source}}
+\index{p\+\_\+source@{p\+\_\+source}!mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}}
+\subsubsection{\texorpdfstring{p\+\_\+source}{p\_source}}
+{\footnotesize\ttfamily void$\ast$ mbedtls\+\_\+entropy\+\_\+source\+\_\+state\+::p\+\_\+source}
+
+The callback data pointer 
+
+Definition at line 112 of file entropy.\+h.
+
+\mbox{\Hypertarget{structmbedtls__entropy__source__state_a395d9641c3aa0cddd5b1977c9e2a6aba}\label{structmbedtls__entropy__source__state_a395d9641c3aa0cddd5b1977c9e2a6aba}} 
+\index{mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}!size@{size}}
+\index{size@{size}!mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily size\+\_\+t mbedtls\+\_\+entropy\+\_\+source\+\_\+state\+::size}
+
+Amount received in bytes 
+
+Definition at line 113 of file entropy.\+h.
+
+\mbox{\Hypertarget{structmbedtls__entropy__source__state_a13f749f23a93d986357832477335ec83}\label{structmbedtls__entropy__source__state_a13f749f23a93d986357832477335ec83}} 
+\index{mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}!strong@{strong}}
+\index{strong@{strong}!mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}}
+\subsubsection{\texorpdfstring{strong}{strong}}
+{\footnotesize\ttfamily int mbedtls\+\_\+entropy\+\_\+source\+\_\+state\+::strong}
+
+Is the source strong? 
+
+Definition at line 115 of file entropy.\+h.
+
+\mbox{\Hypertarget{structmbedtls__entropy__source__state_ab5ac92f3c7acd5a47ee986fb915e9686}\label{structmbedtls__entropy__source__state_ab5ac92f3c7acd5a47ee986fb915e9686}} 
+\index{mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}!threshold@{threshold}}
+\index{threshold@{threshold}!mbedtls\+\_\+entropy\+\_\+source\+\_\+state@{mbedtls\+\_\+entropy\+\_\+source\+\_\+state}}
+\subsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily size\+\_\+t mbedtls\+\_\+entropy\+\_\+source\+\_\+state\+::threshold}
+
+Minimum bytes required before release 
+
+Definition at line 114 of file entropy.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/c-\/libp2p/include/mbedtls/\mbox{\hyperlink{entropy_8h}{entropy.\+h}}\end{DoxyCompactItemize}

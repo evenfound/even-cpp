@@ -1,0 +1,17 @@
+digraph "Botan::make_uint32"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node221 [label="Botan::make_uint32",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node221 -> Node222 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node222 [label="Botan::TLS::Certificate\l::Certificate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_t_l_s_1_1_certificate.html#a2000a5fbaabfa453f0fe94daea1af96b"];
+  Node221 -> Node223 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node223 [label="Botan::TLS::Stream\l_Handshake_IO::get_next\l_record",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_t_l_s_1_1_stream___handshake___i_o.html#aa198869863aa2d98b8a6c89e01e73d4d"];
+  Node221 -> Node224 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node224 [label="Botan::load_be\< uint32_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a859a883d8cb8ec54d5c8d62969260bd8"];
+  Node224 -> Node225 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node225 [label="Botan::ucs4_to_utf8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a2bb4359def9a750e534e6ece252bd319"];
+  Node221 -> Node226 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node226 [label="Botan::load_le\< uint32_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a2d9442a9a8c4177d35388d0c82f7f2e0"];
+}

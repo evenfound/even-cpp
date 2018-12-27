@@ -1,0 +1,63 @@
+\hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state}{}\section{Botan\+:\+:T\+LS\+:\+:Connection\+\_\+\+Cipher\+\_\+\+State Class Reference}
+\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state}\index{Botan\+::\+T\+L\+S\+::\+Connection\+\_\+\+Cipher\+\_\+\+State@{Botan\+::\+T\+L\+S\+::\+Connection\+\_\+\+Cipher\+\_\+\+State}}
+
+
+{\ttfamily \#include $<$tls\+\_\+record.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a7cac46fbec016d6a6eff0610dc147f85}{Connection\+\_\+\+Cipher\+\_\+\+State}} (Protocol\+\_\+\+Version version, Connection\+\_\+\+Side which\+\_\+side, bool is\+\_\+our\+\_\+side, const Ciphersuite \&suite, const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___keys}{Session\+\_\+\+Keys}} \&keys, bool uses\+\_\+encrypt\+\_\+then\+\_\+mac)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a64ee976356b7d836e267cf788507e660}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a64ee976356b7d836e267cf788507e660}} 
+A\+E\+A\+D\+\_\+\+Mode $\ast$ {\bfseries aead} ()
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a80ce544210afd6dafee73cab357bba92}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a80ce544210afd6dafee73cab357bba92}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries aead\+\_\+nonce} (uint64\+\_\+t seq, Random\+Number\+Generator \&rng)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_ad62b8b1a094992ac79215a4b5d1830fb}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_ad62b8b1a094992ac79215a4b5d1830fb}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries aead\+\_\+nonce} (const uint8\+\_\+t record\mbox{[}$\,$\mbox{]}, size\+\_\+t record\+\_\+len, uint64\+\_\+t seq)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_acf5dc9aa2988fc8844cabd96be6a3e2a}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_acf5dc9aa2988fc8844cabd96be6a3e2a}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries format\+\_\+ad} (uint64\+\_\+t seq, uint8\+\_\+t type, Protocol\+\_\+\+Version version, uint16\+\_\+t ptext\+\_\+length)
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a5f7161f30a3308bfd21ac440efc74ea9}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a5f7161f30a3308bfd21ac440efc74ea9}} 
+size\+\_\+t {\bfseries nonce\+\_\+bytes\+\_\+from\+\_\+handshake} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a5443993a20a782d907edae616eab5e2c}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a5443993a20a782d907edae616eab5e2c}} 
+size\+\_\+t {\bfseries nonce\+\_\+bytes\+\_\+from\+\_\+record} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a5cfb9c8c03db0d2d6969350cd0003807}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a5cfb9c8c03db0d2d6969350cd0003807}} 
+Nonce\+\_\+\+Format {\bfseries nonce\+\_\+format} () const
+\item 
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a1695503bd69f23dadfe5b2723e6c4431}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a1695503bd69f23dadfe5b2723e6c4431}} 
+std\+::chrono\+::seconds {\bfseries age} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+LS Cipher State 
+
+Definition at line 32 of file tls\+\_\+record.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a7cac46fbec016d6a6eff0610dc147f85}\label{class_botan_1_1_t_l_s_1_1_connection___cipher___state_a7cac46fbec016d6a6eff0610dc147f85}} 
+\index{Botan\+::\+T\+L\+S\+::\+Connection\+\_\+\+Cipher\+\_\+\+State@{Botan\+::\+T\+L\+S\+::\+Connection\+\_\+\+Cipher\+\_\+\+State}!Connection\+\_\+\+Cipher\+\_\+\+State@{Connection\+\_\+\+Cipher\+\_\+\+State}}
+\index{Connection\+\_\+\+Cipher\+\_\+\+State@{Connection\+\_\+\+Cipher\+\_\+\+State}!Botan\+::\+T\+L\+S\+::\+Connection\+\_\+\+Cipher\+\_\+\+State@{Botan\+::\+T\+L\+S\+::\+Connection\+\_\+\+Cipher\+\_\+\+State}}
+\subsubsection{\texorpdfstring{Connection\+\_\+\+Cipher\+\_\+\+State()}{Connection\_Cipher\_State()}}
+{\footnotesize\ttfamily Botan\+::\+T\+L\+S\+::\+Connection\+\_\+\+Cipher\+\_\+\+State\+::\+Connection\+\_\+\+Cipher\+\_\+\+State (\begin{DoxyParamCaption}\item[{Protocol\+\_\+\+Version}]{version,  }\item[{Connection\+\_\+\+Side}]{which\+\_\+side,  }\item[{bool}]{is\+\_\+our\+\_\+side,  }\item[{const Ciphersuite \&}]{suite,  }\item[{const \mbox{\hyperlink{class_botan_1_1_t_l_s_1_1_session___keys}{Session\+\_\+\+Keys}} \&}]{keys,  }\item[{bool}]{uses\+\_\+encrypt\+\_\+then\+\_\+mac }\end{DoxyParamCaption})}
+
+Initialize a new cipher state 
+
+Definition at line 28 of file tls\+\_\+record.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+record.\+h\item 
+prerequisites/botan/src/lib/tls/tls\+\_\+record.\+cpp\end{DoxyCompactItemize}

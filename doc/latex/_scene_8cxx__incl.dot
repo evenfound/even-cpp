@@ -1,0 +1,41 @@
+digraph "src/widgets/Scene.cxx"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="src/widgets/Scene.cxx",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="Scene.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_scene_8hxx_source.html"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="QFont",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="QFontMetrics",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="QVector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="QHash",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="QMap",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="QPainter",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Logger.hxx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_logger_8hxx.html"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="qlogging.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="qdebug.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="QStringList",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="QTextStream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="QMutexLocker",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="QDateTime",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="QWidget",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="QtMath",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}
