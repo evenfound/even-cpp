@@ -1,5 +1,4 @@
 # EVEN Platform Framework
-
 Copyright (c) 2018, The EVEN Found Project
 
 ## Development resources
