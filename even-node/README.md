@@ -36,6 +36,8 @@ Project Folders Structure
     ├── src                     # Source code files
     │   ├── node                # Node inteface files 
     │   │   └── go              # GO implementation  
+    │   │   │   └── module      # package (shared code) files  
+    │   │   │   └── cli         # executable app files  
     │   │   └── ...
     │   ├── ui                  # UI inteface files 
     │   │   └── flutter         # Flutter implementation  
