@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="CK_GOSTR3410_DERIVE\l_PARAMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_k___g_o_s_t_r3410___d_e_r_i_v_e___p_a_r_a_m_s.html"];
-}

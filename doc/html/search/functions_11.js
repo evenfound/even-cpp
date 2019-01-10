@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['value',['Value',['../classeven_1_1_value.html#ace4f4181daf48486843667d315f0d391',1,'even::Value::Value(int value_, const QString &amp;name_, const QString &amp;intro_, Value::Property property_={0.0, 1000.0, 100.0, 2, true})'],['../classeven_1_1_value.html#a2ea082c2c31a47f3957a864822117580',1,'even::Value::Value(QString text_, const QString &amp;name_, const QString &amp;intro_)'],['../classeven_1_1_value.html#a436d089d1ee01eedb8572b9967bc3af8',1,'even::Value::Value(float double_, const QString &amp;name_, const QString &amp;intro_, Value::Property property_={0.0, 1000.0, 100.0, 2, true})'],['../classeven_1_1_value.html#ac9a4fabfe27f2ed4bd75e8e8190ae8cb',1,'even::Value::Value(const QVariant value_, const QString &amp;name_=u8&quot;unnamed&quot;, const QString &amp;intro_=u8&quot;unknown usage&quot;, Value::Property property_={0.0, 1000.0, 100.0, 2, true})'],['../classeven_1_1_value.html#abc2a5a2e6484fac66dae2539cc955667',1,'even::Value::Value()']]],
-  ['valueslider',['ValueSlider',['../classeven_1_1_value_slider.html#a69a3d2ff972e2fc0116709538b7e354f',1,'even::ValueSlider']]]
-];

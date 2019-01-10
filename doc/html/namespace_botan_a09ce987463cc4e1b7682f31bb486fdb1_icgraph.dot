@@ -1,9 +1,0 @@
-digraph "Botan::zeroise"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node392 [label="Botan::zeroise",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node392 -> Node393 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node393 [label="Botan::zap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan.html#a2534f0fffcfe960b963990832bd1d26e"];
-}

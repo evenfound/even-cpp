@@ -1,9 +1,0 @@
-digraph "build_docs.get_concurrency"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="build_docs.get_concurrency",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="build_docs.have_prog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacebuild__docs.html#a9f47a32b0a2d2f838741524fd454bd83"];
-}

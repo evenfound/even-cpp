@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="Botan::Compression\l_Stream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_compression___stream.html"];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="Botan::Zlib_Style_Stream\l\< Stream, ByteType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_zlib___style___stream.html"];
-}

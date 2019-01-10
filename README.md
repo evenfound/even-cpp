@@ -1,5 +1,4 @@
-# EVEN platform framework
-
+# EVEN Platform Framework
 Copyright (c) 2018, The EVEN Found Project
 
 ## Development resources
@@ -12,7 +11,7 @@ Copyright (c) 2018, The EVEN Found Project
 
 ## Introduction
 
-EVEN Network —  is an open cross-chain platform with EVEN cryptocurrency that allows users to interact with more than one blockchain at a time.
+EVEN Network â€” is an open cross-chain platform with EVEN cryptocurrency that allows users to interact with more than one blockchain at a time.
 
 **Cross-chain:** Transactions involving more than one blockchain through a single entry point.
 
