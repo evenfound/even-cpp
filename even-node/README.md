@@ -27,7 +27,7 @@ If you want to get tokens for your testcase, please just ask in one of the commu
 ## How it work
 > Simple EVEN Network architecture illustration
 
-![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Simple EVEN Network architecture illustration")
+![](https://github.com/evenfound/even-network/blob/develop/doc/even-node.png "Simple EVEN Network architecture illustration")
 
 ## Folders Structure
 
