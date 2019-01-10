@@ -24,7 +24,7 @@ by adding them to your approved neighbors list — ensuring that you both broadc
 Everyone will be welcoming and very happy to help you get connected.
 If you want to get tokens for your testcase, please just ask in one of the communication channels.
 
-## Project Folders Structure
+## Folders Structure
 
 > Structure EVEN Node project and short introduction all its subrpojects
 
