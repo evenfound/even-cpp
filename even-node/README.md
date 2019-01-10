@@ -24,6 +24,11 @@ by adding them to your approved neighbors list — ensuring that you both broadc
 Everyone will be welcoming and very happy to help you get connected.
 If you want to get tokens for your testcase, please just ask in one of the communication channels.
 
+## How it work
+> Simple EVEN Network architecture illustration
+
+![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Simple EVEN Network architecture illustration")
+
 ## Folders Structure
 
 > Structure EVEN Node project and short introduction all its subrpojects
