@@ -1,13 +1,5 @@
 !.gitignore
-*/*.user
-*/nbproject/
-*/build
-*/*.*.user.*
 /bin
-*.rar
-*backup
-.qmake.stash
-qmake.txt
 /prerequisites/c-libp2p/
 /prerequisites/c-multiaddr/
 /prerequisites/c-multihash/
@@ -21,5 +13,3 @@ qmake.txt
 /prerequisites/QtWebApp/
 /r-score-demo/build/
 /doc/html/
-
-
