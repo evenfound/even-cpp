@@ -1,8 +1,0 @@
-digraph "Botan::TLS::Handshake_State"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="Botan::TLS::Handshake\l_State",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="Botan::TLS::Server\l_Handshake_State",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_t_l_s_1_1_server___handshake___state.html"];
-}

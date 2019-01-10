@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="Botan::stlCompatibilityDetails\l::_Unique_if\< T[N]\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_botan_1_1stl_compatibility_details_1_1___unique__if_3_01_t[_n]_4.html"];
-}

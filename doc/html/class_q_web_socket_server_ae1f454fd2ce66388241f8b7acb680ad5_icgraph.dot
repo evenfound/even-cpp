@@ -1,9 +1,0 @@
-digraph "QWebSocketServer::sslConfiguration"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node78 [label="QWebSocketServer::sslConfiguration",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node78 -> Node79 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node79 [label="QWebSocketServer::setSsl\lConfiguration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_web_socket_server.html#a543df52afcb224e3bd8c32b02f757de9"];
-}

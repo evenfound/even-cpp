@@ -1,9 +1,0 @@
-digraph "even::Logger::getSeverity"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="even::Logger::getSeverity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="even::Logger::Message\l::~Message",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classeven_1_1_logger_1_1_message.html#ad870fdc45b86b6621da4c21ca4ab30da",tooltip="< "];
-}

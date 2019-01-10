@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="CK_SKIPJACK_RELAYX\l_PARAMS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_k___s_k_i_p_j_a_c_k___r_e_l_a_y_x___p_a_r_a_m_s.html"];
-}

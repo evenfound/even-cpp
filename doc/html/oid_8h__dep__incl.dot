@@ -1,8 +1,0 @@
-digraph "prerequisites/c-libp2p/include/mbedtls/oid.h"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node16 [label="prerequisites/c-libp2p\l/include/mbedtls/oid.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node17 [label="prerequisites/c-libp2p\l/crypto/rsa.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$crypto_2rsa_8c_source.html"];
-}

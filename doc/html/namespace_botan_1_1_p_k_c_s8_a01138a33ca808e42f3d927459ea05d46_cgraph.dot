@@ -1,9 +1,0 @@
-digraph "Botan::PKCS8::copy_key"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node2 [label="Botan::PKCS8::copy_key",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Botan::PKCS8::load_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_botan_1_1_p_k_c_s8.html#a4f6f93f2069527bb1be1ba1dea671102"];
-}

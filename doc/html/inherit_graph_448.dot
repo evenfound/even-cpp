@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node280 [label="QIODevice",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node280 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="QSsh::SshRemoteProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_ssh_1_1_ssh_remote_process.html",tooltip="This class implements an SSH channel for running a remote process. "];
-}

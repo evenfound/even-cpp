@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node481 [label="Key_Agreement",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node481 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="Botan::PK_Ops::Key\l_Agreement_with_KDF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_botan_1_1_p_k___ops_1_1_key___agreement__with___k_d_f.html"];
-}
