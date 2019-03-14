@@ -7,7 +7,7 @@ Copyright (c) 2018, The EVEN Found Project
 - Mail: [dev@evenfound.org](mailto:dev@evenfound.org)
 - Github: [https://github.com/evenfound/even-network](https://github.com/evenfound/even-network)
 - IRC: [#evenfound-dev on Freenode](irc://chat.freenode.net/#evenfound-dev)
-- Translation platform (Pootle): [translate.evenfound.org](https://translate.evenfound.org)
+<!-- - Translation platform (Pootle): [translate.evenfound.org](https://translate.evenfound.org) -->
 
 ## Introduction
 
