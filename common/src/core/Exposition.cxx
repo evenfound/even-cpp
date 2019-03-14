@@ -16,8 +16,10 @@ using namespace even;
 Exposition::Exposition()
     : Config({{QString(u8"exposition"), u8"object", u8"Type object"}})
 {
+    addValue(u8"peak-value-per-sec", 0.0, u8"Peak value of transactions per second"
+             , {0.0, 0.0, 0.0, 1, true});
     addValue(u8"transact-per-sec", 0.0, u8"Number of transactions per second"
-             , {0.0, 0.0, 0.0, 4, true});
+             , {0.0, 0.0, 0.0, 0, true});
     addValue(u8"confirm-time-sec", 0.0, u8"Average confirmation time (sec.)"
              , {0.0, 0.0, 0.0, 1, true});
     addValue(u8"operated", 0, u8"Current trans. operated nodes"
