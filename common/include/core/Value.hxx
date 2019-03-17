@@ -44,7 +44,7 @@ class Value : public QObject {
          */
         Value(int value_, const QString &name_
               , const QString &intro_
-              , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true} );
+              , Value::Property property_ = {0.0, 1.0e+3, 1.0e+2, 2, true});
 
         /**
          * @brief Construct text Value
