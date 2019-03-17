@@ -47,8 +47,8 @@ class Config {
          */
         void addValue(const QString &name_
                       , const QVariant &value_
-                      , const QString& intro_/* = "unknown usage"*/
-                , Value::Property property_/* = {0.0, 1000.0, 100.0, 2, true}*/);
+                      , const QString& intro_ = "unknown usage"
+                , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
 
         /**
          * @brief Update config value by name.
