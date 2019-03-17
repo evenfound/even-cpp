@@ -76,9 +76,9 @@ class Value : public QObject {
          * @param property_ - set range interval and step of change
          */
         explicit Value(const QVariant value_
-                       , const QString &name_= u8"unnamed"
-                , const QString &intro_ = u8"unknown usage"
-                , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
+                       , const QString &name_/*= u8"unnamed"*/
+                , const QString &intro_/* = u8"unknown usage"*/
+                , Value::Property property_/* = {0.0, 1000.0, 100.0, 2, true}*/);
 
         Value(const Value& orig);
 
@@ -148,7 +148,7 @@ class Value : public QObject {
         };
 
         _Value _object;                                     ///< @brief Object of private _Value struct
-        Property _property = {0.0, 1000.0, 100.0, 2, true}; ///< @brief Range interval and step of change
+        Property _property/* = {0.0, 1000.0, 100.0, 2, true}*/; ///< @brief Range interval and step of change
 
 };
 

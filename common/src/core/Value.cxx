@@ -33,7 +33,7 @@ Value::Value(int value_, const QString &name_,
 
 //------------------------------------------------------------------------------
 Value::Value(QString text_, const QString &name_, const QString &intro_) :
-    Value(QVariant(text_), name_, intro_) {
+    Value(QVariant(text_), name_, intro_, Property()) {
 }
 
 //------------------------------------------------------------------------------
