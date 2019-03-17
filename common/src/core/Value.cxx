@@ -77,11 +77,7 @@ Value::Value() :
 //------------------------------------------------------------------------------
 Value& Value::operator=(const Value& value_) {
     _object = {value_.get(), value_.name(), value_.intro()};
-    _property = {value_.property().min
-                 , value_.property().max
-                 , value_.property().step
-                 , value_.property().prec
-                 , value_.property().visible};
+    _property=value_._property;
     return *this;
 }
 
