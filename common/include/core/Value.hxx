@@ -44,7 +44,7 @@ class Value : public QObject {
          */
         Value(int value_, const QString &name_
               , const QString &intro_
-              , Value::Property property_ = {0.0, 1.0e+3, 1.0e+2, 2, true});
+              , Value::Property property_/*={0.0, 1.0e+3, 1.0e+2, 2, true}*/);
 
         /**
          * @brief Construct text Value
@@ -66,7 +66,7 @@ class Value : public QObject {
         Value(float double_
               , const QString &name_
               , const QString &intro_
-              , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
+              , Value::Property property_/* = {0.0, 1000.0, 100.0, 2, true}*/);
 
         /**
          * @brief Construct QVariant Value
@@ -75,8 +75,8 @@ class Value : public QObject {
          * @param intro_    - introduction for display
          * @param property_ - set range interval and step of change
          */
-        Value(const QVariant value_
-              , const QString &name_= u8"unnamed"
+        explicit Value(const QVariant value_
+                       , const QString &name_= u8"unnamed"
                 , const QString &intro_ = u8"unknown usage"
                 , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
 
