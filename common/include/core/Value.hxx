@@ -28,11 +28,16 @@ class Value : public QObject {
          * @brief Entitu for create control of range value set
          */
         struct Property {
-                qreal min=0.0;      ///< @brief Minimum value set
-                qreal max=1000.0;   ///< @brief Maximum value set
-                qreal step=100.0;   ///< @brief Step of change value
-                int prec=2;         ///< @brief Floatinp point precision
-                bool visible=true;  ///< @brief Flag of show
+//                qreal min=0.0;      ///< @brief Minimum value set
+//                qreal max=1000.0;   ///< @brief Maximum value set
+//                qreal step=100.0;   ///< @brief Step of change value
+//                int prec=2;         ///< @brief Floatinp point precision
+//                bool visible=true;  ///< @brief Flag of show
+                qreal min;      ///< @brief Minimum value set
+                qreal max;      ///< @brief Maximum value set
+                qreal step;     ///< @brief Step of change value
+                int prec;       ///< @brief Floatinp point precision
+                bool visible;   ///< @brief Flag of show
         };
 
         /**
@@ -44,7 +49,7 @@ class Value : public QObject {
          */
         Value(int value_, const QString &name_
               , const QString &intro_
-              , Value::Property property_/*={0.0, 1.0e+3, 1.0e+2, 2, true}*/);
+              , Value::Property property_={0.0, 1.0e+3, 1.0e+2, 2, true});
 
         /**
          * @brief Construct text Value
@@ -66,7 +71,7 @@ class Value : public QObject {
         Value(float double_
               , const QString &name_
               , const QString &intro_
-              , Value::Property property_/* = {0.0, 1000.0, 100.0, 2, true}*/);
+              , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
 
         /**
          * @brief Construct QVariant Value
@@ -78,7 +83,7 @@ class Value : public QObject {
         explicit Value(const QVariant value_
                        , const QString &name_/*= u8"unnamed"*/
                 , const QString &intro_/* = u8"unknown usage"*/
-                , Value::Property property_/* = {0.0, 1000.0, 100.0, 2, true}*/);
+                , Value::Property property_ = {0.0, 1000.0, 100.0, 2, true});
 
         Value(const Value& orig);
 
@@ -148,7 +153,7 @@ class Value : public QObject {
         };
 
         _Value _object;                                     ///< @brief Object of private _Value struct
-        Property _property/* = {0.0, 1000.0, 100.0, 2, true}*/; ///< @brief Range interval and step of change
+        Property _property = {0.0, 1000.0, 100.0, 2, true}; ///< @brief Range interval and step of change
 
 };
 

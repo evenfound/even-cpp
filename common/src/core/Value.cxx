@@ -33,7 +33,7 @@ Value::Value(int value_, const QString &name_,
 
 //------------------------------------------------------------------------------
 Value::Value(QString text_, const QString &name_, const QString &intro_) :
-    Value(QVariant(text_), name_, intro_, Property()) {
+    Value(QVariant(text_), name_, intro_) {
 }
 
 //------------------------------------------------------------------------------
@@ -77,7 +77,11 @@ Value::Value() :
 //------------------------------------------------------------------------------
 Value& Value::operator=(const Value& value_) {
     _object = {value_.get(), value_.name(), value_.intro()};
-    _property=value_._property;
+    _property = {value_.property().min
+                 , value_.property().max
+                 , value_.property().step
+                 , value_.property().prec
+                 , value_.property().visible};
     return *this;
 }
 
