@@ -41,8 +41,8 @@ class Logger {
         /** @brief Inherit class for object Message type. */
         class Message {
             public:
-                Message(Logger& log, int level_, Severity severity, const QString& prefix = QString(),
-                        const char * file = nullptr, int line = 0);
+                Message(Logger& log, int level_, Severity severity, const char* prefix,
+                        const char* file = nullptr, int line = 0);
 
                 ~Message();
 

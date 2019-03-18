@@ -34,8 +34,9 @@ void Logger::consoleMessageOutput(QtMsgType, const QMessageLogContext&, const QS
 }
 
 //------------------------------------------------------------------------------
-Logger::Message::Message(Logger& log, int level_, Severity severity, const QString& prefix,
-                         const char * file, int line) :
+Logger::Message::Message(Logger& log, int level_, Severity severity
+                         , const char* prefix
+                         , const char* file, int line) :
     _log(log),
     _level(level_),
     _severity(severity),
@@ -54,8 +55,9 @@ Logger::Message::~Message() {
     }
 
     // If verbocity level more then predefined - break log
-    if(_level > Logger::logLevel[_severity])
+    if(_level > Logger::logLevel[_severity]) {
         return;
+    }
 
     QMutexLocker locker(&(_log._outMutex));
     QDateTime dt(_ts);

@@ -8,15 +8,12 @@
 #include "Application.hxx"
 #include "Logger.hxx"
 
-//#include <QLoggingCategory>
-
 using namespace even;
 
 //------------------------------------------------------------------------------
 Application::Application() :
     SignalHandler(SignalHandler::SIG_INT)
 {
-//    QLoggingCategory::defaultCategory()->setEnabled(QtDebugMsg, true);
 }
 
 //------------------------------------------------------------------------------
@@ -26,8 +23,9 @@ bool Application::isRunning() {
 
 //------------------------------------------------------------------------------
 void Application::terminate() {
-    if(_myThread)
+    if(_myThread) {
         _myThread->terminate();
+    }
 }
 
 //------------------------------------------------------------------------------

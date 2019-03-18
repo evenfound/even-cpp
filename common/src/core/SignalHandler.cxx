@@ -7,7 +7,8 @@
 
 
 #include "SignalHandler.hxx"
-#include <assert.h>
+#include <cassert>
+#include <iostream>
 
 #ifndef _WIN32
     #include <signal.h>
@@ -36,8 +37,11 @@ SignalHandler::SignalHandler(int mask) : _mask(mask)
     assert(g_handler==nullptr);
     g_handler = this;
 
+    std::cout << "Fire SignalHandler constructor.. " << std::endl;
 #ifdef _WIN32
+    std::cout << "Start SetConsoleCtrlHandler.. " << std::endl;
     SetConsoleCtrlHandler(WIN32_handleFunc, TRUE);
+
 #endif //_WIN32
 
     for (int i=0;i<numSignals;i++)
@@ -63,6 +67,7 @@ SignalHandler::SignalHandler(int mask) : _mask(mask)
 SignalHandler::~SignalHandler()
 {
 #ifdef _WIN32
+    std::cout << "Fire SignalHandler destructor.. " << std::endl;
     SetConsoleCtrlHandler(WIN32_handleFunc, FALSE);
 #else
     for (int i=0;i<numSignals;i++)
@@ -144,6 +149,7 @@ BOOL WINAPI WIN32_handleFunc(DWORD signal)
 {
     if (g_handler)
     {
+        std::cout << "Handling signal " << signal << std::endl;
         int signo = WIN32_physicalToLogical(signal);
         // The std::set is thread-safe in const reading access and we never
         // write to it after the program has started so we don't need to
